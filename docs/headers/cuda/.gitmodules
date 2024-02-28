@@ -1,0 +1,42 @@
+[submodule "cublas"]
+	path = cublas
+	url = https://gitlab.com/nvidia/headers/cuda-individual/cublas.git
+[submodule "nvrtc"]
+	path = nvrtc
+	url = https://gitlab.com/nvidia/headers/cuda-individual/nvrtc.git
+[submodule "nvjpeg"]
+	path = nvjpeg
+	url = https://gitlab.com/nvidia/headers/cuda-individual/nvjpeg.git
+[submodule "npp"]
+	path = npp
+	url = https://gitlab.com/nvidia/headers/cuda-individual/npp.git
+[submodule "cusparse"]
+	path = cusparse
+	url = https://gitlab.com/nvidia/headers/cuda-individual/cusparse.git
+[submodule "curand"]
+	path = curand
+	url = https://gitlab.com/nvidia/headers/cuda-individual/curand.git
+[submodule "cupti"]
+	path = cupti
+	url = https://gitlab.com/nvidia/headers/cuda-individual/cupti.git
+[submodule "cufft"]
+	path = cufft
+	url = https://gitlab.com/nvidia/headers/cuda-individual/cufft.git
+[submodule "cudart"]
+	path = cudart
+	url = https://gitlab.com/nvidia/headers/cuda-individual/cudart.git
+[submodule "cusolver"]
+	path = cusolver
+	url = https://gitlab.com/nvidia/headers/cuda-individual/cusolver.git
+[submodule "cccl"]
+	path = cccl
+	url = https://gitlab.com/nvidia/headers/cuda-individual/cccl.git
+[submodule "nvcc"]
+	path = nvcc
+	url = https://gitlab.com/nvidia/headers/cuda-individual/nvcc.git
+[submodule "nvtx"]
+	path = nvtx
+	url = https://gitlab.com/nvidia/headers/cuda-individual/nvtx.git
+[submodule "nvml_dev"]
+	path = nvml_dev
+	url = https://gitlab.com/nvidia/headers/cuda-individual/nvml_dev.git
