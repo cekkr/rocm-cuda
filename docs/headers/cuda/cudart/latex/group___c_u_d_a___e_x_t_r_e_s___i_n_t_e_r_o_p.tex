@@ -1,0 +1,417 @@
+\doxysection{External Resource Interoperability}
+\hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p}{}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p}\index{External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gad4bd9e6919a136cda127d23abada4e3b}{cu\+Import\+External\+Memory}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ext\+Mem\+\_\+out}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Handle\+Desc}})
+\begin{DoxyCompactList}\small\item\em Imports an external memory object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga5e532395d5a196159f8060e5b843242a}{cu\+External\+Memory\+Get\+Mapped\+Buffer}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}dev\+Ptr, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ext\+Mem}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+BUFFER\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer\+Desc}})
+\begin{DoxyCompactList}\small\item\em Maps a buffer onto an imported memory object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga989dedad64d30fe18fed6d186ea05abf}{cu\+External\+Memory\+Get\+Mapped\+Mipmapped\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} \texorpdfstring{$\ast$}{*}mipmap, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ext\+Mem}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mipmap\+Desc}})
+\begin{DoxyCompactList}\small\item\em Maps a CUDA mipmapped array onto an external memory object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga6cd0ee6f71ea453ee51a7ba6fc9dccc6}{cu\+Destroy\+External\+Memory}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ext\+Mem}})
+\begin{DoxyCompactList}\small\item\em Destroys an external memory object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga4a4f26a18277e3717fc24f1d2ea4cffa}{cu\+Import\+External\+Semaphore}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ext\+Sem\+\_\+out}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{sem\+Handle\+Desc}})
+\begin{DoxyCompactList}\small\item\em Imports an external semaphore. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644}{cu\+Signal\+External\+Semaphores\+Async}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}} \texorpdfstring{$\ast$}{*}ext\+Sem\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___s_i_g_n_a_l___p_a_r_a_m_s__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+PARAMS}} \texorpdfstring{$\ast$}{*}params\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} num\+Ext\+Sems, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} stream)
+\begin{DoxyCompactList}\small\item\em Signals a set of external semaphore objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b}{cu\+Wait\+External\+Semaphores\+Async}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}} \texorpdfstring{$\ast$}{*}ext\+Sem\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___w_a_i_t___p_a_r_a_m_s__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+WAIT\+\_\+\+PARAMS}} \texorpdfstring{$\ast$}{*}params\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} num\+Ext\+Sems, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} stream)
+\begin{DoxyCompactList}\small\item\em Waits on a set of external semaphore objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gab9a50b3d164d9fc35d4f469287f5b8ae}{cu\+Destroy\+External\+Semaphore}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ext\+Sem}})
+\begin{DoxyCompactList}\small\item\em Destroys an external semaphore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ External resource interoperability functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the external resource interoperability functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga6cd0ee6f71ea453ee51a7ba6fc9dccc6}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga6cd0ee6f71ea453ee51a7ba6fc9dccc6} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuDestroyExternalMemory@{cuDestroyExternalMemory}}
+\index{cuDestroyExternalMemory@{cuDestroyExternalMemory}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuDestroyExternalMemory()}{cuDestroyExternalMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Destroy\+External\+Memory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}}}]{ext\+Mem }\end{DoxyParamCaption})}
+
+
+
+Destroys an external memory object. 
+
+Destroys the specified external memory object. Any existing buffers and CUDA mipmapped arrays mapped onto this object must no longer be used and must be explicitly freed using cu\+Mem\+Free and \doxylink{group___c_u_d_a___m_e_m_ga3d76d5d7129fc3f319ea0471aa7eefd6}{cu\+Mipmapped\+Array\+Destroy} respectively.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext\+Mem} & -\/ External memory object to be destroyed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gad4bd9e6919a136cda127d23abada4e3b}{cu\+Import\+External\+Memory}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga5e532395d5a196159f8060e5b843242a}{cu\+External\+Memory\+Get\+Mapped\+Buffer}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga989dedad64d30fe18fed6d186ea05abf}{cu\+External\+Memory\+Get\+Mapped\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gab9a50b3d164d9fc35d4f469287f5b8ae}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gab9a50b3d164d9fc35d4f469287f5b8ae} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuDestroyExternalSemaphore@{cuDestroyExternalSemaphore}}
+\index{cuDestroyExternalSemaphore@{cuDestroyExternalSemaphore}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuDestroyExternalSemaphore()}{cuDestroyExternalSemaphore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Destroy\+External\+Semaphore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}}}]{ext\+Sem }\end{DoxyParamCaption})}
+
+
+
+Destroys an external semaphore. 
+
+Destroys an external semaphore object and releases any references to the underlying resource. Any outstanding signals or waits must have completed before the semaphore is destroyed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext\+Sem} & -\/ External semaphore to be destroyed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga4a4f26a18277e3717fc24f1d2ea4cffa}{cu\+Import\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644}{cu\+Signal\+External\+Semaphores\+Async}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b}{cu\+Wait\+External\+Semaphores\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga5e532395d5a196159f8060e5b843242a}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga5e532395d5a196159f8060e5b843242a} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuExternalMemoryGetMappedBuffer@{cuExternalMemoryGetMappedBuffer}}
+\index{cuExternalMemoryGetMappedBuffer@{cuExternalMemoryGetMappedBuffer}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuExternalMemoryGetMappedBuffer()}{cuExternalMemoryGetMappedBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+External\+Memory\+Get\+Mapped\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}}]{dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}}}]{ext\+Mem,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+BUFFER\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}}]{buffer\+Desc }\end{DoxyParamCaption})}
+
+
+
+Maps a buffer onto an imported memory object. 
+
+Maps a buffer onto an imported memory object and returns a device pointer in {\ttfamily dev\+Ptr}.
+
+The properties of the buffer being mapped must be described in {\ttfamily buffer\+Desc}. The CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+BUFFER\+\_\+\+DESC structure is defined as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st}{CUDA\_EXTERNAL\_MEMORY\_BUFFER\_DESC\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st_a916ea63a1317546cb6da46d671605dbe}{offset}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st_a11bb1b657e05c4a4672675c34ff799c3}{size}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st_a19347036facc2c08899bb569c0a3110f}{flags}};}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st}{CUDA\_EXTERNAL\_MEMORY\_BUFFER\_DESC}};}
+
+\end{DoxyCode}
+
+
+where \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st_a916ea63a1317546cb6da46d671605dbe}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+BUFFER\+\_\+\+DESC\+::offset} is the offset in the memory object where the buffer\textquotesingle{}s base address is. \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st_a11bb1b657e05c4a4672675c34ff799c3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+BUFFER\+\_\+\+DESC\+::size} is the size of the buffer. \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___b_u_f_f_e_r___d_e_s_c__st_a19347036facc2c08899bb569c0a3110f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+BUFFER\+\_\+\+DESC\+::flags} must be zero.
+
+The offset and size have to be suitably aligned to match the requirements of the external API. Mapping two buffers whose ranges overlap may or may not result in the same virtual address being returned for the overlapped portion. In such cases, the application must ensure that all accesses to that region from the GPU are volatile. Otherwise writes made via one address are not guaranteed to be visible via the other address, even if they\textquotesingle{}re issued by the same thread. It is recommended that applications map the combined range instead of mapping separate buffers and then apply the appropriate offsets to the returned pointer to derive the individual buffers.
+
+The returned pointer {\ttfamily dev\+Ptr} must be freed using cu\+Mem\+Free.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev\+Ptr} & -\/ Returned device pointer to buffer \\
+\hline
+{\em ext\+Mem} & -\/ Handle to external memory object \\
+\hline
+{\em buffer\+Desc} & -\/ Buffer descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gad4bd9e6919a136cda127d23abada4e3b}{cu\+Import\+External\+Memory}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga6cd0ee6f71ea453ee51a7ba6fc9dccc6}{cu\+Destroy\+External\+Memory}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga989dedad64d30fe18fed6d186ea05abf}{cu\+External\+Memory\+Get\+Mapped\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga989dedad64d30fe18fed6d186ea05abf}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga989dedad64d30fe18fed6d186ea05abf} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuExternalMemoryGetMappedMipmappedArray@{cuExternalMemoryGetMappedMipmappedArray}}
+\index{cuExternalMemoryGetMappedMipmappedArray@{cuExternalMemoryGetMappedMipmappedArray}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuExternalMemoryGetMappedMipmappedArray()}{cuExternalMemoryGetMappedMipmappedArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+External\+Memory\+Get\+Mapped\+Mipmapped\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} \texorpdfstring{$\ast$}{*}}]{mipmap,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}}}]{ext\+Mem,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}}]{mipmap\+Desc }\end{DoxyParamCaption})}
+
+
+
+Maps a CUDA mipmapped array onto an external memory object. 
+
+Maps a CUDA mipmapped array onto an external object and returns a handle to it in {\ttfamily mipmap}.
+
+The properties of the CUDA mipmapped array being mapped must be described in {\ttfamily mipmap\+Desc}. The structure CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC is defined as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st}{CUDA\_EXTERNAL\_MEMORY\_MIPMAPPED\_ARRAY\_DESC\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st_aba261fda0de983c6aadd58472f3170e4}{offset}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_c_u_d_a___a_r_r_a_y3_d___d_e_s_c_r_i_p_t_o_r__st}{CUDA\_ARRAY3D\_DESCRIPTOR}}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st_acd05ae113303afc7cef492a15cf22541}{arrayDesc}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st_add122083642f960d456b831643772588}{numLevels}};}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st}{CUDA\_EXTERNAL\_MEMORY\_MIPMAPPED\_ARRAY\_DESC}};}
+
+\end{DoxyCode}
+
+
+where \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st_aba261fda0de983c6aadd58472f3170e4}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC\+::offset} is the offset in the memory object where the base level of the mipmap chain is. \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st_acd05ae113303afc7cef492a15cf22541}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC\+::array\+Desc} describes the format, dimensions and type of the base level of the mipmap chain. For further details on these parameters, please refer to the documentation for \doxylink{group___c_u_d_a___m_e_m_ga2194e4f8117e242cc371ded1abb054e4}{cu\+Mipmapped\+Array\+Create}. Note that if the mipmapped array is bound as a color target in the graphics API, then the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga26e6ae0e2d1dcef8205a840ebc193022}{CUDA\+\_\+\+ARRAY3\+D\+\_\+\+COLOR\+\_\+\+ATTACHMENT} must be specified in \+::\+CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC\+::array\+Desc\+::\+Flags. \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st_add122083642f960d456b831643772588}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC\+::num\+Levels} specifies the total number of levels in the mipmap chain.
+
+If {\ttfamily ext\+Mem} was imported from a handle of type \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8aadf93206205d155aed8228f4a118d6ee}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCIBUF}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___m_i_p_m_a_p_p_e_d___a_r_r_a_y___d_e_s_c__st_add122083642f960d456b831643772588}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+MIPMAPPED\+\_\+\+ARRAY\+\_\+\+DESC\+::num\+Levels} must be equal to 1.
+
+The returned CUDA mipmapped array must be freed using \doxylink{group___c_u_d_a___m_e_m_ga3d76d5d7129fc3f319ea0471aa7eefd6}{cu\+Mipmapped\+Array\+Destroy}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mipmap} & -\/ Returned CUDA mipmapped array \\
+\hline
+{\em ext\+Mem} & -\/ Handle to external memory object \\
+\hline
+{\em mipmap\+Desc} & -\/ CUDA array descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gad4bd9e6919a136cda127d23abada4e3b}{cu\+Import\+External\+Memory}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga6cd0ee6f71ea453ee51a7ba6fc9dccc6}{cu\+Destroy\+External\+Memory}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga5e532395d5a196159f8060e5b843242a}{cu\+External\+Memory\+Get\+Mapped\+Buffer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gad4bd9e6919a136cda127d23abada4e3b}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gad4bd9e6919a136cda127d23abada4e3b} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuImportExternalMemory@{cuImportExternalMemory}}
+\index{cuImportExternalMemory@{cuImportExternalMemory}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuImportExternalMemory()}{cuImportExternalMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Import\+External\+Memory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory}} \texorpdfstring{$\ast$}{*}}]{ext\+Mem\+\_\+out,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}}]{mem\+Handle\+Desc }\end{DoxyParamCaption})}
+
+
+
+Imports an external memory object. 
+
+Imports an externally allocated memory object and returns a handle to that in {\ttfamily ext\+Mem\+\_\+out}.
+
+The properties of the handle being imported must be described in {\ttfamily mem\+Handle\+Desc}. The CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC structure is defined as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st}{CUDA\_EXTERNAL\_MEMORY\_HANDLE\_DESC\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7ba755b5e2ba8eb39f7ce30f41cba09e}{CUexternalMemoryHandleType}}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{type}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a04ed103b1a8c7fa850b2054403afcb0a}{fd}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{handle}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{name}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a20a60c49539df2bcc39719f6d752f3d9}{win32}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a2ce0a8255a170e77e271a33b673f2a43}{nvSciBufObject}};}
+\DoxyCodeLine{\ \ \ \ \}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{handle}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_ad32c28f5e0c000cc941e5c7f70f4dabc}{size}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a01f8d965e0ab7a2b2dd0fbbfa9da55c3}{flags}};}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st}{CUDA\_EXTERNAL\_MEMORY\_HANDLE\_DESC}};}
+
+\end{DoxyCode}
+
+
+where \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} specifies the type of handle being imported. \doxylink{group___c_u_d_a___t_y_p_e_s_ga7ba755b5e2ba8eb39f7ce30f41cba09e}{CUexternal\+Memory\+Handle\+Type} is defined as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gafe2bee7f51d487e11f460752088812a8}{CUexternalMemoryHandleType\_enum}}\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a64efb8402f2268e489336396b2048c07}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_OPAQUE\_FD}}\ \ \ \ \ \ \ \ \ \ =\ 1,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8ad76fbf1ffdee6cee58aa8a4a41f6b5fd}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_OPAQUE\_WIN32}}\ \ \ \ \ \ \ =\ 2,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8afde7150bec78dae8ee4cd6e88a7f4064}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_OPAQUE\_WIN32\_KMT}}\ \ \ =\ 3,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a1a96f6957350ec0508b6ac4ec17f465f}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_D3D12\_HEAP}}\ \ \ \ \ \ \ \ \ =\ 4,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a532abdef8908d5d35a773e491ea68f5b}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_D3D12\_RESOURCE}}\ \ \ \ \ =\ 5,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a9c10fcedb0f4e95a6cbf600f95be2369}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_D3D11\_RESOURCE}}\ \ \ \ \ =\ 6,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a159b39907f15e7077609b488333cd390}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_D3D11\_RESOURCE\_KMT}}\ =\ 7,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8aadf93206205d155aed8228f4a118d6ee}{CU\_EXTERNAL\_MEMORY\_HANDLE\_TYPE\_NVSCIBUF}}\ \ \ \ \ \ \ \ \ \ \ =\ 8}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7ba755b5e2ba8eb39f7ce30f41cba09e}{CUexternalMemoryHandleType}};}
+
+\end{DoxyCode}
+
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a64efb8402f2268e489336396b2048c07}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+FD}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a04ed103b1a8c7fa850b2054403afcb0a}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::fd} must be a valid file descriptor referencing a memory object. Ownership of the file descriptor is transferred to the CUDA driver when the handle is imported successfully. Performing any operations on the file descriptor after it is imported results in undefined behavior.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8ad76fbf1ffdee6cee58aa8a4a41f6b5fd}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32}, then exactly one of \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must not be NULL. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} is not NULL, then it must represent a valid shared NT handle that references a memory object. Ownership of this handle is not transferred to CUDA after the import operation, so the application must release the handle using the appropriate system call. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must point to a NULL-\/terminated array of UTF-\/16 characters that refers to a memory object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8afde7150bec78dae8ee4cd6e88a7f4064}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32\+\_\+\+KMT}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} must be non-\/\+NULL and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must be NULL. The handle specified must be a globally shared KMT handle. This handle does not hold a reference to the underlying object, and thus will be invalid when all references to the memory object are destroyed.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a1a96f6957350ec0508b6ac4ec17f465f}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D12\+\_\+\+HEAP}, then exactly one of \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must not be NULL. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} is not NULL, then it must represent a valid shared NT handle that is returned by ID3\+D12\+Device\+::\+Create\+Shared\+Handle when referring to a ID3\+D12\+Heap object. This handle holds a reference to the underlying object. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must point to a NULL-\/terminated array of UTF-\/16 characters that refers to a ID3\+D12\+Heap object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a532abdef8908d5d35a773e491ea68f5b}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D12\+\_\+\+RESOURCE}, then exactly one of \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must not be NULL. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} is not NULL, then it must represent a valid shared NT handle that is returned by ID3\+D12\+Device\+::\+Create\+Shared\+Handle when referring to a ID3\+D12\+Resource object. This handle holds a reference to the underlying object. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must point to a NULL-\/terminated array of UTF-\/16 characters that refers to a ID3\+D12\+Resource object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a9c10fcedb0f4e95a6cbf600f95be2369}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+RESOURCE}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} must represent a valid shared NT handle that is returned by IDXGIResource1\+::\+Create\+Shared\+Handle when referring to a ID3\+D11\+Resource object. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must point to a NULL-\/terminated array of UTF-\/16 characters that refers to a ID3\+D11\+Resource object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a159b39907f15e7077609b488333cd390}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+RESOURCE\+\_\+\+KMT}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_aa34453e5a9c0dde96bb4e2ffe947fc48}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} must represent a valid shared KMT handle that is returned by IDXGIResource\+::\+Get\+Shared\+Handle when referring to a ID3\+D11\+Resource object and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_af96f0c3b221f6c9f32d9c5076673ea7f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must be NULL.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8aadf93206205d155aed8228f4a118d6ee}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCIBUF}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a2ce0a8255a170e77e271a33b673f2a43}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::nv\+Sci\+Buf\+Object} must be non-\/\+NULL and reference a valid Nv\+Sci\+Buf object. If the Nv\+Sci\+Buf object imported into CUDA is also mapped by other drivers, then the application must use \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b}{cu\+Wait\+External\+Semaphores\+Async} or \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644}{cu\+Signal\+External\+Semaphores\+Async} as appropriate barriers to maintain coherence between CUDA and the other drivers. See \doxylink{group___c_u_d_a___t_y_p_e_s_ga1a6161a80f60177235f479cd74de7e04}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+SKIP\+\_\+\+NVSCIBUF\+\_\+\+MEMSYNC} and \doxylink{group___c_u_d_a___t_y_p_e_s_gaf07a1d15f2696b915c068c892e6f1a35}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+WAIT\+\_\+\+SKIP\+\_\+\+NVSCIBUF\+\_\+\+MEMSYNC} for memory synchronization.
+
+The size of the memory object must be specified in \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_ad32c28f5e0c000cc941e5c7f70f4dabc}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::size}.
+
+Specifying the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga7a3c833643e392f32a52c131aa87ccac}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+DEDICATED} in \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a01f8d965e0ab7a2b2dd0fbbfa9da55c3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::flags} indicates that the resource is a dedicated resource. The definition of what a dedicated resource is outside the scope of this extension. This flag must be set if \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___m_e_m_o_r_y___h_a_n_d_l_e___d_e_s_c__st_a534a1cf652e812ebe30c62b3ef2092f3}{CUDA\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is one of the following\+: \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a532abdef8908d5d35a773e491ea68f5b}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D12\+\_\+\+RESOURCE} \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a9c10fcedb0f4e95a6cbf600f95be2369}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+RESOURCE} \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8a159b39907f15e7077609b488333cd390}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+RESOURCE\+\_\+\+KMT}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext\+Mem\+\_\+out} & -\/ Returned handle to an external memory object \\
+\hline
+{\em mem\+Handle\+Desc} & -\/ Memory import handle descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the Vulkan memory imported into CUDA is mapped on the CPU then the application must use vk\+Invalidate\+Mapped\+Memory\+Ranges/vk\+Flush\+Mapped\+Memory\+Ranges as well as appropriate Vulkan pipeline barriers to maintain coherence between CPU and GPU. For more information on these APIs, please refer to "{}\+Synchronization and Cache Control"{} chapter from Vulkan specification.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga6cd0ee6f71ea453ee51a7ba6fc9dccc6}{cu\+Destroy\+External\+Memory}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga5e532395d5a196159f8060e5b843242a}{cu\+External\+Memory\+Get\+Mapped\+Buffer}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga989dedad64d30fe18fed6d186ea05abf}{cu\+External\+Memory\+Get\+Mapped\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga4a4f26a18277e3717fc24f1d2ea4cffa}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga4a4f26a18277e3717fc24f1d2ea4cffa} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuImportExternalSemaphore@{cuImportExternalSemaphore}}
+\index{cuImportExternalSemaphore@{cuImportExternalSemaphore}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuImportExternalSemaphore()}{cuImportExternalSemaphore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Import\+External\+Semaphore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}} \texorpdfstring{$\ast$}{*}}]{ext\+Sem\+\_\+out,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}}]{sem\+Handle\+Desc }\end{DoxyParamCaption})}
+
+
+
+Imports an external semaphore. 
+
+Imports an externally allocated synchronization object and returns a handle to that in {\ttfamily ext\+Sem\+\_\+out}.
+
+The properties of the handle being imported must be described in {\ttfamily sem\+Handle\+Desc}. The CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC is defined as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st}{CUDA\_EXTERNAL\_SEMAPHORE\_HANDLE\_DESC\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0ff77c019c9f09ed4a2fefc0f9d85367}{CUexternalSemaphoreHandleType}}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{type}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_abfcc2584ffd0921fcd64c1abe2aba0a4}{fd}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{handle}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{name}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a09b4159f7aa96f5713f98998ef8b3558}{win32}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{NvSciSyncObj}};}
+\DoxyCodeLine{\ \ \ \ \}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{handle}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a66daaef25d1a0027b41e637799c2cd50}{flags}};}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st}{CUDA\_EXTERNAL\_SEMAPHORE\_HANDLE\_DESC}};}
+
+\end{DoxyCode}
+
+
+where \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} specifies the type of handle being imported. \doxylink{group___c_u_d_a___t_y_p_e_s_ga0ff77c019c9f09ed4a2fefc0f9d85367}{CUexternal\+Semaphore\+Handle\+Type} is defined as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad8b911cfa4a4cf57761be3f87e91d3ef}{CUexternalSemaphoreHandleType\_enum}}\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa771961c5b13e123cbc9b44ef0886067d}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_OPAQUE\_FD}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 1,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efae56d4d1a5f92a866d6d8da5249a7f068}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_OPAQUE\_WIN32}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 2,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa14138c9067a288abae77ee3b7efacf4b}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_OPAQUE\_WIN32\_KMT}}\ \ \ \ \ \ \ \ \ =\ 3,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa0f65d633a7b72b5cd5d2bb741c0edfd7}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_D3D12\_FENCE}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 4,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa68cb46b3e49fa0dc11c89376e93a833b}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_D3D11\_FENCE}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 5,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa908455daa7bbeb91a83930f977c0f1c1}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_NVSCISYNC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 6,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efaa93c602f3eb2b39ab95b0dfeb72f8eba}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_D3D11\_KEYED\_MUTEX}}\ \ \ \ \ \ \ \ =\ 7,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efac97816c259dde37432b63177377473da}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_D3D11\_KEYED\_MUTEX\_KMT}}\ \ \ \ =\ 8,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad133ab71b234267c59da61978951e020}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_TIMELINE\_SEMAPHORE\_FD}}\ \ \ \ =\ 9,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad3625359c063deedf0cef25b16fbba4b}{CU\_EXTERNAL\_SEMAPHORE\_HANDLE\_TYPE\_TIMELINE\_SEMAPHORE\_WIN32}}\ =\ 10}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0ff77c019c9f09ed4a2fefc0f9d85367}{CUexternalSemaphoreHandleType}};}
+
+\end{DoxyCode}
+
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa771961c5b13e123cbc9b44ef0886067d}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+FD}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_abfcc2584ffd0921fcd64c1abe2aba0a4}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::fd} must be a valid file descriptor referencing a synchronization object. Ownership of the file descriptor is transferred to the CUDA driver when the handle is imported successfully. Performing any operations on the file descriptor after it is imported results in undefined behavior.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efae56d4d1a5f92a866d6d8da5249a7f068}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32}, then exactly one of \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must not be NULL. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} is not NULL, then it must represent a valid shared NT handle that references a synchronization object. Ownership of this handle is not transferred to CUDA after the import operation, so the application must release the handle using the appropriate system call. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must name a valid synchronization object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa14138c9067a288abae77ee3b7efacf4b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32\+\_\+\+KMT}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} must be non-\/\+NULL and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must be NULL. The handle specified must be a globally shared KMT handle. This handle does not hold a reference to the underlying object, and thus will be invalid when all references to the synchronization object are destroyed.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa0f65d633a7b72b5cd5d2bb741c0edfd7}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D12\+\_\+\+FENCE}, then exactly one of \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must not be NULL. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} is not NULL, then it must represent a valid shared NT handle that is returned by ID3\+D12\+Device\+::\+Create\+Shared\+Handle when referring to a ID3\+D12\+Fence object. This handle holds a reference to the underlying object. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must name a valid synchronization object that refers to a valid ID3\+D12\+Fence object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa68cb46b3e49fa0dc11c89376e93a833b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+FENCE}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} represents a valid shared NT handle that is returned by ID3\+D11\+Fence\+::\+Create\+Shared\+Handle. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must name a valid synchronization object that refers to a valid ID3\+D11\+Fence object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa908455daa7bbeb91a83930f977c0f1c1}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCISYNC}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a123996a01f397c80fa87b78b933a7653}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::nv\+Sci\+Sync\+Obj} represents a valid Nv\+Sci\+Sync\+Obj.
+
+\doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efaa93c602f3eb2b39ab95b0dfeb72f8eba}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+KEYED\+\_\+\+MUTEX}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} represents a valid shared NT handle that is returned by IDXGIResource1\+::\+Create\+Shared\+Handle when referring to a IDXGIKeyed\+Mutex object. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must name a valid synchronization object that refers to a valid IDXGIKeyed\+Mutex object.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efac97816c259dde37432b63177377473da}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+KEYED\+\_\+\+MUTEX\+\_\+\+KMT}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} represents a valid shared KMT handle that is returned by IDXGIResource\+::\+Get\+Shared\+Handle when referring to a IDXGIKeyed\+Mutex object and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must be NULL.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad133ab71b234267c59da61978951e020}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+TIMELINE\+\_\+\+SEMAPHORE\+\_\+\+FD}, then \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_abfcc2584ffd0921fcd64c1abe2aba0a4}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::fd} must be a valid file descriptor referencing a synchronization object. Ownership of the file descriptor is transferred to the CUDA driver when the handle is imported successfully. Performing any operations on the file descriptor after it is imported results in undefined behavior.
+
+If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_ac2eb0656979babbe2f26af4d84f73012}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::type} is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad3625359c063deedf0cef25b16fbba4b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+TIMELINE\+\_\+\+SEMAPHORE\+\_\+\+WIN32}, then exactly one of \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} and \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} must not be NULL. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_af2fd16a093a9f904412f58c2f30ef8e2}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::handle} is not NULL, then it must represent a valid shared NT handle that references a synchronization object. Ownership of this handle is not transferred to CUDA after the import operation, so the application must release the handle using the appropriate system call. If \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___h_a_n_d_l_e___d_e_s_c__st_a6913cfb5843a926881af813241980b6c}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+DESC\+::handle\+::win32\+::name} is not NULL, then it must name a valid synchronization object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext\+Sem\+\_\+out} & -\/ Returned handle to an external semaphore \\
+\hline
+{\em sem\+Handle\+Desc} & -\/ Semaphore import handle descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gab9a50b3d164d9fc35d4f469287f5b8ae}{cu\+Destroy\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644}{cu\+Signal\+External\+Semaphores\+Async}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b}{cu\+Wait\+External\+Semaphores\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuSignalExternalSemaphoresAsync@{cuSignalExternalSemaphoresAsync}}
+\index{cuSignalExternalSemaphoresAsync@{cuSignalExternalSemaphoresAsync}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuSignalExternalSemaphoresAsync()}{cuSignalExternalSemaphoresAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Signal\+External\+Semaphores\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}} \texorpdfstring{$\ast$}{*}}]{ext\+Sem\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___s_i_g_n_a_l___p_a_r_a_m_s__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+PARAMS}} \texorpdfstring{$\ast$}{*}}]{params\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Ext\+Sems,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{stream }\end{DoxyParamCaption})}
+
+
+
+Signals a set of external semaphore objects. 
+
+Enqueues a signal operation on a set of externally allocated semaphore object in the specified stream. The operations will be executed when all prior operations in the stream complete.
+
+The exact semantics of signaling a semaphore depends on the type of the object.
+
+If the semaphore object is any one of the following types\+: \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa771961c5b13e123cbc9b44ef0886067d}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+FD}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efae56d4d1a5f92a866d6d8da5249a7f068}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa14138c9067a288abae77ee3b7efacf4b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32\+\_\+\+KMT} then signaling the semaphore will set it to the signaled state.
+
+If the semaphore object is any one of the following types\+: \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa0f65d633a7b72b5cd5d2bb741c0edfd7}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D12\+\_\+\+FENCE}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa68cb46b3e49fa0dc11c89376e93a833b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+FENCE}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad133ab71b234267c59da61978951e020}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+TIMELINE\+\_\+\+SEMAPHORE\+\_\+\+FD}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad3625359c063deedf0cef25b16fbba4b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+TIMELINE\+\_\+\+SEMAPHORE\+\_\+\+WIN32} then the semaphore will be set to the value specified in \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___s_i_g_n_a_l___p_a_r_a_m_s__st_abe0d89963be9eac5de5c0d1efe2ceeaf}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+PARAMS\+::params\+::fence\+::value}.
+
+If the semaphore object is of the type \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa908455daa7bbeb91a83930f977c0f1c1}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCISYNC} this API sets \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___s_i_g_n_a_l___p_a_r_a_m_s__st_adc70e97e86bb9ac7f2332568852bb226}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+PARAMS\+::params\+::nv\+Sci\+Sync\+::fence} to a value that can be used by subsequent waiters of the same Nv\+Sci\+Sync object to order operations with those currently submitted in {\ttfamily stream}. Such an update will overwrite previous contents of \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___s_i_g_n_a_l___p_a_r_a_m_s__st_adc70e97e86bb9ac7f2332568852bb226}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+PARAMS\+::params\+::nv\+Sci\+Sync\+::fence}. By default, signaling such an external semaphore object causes appropriate memory synchronization operations to be performed over all external memory objects that are imported as \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8aadf93206205d155aed8228f4a118d6ee}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCIBUF}. This ensures that any subsequent accesses made by other importers of the same set of Nv\+Sci\+Buf memory object(s) are coherent. These operations can be skipped by specifying the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga1a6161a80f60177235f479cd74de7e04}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+SKIP\+\_\+\+NVSCIBUF\+\_\+\+MEMSYNC}, which can be used as a performance optimization when data coherency is not required. But specifying this flag in scenarios where data coherency is required results in undefined behavior. Also, for semaphore object of the type \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa908455daa7bbeb91a83930f977c0f1c1}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCISYNC}, if the Nv\+Sci\+Sync\+Attr\+List used to create the Nv\+Sci\+Sync\+Obj had not set the flags in \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga1bfd645a691e1cd33873c94605d2089a}{cu\+Device\+Get\+Nv\+Sci\+Sync\+Attributes} to CUDA\+\_\+\+NVSCISYNC\+\_\+\+ATTR\+\_\+\+SIGNAL, this API will return CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED.
+
+If the semaphore object is any one of the following types\+: \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efaa93c602f3eb2b39ab95b0dfeb72f8eba}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+KEYED\+\_\+\+MUTEX}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efac97816c259dde37432b63177377473da}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+KEYED\+\_\+\+MUTEX\+\_\+\+KMT} then the keyed mutex will be released with the key specified in \+::\+CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+PARAMS\+::params\+::keyedmutex\+::key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext\+Sem\+Array} & -\/ Set of external semaphores to be signaled \\
+\hline
+{\em params\+Array} & -\/ Array of semaphore parameters \\
+\hline
+{\em num\+Ext\+Sems} & -\/ Number of semaphores to signal \\
+\hline
+{\em stream} & -\/ Stream to enqueue the signal operations in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga4a4f26a18277e3717fc24f1d2ea4cffa}{cu\+Import\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gab9a50b3d164d9fc35d4f469287f5b8ae}{cu\+Destroy\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b}{cu\+Wait\+External\+Semaphores\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b}\label{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b} 
+\index{External Resource Interoperability@{External Resource Interoperability}!cuWaitExternalSemaphoresAsync@{cuWaitExternalSemaphoresAsync}}
+\index{cuWaitExternalSemaphoresAsync@{cuWaitExternalSemaphoresAsync}!External Resource Interoperability@{External Resource Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuWaitExternalSemaphoresAsync()}{cuWaitExternalSemaphoresAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Wait\+External\+Semaphores\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}} \texorpdfstring{$\ast$}{*}}]{ext\+Sem\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___w_a_i_t___p_a_r_a_m_s__st}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+WAIT\+\_\+\+PARAMS}} \texorpdfstring{$\ast$}{*}}]{params\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Ext\+Sems,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{stream }\end{DoxyParamCaption})}
+
+
+
+Waits on a set of external semaphore objects. 
+
+Enqueues a wait operation on a set of externally allocated semaphore object in the specified stream. The operations will be executed when all prior operations in the stream complete.
+
+The exact semantics of waiting on a semaphore depends on the type of the object.
+
+If the semaphore object is any one of the following types\+: \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa771961c5b13e123cbc9b44ef0886067d}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+FD}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efae56d4d1a5f92a866d6d8da5249a7f068}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa14138c9067a288abae77ee3b7efacf4b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+OPAQUE\+\_\+\+WIN32\+\_\+\+KMT} then waiting on the semaphore will wait until the semaphore reaches the signaled state. The semaphore will then be reset to the unsignaled state. Therefore for every signal operation, there can only be one wait operation.
+
+If the semaphore object is any one of the following types\+: \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa0f65d633a7b72b5cd5d2bb741c0edfd7}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D12\+\_\+\+FENCE}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa68cb46b3e49fa0dc11c89376e93a833b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+FENCE}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad133ab71b234267c59da61978951e020}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+TIMELINE\+\_\+\+SEMAPHORE\+\_\+\+FD}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efad3625359c063deedf0cef25b16fbba4b}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+TIMELINE\+\_\+\+SEMAPHORE\+\_\+\+WIN32} then waiting on the semaphore will wait until the value of the semaphore is greater than or equal to \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___w_a_i_t___p_a_r_a_m_s__st_a9dcc78733d86b7fc6135e7f4590bf96f}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+WAIT\+\_\+\+PARAMS\+::params\+::fence\+::value}.
+
+If the semaphore object is of the type \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa908455daa7bbeb91a83930f977c0f1c1}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCISYNC} then, waiting on the semaphore will wait until the \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___s_i_g_n_a_l___p_a_r_a_m_s__st_adc70e97e86bb9ac7f2332568852bb226}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+SIGNAL\+\_\+\+PARAMS\+::params\+::nv\+Sci\+Sync\+::fence} is signaled by the signaler of the Nv\+Sci\+Sync\+Obj that was associated with this semaphore object. By default, waiting on such an external semaphore object causes appropriate memory synchronization operations to be performed over all external memory objects that are imported as \doxylink{group___c_u_d_a___t_y_p_e_s_ggafe2bee7f51d487e11f460752088812a8aadf93206205d155aed8228f4a118d6ee}{CU\+\_\+\+EXTERNAL\+\_\+\+MEMORY\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCIBUF}. This ensures that any subsequent accesses made by other importers of the same set of Nv\+Sci\+Buf memory object(s) are coherent. These operations can be skipped by specifying the flag \doxylink{group___c_u_d_a___t_y_p_e_s_gaf07a1d15f2696b915c068c892e6f1a35}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+WAIT\+\_\+\+SKIP\+\_\+\+NVSCIBUF\+\_\+\+MEMSYNC}, which can be used as a performance optimization when data coherency is not required. But specifying this flag in scenarios where data coherency is required results in undefined behavior. Also, for semaphore object of the type \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efa908455daa7bbeb91a83930f977c0f1c1}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NVSCISYNC}, if the Nv\+Sci\+Sync\+Attr\+List used to create the Nv\+Sci\+Sync\+Obj had not set the flags in \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga1bfd645a691e1cd33873c94605d2089a}{cu\+Device\+Get\+Nv\+Sci\+Sync\+Attributes} to CUDA\+\_\+\+NVSCISYNC\+\_\+\+ATTR\+\_\+\+WAIT, this API will return CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED.
+
+If the semaphore object is any one of the following types\+: \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efaa93c602f3eb2b39ab95b0dfeb72f8eba}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+KEYED\+\_\+\+MUTEX}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8b911cfa4a4cf57761be3f87e91d3efac97816c259dde37432b63177377473da}{CU\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+D3\+D11\+\_\+\+KEYED\+\_\+\+MUTEX\+\_\+\+KMT} then the keyed mutex will be acquired when it is released with the key specified in \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___w_a_i_t___p_a_r_a_m_s__st_ae08747d65535a068feb8c37eb55e7805}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+WAIT\+\_\+\+PARAMS\+::params\+::keyedmutex\+::key} or until the timeout specified by \doxylink{struct_c_u_d_a___e_x_t_e_r_n_a_l___s_e_m_a_p_h_o_r_e___w_a_i_t___p_a_r_a_m_s__st_a892e6e48477a8a08b73e345ab85d52c6}{CUDA\+\_\+\+EXTERNAL\+\_\+\+SEMAPHORE\+\_\+\+WAIT\+\_\+\+PARAMS\+::params\+::keyedmutex\+::timeout\+Ms} has lapsed. The timeout interval can either be a finite value specified in milliseconds or an infinite value. In case an infinite value is specified the timeout never elapses. The windows INFINITE macro must be used to specify infinite timeout.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ext\+Sem\+Array} & -\/ External semaphores to be waited on \\
+\hline
+{\em params\+Array} & -\/ Array of semaphore parameters \\
+\hline
+{\em num\+Ext\+Sems} & -\/ Number of semaphores to wait on \\
+\hline
+{\em stream} & -\/ Stream to enqueue the wait operations in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa2cd1f40fc3a327d2bc6e9ff650d1af11}{CUDA\+\_\+\+ERROR\+\_\+\+TIMEOUT} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga4a4f26a18277e3717fc24f1d2ea4cffa}{cu\+Import\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gab9a50b3d164d9fc35d4f469287f5b8ae}{cu\+Destroy\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644}{cu\+Signal\+External\+Semaphores\+Async} 
+\end{DoxySeeAlso}

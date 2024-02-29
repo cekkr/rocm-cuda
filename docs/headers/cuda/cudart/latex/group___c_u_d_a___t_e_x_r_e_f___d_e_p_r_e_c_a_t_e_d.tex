@@ -1,0 +1,937 @@
+\doxysection{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}}
+\hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d}{}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d}\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} h\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Binds an array as a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga96395027f89872071abb002cdc11d70c}{cu\+Tex\+Ref\+Set\+Mipmapped\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} h\+Mipmapped\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Binds a mipmapped array to a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2b427b698a160cc951d8ca0341a22e8e}{cu\+Tex\+Ref\+Set\+Address}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Byte\+Offset}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} dptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} bytes)
+\begin{DoxyCompactList}\small\item\em Binds an address as a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gacfea4b8852f8898f7d215a480a8369d4}{cu\+Tex\+Ref\+Set\+Address2D}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___a_r_r_a_y___d_e_s_c_r_i_p_t_o_r__st}{CUDA\+\_\+\+ARRAY\+\_\+\+DESCRIPTOR}} \texorpdfstring{$\ast$}{*}desc, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} dptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Pitch}})
+\begin{DoxyCompactList}\small\item\em Binds an address as a 2D texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\+\_\+format}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{fmt}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Num\+Packed\+Components}})
+\begin{DoxyCompactList}\small\item\em Sets the format for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dim}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga29c6beeb5414e769a401b454bb68e43f}{CUaddress\+\_\+mode}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{am}})
+\begin{DoxyCompactList}\small\item\em Sets the addressing mode for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{fm}})
+\begin{DoxyCompactList}\small\item\em Sets the filtering mode for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga521b8752a631fd6b4ea10d032861c831}{cu\+Tex\+Ref\+Set\+Mipmap\+Filter\+Mode}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{fm}})
+\begin{DoxyCompactList}\small\item\em Sets the mipmap filtering mode for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga4d99fc04644e887ab87eb91f0f14d51d}{cu\+Tex\+Ref\+Set\+Mipmap\+Level\+Bias}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{bias}})
+\begin{DoxyCompactList}\small\item\em Sets the mipmap level bias for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga70fcdd09f0561979760d3a6f526d7b1a}{cu\+Tex\+Ref\+Set\+Mipmap\+Level\+Clamp}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} min\+Mipmap\+Level\+Clamp, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} max\+Mipmap\+Level\+Clamp)
+\begin{DoxyCompactList}\small\item\em Sets the mipmap min/max mipmap level clamps for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2e40d1bba7bcd966f4912e5f4f0428b5}{cu\+Tex\+Ref\+Set\+Max\+Anisotropy}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{max\+Aniso}})
+\begin{DoxyCompactList}\small\item\em Sets the maximum anisotropy for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaf7c026c2b391302ad4de9696675eeb24}{cu\+Tex\+Ref\+Set\+Border\+Color}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Border\+Color}})
+\begin{DoxyCompactList}\small\item\em Sets the border color for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Sets the flags for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga938444b205f63d765231c40b20189d63}{cu\+Tex\+Ref\+Get\+Address}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pdptr}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the address associated with a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ph\+Array}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the array bound to a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga14bd96adc487156b44759b182a28eed0}{cu\+Tex\+Ref\+Get\+Mipmapped\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ph\+Mipmapped\+Array}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the mipmapped array bound to a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga29c6beeb5414e769a401b454bb68e43f}{CUaddress\+\_\+mode}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pam}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dim}})
+\begin{DoxyCompactList}\small\item\em Gets the addressing mode used by a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pfm}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the filter-\/mode used by a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\+\_\+format}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Format}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Num\+Channels}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the format used by a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gadc4df147e7e791b6fca0d7d7f049c289}{cu\+Tex\+Ref\+Get\+Mipmap\+Filter\+Mode}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pfm}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the mipmap filtering mode for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga656f0ee3580d7a330e00024abdbc28c2}{cu\+Tex\+Ref\+Get\+Mipmap\+Level\+Bias}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pbias}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the mipmap level bias for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaa294543407a8e2f2e6282dcd22c771e2}{cu\+Tex\+Ref\+Get\+Mipmap\+Level\+Clamp}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pmin\+Mipmap\+Level\+Clamp}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pmax\+Mipmap\+Level\+Clamp}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the min/max mipmap level clamps for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2fef4ab8eaaa445f126f139362485003}{cu\+Tex\+Ref\+Get\+Max\+Anisotropy}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pmax\+Aniso}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the maximum anisotropy for a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga53118a3fd74a7ae2a29af2d60ed4a664}{cu\+Tex\+Ref\+Get\+Border\+Color}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Border\+Color}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the border color used by a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Flags}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Gets the flags used by a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga196383e0faf239c1814290e582ef33cb}{cu\+Tex\+Ref\+Create}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Creates a texture reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaaba3677e7cd642e1a8b8de2017f14c04}{cu\+Tex\+Ref\+Destroy}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Destroys a texture reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ deprecated texture reference management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the deprecated texture reference management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga196383e0faf239c1814290e582ef33cb}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga196383e0faf239c1814290e582ef33cb} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefCreate@{cuTexRefCreate}}
+\index{cuTexRefCreate@{cuTexRefCreate}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefCreate()}{cuTexRefCreate()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \texorpdfstring{$\ast$}{*}}]{p\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Creates a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000041}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Creates a texture reference and returns its handle in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Tex\+Ref}. Once created, the application must call \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array()} or cu\+Tex\+Ref\+Set\+Address() to associate the reference with allocated memory. Other texture reference functions are used to specify the format and interpretation (addressing, filtering, etc.) to be used when the memory is read through this texture reference.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Tex\+Ref} & -\/ Returned texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaaba3677e7cd642e1a8b8de2017f14c04}{cu\+Tex\+Ref\+Destroy} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaaba3677e7cd642e1a8b8de2017f14c04}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaaba3677e7cd642e1a8b8de2017f14c04} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefDestroy@{cuTexRefDestroy}}
+\index{cuTexRefDestroy@{cuTexRefDestroy}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefDestroy()}{cuTexRefDestroy()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Destroys a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000042}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Destroys the texture reference specified by {\ttfamily h\+Tex\+Ref}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference to destroy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga196383e0faf239c1814290e582ef33cb}{cu\+Tex\+Ref\+Create} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga938444b205f63d765231c40b20189d63}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga938444b205f63d765231c40b20189d63} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetAddress@{cuTexRefGetAddress}}
+\index{cuTexRefGetAddress@{cuTexRefGetAddress}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetAddress()}{cuTexRefGetAddress()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}}]{pdptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the address associated with a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000029}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}pdptr} the base address bound to the texture reference {\ttfamily h\+Tex\+Ref}, or returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} if the texture reference is not bound to any device memory range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pdptr} & -\/ Returned device address \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetAddressMode@{cuTexRefGetAddressMode}}
+\index{cuTexRefGetAddressMode@{cuTexRefGetAddressMode}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetAddressMode()}{cuTexRefGetAddressMode()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Address\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga29c6beeb5414e769a401b454bb68e43f}{CUaddress\+\_\+mode}} \texorpdfstring{$\ast$}{*}}]{pam,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{dim }\end{DoxyParamCaption})}
+
+
+
+Gets the addressing mode used by a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000032}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}pam} the addressing mode corresponding to the dimension {\ttfamily dim} of the texture reference {\ttfamily h\+Tex\+Ref}. Currently, the only valid value for {\ttfamily dim} are 0 and 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pam} & -\/ Returned addressing mode \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em dim} & -\/ Dimension\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetArray@{cuTexRefGetArray}}
+\index{cuTexRefGetArray@{cuTexRefGetArray}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetArray()}{cuTexRefGetArray()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} \texorpdfstring{$\ast$}{*}}]{ph\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the array bound to a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000030}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}ph\+Array} the CUDA array bound to the texture reference {\ttfamily h\+Tex\+Ref}, or returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} if the texture reference is not bound to any CUDA array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ph\+Array} & -\/ Returned array \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga53118a3fd74a7ae2a29af2d60ed4a664}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga53118a3fd74a7ae2a29af2d60ed4a664} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetBorderColor@{cuTexRefGetBorderColor}}
+\index{cuTexRefGetBorderColor@{cuTexRefGetBorderColor}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetBorderColor()}{cuTexRefGetBorderColor()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Border\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}}]{p\+Border\+Color,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the border color used by a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000039}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily p\+Border\+Color}, values of the RGBA color used by the texture reference {\ttfamily h\+Tex\+Ref}. The color value is of type float and holds color components in the following sequence\+: p\+Border\+Color\mbox{[}0\mbox{]} holds \textquotesingle{}R\textquotesingle{} component p\+Border\+Color\mbox{[}1\mbox{]} holds \textquotesingle{}G\textquotesingle{} component p\+Border\+Color\mbox{[}2\mbox{]} holds \textquotesingle{}B\textquotesingle{} component p\+Border\+Color\mbox{[}3\mbox{]} holds \textquotesingle{}A\textquotesingle{} component
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em p\+Border\+Color} & -\/ Returned Type and Value of RGBA color\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaf7c026c2b391302ad4de9696675eeb24}{cu\+Tex\+Ref\+Set\+Border\+Color} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetFilterMode@{cuTexRefGetFilterMode}}
+\index{cuTexRefGetFilterMode@{cuTexRefGetFilterMode}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetFilterMode()}{cuTexRefGetFilterMode()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Filter\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}} \texorpdfstring{$\ast$}{*}}]{pfm,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the filter-\/mode used by a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000033}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}pfm} the filtering mode of the texture reference {\ttfamily h\+Tex\+Ref}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfm} & -\/ Returned filtering mode \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetFlags@{cuTexRefGetFlags}}
+\index{cuTexRefGetFlags@{cuTexRefGetFlags}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetFlags()}{cuTexRefGetFlags()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{p\+Flags,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the flags used by a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000040}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Flags} the flags of the texture reference {\ttfamily h\+Tex\+Ref}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Flags} & -\/ Returned flags \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetFormat@{cuTexRefGetFormat}}
+\index{cuTexRefGetFormat@{cuTexRefGetFormat}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetFormat()}{cuTexRefGetFormat()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\+\_\+format}} \texorpdfstring{$\ast$}{*}}]{p\+Format,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{p\+Num\+Channels,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the format used by a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000034}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Format} and {\ttfamily \texorpdfstring{$\ast$}{*}p\+Num\+Channels} the format and number of components of the CUDA array bound to the texture reference {\ttfamily h\+Tex\+Ref}. If {\ttfamily p\+Format} or {\ttfamily p\+Num\+Channels} is NULL, it will be ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Format} & -\/ Returned format \\
+\hline
+{\em p\+Num\+Channels} & -\/ Returned number of components \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2fef4ab8eaaa445f126f139362485003}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2fef4ab8eaaa445f126f139362485003} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetMaxAnisotropy@{cuTexRefGetMaxAnisotropy}}
+\index{cuTexRefGetMaxAnisotropy@{cuTexRefGetMaxAnisotropy}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetMaxAnisotropy()}{cuTexRefGetMaxAnisotropy()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Max\+Anisotropy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{pmax\+Aniso,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the maximum anisotropy for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000038}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns the maximum anisotropy in {\ttfamily pmax\+Aniso} that\textquotesingle{}s used when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmax\+Aniso} & -\/ Returned maximum anisotropy \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gadc4df147e7e791b6fca0d7d7f049c289}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gadc4df147e7e791b6fca0d7d7f049c289} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetMipmapFilterMode@{cuTexRefGetMipmapFilterMode}}
+\index{cuTexRefGetMipmapFilterMode@{cuTexRefGetMipmapFilterMode}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetMipmapFilterMode()}{cuTexRefGetMipmapFilterMode()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Mipmap\+Filter\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}} \texorpdfstring{$\ast$}{*}}]{pfm,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the mipmap filtering mode for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000035}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns the mipmap filtering mode in {\ttfamily pfm} that\textquotesingle{}s used when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfm} & -\/ Returned mipmap filtering mode \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga656f0ee3580d7a330e00024abdbc28c2}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga656f0ee3580d7a330e00024abdbc28c2} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetMipmapLevelBias@{cuTexRefGetMipmapLevelBias}}
+\index{cuTexRefGetMipmapLevelBias@{cuTexRefGetMipmapLevelBias}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetMipmapLevelBias()}{cuTexRefGetMipmapLevelBias()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Mipmap\+Level\+Bias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}}]{pbias,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the mipmap level bias for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000036}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns the mipmap level bias in {\ttfamily p\+Bias} that\textquotesingle{}s added to the specified mipmap level when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pbias} & -\/ Returned mipmap level bias \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaa294543407a8e2f2e6282dcd22c771e2}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaa294543407a8e2f2e6282dcd22c771e2} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetMipmapLevelClamp@{cuTexRefGetMipmapLevelClamp}}
+\index{cuTexRefGetMipmapLevelClamp@{cuTexRefGetMipmapLevelClamp}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetMipmapLevelClamp()}{cuTexRefGetMipmapLevelClamp()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Mipmap\+Level\+Clamp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}}]{pmin\+Mipmap\+Level\+Clamp,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}}]{pmax\+Mipmap\+Level\+Clamp,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the min/max mipmap level clamps for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000037}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns the min/max mipmap level clamps in {\ttfamily pmin\+Mipmap\+Level\+Clamp} and {\ttfamily pmax\+Mipmap\+Level\+Clamp} that\textquotesingle{}s used when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmin\+Mipmap\+Level\+Clamp} & -\/ Returned mipmap min level clamp \\
+\hline
+{\em pmax\+Mipmap\+Level\+Clamp} & -\/ Returned mipmap max level clamp \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga14bd96adc487156b44759b182a28eed0}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga14bd96adc487156b44759b182a28eed0} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefGetMipmappedArray@{cuTexRefGetMipmappedArray}}
+\index{cuTexRefGetMipmappedArray@{cuTexRefGetMipmappedArray}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefGetMipmappedArray()}{cuTexRefGetMipmappedArray()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Get\+Mipmapped\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} \texorpdfstring{$\ast$}{*}}]{ph\+Mipmapped\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Gets the mipmapped array bound to a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000031}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}ph\+Mipmapped\+Array} the CUDA mipmapped array bound to the texture reference {\ttfamily h\+Tex\+Ref}, or returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} if the texture reference is not bound to any CUDA mipmapped array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ph\+Mipmapped\+Array} & -\/ Returned mipmapped array \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2b427b698a160cc951d8ca0341a22e8e}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2b427b698a160cc951d8ca0341a22e8e} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetAddress@{cuTexRefSetAddress}}
+\index{cuTexRefSetAddress@{cuTexRefSetAddress}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetAddress()}{cuTexRefSetAddress()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Byte\+Offset,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{dptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Binds an address as a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000018}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Binds a linear address range to the texture reference {\ttfamily h\+Tex\+Ref}. Any previous address or CUDA array state associated with the texture reference is superseded by this function. Any memory previously bound to {\ttfamily h\+Tex\+Ref} is unbound.
+
+Since the hardware enforces an alignment requirement on texture base addresses, cu\+Tex\+Ref\+Set\+Address() passes back a byte offset in {\ttfamily \texorpdfstring{$\ast$}{*}\+Byte\+Offset} that must be applied to texture fetches in order to read from the desired memory. This offset must be divided by the texel size and passed to kernels that read from the texture so they can be applied to the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex1\+Dfetch()} function.
+
+If the device memory pointer was returned from cu\+Mem\+Alloc(), the offset is guaranteed to be 0 and NULL may be passed as the {\ttfamily Byte\+Offset} parameter.
+
+The total number of elements (or texels) in the linear address range cannot exceed \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa335584a4bc5128e2a5ae9a4417f5b758}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE1\+D\+\_\+\+LINEAR\+\_\+\+WIDTH}. The number of elements is computed as ({\ttfamily bytes} / bytes\+Per\+Element), where bytes\+Per\+Element is determined from the data format and number of components set using \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Byte\+Offset} & -\/ Returned byte offset \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture reference to bind \\
+\hline
+{\em dptr} & -\/ Device pointer to bind \\
+\hline
+{\em bytes} & -\/ Size of memory to bind in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cuda\+Bind\+Texture} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gacfea4b8852f8898f7d215a480a8369d4}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gacfea4b8852f8898f7d215a480a8369d4} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetAddress2D@{cuTexRefSetAddress2D}}
+\index{cuTexRefSetAddress2D@{cuTexRefSetAddress2D}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetAddress2D()}{cuTexRefSetAddress2D()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Address2D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___a_r_r_a_y___d_e_s_c_r_i_p_t_o_r__st}{CUDA\+\_\+\+ARRAY\+\_\+\+DESCRIPTOR}} \texorpdfstring{$\ast$}{*}}]{desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{dptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{Pitch }\end{DoxyParamCaption})}
+
+
+
+Binds an address as a 2D texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000019}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Binds a linear address range to the texture reference {\ttfamily h\+Tex\+Ref}. Any previous address or CUDA array state associated with the texture reference is superseded by this function. Any memory previously bound to {\ttfamily h\+Tex\+Ref} is unbound.
+
+Using a \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex2\+D()} function inside a kernel requires a call to either \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array()} to bind the corresponding texture reference to an array, or cu\+Tex\+Ref\+Set\+Address2\+D() to bind the texture reference to linear memory.
+
+Function calls to \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format()} cannot follow calls to cu\+Tex\+Ref\+Set\+Address2\+D() for the same texture reference.
+
+It is required that {\ttfamily dptr} be aligned to the appropriate hardware-\/specific texture alignment. You can query this value using the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa9531a2b5f533e749109e9e0189f38196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+TEXTURE\+\_\+\+ALIGNMENT}. If an unaligned {\ttfamily dptr} is supplied, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+
+{\ttfamily Pitch} has to be aligned to the hardware-\/specific texture pitch alignment. This value can be queried using the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa551f1067be9a6187d75da5fcda7960d0}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+TEXTURE\+\_\+\+PITCH\+\_\+\+ALIGNMENT}. If an unaligned {\ttfamily Pitch} is supplied, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+
+Width and Height, which are specified in elements (or texels), cannot exceed \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aaafe638125896be2c465876a4955d699e}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LINEAR\+\_\+\+WIDTH} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aaff1c959cba47edce2374f66f161489c4}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LINEAR\+\_\+\+HEIGHT} respectively. {\ttfamily Pitch}, which is specified in bytes, cannot exceed \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aaad66050d059c337dd9635bfb7574f3d7}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LINEAR\+\_\+\+PITCH}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference to bind \\
+\hline
+{\em desc} & -\/ Descriptor of CUDA array \\
+\hline
+{\em dptr} & -\/ Device pointer to bind \\
+\hline
+{\em Pitch} & -\/ Line pitch in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cuda\+Bind\+Texture2D} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetAddressMode@{cuTexRefSetAddressMode}}
+\index{cuTexRefSetAddressMode@{cuTexRefSetAddressMode}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetAddressMode()}{cuTexRefSetAddressMode()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Address\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{dim,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga29c6beeb5414e769a401b454bb68e43f}{CUaddress\+\_\+mode}}}]{am }\end{DoxyParamCaption})}
+
+
+
+Sets the addressing mode for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000021}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the addressing mode {\ttfamily am} for the given dimension {\ttfamily dim} of the texture reference {\ttfamily h\+Tex\+Ref}. If {\ttfamily dim} is zero, the addressing mode is applied to the first parameter of the functions used to fetch from the texture; if {\ttfamily dim} is 1, the second, and so on. \doxylink{group___c_u_d_a___t_y_p_e_s_ga29c6beeb5414e769a401b454bb68e43f}{CUaddress\+\_\+mode} is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad8710371c832607c15cc9e070d8191f3}{CUaddress\_mode\_enum}}\ \{}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8710371c832607c15cc9e070d8191f3a87d43274db1dfed07818895b04197fcb}{CU\_TR\_ADDRESS\_MODE\_WRAP}}\ =\ 0,}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8710371c832607c15cc9e070d8191f3a8ed20ebe21592443f61ecc06d61f32f4}{CU\_TR\_ADDRESS\_MODE\_CLAMP}}\ =\ 1,}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8710371c832607c15cc9e070d8191f3a2490f71f92668604bd10d49d77d198b8}{CU\_TR\_ADDRESS\_MODE\_MIRROR}}\ =\ 2,}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggad8710371c832607c15cc9e070d8191f3accee8c7882028f0865e8a2e542524fa4}{CU\_TR\_ADDRESS\_MODE\_BORDER}}\ =\ 3}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga29c6beeb5414e769a401b454bb68e43f}{CUaddress\_mode}};}
+
+\end{DoxyCode}
+
+
+Note that this call has no effect if {\ttfamily h\+Tex\+Ref} is bound to linear memory. Also, if the flag, \doxylink{group___c_u_d_a___t_y_p_e_s_ga7a19eb49fd506ecded6e8f314298d486}{CU\+\_\+\+TRSF\+\_\+\+NORMALIZED\+\_\+\+COORDINATES}, is not set, the only supported address mode is \doxylink{group___c_u_d_a___t_y_p_e_s_ggad8710371c832607c15cc9e070d8191f3a8ed20ebe21592443f61ecc06d61f32f4}{CU\+\_\+\+TR\+\_\+\+ADDRESS\+\_\+\+MODE\+\_\+\+CLAMP}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em dim} & -\/ Dimension \\
+\hline
+{\em am} & -\/ Addressing mode to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cuda\+Bind\+Texture}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cuda\+Bind\+Texture2D}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetArray@{cuTexRefSetArray}}
+\index{cuTexRefSetArray@{cuTexRefSetArray}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetArray()}{cuTexRefSetArray()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}}}]{h\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Binds an array as a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000016}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Binds the CUDA array {\ttfamily h\+Array} to the texture reference {\ttfamily h\+Tex\+Ref}. Any previous address or CUDA array state associated with the texture reference is superseded by this function. {\ttfamily Flags} must be set to \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f0c76f9c215b3bdeca06456bec3e68}{CU\+\_\+\+TRSA\+\_\+\+OVERRIDE\+\_\+\+FORMAT}. Any CUDA array previously bound to {\ttfamily h\+Tex\+Ref} is unbound.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference to bind \\
+\hline
+{\em h\+Array} & -\/ Array to bind \\
+\hline
+{\em Flags} & -\/ Options (must be \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f0c76f9c215b3bdeca06456bec3e68}{CU\+\_\+\+TRSA\+\_\+\+OVERRIDE\+\_\+\+FORMAT})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaf7c026c2b391302ad4de9696675eeb24}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaf7c026c2b391302ad4de9696675eeb24} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetBorderColor@{cuTexRefSetBorderColor}}
+\index{cuTexRefSetBorderColor@{cuTexRefSetBorderColor}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetBorderColor()}{cuTexRefSetBorderColor()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Border\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}}]{p\+Border\+Color }\end{DoxyParamCaption})}
+
+
+
+Sets the border color for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000027}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the value of the RGBA color via the {\ttfamily p\+Border\+Color} to the texture reference {\ttfamily h\+Tex\+Ref}. The color value supports only float type and holds color components in the following sequence\+: p\+Border\+Color\mbox{[}0\mbox{]} holds \textquotesingle{}R\textquotesingle{} component p\+Border\+Color\mbox{[}1\mbox{]} holds \textquotesingle{}G\textquotesingle{} component p\+Border\+Color\mbox{[}2\mbox{]} holds \textquotesingle{}B\textquotesingle{} component p\+Border\+Color\mbox{[}3\mbox{]} holds \textquotesingle{}A\textquotesingle{} component
+
+Note that the color values can be set only when the Address mode is set to CU\+\_\+\+TR\+\_\+\+ADDRESS\+\_\+\+MODE\+\_\+\+BORDER using \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}. Applications using integer border color values have to "{}reinterpret\+\_\+cast"{} their values to float.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em p\+Border\+Color} & -\/ RGBA color\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga53118a3fd74a7ae2a29af2d60ed4a664}{cu\+Tex\+Ref\+Get\+Border\+Color}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cuda\+Bind\+Texture}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cuda\+Bind\+Texture2D}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetFilterMode@{cuTexRefSetFilterMode}}
+\index{cuTexRefSetFilterMode@{cuTexRefSetFilterMode}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetFilterMode()}{cuTexRefSetFilterMode()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Filter\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}}}]{fm }\end{DoxyParamCaption})}
+
+
+
+Sets the filtering mode for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000022}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the filtering mode {\ttfamily fm} to be used when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}. \doxylink{group___c_u_d_a___t_y_p_e_s_gaceeffc8d7bc82aa38cd8b696e94c694d}{CUfilter\+\_\+mode\+\_\+enum} is defined as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaceeffc8d7bc82aa38cd8b696e94c694d}{CUfilter\_mode\_enum}}\ \{}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggaceeffc8d7bc82aa38cd8b696e94c694dae1e747d9e41685f6b6a5b85baf43e60d}{CU\_TR\_FILTER\_MODE\_POINT}}\ =\ 0,}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggaceeffc8d7bc82aa38cd8b696e94c694da517adfbd8a0e09592378d77ba2d922d8}{CU\_TR\_FILTER\_MODE\_LINEAR}}\ =\ 1}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\_mode}};}
+
+\end{DoxyCode}
+
+
+Note that this call has no effect if {\ttfamily h\+Tex\+Ref} is bound to linear memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em fm} & -\/ Filtering mode to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetFlags@{cuTexRefSetFlags}}
+\index{cuTexRefSetFlags@{cuTexRefSetFlags}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetFlags()}{cuTexRefSetFlags()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Sets the flags for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000028}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies optional flags via {\ttfamily Flags} to specify the behavior of data returned through the texture reference {\ttfamily h\+Tex\+Ref}. The valid flags are\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ga6d2387c1b5dd5bc98f5b4c51cefdf41e}{CU\+\_\+\+TRSF\+\_\+\+READ\+\_\+\+AS\+\_\+\+INTEGER}, which suppresses the default behavior of having the texture promote integer data to floating point data in the range \mbox{[}0, 1\mbox{]}. Note that texture with 32-\/bit integer format would not be promoted, regardless of whether or not this flag is specified;
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ga7a19eb49fd506ecded6e8f314298d486}{CU\+\_\+\+TRSF\+\_\+\+NORMALIZED\+\_\+\+COORDINATES}, which suppresses the default behavior of having the texture coordinates range from \mbox{[}0, Dim) where Dim is the width or height of the CUDA array. Instead, the texture coordinates \mbox{[}0, 1.\+0) reference the entire breadth of the array dimension;
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ga9512d7fa0ed8a2da30ef6f4ccc61fa4f}{CU\+\_\+\+TRSF\+\_\+\+DISABLE\+\_\+\+TRILINEAR\+\_\+\+OPTIMIZATION}, which disables any trilinear filtering optimizations. Trilinear optimizations improve texture filtering performance by allowing bilinear filtering on textures in scenarios where it can closely approximate the expected results.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em Flags} & -\/ Optional flags to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cuda\+Bind\+Texture}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cuda\+Bind\+Texture2D}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetFormat@{cuTexRefSetFormat}}
+\index{cuTexRefSetFormat@{cuTexRefSetFormat}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetFormat()}{cuTexRefSetFormat()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\+\_\+format}}}]{fmt,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Num\+Packed\+Components }\end{DoxyParamCaption})}
+
+
+
+Sets the format for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000020}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the format of the data to be read by the texture reference {\ttfamily h\+Tex\+Ref}. {\ttfamily fmt} and {\ttfamily Num\+Packed\+Components} are exactly analogous to the \+::\+Format and \+::\+Num\+Channels members of the CUDA\+\_\+\+ARRAY\+\_\+\+DESCRIPTOR structure\+: They specify the format of each component and the number of components per array element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em fmt} & -\/ Format to set \\
+\hline
+{\em Num\+Packed\+Components} & -\/ Number of components per array element\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Create\+Channel\+Desc}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cuda\+Bind\+Texture}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cuda\+Bind\+Texture2D}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2e40d1bba7bcd966f4912e5f4f0428b5}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2e40d1bba7bcd966f4912e5f4f0428b5} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetMaxAnisotropy@{cuTexRefSetMaxAnisotropy}}
+\index{cuTexRefSetMaxAnisotropy@{cuTexRefSetMaxAnisotropy}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetMaxAnisotropy()}{cuTexRefSetMaxAnisotropy()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Max\+Anisotropy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{max\+Aniso }\end{DoxyParamCaption})}
+
+
+
+Sets the maximum anisotropy for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000026}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the maximum anisotropy {\ttfamily max\+Aniso} to be used when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}.
+
+Note that this call has no effect if {\ttfamily h\+Tex\+Ref} is bound to linear memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em max\+Aniso} & -\/ Maximum anisotropy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga521b8752a631fd6b4ea10d032861c831}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga521b8752a631fd6b4ea10d032861c831} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetMipmapFilterMode@{cuTexRefSetMipmapFilterMode}}
+\index{cuTexRefSetMipmapFilterMode@{cuTexRefSetMipmapFilterMode}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetMipmapFilterMode()}{cuTexRefSetMipmapFilterMode()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Mipmap\+Filter\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\+\_\+mode}}}]{fm }\end{DoxyParamCaption})}
+
+
+
+Sets the mipmap filtering mode for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000023}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the mipmap filtering mode {\ttfamily fm} to be used when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}. \doxylink{group___c_u_d_a___t_y_p_e_s_gaceeffc8d7bc82aa38cd8b696e94c694d}{CUfilter\+\_\+mode\+\_\+enum} is defined as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaceeffc8d7bc82aa38cd8b696e94c694d}{CUfilter\_mode\_enum}}\ \{}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggaceeffc8d7bc82aa38cd8b696e94c694dae1e747d9e41685f6b6a5b85baf43e60d}{CU\_TR\_FILTER\_MODE\_POINT}}\ =\ 0,}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggaceeffc8d7bc82aa38cd8b696e94c694da517adfbd8a0e09592378d77ba2d922d8}{CU\_TR\_FILTER\_MODE\_LINEAR}}\ =\ 1}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b50fa49cc2df835d197d5ce4aee1fa6}{CUfilter\_mode}};}
+
+\end{DoxyCode}
+
+
+Note that this call has no effect if {\ttfamily h\+Tex\+Ref} is not bound to a mipmapped array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em fm} & -\/ Filtering mode to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga4d99fc04644e887ab87eb91f0f14d51d}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga4d99fc04644e887ab87eb91f0f14d51d} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetMipmapLevelBias@{cuTexRefSetMipmapLevelBias}}
+\index{cuTexRefSetMipmapLevelBias@{cuTexRefSetMipmapLevelBias}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetMipmapLevelBias()}{cuTexRefSetMipmapLevelBias()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Mipmap\+Level\+Bias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}}}]{bias }\end{DoxyParamCaption})}
+
+
+
+Sets the mipmap level bias for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000024}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the mipmap level bias {\ttfamily bias} to be added to the specified mipmap level when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}.
+
+Note that this call has no effect if {\ttfamily h\+Tex\+Ref} is not bound to a mipmapped array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em bias} & -\/ Mipmap level bias\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga70fcdd09f0561979760d3a6f526d7b1a}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga70fcdd09f0561979760d3a6f526d7b1a} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetMipmapLevelClamp@{cuTexRefSetMipmapLevelClamp}}
+\index{cuTexRefSetMipmapLevelClamp@{cuTexRefSetMipmapLevelClamp}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetMipmapLevelClamp()}{cuTexRefSetMipmapLevelClamp()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Mipmap\+Level\+Clamp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}}}]{min\+Mipmap\+Level\+Clamp,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}}}]{max\+Mipmap\+Level\+Clamp }\end{DoxyParamCaption})}
+
+
+
+Sets the mipmap min/max mipmap level clamps for a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000025}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the min/max mipmap level clamps, {\ttfamily min\+Mipmap\+Level\+Clamp} and {\ttfamily max\+Mipmap\+Level\+Clamp} respectively, to be used when reading memory through the texture reference {\ttfamily h\+Tex\+Ref}.
+
+Note that this call has no effect if {\ttfamily h\+Tex\+Ref} is not bound to a mipmapped array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference \\
+\hline
+{\em min\+Mipmap\+Level\+Clamp} & -\/ Mipmap min level clamp \\
+\hline
+{\em max\+Mipmap\+Level\+Clamp} & -\/ Mipmap max level clamp\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga96395027f89872071abb002cdc11d70c}\label{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga96395027f89872071abb002cdc11d70c} 
+\index{Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}!cuTexRefSetMipmappedArray@{cuTexRefSetMipmappedArray}}
+\index{cuTexRefSetMipmappedArray@{cuTexRefSetMipmappedArray}!Texture Reference Management \mbox{[}DEPRECATED\mbox{]}@{Texture Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuTexRefSetMipmappedArray()}{cuTexRefSetMipmappedArray()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Tex\+Ref\+Set\+Mipmapped\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}}}]{h\+Mipmapped\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Binds a mipmapped array to a texture reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000017}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Binds the CUDA mipmapped array {\ttfamily h\+Mipmapped\+Array} to the texture reference {\ttfamily h\+Tex\+Ref}. Any previous address or CUDA array state associated with the texture reference is superseded by this function. {\ttfamily Flags} must be set to \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f0c76f9c215b3bdeca06456bec3e68}{CU\+\_\+\+TRSA\+\_\+\+OVERRIDE\+\_\+\+FORMAT}. Any CUDA array previously bound to {\ttfamily h\+Tex\+Ref} is unbound.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Tex\+Ref} & -\/ Texture reference to bind \\
+\hline
+{\em h\+Mipmapped\+Array} & -\/ Mipmapped array to bind \\
+\hline
+{\em Flags} & -\/ Options (must be \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f0c76f9c215b3bdeca06456bec3e68}{CU\+\_\+\+TRSA\+\_\+\+OVERRIDE\+\_\+\+FORMAT})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Tex\+Ref\+Set\+Address, cu\+Tex\+Ref\+Set\+Address2D, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format}, cu\+Tex\+Ref\+Get\+Address, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags}, \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} 
+\end{DoxySeeAlso}

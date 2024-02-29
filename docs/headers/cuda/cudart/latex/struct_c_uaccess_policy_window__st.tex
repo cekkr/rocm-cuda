@@ -1,0 +1,60 @@
+\doxysection{CUaccess\+Policy\+Window\+\_\+st Struct Reference}
+\hypertarget{struct_c_uaccess_policy_window__st}{}\label{struct_c_uaccess_policy_window__st}\index{CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}}
+
+
+{\ttfamily \#include $<$cuda.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_c_uaccess_policy_window__st_a317eb1c354741d4f1867a21e8c6235e1}{base\+\_\+ptr}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{struct_c_uaccess_policy_window__st_a523fd71955aeefcb219a52bc1809b30b}{num\+\_\+bytes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \mbox{\hyperlink{struct_c_uaccess_policy_window__st_a5726517898b9ddbd7dcde54da63b4c8b}{hit\+Ratio}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gae197d9271fd7a0d8cd6ceca5c3b09001}{CUaccess\+Property}} \mbox{\hyperlink{struct_c_uaccess_policy_window__st_abce2685a049c70a700ead29885df0caa}{hit\+Prop}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gae197d9271fd7a0d8cd6ceca5c3b09001}{CUaccess\+Property}} \mbox{\hyperlink{struct_c_uaccess_policy_window__st_af3cd192b7fd61f91e5a8cf8314bf8d93}{miss\+Prop}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specifies an access policy for a window, a contiguous extent of memory beginning at base\+\_\+ptr and ending at base\+\_\+ptr + num\+\_\+bytes. num\+\_\+bytes is limited by CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+ACCESS\+\_\+\+POLICY\+\_\+\+WINDOW\+\_\+\+SIZE. Partition into many segments and assign segments such that\+: sum of "{}hit segments"{} / window == approx. ratio. sum of "{}miss segments"{} / window == approx 1-\/ratio. Segments and ratio specifications are fitted to the capabilities of the architecture. Accesses in a hit segment apply the hit\+Prop access policy. Accesses in a miss segment apply the miss\+Prop access policy. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_c_uaccess_policy_window__st_a317eb1c354741d4f1867a21e8c6235e1}\label{struct_c_uaccess_policy_window__st_a317eb1c354741d4f1867a21e8c6235e1} 
+\index{CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}!base\_ptr@{base\_ptr}}
+\index{base\_ptr@{base\_ptr}!CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}}
+\doxysubsubsection{\texorpdfstring{base\_ptr}{base\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} CUaccess\+Policy\+Window\+\_\+st\+::base\+\_\+ptr}
+
+Starting address of the access policy window. CUDA driver may align it. \Hypertarget{struct_c_uaccess_policy_window__st_abce2685a049c70a700ead29885df0caa}\label{struct_c_uaccess_policy_window__st_abce2685a049c70a700ead29885df0caa} 
+\index{CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}!hitProp@{hitProp}}
+\index{hitProp@{hitProp}!CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}}
+\doxysubsubsection{\texorpdfstring{hitProp}{hitProp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gae197d9271fd7a0d8cd6ceca5c3b09001}{CUaccess\+Property}} CUaccess\+Policy\+Window\+\_\+st\+::hit\+Prop}
+
+\doxylink{group___c_u_d_a___t_y_p_e_s_gae197d9271fd7a0d8cd6ceca5c3b09001}{CUaccess\+Property} set for hit. \Hypertarget{struct_c_uaccess_policy_window__st_a5726517898b9ddbd7dcde54da63b4c8b}\label{struct_c_uaccess_policy_window__st_a5726517898b9ddbd7dcde54da63b4c8b} 
+\index{CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}!hitRatio@{hitRatio}}
+\index{hitRatio@{hitRatio}!CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}}
+\doxysubsubsection{\texorpdfstring{hitRatio}{hitRatio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} CUaccess\+Policy\+Window\+\_\+st\+::hit\+Ratio}
+
+hit\+Ratio specifies percentage of lines assigned hit\+Prop, rest are assigned miss\+Prop. \Hypertarget{struct_c_uaccess_policy_window__st_af3cd192b7fd61f91e5a8cf8314bf8d93}\label{struct_c_uaccess_policy_window__st_af3cd192b7fd61f91e5a8cf8314bf8d93} 
+\index{CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}!missProp@{missProp}}
+\index{missProp@{missProp}!CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}}
+\doxysubsubsection{\texorpdfstring{missProp}{missProp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gae197d9271fd7a0d8cd6ceca5c3b09001}{CUaccess\+Property}} CUaccess\+Policy\+Window\+\_\+st\+::miss\+Prop}
+
+\doxylink{group___c_u_d_a___t_y_p_e_s_gae197d9271fd7a0d8cd6ceca5c3b09001}{CUaccess\+Property} set for miss. Must be either NORMAL or STREAMING \Hypertarget{struct_c_uaccess_policy_window__st_a523fd71955aeefcb219a52bc1809b30b}\label{struct_c_uaccess_policy_window__st_a523fd71955aeefcb219a52bc1809b30b} 
+\index{CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}!num\_bytes@{num\_bytes}}
+\index{num\_bytes@{num\_bytes}!CUaccessPolicyWindow\_st@{CUaccessPolicyWindow\_st}}
+\doxysubsubsection{\texorpdfstring{num\_bytes}{num\_bytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} CUaccess\+Policy\+Window\+\_\+st\+::num\+\_\+bytes}
+
+Size in bytes of the window policy. CUDA driver may restrict the maximum size and alignment. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuda_8h}{cuda.\+h}}\end{DoxyCompactItemize}

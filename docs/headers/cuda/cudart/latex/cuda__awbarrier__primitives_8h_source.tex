@@ -1,0 +1,120 @@
+\doxysection{cuda\+\_\+awbarrier\+\_\+primitives.\+h}
+\hypertarget{cuda__awbarrier__primitives_8h_source}{}\label{cuda__awbarrier__primitives_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 1993-\/2019\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifndef\ \_CUDA\_AWBARRIER\_PRIMITIVES\_H\_}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#\ define\ \_CUDA\_AWBARRIER\_PRIMITIVES\_H\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#\ include\ "{}cuda\_awbarrier\_helpers.h"{}}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#\ if\ !defined(\_CUDA\_AWBARRIER\_ARCH\_700\_OR\_LATER)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#\ \ error\ This\ file\ requires\ compute\ capability\ 7.0\ or\ greater.}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#\ endif}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uint64\_t}}\ \_\_mbarrier\_t;}
+\DoxyCodeLine{00060\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uint64\_t}}\ \_\_mbarrier\_token\_t;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \_CUDA\_AWBARRIER\_STATIC\_QUALIFIER\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}}
+\DoxyCodeLine{00063\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uint32\_t}}\ \_\_mbarrier\_maximum\_count()}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{return}\ \_CUDA\_AWBARRIER\_MAX\_COUNT;}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \_CUDA\_AWBARRIER\_STATIC\_QUALIFIER}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \_\_mbarrier\_init(\_\_mbarrier\_t*\ barrier,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uint32\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{expected\_count}})}
+\DoxyCodeLine{00070\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \_CUDA\_AWBARRIER\_ASSERT(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_isShared}}(barrier));}
+\DoxyCodeLine{00072\ \ \ \ \ \_CUDA\_AWBARRIER\_ASSERT(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{expected\_count}}\ >\ 0\ \&\&\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{expected\_count}}\ <=\ \_CUDA\_AWBARRIER\_MAX\_COUNT);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \_CUDA\_AWBARRIER\_INTERNAL\_NAMESPACE::awbarrier\_init(barrier,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{expected\_count}});}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \_CUDA\_AWBARRIER\_STATIC\_QUALIFIER}
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \_\_mbarrier\_inval(\_\_mbarrier\_t*\ barrier)}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \_CUDA\_AWBARRIER\_ASSERT(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_isShared}}(barrier));}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \_CUDA\_AWBARRIER\_INTERNAL\_NAMESPACE::awbarrier\_inval(barrier);}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \_CUDA\_AWBARRIER\_STATIC\_QUALIFIER}
+\DoxyCodeLine{00086\ \_\_mbarrier\_token\_t\ \_\_mbarrier\_arrive(\_\_mbarrier\_t*\ barrier)}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \_CUDA\_AWBARRIER\_ASSERT(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_isShared}}(barrier));}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{return}\ \_CUDA\_AWBARRIER\_INTERNAL\_NAMESPACE::awbarrier\_arrive\_drop<false>(barrier);}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \_CUDA\_AWBARRIER\_STATIC\_QUALIFIER}
+\DoxyCodeLine{00094\ \_\_mbarrier\_token\_t\ \_\_mbarrier\_arrive\_and\_drop(\_\_mbarrier\_t*\ barrier)}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \_CUDA\_AWBARRIER\_ASSERT(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_isShared}}(barrier));}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ \_CUDA\_AWBARRIER\_INTERNAL\_NAMESPACE::awbarrier\_arrive\_drop<true>(barrier);}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \_CUDA\_AWBARRIER\_STATIC\_QUALIFIER}
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{bool}\ \_\_mbarrier\_test\_wait(\_\_mbarrier\_t*\ barrier,\ \_\_mbarrier\_token\_t\ token)}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \_CUDA\_AWBARRIER\_ASSERT(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_isShared}}(barrier));}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ \_CUDA\_AWBARRIER\_INTERNAL\_NAMESPACE::awbarrier\_test\_wait(barrier,\ token);}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \_CUDA\_AWBARRIER\_STATIC\_QUALIFIER}
+\DoxyCodeLine{00110\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uint32\_t}}\ \_\_mbarrier\_token\_pending\_count(\_\_mbarrier\_token\_t\ token)}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{return}\ \_CUDA\_AWBARRIER\_INTERNAL\_NAMESPACE::awbarrier\_token\_pending\_count(token);}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_CUDA\_AWBARRIER\_PRIMITIVES\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

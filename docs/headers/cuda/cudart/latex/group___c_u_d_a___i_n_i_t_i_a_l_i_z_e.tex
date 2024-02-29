@@ -1,0 +1,35 @@
+\doxysection{Initialization}
+\hypertarget{group___c_u_d_a___i_n_i_t_i_a_l_i_z_e}{}\label{group___c_u_d_a___i_n_i_t_i_a_l_i_z_e}\index{Initialization@{Initialization}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___i_n_i_t_i_a_l_i_z_e_gace710e6a33c59293b980947498098498}{cu\+Init}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Initialize the CUDA driver API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ initialization functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the initialization functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___i_n_i_t_i_a_l_i_z_e_gace710e6a33c59293b980947498098498}\label{group___c_u_d_a___i_n_i_t_i_a_l_i_z_e_gace710e6a33c59293b980947498098498} 
+\index{Initialization@{Initialization}!cuInit@{cuInit}}
+\index{cuInit@{cuInit}!Initialization@{Initialization}}
+\doxysubsubsection{\texorpdfstring{cuInit()}{cuInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Initialize the CUDA driver API. 
+
+Initializes the driver API and must be called before any other function from the driver API. Currently, the {\ttfamily Flags} parameter must be 0. If \doxylink{group___c_u_d_a___i_n_i_t_i_a_l_i_z_e_gace710e6a33c59293b980947498098498}{cu\+Init()} has not been called, any function from the driver API will return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Flags} & -\/ Initialization flag for CUDA.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa78f8d2d38cf4ed97d75127a7b3186d37}{CUDA\+\_\+\+ERROR\+\_\+\+SYSTEM\+\_\+\+DRIVER\+\_\+\+MISMATCH}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa51bd73c67bc75fcb5238e73da64e482f}{CUDA\+\_\+\+ERROR\+\_\+\+COMPAT\+\_\+\+NOT\+\_\+\+SUPPORTED\+\_\+\+ON\+\_\+\+DEVICE} \textbackslash{}notefnerr 
+\end{DoxyReturn}

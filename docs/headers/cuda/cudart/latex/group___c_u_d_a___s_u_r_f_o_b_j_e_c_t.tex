@@ -1,0 +1,94 @@
+\doxysection{Surface Object Management}
+\hypertarget{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t}{}\label{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t}\index{Surface Object Management@{Surface Object Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga8b356bb0d7d1a089951d6ec4e1b25777}{cu\+Surf\+Object\+Create}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4acc685a8412637d05668e30e984e220}{CUsurf\+Object}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Surf\+Object}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st}{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Res\+Desc}})
+\begin{DoxyCompactList}\small\item\em Creates a surface object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga4134701d3ffc9fa20ff3ff607cdbb9ba}{cu\+Surf\+Object\+Destroy}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4acc685a8412637d05668e30e984e220}{CUsurf\+Object}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surf\+Object}})
+\begin{DoxyCompactList}\small\item\em Destroys a surface object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_gae8db6a1290d502f4c2d727e65b800d44}{cu\+Surf\+Object\+Get\+Resource\+Desc}} (\mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st}{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Res\+Desc}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4acc685a8412637d05668e30e984e220}{CUsurf\+Object}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surf\+Object}})
+\begin{DoxyCompactList}\small\item\em Returns a surface object\textquotesingle{}s resource descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ surface object management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the surface object management functions of the low-\/level CUDA driver application programming interface. The surface object API is only supported on devices of compute capability 3.\+0 or higher. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga8b356bb0d7d1a089951d6ec4e1b25777}\label{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga8b356bb0d7d1a089951d6ec4e1b25777} 
+\index{Surface Object Management@{Surface Object Management}!cuSurfObjectCreate@{cuSurfObjectCreate}}
+\index{cuSurfObjectCreate@{cuSurfObjectCreate}!Surface Object Management@{Surface Object Management}}
+\doxysubsubsection{\texorpdfstring{cuSurfObjectCreate()}{cuSurfObjectCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Surf\+Object\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4acc685a8412637d05668e30e984e220}{CUsurf\+Object}} \texorpdfstring{$\ast$}{*}}]{p\+Surf\+Object,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st}{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}}]{p\+Res\+Desc }\end{DoxyParamCaption})}
+
+
+
+Creates a surface object. 
+
+Creates a surface object and returns it in {\ttfamily p\+Surf\+Object}. {\ttfamily p\+Res\+Desc} describes the data to perform surface load/stores on. \doxylink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_aa654d711d4f0c699fe2a4d5967af93d1}{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+::res\+Type} must be \doxylink{group___c_u_d_a___t_y_p_e_s_gga28d29b3ff7dafc4bc3fbaff312b65d5da8171f299e8447a926051e13d613d77b1}{CU\+\_\+\+RESOURCE\+\_\+\+TYPE\+\_\+\+ARRAY} and \doxylink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a75d14929b9d3f53f2ce7031c0ff1cc60}{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+::res\+::array\+::h\+Array} must be set to a valid CUDA array handle. \doxylink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a313b47708c55f79934817b7abf0e10eb}{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+::flags} must be set to zero.
+
+Surface objects are only supported on devices of compute capability 3.\+0 or higher. Additionally, a surface object is an opaque value, and, as such, should only be accessed through CUDA API calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Surf\+Object} & -\/ Surface object to create \\
+\hline
+{\em p\+Res\+Desc} & -\/ Resource descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga4134701d3ffc9fa20ff3ff607cdbb9ba}{cu\+Surf\+Object\+Destroy}, \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e___o_b_j_e_c_t_ga6a74f75ea2c4a70b98396182911c611f}{cuda\+Create\+Surface\+Object} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga4134701d3ffc9fa20ff3ff607cdbb9ba}\label{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga4134701d3ffc9fa20ff3ff607cdbb9ba} 
+\index{Surface Object Management@{Surface Object Management}!cuSurfObjectDestroy@{cuSurfObjectDestroy}}
+\index{cuSurfObjectDestroy@{cuSurfObjectDestroy}!Surface Object Management@{Surface Object Management}}
+\doxysubsubsection{\texorpdfstring{cuSurfObjectDestroy()}{cuSurfObjectDestroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Surf\+Object\+Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4acc685a8412637d05668e30e984e220}{CUsurf\+Object}}}]{surf\+Object }\end{DoxyParamCaption})}
+
+
+
+Destroys a surface object. 
+
+Destroys the surface object specified by {\ttfamily surf\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf\+Object} & -\/ Surface object to destroy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga8b356bb0d7d1a089951d6ec4e1b25777}{cu\+Surf\+Object\+Create}, \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e___o_b_j_e_c_t_ga3881bbbf17109959ddf505fccea5b5a3}{cuda\+Destroy\+Surface\+Object} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_gae8db6a1290d502f4c2d727e65b800d44}\label{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_gae8db6a1290d502f4c2d727e65b800d44} 
+\index{Surface Object Management@{Surface Object Management}!cuSurfObjectGetResourceDesc@{cuSurfObjectGetResourceDesc}}
+\index{cuSurfObjectGetResourceDesc@{cuSurfObjectGetResourceDesc}!Surface Object Management@{Surface Object Management}}
+\doxysubsubsection{\texorpdfstring{cuSurfObjectGetResourceDesc()}{cuSurfObjectGetResourceDesc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Surf\+Object\+Get\+Resource\+Desc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st}{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC}} \texorpdfstring{$\ast$}{*}}]{p\+Res\+Desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4acc685a8412637d05668e30e984e220}{CUsurf\+Object}}}]{surf\+Object }\end{DoxyParamCaption})}
+
+
+
+Returns a surface object\textquotesingle{}s resource descriptor. 
+
+Returns the resource descriptor for the surface object specified by {\ttfamily surf\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Res\+Desc} & -\/ Resource descriptor \\
+\hline
+{\em surf\+Object} & -\/ Surface object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___s_u_r_f_o_b_j_e_c_t_ga8b356bb0d7d1a089951d6ec4e1b25777}{cu\+Surf\+Object\+Create}, \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e___o_b_j_e_c_t_ga02eaeed8c03ac3276f9f0f310d643ac2}{cuda\+Get\+Surface\+Object\+Resource\+Desc} 
+\end{DoxySeeAlso}

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['pageablememoryaccess_0',['pageableMemoryAccess',['../structcuda_device_prop.html#a46116bab1064b5d7d0642d78f6c27ce1',1,'cudaDeviceProp']]],
+  ['pageablememoryaccessuseshostpagetables_1',['pageableMemoryAccessUsesHostPageTables',['../structcuda_device_prop.html#ae9f1ed6bffd5606eb81d438728a844ca',1,'cudaDeviceProp']]],
+  ['paramsarray_2',['paramsArray',['../struct_c_u_d_a___e_x_t___s_e_m___s_i_g_n_a_l___n_o_d_e___p_a_r_a_m_s__st.html#ab51096b5db51b0288d766c260cb52a9f',1,'CUDA_EXT_SEM_SIGNAL_NODE_PARAMS_st::paramsArray'],['../struct_c_u_d_a___e_x_t___s_e_m___w_a_i_t___n_o_d_e___p_a_r_a_m_s__st.html#a7e3d237f6cdeea8f3f4f21b8fb273b01',1,'CUDA_EXT_SEM_WAIT_NODE_PARAMS_st::paramsArray'],['../structcuda_external_semaphore_signal_node_params.html#a780427ea6cde6d7c7429f4e8d1b1f1ed',1,'cudaExternalSemaphoreSignalNodeParams::paramsArray'],['../structcuda_external_semaphore_wait_node_params.html#a96788d30952a74de2edb3db24d72f6c1',1,'cudaExternalSemaphoreWaitNodeParams::paramsArray']]],
+  ['parray_3',['pArray',['../structcuda_egl_frame__st.html#a6363e52dd96ffeeb33af24cb99151dc0',1,'cudaEglFrame_st::pArray'],['../struct_c_uegl_frame__st.html#a7f85134c3cc2019dede6d53c454dd750',1,'CUeglFrame_st::pArray']]],
+  ['pcibusid_4',['pciBusID',['../structcuda_device_prop.html#ac5adc2ef8c6b89fb139b4684175db54a',1,'cudaDeviceProp']]],
+  ['pcideviceid_5',['pciDeviceID',['../structcuda_device_prop.html#a56978c2bfc433d26ac3b4c765ee536bb',1,'cudaDeviceProp']]],
+  ['pcidomainid_6',['pciDomainID',['../structcuda_device_prop.html#af3a69f0796e32c0e32d17c151443fab0',1,'cudaDeviceProp']]],
+  ['persistingl2cachemaxsize_7',['persistingL2CacheMaxSize',['../structcuda_device_prop.html#a708c0ea6df419516e4bd702dd26f802c',1,'cudaDeviceProp']]],
+  ['pitch_8',['pitch',['../struct_c_u_d_a___m_e_m_s_e_t___n_o_d_e___p_a_r_a_m_s__st.html#a9816540d1758a3a018d640ffcbf9b750',1,'CUDA_MEMSET_NODE_PARAMS_st::pitch'],['../structcuda_egl_plane_desc__st.html#a30c5f4ce0f179a3ef9c24b2a58ec4929',1,'cudaEglPlaneDesc_st::pitch'],['../struct_c_uegl_frame__st.html#a2d116e50a6e790f7972863b3de8eff6b',1,'CUeglFrame_st::pitch'],['../structcuda_pitched_ptr.html#a412fba6b15962413c9f586c3a1ecb69b',1,'cudaPitchedPtr::pitch'],['../structcuda_memset_params.html#a08cf13f3fc01d877a61370610c60af75',1,'cudaMemsetParams::pitch']]],
+  ['pitchinbytes_9',['pitchInBytes',['../struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st.html#a042fa2b56cd8d0d31306ef89fa88153e',1,'CUDA_RESOURCE_DESC_st::pitchInBytes'],['../structcuda_resource_desc.html#a46627bc06bf3a469d9d7ce5df7c1c0e6',1,'cudaResourceDesc::pitchInBytes']]],
+  ['planecount_10',['planeCount',['../structcuda_egl_frame__st.html#add3eeb939479d4606e43570df5c9aaf9',1,'cudaEglFrame_st::planeCount'],['../struct_c_uegl_frame__st.html#a0572f65db750c842564225d13176017b',1,'CUeglFrame_st::planeCount']]],
+  ['planedesc_11',['planeDesc',['../structcuda_egl_frame__st.html#a99c029aed959b59530efcc0e04af4a91',1,'cudaEglFrame_st']]],
+  ['poolprops_12',['poolProps',['../struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st.html#a69bd1ce53442fc8f14633f59b66e208f',1,'CUDA_MEM_ALLOC_NODE_PARAMS_st::poolProps'],['../structcuda_mem_alloc_node_params.html#a7b2f32f718dfdf64dd743a040d967027',1,'cudaMemAllocNodeParams::poolProps']]],
+  ['ppitch_13',['pPitch',['../structcuda_egl_frame__st.html#a70f19670bc12944828d16004e0a2f898',1,'cudaEglFrame_st::pPitch'],['../struct_c_uegl_frame__st.html#a5f8072a37631288222e1d8cc5652b65a',1,'CUeglFrame_st::pPitch']]],
+  ['preferredshmemcarveout_14',['preferredShmemCarveout',['../structcuda_func_attributes.html#a088f144760311325523b66ee90c83c51',1,'cudaFuncAttributes']]],
+  ['ptr_15',['ptr',['../structcuda_pitched_ptr.html#a6a1476538c1f4bf7b9cad0304b91d5cf',1,'cudaPitchedPtr']]],
+  ['ptxversion_16',['ptxVersion',['../structcuda_func_attributes.html#a08ce97bd1e77d84cbff1cea9d662dcc2',1,'cudaFuncAttributes']]]
+];

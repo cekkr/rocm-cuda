@@ -1,0 +1,79 @@
+\doxysection{Context Management \mbox{[}DEPRECATED\mbox{]}}
+\hypertarget{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d}{}\label{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d}\index{Context Management \mbox{[}DEPRECATED\mbox{]}@{Context Management [DEPRECATED]}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gae118a2c1b115197b58f419aab738fecb}{cu\+Ctx\+Attach}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pctx}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Increment a context\textquotesingle{}s usage-\/count. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gafe50007d47a1a5d274365d172e9bd4c6}{cu\+Ctx\+Detach}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ctx}})
+\begin{DoxyCompactList}\small\item\em Decrement a context\textquotesingle{}s usage-\/count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ deprecated context management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the deprecated context management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gae118a2c1b115197b58f419aab738fecb}\label{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gae118a2c1b115197b58f419aab738fecb} 
+\index{Context Management \mbox{[}DEPRECATED\mbox{]}@{Context Management [DEPRECATED]}!cuCtxAttach@{cuCtxAttach}}
+\index{cuCtxAttach@{cuCtxAttach}!Context Management \mbox{[}DEPRECATED\mbox{]}@{Context Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuCtxAttach()}{cuCtxAttach()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}}]{pctx,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Increment a context\textquotesingle{}s usage-\/count. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000003}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Note that this function is deprecated and should not be used.
+
+Increments the usage count of the context and passes back a context handle in {\ttfamily \texorpdfstring{$\ast$}{*}pctx} that must be passed to \doxylink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gafe50007d47a1a5d274365d172e9bd4c6}{cu\+Ctx\+Detach()} when the application is done with the context. \doxylink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gae118a2c1b115197b58f419aab738fecb}{cu\+Ctx\+Attach()} fails if there is no context current to the thread.
+
+Currently, the {\ttfamily flags} parameter must be 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pctx} & -\/ Returned context handle of the current context \\
+\hline
+{\em flags} & -\/ Context attach flags (must be 0)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gafe50007d47a1a5d274365d172e9bd4c6}{cu\+Ctx\+Detach}, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gafe50007d47a1a5d274365d172e9bd4c6}\label{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gafe50007d47a1a5d274365d172e9bd4c6} 
+\index{Context Management \mbox{[}DEPRECATED\mbox{]}@{Context Management [DEPRECATED]}!cuCtxDetach@{cuCtxDetach}}
+\index{cuCtxDetach@{cuCtxDetach}!Context Management \mbox{[}DEPRECATED\mbox{]}@{Context Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuCtxDetach()}{cuCtxDetach()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Decrement a context\textquotesingle{}s usage-\/count. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000004}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Note that this function is deprecated and should not be used.
+
+Decrements the usage count of the context {\ttfamily ctx}, and destroys the context if the usage count goes to 0. The context must be a handle that was passed back by cu\+Ctx\+Create() or \doxylink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gae118a2c1b115197b58f419aab738fecb}{cu\+Ctx\+Attach()}, and must be current to the calling thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ Context to destroy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize} 
+\end{DoxySeeAlso}

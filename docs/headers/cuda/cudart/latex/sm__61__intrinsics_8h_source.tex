@@ -1,0 +1,128 @@
+\doxysection{sm\+\_\+61\+\_\+intrinsics.\+h}
+\hypertarget{sm__61__intrinsics_8h_source}{}\label{sm__61__intrinsics_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 2016\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#if\ !defined(\_\_SM\_61\_INTRINSICS\_H\_\_)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ \_\_SM\_61\_INTRINSICS\_H\_\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \_\_device\_\_}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{/*\ !\_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ static\ \_\_device\_\_\ \_\_inline\_\_}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ defined(\_\_CUDACC\_\_)}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDA\_ARCH\_\_)\ ||\ \_\_CUDA\_ARCH\_\_\ >=\ 610}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00064\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00065\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00066\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00067\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#include\ "{}cuda\_runtime\_api.h"{}}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#ifndef\ \_\_CUDA\_ARCH\_\_}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ \_\_DEF\_IF\_HOST\ \{\ \}}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#else\ \ }\textcolor{comment}{/*\ !\_\_CUDA\_ARCH\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ \_\_DEF\_IF\_HOST\ ;}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CUDA\_ARCH\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00078\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00079\ \textcolor{comment}{*\ \ Below\ are\ declarations\ of\ SM-\/6.1\ intrinsics\ which\ are\ included\ as\ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00080\ \textcolor{comment}{*\ \ source\ (instead\ of\ being\ built\ in\ to\ the\ compiler)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00081\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00082\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_dp2a\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ ******************************************************************************/}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//\ Generic\ [\_lo]}}
+\DoxyCodeLine{00089\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_lo}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00090\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_lo}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ Vector-\/style\ [\_lo]}}
+\DoxyCodeLine{00092\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_lo}}(short2\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ char4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00093\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_lo}}(ushort2\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ uchar4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ Generic\ [\_hi]}}
+\DoxyCodeLine{00095\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_hi}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00096\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_hi}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ Vector-\/style\ [\_hi]}}
+\DoxyCodeLine{00098\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_hi}}(short2\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ char4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00099\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp2a\_hi}}(ushort2\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ uchar4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_dp4a\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00104\ \textcolor{comment}{\ ******************************************************************************/}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ Generic}}
+\DoxyCodeLine{00106\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp4a}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00107\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp4a}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//\ Vector-\/style}}
+\DoxyCodeLine{00109\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp4a}}(char4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ char4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00110\ \_\_SM\_61\_INTRINSICS\_DECL\_\_\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_dp4a}}(uchar4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcA}},\ uchar4\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{srcB}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{c}})\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_DEF\_IF\_HOST}}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_CUDA\_ARCH\_\_\ ||\ \_\_CUDA\_ARCH\_\_\ >=\ 610\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_cplusplus\ \&\&\ \_\_CUDACC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#undef\ \_\_DEF\_IF\_HOST}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#undef\ \_\_SM\_61\_INTRINSICS\_DECL\_\_}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDACC\_RTC\_\_)\ \&\&\ defined(\_\_CUDA\_ARCH\_\_)}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#include\ "{}sm\_61\_intrinsics.hpp"{}}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_CUDACC\_RTC\_\_\ \&\&\ defined(\_\_CUDA\_ARCH\_\_)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_SM\_61\_INTRINSICS\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

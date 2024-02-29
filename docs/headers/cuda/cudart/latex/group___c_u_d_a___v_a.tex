@@ -1,0 +1,528 @@
+\doxysection{Virtual Memory Management}
+\hypertarget{group___c_u_d_a___v_a}{}\label{group___c_u_d_a___v_a}\index{Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} alignment, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{addr}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} flags)
+\begin{DoxyCompactList}\small\item\em Allocate an address range reservation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_ga9b89bb32f15676d153b4c09b175f5f3f}{cu\+Mem\+Address\+Free}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em Free an address range reservation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}} (CUmem\+Generic\+Allocation\+Handle \texorpdfstring{$\ast$}{*}handle, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st}{CUmem\+Allocation\+Prop}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{prop}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} flags)
+\begin{DoxyCompactList}\small\item\em Create a CUDA memory handle representing a memory allocation of a given size described by the given properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f}{cu\+Mem\+Release}} (CUmem\+Generic\+Allocation\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Release a memory handle representing a memory allocation which was previously allocated through cu\+Mem\+Create. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} offset, CUmem\+Generic\+Allocation\+Handle handle, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} flags)
+\begin{DoxyCompactList}\small\item\em Maps an allocation handle to a reserved virtual address range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_ga2bebaf075ad1fc9288bb78d14b2265dd}{cu\+Mem\+Map\+Array\+Async}} (\mbox{\hyperlink{struct_c_uarray_map_info__st}{CUarray\+Map\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{map\+Info\+List}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Maps or unmaps subregions of sparse CUDA arrays and sparse CUDA mipmapped arrays. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_gaea66e9ff2d35af2717cd3eb31a3beac7}{cu\+Mem\+Unmap}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em Unmap the backing memory of a given address range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}{cu\+Mem\+Set\+Access}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_access_desc__st}{CUmem\+Access\+Desc}} \texorpdfstring{$\ast$}{*}desc, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}})
+\begin{DoxyCompactList}\small\item\em Set the access flags for each location specified in {\ttfamily desc} for the given virtual address range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_ga68a568fc5e4ab3f6ece32a69c7906912}{cu\+Mem\+Get\+Access}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \texorpdfstring{$\ast$}{*}flags, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_location__st}{CUmem\+Location}} \texorpdfstring{$\ast$}{*}location, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr)
+\begin{DoxyCompactList}\small\item\em Get the access {\ttfamily flags} set for the given {\ttfamily location} and {\ttfamily ptr}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{shareable\+Handle}}, CUmem\+Generic\+Allocation\+Handle handle, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{handle\+Type}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} flags)
+\begin{DoxyCompactList}\small\item\em Exports an allocation to a requested shareable handle type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}{cu\+Mem\+Import\+From\+Shareable\+Handle}} (CUmem\+Generic\+Allocation\+Handle \texorpdfstring{$\ast$}{*}handle, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{os\+Handle}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{sh\+Handle\+Type}})
+\begin{DoxyCompactList}\small\item\em Imports an allocation from a requested shareable handle type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_ga1482cd4231798f6654958c029e2a4056}{cu\+Mem\+Get\+Allocation\+Granularity}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{granularity}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st}{CUmem\+Allocation\+Prop}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{prop}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga92d627c45c25b598e9c1e1d841204e9f}{CUmem\+Allocation\+Granularity\+\_\+flags}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{option}})
+\begin{DoxyCompactList}\small\item\em Calculates either the minimal or recommended granularity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_ga9f4e9aad5bfe6a06e6e7e04ccc49f00c}{cu\+Mem\+Get\+Allocation\+Properties\+From\+Handle}} (\mbox{\hyperlink{struct_c_umem_allocation_prop__st}{CUmem\+Allocation\+Prop}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{prop}}, CUmem\+Generic\+Allocation\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Retrieve the contents of the property structure defining properties for this handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_a_ga0973509f736a51c0de9fe7332a3ec944}{cu\+Mem\+Retain\+Allocation\+Handle}} (CUmem\+Generic\+Allocation\+Handle \texorpdfstring{$\ast$}{*}handle, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{addr}})
+\begin{DoxyCompactList}\small\item\em Given an address {\ttfamily addr}, returns the allocation handle of the backing memory allocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ virtual memory management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the virtual memory management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___v_a_ga9b89bb32f15676d153b4c09b175f5f3f}\label{group___c_u_d_a___v_a_ga9b89bb32f15676d153b4c09b175f5f3f} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemAddressFree@{cuMemAddressFree}}
+\index{cuMemAddressFree@{cuMemAddressFree}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemAddressFree()}{cuMemAddressFree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Address\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Free an address range reservation. 
+
+Frees a virtual address range reserved by cu\+Mem\+Address\+Reserve. The size must match what was given to mem\+Address\+Reserve and the ptr given must match what was returned from mem\+Address\+Reserve.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -\/ Starting address of the virtual address range to free \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of the virtual address region to free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}\label{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemAddressReserve@{cuMemAddressReserve}}
+\index{cuMemAddressReserve@{cuMemAddressReserve}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemAddressReserve()}{cuMemAddressReserve()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Address\+Reserve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{alignment,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{addr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Allocate an address range reservation. 
+
+Reserves a virtual address range based on the given parameters, giving the starting address of the range in {\ttfamily ptr}. This API requires a system that supports UVA. The size and address parameters must be a multiple of the host page size and the alignment must be a power of two or zero for default alignment.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ptr} & -\/ Resulting pointer to start of virtual address range allocated \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of the reserved virtual address range requested \\
+\hline
+\mbox{\texttt{ in}}  & {\em alignment} & -\/ Alignment of the reserved virtual address range requested \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & -\/ Fixed starting address range requested \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ Currently unused, must be zero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_ga9b89bb32f15676d153b4c09b175f5f3f}{cu\+Mem\+Address\+Free} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}\label{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemCreate@{cuMemCreate}}
+\index{cuMemCreate@{cuMemCreate}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemCreate()}{cuMemCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Create (\begin{DoxyParamCaption}\item[{CUmem\+Generic\+Allocation\+Handle \texorpdfstring{$\ast$}{*}}]{handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st}{CUmem\+Allocation\+Prop}} \texorpdfstring{$\ast$}{*}}]{prop,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Create a CUDA memory handle representing a memory allocation of a given size described by the given properties. 
+
+This creates a memory allocation on the target device specified through the {\ttfamily prop} strcuture. The created allocation will not have any device or host mappings. The generic memory {\ttfamily handle} for the allocation can be mapped to the address space of calling process via \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map}. This handle cannot be transmitted directly to other processes (see \doxylink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}). On Windows, the caller must also pass an LPSECURITYATTRIBUTE in {\ttfamily prop} to be associated with this handle which limits or allows access to this handle for a recepient process (see \doxylink{struct_c_umem_allocation_prop__st_ab49cdfab6d2dcffa7d7d40176852170a}{CUmem\+Allocation\+Prop\+::win32\+Handle\+Meta\+Data} for more). The {\ttfamily size} of this allocation must be a multiple of the the value given via \doxylink{group___c_u_d_a___v_a_ga1482cd4231798f6654958c029e2a4056}{cu\+Mem\+Get\+Allocation\+Granularity} with the \doxylink{group___c_u_d_a___t_y_p_e_s_gga9993a7541b16ceb5ef719e201e8c6309ac74872d07341bb1ac24ccc4a1c9c2f56}{CU\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+GRANULARITY\+\_\+\+MINIMUM} flag. If \doxylink{struct_c_umem_allocation_prop__st_ad77fb37774bf141fd1a72af7727250fc}{CUmem\+Allocation\+Prop\+::alloc\+Flags\+::usage} contains \doxylink{group___c_u_d_a___t_y_p_e_s_gab445d91d9773d728b1a9962184c05799}{CU\+\_\+\+MEM\+\_\+\+CREATE\+\_\+\+USAGE\+\_\+\+TILE\+\_\+\+POOL} flag then the memory allocation is intended only to be used as backing tile pool for sparse CUDA arrays and sparse CUDA mipmapped arrays. (see \doxylink{group___c_u_d_a___v_a_ga2bebaf075ad1fc9288bb78d14b2265dd}{cu\+Mem\+Map\+Array\+Async}).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em handle} & -\/ Value of handle returned. All operations on this allocation are to be performed using this handle. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of the allocation requested \\
+\hline
+\mbox{\texttt{ in}}  & {\em prop} & -\/ Properties of the allocation to create. \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ flags for future use, must be zero now. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f}{cu\+Mem\+Release}, \doxylink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}, \doxylink{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}{cu\+Mem\+Import\+From\+Shareable\+Handle} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}\label{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemExportToShareableHandle@{cuMemExportToShareableHandle}}
+\index{cuMemExportToShareableHandle@{cuMemExportToShareableHandle}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemExportToShareableHandle()}{cuMemExportToShareableHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Export\+To\+Shareable\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{shareable\+Handle,  }\item[{CUmem\+Generic\+Allocation\+Handle}]{handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}}}]{handle\+Type,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Exports an allocation to a requested shareable handle type. 
+
+Given a CUDA memory handle, create a shareable memory allocation handle that can be used to share the memory with other processes. The recipient process can convert the shareable handle back into a CUDA memory handle using \doxylink{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}{cu\+Mem\+Import\+From\+Shareable\+Handle} and map it with \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map}. The implementation of what this handle is and how it can be transferred is defined by the requested handle type in {\ttfamily handle\+Type} 
+
+Once all shareable handles are closed and the allocation is released, the allocated memory referenced will be released back to the OS and uses of the CUDA handle afterward will lead to undefined behavior.
+
+This API can also be used in conjunction with other APIs (e.\+g. Vulkan, Open\+GL) that support importing memory from the shareable type
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em shareable\+Handle} & -\/ Pointer to the location in which to store the requested handle type \\
+\hline
+\mbox{\texttt{ in}}  & {\em handle} & -\/ CUDA handle for the memory allocation \\
+\hline
+\mbox{\texttt{ in}}  & {\em handle\+Type} & -\/ Type of shareable handle requested (defines type and size of the {\ttfamily shareable\+Handle} output parameter) \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ Reserved, must be zero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}{cu\+Mem\+Import\+From\+Shareable\+Handle} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_ga68a568fc5e4ab3f6ece32a69c7906912}\label{group___c_u_d_a___v_a_ga68a568fc5e4ab3f6ece32a69c7906912} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemGetAccess@{cuMemGetAccess}}
+\index{cuMemGetAccess@{cuMemGetAccess}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemGetAccess()}{cuMemGetAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Get\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \texorpdfstring{$\ast$}{*}}]{flags,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_location__st}{CUmem\+Location}} \texorpdfstring{$\ast$}{*}}]{location,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Get the access {\ttfamily flags} set for the given {\ttfamily location} and {\ttfamily ptr}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em flags} & -\/ Flags set for this location \\
+\hline
+\mbox{\texttt{ in}}  & {\em location} & -\/ Location in which to check the flags for \\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & -\/ Address in which to check the access flags for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}{cu\+Mem\+Set\+Access} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_ga1482cd4231798f6654958c029e2a4056}\label{group___c_u_d_a___v_a_ga1482cd4231798f6654958c029e2a4056} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemGetAllocationGranularity@{cuMemGetAllocationGranularity}}
+\index{cuMemGetAllocationGranularity@{cuMemGetAllocationGranularity}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemGetAllocationGranularity()}{cuMemGetAllocationGranularity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Get\+Allocation\+Granularity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{granularity,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st}{CUmem\+Allocation\+Prop}} \texorpdfstring{$\ast$}{*}}]{prop,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga92d627c45c25b598e9c1e1d841204e9f}{CUmem\+Allocation\+Granularity\+\_\+flags}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Calculates either the minimal or recommended granularity. 
+
+Calculates either the minimal or recommended granularity for a given allocation specification and returns it in granularity. This granularity can be used as a multiple for alignment, size, or address mapping.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em granularity} & Returned granularity. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prop} & Property for which to determine the granularity for \\
+\hline
+\mbox{\texttt{ in}}  & {\em option} & Determines which granularity to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_ga9f4e9aad5bfe6a06e6e7e04ccc49f00c}\label{group___c_u_d_a___v_a_ga9f4e9aad5bfe6a06e6e7e04ccc49f00c} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemGetAllocationPropertiesFromHandle@{cuMemGetAllocationPropertiesFromHandle}}
+\index{cuMemGetAllocationPropertiesFromHandle@{cuMemGetAllocationPropertiesFromHandle}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemGetAllocationPropertiesFromHandle()}{cuMemGetAllocationPropertiesFromHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Get\+Allocation\+Properties\+From\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_umem_allocation_prop__st}{CUmem\+Allocation\+Prop}} \texorpdfstring{$\ast$}{*}}]{prop,  }\item[{CUmem\+Generic\+Allocation\+Handle}]{handle }\end{DoxyParamCaption})}
+
+
+
+Retrieve the contents of the property structure defining properties for this handle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em prop} & -\/ Pointer to a properties structure which will hold the information about this handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em handle} & -\/ Handle which to perform the query on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \doxylink{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}{cu\+Mem\+Import\+From\+Shareable\+Handle} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}\label{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemImportFromShareableHandle@{cuMemImportFromShareableHandle}}
+\index{cuMemImportFromShareableHandle@{cuMemImportFromShareableHandle}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemImportFromShareableHandle()}{cuMemImportFromShareableHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Import\+From\+Shareable\+Handle (\begin{DoxyParamCaption}\item[{CUmem\+Generic\+Allocation\+Handle \texorpdfstring{$\ast$}{*}}]{handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{os\+Handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}}}]{sh\+Handle\+Type }\end{DoxyParamCaption})}
+
+
+
+Imports an allocation from a requested shareable handle type. 
+
+If the current process cannot support the memory described by this shareable handle, this API will error as CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED.
+
+\begin{DoxyNote}{Note}
+Importing shareable handles exported from some graphics APIs(\+VUlkan, Open\+GL, etc) created on devices under an SLI group may not be supported, and thus this API will return CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED. There is no guarantee that the contents of {\ttfamily handle} will be the same CUDA memory handle for the same given OS shareable handle, or the same underlying allocation.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em handle} & -\/ CUDA Memory handle for the memory allocation. \\
+\hline
+\mbox{\texttt{ in}}  & {\em os\+Handle} & -\/ Shareable Handle representing the memory allocation that is to be imported. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sh\+Handle\+Type} & -\/ handle type of the exported handle \doxylink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}, \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map}, \doxylink{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f}{cu\+Mem\+Release} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}\label{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemMap@{cuMemMap}}
+\index{cuMemMap@{cuMemMap}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemMap()}{cuMemMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{offset,  }\item[{CUmem\+Generic\+Allocation\+Handle}]{handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Maps an allocation handle to a reserved virtual address range. 
+
+Maps bytes of memory represented by {\ttfamily handle} starting from byte {\ttfamily offset} to {\ttfamily size} to address range \mbox{[}{\ttfamily addr}, {\ttfamily addr} + {\ttfamily size}\mbox{]}. This range must be an address reservation previously reserved with \doxylink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve}, and {\ttfamily offset} + {\ttfamily size} must be less than the size of the memory allocation. Both {\ttfamily ptr}, {\ttfamily size}, and {\ttfamily offset} must be a multiple of the value given via \doxylink{group___c_u_d_a___v_a_ga1482cd4231798f6654958c029e2a4056}{cu\+Mem\+Get\+Allocation\+Granularity} with the \doxylink{group___c_u_d_a___t_y_p_e_s_gga9993a7541b16ceb5ef719e201e8c6309ac74872d07341bb1ac24ccc4a1c9c2f56}{CU\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+GRANULARITY\+\_\+\+MINIMUM} flag.
+
+Please note calling \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} does not make the address accessible, the caller needs to update accessibility of a contiguous mapped VA range by calling \doxylink{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}{cu\+Mem\+Set\+Access}.
+
+Once a recipient process obtains a shareable memory handle from \doxylink{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}{cu\+Mem\+Import\+From\+Shareable\+Handle}, the process must use \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} to map the memory into its address ranges before setting accessibility with \doxylink{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}{cu\+Mem\+Set\+Access}.
+
+\doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} can only create mappings on VA range reservations that are not currently mapped.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -\/ Address where memory will be mapped. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of the memory mapping. \\
+\hline
+\mbox{\texttt{ in}}  & {\em offset} & -\/ Offset into the memory represented by
+\begin{DoxyItemize}
+\item {\ttfamily handle} from which to start mapping
+\item Note\+: currently must be zero. 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em handle} & -\/ Handle to a shareable memory \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ flags for future use, must be zero now. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gaea66e9ff2d35af2717cd3eb31a3beac7}{cu\+Mem\+Unmap}, \doxylink{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}{cu\+Mem\+Set\+Access}, \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \doxylink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve}, \doxylink{group___c_u_d_a___v_a_gaf501a51cb2241b2a3db3ad311e019c40}{cu\+Mem\+Import\+From\+Shareable\+Handle} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_ga2bebaf075ad1fc9288bb78d14b2265dd}\label{group___c_u_d_a___v_a_ga2bebaf075ad1fc9288bb78d14b2265dd} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemMapArrayAsync@{cuMemMapArrayAsync}}
+\index{cuMemMapArrayAsync@{cuMemMapArrayAsync}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemMapArrayAsync()}{cuMemMapArrayAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Map\+Array\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_uarray_map_info__st}{CUarray\+Map\+Info}} \texorpdfstring{$\ast$}{*}}]{map\+Info\+List,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{count,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Maps or unmaps subregions of sparse CUDA arrays and sparse CUDA mipmapped arrays. 
+
+Performs map or unmap operations on subregions of sparse CUDA arrays and sparse CUDA mipmapped arrays. Each operation is specified by a CUarray\+Map\+Info entry in the {\ttfamily map\+Info\+List} array of size {\ttfamily count}. The structure CUarray\+Map\+Info is defined as follow\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_uarray_map_info__st}{CUarrayMapInfo\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gadbab254defffb9a3ee49e80096316e70}{CUresourcetype}}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_af6f82a5e924c5ec0dea766bfb20c905b}{resourceType}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmappedArray}}\ mipmap;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}}\ array;}
+\DoxyCodeLine{\ \ \ \ \}\ resource;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9639f37947ca6a83fde6b73414ded629}{CUarraySparseSubresourceType}}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a5f769b9c6091a5df60ff5f10ff31d366}{subresourceType}};\ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a45249cd36c8641bacb3a535a5cb75a2c}{level}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a440416ed19541ebfc7e70aaae5bb7200}{layer}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a43e6c843ab1038d35b77a3e539e898c8}{offsetX}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a27b1e6c927817aacd3bc9153372a8e49}{offsetY}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_af9f7c7f63cd0d5ee7b582db4eceb5b18}{offsetZ}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a688a3ec2c5a14e9d09ecf98f4069e830}{extentWidth}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a89529b8d57de0b61511a4d77de108ff0}{extentHeight}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a0eb0f41447e7c792b178e84b050d04f2}{extentDepth}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ sparseLevel;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a440416ed19541ebfc7e70aaae5bb7200}{layer}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a70c39e19ab8a7ed26c52e894dcc49f26}{offset}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a34f99e07c91a14ff47c55c6539680450}{size}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ miptail;}
+\DoxyCodeLine{\ \ \ \ \}\ subresource;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0dde280f33c582bd17fc4db70bfe4511}{CUmemOperationType}}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a422b851e02bab6c0828f65d65d1dad14}{memOperationType}};}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6fbf5fd2ff9ad7079d18626552061950}{CUmemHandleType}}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a4fc9f36220dfcb5bdbdfbf37b48c4c14}{memHandleType}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CUmemGenericAllocationHandle\ memHandle;}
+\DoxyCodeLine{\ \ \ \ \}\ memHandle;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a70c39e19ab8a7ed26c52e894dcc49f26}{offset}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_aed2068845ed960401899df52eadfbc6b}{deviceBitMask}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_ab79d6ef55fc3c0bd5562c66c4a0f89ce}{flags}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uarray_map_info__st_a0b6f2df75ce57dbc69af22b912a58236}{reserved}}[2];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_uarray_map_info__st}{CUarrayMapInfo}};}
+
+\end{DoxyCode}
+
+
+where \doxylink{struct_c_uarray_map_info__st_af6f82a5e924c5ec0dea766bfb20c905b}{CUarray\+Map\+Info\+::resource\+Type} specifies the type of resource to be operated on. If \doxylink{struct_c_uarray_map_info__st_af6f82a5e924c5ec0dea766bfb20c905b}{CUarray\+Map\+Info\+::resource\+Type} is set to \+::\+CUresourcetype\+::\+CU\+\_\+\+RESOURCE\+\_\+\+TYPE\+\_\+\+ARRAY then CUarray\+Map\+Info\+::resource\+::array must be set to a valid sparse CUDA array handle. The CUDA array must be either a 2D, 2D layered or 3D CUDA array and must have been allocated using cu\+Array\+Create or cu\+Array3\+DCreate with the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga8e13c9d3ef98d1f3dce95901a115abc2}{CUDA\+\_\+\+ARRAY3\+D\+\_\+\+SPARSE}
+
+or \doxylink{group___c_u_d_a___t_y_p_e_s_ga854c29dbc47d04a4e42863cb87487d55}{CUDA\+\_\+\+ARRAY3\+D\+\_\+\+DEFERRED\+\_\+\+MAPPING}.
+
+For CUDA arrays obtained using \doxylink{group___c_u_d_a___m_e_m_gaff70c3a8c820c60af579c638771038e9}{cu\+Mipmapped\+Array\+Get\+Level}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} will be returned. If \doxylink{struct_c_uarray_map_info__st_af6f82a5e924c5ec0dea766bfb20c905b}{CUarray\+Map\+Info\+::resource\+Type} is set to \+::\+CUresourcetype\+::\+CU\+\_\+\+RESOURCE\+\_\+\+TYPE\+\_\+\+MIPMAPPED\+\_\+\+ARRAY then CUarray\+Map\+Info\+::resource\+::mipmap must be set to a valid sparse CUDA mipmapped array handle. The CUDA mipmapped array must be either a 2D, 2D layered or 3D CUDA mipmapped array and must have been allocated using \doxylink{group___c_u_d_a___m_e_m_ga2194e4f8117e242cc371ded1abb054e4}{cu\+Mipmapped\+Array\+Create} with the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga8e13c9d3ef98d1f3dce95901a115abc2}{CUDA\+\_\+\+ARRAY3\+D\+\_\+\+SPARSE}
+
+or \doxylink{group___c_u_d_a___t_y_p_e_s_ga854c29dbc47d04a4e42863cb87487d55}{CUDA\+\_\+\+ARRAY3\+D\+\_\+\+DEFERRED\+\_\+\+MAPPING}.
+
+\doxylink{struct_c_uarray_map_info__st_a5f769b9c6091a5df60ff5f10ff31d366}{CUarray\+Map\+Info\+::subresource\+Type} specifies the type of subresource within the resource. \doxylink{group___c_u_d_a___t_y_p_e_s_gad5c442a0ae034d62fc8422a4b48d70d0}{CUarray\+Sparse\+Subresource\+Type\+\_\+enum} is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad5c442a0ae034d62fc8422a4b48d70d0}{CUarraySparseSubresourceType\_enum}}\ \{}
+\DoxyCodeLine{\ \ \ \ CU\_ARRAY\_SPARSE\_SUBRESOURCE\_TYPE\_SPARSE\_LEVEL\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ CU\_ARRAY\_SPARSE\_SUBRESOURCE\_TYPE\_MIPTAIL\ =\ 1}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9639f37947ca6a83fde6b73414ded629}{CUarraySparseSubresourceType}};}
+
+\end{DoxyCode}
+
+
+where \+::\+CUarray\+Sparse\+Subresource\+Type\+::\+CU\+\_\+\+ARRAY\+\_\+\+SPARSE\+\_\+\+SUBRESOURCE\+\_\+\+TYPE\+\_\+\+SPARSE\+\_\+\+LEVEL indicates a sparse-\/miplevel which spans at least one tile in every dimension. The remaining miplevels which are too small to span at least one tile in any dimension constitute the mip tail region as indicated by \+::\+CUarray\+Sparse\+Subresource\+Type\+::\+CU\+\_\+\+ARRAY\+\_\+\+SPARSE\+\_\+\+SUBRESOURCE\+\_\+\+TYPE\+\_\+\+MIPTAIL subresource type.
+
+If \doxylink{struct_c_uarray_map_info__st_a5f769b9c6091a5df60ff5f10ff31d366}{CUarray\+Map\+Info\+::subresource\+Type} is set to \+::\+CUarray\+Sparse\+Subresource\+Type\+::\+CU\+\_\+\+ARRAY\+\_\+\+SPARSE\+\_\+\+SUBRESOURCE\+\_\+\+TYPE\+\_\+\+SPARSE\+\_\+\+LEVEL then CUarray\+Map\+Info\+::subresource\+::sparse\+Level struct must contain valid array subregion offsets and extents. The \doxylink{struct_c_uarray_map_info__st_a43e6c843ab1038d35b77a3e539e898c8}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::offsetX}, \doxylink{struct_c_uarray_map_info__st_a27b1e6c927817aacd3bc9153372a8e49}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::offsetY} and \doxylink{struct_c_uarray_map_info__st_af9f7c7f63cd0d5ee7b582db4eceb5b18}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::offsetZ} must specify valid X, Y and Z offsets respectively. The \doxylink{struct_c_uarray_map_info__st_a688a3ec2c5a14e9d09ecf98f4069e830}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::extent\+Width}, \doxylink{struct_c_uarray_map_info__st_a89529b8d57de0b61511a4d77de108ff0}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::extent\+Height} and \doxylink{struct_c_uarray_map_info__st_a0eb0f41447e7c792b178e84b050d04f2}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::extent\+Depth} must specify valid width, height and depth extents respectively. These offsets and extents must be aligned to the corresponding tile dimension. For CUDA mipmapped arrays \doxylink{struct_c_uarray_map_info__st_a45249cd36c8641bacb3a535a5cb75a2c}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::level} must specify a valid mip level index. Otherwise, must be zero. For layered CUDA arrays and layered CUDA mipmapped arrays \doxylink{struct_c_uarray_map_info__st_a440416ed19541ebfc7e70aaae5bb7200}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::layer} must specify a valid layer index. Otherwise, must be zero. \doxylink{struct_c_uarray_map_info__st_af9f7c7f63cd0d5ee7b582db4eceb5b18}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::offsetZ} must be zero and \doxylink{struct_c_uarray_map_info__st_a0eb0f41447e7c792b178e84b050d04f2}{CUarray\+Map\+Info\+::subresource\+::sparse\+Level\+::extent\+Depth} must be set to 1 for 2D and 2D layered CUDA arrays and CUDA mipmapped arrays. Tile extents can be obtained by calling \doxylink{group___c_u_d_a___m_e_m_gaf1b0fbfe3c84b83323e335c6665e40f1}{cu\+Array\+Get\+Sparse\+Properties} and \doxylink{group___c_u_d_a___m_e_m_ga44e401fb3c212fd9d2eb3b9f9370f3d8}{cu\+Mipmapped\+Array\+Get\+Sparse\+Properties}
+
+If \doxylink{struct_c_uarray_map_info__st_a5f769b9c6091a5df60ff5f10ff31d366}{CUarray\+Map\+Info\+::subresource\+Type} is set to \+::\+CUarray\+Sparse\+Subresource\+Type\+::\+CU\+\_\+\+ARRAY\+\_\+\+SPARSE\+\_\+\+SUBRESOURCE\+\_\+\+TYPE\+\_\+\+MIPTAIL then CUarray\+Map\+Info\+::subresource\+::miptail struct must contain valid mip tail offset in \doxylink{struct_c_uarray_map_info__st_a70c39e19ab8a7ed26c52e894dcc49f26}{CUarray\+Map\+Info\+::subresource\+::miptail\+::offset} and size in \doxylink{struct_c_uarray_map_info__st_a34f99e07c91a14ff47c55c6539680450}{CUarray\+Map\+Info\+::subresource\+::miptail\+::size}. Both, mip tail offset and mip tail size must be aligned to the tile size. For layered CUDA mipmapped arrays which don\textquotesingle{}t have the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga0dcf4ba7e64caa5c1aa4e88caa7f659a}{CU\+\_\+\+ARRAY\+\_\+\+SPARSE\+\_\+\+PROPERTIES\+\_\+\+SINGLE\+\_\+\+MIPTAIL} set in \doxylink{struct_c_u_d_a___a_r_r_a_y___s_p_a_r_s_e___p_r_o_p_e_r_t_i_e_s__st_a4b165566317bb2212ef61b5904323e11}{CUDA\+\_\+\+ARRAY\+\_\+\+SPARSE\+\_\+\+PROPERTIES\+::flags} as returned by \doxylink{group___c_u_d_a___m_e_m_ga44e401fb3c212fd9d2eb3b9f9370f3d8}{cu\+Mipmapped\+Array\+Get\+Sparse\+Properties}, \doxylink{struct_c_uarray_map_info__st_a440416ed19541ebfc7e70aaae5bb7200}{CUarray\+Map\+Info\+::subresource\+::miptail\+::layer} must specify a valid layer index. Otherwise, must be zero.
+
+If CUarray\+Map\+Info\+::resource\+::array or CUarray\+Map\+Info\+::resource\+::mipmap was created with \doxylink{group___c_u_d_a___t_y_p_e_s_ga854c29dbc47d04a4e42863cb87487d55}{CUDA\+\_\+\+ARRAY3\+D\+\_\+\+DEFERRED\+\_\+\+MAPPING} flag set the \doxylink{struct_c_uarray_map_info__st_a5f769b9c6091a5df60ff5f10ff31d366}{CUarray\+Map\+Info\+::subresource\+Type} and the contents of CUarray\+Map\+Info\+::subresource will be ignored.
+
+\doxylink{struct_c_uarray_map_info__st_a422b851e02bab6c0828f65d65d1dad14}{CUarray\+Map\+Info\+::mem\+Operation\+Type} specifies the type of operation. \doxylink{group___c_u_d_a___t_y_p_e_s_ga0dde280f33c582bd17fc4db70bfe4511}{CUmem\+Operation\+Type} is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0099bd95a5c87dc3ec3c9bf6320db6af}{CUmemOperationType\_enum}}\ \{}
+\DoxyCodeLine{\ \ \ \ CU\_MEM\_OPERATION\_TYPE\_MAP\ =\ 1,}
+\DoxyCodeLine{\ \ \ \ CU\_MEM\_OPERATION\_TYPE\_UNMAP\ =\ 2}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga0dde280f33c582bd17fc4db70bfe4511}{CUmemOperationType}};}
+
+\end{DoxyCode}
+ If \doxylink{struct_c_uarray_map_info__st_a422b851e02bab6c0828f65d65d1dad14}{CUarray\+Map\+Info\+::mem\+Operation\+Type} is set to \+::\+CUmem\+Operation\+Type\+::\+CU\+\_\+\+MEM\+\_\+\+OPERATION\+\_\+\+TYPE\+\_\+\+MAP then the subresource will be mapped onto the tile pool memory specified by CUarray\+Map\+Info\+::mem\+Handle at offset \doxylink{struct_c_uarray_map_info__st_a70c39e19ab8a7ed26c52e894dcc49f26}{CUarray\+Map\+Info\+::offset}. The tile pool allocation has to be created by specifying the \doxylink{group___c_u_d_a___t_y_p_e_s_gab445d91d9773d728b1a9962184c05799}{CU\+\_\+\+MEM\+\_\+\+CREATE\+\_\+\+USAGE\+\_\+\+TILE\+\_\+\+POOL} flag when calling \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}. Also, \doxylink{struct_c_uarray_map_info__st_a4fc9f36220dfcb5bdbdfbf37b48c4c14}{CUarray\+Map\+Info\+::mem\+Handle\+Type} must be set to \+::\+CUmem\+Handle\+Type\+::\+CU\+\_\+\+MEM\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+GENERIC.
+
+If \doxylink{struct_c_uarray_map_info__st_a422b851e02bab6c0828f65d65d1dad14}{CUarray\+Map\+Info\+::mem\+Operation\+Type} is set to \+::\+CUmem\+Operation\+Type\+::\+CU\+\_\+\+MEM\+\_\+\+OPERATION\+\_\+\+TYPE\+\_\+\+UNMAP then an unmapping operation is performed. CUarray\+Map\+Info\+::mem\+Handle must be NULL.
+
+\doxylink{struct_c_uarray_map_info__st_aed2068845ed960401899df52eadfbc6b}{CUarray\+Map\+Info\+::device\+Bit\+Mask} specifies the list of devices that must map or unmap physical memory. Currently, this mask must have exactly one bit set, and the corresponding device must match the device associated with the stream. If \doxylink{struct_c_uarray_map_info__st_a422b851e02bab6c0828f65d65d1dad14}{CUarray\+Map\+Info\+::mem\+Operation\+Type} is set to \+::\+CUmem\+Operation\+Type\+::\+CU\+\_\+\+MEM\+\_\+\+OPERATION\+\_\+\+TYPE\+\_\+\+MAP, the device must also match the device associated with the tile pool memory allocation as specified by CUarray\+Map\+Info\+::mem\+Handle.
+
+\doxylink{struct_c_uarray_map_info__st_ab79d6ef55fc3c0bd5562c66c4a0f89ce}{CUarray\+Map\+Info\+::flags} and \doxylink{struct_c_uarray_map_info__st_a0b6f2df75ce57dbc69af22b912a58236}{CUarray\+Map\+Info\+::reserved}\mbox{[}\mbox{]} are unused and must be set to zero.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em map\+Info\+List} & -\/ List of CUarray\+Map\+Info \\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & -\/ Count of CUarray\+Map\+Info in {\ttfamily map\+Info\+List} \\
+\hline
+\mbox{\texttt{ in}}  & {\em h\+Stream} & -\/ Stream identifier for the stream to use for map or unmap operations\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_ga2194e4f8117e242cc371ded1abb054e4}{cu\+Mipmapped\+Array\+Create}, cu\+Array\+Create, cu\+Array3\+DCreate, \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \doxylink{group___c_u_d_a___m_e_m_gaf1b0fbfe3c84b83323e335c6665e40f1}{cu\+Array\+Get\+Sparse\+Properties}, \doxylink{group___c_u_d_a___m_e_m_ga44e401fb3c212fd9d2eb3b9f9370f3d8}{cu\+Mipmapped\+Array\+Get\+Sparse\+Properties} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f}\label{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemRelease@{cuMemRelease}}
+\index{cuMemRelease@{cuMemRelease}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemRelease()}{cuMemRelease()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Release (\begin{DoxyParamCaption}\item[{CUmem\+Generic\+Allocation\+Handle}]{handle }\end{DoxyParamCaption})}
+
+
+
+Release a memory handle representing a memory allocation which was previously allocated through cu\+Mem\+Create. 
+
+Frees the memory that was allocated on a device through cu\+Mem\+Create.
+
+The memory allocation will be freed when all outstanding mappings to the memory are unmapped and when all outstanding references to the handle (including it\textquotesingle{}s shareable counterparts) are also released. The generic memory handle can be freed when there are still outstanding mappings made with this handle. Each time a recepient process imports a shareable handle, it needs to pair it with \doxylink{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f}{cu\+Mem\+Release} for the handle to be freed. If {\ttfamily handle} is not a valid handle the behavior is undefined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Value of handle which was returned previously by cu\+Mem\+Create. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_ga0973509f736a51c0de9fe7332a3ec944}\label{group___c_u_d_a___v_a_ga0973509f736a51c0de9fe7332a3ec944} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemRetainAllocationHandle@{cuMemRetainAllocationHandle}}
+\index{cuMemRetainAllocationHandle@{cuMemRetainAllocationHandle}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemRetainAllocationHandle()}{cuMemRetainAllocationHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Retain\+Allocation\+Handle (\begin{DoxyParamCaption}\item[{CUmem\+Generic\+Allocation\+Handle \texorpdfstring{$\ast$}{*}}]{handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{addr }\end{DoxyParamCaption})}
+
+
+
+Given an address {\ttfamily addr}, returns the allocation handle of the backing memory allocation. 
+
+The handle is guaranteed to be the same handle value used to map the memory. If the address requested is not mapped, the function will fail. The returned handle must be released with corresponding number of calls to \doxylink{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f}{cu\+Mem\+Release}.
+
+\begin{DoxyNote}{Note}
+The address {\ttfamily addr}, can be any address in a range previously mapped by \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map}, and not necessarily the start address.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em handle} & CUDA Memory handle for the backing memory allocation. \\
+\hline
+\mbox{\texttt{ in}}  & {\em addr} & Memory address to query, that has been mapped previously. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \doxylink{group___c_u_d_a___v_a_gac8b9def79e70222aca0a22706873f68f}{cu\+Mem\+Release}, \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}\label{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemSetAccess@{cuMemSetAccess}}
+\index{cuMemSetAccess@{cuMemSetAccess}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemSetAccess()}{cuMemSetAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Set\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_access_desc__st}{CUmem\+Access\+Desc}} \texorpdfstring{$\ast$}{*}}]{desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{count }\end{DoxyParamCaption})}
+
+
+
+Set the access flags for each location specified in {\ttfamily desc} for the given virtual address range. 
+
+Given the virtual address range via {\ttfamily ptr} and {\ttfamily size}, and the locations in the array given by {\ttfamily desc} and {\ttfamily count}, set the access flags for the target locations. The range must be a fully mapped address range containing all allocations created by \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} / \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -\/ Starting address for the virtual address range \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Length of the virtual address range \\
+\hline
+\mbox{\texttt{ in}}  & {\em desc} & -\/ Array of CUmem\+Access\+Desc that describe how to change the
+\begin{DoxyItemize}
+\item mapping for each location specified 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & -\/ Number of CUmem\+Access\+Desc in {\ttfamily desc} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr \textbackslash{}note\+\_\+sync
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}{cu\+Mem\+Set\+Access}, \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \+:\doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_a_gaea66e9ff2d35af2717cd3eb31a3beac7}\label{group___c_u_d_a___v_a_gaea66e9ff2d35af2717cd3eb31a3beac7} 
+\index{Virtual Memory Management@{Virtual Memory Management}!cuMemUnmap@{cuMemUnmap}}
+\index{cuMemUnmap@{cuMemUnmap}!Virtual Memory Management@{Virtual Memory Management}}
+\doxysubsubsection{\texorpdfstring{cuMemUnmap()}{cuMemUnmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Unmap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Unmap the backing memory of a given address range. 
+
+The range must be the entire contiguous address range that was mapped to. In other words, \doxylink{group___c_u_d_a___v_a_gaea66e9ff2d35af2717cd3eb31a3beac7}{cu\+Mem\+Unmap} cannot unmap a sub-\/range of an address range mapped by \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create} / \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map}. Any backing memory allocations will be freed if there are no existing mappings and there are no unreleased memory handles.
+
+When \doxylink{group___c_u_d_a___v_a_gaea66e9ff2d35af2717cd3eb31a3beac7}{cu\+Mem\+Unmap} returns successfully the address range is converted to an address reservation and can be used for a future calls to \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map}. Any new mapping to this virtual address will need to have access granted through \doxylink{group___c_u_d_a___v_a_ga349fbcc39ba4162fa3a9f9127d6157d2}{cu\+Mem\+Set\+Access}, as all mappings start with no accessibility setup.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -\/ Starting address for the virtual address range to unmap \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Size of the virtual address range to unmap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae23d0197c490ec332a43e55b167968a3}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+PERMITTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr \textbackslash{}note\+\_\+sync
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \doxylink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve} 
+\end{DoxySeeAlso}

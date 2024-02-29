@@ -1,0 +1,347 @@
+\doxysubsection{Open\+GL Interoperability \mbox{[}DEPRECATED\mbox{]}}
+\hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d}{}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d}\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{typedef}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}{CUGLmap\+\_\+flags\+\_\+enum}} \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga8caa9b32437a91f5e44e6b91fbb7b2e2}{CUGLmap\+\_\+flags}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}{CUGLmap\+\_\+flags\+\_\+enum}} \{ {\bfseries CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+NONE} = 0x00
+, {\bfseries CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY} = 0x01
+, {\bfseries CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD} = 0x02
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gadca4399db5443c43c744d582250075ce}{cu\+GLCtx\+Create}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Ctx}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} device)
+\begin{DoxyCompactList}\small\item\em Create a CUDA context for interoperability with Open\+GL. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga461a96fde8e72a6bbbd5bf066c20de7b}{cu\+GLInit}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}})
+\begin{DoxyCompactList}\small\item\em Initializes Open\+GL interoperability. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43}{cu\+GLRegister\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Registers an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga398562e61d9ed3c9b9ece09c74efc5a7}{cu\+GLMap\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}dptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Maps an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723}{cu\+GLUnmap\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Unmaps an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc}{cu\+GLUnregister\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Unregister an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb}{cu\+GLSet\+Buffer\+Object\+Map\+Flags}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Set the map flags for an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga0575cd8e43000f422f3f4b14ae981df4}{cu\+GLMap\+Buffer\+Object\+Async}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}dptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Maps an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e}{cu\+GLUnmap\+Buffer\+Object\+Async}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Unmaps an Open\+GL buffer object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ deprecated Open\+GL interoperability functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes deprecated Open\+GL interoperability functionality. 
+
+\doxysubsubsection{Typedef Documentation}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga8caa9b32437a91f5e44e6b91fbb7b2e2}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga8caa9b32437a91f5e44e6b91fbb7b2e2} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!CUGLmap\_flags@{CUGLmap\_flags}}
+\index{CUGLmap\_flags@{CUGLmap\_flags}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{CUGLmap\_flags}{CUGLmap\_flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{typedef}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}{CUGLmap\+\_\+flags\+\_\+enum}} \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga8caa9b32437a91f5e44e6b91fbb7b2e2}{CUGLmap\+\_\+flags}}}
+
+Flags to map or unmap a resource 
+
+\doxysubsubsection{Enumeration Type Documentation}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!CUGLmap\_flags\_enum@{CUGLmap\_flags\_enum}}
+\index{CUGLmap\_flags\_enum@{CUGLmap\_flags\_enum}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{CUGLmap\_flags\_enum}{CUGLmap\_flags\_enum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}{CUGLmap\+\_\+flags\+\_\+enum}}}
+
+Flags to map or unmap a resource 
+
+\doxysubsubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gadca4399db5443c43c744d582250075ce}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gadca4399db5443c43c744d582250075ce} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLCtxCreate@{cuGLCtxCreate}}
+\index{cuGLCtxCreate@{cuGLCtxCreate}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLCtxCreate()}{cuGLCtxCreate()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLCtx\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}}]{p\+Ctx,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{device }\end{DoxyParamCaption})}
+
+
+
+Create a CUDA context for interoperability with Open\+GL. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000083}{Deprecated}}]This function is deprecated as of Cuda 5.\+0. \end{DoxyRefDesc}
+
+
+This function is deprecated and should no longer be used. It is no longer necessary to associate a CUDA context with an Open\+GL context in order to achieve maximum interoperability performance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Ctx} & -\/ Returned CUDA context \\
+\hline
+{\em Flags} & -\/ Options for CUDA context creation \\
+\hline
+{\em device} & -\/ Device on which to create the context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga461a96fde8e72a6bbbd5bf066c20de7b}{cu\+GLInit}, cu\+GLMap\+Buffer\+Object, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43}{cu\+GLRegister\+Buffer\+Object}, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723}{cu\+GLUnmap\+Buffer\+Object}, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc}{cu\+GLUnregister\+Buffer\+Object}, cu\+GLMap\+Buffer\+Object\+Async, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e}{cu\+GLUnmap\+Buffer\+Object\+Async}, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb}{cu\+GLSet\+Buffer\+Object\+Map\+Flags}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+WGLGet\+Device} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga461a96fde8e72a6bbbd5bf066c20de7b}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga461a96fde8e72a6bbbd5bf066c20de7b} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLInit@{cuGLInit}}
+\index{cuGLInit@{cuGLInit}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLInit()}{cuGLInit()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLInit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes Open\+GL interoperability. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000084}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Initializes Open\+GL interoperability. This function is deprecated and calling it is no longer required. It may fail if the needed Open\+GL driver facilities are not available.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+GLMap\+Buffer\+Object, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43}{cu\+GLRegister\+Buffer\+Object}, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723}{cu\+GLUnmap\+Buffer\+Object}, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc}{cu\+GLUnregister\+Buffer\+Object}, cu\+GLMap\+Buffer\+Object\+Async, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e}{cu\+GLUnmap\+Buffer\+Object\+Async}, \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb}{cu\+GLSet\+Buffer\+Object\+Map\+Flags}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+WGLGet\+Device} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga398562e61d9ed3c9b9ece09c74efc5a7}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga398562e61d9ed3c9b9ece09c74efc5a7} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLMapBufferObject@{cuGLMapBufferObject}}
+\index{cuGLMapBufferObject@{cuGLMapBufferObject}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLMapBufferObject()}{cuGLMapBufferObject()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLMap\+Buffer\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}}]{dptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Maps an Open\+GL buffer object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000086}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Maps the buffer object specified by {\ttfamily buffer} into the address space of the current CUDA context and returns in {\ttfamily \texorpdfstring{$\ast$}{*}dptr} and {\ttfamily \texorpdfstring{$\ast$}{*}size} the base pointer and size of the resulting mapping.
+
+There must be a valid Open\+GL context bound to the current thread when this function is called. This must be the same context, or a member of the same share\+Group, as the context that was bound when the buffer was registered.
+
+All streams in the current CUDA context are synchronized with the current GL context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dptr} & -\/ Returned mapped base pointer \\
+\hline
+{\em size} & -\/ Returned size of mapping \\
+\hline
+{\em buffer} & -\/ The name of the buffer object to map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab9a95891afee8e479ca2e89595b51a2f}{CUDA\+\_\+\+ERROR\+\_\+\+MAP\+\_\+\+FAILED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga0575cd8e43000f422f3f4b14ae981df4}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga0575cd8e43000f422f3f4b14ae981df4} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLMapBufferObjectAsync@{cuGLMapBufferObjectAsync}}
+\index{cuGLMapBufferObjectAsync@{cuGLMapBufferObjectAsync}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLMapBufferObjectAsync()}{cuGLMapBufferObjectAsync()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLMap\+Buffer\+Object\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}}]{dptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Maps an Open\+GL buffer object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000090}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Maps the buffer object specified by {\ttfamily buffer} into the address space of the current CUDA context and returns in {\ttfamily \texorpdfstring{$\ast$}{*}dptr} and {\ttfamily \texorpdfstring{$\ast$}{*}size} the base pointer and size of the resulting mapping.
+
+There must be a valid Open\+GL context bound to the current thread when this function is called. This must be the same context, or a member of the same share\+Group, as the context that was bound when the buffer was registered.
+
+Stream {\ttfamily h\+Stream} in the current CUDA context is synchronized with the current GL context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dptr} & -\/ Returned mapped base pointer \\
+\hline
+{\em size} & -\/ Returned size of mapping \\
+\hline
+{\em buffer} & -\/ The name of the buffer object to map \\
+\hline
+{\em h\+Stream} & -\/ Stream to synchronize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab9a95891afee8e479ca2e89595b51a2f}{CUDA\+\_\+\+ERROR\+\_\+\+MAP\+\_\+\+FAILED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLRegisterBufferObject@{cuGLRegisterBufferObject}}
+\index{cuGLRegisterBufferObject@{cuGLRegisterBufferObject}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLRegisterBufferObject()}{cuGLRegisterBufferObject()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLRegister\+Buffer\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Registers an Open\+GL buffer object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000085}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Registers the buffer object specified by {\ttfamily buffer} for access by CUDA. This function must be called before CUDA can map the buffer object. There must be a valid Open\+GL context bound to the current thread when this function is called, and the buffer name is resolved by that context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ The name of the buffer object to register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_l_gab56e569048aa01e2d9c58f3c9bc4718a}{cu\+Graphics\+GLRegister\+Buffer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLSetBufferObjectMapFlags@{cuGLSetBufferObjectMapFlags}}
+\index{cuGLSetBufferObjectMapFlags@{cuGLSetBufferObjectMapFlags}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLSetBufferObjectMapFlags()}{cuGLSetBufferObjectMapFlags()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLSet\+Buffer\+Object\+Map\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Set the map flags for an Open\+GL buffer object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000089}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Sets the map flags for the buffer object specified by {\ttfamily buffer}.
+
+Changes to {\ttfamily Flags} will take effect the next time {\ttfamily buffer} is mapped. The {\ttfamily Flags} argument may be any of the following\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+NONE\+:} Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and written to by CUDA kernels. This is the default value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY\+:} Specifies that CUDA kernels which access this resource will not write to this resource.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD\+:} Specifies that CUDA kernels which access this resource will not read from this resource and will write over the entire contents of the resource, so none of the data previously stored in the resource will be preserved.
+\end{DoxyItemize}
+
+If {\ttfamily buffer} has not been registered for use with CUDA, then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} is returned. If {\ttfamily buffer} is presently mapped for access by CUDA, then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED} is returned.
+
+There must be a valid Open\+GL context bound to the current thread when this function is called. This must be the same context, or a member of the same share\+Group, as the context that was bound when the buffer was registered.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ Buffer object to unmap \\
+\hline
+{\em Flags} & -\/ Map flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Graphics\+Resource\+Set\+Map\+Flags 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLUnmapBufferObject@{cuGLUnmapBufferObject}}
+\index{cuGLUnmapBufferObject@{cuGLUnmapBufferObject}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLUnmapBufferObject()}{cuGLUnmapBufferObject()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLUnmap\+Buffer\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Unmaps an Open\+GL buffer object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000087}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Unmaps the buffer object specified by {\ttfamily buffer} for access by CUDA.
+
+There must be a valid Open\+GL context bound to the current thread when this function is called. This must be the same context, or a member of the same share\+Group, as the context that was bound when the buffer was registered.
+
+All streams in the current CUDA context are synchronized with the current GL context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ Buffer object to unmap\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLUnmapBufferObjectAsync@{cuGLUnmapBufferObjectAsync}}
+\index{cuGLUnmapBufferObjectAsync@{cuGLUnmapBufferObjectAsync}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLUnmapBufferObjectAsync()}{cuGLUnmapBufferObjectAsync()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLUnmap\+Buffer\+Object\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Unmaps an Open\+GL buffer object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000091}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Unmaps the buffer object specified by {\ttfamily buffer} for access by CUDA.
+
+There must be a valid Open\+GL context bound to the current thread when this function is called. This must be the same context, or a member of the same share\+Group, as the context that was bound when the buffer was registered.
+
+Stream {\ttfamily h\+Stream} in the current CUDA context is synchronized with the current GL context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ Name of the buffer object to unmap \\
+\hline
+{\em h\+Stream} & -\/ Stream to synchronize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc}\label{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc} 
+\index{OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}!cuGLUnregisterBufferObject@{cuGLUnregisterBufferObject}}
+\index{cuGLUnregisterBufferObject@{cuGLUnregisterBufferObject}!OpenGL Interoperability \mbox{[}DEPRECATED\mbox{]}@{OpenGL Interoperability [DEPRECATED]}}
+\doxysubsubsubsection{\texorpdfstring{cuGLUnregisterBufferObject()}{cuGLUnregisterBufferObject()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLUnregister\+Buffer\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Unregister an Open\+GL buffer object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000088}{Deprecated}}]This function is deprecated as of Cuda 3.\+0. \end{DoxyRefDesc}
+
+
+Unregisters the buffer object specified by {\ttfamily buffer}. This releases any resources associated with the registered buffer. After this call, the buffer may no longer be mapped for access by CUDA.
+
+There must be a valid Open\+GL context bound to the current thread when this function is called. This must be the same context, or a member of the same share\+Group, as the context that was bound when the buffer was registered.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ Name of the buffer object to unregister\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource} 
+\end{DoxySeeAlso}

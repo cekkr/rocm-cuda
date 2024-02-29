@@ -1,0 +1,259 @@
+\doxysection{cuda\+EGL.\+h}
+\hypertarget{cuda_e_g_l_8h_source}{}\label{cuda_e_g_l_8h_source}\mbox{\hyperlink{cuda_e_g_l_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 2014\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifndef\ CUDAEGL\_H}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ CUDAEGL\_H}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cuda_8h}{cuda.h}}"{}}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ "{}EGL/egl.h"{}}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ "{}EGL/eglext.h"{}}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#ifdef\ CUDA\_FORCE\_API\_VERSION}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#error\ "{}CUDA\_FORCE\_API\_VERSION\ is\ no\ longer\ supported."{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ MAX\_PLANES\ 3}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9e66bcc793cb26cf62399e7e8ed782a}{CUeglFrameType\_enum}}\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggaf9e66bcc793cb26cf62399e7e8ed782aac02019e2bb4a56d31db30925d567d101}{CU\_EGL\_FRAME\_TYPE\_ARRAY}}\ =\ 0,\ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ggaf9e66bcc793cb26cf62399e7e8ed782aafc6cb007c686d8cad86705005c55bf33}{CU\_EGL\_FRAME\_TYPE\_PITCH}}\ =\ 1,\ \ }
+\DoxyCodeLine{00082\ \}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga352a46e58c545cb7e0bf9973cc39543d}{CUeglFrameType}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ CUDA\_EGL\_INFINITE\_TIMEOUT\ 0xFFFFFFFF}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3c8fee650dc5b3fbd433dcebec76b35a}{CUeglResourceLocationFlags\_enum}}\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga3c8fee650dc5b3fbd433dcebec76b35aa0033e7197256284919d4dd8f8a45482a}{CU\_EGL\_RESOURCE\_LOCATION\_SYSMEM}}\ \ \ =\ 0x00,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga3c8fee650dc5b3fbd433dcebec76b35aa115dedc3b0a393b00d2c38d996daeedc}{CU\_EGL\_RESOURCE\_LOCATION\_VIDMEM}}\ \ \ =\ 0x01\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaa9c90614957a62578d68c823f189e93e}{CUeglResourceLocationFlags}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga8852082a4157dd2ea18d91ea9d0b3502}{CUeglColorFormat\_enum}}\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a295e95d7455d1da1d7c21ff7e6644de4}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_PLANAR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x00,\ \ }
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a2e97422d70b28f8528310af95260ef9e}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_SEMIPLANAR}}\ \ \ \ \ \ \ \ \ \ =\ 0x01,\ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a1f30ec172836ae1d8cc0e0a4a935f0f5}{CU\_EGL\_COLOR\_FORMAT\_YUV422\_PLANAR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x02,\ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a17e413d9bc4bed8b9e773e59b5ff9af6}{CU\_EGL\_COLOR\_FORMAT\_YUV422\_SEMIPLANAR}}\ \ \ \ \ \ \ \ \ \ =\ 0x03,\ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a213b97477cb061627aa9cd17079ebc76}{CU\_EGL\_COLOR\_FORMAT\_RGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x04,\ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a96bf1d6577c935b8978f9da452cc9d43}{CU\_EGL\_COLOR\_FORMAT\_BGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x05,\ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ae3c8d122e1812036ee9a58f4cd107a5f}{CU\_EGL\_COLOR\_FORMAT\_ARGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x06,\ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a21c96edeab2486c3a1a7d6b7740e9332}{CU\_EGL\_COLOR\_FORMAT\_RGBA}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x07,\ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502affa5f047b197f26c76377c45cbb7b9b0}{CU\_EGL\_COLOR\_FORMAT\_L}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x08,\ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aedc2fb2e7f67ed192da85a07ccd71a5d}{CU\_EGL\_COLOR\_FORMAT\_R}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x09,\ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a75fb394d36c3c6e7a7b2769d5dc4a4d6}{CU\_EGL\_COLOR\_FORMAT\_YUV444\_PLANAR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0A,\ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502affe369928fe22235811787f815cff493}{CU\_EGL\_COLOR\_FORMAT\_YUV444\_SEMIPLANAR}}\ \ \ \ \ \ \ \ \ \ =\ 0x0B,\ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab71f400378fd0efd14a874d095bad103}{CU\_EGL\_COLOR\_FORMAT\_YUYV\_422}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0C,\ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a28895657c5c923e48339ad4def1395c5}{CU\_EGL\_COLOR\_FORMAT\_UYVY\_422}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0D,\ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a9032a5a5642a4c15124e508bf3945a16}{CU\_EGL\_COLOR\_FORMAT\_ABGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0E,\ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a58675d4c19f198c8934cbf2e0b2e4ab1}{CU\_EGL\_COLOR\_FORMAT\_BGRA}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0F,\ \ }
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a5d8134ea52acba6318a88de7ac6a217e}{CU\_EGL\_COLOR\_FORMAT\_A}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x10,\ \ }
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a3b4d0b4bdf0c48b83d1e8c2aa590f77f}{CU\_EGL\_COLOR\_FORMAT\_RG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x11,\ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a19e3b39fc6fdb22e3ee9ef37c38e70c3}{CU\_EGL\_COLOR\_FORMAT\_AYUV}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x12,\ \ }
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aabee198329424fda49f5e2d000a376fc}{CU\_EGL\_COLOR\_FORMAT\_YVU444\_SEMIPLANAR}}\ \ \ \ \ \ \ \ \ \ =\ 0x13,\ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a6dc61e5fdee5e872f86cf8deceb8233e}{CU\_EGL\_COLOR\_FORMAT\_YVU422\_SEMIPLANAR}}\ \ \ \ \ \ \ \ \ \ =\ 0x14,\ \ }
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aee977525867107012cdb36d3232866a6}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_SEMIPLANAR}}\ \ \ \ \ \ \ \ \ \ =\ 0x15,\ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aa953195fb918a8f8a6bc3779e4cac91b}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_444\_SEMIPLANAR}}\ \ \ =\ 0x16,\ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502af87b0763e679597bc195bcfe90c162e8}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_420\_SEMIPLANAR}}\ \ \ =\ 0x17,\ \ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a03d9851b45025a00ded8b4c117ffb0cc}{CU\_EGL\_COLOR\_FORMAT\_Y12V12U12\_444\_SEMIPLANAR}}\ \ \ =\ 0x18,\ \ }
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ae4c74caa03f62838f78f629ac9c034d3}{CU\_EGL\_COLOR\_FORMAT\_Y12V12U12\_420\_SEMIPLANAR}}\ \ \ =\ 0x19,\ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a52e6aff0af397d3e7e113d9a826b0051}{CU\_EGL\_COLOR\_FORMAT\_VYUY\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x1A,\ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aa5660ee932e9bb0a7ea386f6490d2081}{CU\_EGL\_COLOR\_FORMAT\_UYVY\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x1B,\ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a220aeeb31cee07878d73ce8a4b6ca598}{CU\_EGL\_COLOR\_FORMAT\_YUYV\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x1C,\ \ }
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ae949e76311d5fb068962d836f29f625c}{CU\_EGL\_COLOR\_FORMAT\_YVYU\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x1D,\ \ }
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab89f760baa9f2bf6951fe3d7e0e99628}{CU\_EGL\_COLOR\_FORMAT\_YUV\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x1E,\ \ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ac731976ce43971ccef0c341e83800dbf}{CU\_EGL\_COLOR\_FORMAT\_YUVA\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x1F,\ \ }
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aed260ebcf60e96a6ff6d559506ac649c}{CU\_EGL\_COLOR\_FORMAT\_AYUV\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x20,\ \ }
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a85c3458ffb427b90d3e04ab91b4a6004}{CU\_EGL\_COLOR\_FORMAT\_YUV444\_PLANAR\_ER}}\ \ \ \ \ \ \ \ \ \ \ =\ 0x21,\ \ }
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502adf8583be3a5a5d2caca7adf46c92f0ac}{CU\_EGL\_COLOR\_FORMAT\_YUV422\_PLANAR\_ER}}\ \ \ \ \ \ \ \ \ \ \ =\ 0x22,\ \ }
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a2b4a51b3e8c04f9764336e99cca7430a}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_PLANAR\_ER}}\ \ \ \ \ \ \ \ \ \ \ =\ 0x23,\ \ }
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a49971d740e9d7de6803dd64203e22eae}{CU\_EGL\_COLOR\_FORMAT\_YUV444\_SEMIPLANAR\_ER}}\ \ \ \ \ \ \ =\ 0x24,\ \ }
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a8b61673fe4851538f1e8ec81df0017bd}{CU\_EGL\_COLOR\_FORMAT\_YUV422\_SEMIPLANAR\_ER}}\ \ \ \ \ \ \ =\ 0x25,\ \ }
+\DoxyCodeLine{00156\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aeabd96a1210bd85010d0ade56ac9667c}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_SEMIPLANAR\_ER}}\ \ \ \ \ \ \ =\ 0x26,\ \ }
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aff0d5226848a0d43f68415d76a048996}{CU\_EGL\_COLOR\_FORMAT\_YVU444\_PLANAR\_ER}}\ \ \ \ \ \ \ \ \ \ \ =\ 0x27,\ \ }
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ade5fb1ee992b6358044df21c1a35ad3b}{CU\_EGL\_COLOR\_FORMAT\_YVU422\_PLANAR\_ER}}\ \ \ \ \ \ \ \ \ \ \ =\ 0x28,\ \ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ac814f1f89a999c43dde5defa66b92e0d}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_PLANAR\_ER}}\ \ \ \ \ \ \ \ \ \ \ =\ 0x29,\ \ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a8e591a1d5fed6f7bfd972cc6e1d5d4a3}{CU\_EGL\_COLOR\_FORMAT\_YVU444\_SEMIPLANAR\_ER}}\ \ \ \ \ \ \ =\ 0x2A,\ \ }
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a7c646e96905ba01be72b898689e96e68}{CU\_EGL\_COLOR\_FORMAT\_YVU422\_SEMIPLANAR\_ER}}\ \ \ \ \ \ \ =\ 0x2B,\ \ }
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a59eb74d08ff761005d86c71f13715c0d}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_SEMIPLANAR\_ER}}\ \ \ \ \ \ \ =\ 0x2C,\ \ }
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ac9d1f70a009586a5c0f029f2ed6cb04c}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_RGGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x2D,\ \ }
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a285fb11dc25ccc265f99aebed59df34c}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_BGGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x2E,\ \ }
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502add605e90c9d23368e1fee5c9fb03306c}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_GRBG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x2F,\ \ }
+\DoxyCodeLine{00166\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a0da9bdc9261d1f3587e33305abfed6ea}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_GBRG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x30,\ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ae8e0d4ab67c49fdf17320aa0743a1317}{CU\_EGL\_COLOR\_FORMAT\_BAYER10\_RGGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x31,\ \ }
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aeb73bd46b9bfabf4b62af7cefd0af955}{CU\_EGL\_COLOR\_FORMAT\_BAYER10\_BGGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x32,\ \ }
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502abf1a41c51725556e8162b6f4be952ea9}{CU\_EGL\_COLOR\_FORMAT\_BAYER10\_GRBG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x33,\ \ }
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a4f725d2ccc38301722988b91a1d6984f}{CU\_EGL\_COLOR\_FORMAT\_BAYER10\_GBRG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x34,\ \ }
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab9fed29b405084e68ab6abcb389b8379}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_RGGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x35,\ \ }
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a7494d698ba62ea6db2e44f63172f86d5}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_BGGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x36,\ \ }
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aa34a69c5a1660198d2e1ca6bcbe1ec6b}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_GRBG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x37,\ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ae05e6c01070dee057256a4d2efcf8ab2}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_GBRG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x38,\ \ }
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a77b3ec354bb83382627fe91a78e16d40}{CU\_EGL\_COLOR\_FORMAT\_BAYER14\_RGGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x39,\ \ }
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab5118699c243fe7ca89458cda3623ff8}{CU\_EGL\_COLOR\_FORMAT\_BAYER14\_BGGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x3A,\ \ }
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a305f7ba2a27a6133c6cf513853031f94}{CU\_EGL\_COLOR\_FORMAT\_BAYER14\_GRBG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x3B,\ \ }
+\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a2dff62a318263381fd654e3f57832b23}{CU\_EGL\_COLOR\_FORMAT\_BAYER14\_GBRG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x3C,\ \ }
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ac7fe6dc77bb41dbee13e824d738cc8c7}{CU\_EGL\_COLOR\_FORMAT\_BAYER20\_RGGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x3D,\ \ }
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502afa50500e4f28b92547f05580388c3e00}{CU\_EGL\_COLOR\_FORMAT\_BAYER20\_BGGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x3E,\ \ }
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ac37000418cec9a70f0c3448cf7b2eeab}{CU\_EGL\_COLOR\_FORMAT\_BAYER20\_GRBG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x3F,\ \ }
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a2b4a8fc6d9e3da291d210d2d9c8b235b}{CU\_EGL\_COLOR\_FORMAT\_BAYER20\_GBRG}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x40,\ \ }
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab0b1ee30b82f46c4a37b2a08c08a9ed1}{CU\_EGL\_COLOR\_FORMAT\_YVU444\_PLANAR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x41,\ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a30effc355d0da8b584c4c9f4ada7f8b7}{CU\_EGL\_COLOR\_FORMAT\_YVU422\_PLANAR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x42,\ \ }
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aed0d181c52e3f7b4c00388ef6d55d1a4}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_PLANAR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x43,\ \ }
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab9c83b0c2bd8c5d5f6d6e4e2522484f1}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_ISP\_RGGB}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x44,\ \ }
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a66eed4f005ffe1c24aae1f04fb7db367}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_ISP\_BGGR}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x45,\ \ }
+\DoxyCodeLine{00188\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aa855b2a69bdd938f88c4319be6d79d67}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_ISP\_GRBG}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x46,\ \ }
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a9ccdeb45540b0ffaa54547284e33f83c}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_ISP\_GBRG}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x47,\ \ }
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a7ffbf4e4c831436608d8286ae06764e5}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_BCCR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x48,\ \ }
+\DoxyCodeLine{00191\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aa0fdba38b1fda04bf80cf690b4010b4e}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_RCCB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x49,\ \ }
+\DoxyCodeLine{00192\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a841d9a2d8589f0207adb1e46e7957ce2}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_CRBC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4A,\ \ }
+\DoxyCodeLine{00193\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a23e9bdeef82ba015d2e9e157bb4d2e02}{CU\_EGL\_COLOR\_FORMAT\_BAYER\_CBRC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4B,\ \ }
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a020b330f7ac13c81ed130b9662daf12c}{CU\_EGL\_COLOR\_FORMAT\_BAYER10\_CCCC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4C,\ \ }
+\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a39e0ee807a16c7234d968d3ef4a8e6f9}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_BCCR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4D,\ \ }
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a02772b9a820138dec6e8192e1df04c0b}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_RCCB}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4E,\ \ }
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a373ffe0d725be92596d3ab51bb307557}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_CRBC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4F,\ \ }
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a5c8821547d438a4fe17e8b321b042b7c}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_CBRC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x50,\ \ }
+\DoxyCodeLine{00199\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a35bb19e7f9c05b889e9c579b6c5e0a2f}{CU\_EGL\_COLOR\_FORMAT\_BAYER12\_CCCC}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x51,\ \ }
+\DoxyCodeLine{00200\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502accfac10f4008a9647065b377cfe07839}{CU\_EGL\_COLOR\_FORMAT\_Y}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x52,\ }
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a19dd0b86cb86b4e2c6f034971f25085b}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_SEMIPLANAR\_2020}}\ \ \ \ \ =\ 0x53,\ }
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aaa0574cc7cef502d82d9d207b2ad4ce4}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_SEMIPLANAR\_2020}}\ \ \ \ \ =\ 0x54,\ }
+\DoxyCodeLine{00203\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a5cffa7d384cd9dfa9501c368cefdfc73}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_PLANAR\_2020}}\ \ \ \ \ \ \ \ \ =\ 0x55,\ }
+\DoxyCodeLine{00204\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab33d910377cb48d302afdfec10f12498}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_PLANAR\_2020}}\ \ \ \ \ \ \ \ \ =\ 0x56,\ }
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a23e200a67d5ec18136c3a48bf5fa844c}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_SEMIPLANAR\_709}}\ \ \ \ \ \ =\ 0x57,\ }
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a62a2cb41f470c21586075415296118c7}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_SEMIPLANAR\_709}}\ \ \ \ \ \ =\ 0x58,\ }
+\DoxyCodeLine{00208\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a60192006b6663e4c7aaef8139dfdd401}{CU\_EGL\_COLOR\_FORMAT\_YUV420\_PLANAR\_709}}\ \ \ \ \ \ \ \ \ \ =\ 0x59,\ }
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a3c869eaae919e09c16cf1fe5492c12ab}{CU\_EGL\_COLOR\_FORMAT\_YVU420\_PLANAR\_709}}\ \ \ \ \ \ \ \ \ \ =\ 0x5A,\ \ }
+\DoxyCodeLine{00211\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ade603ce0b2676339276fc69cda8ea6cc}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_420\_SEMIPLANAR\_709}}\ \ =\ 0x5B,\ }
+\DoxyCodeLine{00212\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a8989da5730505515981aff131a511430}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_420\_SEMIPLANAR\_2020}}\ =\ 0x5C,\ }
+\DoxyCodeLine{00213\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aea68250076cc84b0f1367659bc057537}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_422\_SEMIPLANAR\_2020}}\ =\ 0x5D,\ }
+\DoxyCodeLine{00214\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ac5ebe2556f8e9a816963328514b724aa}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_422\_SEMIPLANAR}}\ \ \ \ \ \ =\ 0x5E,\ }
+\DoxyCodeLine{00215\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a72c62e0c9525410d4afc262036d9aa1f}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_422\_SEMIPLANAR\_709}}\ \ =\ 0x5F,\ }
+\DoxyCodeLine{00216\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a08f1828a75150757eb38d0e7ffe318f4}{CU\_EGL\_COLOR\_FORMAT\_Y\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x60,\ }
+\DoxyCodeLine{00217\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502adb0f8d3195ad5f237d2486eab83db474}{CU\_EGL\_COLOR\_FORMAT\_Y\_709\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x61,\ }
+\DoxyCodeLine{00218\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a090d3317917c71f24fde23c8458e60cc}{CU\_EGL\_COLOR\_FORMAT\_Y10\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x62,\ }
+\DoxyCodeLine{00219\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a5140d0865e9073f3f5115017ea96cfba}{CU\_EGL\_COLOR\_FORMAT\_Y10\_709\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x63,\ }
+\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a1338538cdb44c9d2bab2c693f8529ab3}{CU\_EGL\_COLOR\_FORMAT\_Y12\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x64,\ }
+\DoxyCodeLine{00221\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a0f47ae79de3fc87264e79ac8d2b83c03}{CU\_EGL\_COLOR\_FORMAT\_Y12\_709\_ER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x65,\ }
+\DoxyCodeLine{00222\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a8aa63e200c7159b6a887efbd4b516a8d}{CU\_EGL\_COLOR\_FORMAT\_YUVA}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x66,\ }
+\DoxyCodeLine{00223\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a4e9bdea3db623c07f733b9b95afa7a04}{CU\_EGL\_COLOR\_FORMAT\_YUV}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x67,\ }
+\DoxyCodeLine{00224\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a7201644b8b021dee0b22908d23325910}{CU\_EGL\_COLOR\_FORMAT\_YVYU}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x68,\ }
+\DoxyCodeLine{00225\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a5091ea3cea40ec849f61ed2513c661e8}{CU\_EGL\_COLOR\_FORMAT\_VYUY}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x69,\ }
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a66fe604e105831662453d413e04055e0}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_420\_SEMIPLANAR\_ER}}\ \ \ \ \ =\ 0x6A,\ }
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a0342084cd4343a072c6c393f9c2a5a44}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_420\_SEMIPLANAR\_709\_ER}}\ =\ 0x6B,\ }
+\DoxyCodeLine{00228\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab672297b7182abb563a5c0131504e707}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_444\_SEMIPLANAR\_ER}}\ \ \ \ \ =\ 0x6C,\ }
+\DoxyCodeLine{00229\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a5ce6bc92e67ae80a05682f2064f6c3ac}{CU\_EGL\_COLOR\_FORMAT\_Y10V10U10\_444\_SEMIPLANAR\_709\_ER}}\ =\ 0x6D,\ }
+\DoxyCodeLine{00230\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab11be2c78c8d87bcc984a9adc196b2b4}{CU\_EGL\_COLOR\_FORMAT\_Y12V12U12\_420\_SEMIPLANAR\_ER}}\ \ \ \ \ =\ 0x6E,\ }
+\DoxyCodeLine{00231\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502a174d326088e75e471ce06cca21b2dafd}{CU\_EGL\_COLOR\_FORMAT\_Y12V12U12\_420\_SEMIPLANAR\_709\_ER}}\ =\ 0x6F,\ }
+\DoxyCodeLine{00232\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502aaf6cb2e7dbabbaee5e27e29cb11e6ed8}{CU\_EGL\_COLOR\_FORMAT\_Y12V12U12\_444\_SEMIPLANAR\_ER}}\ \ \ \ \ =\ 0x70,\ }
+\DoxyCodeLine{00233\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gga8852082a4157dd2ea18d91ea9d0b3502ab3baa7408dc6e2b848b1359d94559f43}{CU\_EGL\_COLOR\_FORMAT\_Y12V12U12\_444\_SEMIPLANAR\_709\_ER}}\ =\ 0x71,\ }
+\DoxyCodeLine{00234\ \ \ \ \ CU\_EGL\_COLOR\_FORMAT\_MAX}
+\DoxyCodeLine{00235\ \}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1bc8f258fa8bbb5b99d2afbc7a2b3454}{CUeglColorFormat}};}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00242\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame\_st}}\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a7f85134c3cc2019dede6d53c454dd750}{pArray}}[\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4269718bae6e29c6059d666ec76df24b}{MAX\_PLANES}}];\ \ \ \ \ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \mbox{\hyperlink{struct_c_uegl_frame__st_a5f8072a37631288222e1d8cc5652b65a}{pPitch}}[\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4269718bae6e29c6059d666ec76df24b}{MAX\_PLANES}}];\ \ \ \ \ }
+\DoxyCodeLine{00246\ \ \ \ \ \}\ frame;}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a5fc58c3efa9ddebf81b1b2e29e2157cb}{width}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a9dfd09070958de146c7885dd44f9d227}{height}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_ab0709bd78f7af5c86bdf7194ab92df31}{depth}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a2d116e50a6e790f7972863b3de8eff6b}{pitch}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a0572f65db750c842564225d13176017b}{planeCount}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a07040a68f698ab0e720fd9508d16f8ee}{numChannels}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00253\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga352a46e58c545cb7e0bf9973cc39543d}{CUeglFrameType}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_adf7dca89fa162c7a1ba8c20bfe6430c6}{frameType}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00254\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1bc8f258fa8bbb5b99d2afbc7a2b3454}{CUeglColorFormat}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_abcc317a7da8321e9faa739948a6d57f6}{eglColorFormat}};\ \ \ \ }
+\DoxyCodeLine{00255\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\_format}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a96a7fe6a061a28dc6ef28f05e9cb5962}{cuFormat}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00256\ \}\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4d487f0a5daf108fbc301fc3a2e34f09}{CUeglFrame\_v1}};}
+\DoxyCodeLine{00257\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame\_v1}}\ \mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame}};}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00262\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUeglStreamConnection\_st}}*\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}};}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \textcolor{comment}{/*\ END\ CUDA\_TYPES\ */}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00332\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga7bc3e61e5d878dd69282edba665eb35b}{cuGraphicsEGLRegisterImage}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphicsResource}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaResource}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLImageKHR}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{image}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00354\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}{cuEGLStreamConsumerConnect}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStreamKHR}}\ stream);}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00378\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga6b3f640b31ef8d9897327d2449b3c158}{cuEGLStreamConsumerConnectWithFlags}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStreamKHR}}\ stream,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00396\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}{cuEGLStreamConsumerDisconnect}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}});}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00425\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}{cuEGLStreamConsumerAcquireFrame}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}},}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphicsResource}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaResource}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pStream}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{timeout}});}
+\DoxyCodeLine{00447\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}{cuEGLStreamConsumerReleaseFrame}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}},}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphicsResource}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaResource}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pStream}});}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00472\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14}{cuEGLStreamProducerConnect}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStreamKHR}}\ stream,}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLint}}\ width,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLint}}\ height);}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00491\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141}{cuEGLStreamProducerDisconnect}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}});}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00539\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga6d89c27d19168a473508c81bbb77807a}{cuEGLStreamProducerPresentFrame}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}},}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{eglframe}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pStream}});}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00561\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga54c2f11d27da50a3ada30d14e7ec13c8}{cuEGLStreamProducerReturnFrame}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUeglStreamConnection}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}},}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{eglframe}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pStream}});}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00612\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_gae81e04863456be1100e2b4c7783bb81c}{cuGraphicsResourceGetMappedEglFrame}}(\mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame}}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{eglFrame}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphicsResource}}\ resource,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{index}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mipLevel}});}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00650\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga2920a886014d7f79ec5e633b71da5c47}{cuEventCreateFromEGLSync}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{phEvent}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLSyncKHR}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{eglSync}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00651\ }
+\DoxyCodeLine{00652\ \ \textcolor{comment}{/*\ END\ CUDA\_EGL\ */}}
+\DoxyCodeLine{00653\ }
+\DoxyCodeLine{00654\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00655\ \};}
+\DoxyCodeLine{00656\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00657\ }
+\DoxyCodeLine{00658\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00659\ }
+
+\end{DoxyCode}

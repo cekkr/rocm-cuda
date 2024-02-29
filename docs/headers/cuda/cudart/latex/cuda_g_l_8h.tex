@@ -1,0 +1,85 @@
+\doxysection{cuda\+GL.\+h File Reference}
+\hypertarget{cuda_g_l_8h}{}\label{cuda_g_l_8h}\index{cudaGL.h@{cudaGL.h}}
+
+
+Header file for the Open\+GL interoperability functions of the low-\/level CUDA driver application programming interface.  
+
+
+{\ttfamily \#include $<$cuda.\+h$>$}\newline
+{\ttfamily \#include $<$GL/gl.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{cuda_g_l_8h_a65988457b3e24210c867e35d474e88f4}\label{cuda_g_l_8h_a65988457b3e24210c867e35d474e88f4} 
+\#\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{define}} {\bfseries \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED}
+\item 
+\Hypertarget{cuda_g_l_8h_a4aff43dcdc145bd96991654132b1bb24}\label{cuda_g_l_8h_a4aff43dcdc145bd96991654132b1bb24} 
+\#\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{define}} {\bfseries \+\_\+\+\_\+\+CUDA\+\_\+\+API\+\_\+\+PTDS}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{api}})~\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{api}}
+\item 
+\Hypertarget{cuda_g_l_8h_a61aca4a64bdfaa173e9dd26ef6613f44}\label{cuda_g_l_8h_a61aca4a64bdfaa173e9dd26ef6613f44} 
+\#\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{define}} {\bfseries \+\_\+\+\_\+\+CUDA\+\_\+\+API\+\_\+\+PTSZ}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{api}})~\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{api}}
+\item 
+\Hypertarget{cuda_g_l_8h_a3a7a3eb74520b6200d2e609f729934c8}\label{cuda_g_l_8h_a3a7a3eb74520b6200d2e609f729934c8} 
+\#\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{define}} {\bfseries cu\+GLCtx\+Create}~\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+GLCtx\+Create\+\_\+v2}}
+\item 
+\Hypertarget{cuda_g_l_8h_a5e5b7cc928f907659ee8146fed31b9b3}\label{cuda_g_l_8h_a5e5b7cc928f907659ee8146fed31b9b3} 
+\#\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{define}} {\bfseries cu\+GLMap\+Buffer\+Object}~\+\_\+\+\_\+\+CUDA\+\_\+\+API\+\_\+\+PTDS(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+GLMap\+Buffer\+Object\+\_\+v2}})
+\item 
+\Hypertarget{cuda_g_l_8h_a338aebdd5ec4598ef19309ee2ee7dc9b}\label{cuda_g_l_8h_a338aebdd5ec4598ef19309ee2ee7dc9b} 
+\#\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{define}} {\bfseries cu\+GLMap\+Buffer\+Object\+Async}~\+\_\+\+\_\+\+CUDA\+\_\+\+API\+\_\+\+PTSZ(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+GLMap\+Buffer\+Object\+Async\+\_\+v2}})
+\item 
+\Hypertarget{cuda_g_l_8h_a69ed71e669f79a47cc5af9b78f91b2d5}\label{cuda_g_l_8h_a69ed71e669f79a47cc5af9b78f91b2d5} 
+\#\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{define}} {\bfseries cu\+GLGet\+Devices}~\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+GLGet\+Devices\+\_\+v2}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{typedef}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}{CUGLDevice\+List\+\_\+enum}} \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDevice\+List}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{typedef}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}{CUGLmap\+\_\+flags\+\_\+enum}} \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga8caa9b32437a91f5e44e6b91fbb7b2e2}{CUGLmap\+\_\+flags}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}{CUGLDevice\+List\+\_\+enum}} \{ \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a43d2b311a54ae5c914c264e8395c3164}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+ALL}} = 0x01
+, \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2adc48f515019afdc0a78cd366871b0fe1}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+CURRENT\+\_\+\+FRAME}} = 0x02
+, \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a9d6d52b3167bd1d144eb08db8b60325a}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+NEXT\+\_\+\+FRAME}} = 0x03
+ \}
+\item 
+enum \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}{CUGLmap\+\_\+flags\+\_\+enum}} \{ {\bfseries CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+NONE} = 0x00
+, {\bfseries CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY} = 0x01
+, {\bfseries CU\+\_\+\+GL\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD} = 0x02
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l_gab56e569048aa01e2d9c58f3c9bc4718a}{cu\+Graphics\+GLRegister\+Buffer}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Registers an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l_ga40951642ac10a72be9a81e7b3188324e}{cu\+Graphics\+GLRegister\+Image}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{image}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLenum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{target}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Register an Open\+GL texture or renderbuffer object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l_gaddf00ab2813c34bbac734c17a73a545b}{cu\+GLGet\+Devices}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Device\+Count}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Devices}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Device\+Count}}, \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDevice\+List}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{device\+List}})
+\begin{DoxyCompactList}\small\item\em Gets the CUDA devices associated with the current Open\+GL context. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gadca4399db5443c43c744d582250075ce}{cu\+GLCtx\+Create}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Ctx}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} device)
+\begin{DoxyCompactList}\small\item\em Create a CUDA context for interoperability with Open\+GL. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga461a96fde8e72a6bbbd5bf066c20de7b}{cu\+GLInit}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}})
+\begin{DoxyCompactList}\small\item\em Initializes Open\+GL interoperability. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43}{cu\+GLRegister\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Registers an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga398562e61d9ed3c9b9ece09c74efc5a7}{cu\+GLMap\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}dptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Maps an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723}{cu\+GLUnmap\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Unmaps an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc}{cu\+GLUnregister\+Buffer\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}})
+\begin{DoxyCompactList}\small\item\em Unregister an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb}{cu\+GLSet\+Buffer\+Object\+Map\+Flags}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Set the map flags for an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga0575cd8e43000f422f3f4b14ae981df4}{cu\+GLMap\+Buffer\+Object\+Async}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}dptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Maps an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e}{cu\+GLUnmap\+Buffer\+Object\+Async}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Unmaps an Open\+GL buffer object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the Open\+GL interoperability functions of the low-\/level CUDA driver application programming interface. 
+

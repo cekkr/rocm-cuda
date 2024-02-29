@@ -1,0 +1,57 @@
+\doxysection{Driver Entry Point Access}
+\hypertarget{group___c_u_d_a___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t}{}\label{group___c_u_d_a___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t}\index{Driver Entry Point Access@{Driver Entry Point Access}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t_ga5c43f790df9c2f13b623244d6a288c88}{cu\+Get\+Proc\+Address}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pfn}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Version}}, cuuint64\+\_\+t flags)
+\begin{DoxyCompactList}\small\item\em Returns the requested driver API function pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ driver entry point access functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the driver entry point access functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t_ga5c43f790df9c2f13b623244d6a288c88}\label{group___c_u_d_a___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t_ga5c43f790df9c2f13b623244d6a288c88} 
+\index{Driver Entry Point Access@{Driver Entry Point Access}!cuGetProcAddress@{cuGetProcAddress}}
+\index{cuGetProcAddress@{cuGetProcAddress}!Driver Entry Point Access@{Driver Entry Point Access}}
+\doxysubsubsection{\texorpdfstring{cuGetProcAddress()}{cuGetProcAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Get\+Proc\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{symbol,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pfn,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{cuda\+Version,  }\item[{cuuint64\+\_\+t}]{flags }\end{DoxyParamCaption})}
+
+
+
+Returns the requested driver API function pointer. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pfn} the address of the CUDA driver function for the requested CUDA version and flags.
+
+The CUDA version is specified as (1000 \texorpdfstring{$\ast$}{*} major + 10 \texorpdfstring{$\ast$}{*} minor), so CUDA 11.\+2 should be specified as 11020. For a requested driver symbol, if the specified CUDA version is greater than or equal to the CUDA version in which the driver symbol was introduced, this API will return the function pointer to the corresponding versioned function.
+
+The pointer returned by the API should be cast to a function pointer matching the requested driver function\textquotesingle{}s definition in the API header file. The function pointer typedef can be picked up from the corresponding typedefs header file. For example, \doxylink{cuda_typedefs_8h_source}{cuda\+Typedefs.\+h} consists of function pointer typedefs for driver APIs defined in \doxylink{cuda_8h}{cuda.\+h}.
+
+The API will return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND} if the requested driver function is not supported on the platform, no ABI compatible driver function exists for the specified {\ttfamily cuda\+Version} or if the driver symbol is invalid.
+
+The requested flags can be\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GET\+\_\+\+PROC\+\_\+\+ADDRESS\+\_\+\+DEFAULT\+:} This is the default mode. This is equivalent to \doxylink{group___c_u_d_a___t_y_p_e_s_gga7603472d8102d50abc4b40596a194f91a5c0fbcf7a38c814d2bc2529c6b03cf68}{CU\+\_\+\+GET\+\_\+\+PROC\+\_\+\+ADDRESS\+\_\+\+PER\+\_\+\+THREAD\+\_\+\+DEFAULT\+\_\+\+STREAM} if the code is compiled with --default-\/stream per-\/thread compilation flag or the macro CUDA\+\_\+\+API\+\_\+\+PER\+\_\+\+THREAD\+\_\+\+DEFAULT\+\_\+\+STREAM is defined; \doxylink{group___c_u_d_a___t_y_p_e_s_gga7603472d8102d50abc4b40596a194f91a2868559f42f682b8df8a5153c8456be5}{CU\+\_\+\+GET\+\_\+\+PROC\+\_\+\+ADDRESS\+\_\+\+LEGACY\+\_\+\+STREAM} otherwise.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GET\+\_\+\+PROC\+\_\+\+ADDRESS\+\_\+\+LEGACY\+\_\+\+STREAM\+:} This will enable the search for all driver symbols that match the requested driver symbol name except the corresponding per-\/thread versions.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GET\+\_\+\+PROC\+\_\+\+ADDRESS\+\_\+\+PER\+\_\+\+THREAD\+\_\+\+DEFAULT\+\_\+\+STREAM\+:} This will enable the search for all driver symbols that match the requested driver symbol name including the per-\/thread versions. If a per-\/thread version is not found, the API will return the legacy version of the driver function.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & -\/ The base name of the driver API function to look for. As an example, for the driver API \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Mem\+Alloc\+\_\+v2}, {\ttfamily symbol} would be cu\+Mem\+Alloc and {\ttfamily cuda\+Version} would be the ABI compatible CUDA version for the \+\_\+v2 variant. \\
+\hline
+{\em pfn} & -\/ Location to return the function pointer to the requested driver function \\
+\hline
+{\em cuda\+Version} & -\/ The CUDA version to look for the requested driver symbol \\
+\hline
+{\em flags} & -\/ Flags to specify search options.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}note\+\_\+version\+\_\+mixing
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t_gab7fc3abb8ac67c44b19a0f685f24bd28}{cuda\+Get\+Driver\+Entry\+Point} 
+\end{DoxySeeAlso}

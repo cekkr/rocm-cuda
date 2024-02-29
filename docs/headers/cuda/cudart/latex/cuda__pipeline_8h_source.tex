@@ -1,0 +1,229 @@
+\doxysection{cuda\+\_\+pipeline.\+h}
+\hypertarget{cuda__pipeline_8h_source}{}\label{cuda__pipeline_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 1993-\/2019\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifndef\ \_CUDA\_PIPELINE\_H\_}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#\ define\ \_CUDA\_PIPELINE\_H\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#\ include\ "{}cuda\_pipeline\_primitives.h"{}}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#\ if\ !defined(\_CUDA\_PIPELINE\_CPLUSPLUS\_11\_OR\_LATER)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#\ \ error\ This\ file\ requires\ compiler\ support\ for\ the\ ISO\ C++\ 2011\ standard.\ This\ support\ must\ be\ enabled\ with\ the\ \(\backslash\)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ -\/std=c++11\ compiler\ option.}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#\ endif}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#\ if\ defined(\_CUDA\_PIPELINE\_ARCH\_700\_OR\_LATER)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#\ \ include\ "{}cuda\_awbarrier.h"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#\ endif}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ Integration\ with\ libcu++'s\ cuda::barrier<cuda::thread\_scope\_block>.}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#\ if\ defined(\_CUDA\_PIPELINE\_ARCH\_700\_OR\_LATER)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#\ \ if\ defined(\_LIBCUDACXX\_CUDA\_ABI\_VERSION)}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#\ \ \ define\ \_LIBCUDACXX\_PIPELINE\_ASSUMED\_ABI\_VERSION\ \_LIBCUDACXX\_CUDA\_ABI\_VERSION}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#\ \ else}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#\ \ \ define\ \_LIBCUDACXX\_PIPELINE\_ASSUMED\_ABI\_VERSION\ 4}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#\ \ define\ \_LIBCUDACXX\_PIPELINE\_CONCAT(X,\ Y)\ X\ \#\#\ Y}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#\ \ define\ \_LIBCUDACXX\_PIPELINE\_CONCAT2(X,\ Y)\ \_LIBCUDACXX\_PIPELINE\_CONCAT(X,\ Y)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#\ \ define\ \_LIBCUDACXX\_PIPELINE\_INLINE\_NAMESPACE\ \_LIBCUDACXX\_PIPELINE\_CONCAT2(\_\_,\ \_LIBCUDACXX\_PIPELINE\_ASSUMED\_ABI\_VERSION)}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{namespace\ }cuda\ \{\ \textcolor{keyword}{inline}\ \textcolor{keyword}{namespace\ }\_LIBCUDACXX\_PIPELINE\_INLINE\_NAMESPACE\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_block\_scope\_barrier\_base}};}
+\DoxyCodeLine{00079\ \}\}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#\ endif}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \_CUDA\_PIPELINE\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{template}<\textcolor{keywordtype}{size\_t}\ N,\ \textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00086\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00087\ \textcolor{keyword}{auto}\ segment(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}*\ ptr)\ -\/>\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}(*)[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{N}}];}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classpipeline}{pipeline}}\ \{}
+\DoxyCodeLine{00090\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{classpipeline}{pipeline}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classpipeline}{pipeline}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{classpipeline}{pipeline}}(\mbox{\hyperlink{classpipeline}{pipeline}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classpipeline}{pipeline}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classpipeline}{pipeline}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{classpipeline}{pipeline}}\&\ operator=(\mbox{\hyperlink{classpipeline}{pipeline}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \_CUDA\_PIPELINE\_QUALIFIER\ \mbox{\hyperlink{classpipeline}{pipeline}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \_CUDA\_PIPELINE\_QUALIFIER\ \textcolor{keywordtype}{size\_t}\ commit();}
+\DoxyCodeLine{00098\ \ \ \ \ \_CUDA\_PIPELINE\_QUALIFIER\ \textcolor{keywordtype}{void}\ commit\_and\_wait();}
+\DoxyCodeLine{00099\ \ \ \ \ \_CUDA\_PIPELINE\_QUALIFIER\ \textcolor{keywordtype}{void}\ wait(\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{batch}});}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ N>}
+\DoxyCodeLine{00101\ \ \ \ \ \_CUDA\_PIPELINE\_QUALIFIER\ \textcolor{keywordtype}{void}\ wait\_prior();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#\ if\ defined(\_CUDA\_PIPELINE\_ARCH\_700\_OR\_LATER)}}
+\DoxyCodeLine{00104\ \ \ \ \ \_CUDA\_PIPELINE\_QUALIFIER\ \textcolor{keywordtype}{void}\ arrive\_on(\mbox{\hyperlink{classawbarrier}{awbarrier}}\&\ barrier);}
+\DoxyCodeLine{00105\ \ \ \ \ \_CUDA\_PIPELINE\_QUALIFIER\ \textcolor{keywordtype}{void}\ arrive\_on(cuda::\_\_block\_scope\_barrier\_base\&\ barrier);}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#\ endif}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ current\_batch;}
+\DoxyCodeLine{00110\ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00113\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{void}\ memcpy\_async(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\&\ dst,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\&\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},\ \mbox{\hyperlink{classpipeline}{pipeline}}\&\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pipe}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{size\_t}\ DstN,\ \textcolor{keywordtype}{size\_t}\ SrcN>}
+\DoxyCodeLine{00117\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ memcpy\_async(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}(*dst)[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{DstN}}],\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}(*\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}})[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{SrcN}}],\ \mbox{\hyperlink{classpipeline}{pipeline}}\&\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pipe}});}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{template}<\textcolor{keywordtype}{size\_t}\ N,\ \textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00121\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00122\ \textcolor{keyword}{auto}\ segment(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}*\ ptr)\ -\/>\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}(*)[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{N}}]}
+\DoxyCodeLine{00123\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}(*)[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{N}}])ptr;}
+\DoxyCodeLine{00125\ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00128\ pipeline::pipeline()}
+\DoxyCodeLine{00129\ \ \ \ \ :\ current\_batch(0)}
+\DoxyCodeLine{00130\ \{}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{size\_t}\ pipeline::commit()}
+\DoxyCodeLine{00135\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_commit();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>current\_batch++;}
+\DoxyCodeLine{00138\ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00141\ \textcolor{keywordtype}{void}\ pipeline::commit\_and\_wait()}
+\DoxyCodeLine{00142\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}})pipeline::commit();}
+\DoxyCodeLine{00144\ \ \ \ \ pipeline::wait\_prior<0>();}
+\DoxyCodeLine{00145\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{void}\ pipeline::wait(\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{batch}})}
+\DoxyCodeLine{00149\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{prior}}\ =\ this-\/>current\_batch\ >\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{batch}}\ ?\ this-\/>current\_batch\ -\/\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{batch}}\ :\ 0;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{prior}})\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 0\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<0>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 1\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<1>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 2\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<2>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 3\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<3>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 4\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<4>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 5\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<5>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 6\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<6>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{case}\ \ 7\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<7>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{default}}\ :\ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<8>();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ N>}
+\DoxyCodeLine{00166\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{void}\ pipeline::wait\_prior()}
+\DoxyCodeLine{00168\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_wait\_prior<N>();}
+\DoxyCodeLine{00170\ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#\ if\ defined(\_CUDA\_PIPELINE\_ARCH\_700\_OR\_LATER)}}
+\DoxyCodeLine{00173\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ pipeline::arrive\_on(\mbox{\hyperlink{classawbarrier}{awbarrier}}\&\ barrier)}
+\DoxyCodeLine{00175\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_arrive\_on(\&barrier.barrier);}
+\DoxyCodeLine{00177\ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{void}\ pipeline::arrive\_on(cuda::\_\_block\_scope\_barrier\_base\ \&\ barrier)}
+\DoxyCodeLine{00181\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_arrive\_on(\textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uint64\_t}}\ *\textcolor{keyword}{>}(\&barrier));}
+\DoxyCodeLine{00183\ \}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#\ endif}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00187\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00188\ \textcolor{keywordtype}{void}\ memcpy\_async(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\&\ dst,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\&\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},\ \mbox{\hyperlink{classpipeline}{pipeline}}\&\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pipe}})}
+\DoxyCodeLine{00189\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \_CUDA\_PIPELINE\_ASSERT(!(\textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uintptr\_t}}\textcolor{keyword}{>}(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}})\ \&\ (\textcolor{keyword}{alignof}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}})\ -\/\ 1)));}
+\DoxyCodeLine{00191\ \ \ \ \ \_CUDA\_PIPELINE\_ASSERT(!(\textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uintptr\_t}}\textcolor{keyword}{>}(\&dst)\ \&\ (\textcolor{keyword}{alignof}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}})\ -\/\ 1)));}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_is\_trivially\_copyable}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}))\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_copy\_relaxed<sizeof(T),\ alignof(T)>(}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\&dst),\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}}));}
+\DoxyCodeLine{00196\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ dst\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}};}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{size\_t}\ DstN,\ \textcolor{keywordtype}{size\_t}\ SrcN>}
+\DoxyCodeLine{00202\ \_CUDA\_PIPELINE\_QUALIFIER}
+\DoxyCodeLine{00203\ \textcolor{keywordtype}{void}\ memcpy\_async(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}(*dst)[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{DstN}}],\ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}(*\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}})[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{SrcN}}],\ \mbox{\hyperlink{classpipeline}{pipeline}}\&\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pipe}})}
+\DoxyCodeLine{00204\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dst\_size}}\ =\ \textcolor{keyword}{sizeof}(*dst);}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src\_size}}\ =\ \textcolor{keyword}{sizeof}(*src);}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keyword}{static\_assert}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dst\_size}}\ ==\ 4\ ||\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dst\_size}}\ ==\ 8\ ||\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dst\_size}}\ ==\ 16,\ \textcolor{stringliteral}{"{}Unsupported\ copy\ size."{}});}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keyword}{static\_assert}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src\_size}}\ <=\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dst\_size}},\ \textcolor{stringliteral}{"{}Source\ size\ must\ be\ less\ than\ or\ equal\ to\ destination\ size."{}});}
+\DoxyCodeLine{00209\ \ \ \ \ \_CUDA\_PIPELINE\_ASSERT(!(\textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uintptr\_t}}\textcolor{keyword}{>}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}})\ \&\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dst\_size}}\ -\/\ 1)));}
+\DoxyCodeLine{00210\ \ \ \ \ \_CUDA\_PIPELINE\_ASSERT(!(\textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{uintptr\_t}}\textcolor{keyword}{>}(dst)\ \&\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dst\_size}}\ -\/\ 1)));}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_is\_trivially\_copyable}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}))\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \_CUDA\_PIPELINE\_INTERNAL\_NAMESPACE::pipeline\_copy\_strict<sizeof(*dst),\ sizeof(*src)>(}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(*dst),\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(*\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}}));}
+\DoxyCodeLine{00215\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{i}}\ =\ 0;\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{i}}\ <\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{DstN}};\ ++\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{i}})\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ (*dst)[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{i}}]\ =\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{i}}\ <\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{SrcN}})\ ?\ (*\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}})[\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{i}}]\ :\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}();}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \_CUDA\_PIPELINE\_END\_NAMESPACE}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_CUDA\_PIPELINE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

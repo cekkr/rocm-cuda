@@ -1,0 +1,84 @@
+\doxysection{Unified Addressing}
+\hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d}{}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d}\index{Unified Addressing@{Unified Addressing}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___u_n_i_f_i_e_d_gafdc25be0be9b7eed05fa659b80bd82e9}{cuda\+Pointer\+Get\+Attributes}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_pointer_attributes}{cuda\+Pointer\+Attributes}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attributes}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Returns attributes about a specified pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ unified addressing functions of the CUDA runtime API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the unified addressing functions of the CUDA runtime application programming interface.\hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_overview}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_overview}
+CUDA devices can share a unified address space with the host. ~\newline
+ For these devices there is no distinction between a device pointer and a host pointer -- the same pointer value may be used to access memory from the host program and from a kernel running on the device (with exceptions enumerated below).\hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_support}{}\doxysubsection{\texorpdfstring{Supported Platforms}{Supported Platforms}}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_support}
+Whether or not a device supports unified addressing may be queried by calling \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3}{cuda\+Get\+Device\+Properties()} with the device property \doxylink{structcuda_device_prop_a07b0114cefb43da05e05c65ec859542c}{cuda\+Device\+Prop\+::unified\+Addressing}.
+
+Unified addressing is automatically enabled in 64-\/bit processes .\hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_lookup}{}\doxysubsection{\texorpdfstring{Looking Up Information from Pointer Values}{Looking Up Information from Pointer Values}}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_lookup}
+It is possible to look up information about the memory which backs a pointer value. For instance, one may want to know if a pointer points to host or device memory. As another example, in the case of device memory, one may want to know on which CUDA device the memory resides. These properties may be queried using the function \doxylink{group___c_u_d_a_r_t___u_n_i_f_i_e_d_gafdc25be0be9b7eed05fa659b80bd82e9}{cuda\+Pointer\+Get\+Attributes()}
+
+Since pointers are unique, it is not necessary to specify information about the pointers specified to \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gae2bbb87e03bde890140dae4b348e1886}{cuda\+Memcpy()} and other copy functions. ~\newline
+ The copy direction \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Memcpy\+Default} may be used to specify that the CUDA runtime should infer the location of the pointer from its value.\hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_automaphost}{}\doxysubsection{\texorpdfstring{Automatic Mapping of Host Allocated Host Memory}{Automatic Mapping of Host Allocated Host Memory}}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_automaphost}
+All host memory allocated through all devices using \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga9319967aebbae316ea45f540f27974b7}{cuda\+Malloc\+Host()} and \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga82f207b7718d36489753c35ad398a41a}{cuda\+Host\+Alloc()} is always directly accessible from all devices that support unified addressing. This is the case regardless of whether or not the flags \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_gac46ce76be41cf79774331cc8cfceb52b}{cuda\+Host\+Alloc\+Portable} and \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga01e600c738b962c8f973dda7708f7a70}{cuda\+Host\+Alloc\+Mapped} are specified.
+
+The pointer value through which allocated host memory may be accessed in kernels on all devices that support unified addressing is the same as the pointer value through which that memory is accessed on the host. It is not necessary to call \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gac03e953b51e1011847c199286de44ac9}{cuda\+Host\+Get\+Device\+Pointer()} to get the device pointer for these allocations. ~\newline
+
+
+Note that this is not the case for memory allocated using the flag \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga3a7db37d02ce0b2350067ab639ef321c}{cuda\+Host\+Alloc\+Write\+Combined}, as discussed below.\hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_autopeerregister}{}\doxysubsection{\texorpdfstring{Direct Access of Peer Memory}{Direct Access of Peer Memory}}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_autopeerregister}
+Upon enabling direct access from a device that supports unified addressing to another peer device that supports unified addressing using \doxylink{group___c_u_d_a_r_t___p_e_e_r_ga7443ed162ccf7463a7caf15dc799cc6d}{cuda\+Device\+Enable\+Peer\+Access()} all memory allocated in the peer device using \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga2ec57cea7c57e8e3c4beca43dd327134}{cuda\+Malloc()} and \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gafba768d1a49ed27c0672832403544252}{cuda\+Malloc\+Pitch()} will immediately be accessible by the current device. The device pointer value through which any peer\textquotesingle{}s memory may be accessed in the current device is the same pointer value through which that memory may be accessed from the peer device.\hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_exceptions}{}\doxysubsection{\texorpdfstring{Exceptions, Disjoint Addressing}{Exceptions, Disjoint Addressing}}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d_CUDART_UNIFIED_exceptions}
+Not all memory may be accessed on devices through the same pointer value through which they are accessed on the host. These exceptions are host memory registered using \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gab14cbfaca14c4de9d06a5af14c9307f6}{cuda\+Host\+Register()} and host memory allocated using the flag \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga3a7db37d02ce0b2350067ab639ef321c}{cuda\+Host\+Alloc\+Write\+Combined}. For these exceptions, there exists a distinct host and device address for the memory. The device address is guaranteed to not overlap any valid host pointer range and is guaranteed to have the same value across all devices that support unified addressing. ~\newline
+
+
+This device address may be queried using \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gac03e953b51e1011847c199286de44ac9}{cuda\+Host\+Get\+Device\+Pointer()} when a device using unified addressing is current. Either the host or the unified device pointer value may be used to refer to this memory in \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gae2bbb87e03bde890140dae4b348e1886}{cuda\+Memcpy()} and similar functions using the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Memcpy\+Default} memory direction. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a_r_t___u_n_i_f_i_e_d_gafdc25be0be9b7eed05fa659b80bd82e9}\label{group___c_u_d_a_r_t___u_n_i_f_i_e_d_gafdc25be0be9b7eed05fa659b80bd82e9} 
+\index{Unified Addressing@{Unified Addressing}!cudaPointerGetAttributes@{cudaPointerGetAttributes}}
+\index{cudaPointerGetAttributes@{cudaPointerGetAttributes}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cudaPointerGetAttributes()}{cudaPointerGetAttributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Pointer\+Get\+Attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_pointer_attributes}{cuda\+Pointer\+Attributes}} \texorpdfstring{$\ast$}{*}}]{attributes,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns attributes about a specified pointer. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}attributes} the attributes of the pointer {\ttfamily ptr}. If pointer was not allocated in, mapped by or registered with context supporting unified addressing cuda\+Error\+Invalid\+Value is returned.
+
+\begin{DoxyNote}{Note}
+In CUDA 11.\+0 forward passing host pointer will return cuda\+Memory\+Type\+Unregistered in \doxylink{structcuda_pointer_attributes_a91ef95dac597cc710558dabbc8b9ae38}{cuda\+Pointer\+Attributes\+::type} and call will return cuda\+Success.
+\end{DoxyNote}
+The \doxylink{structcuda_pointer_attributes}{cuda\+Pointer\+Attributes} structure is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pointer_attributes}{cudaPointerAttributes}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaea66858c25bf81443785fcaf0e9b77c3}{cudaMemoryType}}\ \mbox{\hyperlink{structcuda_pointer_attributes_a91ef95dac597cc710558dabbc8b9ae38}{type}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_pointer_attributes_a20015540684b0c85e0debf64923bedec}{device}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_pointer_attributes_a9edc9782e1ee337072994780fd3b675f}{devicePointer}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_pointer_attributes_a19cbae18cd685096287e41cce1c9a087}{hostPointer}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ In this structure, the individual fields mean
+
+
+\begin{DoxyItemize}
+\item \doxylink{structcuda_pointer_attributes_a91ef95dac597cc710558dabbc8b9ae38}{cuda\+Pointer\+Attributes\+::type} identifies type of memory. It can be cuda\+Memory\+Type\+Unregistered for unregistered host memory, cuda\+Memory\+Type\+Host for registered host memory, cuda\+Memory\+Type\+Device for device memory or \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Memory\+Type\+Managed} for managed memory.
+\item \doxylink{structcuda_pointer_attributes_a20015540684b0c85e0debf64923bedec}{device} is the device against which {\ttfamily ptr} was allocated. If {\ttfamily ptr} has memory type cuda\+Memory\+Type\+Device then this identifies the device on which the memory referred to by {\ttfamily ptr} physically resides. If {\ttfamily ptr} has memory type cuda\+Memory\+Type\+Host then this identifies the device which was current when the allocation was made (and if that device is deinitialized then this allocation will vanish with that device\textquotesingle{}s state).
+\item \doxylink{structcuda_pointer_attributes_a9edc9782e1ee337072994780fd3b675f}{device\+Pointer} is the device pointer alias through which the memory referred to by {\ttfamily ptr} may be accessed on the current device. If the memory referred to by {\ttfamily ptr} cannot be accessed directly by the current device then this is NULL. ~\newline
+
+\item \doxylink{structcuda_pointer_attributes_a19cbae18cd685096287e41cce1c9a087}{host\+Pointer} is the host pointer alias through which the memory referred to by {\ttfamily ptr} may be accessed on the host. If the memory referred to by {\ttfamily ptr} cannot be accessed directly by the host then this is NULL.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em attributes} & -\/ Attributes for the specified pointer \\
+\hline
+{\em ptr} & -\/ Pointer to get attributes for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5b0c57f32cb245582010c07e952753e6}{cuda\+Get\+Device\+Count}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga33e2490308f833d7fc5edc76ad9c4416}{cuda\+Get\+Device}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga7b63629909800b614427aae92b22d606}{cuda\+Set\+Device}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaa6d5ae4a673c833a8d18fdab5dea3e70}{cuda\+Choose\+Device}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga386fc386cca447017a711e0b7d9871d5}{cu\+Pointer\+Get\+Attributes} 
+\end{DoxySeeAlso}

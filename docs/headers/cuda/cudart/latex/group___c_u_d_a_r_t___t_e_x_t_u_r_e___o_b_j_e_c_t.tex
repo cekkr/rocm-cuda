@@ -1,0 +1,365 @@
+\doxysection{Texture Object Management}
+\hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t}{}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t}\index{Texture Object Management@{Texture Object Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga29002aca135dacb5e071fa3eb97743ba}{cuda\+Get\+Channel\+Desc}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc}} \texorpdfstring{$\ast$}{*}desc, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga9a3dce149702581dbc3fc2fb9bb813b0}{cuda\+Array\+\_\+const\+\_\+t}} array)
+\begin{DoxyCompactList}\small\item\em Get the channel descriptor of an array. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ struct \mbox{\hyperlink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc}} CUDARTAPI \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Create\+Channel\+Desc}} (int x, int y, int z, int w, enum \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4cf131513bd90cc6561902e68d6ee3ad}{cuda\+Channel\+Format\+Kind}} f)
+\begin{DoxyCompactList}\small\item\em Returns a channel descriptor using the specified format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}{cuda\+Create\+Texture\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Tex\+Object}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_desc}{cuda\+Resource\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Res\+Desc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_texture_desc}{cuda\+Texture\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Tex\+Desc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_view_desc}{cuda\+Resource\+View\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Res\+View\+Desc}})
+\begin{DoxyCompactList}\small\item\em Creates a texture object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gaf51f56be67e3dd88b9d75e8f14179ce0}{cuda\+Destroy\+Texture\+Object}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex\+Object}})
+\begin{DoxyCompactList}\small\item\em Destroys a texture object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga57915ff40b83b0b63dd79ee4d22c3ed2}{cuda\+Get\+Texture\+Object\+Resource\+Desc}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_desc}{cuda\+Resource\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Res\+Desc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex\+Object}})
+\begin{DoxyCompactList}\small\item\em Returns a texture object\textquotesingle{}s resource descriptor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gab9acc954820290f5f26db1dcd0f8396f}{cuda\+Get\+Texture\+Object\+Texture\+Desc}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_texture_desc}{cuda\+Texture\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Tex\+Desc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex\+Object}})
+\begin{DoxyCompactList}\small\item\em Returns a texture object\textquotesingle{}s texture descriptor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gac35e70068aa46bb4d2520ce148429621}{cuda\+Get\+Texture\+Object\+Resource\+View\+Desc}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_view_desc}{cuda\+Resource\+View\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Res\+View\+Desc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex\+Object}})
+\begin{DoxyCompactList}\small\item\em Returns a texture object\textquotesingle{}s resource view descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ texture object management functions of the CUDA runtime API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the low level texture object management functions of the CUDA runtime application programming interface. The texture object API is only supported on devices of compute capability 3.\+0 or higher. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196} 
+\index{Texture Object Management@{Texture Object Management}!cudaCreateChannelDesc@{cudaCreateChannelDesc}}
+\index{cudaCreateChannelDesc@{cudaCreateChannelDesc}!Texture Object Management@{Texture Object Management}}
+\doxysubsubsection{\texorpdfstring{cudaCreateChannelDesc()}{cudaCreateChannelDesc()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ struct \mbox{\hyperlink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc}} CUDARTAPI cuda\+Create\+Channel\+Desc (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z,  }\item[{int}]{w,  }\item[{enum \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4cf131513bd90cc6561902e68d6ee3ad}{cuda\+Channel\+Format\+Kind}}}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns a channel descriptor using the specified format. 
+
+Returns a channel descriptor with format {\ttfamily f} and number of bits of each component {\ttfamily x}, {\ttfamily y}, {\ttfamily z}, and {\ttfamily w}. The \doxylink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc} is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_channel_format_desc_a70dede802100e2acd9f334326e9d7926}{x}},\ \mbox{\hyperlink{structcuda_channel_format_desc_a6570793c6567d0c704e8e8943ccaec43}{y}},\ \mbox{\hyperlink{structcuda_channel_format_desc_ae371d37d940d2397139b0a3b7302f51a}{z}},\ \mbox{\hyperlink{structcuda_channel_format_desc_a06089c5a407a2cbd6ea05e5a39b19d69}{w}};}
+\DoxyCodeLine{\ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4cf131513bd90cc6561902e68d6ee3ad}{cudaChannelFormatKind}}\ \mbox{\hyperlink{structcuda_channel_format_desc_a7d561d361936688eeae79c3184698278}{f}};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+where \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga4cf131513bd90cc6561902e68d6ee3ad}{cuda\+Channel\+Format\+Kind} is one of cuda\+Channel\+Format\+Kind\+Signed, cuda\+Channel\+Format\+Kind\+Unsigned, or cuda\+Channel\+Format\+Kind\+Float.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ X component \\
+\hline
+{\em y} & -\/ Y component \\
+\hline
+{\em z} & -\/ Z component \\
+\hline
+{\em w} & -\/ W component \\
+\hline
+{\em f} & -\/ Channel format\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel descriptor with format {\ttfamily f} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cuda\+Create\+Channel\+Desc (C++ API), \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga29002aca135dacb5e071fa3eb97743ba}{cuda\+Get\+Channel\+Desc}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}{cuda\+Create\+Texture\+Object}, \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e___o_b_j_e_c_t_ga6a74f75ea2c4a70b98396182911c611f}{cuda\+Create\+Surface\+Object} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3} 
+\index{Texture Object Management@{Texture Object Management}!cudaCreateTextureObject@{cudaCreateTextureObject}}
+\index{cudaCreateTextureObject@{cudaCreateTextureObject}!Texture Object Management@{Texture Object Management}}
+\doxysubsubsection{\texorpdfstring{cudaCreateTextureObject()}{cudaCreateTextureObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Create\+Texture\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Tex\+Object,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_desc}{cuda\+Resource\+Desc}} \texorpdfstring{$\ast$}{*}}]{p\+Res\+Desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_texture_desc}{cuda\+Texture\+Desc}} \texorpdfstring{$\ast$}{*}}]{p\+Tex\+Desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_view_desc}{cuda\+Resource\+View\+Desc}} \texorpdfstring{$\ast$}{*}}]{p\+Res\+View\+Desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Creates a texture object. 
+
+Creates a texture object and returns it in {\ttfamily p\+Tex\+Object}. {\ttfamily p\+Res\+Desc} describes the data to texture from. {\ttfamily p\+Tex\+Desc} describes how the data should be sampled. {\ttfamily p\+Res\+View\+Desc} is an optional argument that specifies an alternate format for the data described by {\ttfamily p\+Res\+Desc}, and also describes the subresource region to restrict access to when texturing. {\ttfamily p\+Res\+View\+Desc} can only be specified if the type of resource is a CUDA array or a CUDA mipmapped array.
+
+Texture objects are only supported on devices of compute capability 3.\+0 or higher. Additionally, a texture object is an opaque value, and, as such, should only be accessed through CUDA API calls.
+
+The \doxylink{structcuda_resource_desc}{cuda\+Resource\+Desc} structure is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_resource_desc}{cudaResourceDesc}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae86ec7f5bbbf5bfc579189a9950a3be9}{cudaResourceType}}\ \mbox{\hyperlink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{resType}};}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}}\ \mbox{\hyperlink{structcuda_resource_desc_ad3316a0430bbfd23bd77a333c5a368a7}{array}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \mbox{\hyperlink{structcuda_resource_desc_ad3316a0430bbfd23bd77a333c5a368a7}{array}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga1b03ad14fc0ab86f8b033837f5562d8a}{cudaMipmappedArray\_t}}\ \mbox{\hyperlink{structcuda_resource_desc_a13f1040b6be810526704b34b2e77a118}{mipmap}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \mbox{\hyperlink{structcuda_resource_desc_a13f1040b6be810526704b34b2e77a118}{mipmap}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_resource_desc_a002aab9a499eb9fca0592f788da1d986}{devPtr}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ \mbox{\hyperlink{structcuda_resource_desc_a8c4b49840bbe23b76ddce2234c2c280a}{desc}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_resource_desc_a74b934bae902bc25c0204210e049d40e}{sizeInBytes}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ linear;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *devPtr;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ desc;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ width;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ height;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pitchInBytes;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ pitch2D;}
+\DoxyCodeLine{\ \ \ \ \}\ res;}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ where\+:
+\begin{DoxyItemize}
+\item \doxylink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{cuda\+Resource\+Desc\+::res\+Type} specifies the type of resource to texture from. CUresource\+Type is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae86ec7f5bbbf5bfc579189a9950a3be9}{cudaResourceType}}\ \{}
+\DoxyCodeLine{\ \ \ \ cudaResourceTypeArray\ \ \ \ \ \ \ \ \ \ =\ 0x00,}
+\DoxyCodeLine{\ \ \ \ cudaResourceTypeMipmappedArray\ =\ 0x01,}
+\DoxyCodeLine{\ \ \ \ cudaResourceTypeLinear\ \ \ \ \ \ \ \ \ =\ 0x02,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaResourceTypePitch2D}}\ \ \ \ \ \ \ \ =\ 0x03}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{}
+If \doxylink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{cuda\+Resource\+Desc\+::res\+Type} is set to cuda\+Resource\+Type\+Array, \+::cuda\+Resource\+Desc\+::res\+::array\+::array must be set to a valid CUDA array handle.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+If \doxylink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{cuda\+Resource\+Desc\+::res\+Type} is set to cuda\+Resource\+Type\+Mipmapped\+Array, \+::cuda\+Resource\+Desc\+::res\+::mipmap\+::mipmap must be set to a valid CUDA mipmapped array handle and \doxylink{structcuda_texture_desc_a4244ae4f85cd69ff050fdc681be4cd35}{cuda\+Texture\+Desc\+::normalized\+Coords} must be set to true.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+If \doxylink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{cuda\+Resource\+Desc\+::res\+Type} is set to cuda\+Resource\+Type\+Linear, \+::cuda\+Resource\+Desc\+::res\+::linear\+::dev\+Ptr must be set to a valid device pointer, that is aligned to \doxylink{structcuda_device_prop_a500248658a996f51752e1ab1769f8a88}{cuda\+Device\+Prop\+::texture\+Alignment}. \+::cuda\+Resource\+Desc\+::res\+::linear\+::desc describes the format and the number of components per array element. \+::cuda\+Resource\+Desc\+::res\+::linear\+::size\+In\+Bytes specifies the size of the array in bytes. The total number of elements in the linear address range cannot exceed \doxylink{structcuda_device_prop_a20efbdc4556a390720e0f75b62b8f83d}{cuda\+Device\+Prop\+::max\+Texture1\+DLinear}. The number of elements is computed as (size\+In\+Bytes / sizeof(desc)).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+If \doxylink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{cuda\+Resource\+Desc\+::res\+Type} is set to \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Resource\+Type\+Pitch2D}, \+::cuda\+Resource\+Desc\+::res\+::pitch2\+D\+::dev\+Ptr must be set to a valid device pointer, that is aligned to \doxylink{structcuda_device_prop_a500248658a996f51752e1ab1769f8a88}{cuda\+Device\+Prop\+::texture\+Alignment}. \+::cuda\+Resource\+Desc\+::res\+::pitch2\+D\+::desc describes the format and the number of components per array element. \+::cuda\+Resource\+Desc\+::res\+::pitch2\+D\+::width and \+::cuda\+Resource\+Desc\+::res\+::pitch2\+D\+::height specify the width and height of the array in elements, and cannot exceed \doxylink{structcuda_device_prop_a757a4245a175441c2a1535ef9c9524a4}{cuda\+Device\+Prop\+::max\+Texture2\+DLinear}\mbox{[}0\mbox{]} and \doxylink{structcuda_device_prop_a757a4245a175441c2a1535ef9c9524a4}{cuda\+Device\+Prop\+::max\+Texture2\+DLinear}\mbox{[}1\mbox{]} respectively. \+::cuda\+Resource\+Desc\+::res\+::pitch2\+D\+::pitch\+In\+Bytes specifies the pitch between two rows in bytes and has to be aligned to \doxylink{structcuda_device_prop_a3a3f10d2833bdc82ceb370a449aafeec}{cuda\+Device\+Prop\+::texture\+Pitch\+Alignment}. Pitch cannot exceed \doxylink{structcuda_device_prop_a757a4245a175441c2a1535ef9c9524a4}{cuda\+Device\+Prop\+::max\+Texture2\+DLinear}\mbox{[}2\mbox{]}.
+\end{DoxyParagraph}
+The \doxylink{structcuda_texture_desc}{cuda\+Texture\+Desc} struct is defined as 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_texture_desc}{cudaTextureDesc}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga43c0f84dd808852bdd8ecac2eb2037e8}{cudaTextureAddressMode}}\ \mbox{\hyperlink{structcuda_texture_desc_a444fd48870cf61180673e0ed0abb4a1c}{addressMode}}[3];}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga564d57786ef354db4d0e01509fd6645b}{cudaTextureFilterMode}}\ \ \mbox{\hyperlink{structcuda_texture_desc_ac61993bf71d0cdec670ad92e567ba582}{filterMode}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga5770c37d7ac48f0935e3811dc9332059}{cudaTextureReadMode}}\ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a279c5b27ef0194711344dc402228af94}{readMode}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a173e8d365c55f50e9eb586c282af30ca}{sRGB}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a8a99cc6b95b3629dc204393576ebae9e}{borderColor}}[4];}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a4244ae4f85cd69ff050fdc681be4cd35}{normalizedCoords}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a4fadc6bfa59fe7f8f076d58e407381e5}{maxAnisotropy}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga564d57786ef354db4d0e01509fd6645b}{cudaTextureFilterMode}}\ \ \mbox{\hyperlink{structcuda_texture_desc_abbdaf1bc430ac931a12ffa7d3f8809ce}{mipmapFilterMode}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a39f79ca1c9fd8f476597df0d3a8ed34c}{mipmapLevelBias}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a928642b629ae8fd8d2adc198979b6840}{minMipmapLevelClamp}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a9cb54762bd472fb9bd58fed7f22e64c2}{maxMipmapLevelClamp}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_a7a70376ee9551c40991b587b48dbd728}{disableTrilinearOptimization}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_texture_desc_ad2d887e7ecfead1ed118743bc9dce779}{seamlessCubemap}};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ where
+\begin{DoxyItemize}
+\item \doxylink{structcuda_texture_desc_a444fd48870cf61180673e0ed0abb4a1c}{cuda\+Texture\+Desc\+::address\+Mode} specifies the addressing mode for each dimension of the texture data. \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga43c0f84dd808852bdd8ecac2eb2037e8}{cuda\+Texture\+Address\+Mode} is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga43c0f84dd808852bdd8ecac2eb2037e8}{cudaTextureAddressMode}}\ \{}
+\DoxyCodeLine{\ \ \ \ cudaAddressModeWrap\ \ \ =\ 0,}
+\DoxyCodeLine{\ \ \ \ cudaAddressModeClamp\ \ =\ 1,}
+\DoxyCodeLine{\ \ \ \ cudaAddressModeMirror\ =\ 2,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaAddressModeBorder}}\ =\ 3}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ This is ignored if \doxylink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{cuda\+Resource\+Desc\+::res\+Type} is cuda\+Resource\+Type\+Linear. Also, if \doxylink{structcuda_texture_desc_a4244ae4f85cd69ff050fdc681be4cd35}{cuda\+Texture\+Desc\+::normalized\+Coords} is set to zero, cuda\+Address\+Mode\+Wrap and cuda\+Address\+Mode\+Mirror won\textquotesingle{}t be supported and will be switched to cuda\+Address\+Mode\+Clamp.
+\item \doxylink{structcuda_texture_desc_ac61993bf71d0cdec670ad92e567ba582}{cuda\+Texture\+Desc\+::filter\+Mode} specifies the filtering mode to be used when fetching from the texture. \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga564d57786ef354db4d0e01509fd6645b}{cuda\+Texture\+Filter\+Mode} is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga564d57786ef354db4d0e01509fd6645b}{cudaTextureFilterMode}}\ \{}
+\DoxyCodeLine{\ \ \ \ cudaFilterModePoint\ \ =\ 0,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaFilterModeLinear}}\ =\ 1}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ This is ignored if \doxylink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{cuda\+Resource\+Desc\+::res\+Type} is cuda\+Resource\+Type\+Linear.
+\item \doxylink{structcuda_texture_desc_a279c5b27ef0194711344dc402228af94}{cuda\+Texture\+Desc\+::read\+Mode} specifies whether integer data should be converted to floating point or not. \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga5770c37d7ac48f0935e3811dc9332059}{cuda\+Texture\+Read\+Mode} is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga5770c37d7ac48f0935e3811dc9332059}{cudaTextureReadMode}}\ \{}
+\DoxyCodeLine{\ \ \ \ cudaReadModeElementType\ \ \ \ \ =\ 0,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaReadModeNormalizedFloat}}\ =\ 1}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ Note that this applies only to 8-\/bit and 16-\/bit integer formats. 32-\/bit integer format would not be promoted, regardless of whether or not this \doxylink{structcuda_texture_desc_a279c5b27ef0194711344dc402228af94}{cuda\+Texture\+Desc\+::read\+Mode} is set \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Read\+Mode\+Normalized\+Float} is specified.
+\item \doxylink{structcuda_texture_desc_a173e8d365c55f50e9eb586c282af30ca}{cuda\+Texture\+Desc\+::s\+RGB} specifies whether s\+RGB to linear conversion should be performed during texture fetch.
+\item \doxylink{structcuda_texture_desc_a8a99cc6b95b3629dc204393576ebae9e}{cuda\+Texture\+Desc\+::border\+Color} specifies the float values of color. where\+: \doxylink{structcuda_texture_desc_a8a99cc6b95b3629dc204393576ebae9e}{cuda\+Texture\+Desc\+::border\+Color}\mbox{[}0\mbox{]} contains value of \textquotesingle{}R\textquotesingle{}, \doxylink{structcuda_texture_desc_a8a99cc6b95b3629dc204393576ebae9e}{cuda\+Texture\+Desc\+::border\+Color}\mbox{[}1\mbox{]} contains value of \textquotesingle{}G\textquotesingle{}, \doxylink{structcuda_texture_desc_a8a99cc6b95b3629dc204393576ebae9e}{cuda\+Texture\+Desc\+::border\+Color}\mbox{[}2\mbox{]} contains value of \textquotesingle{}B\textquotesingle{}, \doxylink{structcuda_texture_desc_a8a99cc6b95b3629dc204393576ebae9e}{cuda\+Texture\+Desc\+::border\+Color}\mbox{[}3\mbox{]} contains value of \textquotesingle{}A\textquotesingle{} Note that application using integer border color values will need to $<$reinterpret\+\_\+cast$>$ these values to float. The values are set only when the addressing mode specified by \doxylink{structcuda_texture_desc_a444fd48870cf61180673e0ed0abb4a1c}{cuda\+Texture\+Desc\+::address\+Mode} is cuda\+Address\+Mode\+Border.
+\item \doxylink{structcuda_texture_desc_a4244ae4f85cd69ff050fdc681be4cd35}{cuda\+Texture\+Desc\+::normalized\+Coords} specifies whether the texture coordinates will be normalized or not.
+\item \doxylink{structcuda_texture_desc_a4fadc6bfa59fe7f8f076d58e407381e5}{cuda\+Texture\+Desc\+::max\+Anisotropy} specifies the maximum anistropy ratio to be used when doing anisotropic filtering. This value will be clamped to the range \mbox{[}1,16\mbox{]}.
+\item \doxylink{structcuda_texture_desc_abbdaf1bc430ac931a12ffa7d3f8809ce}{cuda\+Texture\+Desc\+::mipmap\+Filter\+Mode} specifies the filter mode when the calculated mipmap level lies between two defined mipmap levels.
+\item \doxylink{structcuda_texture_desc_a39f79ca1c9fd8f476597df0d3a8ed34c}{cuda\+Texture\+Desc\+::mipmap\+Level\+Bias} specifies the offset to be applied to the calculated mipmap level.
+\item \doxylink{structcuda_texture_desc_a928642b629ae8fd8d2adc198979b6840}{cuda\+Texture\+Desc\+::min\+Mipmap\+Level\+Clamp} specifies the lower end of the mipmap level range to clamp access to.
+\item \doxylink{structcuda_texture_desc_a9cb54762bd472fb9bd58fed7f22e64c2}{cuda\+Texture\+Desc\+::max\+Mipmap\+Level\+Clamp} specifies the upper end of the mipmap level range to clamp access to.
+\item \doxylink{structcuda_texture_desc_a7a70376ee9551c40991b587b48dbd728}{cuda\+Texture\+Desc\+::disable\+Trilinear\+Optimization} specifies whether the trilinear filtering optimizations will be disabled.
+\item \doxylink{structcuda_texture_desc_ad2d887e7ecfead1ed118743bc9dce779}{cuda\+Texture\+Desc\+::seamless\+Cubemap} specifies whether seamless cube map filtering is enabled. This flag can only be specified if the underlying resource is a CUDA array or a CUDA mipmapped array that was created with the flag \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga802843d69ca8be35ee050ff66782179e}{cuda\+Array\+Cubemap}. When seamless cube map filtering is enabled, texture address modes specified by \doxylink{structcuda_texture_desc_a444fd48870cf61180673e0ed0abb4a1c}{cuda\+Texture\+Desc\+::address\+Mode} are ignored. Instead, if the \doxylink{structcuda_texture_desc_ac61993bf71d0cdec670ad92e567ba582}{cuda\+Texture\+Desc\+::filter\+Mode} is set to cuda\+Filter\+Mode\+Point the address mode cuda\+Address\+Mode\+Clamp will be applied for all dimensions. If the \doxylink{structcuda_texture_desc_ac61993bf71d0cdec670ad92e567ba582}{cuda\+Texture\+Desc\+::filter\+Mode} is set to \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Filter\+Mode\+Linear} seamless cube map filtering will be performed when sampling along the cube face borders.
+\end{DoxyItemize}
+
+The \doxylink{structcuda_resource_view_desc}{cuda\+Resource\+View\+Desc} struct is defined as 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_resource_view_desc}{cudaResourceViewDesc}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga0c98391f63a4c05305120a42ee3a22f6}{cudaResourceViewFormat}}\ \mbox{\hyperlink{structcuda_resource_view_desc_a04e9ec20e3b58859dbae8e8e598e1603}{format}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a914fc3c27ce32c98a1d8d21936642924}{width}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_af94839eb926fba26fa5ff28775c79d33}{height}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a7f76b4084ffdcb7f88e4149b586a990d}{depth}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_af63fa90d2bf6c66f3865bf13006edded}{firstMipmapLevel}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a469d25794fec5471648d0d9e42790431}{lastMipmapLevel}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_aab0d42bf9dc88944181f697b17e6943a}{firstLayer}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a6d96c5b3df0bce3d945d4ea99666226f}{lastLayer}};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ where\+:
+\begin{DoxyItemize}
+\item \doxylink{structcuda_resource_view_desc_a04e9ec20e3b58859dbae8e8e598e1603}{cuda\+Resource\+View\+Desc\+::format} specifies how the data contained in the CUDA array or CUDA mipmapped array should be interpreted. Note that this can incur a change in size of the texture data. If the resource view format is a block compressed format, then the underlying CUDA array or CUDA mipmapped array has to have a 32-\/bit unsigned integer format with 2 or 4 channels, depending on the block compressed format. For ex., BC1 and BC4 require the underlying CUDA array to have a 32-\/bit unsigned int with 2 channels. The other BC formats require the underlying resource to have the same 32-\/bit unsigned int format but with 4 channels.
+\item \doxylink{structcuda_resource_view_desc_a914fc3c27ce32c98a1d8d21936642924}{cuda\+Resource\+View\+Desc\+::width} specifies the new width of the texture data. If the resource view format is a block compressed format, this value has to be 4 times the original width of the resource. For non block compressed formats, this value has to be equal to that of the original resource.
+\item \doxylink{structcuda_resource_view_desc_af94839eb926fba26fa5ff28775c79d33}{cuda\+Resource\+View\+Desc\+::height} specifies the new height of the texture data. If the resource view format is a block compressed format, this value has to be 4 times the original height of the resource. For non block compressed formats, this value has to be equal to that of the original resource.
+\item \doxylink{structcuda_resource_view_desc_a7f76b4084ffdcb7f88e4149b586a990d}{cuda\+Resource\+View\+Desc\+::depth} specifies the new depth of the texture data. This value has to be equal to that of the original resource.
+\item \doxylink{structcuda_resource_view_desc_af63fa90d2bf6c66f3865bf13006edded}{cuda\+Resource\+View\+Desc\+::first\+Mipmap\+Level} specifies the most detailed mipmap level. This will be the new mipmap level zero. For non-\/mipmapped resources, this value has to be zero.\doxylink{structcuda_texture_desc_a928642b629ae8fd8d2adc198979b6840}{cuda\+Texture\+Desc\+::min\+Mipmap\+Level\+Clamp} and \doxylink{structcuda_texture_desc_a9cb54762bd472fb9bd58fed7f22e64c2}{cuda\+Texture\+Desc\+::max\+Mipmap\+Level\+Clamp} will be relative to this value. For ex., if the first\+Mipmap\+Level is set to 2, and a min\+Mipmap\+Level\+Clamp of 1.\+2 is specified, then the actual minimum mipmap level clamp will be 3.\+2.
+\item \doxylink{structcuda_resource_view_desc_a469d25794fec5471648d0d9e42790431}{cuda\+Resource\+View\+Desc\+::last\+Mipmap\+Level} specifies the least detailed mipmap level. For non-\/mipmapped resources, this value has to be zero.
+\item \doxylink{structcuda_resource_view_desc_aab0d42bf9dc88944181f697b17e6943a}{cuda\+Resource\+View\+Desc\+::first\+Layer} specifies the first layer index for layered textures. This will be the new layer zero. For non-\/layered resources, this value has to be zero.
+\item \doxylink{structcuda_resource_view_desc_a6d96c5b3df0bce3d945d4ea99666226f}{cuda\+Resource\+View\+Desc\+::last\+Layer} specifies the last layer index for layered textures. For non-\/layered resources, this value has to be zero.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Tex\+Object} & -\/ Texture object to create \\
+\hline
+{\em p\+Res\+Desc} & -\/ Resource descriptor \\
+\hline
+{\em p\+Tex\+Desc} & -\/ Texture descriptor \\
+\hline
+{\em p\+Res\+View\+Desc} & -\/ Resource view descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gaf51f56be67e3dd88b9d75e8f14179ce0}{cuda\+Destroy\+Texture\+Object}, \doxylink{group___c_u_d_a___t_e_x_o_b_j_e_c_t_gafe689f97f3aebbf1b1739cbe27166623}{cu\+Tex\+Object\+Create} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gaf51f56be67e3dd88b9d75e8f14179ce0}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gaf51f56be67e3dd88b9d75e8f14179ce0} 
+\index{Texture Object Management@{Texture Object Management}!cudaDestroyTextureObject@{cudaDestroyTextureObject}}
+\index{cudaDestroyTextureObject@{cudaDestroyTextureObject}!Texture Object Management@{Texture Object Management}}
+\doxysubsubsection{\texorpdfstring{cudaDestroyTextureObject()}{cudaDestroyTextureObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Destroy\+Texture\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}}}]{tex\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Destroys a texture object. 
+
+Destroys the texture object specified by {\ttfamily tex\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tex\+Object} & -\/ Texture object to destroy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback \textbackslash{}note\+\_\+destroy\+\_\+ub
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}{cuda\+Create\+Texture\+Object}, \doxylink{group___c_u_d_a___t_e_x_o_b_j_e_c_t_ga9c69f4f3221350b1de972bfe01e1fcfa}{cu\+Tex\+Object\+Destroy} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga29002aca135dacb5e071fa3eb97743ba}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga29002aca135dacb5e071fa3eb97743ba} 
+\index{Texture Object Management@{Texture Object Management}!cudaGetChannelDesc@{cudaGetChannelDesc}}
+\index{cudaGetChannelDesc@{cudaGetChannelDesc}!Texture Object Management@{Texture Object Management}}
+\doxysubsubsection{\texorpdfstring{cudaGetChannelDesc()}{cudaGetChannelDesc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Get\+Channel\+Desc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc}} \texorpdfstring{$\ast$}{*}}]{desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga9a3dce149702581dbc3fc2fb9bb813b0}{cuda\+Array\+\_\+const\+\_\+t}}}]{array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Get the channel descriptor of an array. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}desc} the channel descriptor of the CUDA array {\ttfamily array}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & -\/ Channel format \\
+\hline
+{\em array} & -\/ Memory array on device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Create\+Channel\+Desc (C API)}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}{cuda\+Create\+Texture\+Object}, \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e___o_b_j_e_c_t_ga6a74f75ea2c4a70b98396182911c611f}{cuda\+Create\+Surface\+Object} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga57915ff40b83b0b63dd79ee4d22c3ed2}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga57915ff40b83b0b63dd79ee4d22c3ed2} 
+\index{Texture Object Management@{Texture Object Management}!cudaGetTextureObjectResourceDesc@{cudaGetTextureObjectResourceDesc}}
+\index{cudaGetTextureObjectResourceDesc@{cudaGetTextureObjectResourceDesc}!Texture Object Management@{Texture Object Management}}
+\doxysubsubsection{\texorpdfstring{cudaGetTextureObjectResourceDesc()}{cudaGetTextureObjectResourceDesc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Get\+Texture\+Object\+Resource\+Desc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_desc}{cuda\+Resource\+Desc}} \texorpdfstring{$\ast$}{*}}]{p\+Res\+Desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}}}]{tex\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns a texture object\textquotesingle{}s resource descriptor. 
+
+Returns the resource descriptor for the texture object specified by {\ttfamily tex\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Res\+Desc} & -\/ Resource descriptor \\
+\hline
+{\em tex\+Object} & -\/ Texture object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}{cuda\+Create\+Texture\+Object}, \doxylink{group___c_u_d_a___t_e_x_o_b_j_e_c_t_ga45ee34bffc66a49719309b401c84df03}{cu\+Tex\+Object\+Get\+Resource\+Desc} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gac35e70068aa46bb4d2520ce148429621}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gac35e70068aa46bb4d2520ce148429621} 
+\index{Texture Object Management@{Texture Object Management}!cudaGetTextureObjectResourceViewDesc@{cudaGetTextureObjectResourceViewDesc}}
+\index{cudaGetTextureObjectResourceViewDesc@{cudaGetTextureObjectResourceViewDesc}!Texture Object Management@{Texture Object Management}}
+\doxysubsubsection{\texorpdfstring{cudaGetTextureObjectResourceViewDesc()}{cudaGetTextureObjectResourceViewDesc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Get\+Texture\+Object\+Resource\+View\+Desc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_resource_view_desc}{cuda\+Resource\+View\+Desc}} \texorpdfstring{$\ast$}{*}}]{p\+Res\+View\+Desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}}}]{tex\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns a texture object\textquotesingle{}s resource view descriptor. 
+
+Returns the resource view descriptor for the texture object specified by {\ttfamily tex\+Object}. If no resource view was specified, cuda\+Error\+Invalid\+Value is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Res\+View\+Desc} & -\/ Resource view descriptor \\
+\hline
+{\em tex\+Object} & -\/ Texture object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}{cuda\+Create\+Texture\+Object}, \doxylink{group___c_u_d_a___t_e_x_o_b_j_e_c_t_ga85ef065f08d085091ed75eaa42ed8315}{cu\+Tex\+Object\+Get\+Resource\+View\+Desc} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gab9acc954820290f5f26db1dcd0f8396f}\label{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_gab9acc954820290f5f26db1dcd0f8396f} 
+\index{Texture Object Management@{Texture Object Management}!cudaGetTextureObjectTextureDesc@{cudaGetTextureObjectTextureDesc}}
+\index{cudaGetTextureObjectTextureDesc@{cudaGetTextureObjectTextureDesc}!Texture Object Management@{Texture Object Management}}
+\doxysubsubsection{\texorpdfstring{cudaGetTextureObjectTextureDesc()}{cudaGetTextureObjectTextureDesc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Get\+Texture\+Object\+Texture\+Desc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_texture_desc}{cuda\+Texture\+Desc}} \texorpdfstring{$\ast$}{*}}]{p\+Tex\+Desc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad4d01c0d298097b3c6913c88679a2eb0}{cuda\+Texture\+Object\+\_\+t}}}]{tex\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns a texture object\textquotesingle{}s texture descriptor. 
+
+Returns the texture descriptor for the texture object specified by {\ttfamily tex\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Tex\+Desc} & -\/ Texture descriptor \\
+\hline
+{\em tex\+Object} & -\/ Texture object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga0ea16a1a22e515f340aa8f63d74bfeb3}{cuda\+Create\+Texture\+Object}, \doxylink{group___c_u_d_a___t_e_x_o_b_j_e_c_t_gabed873b5ca30e9501e8edaef3dc15873}{cu\+Tex\+Object\+Get\+Texture\+Desc} 
+\end{DoxySeeAlso}

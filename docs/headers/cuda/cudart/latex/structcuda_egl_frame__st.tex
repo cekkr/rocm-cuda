@@ -1,0 +1,88 @@
+\doxysection{cuda\+Egl\+Frame\+\_\+st Struct Reference}
+\hypertarget{structcuda_egl_frame__st}{}\label{structcuda_egl_frame__st}\index{cudaEglFrame\_st@{cudaEglFrame\_st}}
+
+
+{\ttfamily \#include $<$cuda\+\_\+egl\+\_\+interop.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structcuda_egl_frame__st_ada45f0b2779a410a2147fe6a330fa73f}\label{structcuda_egl_frame__st_ada45f0b2779a410a2147fe6a330fa73f} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}} \mbox{\hyperlink{structcuda_egl_frame__st_a6363e52dd96ffeeb33af24cb99151dc0}{pArray}} \mbox{[}\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga804d292b8842ce5fb4e77d71b979615f}{CUDA\_EGL\_MAX\_PLANES}}\mbox{]}\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_pitched_ptr}{cudaPitchedPtr}} \mbox{\hyperlink{structcuda_egl_frame__st_a70f19670bc12944828d16004e0a2f898}{pPitch}} \mbox{[}\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga804d292b8842ce5fb4e77d71b979615f}{CUDA\_EGL\_MAX\_PLANES}}\mbox{]}\\
+\} {\bfseries frame}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gab21ecfa7a79aba78a785a3895ff92bf9}{cuda\+Egl\+Plane\+Desc}} \mbox{\hyperlink{structcuda_egl_frame__st_a99c029aed959b59530efcc0e04af4a91}{plane\+Desc}} \mbox{[}\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga804d292b8842ce5fb4e77d71b979615f}{CUDA\+\_\+\+EGL\+\_\+\+MAX\+\_\+\+PLANES}}\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_egl_frame__st_add3eeb939479d4606e43570df5c9aaf9}{plane\+Count}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga16a77d55a72383f1c3961b4383b6c99b}{cuda\+Egl\+Frame\+Type}} \mbox{\hyperlink{structcuda_egl_frame__st_ac955166042db7897bf4adaf99764e663}{frame\+Type}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga08dd9aa791a74f2f2e094132b01cb52e}{cuda\+Egl\+Color\+Format}} \mbox{\hyperlink{structcuda_egl_frame__st_ace46037a2a3dd01978f5f5a1efcdab35}{egl\+Color\+Format}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA EGLFrame Descriptor -\/ structure defining one frame of EGL.
+
+Each frame may contain one or more planes depending on whether the surface is Multiplanar or not. Each plane of EGLFrame is represented by \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_gab21ecfa7a79aba78a785a3895ff92bf9}{cuda\+Egl\+Plane\+Desc} which is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_egl_plane_desc__st}{cudaEglPlaneDesc\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ depth;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pitch;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ numChannels;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ channelDesc;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ reserved[4];}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gab21ecfa7a79aba78a785a3895ff92bf9}{cudaEglPlaneDesc}};}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_egl_frame__st_ace46037a2a3dd01978f5f5a1efcdab35}\label{structcuda_egl_frame__st_ace46037a2a3dd01978f5f5a1efcdab35} 
+\index{cudaEglFrame\_st@{cudaEglFrame\_st}!eglColorFormat@{eglColorFormat}}
+\index{eglColorFormat@{eglColorFormat}!cudaEglFrame\_st@{cudaEglFrame\_st}}
+\doxysubsubsection{\texorpdfstring{eglColorFormat}{eglColorFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga08dd9aa791a74f2f2e094132b01cb52e}{cuda\+Egl\+Color\+Format}} cuda\+Egl\+Frame\+\_\+st\+::egl\+Color\+Format}
+
+CUDA EGL Color Format \Hypertarget{structcuda_egl_frame__st_ac955166042db7897bf4adaf99764e663}\label{structcuda_egl_frame__st_ac955166042db7897bf4adaf99764e663} 
+\index{cudaEglFrame\_st@{cudaEglFrame\_st}!frameType@{frameType}}
+\index{frameType@{frameType}!cudaEglFrame\_st@{cudaEglFrame\_st}}
+\doxysubsubsection{\texorpdfstring{frameType}{frameType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga16a77d55a72383f1c3961b4383b6c99b}{cuda\+Egl\+Frame\+Type}} cuda\+Egl\+Frame\+\_\+st\+::frame\+Type}
+
+Array or Pitch \Hypertarget{structcuda_egl_frame__st_a6363e52dd96ffeeb33af24cb99151dc0}\label{structcuda_egl_frame__st_a6363e52dd96ffeeb33af24cb99151dc0} 
+\index{cudaEglFrame\_st@{cudaEglFrame\_st}!pArray@{pArray}}
+\index{pArray@{pArray}!cudaEglFrame\_st@{cudaEglFrame\_st}}
+\doxysubsubsection{\texorpdfstring{pArray}{pArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cuda\+Array\+\_\+t}} cuda\+Egl\+Frame\+\_\+st\+::p\+Array\mbox{[}\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga804d292b8842ce5fb4e77d71b979615f}{CUDA\+\_\+\+EGL\+\_\+\+MAX\+\_\+\+PLANES}}\mbox{]}}
+
+Array of CUDA arrays corresponding to each plane \Hypertarget{structcuda_egl_frame__st_add3eeb939479d4606e43570df5c9aaf9}\label{structcuda_egl_frame__st_add3eeb939479d4606e43570df5c9aaf9} 
+\index{cudaEglFrame\_st@{cudaEglFrame\_st}!planeCount@{planeCount}}
+\index{planeCount@{planeCount}!cudaEglFrame\_st@{cudaEglFrame\_st}}
+\doxysubsubsection{\texorpdfstring{planeCount}{planeCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Egl\+Frame\+\_\+st\+::plane\+Count}
+
+Number of planes \Hypertarget{structcuda_egl_frame__st_a99c029aed959b59530efcc0e04af4a91}\label{structcuda_egl_frame__st_a99c029aed959b59530efcc0e04af4a91} 
+\index{cudaEglFrame\_st@{cudaEglFrame\_st}!planeDesc@{planeDesc}}
+\index{planeDesc@{planeDesc}!cudaEglFrame\_st@{cudaEglFrame\_st}}
+\doxysubsubsection{\texorpdfstring{planeDesc}{planeDesc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gab21ecfa7a79aba78a785a3895ff92bf9}{cuda\+Egl\+Plane\+Desc}} cuda\+Egl\+Frame\+\_\+st\+::plane\+Desc\mbox{[}\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga804d292b8842ce5fb4e77d71b979615f}{CUDA\+\_\+\+EGL\+\_\+\+MAX\+\_\+\+PLANES}}\mbox{]}}
+
+CUDA EGL Plane Descriptor \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_gab21ecfa7a79aba78a785a3895ff92bf9}{cuda\+Egl\+Plane\+Desc} \Hypertarget{structcuda_egl_frame__st_a70f19670bc12944828d16004e0a2f898}\label{structcuda_egl_frame__st_a70f19670bc12944828d16004e0a2f898} 
+\index{cudaEglFrame\_st@{cudaEglFrame\_st}!pPitch@{pPitch}}
+\index{pPitch@{pPitch}!cudaEglFrame\_st@{cudaEglFrame\_st}}
+\doxysubsubsection{\texorpdfstring{pPitch}{pPitch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_pitched_ptr}{cuda\+Pitched\+Ptr}} cuda\+Egl\+Frame\+\_\+st\+::p\+Pitch\mbox{[}\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga804d292b8842ce5fb4e77d71b979615f}{CUDA\+\_\+\+EGL\+\_\+\+MAX\+\_\+\+PLANES}}\mbox{]}}
+
+Array of Pointers corresponding to each plane 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cuda\+\_\+egl\+\_\+interop.\+h\end{DoxyCompactItemize}

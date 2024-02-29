@@ -1,0 +1,57 @@
+\doxysection{cuda\+Pointer\+Attributes Struct Reference}
+\hypertarget{structcuda_pointer_attributes}{}\label{structcuda_pointer_attributes}\index{cudaPointerAttributes@{cudaPointerAttributes}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaea66858c25bf81443785fcaf0e9b77c3}{cuda\+Memory\+Type}} \mbox{\hyperlink{structcuda_pointer_attributes_a91ef95dac597cc710558dabbc8b9ae38}{type}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_pointer_attributes_a20015540684b0c85e0debf64923bedec}{device}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_pointer_attributes_a9edc9782e1ee337072994780fd3b675f}{device\+Pointer}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_pointer_attributes_a19cbae18cd685096287e41cce1c9a087}{host\+Pointer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA pointer attributes 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_pointer_attributes_a20015540684b0c85e0debf64923bedec}\label{structcuda_pointer_attributes_a20015540684b0c85e0debf64923bedec} 
+\index{cudaPointerAttributes@{cudaPointerAttributes}!device@{device}}
+\index{device@{device}!cudaPointerAttributes@{cudaPointerAttributes}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Pointer\+Attributes\+::device}
+
+The device against which the memory was allocated or registered. If the memory type is cuda\+Memory\+Type\+Device then this identifies the device on which the memory referred physically resides. If the memory type is cuda\+Memory\+Type\+Host or\+::cuda\+Memory\+Type\+Managed then this identifies the device which was current when the memory was allocated or registered (and if that device is deinitialized then this allocation will vanish with that device\textquotesingle{}s state). \Hypertarget{structcuda_pointer_attributes_a9edc9782e1ee337072994780fd3b675f}\label{structcuda_pointer_attributes_a9edc9782e1ee337072994780fd3b675f} 
+\index{cudaPointerAttributes@{cudaPointerAttributes}!devicePointer@{devicePointer}}
+\index{devicePointer@{devicePointer}!cudaPointerAttributes@{cudaPointerAttributes}}
+\doxysubsubsection{\texorpdfstring{devicePointer}{devicePointer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+Pointer\+Attributes\+::device\+Pointer}
+
+The address which may be dereferenced on the current device to access the memory or NULL if no such address exists. \Hypertarget{structcuda_pointer_attributes_a19cbae18cd685096287e41cce1c9a087}\label{structcuda_pointer_attributes_a19cbae18cd685096287e41cce1c9a087} 
+\index{cudaPointerAttributes@{cudaPointerAttributes}!hostPointer@{hostPointer}}
+\index{hostPointer@{hostPointer}!cudaPointerAttributes@{cudaPointerAttributes}}
+\doxysubsubsection{\texorpdfstring{hostPointer}{hostPointer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+Pointer\+Attributes\+::host\+Pointer}
+
+The address which may be dereferenced on the host to access the memory or NULL if no such address exists.
+
+\begin{DoxyNote}{Note}
+CUDA doesn\textquotesingle{}t check if unregistered memory is allocated so this field may contain invalid pointer if an invalid pointer has been passed to CUDA. 
+\end{DoxyNote}
+\Hypertarget{structcuda_pointer_attributes_a91ef95dac597cc710558dabbc8b9ae38}\label{structcuda_pointer_attributes_a91ef95dac597cc710558dabbc8b9ae38} 
+\index{cudaPointerAttributes@{cudaPointerAttributes}!type@{type}}
+\index{type@{type}!cudaPointerAttributes@{cudaPointerAttributes}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaea66858c25bf81443785fcaf0e9b77c3}{cuda\+Memory\+Type}} cuda\+Pointer\+Attributes\+::type}
+
+The type of memory -\/ cuda\+Memory\+Type\+Unregistered, cuda\+Memory\+Type\+Host, cuda\+Memory\+Type\+Device or \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Memory\+Type\+Managed}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

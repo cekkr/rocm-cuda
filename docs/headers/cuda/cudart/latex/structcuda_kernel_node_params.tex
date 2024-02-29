@@ -1,0 +1,68 @@
+\doxysection{cuda\+Kernel\+Node\+Params Struct Reference}
+\hypertarget{structcuda_kernel_node_params}{}\label{structcuda_kernel_node_params}\index{cudaKernelNodeParams@{cudaKernelNodeParams}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_kernel_node_params_afce3df9a6ee0a768a8ca4b985558ca82}{func}}
+\item 
+\mbox{\hyperlink{structdim3}{dim3}} \mbox{\hyperlink{structcuda_kernel_node_params_af31836451650cb520658bb2a741c0795}{grid\+Dim}}
+\item 
+\mbox{\hyperlink{structdim3}{dim3}} \mbox{\hyperlink{structcuda_kernel_node_params_a8df7b04e23379ff141831f28a860f4ae}{block\+Dim}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_kernel_node_params_a6a5412c4983da848deda394309f6f6ed}{shared\+Mem\+Bytes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_kernel_node_params_aa31f5e45ef1c1cfd1d97d21d2217fadd}{kernel\+Params}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_kernel_node_params_a59eb4acdd722e24ceaf670bd2d81e872}{extra}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA GPU kernel node parameters 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_kernel_node_params_a8df7b04e23379ff141831f28a860f4ae}\label{structcuda_kernel_node_params_a8df7b04e23379ff141831f28a860f4ae} 
+\index{cudaKernelNodeParams@{cudaKernelNodeParams}!blockDim@{blockDim}}
+\index{blockDim@{blockDim}!cudaKernelNodeParams@{cudaKernelNodeParams}}
+\doxysubsubsection{\texorpdfstring{blockDim}{blockDim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdim3}{dim3}} cuda\+Kernel\+Node\+Params\+::block\+Dim}
+
+Block dimensions \Hypertarget{structcuda_kernel_node_params_a59eb4acdd722e24ceaf670bd2d81e872}\label{structcuda_kernel_node_params_a59eb4acdd722e24ceaf670bd2d81e872} 
+\index{cudaKernelNodeParams@{cudaKernelNodeParams}!extra@{extra}}
+\index{extra@{extra}!cudaKernelNodeParams@{cudaKernelNodeParams}}
+\doxysubsubsection{\texorpdfstring{extra}{extra}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} cuda\+Kernel\+Node\+Params\+::extra}
+
+Pointer to kernel arguments in the "{}extra"{} format \Hypertarget{structcuda_kernel_node_params_afce3df9a6ee0a768a8ca4b985558ca82}\label{structcuda_kernel_node_params_afce3df9a6ee0a768a8ca4b985558ca82} 
+\index{cudaKernelNodeParams@{cudaKernelNodeParams}!func@{func}}
+\index{func@{func}!cudaKernelNodeParams@{cudaKernelNodeParams}}
+\doxysubsubsection{\texorpdfstring{func}{func}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+Kernel\+Node\+Params\+::func}
+
+Kernel to launch \Hypertarget{structcuda_kernel_node_params_af31836451650cb520658bb2a741c0795}\label{structcuda_kernel_node_params_af31836451650cb520658bb2a741c0795} 
+\index{cudaKernelNodeParams@{cudaKernelNodeParams}!gridDim@{gridDim}}
+\index{gridDim@{gridDim}!cudaKernelNodeParams@{cudaKernelNodeParams}}
+\doxysubsubsection{\texorpdfstring{gridDim}{gridDim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdim3}{dim3}} cuda\+Kernel\+Node\+Params\+::grid\+Dim}
+
+Grid dimensions \Hypertarget{structcuda_kernel_node_params_aa31f5e45ef1c1cfd1d97d21d2217fadd}\label{structcuda_kernel_node_params_aa31f5e45ef1c1cfd1d97d21d2217fadd} 
+\index{cudaKernelNodeParams@{cudaKernelNodeParams}!kernelParams@{kernelParams}}
+\index{kernelParams@{kernelParams}!cudaKernelNodeParams@{cudaKernelNodeParams}}
+\doxysubsubsection{\texorpdfstring{kernelParams}{kernelParams}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} cuda\+Kernel\+Node\+Params\+::kernel\+Params}
+
+Array of pointers to individual kernel arguments \Hypertarget{structcuda_kernel_node_params_a6a5412c4983da848deda394309f6f6ed}\label{structcuda_kernel_node_params_a6a5412c4983da848deda394309f6f6ed} 
+\index{cudaKernelNodeParams@{cudaKernelNodeParams}!sharedMemBytes@{sharedMemBytes}}
+\index{sharedMemBytes@{sharedMemBytes}!cudaKernelNodeParams@{cudaKernelNodeParams}}
+\doxysubsubsection{\texorpdfstring{sharedMemBytes}{sharedMemBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Kernel\+Node\+Params\+::shared\+Mem\+Bytes}
+
+Dynamic shared-\/memory size per thread block in bytes 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

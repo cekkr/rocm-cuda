@@ -1,0 +1,184 @@
+\doxysection{VDPAU Interoperability}
+\hypertarget{group___c_u_d_a___v_d_p_a_u}{}\label{group___c_u_d_a___v_d_p_a_u}\index{VDPAU Interoperability@{VDPAU Interoperability}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_d_p_a_u_gaf795f202ace9d3b8d0548a2361df783e}{cu\+VDPAUGet\+Device}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Device}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Device}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vdp\+Device}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Get\+Proc\+Address}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vdp\+Get\+Proc\+Address}})
+\begin{DoxyCompactList}\small\item\em Gets the CUDA device associated with a VDPAU device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_d_p_a_u_ga054d41d23735e988939cae7fba2bf877}{cu\+VDPAUCtx\+Create}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Ctx}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} device, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Device}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vdp\+Device}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Get\+Proc\+Address}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vdp\+Get\+Proc\+Address}})
+\begin{DoxyCompactList}\small\item\em Create a CUDA context for interoperability with VDPAU. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_d_p_a_u_gac4f3d58f2fad7cef2da5e62510aff5fc}{cu\+Graphics\+VDPAURegister\+Video\+Surface}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Video\+Surface}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vdp\+Surface}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Registers a VDPAU Vdp\+Video\+Surface object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_d_p_a_u_ga5ed1c2b61b8372b464118d4b5e20f4d4}{cu\+Graphics\+VDPAURegister\+Output\+Surface}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Output\+Surface}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vdp\+Surface}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Registers a VDPAU Vdp\+Output\+Surface object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ VDPAU interoperability functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the VDPAU interoperability functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___v_d_p_a_u_ga5ed1c2b61b8372b464118d4b5e20f4d4}\label{group___c_u_d_a___v_d_p_a_u_ga5ed1c2b61b8372b464118d4b5e20f4d4} 
+\index{VDPAU Interoperability@{VDPAU Interoperability}!cuGraphicsVDPAURegisterOutputSurface@{cuGraphicsVDPAURegisterOutputSurface}}
+\index{cuGraphicsVDPAURegisterOutputSurface@{cuGraphicsVDPAURegisterOutputSurface}!VDPAU Interoperability@{VDPAU Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsVDPAURegisterOutputSurface()}{cuGraphicsVDPAURegisterOutputSurface()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+VDPAURegister\+Output\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Output\+Surface}}}]{vdp\+Surface,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Registers a VDPAU Vdp\+Output\+Surface object. 
+
+Registers the Vdp\+Output\+Surface specified by {\ttfamily vdp\+Surface} for access by CUDA. A handle to the registered object is returned as {\ttfamily p\+Cuda\+Resource}. The surface\textquotesingle{}s intended usage is specified using {\ttfamily flags}, as follows\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+NONE\+:} Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and written to by CUDA. This is the default value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY\+:} Specifies that CUDA will not write to this resource.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD\+:} Specifies that CUDA will not read from this resource and will write over the entire contents of the resource, so none of the data previously stored in the resource will be preserved.
+\end{DoxyItemize}
+
+The Vdp\+Output\+Surface is presented as an array of subresources that may be accessed using pointers returned by \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}. The exact number of valid {\ttfamily array\+Index} values depends on the VDPAU surface format. The mapping is shown in the table below. {\ttfamily mip\+Level} must be 0.
+
+
+
+ 
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+VdpRGBAFormat                  & arrayIndex & Size  & Format  & Content        \\
+\hline
+VDP\_RGBA\_FORMAT\_B8G8R8A8    & 0          & w x h & ARGB8   & Entire surface \\
+VDP\_RGBA\_FORMAT\_R10G10B10A2 & 0          & w x h & A2BGR10 & Entire surface \\
+\hline
+\end{tabular}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Cuda\+Resource} & -\/ Pointer to the returned object handle \\
+\hline
+{\em vdp\+Surface} & -\/ The Vdp\+Output\+Surface to be registered \\
+\hline
+{\em flags} & -\/ Map flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+VDPAUCtx\+Create, \doxylink{group___c_u_d_a___v_d_p_a_u_gac4f3d58f2fad7cef2da5e62510aff5fc}{cu\+Graphics\+VDPAURegister\+Video\+Surface}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}, cu\+Graphics\+Resource\+Set\+Map\+Flags, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, \doxylink{group___c_u_d_a___v_d_p_a_u_gaf795f202ace9d3b8d0548a2361df783e}{cu\+VDPAUGet\+Device}, \doxylink{group___c_u_d_a_r_t___v_d_p_a_u_ga177fa7a09ed16b90c65da723f1679126}{cuda\+Graphics\+VDPAURegister\+Output\+Surface} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_d_p_a_u_gac4f3d58f2fad7cef2da5e62510aff5fc}\label{group___c_u_d_a___v_d_p_a_u_gac4f3d58f2fad7cef2da5e62510aff5fc} 
+\index{VDPAU Interoperability@{VDPAU Interoperability}!cuGraphicsVDPAURegisterVideoSurface@{cuGraphicsVDPAURegisterVideoSurface}}
+\index{cuGraphicsVDPAURegisterVideoSurface@{cuGraphicsVDPAURegisterVideoSurface}!VDPAU Interoperability@{VDPAU Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsVDPAURegisterVideoSurface()}{cuGraphicsVDPAURegisterVideoSurface()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+VDPAURegister\+Video\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Video\+Surface}}}]{vdp\+Surface,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Registers a VDPAU Vdp\+Video\+Surface object. 
+
+Registers the Vdp\+Video\+Surface specified by {\ttfamily vdp\+Surface} for access by CUDA. A handle to the registered object is returned as {\ttfamily p\+Cuda\+Resource}. The surface\textquotesingle{}s intended usage is specified using {\ttfamily flags}, as follows\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+NONE\+:} Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and written to by CUDA. This is the default value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY\+:} Specifies that CUDA will not write to this resource.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD\+:} Specifies that CUDA will not read from this resource and will write over the entire contents of the resource, so none of the data previously stored in the resource will be preserved.
+\end{DoxyItemize}
+
+The Vdp\+Video\+Surface is presented as an array of subresources that may be accessed using pointers returned by \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}. The exact number of valid {\ttfamily array\+Index} values depends on the VDPAU surface format. The mapping is shown in the table below. {\ttfamily mip\+Level} must be 0.
+
+
+
+ 
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+VdpChromaType          & arrayIndex & Size      & Format & Content             \\
+\hline
+VDP\_CHROMA\_TYPE\_420 & 0          & w x h/2   & R8     & Top-field luma      \\
+                       & 1          & w x h/2   & R8     & Bottom-field luma   \\
+                       & 2          & w/2 x h/4 & R8G8   & Top-field chroma    \\
+                       & 3          & w/2 x h/4 & R8G8   & Bottom-field chroma \\
+\hline
+VDP\_CHROMA\_TYPE\_422 & 0          & w x h/2   & R8     & Top-field luma      \\
+                       & 1          & w x h/2   & R8     & Bottom-field luma   \\
+                       & 2          & w/2 x h/2 & R8G8   & Top-field chroma    \\
+                       & 3          & w/2 x h/2 & R8G8   & Bottom-field chroma \\
+\hline
+\end{tabular}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Cuda\+Resource} & -\/ Pointer to the returned object handle \\
+\hline
+{\em vdp\+Surface} & -\/ The Vdp\+Video\+Surface to be registered \\
+\hline
+{\em flags} & -\/ Map flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+VDPAUCtx\+Create, \doxylink{group___c_u_d_a___v_d_p_a_u_ga5ed1c2b61b8372b464118d4b5e20f4d4}{cu\+Graphics\+VDPAURegister\+Output\+Surface}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}, cu\+Graphics\+Resource\+Set\+Map\+Flags, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, \doxylink{group___c_u_d_a___v_d_p_a_u_gaf795f202ace9d3b8d0548a2361df783e}{cu\+VDPAUGet\+Device}, \doxylink{group___c_u_d_a_r_t___v_d_p_a_u_ga506e8c4d6a5866c267220c8a18cec239}{cuda\+Graphics\+VDPAURegister\+Video\+Surface} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_d_p_a_u_ga054d41d23735e988939cae7fba2bf877}\label{group___c_u_d_a___v_d_p_a_u_ga054d41d23735e988939cae7fba2bf877} 
+\index{VDPAU Interoperability@{VDPAU Interoperability}!cuVDPAUCtxCreate@{cuVDPAUCtxCreate}}
+\index{cuVDPAUCtxCreate@{cuVDPAUCtxCreate}!VDPAU Interoperability@{VDPAU Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuVDPAUCtxCreate()}{cuVDPAUCtxCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+VDPAUCtx\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}}]{p\+Ctx,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{device,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Device}}}]{vdp\+Device,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Get\+Proc\+Address}} \texorpdfstring{$\ast$}{*}}]{vdp\+Get\+Proc\+Address }\end{DoxyParamCaption})}
+
+
+
+Create a CUDA context for interoperability with VDPAU. 
+
+Creates a new CUDA context, initializes VDPAU interoperability, and associates the CUDA context with the calling thread. It must be called before performing any other VDPAU interoperability operations. It may fail if the needed VDPAU driver facilities are not available. For usage of the {\ttfamily flags} parameter, see cu\+Ctx\+Create().
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Ctx} & -\/ Returned CUDA context \\
+\hline
+{\em flags} & -\/ Options for CUDA context creation \\
+\hline
+{\em device} & -\/ Device on which to create the context \\
+\hline
+{\em vdp\+Device} & -\/ The Vdp\+Device to interop with \\
+\hline
+{\em vdp\+Get\+Proc\+Address} & -\/ VDPAU\textquotesingle{}s Vdp\+Get\+Proc\+Address function pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, \doxylink{group___c_u_d_a___v_d_p_a_u_gac4f3d58f2fad7cef2da5e62510aff5fc}{cu\+Graphics\+VDPAURegister\+Video\+Surface}, \doxylink{group___c_u_d_a___v_d_p_a_u_ga5ed1c2b61b8372b464118d4b5e20f4d4}{cu\+Graphics\+VDPAURegister\+Output\+Surface}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}, cu\+Graphics\+Resource\+Set\+Map\+Flags, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, \doxylink{group___c_u_d_a___v_d_p_a_u_gaf795f202ace9d3b8d0548a2361df783e}{cu\+VDPAUGet\+Device} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___v_d_p_a_u_gaf795f202ace9d3b8d0548a2361df783e}\label{group___c_u_d_a___v_d_p_a_u_gaf795f202ace9d3b8d0548a2361df783e} 
+\index{VDPAU Interoperability@{VDPAU Interoperability}!cuVDPAUGetDevice@{cuVDPAUGetDevice}}
+\index{cuVDPAUGetDevice@{cuVDPAUGetDevice}!VDPAU Interoperability@{VDPAU Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuVDPAUGetDevice()}{cuVDPAUGetDevice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+VDPAUGet\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}}]{p\+Device,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Device}}}]{vdp\+Device,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Vdp\+Get\+Proc\+Address}} \texorpdfstring{$\ast$}{*}}]{vdp\+Get\+Proc\+Address }\end{DoxyParamCaption})}
+
+
+
+Gets the CUDA device associated with a VDPAU device. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Device} the CUDA device associated with a {\ttfamily vdp\+Device}, if applicable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Device} & -\/ Device associated with vdp\+Device \\
+\hline
+{\em vdp\+Device} & -\/ A Vdp\+Device handle \\
+\hline
+{\em vdp\+Get\+Proc\+Address} & -\/ VDPAU\textquotesingle{}s Vdp\+Get\+Proc\+Address function pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+VDPAUCtx\+Create, \doxylink{group___c_u_d_a___v_d_p_a_u_gac4f3d58f2fad7cef2da5e62510aff5fc}{cu\+Graphics\+VDPAURegister\+Video\+Surface}, \doxylink{group___c_u_d_a___v_d_p_a_u_ga5ed1c2b61b8372b464118d4b5e20f4d4}{cu\+Graphics\+VDPAURegister\+Output\+Surface}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}, cu\+Graphics\+Resource\+Set\+Map\+Flags, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, \doxylink{group___c_u_d_a_r_t___v_d_p_a_u_gaf58d90eb3a598da71df0d2a8372bff1d}{cuda\+VDPAUGet\+Device} 
+\end{DoxySeeAlso}

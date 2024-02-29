@@ -1,0 +1,242 @@
+\doxysection{Graphics Interoperability}
+\hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s}{}\label{group___c_u_d_a___g_r_a_p_h_i_c_s}\index{Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} resource)
+\begin{DoxyCompactList}\small\item\em Unregisters a graphics resource for access by CUDA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} \texorpdfstring{$\ast$}{*}p\+Array, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} resource, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{array\+Index}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mip\+Level}})
+\begin{DoxyCompactList}\small\item\em Get an array through which to access a subresource of a mapped graphics resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga626889d761844e54943b6e873c5ed879}{cu\+Graphics\+Resource\+Get\+Mapped\+Mipmapped\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Mipmapped\+Array}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} resource)
+\begin{DoxyCompactList}\small\item\em Get a mipmapped array through which to access a mapped graphics resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga88a8d6fe34996974b2504b73e8aef496}{cu\+Graphics\+Resource\+Get\+Mapped\+Pointer}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Dev\+Ptr}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Size}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} resource)
+\begin{DoxyCompactList}\small\item\em Get a device pointer through which to access a mapped graphics resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_r_a_p_h_i_c_s_gaf3ff0f31102a129958d9e4ee3e2b2d2f}{cu\+Graphics\+Resource\+Set\+Map\+Flags}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} resource, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Set usage flags for mapping a graphics resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{resources}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Map graphics resources for access by CUDA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{resources}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Unmap graphics resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ graphics interoperability functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the graphics interoperability functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}\label{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f} 
+\index{Graphics Interoperability@{Graphics Interoperability}!cuGraphicsMapResources@{cuGraphicsMapResources}}
+\index{cuGraphicsMapResources@{cuGraphicsMapResources}!Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsMapResources()}{cuGraphicsMapResources()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Map\+Resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{count,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{resources,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Map graphics resources for access by CUDA. 
+
+Maps the {\ttfamily count} graphics resources in {\ttfamily resources} for access by CUDA.
+
+The resources in {\ttfamily resources} may be accessed by CUDA until they are unmapped. The graphics API from which {\ttfamily resources} were registered should not access any resources while they are mapped by CUDA. If an application does so, the results are undefined.
+
+This function provides the synchronization guarantee that any graphics calls issued before \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources()} will complete before any subsequent CUDA work issued in {\ttfamily stream} begins.
+
+If {\ttfamily resources} includes any duplicate entries then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} is returned. If any of {\ttfamily resources} are presently mapped for access by CUDA then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & -\/ Number of resources to map \\
+\hline
+{\em resources} & -\/ Resources to map for CUDA usage \\
+\hline
+{\em h\+Stream} & -\/ Stream with which to synchronize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Graphics\+Resource\+Get\+Mapped\+Pointer, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources}, \doxylink{group___c_u_d_a_r_t___i_n_t_e_r_o_p_gabc7904efc45129de34b4938a456ffd2a}{cuda\+Graphics\+Map\+Resources} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s_ga626889d761844e54943b6e873c5ed879}\label{group___c_u_d_a___g_r_a_p_h_i_c_s_ga626889d761844e54943b6e873c5ed879} 
+\index{Graphics Interoperability@{Graphics Interoperability}!cuGraphicsResourceGetMappedMipmappedArray@{cuGraphicsResourceGetMappedMipmappedArray}}
+\index{cuGraphicsResourceGetMappedMipmappedArray@{cuGraphicsResourceGetMappedMipmappedArray}!Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsResourceGetMappedMipmappedArray()}{cuGraphicsResourceGetMappedMipmappedArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Resource\+Get\+Mapped\+Mipmapped\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} \texorpdfstring{$\ast$}{*}}]{p\+Mipmapped\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}}}]{resource }\end{DoxyParamCaption})}
+
+
+
+Get a mipmapped array through which to access a mapped graphics resource. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Mipmapped\+Array} a mipmapped array through which the mapped graphics resource {\ttfamily resource}. The value set in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Mipmapped\+Array} may change every time that {\ttfamily resource} is mapped.
+
+If {\ttfamily resource} is not a texture then it cannot be accessed via a mipmapped array and \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa037f39ebe1bbd16d1b162f4456d507c5}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED\+\_\+\+AS\+\_\+\+ARRAY} is returned. If {\ttfamily resource} is not mapped then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Mipmapped\+Array} & -\/ Returned mipmapped array through which {\ttfamily resource} may be accessed \\
+\hline
+{\em resource} & -\/ Mapped resource to access\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa037f39ebe1bbd16d1b162f4456d507c5}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED\+\_\+\+AS\+\_\+\+ARRAY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Graphics\+Resource\+Get\+Mapped\+Pointer, \doxylink{group___c_u_d_a_r_t___i_n_t_e_r_o_p_ga8f50e69728a48bd3731bc9c7269bae64}{cuda\+Graphics\+Resource\+Get\+Mapped\+Mipmapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s_ga88a8d6fe34996974b2504b73e8aef496}\label{group___c_u_d_a___g_r_a_p_h_i_c_s_ga88a8d6fe34996974b2504b73e8aef496} 
+\index{Graphics Interoperability@{Graphics Interoperability}!cuGraphicsResourceGetMappedPointer@{cuGraphicsResourceGetMappedPointer}}
+\index{cuGraphicsResourceGetMappedPointer@{cuGraphicsResourceGetMappedPointer}!Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsResourceGetMappedPointer()}{cuGraphicsResourceGetMappedPointer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Resource\+Get\+Mapped\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}}]{p\+Dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Size,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}}}]{resource }\end{DoxyParamCaption})}
+
+
+
+Get a device pointer through which to access a mapped graphics resource. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Dev\+Ptr} a pointer through which the mapped graphics resource {\ttfamily resource} may be accessed. Returns in {\ttfamily p\+Size} the size of the memory in bytes which may be accessed from that pointer. The value set in {\ttfamily p\+Pointer} may change every time that {\ttfamily resource} is mapped.
+
+If {\ttfamily resource} is not a buffer then it cannot be accessed via a pointer and \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa7ceef277b14abcb140c4ffa72a37473}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED\+\_\+\+AS\+\_\+\+POINTER} is returned. If {\ttfamily resource} is not mapped then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED} is returned.
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em p\+Dev\+Ptr} & -\/ Returned pointer through which {\ttfamily resource} may be accessed \\
+\hline
+{\em p\+Size} & -\/ Returned size of the buffer accessible starting at {\ttfamily \texorpdfstring{$\ast$}{*}p\+Pointer} \\
+\hline
+{\em resource} & -\/ Mapped resource to access\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa7ceef277b14abcb140c4ffa72a37473}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED\+\_\+\+AS\+\_\+\+POINTER} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, \doxylink{group___c_u_d_a_r_t___i_n_t_e_r_o_p_gaef15ca3947a7163fb1c66a5d3e0bbacd}{cuda\+Graphics\+Resource\+Get\+Mapped\+Pointer} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}\Hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s_gaf3ff0f31102a129958d9e4ee3e2b2d2f}\label{group___c_u_d_a___g_r_a_p_h_i_c_s_gaf3ff0f31102a129958d9e4ee3e2b2d2f} 
+\index{Graphics Interoperability@{Graphics Interoperability}!cuGraphicsResourceSetMapFlags@{cuGraphicsResourceSetMapFlags}}
+\index{cuGraphicsResourceSetMapFlags@{cuGraphicsResourceSetMapFlags}!Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsResourceSetMapFlags()}{cuGraphicsResourceSetMapFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Resource\+Set\+Map\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}}}]{resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Set usage flags for mapping a graphics resource. 
+
+Set {\ttfamily flags} for mapping the graphics resource {\ttfamily resource}.
+
+Changes to {\ttfamily flags} will take effect the next time {\ttfamily resource} is mapped. The {\ttfamily flags} argument may be any of the following\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+NONE\+:} Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and written to by CUDA kernels. This is the default value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+READONLY\+:} Specifies that CUDA kernels which access this resource will not write to this resource.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+WRITEDISCARD\+:} Specifies that CUDA kernels which access this resource will not read from this resource and will write over the entire contents of the resource, so none of the data previously stored in the resource will be preserved.
+\end{DoxyItemize}
+
+If {\ttfamily resource} is presently mapped for access by CUDA then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED} is returned. If {\ttfamily flags} is not one of the above values then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & -\/ Registered resource to set flags for \\
+\hline
+{\em flags} & -\/ Parameters for resource mapping\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a_r_t___i_n_t_e_r_o_p_ga86789d34a9eb54f9c81a660b919db955}{cuda\+Graphics\+Resource\+Set\+Map\+Flags} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}\label{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c} 
+\index{Graphics Interoperability@{Graphics Interoperability}!cuGraphicsSubResourceGetMappedArray@{cuGraphicsSubResourceGetMappedArray}}
+\index{cuGraphicsSubResourceGetMappedArray@{cuGraphicsSubResourceGetMappedArray}!Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsSubResourceGetMappedArray()}{cuGraphicsSubResourceGetMappedArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} \texorpdfstring{$\ast$}{*}}]{p\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}}}]{resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{array\+Index,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{mip\+Level }\end{DoxyParamCaption})}
+
+
+
+Get an array through which to access a subresource of a mapped graphics resource. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Array} an array through which the subresource of the mapped graphics resource {\ttfamily resource} which corresponds to array index {\ttfamily array\+Index} and mipmap level {\ttfamily mip\+Level} may be accessed. The value set in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Array} may change every time that {\ttfamily resource} is mapped.
+
+If {\ttfamily resource} is not a texture then it cannot be accessed via an array and \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa037f39ebe1bbd16d1b162f4456d507c5}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED\+\_\+\+AS\+\_\+\+ARRAY} is returned. If {\ttfamily array\+Index} is not a valid array index for {\ttfamily resource} then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned. If {\ttfamily mip\+Level} is not a valid mipmap level for {\ttfamily resource} then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned. If {\ttfamily resource} is not mapped then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Array} & -\/ Returned array through which a subresource of {\ttfamily resource} may be accessed \\
+\hline
+{\em resource} & -\/ Mapped resource to access \\
+\hline
+{\em array\+Index} & -\/ Array index for array textures or cubemap face index as defined by \doxylink{group___c_u_d_a___t_y_p_e_s_ga3df6d8bbf8f19ba6956c87c6b8f8eb86}{CUarray\+\_\+cubemap\+\_\+face} for cubemap textures for the subresource to access \\
+\hline
+{\em mip\+Level} & -\/ Mipmap level for the subresource to access\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa037f39ebe1bbd16d1b162f4456d507c5}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED\+\_\+\+AS\+\_\+\+ARRAY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Graphics\+Resource\+Get\+Mapped\+Pointer, \doxylink{group___c_u_d_a_r_t___i_n_t_e_r_o_p_ga3accc00514ec65869bbbe79d900c29f6}{cuda\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}\label{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd} 
+\index{Graphics Interoperability@{Graphics Interoperability}!cuGraphicsUnmapResources@{cuGraphicsUnmapResources}}
+\index{cuGraphicsUnmapResources@{cuGraphicsUnmapResources}!Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsUnmapResources()}{cuGraphicsUnmapResources()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Unmap\+Resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{count,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{resources,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Unmap graphics resources. 
+
+Unmaps the {\ttfamily count} graphics resources in {\ttfamily resources}.
+
+Once unmapped, the resources in {\ttfamily resources} may not be accessed by CUDA until they are mapped again.
+
+This function provides the synchronization guarantee that any CUDA work issued in {\ttfamily stream} before \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources()} will complete before any subsequently issued graphics work begins.
+
+If {\ttfamily resources} includes any duplicate entries then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} is returned. If any of {\ttfamily resources} are not presently mapped for access by CUDA then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & -\/ Number of resources to unmap \\
+\hline
+{\em resources} & -\/ Resources to unmap \\
+\hline
+{\em h\+Stream} & -\/ Stream with which to synchronize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a_r_t___i_n_t_e_r_o_p_gaedb0072175c5d299914979ee36f310f0}{cuda\+Graphics\+Unmap\+Resources} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}\label{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f} 
+\index{Graphics Interoperability@{Graphics Interoperability}!cuGraphicsUnregisterResource@{cuGraphicsUnregisterResource}}
+\index{cuGraphicsUnregisterResource@{cuGraphicsUnregisterResource}!Graphics Interoperability@{Graphics Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsUnregisterResource()}{cuGraphicsUnregisterResource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Unregister\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}}}]{resource }\end{DoxyParamCaption})}
+
+
+
+Unregisters a graphics resource for access by CUDA. 
+
+Unregisters the graphics resource {\ttfamily resource} so it is not accessible by CUDA unless registered again.
+
+If {\ttfamily resource} is invalid then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & -\/ Resource to unregister\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Graphics\+D3\+D9\+Register\+Resource}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Graphics\+D3\+D10\+Register\+Resource}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Graphics\+D3\+D11\+Register\+Resource}, \doxylink{group___c_u_d_a___g_l_gab56e569048aa01e2d9c58f3c9bc4718a}{cu\+Graphics\+GLRegister\+Buffer}, \doxylink{group___c_u_d_a___g_l_ga40951642ac10a72be9a81e7b3188324e}{cu\+Graphics\+GLRegister\+Image}, \doxylink{group___c_u_d_a_r_t___i_n_t_e_r_o_p_gac74d4fcaee9ae3a5e67c96ef4d8cd481}{cuda\+Graphics\+Unregister\+Resource} 
+\end{DoxySeeAlso}

@@ -1,0 +1,439 @@
+\doxysection{Module Management}
+\hypertarget{group___c_u_d_a___m_o_d_u_l_e}{}\label{group___c_u_d_a___m_o_d_u_l_e}\index{Module Management@{Module Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{module}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{fname}})
+\begin{DoxyCompactList}\small\item\em Loads a compute module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{module}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{image}})
+\begin{DoxyCompactList}\small\item\em Load a module\textquotesingle{}s data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{module}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{image}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Options}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{options}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{option\+Values}})
+\begin{DoxyCompactList}\small\item\em Load a module\textquotesingle{}s data with options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{module}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{fat\+Cubin}})
+\begin{DoxyCompactList}\small\item\em Load a module\textquotesingle{}s data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hmod}})
+\begin{DoxyCompactList}\small\item\em Unloads a module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hmod}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Returns a function handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga030d807629801b38aed1a6c8d7e0db6d}{cu\+Module\+Get\+Global}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}dptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}bytes, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hmod}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Returns a global pointer from a module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Tex\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hmod}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Returns a handle to a texture reference. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_gae42e3018e8b13a689411550efbd99e21}{cu\+Module\+Get\+Surf\+Ref}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b99472b414f10b2c04dd2530dc7ea76}{CUsurfref}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Surf\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hmod}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Returns a handle to a surface reference. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga37f27a4496520add1a67feda8950b6f1}{cu\+Link\+Create}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Options}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{options}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{option\+Values}}, CUlink\+State \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{state\+Out}})
+\begin{DoxyCompactList}\small\item\em Creates a pending JIT linker invocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_gaaaf83cecb63b6cc0a8d1fdbd94936c9f}{cu\+Link\+Add\+Data}} (CUlink\+State \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{state}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad3c0ad8945ecf45c6b080263c3268918}{CUjit\+Input\+Type}} type, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{data}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Options}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{options}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{option\+Values}})
+\begin{DoxyCompactList}\small\item\em Add an input to a pending linker invocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_gaa2cbe3b4679372ca40335201f653e441}{cu\+Link\+Add\+File}} (CUlink\+State \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{state}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad3c0ad8945ecf45c6b080263c3268918}{CUjit\+Input\+Type}} type, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{path}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Options}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{options}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{option\+Values}})
+\begin{DoxyCompactList}\small\item\em Add a file input to a pending linker invocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_ga066102347e390391200dd690a6b83456}{cu\+Link\+Complete}} (CUlink\+State \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{state}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cubin\+Out}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+Out}})
+\begin{DoxyCompactList}\small\item\em Complete a pending linker invocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}{cu\+Link\+Destroy}} (CUlink\+State \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{state}})
+\begin{DoxyCompactList}\small\item\em Destroys state for a JIT linker invocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ module management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the module management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_gaaaf83cecb63b6cc0a8d1fdbd94936c9f}\label{group___c_u_d_a___m_o_d_u_l_e_gaaaf83cecb63b6cc0a8d1fdbd94936c9f} 
+\index{Module Management@{Module Management}!cuLinkAddData@{cuLinkAddData}}
+\index{cuLinkAddData@{cuLinkAddData}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuLinkAddData()}{cuLinkAddData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Link\+Add\+Data (\begin{DoxyParamCaption}\item[{CUlink\+State}]{state,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad3c0ad8945ecf45c6b080263c3268918}{CUjit\+Input\+Type}}}]{type,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{name,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Options,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}}]{options,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{option\+Values }\end{DoxyParamCaption})}
+
+
+
+Add an input to a pending linker invocation. 
+
+Ownership of {\ttfamily data} is retained by the caller. No reference is retained to any inputs after this call returns.
+
+This method accepts only compiler options, which are used if the data must be compiled from PTX, and does not accept any of \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aaf326f19e67f00768bff8849a8dc5def5}{CU\+\_\+\+JIT\+\_\+\+WALL\+\_\+\+TIME}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa0cfba79ec44e0480a78b132ff158c0ae}{CU\+\_\+\+JIT\+\_\+\+INFO\+\_\+\+LOG\+\_\+\+BUFFER}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aaa770301a8ec6fdfb9abcbd60100beb3c}{CU\+\_\+\+JIT\+\_\+\+ERROR\+\_\+\+LOG\+\_\+\+BUFFER}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa8e9b9dfcc1ad8fb0f89bbfb04f46e988}{CU\+\_\+\+JIT\+\_\+\+TARGET\+\_\+\+FROM\+\_\+\+CUCONTEXT}, or \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa3bf12ddeaa2a9d64db4d20de537cd596}{CU\+\_\+\+JIT\+\_\+\+TARGET}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & A pending linker action. \\
+\hline
+{\em type} & The type of the input data. \\
+\hline
+{\em data} & The input data. PTX must be NULL-\/terminated. \\
+\hline
+{\em size} & The length of the input data. \\
+\hline
+{\em name} & An optional name for this input in log messages. \\
+\hline
+{\em num\+Options} & Size of options. \\
+\hline
+{\em options} & Options to be applied only for this input (overrides options from cu\+Link\+Create). \\
+\hline
+{\em option\+Values} & Array of option values, each cast to void \texorpdfstring{$\ast$}{*}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0b7bd1dd2fb3491c588ce569c02d1a2f}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+IMAGE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa5bb7f216af3efbea2116ff18253b1a3}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PTX}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8381092e26bfe660cef4a755bb549610}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+PTX\+\_\+\+VERSION}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4ef545ed5f461db9351f98de98497abf}{CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+BINARY\+\_\+\+FOR\+\_\+\+GPU}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Link\+Create, cu\+Link\+Add\+File, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga066102347e390391200dd690a6b83456}{cu\+Link\+Complete}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}{cu\+Link\+Destroy} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_gaa2cbe3b4679372ca40335201f653e441}\label{group___c_u_d_a___m_o_d_u_l_e_gaa2cbe3b4679372ca40335201f653e441} 
+\index{Module Management@{Module Management}!cuLinkAddFile@{cuLinkAddFile}}
+\index{cuLinkAddFile@{cuLinkAddFile}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuLinkAddFile()}{cuLinkAddFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Link\+Add\+File (\begin{DoxyParamCaption}\item[{CUlink\+State}]{state,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad3c0ad8945ecf45c6b080263c3268918}{CUjit\+Input\+Type}}}]{type,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{path,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Options,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}}]{options,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{option\+Values }\end{DoxyParamCaption})}
+
+
+
+Add a file input to a pending linker invocation. 
+
+No reference is retained to any inputs after this call returns.
+
+This method accepts only compiler options, which are used if the input must be compiled from PTX, and does not accept any of \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aaf326f19e67f00768bff8849a8dc5def5}{CU\+\_\+\+JIT\+\_\+\+WALL\+\_\+\+TIME}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa0cfba79ec44e0480a78b132ff158c0ae}{CU\+\_\+\+JIT\+\_\+\+INFO\+\_\+\+LOG\+\_\+\+BUFFER}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aaa770301a8ec6fdfb9abcbd60100beb3c}{CU\+\_\+\+JIT\+\_\+\+ERROR\+\_\+\+LOG\+\_\+\+BUFFER}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa8e9b9dfcc1ad8fb0f89bbfb04f46e988}{CU\+\_\+\+JIT\+\_\+\+TARGET\+\_\+\+FROM\+\_\+\+CUCONTEXT}, or \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa3bf12ddeaa2a9d64db4d20de537cd596}{CU\+\_\+\+JIT\+\_\+\+TARGET}.
+
+This method is equivalent to invoking cu\+Link\+Add\+Data on the contents of the file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & A pending linker action \\
+\hline
+{\em type} & The type of the input data \\
+\hline
+{\em path} & Path to the input file \\
+\hline
+{\em num\+Options} & Size of options \\
+\hline
+{\em options} & Options to be applied only for this input (overrides options from cu\+Link\+Create) \\
+\hline
+{\em option\+Values} & Array of option values, each cast to void \texorpdfstring{$\ast$}{*}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa3c20ccb3e24d5bf65625b1212fd8f4aa}{CUDA\+\_\+\+ERROR\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+FOUND} \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0b7bd1dd2fb3491c588ce569c02d1a2f}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+IMAGE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa5bb7f216af3efbea2116ff18253b1a3}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PTX}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8381092e26bfe660cef4a755bb549610}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+PTX\+\_\+\+VERSION}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4ef545ed5f461db9351f98de98497abf}{CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+BINARY\+\_\+\+FOR\+\_\+\+GPU}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Link\+Create, cu\+Link\+Add\+Data, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga066102347e390391200dd690a6b83456}{cu\+Link\+Complete}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}{cu\+Link\+Destroy} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga066102347e390391200dd690a6b83456}\label{group___c_u_d_a___m_o_d_u_l_e_ga066102347e390391200dd690a6b83456} 
+\index{Module Management@{Module Management}!cuLinkComplete@{cuLinkComplete}}
+\index{cuLinkComplete@{cuLinkComplete}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuLinkComplete()}{cuLinkComplete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Link\+Complete (\begin{DoxyParamCaption}\item[{CUlink\+State}]{state,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{cubin\+Out,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{size\+Out }\end{DoxyParamCaption})}
+
+
+
+Complete a pending linker invocation. 
+
+Completes the pending linker action and returns the cubin image for the linked device code, which can be used with \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}. The cubin is owned by {\ttfamily state}, so it should be loaded before {\ttfamily state} is destroyed via \doxylink{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}{cu\+Link\+Destroy}. This call does not destroy {\ttfamily state}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & A pending linker invocation \\
+\hline
+{\em cubin\+Out} & On success, this will point to the output image \\
+\hline
+{\em size\+Out} & Optional parameter to receive the size of the generated image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Link\+Create, cu\+Link\+Add\+Data, cu\+Link\+Add\+File, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}{cu\+Link\+Destroy}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga37f27a4496520add1a67feda8950b6f1}\label{group___c_u_d_a___m_o_d_u_l_e_ga37f27a4496520add1a67feda8950b6f1} 
+\index{Module Management@{Module Management}!cuLinkCreate@{cuLinkCreate}}
+\index{cuLinkCreate@{cuLinkCreate}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuLinkCreate()}{cuLinkCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Link\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Options,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}}]{options,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{option\+Values,  }\item[{CUlink\+State \texorpdfstring{$\ast$}{*}}]{state\+Out }\end{DoxyParamCaption})}
+
+
+
+Creates a pending JIT linker invocation. 
+
+If the call is successful, the caller owns the returned CUlink\+State, which should eventually be destroyed with \doxylink{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}{cu\+Link\+Destroy}. The device code machine size (32 or 64 bit) will match the calling application.
+
+Both linker and compiler options may be specified. Compiler options will be applied to inputs to this linker action which must be compiled from PTX. The options \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aaf326f19e67f00768bff8849a8dc5def5}{CU\+\_\+\+JIT\+\_\+\+WALL\+\_\+\+TIME}, \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa8dc284de594cc1504db521869ad47cd9}{CU\+\_\+\+JIT\+\_\+\+INFO\+\_\+\+LOG\+\_\+\+BUFFER\+\_\+\+SIZE\+\_\+\+BYTES}, and \doxylink{group___c_u_d_a___t_y_p_e_s_ggafaa9995214a4f3341f48c5830cea0d8aa4e5c6eb78ba970a0b1683ac040044811}{CU\+\_\+\+JIT\+\_\+\+ERROR\+\_\+\+LOG\+\_\+\+BUFFER\+\_\+\+SIZE\+\_\+\+BYTES} will accumulate data until the CUlink\+State is destroyed.
+
+{\ttfamily option\+Values} must remain valid for the life of the CUlink\+State if output options are used. No other references to inputs are maintained after this call returns.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Options} & Size of options arrays \\
+\hline
+{\em options} & Array of linker and compiler options \\
+\hline
+{\em option\+Values} & Array of option values, each cast to void \texorpdfstring{$\ast$}{*} \\
+\hline
+{\em state\+Out} & On success, this will contain a CUlink\+State to specify and complete this action\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa1e1b93d0f27e74d6a9e9e16f410542c6}{CUDA\+\_\+\+ERROR\+\_\+\+JIT\+\_\+\+COMPILER\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Link\+Add\+Data, cu\+Link\+Add\+File, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga066102347e390391200dd690a6b83456}{cu\+Link\+Complete}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}{cu\+Link\+Destroy} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1}\label{group___c_u_d_a___m_o_d_u_l_e_gafd3044a05d17f135ae793c806eee5af1} 
+\index{Module Management@{Module Management}!cuLinkDestroy@{cuLinkDestroy}}
+\index{cuLinkDestroy@{cuLinkDestroy}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuLinkDestroy()}{cuLinkDestroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Link\+Destroy (\begin{DoxyParamCaption}\item[{CUlink\+State}]{state }\end{DoxyParamCaption})}
+
+
+
+Destroys state for a JIT linker invocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & State object for the linker invocation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Link\+Create 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}\label{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140} 
+\index{Module Management@{Module Management}!cuModuleGetFunction@{cuModuleGetFunction}}
+\index{cuModuleGetFunction@{cuModuleGetFunction}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleGetFunction()}{cuModuleGetFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Get\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \texorpdfstring{$\ast$}{*}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}}}]{hmod,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns a function handle. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}hfunc} the handle of the function of name {\ttfamily name} located in module {\ttfamily hmod}. If no function of that name exists, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function()} returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Returned function handle \\
+\hline
+{\em hmod} & -\/ Module to retrieve function from \\
+\hline
+{\em name} & -\/ Name of function to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga030d807629801b38aed1a6c8d7e0db6d}\label{group___c_u_d_a___m_o_d_u_l_e_ga030d807629801b38aed1a6c8d7e0db6d} 
+\index{Module Management@{Module Management}!cuModuleGetGlobal@{cuModuleGetGlobal}}
+\index{cuModuleGetGlobal@{cuModuleGetGlobal}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleGetGlobal()}{cuModuleGetGlobal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Get\+Global (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \texorpdfstring{$\ast$}{*}}]{dptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{bytes,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}}}]{hmod,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns a global pointer from a module. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}dptr} and {\ttfamily \texorpdfstring{$\ast$}{*}bytes} the base pointer and size of the global of name {\ttfamily name} located in module {\ttfamily hmod}. If no variable of that name exists, cu\+Module\+Get\+Global() returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND}. Both parameters {\ttfamily dptr} and {\ttfamily bytes} are optional. If one of them is NULL, it is ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dptr} & -\/ Returned global device pointer \\
+\hline
+{\em bytes} & -\/ Returned global size in bytes \\
+\hline
+{\em hmod} & -\/ Module to retrieve global from \\
+\hline
+{\em name} & -\/ Name of global to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gada468f1b3fbfae9ceb1450430ae6c833}{cuda\+Get\+Symbol\+Address}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gaacaf71f61274272dccf72abebb2913c1}{cuda\+Get\+Symbol\+Size} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_gae42e3018e8b13a689411550efbd99e21}\label{group___c_u_d_a___m_o_d_u_l_e_gae42e3018e8b13a689411550efbd99e21} 
+\index{Module Management@{Module Management}!cuModuleGetSurfRef@{cuModuleGetSurfRef}}
+\index{cuModuleGetSurfRef@{cuModuleGetSurfRef}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleGetSurfRef()}{cuModuleGetSurfRef()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Get\+Surf\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b99472b414f10b2c04dd2530dc7ea76}{CUsurfref}} \texorpdfstring{$\ast$}{*}}]{p\+Surf\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}}}]{hmod,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns a handle to a surface reference. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Surf\+Ref} the handle of the surface reference of name {\ttfamily name} in the module {\ttfamily hmod}. If no surface reference of that name exists, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gae42e3018e8b13a689411550efbd99e21}{cu\+Module\+Get\+Surf\+Ref()} returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Surf\+Ref} & -\/ Returned surface reference \\
+\hline
+{\em hmod} & -\/ Module to retrieve surface reference from \\
+\hline
+{\em name} & -\/ Name of surface reference to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload}, \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e_ga0e3db7c6d7c16bc65af1e9e98dff87e9}{cuda\+Get\+Surface\+Reference} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}\label{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735} 
+\index{Module Management@{Module Management}!cuModuleGetTexRef@{cuModuleGetTexRef}}
+\index{cuModuleGetTexRef@{cuModuleGetTexRef}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleGetTexRef()}{cuModuleGetTexRef()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Get\+Tex\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \texorpdfstring{$\ast$}{*}}]{p\+Tex\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}}}]{hmod,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns a handle to a texture reference. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Tex\+Ref} the handle of the texture reference of name {\ttfamily name} in the module {\ttfamily hmod}. If no texture reference of that name exists, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref()} returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND}. This texture reference handle should not be destroyed, since it will be destroyed when the module is unloaded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Tex\+Ref} & -\/ Returned texture reference \\
+\hline
+{\em hmod} & -\/ Module to retrieve texture reference from \\
+\hline
+{\em name} & -\/ Name of texture reference to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gae42e3018e8b13a689411550efbd99e21}{cu\+Module\+Get\+Surf\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaee83012e10d8c527f4f72bab68e7b4e1}{cuda\+Get\+Texture\+Reference} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}\label{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3} 
+\index{Module Management@{Module Management}!cuModuleLoad@{cuModuleLoad}}
+\index{cuModuleLoad@{cuModuleLoad}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleLoad()}{cuModuleLoad()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}}]{module,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{fname }\end{DoxyParamCaption})}
+
+
+
+Loads a compute module. 
+
+Takes a filename {\ttfamily fname} and loads the corresponding module {\ttfamily module} into the current context. The CUDA driver API does not attempt to lazily allocate the resources needed by a module; if the memory for functions and data (constant and global) needed by the module cannot be allocated, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load()} fails. The file should be a {\itshape cubin} file as output by {\bfseries{nvcc}}, or a {\itshape PTX} file either as output by {\bfseries{nvcc}} or handwritten, or a {\itshape fatbin} file as output by {\bfseries{nvcc}} from toolchain 4.\+0 or later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & -\/ Returned module \\
+\hline
+{\em fname} & -\/ Filename of module to load\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa5bb7f216af3efbea2116ff18253b1a3}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PTX}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8381092e26bfe660cef4a755bb549610}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+PTX\+\_\+\+VERSION}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa3c20ccb3e24d5bf65625b1212fd8f4aa}{CUDA\+\_\+\+ERROR\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+FOUND}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4ef545ed5f461db9351f98de98497abf}{CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+BINARY\+\_\+\+FOR\+\_\+\+GPU}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa5ab6c0086a6130b5b895ff15ce841ee6}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+SYMBOL\+\_\+\+NOT\+\_\+\+FOUND}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad8a149ebc98aa90f6417e531fa645043}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+INIT\+\_\+\+FAILED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa1e1b93d0f27e74d6a9e9e16f410542c6}{CUDA\+\_\+\+ERROR\+\_\+\+JIT\+\_\+\+COMPILER\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}\label{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967} 
+\index{Module Management@{Module Management}!cuModuleLoadData@{cuModuleLoadData}}
+\index{cuModuleLoadData@{cuModuleLoadData}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleLoadData()}{cuModuleLoadData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Load\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}}]{module,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{image }\end{DoxyParamCaption})}
+
+
+
+Load a module\textquotesingle{}s data. 
+
+Takes a pointer {\ttfamily image} and loads the corresponding module {\ttfamily module} into the current context. The pointer may be obtained by mapping a {\itshape cubin} or {\itshape PTX} or {\itshape fatbin} file, passing a {\itshape cubin} or {\itshape PTX} or {\itshape fatbin} file as a NULL-\/terminated text string, or incorporating a {\itshape cubin} or {\itshape fatbin} object into the executable resources and using operating system calls such as Windows {\ttfamily \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Find\+Resource()}} to obtain the pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & -\/ Returned module \\
+\hline
+{\em image} & -\/ Module data to load\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa5bb7f216af3efbea2116ff18253b1a3}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PTX}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8381092e26bfe660cef4a755bb549610}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+PTX\+\_\+\+VERSION}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4ef545ed5f461db9351f98de98497abf}{CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+BINARY\+\_\+\+FOR\+\_\+\+GPU}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa5ab6c0086a6130b5b895ff15ce841ee6}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+SYMBOL\+\_\+\+NOT\+\_\+\+FOUND}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad8a149ebc98aa90f6417e531fa645043}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+INIT\+\_\+\+FAILED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa1e1b93d0f27e74d6a9e9e16f410542c6}{CUDA\+\_\+\+ERROR\+\_\+\+JIT\+\_\+\+COMPILER\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}\label{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5} 
+\index{Module Management@{Module Management}!cuModuleLoadDataEx@{cuModuleLoadDataEx}}
+\index{cuModuleLoadDataEx@{cuModuleLoadDataEx}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleLoadDataEx()}{cuModuleLoadDataEx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Load\+Data\+Ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}}]{module,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{image,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Options,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga30c330c52dcc0a36bd6e046d8b757fbc}{CUjit\+\_\+option}} \texorpdfstring{$\ast$}{*}}]{options,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{option\+Values }\end{DoxyParamCaption})}
+
+
+
+Load a module\textquotesingle{}s data with options. 
+
+Takes a pointer {\ttfamily image} and loads the corresponding module {\ttfamily module} into the current context. The pointer may be obtained by mapping a {\itshape cubin} or {\itshape PTX} or {\itshape fatbin} file, passing a {\itshape cubin} or {\itshape PTX} or {\itshape fatbin} file as a NULL-\/terminated text string, or incorporating a {\itshape cubin} or {\itshape fatbin} object into the executable resources and using operating system calls such as Windows {\ttfamily \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{Find\+Resource()}} to obtain the pointer. Options are passed as an array via {\ttfamily options} and any corresponding parameters are passed in {\ttfamily option\+Values}. The number of total options is supplied via {\ttfamily num\+Options}. Any outputs will be returned via {\ttfamily option\+Values}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & -\/ Returned module \\
+\hline
+{\em image} & -\/ Module data to load \\
+\hline
+{\em num\+Options} & -\/ Number of options \\
+\hline
+{\em options} & -\/ Options for JIT \\
+\hline
+{\em option\+Values} & -\/ Option values for JIT\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa5bb7f216af3efbea2116ff18253b1a3}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PTX}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8381092e26bfe660cef4a755bb549610}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+PTX\+\_\+\+VERSION}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4ef545ed5f461db9351f98de98497abf}{CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+BINARY\+\_\+\+FOR\+\_\+\+GPU}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa5ab6c0086a6130b5b895ff15ce841ee6}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+SYMBOL\+\_\+\+NOT\+\_\+\+FOUND}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad8a149ebc98aa90f6417e531fa645043}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+INIT\+\_\+\+FAILED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa1e1b93d0f27e74d6a9e9e16f410542c6}{CUDA\+\_\+\+ERROR\+\_\+\+JIT\+\_\+\+COMPILER\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}\label{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882} 
+\index{Module Management@{Module Management}!cuModuleLoadFatBinary@{cuModuleLoadFatBinary}}
+\index{cuModuleLoadFatBinary@{cuModuleLoadFatBinary}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleLoadFatBinary()}{cuModuleLoadFatBinary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Load\+Fat\+Binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}} \texorpdfstring{$\ast$}{*}}]{module,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{fat\+Cubin }\end{DoxyParamCaption})}
+
+
+
+Load a module\textquotesingle{}s data. 
+
+Takes a pointer {\ttfamily fat\+Cubin} and loads the corresponding module {\ttfamily module} into the current context. The pointer represents a {\itshape fat binary} object, which is a collection of different {\itshape cubin} and/or {\itshape PTX} files, all representing the same device code, but compiled and optimized for different architectures.
+
+Prior to CUDA 4.\+0, there was no documented API for constructing and using fat binary objects by programmers. Starting with CUDA 4.\+0, fat binary objects can be constructed by providing the {\itshape -\/fatbin option} to {\bfseries{nvcc}}. More information can be found in the {\bfseries{nvcc}} document.
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & -\/ Returned module \\
+\hline
+{\em fat\+Cubin} & -\/ Fat binary to load\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa5bb7f216af3efbea2116ff18253b1a3}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PTX}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8381092e26bfe660cef4a755bb549610}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+PTX\+\_\+\+VERSION}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaaf1cadbeb21d3a78115ca211ba44c053}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4ef545ed5f461db9351f98de98497abf}{CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+BINARY\+\_\+\+FOR\+\_\+\+GPU}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa5ab6c0086a6130b5b895ff15ce841ee6}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+SYMBOL\+\_\+\+NOT\+\_\+\+FOUND}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad8a149ebc98aa90f6417e531fa645043}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+INIT\+\_\+\+FAILED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa1e1b93d0f27e74d6a9e9e16f410542c6}{CUDA\+\_\+\+ERROR\+\_\+\+JIT\+\_\+\+COMPILER\+\_\+\+NOT\+\_\+\+FOUND} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}{cu\+Module\+Unload} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f}\label{group___c_u_d_a___m_o_d_u_l_e_gab5422db72af4337abb67461df7fa1c8f} 
+\index{Module Management@{Module Management}!cuModuleUnload@{cuModuleUnload}}
+\index{cuModuleUnload@{cuModuleUnload}!Module Management@{Module Management}}
+\doxysubsubsection{\texorpdfstring{cuModuleUnload()}{cuModuleUnload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Module\+Unload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}}}]{hmod }\end{DoxyParamCaption})}
+
+
+
+Unloads a module. 
+
+Unloads a module {\ttfamily hmod} from the current context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hmod} & -\/ Module to unload\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr \textbackslash{}note\+\_\+destroy\+\_\+ub
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_ga2da87d13ba1b534b35d0486cacc47140}{cu\+Module\+Get\+Function}, cu\+Module\+Get\+Global, \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga302ccc059f4b9e8591f092f77c7c29f3}{cu\+Module\+Load}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga101493b93e7d946b1b8bb2b7e4651967}{cu\+Module\+Load\+Data}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga1575fe742025103912d909f4ae6e21e5}{cu\+Module\+Load\+Data\+Ex}, \doxylink{group___c_u_d_a___m_o_d_u_l_e_ga796701378c7b668fae5746c4d6730882}{cu\+Module\+Load\+Fat\+Binary} 
+\end{DoxySeeAlso}

@@ -1,0 +1,120 @@
+\doxysection{CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st Struct Reference}
+\hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st}{}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st}\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+
+
+{\ttfamily \#include $<$cuda.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gadbab254defffb9a3ee49e80096316e70}{CUresourcetype}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_aa654d711d4f0c699fe2a4d5967af93d1}{res\+Type}}
+\item 
+\Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a0d28df5560c1253af817bf4730720a59}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a0d28df5560c1253af817bf4730720a59} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a75d14929b9d3f53f2ce7031c0ff1cc60}{hArray}}\\
+\>\} {\bfseries array}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmappedArray}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a61586a3b393e972760e2dafb29594275}{hMipmappedArray}}\\
+\>\} {\bfseries mipmap}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a8811e65ea6aba00a64da51648de72e1f}{devPtr}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\_format}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_af6361f8a2660f5e94a384493e1f391e8}{format}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_ac17ee5d5a687f404febdad3e15a55e1a}{numChannels}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a8594188c0e5d0fd2a3a63d2d88beb3ae}{sizeInBytes}}\\
+\>\} {\bfseries linear}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a8811e65ea6aba00a64da51648de72e1f}{devPtr}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\_format}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_af6361f8a2660f5e94a384493e1f391e8}{format}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_ac17ee5d5a687f404febdad3e15a55e1a}{numChannels}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_ac30ea234f18231ee256afa05aa4e83f6}{width}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a821b4437982b6c6a88970f0c164c7650}{height}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a042fa2b56cd8d0d31306ef89fa88153e}{pitchInBytes}}\\
+\>\} {\bfseries pitch2D}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} {\bfseries reserved} \mbox{[}32\mbox{]}\\
+\>\} {\bfseries reserved}\\
+\} {\bfseries res}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a313b47708c55f79934817b7abf0e10eb}{flags}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA Resource descriptor 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a8811e65ea6aba00a64da51648de72e1f}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a8811e65ea6aba00a64da51648de72e1f} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!devPtr@{devPtr}}
+\index{devPtr@{devPtr}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{devPtr}{devPtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::dev\+Ptr}
+
+Device pointer \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a313b47708c55f79934817b7abf0e10eb}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a313b47708c55f79934817b7abf0e10eb} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!flags@{flags}}
+\index{flags@{flags}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::flags}
+
+Flags (must be zero) \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_af6361f8a2660f5e94a384493e1f391e8}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_af6361f8a2660f5e94a384493e1f391e8} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!format@{format}}
+\index{format@{format}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\+\_\+format}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::format}
+
+Array format \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a75d14929b9d3f53f2ce7031c0ff1cc60}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a75d14929b9d3f53f2ce7031c0ff1cc60} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!hArray@{hArray}}
+\index{hArray@{hArray}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{hArray}{hArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::h\+Array}
+
+CUDA array \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a821b4437982b6c6a88970f0c164c7650}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a821b4437982b6c6a88970f0c164c7650} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!height@{height}}
+\index{height@{height}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::height}
+
+Height of the array in elements \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a61586a3b393e972760e2dafb29594275}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a61586a3b393e972760e2dafb29594275} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!hMipmappedArray@{hMipmappedArray}}
+\index{hMipmappedArray@{hMipmappedArray}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{hMipmappedArray}{hMipmappedArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::h\+Mipmapped\+Array}
+
+CUDA mipmapped array \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_ac17ee5d5a687f404febdad3e15a55e1a}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_ac17ee5d5a687f404febdad3e15a55e1a} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!numChannels@{numChannels}}
+\index{numChannels@{numChannels}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{numChannels}{numChannels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::num\+Channels}
+
+Channels per array element \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a042fa2b56cd8d0d31306ef89fa88153e}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a042fa2b56cd8d0d31306ef89fa88153e} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!pitchInBytes@{pitchInBytes}}
+\index{pitchInBytes@{pitchInBytes}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{pitchInBytes}{pitchInBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::pitch\+In\+Bytes}
+
+Pitch between two rows in bytes \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_aa654d711d4f0c699fe2a4d5967af93d1}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_aa654d711d4f0c699fe2a4d5967af93d1} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!resType@{resType}}
+\index{resType@{resType}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{resType}{resType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gadbab254defffb9a3ee49e80096316e70}{CUresourcetype}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::res\+Type}
+
+Resource type \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a8594188c0e5d0fd2a3a63d2d88beb3ae}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_a8594188c0e5d0fd2a3a63d2d88beb3ae} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!sizeInBytes@{sizeInBytes}}
+\index{sizeInBytes@{sizeInBytes}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{sizeInBytes}{sizeInBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::size\+In\+Bytes}
+
+Size in bytes \Hypertarget{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_ac30ea234f18231ee256afa05aa4e83f6}\label{struct_c_u_d_a___r_e_s_o_u_r_c_e___d_e_s_c__st_ac30ea234f18231ee256afa05aa4e83f6} 
+\index{CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}!width@{width}}
+\index{width@{width}!CUDA\_RESOURCE\_DESC\_st@{CUDA\_RESOURCE\_DESC\_st}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} CUDA\+\_\+\+RESOURCE\+\_\+\+DESC\+\_\+st\+::width}
+
+Width of the array in elements 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuda_8h}{cuda.\+h}}\end{DoxyCompactItemize}

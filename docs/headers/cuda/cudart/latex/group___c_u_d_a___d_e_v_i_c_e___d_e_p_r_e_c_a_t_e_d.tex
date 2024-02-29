@@ -1,0 +1,113 @@
+\doxysection{Device Management \mbox{[}DEPRECATED\mbox{]}}
+\hypertarget{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d}{}\label{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d}\index{Device Management \mbox{[}DEPRECATED\mbox{]}@{Device Management [DEPRECATED]}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_ga0fccff3d340103c6fcb4131d4f2f2be8}{cu\+Device\+Get\+Properties}} (\mbox{\hyperlink{struct_c_udevprop__st}{CUdevprop}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{prop}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Returns properties for a selected device. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_gad05d056938a675056077d18568e2d544}{cu\+Device\+Compute\+Capability}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}major, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}minor, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Returns the compute capability of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ deprecated device management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the device management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_gad05d056938a675056077d18568e2d544}\label{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_gad05d056938a675056077d18568e2d544} 
+\index{Device Management \mbox{[}DEPRECATED\mbox{]}@{Device Management [DEPRECATED]}!cuDeviceComputeCapability@{cuDeviceComputeCapability}}
+\index{cuDeviceComputeCapability@{cuDeviceComputeCapability}!Device Management \mbox{[}DEPRECATED\mbox{]}@{Device Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuDeviceComputeCapability()}{cuDeviceComputeCapability()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Compute\+Capability (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{major,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{minor,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns the compute capability of the device. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000002}{Deprecated}}]\end{DoxyRefDesc}
+
+
+This function was deprecated as of CUDA 5.\+0 and its functionality superceded by \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()}.
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}major} and {\ttfamily \texorpdfstring{$\ast$}{*}minor} the major and minor revision numbers that define the compute capability of the device {\ttfamily dev}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em major} & -\/ Major revision number \\
+\hline
+{\em minor} & -\/ Minor revision number \\
+\hline
+{\em dev} & -\/ Device handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_ga0fccff3d340103c6fcb4131d4f2f2be8}\label{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_ga0fccff3d340103c6fcb4131d4f2f2be8} 
+\index{Device Management \mbox{[}DEPRECATED\mbox{]}@{Device Management [DEPRECATED]}!cuDeviceGetProperties@{cuDeviceGetProperties}}
+\index{cuDeviceGetProperties@{cuDeviceGetProperties}!Device Management \mbox{[}DEPRECATED\mbox{]}@{Device Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetProperties()}{cuDeviceGetProperties()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_udevprop__st}{CUdevprop}} \texorpdfstring{$\ast$}{*}}]{prop,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns properties for a selected device. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]\end{DoxyRefDesc}
+
+
+This function was deprecated as of CUDA 5.\+0 and replaced by \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()}.
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}prop} the properties of device {\ttfamily dev}. The CUdevprop structure is defined as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_udevprop__st}{CUdevprop\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_acfadd84244296afa9faa8b719ec21d60}{maxThreadsPerBlock}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_a4a3092523828f02d6da2d781c7d84566}{maxThreadsDim}}[3];}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_a5ebd895c078faef66af9161e15b72bc9}{maxGridSize}}[3];}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_aacf65a7a9ed605729672ba5f4e5555b2}{sharedMemPerBlock}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_a62815f20f7148e28f9931f6716c22b6a}{totalConstantMemory}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_a7fd2598da1e06b93558b55148b81e9d4}{SIMDWidth}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_a155c47c12185bec4eb0c4fed6deb1843}{memPitch}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_ac14a1b621219af7bfb7fc12ab42e8864}{regsPerBlock}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_a753144656483408f719b2e66e92508c3}{clockRate}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_udevprop__st_ae60df0edd93b7591d433df4011a9f2a3}{textureAlign}}}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_udevprop__st}{CUdevprop}};}
+
+\end{DoxyCode}
+ where\+:
+
+
+\begin{DoxyItemize}
+\item \+::max\+Threads\+Per\+Block is the maximum number of threads per block;
+\item \+::max\+Threads\+Dim\mbox{[}3\mbox{]} is the maximum sizes of each dimension of a block;
+\item \+::max\+Grid\+Size\mbox{[}3\mbox{]} is the maximum sizes of each dimension of a grid;
+\item \+::shared\+Mem\+Per\+Block is the total amount of shared memory available per block in bytes;
+\item \+::total\+Constant\+Memory is the total amount of constant memory available on the device in bytes;
+\item \+::\+SIMDWidth is the warp size;
+\item \+::mem\+Pitch is the maximum pitch allowed by the memory copy functions that involve memory regions allocated through cu\+Mem\+Alloc\+Pitch();
+\item \+::regs\+Per\+Block is the total number of registers available per block;
+\item \+::clock\+Rate is the clock frequency in kilohertz;
+\item \+::texture\+Align is the alignment requirement; texture base addresses that are aligned to \+::texture\+Align bytes do not need an offset applied to texture fetches.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & -\/ Returned properties of device \\
+\hline
+{\em dev} & -\/ Device to get properties for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem 
+\end{DoxySeeAlso}

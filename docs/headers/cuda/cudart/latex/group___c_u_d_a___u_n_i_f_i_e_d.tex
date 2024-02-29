@@ -1,0 +1,407 @@
+\doxysection{Unified Addressing}
+\hypertarget{group___c_u_d_a___u_n_i_f_i_e_d}{}\label{group___c_u_d_a___u_n_i_f_i_e_d}\index{Unified Addressing@{Unified Addressing}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93}{cu\+Pointer\+Get\+Attribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{data}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga61280a80cd7d18474e368bc60c46a2c3}{CUpointer\+\_\+attribute}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attribute}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr)
+\begin{DoxyCompactList}\small\item\em Returns information about a pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}{cu\+Mem\+Prefetch\+Async}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} dev\+Ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} dst\+Device, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Prefetches memory to the specified destination device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___u_n_i_f_i_e_d_ga0a8325a57b177e858b0ccdf6efd7690b}{cu\+Mem\+Advise}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} dev\+Ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b3cac8df52b2d3299935e216fb82f91}{CUmem\+\_\+advise}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{advice}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} device)
+\begin{DoxyCompactList}\small\item\em Advise about the usage of a given memory range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___u_n_i_f_i_e_d_ga5fed71a86ab1a0066edad299a61f3828}{cu\+Mem\+Range\+Get\+Attribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{data}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{data\+Size}}, CUmem\+\_\+range\+\_\+attribute \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attribute}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} dev\+Ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}})
+\begin{DoxyCompactList}\small\item\em Query an attribute of a given memory range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___u_n_i_f_i_e_d_ga4aa31fba00695179a5cdbc39017eb13f}{cu\+Mem\+Range\+Get\+Attributes}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{data}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{data\+Sizes}}, CUmem\+\_\+range\+\_\+attribute \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attributes}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Attributes}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} dev\+Ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}})
+\begin{DoxyCompactList}\small\item\em Query attributes of a given memory range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___u_n_i_f_i_e_d_ga9e6da20bc3c5f8ea343c9b33f8b607c0}{cu\+Pointer\+Set\+Attribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}value, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga61280a80cd7d18474e368bc60c46a2c3}{CUpointer\+\_\+attribute}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attribute}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr)
+\begin{DoxyCompactList}\small\item\em Set attributes on a previously allocated memory region. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___u_n_i_f_i_e_d_ga386fc386cca447017a711e0b7d9871d5}{cu\+Pointer\+Get\+Attributes}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Attributes}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga61280a80cd7d18474e368bc60c46a2c3}{CUpointer\+\_\+attribute}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attributes}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{data}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} ptr)
+\begin{DoxyCompactList}\small\item\em Returns information about a pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ unified addressing functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the unified addressing functions of the low-\/level CUDA driver application programming interface.\hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_overview}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_overview}
+CUDA devices can share a unified address space with the host. For these devices there is no distinction between a device pointer and a host pointer -- the same pointer value may be used to access memory from the host program and from a kernel running on the device (with exceptions enumerated below).\hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_support}{}\doxysubsection{\texorpdfstring{Supported Platforms}{Supported Platforms}}\label{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_support}
+Whether or not a device supports unified addressing may be queried by calling \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} with the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aadc11dd6d9f149a7bae32499f2b802c0d}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+UNIFIED\+\_\+\+ADDRESSING}.
+
+Unified addressing is automatically enabled in 64-\/bit processes\hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_lookup}{}\doxysubsection{\texorpdfstring{Looking Up Information from Pointer Values}{Looking Up Information from Pointer Values}}\label{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_lookup}
+It is possible to look up information about the memory which backs a pointer value. For instance, one may want to know if a pointer points to host or device memory. As another example, in the case of device memory, one may want to know on which CUDA device the memory resides. These properties may be queried using the function \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93}{cu\+Pointer\+Get\+Attribute()}
+
+Since pointers are unique, it is not necessary to specify information about the pointers specified to the various copy functions in the CUDA API. The function \doxylink{group___c_u_d_a___m_e_m_ga80d68f9149eba8f5d42a19fbe967c353}{cu\+Memcpy()} may be used to perform a copy between two pointers, ignoring whether they point to host or device memory (making cu\+Memcpy\+Hto\+D(), cu\+Memcpy\+Dto\+D(), and cu\+Memcpy\+Dto\+H() unnecessary for devices supporting unified addressing). For multidimensional copies, the memory type \doxylink{group___c_u_d_a___t_y_p_e_s_gga401176319b8c53648d525e8859437790a7a47ca2de6db5cf82084ad80ce66aa71}{CU\+\_\+\+MEMORYTYPE\+\_\+\+UNIFIED} may be used to specify that the CUDA driver should infer the location of the pointer from its value.\hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_automaphost}{}\doxysubsection{\texorpdfstring{Automatic Mapping of Host Allocated Host Memory}{Automatic Mapping of Host Allocated Host Memory}}\label{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_automaphost}
+All host memory allocated in all contexts using cu\+Mem\+Alloc\+Host() and \doxylink{group___c_u_d_a___m_e_m_gada6927828b81f5415eb0a7cb0134e522}{cu\+Mem\+Host\+Alloc()} is always directly accessible from all contexts on all devices that support unified addressing. This is the case regardless of whether or not the flags \doxylink{group___c_u_d_a___t_y_p_e_s_ga50f4528d46bda58b592551654a7ee0ff}{CU\+\_\+\+MEMHOSTALLOC\+\_\+\+PORTABLE} and \doxylink{group___c_u_d_a___t_y_p_e_s_ga054589ee2a0f188e664d93965d81113d}{CU\+\_\+\+MEMHOSTALLOC\+\_\+\+DEVICEMAP} are specified.
+
+The pointer value through which allocated host memory may be accessed in kernels on all devices that support unified addressing is the same as the pointer value through which that memory is accessed on the host, so it is not necessary to call cu\+Mem\+Host\+Get\+Device\+Pointer() to get the device pointer for these allocations.
+
+Note that this is not the case for memory allocated using the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga7361580951deecace15352c97a210038}{CU\+\_\+\+MEMHOSTALLOC\+\_\+\+WRITECOMBINED}, as discussed below.\hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_autopeerregister}{}\doxysubsection{\texorpdfstring{Automatic Registration of Peer Memory}{Automatic Registration of Peer Memory}}\label{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_autopeerregister}
+Upon enabling direct access from a context that supports unified addressing to another peer context that supports unified addressing using \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}{cu\+Ctx\+Enable\+Peer\+Access()} all memory allocated in the peer context using cu\+Mem\+Alloc() and cu\+Mem\+Alloc\+Pitch() will immediately be accessible by the current context. The device pointer value through which any peer memory may be accessed in the current context is the same pointer value through which that memory may be accessed in the peer context.\hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_exceptions}{}\doxysubsection{\texorpdfstring{Exceptions, Disjoint Addressing}{Exceptions, Disjoint Addressing}}\label{group___c_u_d_a___u_n_i_f_i_e_d_CUDA_UNIFIED_exceptions}
+Not all memory may be accessed on devices through the same pointer value through which they are accessed on the host. These exceptions are host memory registered using cu\+Mem\+Host\+Register() and host memory allocated using the flag \doxylink{group___c_u_d_a___t_y_p_e_s_ga7361580951deecace15352c97a210038}{CU\+\_\+\+MEMHOSTALLOC\+\_\+\+WRITECOMBINED}. For these exceptions, there exists a distinct host and device address for the memory. The device address is guaranteed to not overlap any valid host pointer range and is guaranteed to have the same value across all contexts that support unified addressing.
+
+This device address may be queried using cu\+Mem\+Host\+Get\+Device\+Pointer() when a context using unified addressing is current. Either the host or the unified device pointer value may be used to refer to this memory through \doxylink{group___c_u_d_a___m_e_m_ga80d68f9149eba8f5d42a19fbe967c353}{cu\+Memcpy()} and similar functions using the \doxylink{group___c_u_d_a___t_y_p_e_s_gga401176319b8c53648d525e8859437790a7a47ca2de6db5cf82084ad80ce66aa71}{CU\+\_\+\+MEMORYTYPE\+\_\+\+UNIFIED} memory type. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_ga0a8325a57b177e858b0ccdf6efd7690b}\label{group___c_u_d_a___u_n_i_f_i_e_d_ga0a8325a57b177e858b0ccdf6efd7690b} 
+\index{Unified Addressing@{Unified Addressing}!cuMemAdvise@{cuMemAdvise}}
+\index{cuMemAdvise@{cuMemAdvise}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cuMemAdvise()}{cuMemAdvise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Advise (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{count,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b3cac8df52b2d3299935e216fb82f91}{CUmem\+\_\+advise}}}]{advice,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{device }\end{DoxyParamCaption})}
+
+
+
+Advise about the usage of a given memory range. 
+
+Advise the Unified Memory subsystem about the usage pattern for the memory range starting at {\ttfamily dev\+Ptr} with a size of {\ttfamily count} bytes. The start address and end address of the memory range will be rounded down and rounded up respectively to be aligned to CPU page size before the advice is applied. The memory range must refer to managed memory allocated via \doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed} or declared via {\bfseries{managed}} variables. The memory range could also refer to system-\/allocated pageable memory provided it represents a valid, host-\/accessible region of memory and all additional constraints imposed by {\ttfamily advice} as outlined below are also satisfied. Specifying an invalid system-\/allocated pageable memory range results in an error being returned.
+
+The {\ttfamily advice} parameter can take the following values\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+READ\+\_\+\+MOSTLY\+:} This implies that the data is mostly going to be read from and only occasionally written to. Any read accesses from any processor to this region will create a read-\/only copy of at least the accessed pages in that processor\textquotesingle{}s memory. Additionally, if \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}{cu\+Mem\+Prefetch\+Async} is called on this region, it will create a read-\/only copy of the data on the destination processor. If any processor writes to this region, all copies of the corresponding page will be invalidated except for the one where the write occurred. The {\ttfamily device} argument is ignored for this advice. Note that for a page to be read-\/duplicated, the accessing processor must either be the CPU or a GPU that has a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa33110e44c9cb6ead02f03ff6f6fd495e}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+MANAGED\+\_\+\+ACCESS}. Also, if a context is created on a device that does not have the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa33110e44c9cb6ead02f03ff6f6fd495e}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+MANAGED\+\_\+\+ACCESS} set, then read-\/duplication will not occur until all such contexts are destroyed. If the memory region refers to valid system-\/allocated pageable memory, then the accessing device must have a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa5fdcdbe1dfc3ad5ec428c279e0efb9cd}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS} for a read-\/only copy to be created on that device. Note however that if the accessing device also has a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa52c58d6fd1d3a72673cce199ab30cd40}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS\+\_\+\+USES\+\_\+\+HOST\+\_\+\+PAGE\+\_\+\+TABLES}, then setting this advice will not create a read-\/only copy when that device accesses this memory region.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+UNSET\+\_\+\+READ\+\_\+\+MOSTLY\+:} Undoes the effect of \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6a5a99fb44378c84c56668550b94157fc0}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+READ\+\_\+\+MOSTLY} and also prevents the Unified Memory driver from attempting heuristic read-\/duplication on the memory range. Any read-\/duplicated copies of the data will be collapsed into a single copy. The location for the collapsed copy will be the preferred location if the page has a preferred location and one of the read-\/duplicated copies was resident at that location. Otherwise, the location chosen is arbitrary.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+PREFERRED\+\_\+\+LOCATION\+:} This advice sets the preferred location for the data to be the memory belonging to {\ttfamily device}. Passing in CU\+\_\+\+DEVICE\+\_\+\+CPU for {\ttfamily device} sets the preferred location as host memory. If {\ttfamily device} is a GPU, then it must have a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa33110e44c9cb6ead02f03ff6f6fd495e}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+MANAGED\+\_\+\+ACCESS}. Setting the preferred location does not cause data to migrate to that location immediately. Instead, it guides the migration policy when a fault occurs on that memory region. If the data is already in its preferred location and the faulting processor can establish a mapping without requiring the data to be migrated, then data migration will be avoided. On the other hand, if the data is not in its preferred location or if a direct mapping cannot be established, then it will be migrated to the processor accessing it. It is important to note that setting the preferred location does not prevent data prefetching done using \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}{cu\+Mem\+Prefetch\+Async}. Having a preferred location can override the page thrash detection and resolution logic in the Unified Memory driver. Normally, if a page is detected to be constantly thrashing between for example host and device memory, the page may eventually be pinned to host memory by the Unified Memory driver. But if the preferred location is set as device memory, then the page will continue to thrash indefinitely. If \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6a5a99fb44378c84c56668550b94157fc0}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+READ\+\_\+\+MOSTLY} is also set on this memory region or any subset of it, then the policies associated with that advice will override the policies of this advice, unless read accesses from {\ttfamily device} will not result in a read-\/only copy being created on that device as outlined in description for the advice \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6a5a99fb44378c84c56668550b94157fc0}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+READ\+\_\+\+MOSTLY}. If the memory region refers to valid system-\/allocated pageable memory, then {\ttfamily device} must have a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa5fdcdbe1dfc3ad5ec428c279e0efb9cd}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS}. Additionally, if {\ttfamily device} has a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa52c58d6fd1d3a72673cce199ab30cd40}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS\+\_\+\+USES\+\_\+\+HOST\+\_\+\+PAGE\+\_\+\+TABLES}, then this call has no effect. Note however that this behavior may change in the future.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+UNSET\+\_\+\+PREFERRED\+\_\+\+LOCATION\+:} Undoes the effect of \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6addee285dc5e0e7d26469009ffd583cea}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+PREFERRED\+\_\+\+LOCATION} and changes the preferred location to none.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+ACCESSED\+\_\+\+BY\+:} This advice implies that the data will be accessed by {\ttfamily device}. Passing in \doxylink{group___c_u_d_a___t_y_p_e_s_ga2a24bee5711059aaee8329bdc8799790}{CU\+\_\+\+DEVICE\+\_\+\+CPU} for {\ttfamily device} will set the advice for the CPU. If {\ttfamily device} is a GPU, then the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa33110e44c9cb6ead02f03ff6f6fd495e}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+MANAGED\+\_\+\+ACCESS} must be non-\/zero. This advice does not cause data migration and has no impact on the location of the data per se. Instead, it causes the data to always be mapped in the specified processor\textquotesingle{}s page tables, as long as the location of the data permits a mapping to be established. If the data gets migrated for any reason, the mappings are updated accordingly. This advice is recommended in scenarios where data locality is not important, but avoiding faults is. Consider for example a system containing multiple GPUs with peer-\/to-\/peer access enabled, where the data located on one GPU is occasionally accessed by peer GPUs. In such scenarios, migrating data over to the other GPUs is not as important because the accesses are infrequent and the overhead of migration may be too high. But preventing faults can still help improve performance, and so having a mapping set up in advance is useful. Note that on CPU access of this data, the data may be migrated to host memory because the CPU typically cannot access device memory directly. Any GPU that had the \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6aa44e5c0ad0a77d05332739848e181a2d}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+ACCESSED\+\_\+\+BY} flag set for this data will now have its mapping updated to point to the page in host memory. If \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6a5a99fb44378c84c56668550b94157fc0}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+READ\+\_\+\+MOSTLY} is also set on this memory region or any subset of it, then the policies associated with that advice will override the policies of this advice. Additionally, if the preferred location of this memory region or any subset of it is also {\ttfamily device}, then the policies associated with \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6addee285dc5e0e7d26469009ffd583cea}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+PREFERRED\+\_\+\+LOCATION} will override the policies of this advice. If the memory region refers to valid system-\/allocated pageable memory, then {\ttfamily device} must have a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa5fdcdbe1dfc3ad5ec428c279e0efb9cd}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS}. Additionally, if {\ttfamily device} has a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa52c58d6fd1d3a72673cce199ab30cd40}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS\+\_\+\+USES\+\_\+\+HOST\+\_\+\+PAGE\+\_\+\+TABLES}, then this call has no effect.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+UNSET\+\_\+\+ACCESSED\+\_\+\+BY\+:} Undoes the effect of \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6aa44e5c0ad0a77d05332739848e181a2d}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+ACCESSED\+\_\+\+BY}. Any mappings to the data from {\ttfamily device} may be removed at any time causing accesses to result in non-\/fatal page faults. If the memory region refers to valid system-\/allocated pageable memory, then {\ttfamily device} must have a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa5fdcdbe1dfc3ad5ec428c279e0efb9cd}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS}. Additionally, if {\ttfamily device} has a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa52c58d6fd1d3a72673cce199ab30cd40}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS\+\_\+\+USES\+\_\+\+HOST\+\_\+\+PAGE\+\_\+\+TABLES}, then this call has no effect.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev\+Ptr} & -\/ Pointer to memory to set the advice for \\
+\hline
+{\em count} & -\/ Size in bytes of the memory range \\
+\hline
+{\em advice} & -\/ Advice to be applied for the specified memory range \\
+\hline
+{\em device} & -\/ Device to apply the advice for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr \textbackslash{}note\+\_\+async \textbackslash{}note\+\_\+null\+\_\+stream
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_ga80d68f9149eba8f5d42a19fbe967c353}{cu\+Memcpy}, \doxylink{group___c_u_d_a___m_e_m_ga7e5ebc89165907589d752253d8ad1355}{cu\+Memcpy\+Peer}, \doxylink{group___c_u_d_a___m_e_m_ga767d9fb2a59e8aae5bfd8e19aea1a6da}{cu\+Memcpy\+Async}, \doxylink{group___c_u_d_a___m_e_m_ga023e463e0cdde626d69137b1ec6567df}{cu\+Memcpy3\+DPeer\+Async}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}{cu\+Mem\+Prefetch\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gac45d3db8ba1c1387396174838fd7dfad}{cuda\+Mem\+Advise} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}\label{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3} 
+\index{Unified Addressing@{Unified Addressing}!cuMemPrefetchAsync@{cuMemPrefetchAsync}}
+\index{cuMemPrefetchAsync@{cuMemPrefetchAsync}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cuMemPrefetchAsync()}{cuMemPrefetchAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Prefetch\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{count,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dst\+Device,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Prefetches memory to the specified destination device. 
+
+Prefetches memory to the specified destination device. {\ttfamily dev\+Ptr} is the base device pointer of the memory to be prefetched and {\ttfamily dst\+Device} is the destination device. {\ttfamily count} specifies the number of bytes to copy. {\ttfamily h\+Stream} is the stream in which the operation is enqueued. The memory range must refer to managed memory allocated via \doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed} or declared via {\bfseries{managed}} variables.
+
+Passing in CU\+\_\+\+DEVICE\+\_\+\+CPU for {\ttfamily dst\+Device} will prefetch the data to host memory. If {\ttfamily dst\+Device} is a GPU, then the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa33110e44c9cb6ead02f03ff6f6fd495e}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+MANAGED\+\_\+\+ACCESS} must be non-\/zero. Additionally, {\ttfamily h\+Stream} must be associated with a device that has a non-\/zero value for the device attribute \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa33110e44c9cb6ead02f03ff6f6fd495e}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+MANAGED\+\_\+\+ACCESS}.
+
+The start address and end address of the memory range will be rounded down and rounded up respectively to be aligned to CPU page size before the prefetch operation is enqueued in the stream.
+
+If no physical memory has been allocated for this region, then this memory region will be populated and mapped on the destination device. If there\textquotesingle{}s insufficient memory to prefetch the desired region, the Unified Memory driver may evict pages from other \doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed} allocations to host memory in order to make room. Device memory allocated using cu\+Mem\+Alloc or cu\+Array\+Create will not be evicted.
+
+By default, any mappings to the previous location of the migrated pages are removed and mappings for the new location are only setup on {\ttfamily dst\+Device}. The exact behavior however also depends on the settings applied to this memory range via \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga0a8325a57b177e858b0ccdf6efd7690b}{cu\+Mem\+Advise} as described below\+:
+
+If \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6a5a99fb44378c84c56668550b94157fc0}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+READ\+\_\+\+MOSTLY} was set on any subset of this memory range, then that subset will create a read-\/only copy of the pages on {\ttfamily dst\+Device}.
+
+If \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6addee285dc5e0e7d26469009ffd583cea}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+PREFERRED\+\_\+\+LOCATION} was called on any subset of this memory range, then the pages will be migrated to {\ttfamily dst\+Device} even if {\ttfamily dst\+Device} is not the preferred location of any pages in the memory range.
+
+If \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6aa44e5c0ad0a77d05332739848e181a2d}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+ACCESSED\+\_\+\+BY} was called on any subset of this memory range, then mappings to those pages from all the appropriate processors are updated to refer to the new location if establishing such a mapping is possible. Otherwise, those mappings are cleared.
+
+Note that this API is not required for functionality and only serves to improve performance by allowing the application to migrate data to a suitable location before it is accessed. Memory accesses to this range are always coherent and are allowed even when the data is actively being migrated.
+
+Note that this function is asynchronous with respect to the host and all work on other devices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev\+Ptr} & -\/ Pointer to be prefetched \\
+\hline
+{\em count} & -\/ Size in bytes \\
+\hline
+{\em dst\+Device} & -\/ Destination device to prefetch to \\
+\hline
+{\em h\+Stream} & -\/ Stream to enqueue prefetch operation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr \textbackslash{}note\+\_\+async \textbackslash{}note\+\_\+null\+\_\+stream
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_ga80d68f9149eba8f5d42a19fbe967c353}{cu\+Memcpy}, \doxylink{group___c_u_d_a___m_e_m_ga7e5ebc89165907589d752253d8ad1355}{cu\+Memcpy\+Peer}, \doxylink{group___c_u_d_a___m_e_m_ga767d9fb2a59e8aae5bfd8e19aea1a6da}{cu\+Memcpy\+Async}, \doxylink{group___c_u_d_a___m_e_m_ga023e463e0cdde626d69137b1ec6567df}{cu\+Memcpy3\+DPeer\+Async}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga0a8325a57b177e858b0ccdf6efd7690b}{cu\+Mem\+Advise}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga4a666ced2163d18849c59c608bfbd208}{cuda\+Mem\+Prefetch\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_ga5fed71a86ab1a0066edad299a61f3828}\label{group___c_u_d_a___u_n_i_f_i_e_d_ga5fed71a86ab1a0066edad299a61f3828} 
+\index{Unified Addressing@{Unified Addressing}!cuMemRangeGetAttribute@{cuMemRangeGetAttribute}}
+\index{cuMemRangeGetAttribute@{cuMemRangeGetAttribute}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cuMemRangeGetAttribute()}{cuMemRangeGetAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Range\+Get\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{data\+Size,  }\item[{CUmem\+\_\+range\+\_\+attribute}]{attribute,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{count }\end{DoxyParamCaption})}
+
+
+
+Query an attribute of a given memory range. 
+
+Query an attribute about the memory range starting at {\ttfamily dev\+Ptr} with a size of {\ttfamily count} bytes. The memory range must refer to managed memory allocated via \doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed} or declared via {\bfseries{managed}} variables.
+
+The {\ttfamily attribute} parameter can take the following values\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+READ\+\_\+\+MOSTLY\+:} If this attribute is specified, {\ttfamily data} will be interpreted as a 32-\/bit integer, and {\ttfamily data\+Size} must be 4. The result returned will be 1 if all pages in the given memory range have read-\/duplication enabled, or 0 otherwise.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+PREFERRED\+\_\+\+LOCATION\+:} If this attribute is specified, {\ttfamily data} will be interpreted as a 32-\/bit integer, and {\ttfamily data\+Size} must be 4. The result returned will be a GPU device id if all pages in the memory range have that GPU as their preferred location, or it will be CU\+\_\+\+DEVICE\+\_\+\+CPU if all pages in the memory range have the CPU as their preferred location, or it will be CU\+\_\+\+DEVICE\+\_\+\+INVALID if either all the pages don\textquotesingle{}t have the same preferred location or some of the pages don\textquotesingle{}t have a preferred location at all. Note that the actual location of the pages in the memory range at the time of the query may be different from the preferred location.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+ACCESSED\+\_\+\+BY\+:} If this attribute is specified, {\ttfamily data} will be interpreted as an array of 32-\/bit integers, and {\ttfamily data\+Size} must be a non-\/zero multiple of 4. The result returned will be a list of device ids that had \doxylink{group___c_u_d_a___t_y_p_e_s_ggade5234c5f5458e63324743f23d0aeea6aa44e5c0ad0a77d05332739848e181a2d}{CU\+\_\+\+MEM\+\_\+\+ADVISE\+\_\+\+SET\+\_\+\+ACCESSED\+\_\+\+BY} set for that entire memory range. If any device does not have that advice set for the entire memory range, that device will not be included. If {\ttfamily data} is larger than the number of devices that have that advice set for that memory range, CU\+\_\+\+DEVICE\+\_\+\+INVALID will be returned in all the extra space provided. For ex., if {\ttfamily data\+Size} is 12 (i.\+e. {\ttfamily data} has 3 elements) and only device 0 has the advice set, then the result returned will be \{ 0, CU\+\_\+\+DEVICE\+\_\+\+INVALID, CU\+\_\+\+DEVICE\+\_\+\+INVALID \}. If {\ttfamily data} is smaller than the number of devices that have that advice set, then only as many devices will be returned as can fit in the array. There is no guarantee on which specific devices will be returned, however.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+LAST\+\_\+\+PREFETCH\+\_\+\+LOCATION\+:} If this attribute is specified, {\ttfamily data} will be interpreted as a 32-\/bit integer, and {\ttfamily data\+Size} must be 4. The result returned will be the last location to which all pages in the memory range were prefetched explicitly via \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}{cu\+Mem\+Prefetch\+Async}. This will either be a GPU id or CU\+\_\+\+DEVICE\+\_\+\+CPU depending on whether the last location for prefetch was a GPU or the CPU respectively. If any page in the memory range was never explicitly prefetched or if all pages were not prefetched to the same location, CU\+\_\+\+DEVICE\+\_\+\+INVALID will be returned. Note that this simply returns the last location that the applicaton requested to prefetch the memory range to. It gives no indication as to whether the prefetch operation to that location has completed or even begun.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ A pointers to a memory location where the result of each attribute query will be written to. \\
+\hline
+{\em data\+Size} & -\/ Array containing the size of data \\
+\hline
+{\em attribute} & -\/ The attribute to query \\
+\hline
+{\em dev\+Ptr} & -\/ Start of the range to query \\
+\hline
+{\em count} & -\/ Size of the range to query\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr \textbackslash{}note\+\_\+async \textbackslash{}note\+\_\+null\+\_\+stream
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga4aa31fba00695179a5cdbc39017eb13f}{cu\+Mem\+Range\+Get\+Attributes}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}{cu\+Mem\+Prefetch\+Async}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga0a8325a57b177e858b0ccdf6efd7690b}{cu\+Mem\+Advise}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gae5f23e2e3bfb47692ccdd2bdc69c8ae3}{cuda\+Mem\+Range\+Get\+Attribute} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_ga4aa31fba00695179a5cdbc39017eb13f}\label{group___c_u_d_a___u_n_i_f_i_e_d_ga4aa31fba00695179a5cdbc39017eb13f} 
+\index{Unified Addressing@{Unified Addressing}!cuMemRangeGetAttributes@{cuMemRangeGetAttributes}}
+\index{cuMemRangeGetAttributes@{cuMemRangeGetAttributes}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cuMemRangeGetAttributes()}{cuMemRangeGetAttributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Mem\+Range\+Get\+Attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{data\+Sizes,  }\item[{CUmem\+\_\+range\+\_\+attribute \texorpdfstring{$\ast$}{*}}]{attributes,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{num\+Attributes,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{count }\end{DoxyParamCaption})}
+
+
+
+Query attributes of a given memory range. 
+
+Query attributes of the memory range starting at {\ttfamily dev\+Ptr} with a size of {\ttfamily count} bytes. The memory range must refer to managed memory allocated via \doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed} or declared via {\bfseries{managed}} variables. The {\ttfamily attributes} array will be interpreted to have {\ttfamily num\+Attributes} entries. The {\ttfamily data\+Sizes} array will also be interpreted to have {\ttfamily num\+Attributes} entries. The results of the query will be stored in {\ttfamily data}.
+
+The list of supported attributes are given below. Please refer to \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga5fed71a86ab1a0066edad299a61f3828}{cu\+Mem\+Range\+Get\+Attribute} for attribute descriptions and restrictions.
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga0bf67b86db13b4fd920cbebd884f2107ab21856250c588cd795462323c71fef7b}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+READ\+\_\+\+MOSTLY}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga0bf67b86db13b4fd920cbebd884f2107ac68a2f5771f8e1b83ad29c1d65ab4875}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+PREFERRED\+\_\+\+LOCATION}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga0bf67b86db13b4fd920cbebd884f2107a2511c59b3d309b83f410af68280891a4}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+ACCESSED\+\_\+\+BY}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga0bf67b86db13b4fd920cbebd884f2107a5213666bebedfcea6128fbebaa2f7ade}{CU\+\_\+\+MEM\+\_\+\+RANGE\+\_\+\+ATTRIBUTE\+\_\+\+LAST\+\_\+\+PREFETCH\+\_\+\+LOCATION}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ A two-\/dimensional array containing pointers to memory locations where the result of each attribute query will be written to. \\
+\hline
+{\em data\+Sizes} & -\/ Array containing the sizes of each result \\
+\hline
+{\em attributes} & -\/ An array of attributes to query (num\+Attributes and the number of attributes in this array should match) \\
+\hline
+{\em num\+Attributes} & -\/ Number of attributes to query \\
+\hline
+{\em dev\+Ptr} & -\/ Start of the range to query \\
+\hline
+{\em count} & -\/ Size of the range to query\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga5fed71a86ab1a0066edad299a61f3828}{cu\+Mem\+Range\+Get\+Attribute}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga0a8325a57b177e858b0ccdf6efd7690b}{cu\+Mem\+Advise}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_gaa6237bda35679c3b6b2bb6e0fe8126d3}{cu\+Mem\+Prefetch\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gad5038f91ff2105b6a4744968eaf626b1}{cuda\+Mem\+Range\+Get\+Attributes} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93}\label{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93} 
+\index{Unified Addressing@{Unified Addressing}!cuPointerGetAttribute@{cuPointerGetAttribute}}
+\index{cuPointerGetAttribute@{cuPointerGetAttribute}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cuPointerGetAttribute()}{cuPointerGetAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Pointer\+Get\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga61280a80cd7d18474e368bc60c46a2c3}{CUpointer\+\_\+attribute}}}]{attribute,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Returns information about a pointer. 
+
+The supported attributes are\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+CONTEXT\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} the \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} in which {\ttfamily ptr} was allocated or registered. The type of {\ttfamily data} must be \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} \texorpdfstring{$\ast$}{*}.
+
+If {\ttfamily ptr} was not allocated by, mapped by, or registered with a \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} which uses unified virtual addressing then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+MEMORY\+\_\+\+TYPE\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} the physical memory type of the memory that {\ttfamily ptr} addresses as a \doxylink{group___c_u_d_a___t_y_p_e_s_gaf01ad7fe89503619b189de8776242175}{CUmemorytype} enumerated value. The type of {\ttfamily data} must be unsigned int.
+
+If {\ttfamily ptr} addresses device memory then {\ttfamily \texorpdfstring{$\ast$}{*}data} is set to \doxylink{group___c_u_d_a___t_y_p_e_s_gga401176319b8c53648d525e8859437790aec7e15ba4b111a26adb3487023707299}{CU\+\_\+\+MEMORYTYPE\+\_\+\+DEVICE}. The particular \doxylink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice} on which the memory resides is the \doxylink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice} of the \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} returned by the \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573af0470fdbd1a5ff72c341f762f49506ab}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+CONTEXT} attribute of {\ttfamily ptr}.
+
+If {\ttfamily ptr} addresses host memory then {\ttfamily \texorpdfstring{$\ast$}{*}data} is set to \doxylink{group___c_u_d_a___t_y_p_e_s_gga401176319b8c53648d525e8859437790a7f98a88f26eec8490bfc180c5a73e101}{CU\+\_\+\+MEMORYTYPE\+\_\+\+HOST}.
+
+If {\ttfamily ptr} was not allocated by, mapped by, or registered with a \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} which uses unified virtual addressing then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+
+If the current \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} does not support unified virtual addressing then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} is returned.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+DEVICE\+\_\+\+POINTER\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} the device pointer value through which {\ttfamily ptr} may be accessed by kernels running in the current \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}. The type of {\ttfamily data} must be CUdeviceptr \texorpdfstring{$\ast$}{*}.
+
+If there exists no device pointer value through which kernels running in the current \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} may access {\ttfamily ptr} then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+
+If there is no current \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} is returned.
+
+Except in the exceptional disjoint addressing cases discussed below, the value returned in {\ttfamily \texorpdfstring{$\ast$}{*}data} will equal the input value {\ttfamily ptr}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+HOST\+\_\+\+POINTER\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} the host pointer value through which {\ttfamily ptr} may be accessed by by the host program. The type of {\ttfamily data} must be void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}. If there exists no host pointer value through which the host program may directly access {\ttfamily ptr} then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+
+Except in the exceptional disjoint addressing cases discussed below, the value returned in {\ttfamily \texorpdfstring{$\ast$}{*}data} will equal the input value {\ttfamily ptr}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+P2\+P\+\_\+\+TOKENS\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} two tokens for use with the nv-\/p2p.\+h Linux kernel interface. {\ttfamily data} must be a struct of type CUDA\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+P2\+P\+\_\+\+TOKENS.
+
+{\ttfamily ptr} must be a pointer to memory obtained from \+:cu\+Mem\+Alloc(). Note that p2p\+Token and va\+Space\+Token are only valid for the lifetime of the source allocation. A subsequent allocation at the same address may return completely different tokens. Querying this attribute has a side effect of setting the attribute \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573adb5380c3201afdae3556cce8834504e1}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+SYNC\+\_\+\+MEMOPS} for the region of memory that {\ttfamily ptr} points to.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+SYNC\+\_\+\+MEMOPS\+:}
+
+A boolean attribute which when set, ensures that synchronous memory operations initiated on the region of memory that {\ttfamily ptr} points to will always synchronize. See further documentation in the section titled "{}\+API synchronization behavior"{} to learn more about cases when synchronous memory operations can exhibit asynchronous behavior.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+BUFFER\+\_\+\+ID\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} a buffer ID which is guaranteed to be unique within the process. {\ttfamily data} must point to an unsigned long long.
+
+{\ttfamily ptr} must be a pointer to memory obtained from a CUDA memory allocation API. Every memory allocation from any of the CUDA memory allocation APIs will have a unique ID over a process lifetime. Subsequent allocations do not reuse IDs from previous freed allocations. IDs are only unique within a single process.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+IS\+\_\+\+MANAGED\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} a boolean that indicates whether the pointer points to managed memory or not.
+
+If {\ttfamily ptr} is not a valid CUDA pointer then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} is returned.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+DEVICE\+\_\+\+ORDINAL\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} an integer representing a device ordinal of a device against which the memory was allocated or registered.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+IS\+\_\+\+LEGACY\+\_\+\+CUDA\+\_\+\+IPC\+\_\+\+CAPABLE\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} a boolean that indicates if this pointer maps to an allocation that is suitable for \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga13ea0fd02681361d2676bffdce7f48dc}{cuda\+Ipc\+Get\+Mem\+Handle}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+RANGE\+\_\+\+START\+\_\+\+ADDR\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} the starting address for the allocation referenced by the device pointer {\ttfamily ptr}. Note that this is not necessarily the address of the mapped region, but the address of the mappable address range {\ttfamily ptr} references (e.\+g. from \doxylink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve}).
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+RANGE\+\_\+\+SIZE\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} the size for the allocation referenced by the device pointer {\ttfamily ptr}. Note that this is not necessarily the size of the mapped region, but the size of the mappable address range {\ttfamily ptr} references (e.\+g. from \doxylink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve}). To retrieve the size of the mapped region, see cu\+Mem\+Get\+Address\+Range
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+MAPPED\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} a boolean that indicates if this pointer is in a valid address range that is mapped to a backing allocation.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+ALLOWED\+\_\+\+HANDLE\+\_\+\+TYPES\+:}
+
+Returns a bitmask of the allowed handle types for an allocation that may be passed to \doxylink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+MEMPOOL\+\_\+\+HANDLE\+:}
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}data} the handle to the mempool that the allocation was obtained from.
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{}
+
+\end{DoxyParagraph}
+Note that for most allocations in the unified virtual address space the host and device pointer for accessing the allocation will be the same. The exceptions to this are
+\begin{DoxyItemize}
+\item user memory registered using cu\+Mem\+Host\+Register
+\item host memory allocated using \doxylink{group___c_u_d_a___m_e_m_gada6927828b81f5415eb0a7cb0134e522}{cu\+Mem\+Host\+Alloc} with the \doxylink{group___c_u_d_a___t_y_p_e_s_ga7361580951deecace15352c97a210038}{CU\+\_\+\+MEMHOSTALLOC\+\_\+\+WRITECOMBINED} flag For these types of allocation there will exist separate, disjoint host and device addresses for accessing the allocation. In particular
+\item The host address will correspond to an invalid unmapped device address (which will result in an exception if accessed from the device)
+\item The device address will correspond to an invalid unmapped host address (which will result in an exception if accessed from the host). For these types of allocations, querying \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573aab17d9902b1b631982ae6a3a9a436fdc}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+HOST\+\_\+\+POINTER} and \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573ab5446064bbfa484ea8d13025f1573d5d}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+DEVICE\+\_\+\+POINTER} may be used to retrieve the host and device addresses from either address.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ Returned pointer attribute value \\
+\hline
+{\em attribute} & -\/ Pointer attribute to query \\
+\hline
+{\em ptr} & -\/ Pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga9e6da20bc3c5f8ea343c9b33f8b607c0}{cu\+Pointer\+Set\+Attribute}, cu\+Mem\+Alloc, cu\+Mem\+Free, cu\+Mem\+Alloc\+Host, \doxylink{group___c_u_d_a___m_e_m_gaecabf603c2f5547fc30a15ec1135b425}{cu\+Mem\+Free\+Host}, \doxylink{group___c_u_d_a___m_e_m_gada6927828b81f5415eb0a7cb0134e522}{cu\+Mem\+Host\+Alloc}, cu\+Mem\+Host\+Register, \doxylink{group___c_u_d_a___m_e_m_gabf51d39fdcba8462474a82c244689b1b}{cu\+Mem\+Host\+Unregister}, \doxylink{group___c_u_d_a_r_t___u_n_i_f_i_e_d_gafdc25be0be9b7eed05fa659b80bd82e9}{cuda\+Pointer\+Get\+Attributes} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_ga386fc386cca447017a711e0b7d9871d5}\label{group___c_u_d_a___u_n_i_f_i_e_d_ga386fc386cca447017a711e0b7d9871d5} 
+\index{Unified Addressing@{Unified Addressing}!cuPointerGetAttributes@{cuPointerGetAttributes}}
+\index{cuPointerGetAttributes@{cuPointerGetAttributes}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cuPointerGetAttributes()}{cuPointerGetAttributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Pointer\+Get\+Attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Attributes,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga61280a80cd7d18474e368bc60c46a2c3}{CUpointer\+\_\+attribute}} \texorpdfstring{$\ast$}{*}}]{attributes,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Returns information about a pointer. 
+
+The supported attributes are (refer to \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93}{cu\+Pointer\+Get\+Attribute} for attribute descriptions and restrictions)\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573af0470fdbd1a5ff72c341f762f49506ab}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+CONTEXT}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573a0409e16293b60b383f30a9b417b2917c}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+MEMORY\+\_\+\+TYPE}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573ab5446064bbfa484ea8d13025f1573d5d}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+DEVICE\+\_\+\+POINTER}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573aab17d9902b1b631982ae6a3a9a436fdc}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+HOST\+\_\+\+POINTER}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573adb5380c3201afdae3556cce8834504e1}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+SYNC\+\_\+\+MEMOPS}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573ad891336d10c16c3ea8140fa581c5446f}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+BUFFER\+\_\+\+ID}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573a893cfce785d799fb93826537fbb72a1d}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+IS\+\_\+\+MANAGED}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573acb7636b0198450ddb390ab87e98d83a0}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+DEVICE\+\_\+\+ORDINAL}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573a60f2fa33283dda44d552e828bdcc4cdc}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+RANGE\+\_\+\+START\+\_\+\+ADDR}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573a339f4a7e16696c0a2a4bcc4acf394ec4}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+RANGE\+\_\+\+SIZE}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573a0bae89da103451e804fc005fb5f3ea78}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+MAPPED}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573ab9f25a1b90274b624254eaaf836102fc}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+IS\+\_\+\+LEGACY\+\_\+\+CUDA\+\_\+\+IPC\+\_\+\+CAPABLE}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573aa1f518cc4336f0f286b36a748ad91a0e}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+ALLOWED\+\_\+\+HANDLE\+\_\+\+TYPES}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggab3c95cb65dc7cb3e03e562d129cbb573a23a9869c7f811f700ed67dfd762c26e0}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+MEMPOOL\+\_\+\+HANDLE}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Attributes} & -\/ Number of attributes to query \\
+\hline
+{\em attributes} & -\/ An array of attributes to query (num\+Attributes and the number of attributes in this array should match) \\
+\hline
+{\em data} & -\/ A two-\/dimensional array containing pointers to memory locations where the result of each attribute query will be written to. \\
+\hline
+{\em ptr} & -\/ Pointer to query\\
+\hline
+\end{DoxyParams}
+Unlike \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93}{cu\+Pointer\+Get\+Attribute}, this function will not return an error when the {\ttfamily ptr} encountered is not a valid CUDA pointer. Instead, the attributes are assigned default NULL values and CUDA\+\_\+\+SUCCESS is returned.
+
+If {\ttfamily ptr} was not allocated by, mapped by, or registered with a \doxylink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext} which uses UVA (Unified Virtual Addressing), \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} is returned.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93}{cu\+Pointer\+Get\+Attribute}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga9e6da20bc3c5f8ea343c9b33f8b607c0}{cu\+Pointer\+Set\+Attribute}, \doxylink{group___c_u_d_a_r_t___u_n_i_f_i_e_d_gafdc25be0be9b7eed05fa659b80bd82e9}{cuda\+Pointer\+Get\+Attributes} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___u_n_i_f_i_e_d_ga9e6da20bc3c5f8ea343c9b33f8b607c0}\label{group___c_u_d_a___u_n_i_f_i_e_d_ga9e6da20bc3c5f8ea343c9b33f8b607c0} 
+\index{Unified Addressing@{Unified Addressing}!cuPointerSetAttribute@{cuPointerSetAttribute}}
+\index{cuPointerSetAttribute@{cuPointerSetAttribute}!Unified Addressing@{Unified Addressing}}
+\doxysubsubsection{\texorpdfstring{cuPointerSetAttribute()}{cuPointerSetAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Pointer\+Set\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{value,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga61280a80cd7d18474e368bc60c46a2c3}{CUpointer\+\_\+attribute}}}]{attribute,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Set attributes on a previously allocated memory region. 
+
+The supported attributes are\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+POINTER\+\_\+\+ATTRIBUTE\+\_\+\+SYNC\+\_\+\+MEMOPS\+:}
+
+A boolean attribute that can either be set (1) or unset (0). When set, the region of memory that {\ttfamily ptr} points to is guaranteed to always synchronize memory operations that are synchronous. If there are some previously initiated synchronous memory operations that are pending when this attribute is set, the function does not return until those memory operations are complete. See further documentation in the section titled "{}\+API synchronization behavior"{} to learn more about cases when synchronous memory operations can exhibit asynchronous behavior. {\ttfamily value} will be considered as a pointer to an unsigned integer to which this attribute is to be set.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Pointer to memory containing the value to be set \\
+\hline
+{\em attribute} & -\/ Pointer attribute to set \\
+\hline
+{\em ptr} & -\/ Pointer to a memory region allocated using CUDA memory allocation APIs\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga2a405180e9a727396e6f407d213b0c93}{cu\+Pointer\+Get\+Attribute}, \doxylink{group___c_u_d_a___u_n_i_f_i_e_d_ga386fc386cca447017a711e0b7d9871d5}{cu\+Pointer\+Get\+Attributes}, cu\+Mem\+Alloc, cu\+Mem\+Free, cu\+Mem\+Alloc\+Host, \doxylink{group___c_u_d_a___m_e_m_gaecabf603c2f5547fc30a15ec1135b425}{cu\+Mem\+Free\+Host}, \doxylink{group___c_u_d_a___m_e_m_gada6927828b81f5415eb0a7cb0134e522}{cu\+Mem\+Host\+Alloc}, cu\+Mem\+Host\+Register, \doxylink{group___c_u_d_a___m_e_m_gabf51d39fdcba8462474a82c244689b1b}{cu\+Mem\+Host\+Unregister} 
+\end{DoxySeeAlso}

@@ -1,0 +1,101 @@
+\doxysection{cuda\+Resource\+Desc Struct Reference}
+\hypertarget{structcuda_resource_desc}{}\label{structcuda_resource_desc}\index{cudaResourceDesc@{cudaResourceDesc}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae86ec7f5bbbf5bfc579189a9950a3be9}{cuda\+Resource\+Type}} \mbox{\hyperlink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{res\+Type}}
+\item 
+\Hypertarget{structcuda_resource_desc_a50814b8dc84467e90163b2b4309a2265}\label{structcuda_resource_desc_a50814b8dc84467e90163b2b4309a2265} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}} \mbox{\hyperlink{structcuda_resource_desc_ad3316a0430bbfd23bd77a333c5a368a7}{array}}\\
+\>\} {\bfseries array}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga1b03ad14fc0ab86f8b033837f5562d8a}{cudaMipmappedArray\_t}} \mbox{\hyperlink{structcuda_resource_desc_a13f1040b6be810526704b34b2e77a118}{mipmap}}\\
+\>\} {\bfseries mipmap}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_resource_desc_a002aab9a499eb9fca0592f788da1d986}{devPtr}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}} \mbox{\hyperlink{structcuda_resource_desc_a8c4b49840bbe23b76ddce2234c2c280a}{desc}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{structcuda_resource_desc_a74b934bae902bc25c0204210e049d40e}{sizeInBytes}}\\
+\>\} {\bfseries linear}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_resource_desc_a002aab9a499eb9fca0592f788da1d986}{devPtr}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}} \mbox{\hyperlink{structcuda_resource_desc_a8c4b49840bbe23b76ddce2234c2c280a}{desc}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{structcuda_resource_desc_a7471beb8c5b903e336abc873e121d524}{width}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{structcuda_resource_desc_a44ce5e32d83540e0697a2db8436c98d5}{height}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}} \mbox{\hyperlink{structcuda_resource_desc_a46627bc06bf3a469d9d7ce5df7c1c0e6}{pitchInBytes}}\\
+\>\} {\bfseries pitch2D}\\
+\} {\bfseries res}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA resource descriptor 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_resource_desc_ad3316a0430bbfd23bd77a333c5a368a7}\label{structcuda_resource_desc_ad3316a0430bbfd23bd77a333c5a368a7} 
+\index{cudaResourceDesc@{cudaResourceDesc}!array@{array}}
+\index{array@{array}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cuda\+Array\+\_\+t}} cuda\+Resource\+Desc\+::array}
+
+CUDA array \Hypertarget{structcuda_resource_desc_a8c4b49840bbe23b76ddce2234c2c280a}\label{structcuda_resource_desc_a8c4b49840bbe23b76ddce2234c2c280a} 
+\index{cudaResourceDesc@{cudaResourceDesc}!desc@{desc}}
+\index{desc@{desc}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{desc}{desc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc}} cuda\+Resource\+Desc\+::desc}
+
+Channel descriptor \Hypertarget{structcuda_resource_desc_a002aab9a499eb9fca0592f788da1d986}\label{structcuda_resource_desc_a002aab9a499eb9fca0592f788da1d986} 
+\index{cudaResourceDesc@{cudaResourceDesc}!devPtr@{devPtr}}
+\index{devPtr@{devPtr}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{devPtr}{devPtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+Resource\+Desc\+::dev\+Ptr}
+
+Device pointer \Hypertarget{structcuda_resource_desc_a44ce5e32d83540e0697a2db8436c98d5}\label{structcuda_resource_desc_a44ce5e32d83540e0697a2db8436c98d5} 
+\index{cudaResourceDesc@{cudaResourceDesc}!height@{height}}
+\index{height@{height}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Resource\+Desc\+::height}
+
+Height of the array in elements \Hypertarget{structcuda_resource_desc_a13f1040b6be810526704b34b2e77a118}\label{structcuda_resource_desc_a13f1040b6be810526704b34b2e77a118} 
+\index{cudaResourceDesc@{cudaResourceDesc}!mipmap@{mipmap}}
+\index{mipmap@{mipmap}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{mipmap}{mipmap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga1b03ad14fc0ab86f8b033837f5562d8a}{cuda\+Mipmapped\+Array\+\_\+t}} cuda\+Resource\+Desc\+::mipmap}
+
+CUDA mipmapped array \Hypertarget{structcuda_resource_desc_a46627bc06bf3a469d9d7ce5df7c1c0e6}\label{structcuda_resource_desc_a46627bc06bf3a469d9d7ce5df7c1c0e6} 
+\index{cudaResourceDesc@{cudaResourceDesc}!pitchInBytes@{pitchInBytes}}
+\index{pitchInBytes@{pitchInBytes}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{pitchInBytes}{pitchInBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Resource\+Desc\+::pitch\+In\+Bytes}
+
+Pitch between two rows in bytes \Hypertarget{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}\label{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580} 
+\index{cudaResourceDesc@{cudaResourceDesc}!resType@{resType}}
+\index{resType@{resType}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{resType}{resType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae86ec7f5bbbf5bfc579189a9950a3be9}{cuda\+Resource\+Type}} cuda\+Resource\+Desc\+::res\+Type}
+
+Resource type \Hypertarget{structcuda_resource_desc_a74b934bae902bc25c0204210e049d40e}\label{structcuda_resource_desc_a74b934bae902bc25c0204210e049d40e} 
+\index{cudaResourceDesc@{cudaResourceDesc}!sizeInBytes@{sizeInBytes}}
+\index{sizeInBytes@{sizeInBytes}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{sizeInBytes}{sizeInBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Resource\+Desc\+::size\+In\+Bytes}
+
+Size in bytes \Hypertarget{structcuda_resource_desc_a7471beb8c5b903e336abc873e121d524}\label{structcuda_resource_desc_a7471beb8c5b903e336abc873e121d524} 
+\index{cudaResourceDesc@{cudaResourceDesc}!width@{width}}
+\index{width@{width}!cudaResourceDesc@{cudaResourceDesc}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Resource\+Desc\+::width}
+
+Width of the array in elements 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

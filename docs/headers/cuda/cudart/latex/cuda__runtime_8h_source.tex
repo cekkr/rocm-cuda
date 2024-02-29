@@ -1,0 +1,923 @@
+\doxysection{cuda\+\_\+runtime.\+h}
+\hypertarget{cuda__runtime_8h_source}{}\label{cuda__runtime_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 1993-\/2018\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDA\_RUNTIME\_H\_\_)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_RUNTIME\_H\_\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_\_)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_\_}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ \_\_UNDEF\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_CUDA\_RUNTIME\_H\_\_}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#if\ defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#if\ defined(\_\_clang\_\_)\ ||\ (!defined(\_\_PGIC\_\_)\ \&\&\ (\_\_GNUC\_\_\ >\ 4\ ||\ (\_\_GNUC\_\_\ ==\ 4\ \&\&\ \_\_GNUC\_MINOR\_\_\ >=\ 6)))}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ push}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#if\ defined(\_\_clang\_\_)\ ||\ (!defined(\_\_PGIC\_\_)\ \&\&\ (\_\_GNUC\_\_\ >\ 4\ ||\ (\_\_GNUC\_\_\ ==\ 4\ \&\&\ \_\_GNUC\_MINOR\_\_\ >=\ 2)))}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ ignored\ "{}-\/Wunused-\/function"{}}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#pragma\ warning(push)}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#pragma\ warning(disable:\ 4820)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#ifdef\ \_\_QNX\_\_}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#if\ (\_\_GNUC\_\_\ ==\ 4\ \&\&\ \_\_GNUC\_MINOR\_\_\ >=\ 7)}}
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\_t}};}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00077\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00078\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00079\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00080\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00081\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#include\ "{}crt/host\_config.h"{}}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00086\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00087\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00088\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00089\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#include\ "{}builtin\_types.h"{}}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#include\ "{}library\_types.h"{}}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ EXCLUDE\_FROM\_RTC}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#include\ "{}channel\_descriptor.h"{}}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#include\ "{}cuda\_runtime\_api.h"{}}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#include\ "{}driver\_functions.h"{}}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#undef\ EXCLUDE\_FROM\_RTC}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#include\ "{}crt/host\_defines.h"{}}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#include\ "{}vector\_functions.h"{}}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDACC\_\_)}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#include\ "{}nvrtc\_device\_runtime.h"{}}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#include\ "{}crt/device\_functions.h"{}}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#include\ "{}crt/common\_functions.h"{}}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#include\ "{}cuda\_surface\_types.h"{}}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#include\ "{}cuda\_texture\_types.h"{}}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#include\ "{}device\_launch\_parameters.h"{}}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{/*\ !\_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ EXCLUDE\_FROM\_RTC}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#include\ "{}crt/common\_functions.h"{}}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#include\ "{}cuda\_surface\_types.h"{}}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#include\ "{}cuda\_texture\_types.h"{}}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#include\ "{}crt/device\_functions.h"{}}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#include\ "{}device\_launch\_parameters.h"{}}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDACC\_EXTENDED\_LAMBDA\_\_)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00124\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_nv\_lambda\_preheader\_injection}}\ \{\ \};}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ defined(\_\_CUDACC\_EXTENDED\_LAMBDA\_\_)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#undef\ EXCLUDE\_FROM\_RTC}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CUDACC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#if\ defined(\_\_DOXYGEN\_ONLY\_\_)\ ||\ defined(CUDA\_ENABLE\_DEPRECATED)}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED\ \_\_declspec(deprecated)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#elif\ defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED\ \_\_attribute\_\_((deprecated))}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00147\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00148\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00149\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00150\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00201\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00202\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaaa780bd93440640cd7de502788ac895e}{cudaLaunchKernel}}(}
+\DoxyCodeLine{00203\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ *func,}
+\DoxyCodeLine{00204\ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ gridDim,}
+\DoxyCodeLine{00205\ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ blockDim,}
+\DoxyCodeLine{00206\ \ \ \textcolor{keywordtype}{void}\ **args,}
+\DoxyCodeLine{00207\ \ \ \textcolor{keywordtype}{size\_t}\ sharedMem\ =\ 0,}
+\DoxyCodeLine{00208\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ stream\ =\ 0}
+\DoxyCodeLine{00209\ )}
+\DoxyCodeLine{00210\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ return\ ::cudaLaunchKernel((\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *)func,\ gridDim,\ blockDim,\ args,\ sharedMem,\ stream);}
+\DoxyCodeLine{00212\ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00263\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00264\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga4c05ee29e2c42af2978bd19e4ab47330}{cudaLaunchCooperativeKernel}}(}
+\DoxyCodeLine{00265\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ *func,}
+\DoxyCodeLine{00266\ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ gridDim,}
+\DoxyCodeLine{00267\ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ blockDim,}
+\DoxyCodeLine{00268\ \ \ \textcolor{keywordtype}{void}\ **args,}
+\DoxyCodeLine{00269\ \ \ \textcolor{keywordtype}{size\_t}\ sharedMem\ =\ 0,}
+\DoxyCodeLine{00270\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ stream\ =\ 0}
+\DoxyCodeLine{00271\ )}
+\DoxyCodeLine{00272\ \{}
+\DoxyCodeLine{00273\ \ \ \ \ return\ ::cudaLaunchCooperativeKernel((\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *)func,\ gridDim,\ blockDim,\ args,\ sharedMem,\ stream);}
+\DoxyCodeLine{00274\ \}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00307\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_v_e_n_t_gaf95514807c666994e61b94c93ef10a2b}{cudaEventCreate}}(}
+\DoxyCodeLine{00308\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa20877ae287175ecb9bd358a4daabe8d}{cudaEvent\_t}}\ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{event}},}
+\DoxyCodeLine{00309\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ flags}
+\DoxyCodeLine{00310\ )}
+\DoxyCodeLine{00311\ \{}
+\DoxyCodeLine{00312\ \ \ return\ ::cudaEventCreateWithFlags(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{event}},\ flags);}
+\DoxyCodeLine{00313\ \}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00372\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga9319967aebbae316ea45f540f27974b7}{cudaMallocHost}}(}
+\DoxyCodeLine{00373\ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ **ptr,}
+\DoxyCodeLine{00374\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00375\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ flags}
+\DoxyCodeLine{00376\ )}
+\DoxyCodeLine{00377\ \{}
+\DoxyCodeLine{00378\ \ \ return\ ::cudaHostAlloc(ptr,\ size,\ flags);}
+\DoxyCodeLine{00379\ \}}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00382\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga82f207b7718d36489753c35ad398a41a}{cudaHostAlloc}}(}
+\DoxyCodeLine{00383\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ **ptr,}
+\DoxyCodeLine{00384\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00385\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ flags}
+\DoxyCodeLine{00386\ )}
+\DoxyCodeLine{00387\ \{}
+\DoxyCodeLine{00388\ \ \ return\ ::cudaHostAlloc((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)ptr,\ size,\ flags);}
+\DoxyCodeLine{00389\ \}}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00392\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_gac03e953b51e1011847c199286de44ac9}{cudaHostGetDevicePointer}}(}
+\DoxyCodeLine{00393\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ **\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pDevice}},}
+\DoxyCodeLine{00394\ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pHost}},}
+\DoxyCodeLine{00395\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ flags}
+\DoxyCodeLine{00396\ )}
+\DoxyCodeLine{00397\ \{}
+\DoxyCodeLine{00398\ \ \ return\ ::cudaHostGetDevicePointer((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pDevice}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pHost}},\ flags);}
+\DoxyCodeLine{00399\ \}}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00501\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00502\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_gac85541d7e0fa6bdaeed967fee1c8e780}{cudaMallocManaged}}(}
+\DoxyCodeLine{00503\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ **devPtr,}
+\DoxyCodeLine{00504\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00505\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ flags\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4808e47eba73eb94622ec70a9f9b91ff}{cudaMemAttachGlobal}}}
+\DoxyCodeLine{00506\ )}
+\DoxyCodeLine{00507\ \{}
+\DoxyCodeLine{00508\ \ \ return\ ::cudaMallocManaged((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)devPtr,\ size,\ flags);}
+\DoxyCodeLine{00509\ \}}
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00591\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00592\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___s_t_r_e_a_m_gab873a3bc43def9456d72f9561fe79e65}{cudaStreamAttachMemAsync}}(}
+\DoxyCodeLine{00593\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \ \ stream,}
+\DoxyCodeLine{00594\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ *devPtr,}
+\DoxyCodeLine{00595\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{length}}\ =\ 0,}
+\DoxyCodeLine{00596\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ flags\ \ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gadc191442d08fc3a9de4cf055edfd2dbe}{cudaMemAttachSingle}}}
+\DoxyCodeLine{00597\ )}
+\DoxyCodeLine{00598\ \{}
+\DoxyCodeLine{00599\ \ \ return\ ::cudaStreamAttachMemAsync(stream,\ (\textcolor{keywordtype}{void}*)devPtr,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{length}},\ flags);}
+\DoxyCodeLine{00600\ \}}
+\DoxyCodeLine{00601\ }
+\DoxyCodeLine{00602\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00603\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga2ec57cea7c57e8e3c4beca43dd327134}{cudaMalloc}}(}
+\DoxyCodeLine{00604\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ **devPtr,}
+\DoxyCodeLine{00605\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ size}
+\DoxyCodeLine{00606\ )}
+\DoxyCodeLine{00607\ \{}
+\DoxyCodeLine{00608\ \ \ return\ ::cudaMalloc((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)devPtr,\ size);}
+\DoxyCodeLine{00609\ \}}
+\DoxyCodeLine{00610\ }
+\DoxyCodeLine{00611\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00612\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga9319967aebbae316ea45f540f27974b7}{cudaMallocHost}}(}
+\DoxyCodeLine{00613\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ **ptr,}
+\DoxyCodeLine{00614\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00615\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ flags\ =\ 0}
+\DoxyCodeLine{00616\ )}
+\DoxyCodeLine{00617\ \{}
+\DoxyCodeLine{00618\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga9319967aebbae316ea45f540f27974b7}{cudaMallocHost}}((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)ptr,\ size,\ flags);}
+\DoxyCodeLine{00619\ \}}
+\DoxyCodeLine{00620\ }
+\DoxyCodeLine{00621\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00622\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_gafba768d1a49ed27c0672832403544252}{cudaMallocPitch}}(}
+\DoxyCodeLine{00623\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ **devPtr,}
+\DoxyCodeLine{00624\ \ \ \textcolor{keywordtype}{size\_t}\ \ *pitch,}
+\DoxyCodeLine{00625\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ width,}
+\DoxyCodeLine{00626\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ height}
+\DoxyCodeLine{00627\ )}
+\DoxyCodeLine{00628\ \{}
+\DoxyCodeLine{00629\ \ \ return\ ::cudaMallocPitch((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)devPtr,\ pitch,\ width,\ height);}
+\DoxyCodeLine{00630\ \}}
+\DoxyCodeLine{00631\ }
+\DoxyCodeLine{00641\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cudaMallocAsync}}(}
+\DoxyCodeLine{00642\ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ **ptr,}
+\DoxyCodeLine{00643\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00644\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cudaMemPool\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{memPool}},}
+\DoxyCodeLine{00645\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \ stream}
+\DoxyCodeLine{00646\ )}
+\DoxyCodeLine{00647\ \{}
+\DoxyCodeLine{00648\ \ \ return\ ::cudaMallocFromPoolAsync(ptr,\ size,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{memPool}},\ stream);}
+\DoxyCodeLine{00649\ \}}
+\DoxyCodeLine{00650\ }
+\DoxyCodeLine{00651\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00652\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cudaMallocAsync}}(}
+\DoxyCodeLine{00653\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ **ptr,}
+\DoxyCodeLine{00654\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00655\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cudaMemPool\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{memPool}},}
+\DoxyCodeLine{00656\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \ stream}
+\DoxyCodeLine{00657\ )}
+\DoxyCodeLine{00658\ \{}
+\DoxyCodeLine{00659\ \ \ return\ ::cudaMallocFromPoolAsync((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)ptr,\ size,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{memPool}},\ stream);}
+\DoxyCodeLine{00660\ \}}
+\DoxyCodeLine{00661\ }
+\DoxyCodeLine{00662\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00663\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cudaMallocAsync}}(}
+\DoxyCodeLine{00664\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ **ptr,}
+\DoxyCodeLine{00665\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00666\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \ stream}
+\DoxyCodeLine{00667\ )}
+\DoxyCodeLine{00668\ \{}
+\DoxyCodeLine{00669\ \ \ return\ ::cudaMallocAsync((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)ptr,\ size,\ stream);}
+\DoxyCodeLine{00670\ \}}
+\DoxyCodeLine{00671\ }
+\DoxyCodeLine{00672\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00673\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga18710fb7c9bc23959692a6e213d30dbb}{cudaMallocFromPoolAsync}}(}
+\DoxyCodeLine{00674\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ **ptr,}
+\DoxyCodeLine{00675\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00676\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cudaMemPool\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{memPool}},}
+\DoxyCodeLine{00677\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \ stream}
+\DoxyCodeLine{00678\ )}
+\DoxyCodeLine{00679\ \{}
+\DoxyCodeLine{00680\ \ \ return\ ::cudaMallocFromPoolAsync((\textcolor{keywordtype}{void}**)(\textcolor{keywordtype}{void}*)ptr,\ size,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{memPool}},\ stream);}
+\DoxyCodeLine{00681\ \}}
+\DoxyCodeLine{00682\ }
+\DoxyCodeLine{00683\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDACC\_\_)}}
+\DoxyCodeLine{00684\ }
+\DoxyCodeLine{00720\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00721\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_gab81cd4dead648a67aa745cb1e10059ba}{cudaMemcpyToSymbol}}(}
+\DoxyCodeLine{00722\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{00723\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offset\ =\ 0,}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ \ kind\ \ \ =\ cudaMemcpyHostToDevice}
+\DoxyCodeLine{00727\ )}
+\DoxyCodeLine{00728\ \{}
+\DoxyCodeLine{00729\ \ \ return\ ::cudaMemcpyToSymbol((\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{00730\ \}}
+\DoxyCodeLine{00731\ }
+\DoxyCodeLine{00774\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00775\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga6110c29da79fc76851d202e27de9aa2c}{cudaMemcpyToSymbolAsync}}(}
+\DoxyCodeLine{00776\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{00777\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},}
+\DoxyCodeLine{00778\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offset\ =\ 0,}
+\DoxyCodeLine{00780\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ \ kind\ \ \ =\ cudaMemcpyHostToDevice,}
+\DoxyCodeLine{00781\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \ \ \ \ \ \ \ \ stream\ =\ 0}
+\DoxyCodeLine{00782\ )}
+\DoxyCodeLine{00783\ \{}
+\DoxyCodeLine{00784\ \ \ return\ ::cudaMemcpyToSymbolAsync((\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind,\ stream);}
+\DoxyCodeLine{00785\ \}}
+\DoxyCodeLine{00786\ }
+\DoxyCodeLine{00822\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00823\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga9356cb69eef5a12c7ea255c1b010f121}{cudaMemcpyFromSymbol}}(}
+\DoxyCodeLine{00824\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *dst,}
+\DoxyCodeLine{00825\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{00826\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{00827\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offset\ =\ 0,}
+\DoxyCodeLine{00828\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ \ kind\ \ \ =\ cudaMemcpyDeviceToHost}
+\DoxyCodeLine{00829\ )}
+\DoxyCodeLine{00830\ \{}
+\DoxyCodeLine{00831\ \ \ return\ ::cudaMemcpyFromSymbol(dst,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{00832\ \}}
+\DoxyCodeLine{00833\ }
+\DoxyCodeLine{00876\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00877\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga4be8411d879e1ed4589da65c87d99857}{cudaMemcpyFromSymbolAsync}}(}
+\DoxyCodeLine{00878\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *dst,}
+\DoxyCodeLine{00879\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{00880\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{00881\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offset\ =\ 0,}
+\DoxyCodeLine{00882\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ \ kind\ \ \ =\ cudaMemcpyDeviceToHost,}
+\DoxyCodeLine{00883\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \ \ \ \ \ \ \ \ stream\ =\ 0}
+\DoxyCodeLine{00884\ )}
+\DoxyCodeLine{00885\ \{}
+\DoxyCodeLine{00886\ \ \ return\ ::cudaMemcpyFromSymbolAsync(dst,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind,\ stream);}
+\DoxyCodeLine{00887\ \}}
+\DoxyCodeLine{00888\ }
+\DoxyCodeLine{00945\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00946\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga2df89e6a6c1572b067b670a31aac4ed7}{cudaGraphAddMemcpyNodeToSymbol}}(}
+\DoxyCodeLine{00947\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pGraphNode}},}
+\DoxyCodeLine{00948\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gabb3d2a1b44af920c933d053feaa6f5e0}{cudaGraph\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{graph}},}
+\DoxyCodeLine{00949\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pDependencies}},}
+\DoxyCodeLine{00950\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numDependencies}},}
+\DoxyCodeLine{00951\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{00952\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},}
+\DoxyCodeLine{00953\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{00954\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset,}
+\DoxyCodeLine{00955\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ kind)}
+\DoxyCodeLine{00956\ \{}
+\DoxyCodeLine{00957\ \ \ return\ ::cudaGraphAddMemcpyNodeToSymbol(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pGraphNode}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{graph}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pDependencies}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numDependencies}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{00958\ \}}
+\DoxyCodeLine{00959\ }
+\DoxyCodeLine{01016\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01017\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga431bf52cf27f78bf8a65bbf9561f2073}{cudaGraphAddMemcpyNodeFromSymbol}}(}
+\DoxyCodeLine{01018\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pGraphNode}},}
+\DoxyCodeLine{01019\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gabb3d2a1b44af920c933d053feaa6f5e0}{cudaGraph\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{graph}},}
+\DoxyCodeLine{01020\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pDependencies}},}
+\DoxyCodeLine{01021\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numDependencies}},}
+\DoxyCodeLine{01022\ \ \ \ \ \textcolor{keywordtype}{void}*\ dst,}
+\DoxyCodeLine{01023\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{01024\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{01025\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset,}
+\DoxyCodeLine{01026\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ kind)}
+\DoxyCodeLine{01027\ \{}
+\DoxyCodeLine{01028\ \ \ return\ ::cudaGraphAddMemcpyNodeFromSymbol(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pGraphNode}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{graph}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pDependencies}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numDependencies}},\ dst,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{01029\ \}}
+\DoxyCodeLine{01030\ }
+\DoxyCodeLine{01067\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01068\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga187caf466c4b00be2c0fe9b6c76b2349}{cudaGraphMemcpyNodeSetParamsToSymbol}}(}
+\DoxyCodeLine{01069\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},}
+\DoxyCodeLine{01070\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{01071\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},}
+\DoxyCodeLine{01072\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{01073\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset,}
+\DoxyCodeLine{01074\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ kind)}
+\DoxyCodeLine{01075\ \{}
+\DoxyCodeLine{01076\ \ \ return\ ::cudaGraphMemcpyNodeSetParamsToSymbol(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{01077\ \}}
+\DoxyCodeLine{01078\ }
+\DoxyCodeLine{01115\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01116\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_gaafc5457db8d20e4cd59cf92a6538c4ca}{cudaGraphMemcpyNodeSetParamsFromSymbol}}(}
+\DoxyCodeLine{01117\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},}
+\DoxyCodeLine{01118\ \ \ \ \ \textcolor{keywordtype}{void}*\ dst,}
+\DoxyCodeLine{01119\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{01120\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{01121\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset,}
+\DoxyCodeLine{01122\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ kind)}
+\DoxyCodeLine{01123\ \{}
+\DoxyCodeLine{01124\ \ \ return\ ::cudaGraphMemcpyNodeSetParamsFromSymbol(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},\ dst,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{01125\ \}}
+\DoxyCodeLine{01126\ }
+\DoxyCodeLine{01173\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01174\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga58afcf6c1e43aa7c774e97fcebfa5040}{cudaGraphExecMemcpyNodeSetParamsToSymbol}}(}
+\DoxyCodeLine{01175\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga2fee13c408fb7da16401e25c1ae6bdb9}{cudaGraphExec\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hGraphExec}},}
+\DoxyCodeLine{01176\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},}
+\DoxyCodeLine{01177\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{01178\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},}
+\DoxyCodeLine{01179\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{01180\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset,}
+\DoxyCodeLine{01181\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ kind)}
+\DoxyCodeLine{01182\ \{}
+\DoxyCodeLine{01183\ \ \ \ \ return\ ::cudaGraphExecMemcpyNodeSetParamsToSymbol(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hGraphExec}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{src}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{01184\ \}}
+\DoxyCodeLine{01185\ }
+\DoxyCodeLine{01232\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01233\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga3c8603e2822f1ca3a7c1a089c130d128}{cudaGraphExecMemcpyNodeSetParamsFromSymbol}}(}
+\DoxyCodeLine{01234\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga2fee13c408fb7da16401e25c1ae6bdb9}{cudaGraphExec\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hGraphExec}},}
+\DoxyCodeLine{01235\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},}
+\DoxyCodeLine{01236\ \ \ \ \ \textcolor{keywordtype}{void}*\ dst,}
+\DoxyCodeLine{01237\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},}
+\DoxyCodeLine{01238\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},}
+\DoxyCodeLine{01239\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset,}
+\DoxyCodeLine{01240\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ kind)}
+\DoxyCodeLine{01241\ \{}
+\DoxyCodeLine{01242\ \ \ return\ ::cudaGraphExecMemcpyNodeSetParamsFromSymbol(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hGraphExec}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{node}},\ dst,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}},\ offset,\ kind);}
+\DoxyCodeLine{01243\ \}}
+\DoxyCodeLine{01244\ }
+\DoxyCodeLine{01245\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103}}
+\DoxyCodeLine{01246\ }
+\DoxyCodeLine{01271\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01272\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga627ee9542b2f32c6d633a0399e4459fe}{cudaUserObjectCreate}}(}
+\DoxyCodeLine{01273\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8f6add7500a13a4353bd2249713e3712}{cudaUserObject\_t}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{object\_out}},}
+\DoxyCodeLine{01274\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{objectToWrap}},}
+\DoxyCodeLine{01275\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{initialRefcount}},}
+\DoxyCodeLine{01276\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ flags)}
+\DoxyCodeLine{01277\ \{}
+\DoxyCodeLine{01278\ \ \ \ \ return\ ::cudaUserObjectCreate(}
+\DoxyCodeLine{01279\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{object\_out}},}
+\DoxyCodeLine{01280\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{objectToWrap}},}
+\DoxyCodeLine{01281\ \ \ \ \ \ \ \ \ \ \ \ \ [](\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vpObj}})\ \{\ \textcolor{keyword}{delete}\ \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ *\textcolor{keyword}{>}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{vpObj}});\ \},}
+\DoxyCodeLine{01282\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{initialRefcount}},}
+\DoxyCodeLine{01283\ \ \ \ \ \ \ \ \ \ \ \ \ flags);}
+\DoxyCodeLine{01284\ \}}
+\DoxyCodeLine{01285\ }
+\DoxyCodeLine{01286\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01287\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga627ee9542b2f32c6d633a0399e4459fe}{cudaUserObjectCreate}}(}
+\DoxyCodeLine{01288\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8f6add7500a13a4353bd2249713e3712}{cudaUserObject\_t}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{object\_out}},}
+\DoxyCodeLine{01289\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{objectToWrap}},}
+\DoxyCodeLine{01290\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{initialRefcount}},}
+\DoxyCodeLine{01291\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga01a26d2bc061187ba54b67ecc2a4b0f3}{cudaUserObjectFlags}}\ flags)}
+\DoxyCodeLine{01292\ \{}
+\DoxyCodeLine{01293\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___g_r_a_p_h_ga627ee9542b2f32c6d633a0399e4459fe}{cudaUserObjectCreate}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{object\_out}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{objectToWrap}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{initialRefcount}},\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})flags);}
+\DoxyCodeLine{01294\ \}}
+\DoxyCodeLine{01295\ }
+\DoxyCodeLine{01296\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01297\ }
+\DoxyCodeLine{01321\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01322\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_gada468f1b3fbfae9ceb1450430ae6c833}{cudaGetSymbolAddress}}(}
+\DoxyCodeLine{01323\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ **devPtr,}
+\DoxyCodeLine{01324\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}}}
+\DoxyCodeLine{01325\ )}
+\DoxyCodeLine{01326\ \{}
+\DoxyCodeLine{01327\ \ \ return\ ::cudaGetSymbolAddress(devPtr,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}});}
+\DoxyCodeLine{01328\ \}}
+\DoxyCodeLine{01329\ }
+\DoxyCodeLine{01353\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01354\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_gaacaf71f61274272dccf72abebb2913c1}{cudaGetSymbolSize}}(}
+\DoxyCodeLine{01355\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ *size,}
+\DoxyCodeLine{01356\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}}}
+\DoxyCodeLine{01357\ )}
+\DoxyCodeLine{01358\ \{}
+\DoxyCodeLine{01359\ \ \ return\ ::cudaGetSymbolSize(size,\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{symbol}});}
+\DoxyCodeLine{01360\ \}}
+\DoxyCodeLine{01361\ }
+\DoxyCodeLine{01397\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01398\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cudaBindTexture}}(}
+\DoxyCodeLine{01399\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *offset,}
+\DoxyCodeLine{01400\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01401\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *devPtr,}
+\DoxyCodeLine{01402\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ \ \ \ \ \&desc,}
+\DoxyCodeLine{01403\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ size\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{UINT\_MAX}}}
+\DoxyCodeLine{01404\ )}
+\DoxyCodeLine{01405\ \{}
+\DoxyCodeLine{01406\ \ \ return\ ::cudaBindTexture(offset,\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ devPtr,\ \&desc,\ size);}
+\DoxyCodeLine{01407\ \}}
+\DoxyCodeLine{01408\ }
+\DoxyCodeLine{01443\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01444\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cudaBindTexture}}(}
+\DoxyCodeLine{01445\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *offset,}
+\DoxyCodeLine{01446\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01447\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *devPtr,}
+\DoxyCodeLine{01448\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ size\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{UINT\_MAX}}}
+\DoxyCodeLine{01449\ )}
+\DoxyCodeLine{01450\ \{}
+\DoxyCodeLine{01451\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cudaBindTexture}}(offset,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ devPtr,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}}.channelDesc,\ size);}
+\DoxyCodeLine{01452\ \}}
+\DoxyCodeLine{01453\ }
+\DoxyCodeLine{01500\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01501\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cudaBindTexture2D}}(}
+\DoxyCodeLine{01502\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *offset,}
+\DoxyCodeLine{01503\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01504\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *devPtr,}
+\DoxyCodeLine{01505\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ \ \ \ \ \&desc,}
+\DoxyCodeLine{01506\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ width,}
+\DoxyCodeLine{01507\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ height,}
+\DoxyCodeLine{01508\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pitch}
+\DoxyCodeLine{01509\ )}
+\DoxyCodeLine{01510\ \{}
+\DoxyCodeLine{01511\ \ \ return\ ::cudaBindTexture2D(offset,\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ devPtr,\ \&desc,\ width,\ height,\ pitch);}
+\DoxyCodeLine{01512\ \}}
+\DoxyCodeLine{01513\ }
+\DoxyCodeLine{01559\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01560\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cudaBindTexture2D}}(}
+\DoxyCodeLine{01561\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *offset,}
+\DoxyCodeLine{01562\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01563\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *devPtr,}
+\DoxyCodeLine{01564\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ width,}
+\DoxyCodeLine{01565\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ height,}
+\DoxyCodeLine{01566\ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pitch}
+\DoxyCodeLine{01567\ )}
+\DoxyCodeLine{01568\ \{}
+\DoxyCodeLine{01569\ \ \ return\ ::cudaBindTexture2D(offset,\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ devPtr,\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}}.channelDesc,\ width,\ height,\ pitch);}
+\DoxyCodeLine{01570\ \}}
+\DoxyCodeLine{01571\ }
+\DoxyCodeLine{01602\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01603\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cudaBindTextureToArray}}(}
+\DoxyCodeLine{01604\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01605\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga9a3dce149702581dbc3fc2fb9bb813b0}{cudaArray\_const\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ array,}
+\DoxyCodeLine{01606\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ \ \ \ \ \&desc}
+\DoxyCodeLine{01607\ )}
+\DoxyCodeLine{01608\ \{}
+\DoxyCodeLine{01609\ \ \ return\ ::cudaBindTextureToArray(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ array,\ \&desc);}
+\DoxyCodeLine{01610\ \}}
+\DoxyCodeLine{01611\ }
+\DoxyCodeLine{01641\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01642\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cudaBindTextureToArray}}(}
+\DoxyCodeLine{01643\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01644\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga9a3dce149702581dbc3fc2fb9bb813b0}{cudaArray\_const\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ array}
+\DoxyCodeLine{01645\ )}
+\DoxyCodeLine{01646\ \{}
+\DoxyCodeLine{01647\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ desc;}
+\DoxyCodeLine{01648\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga29002aca135dacb5e071fa3eb97743ba}{::cudaGetChannelDesc}}(\&desc,\ array);}
+\DoxyCodeLine{01649\ }
+\DoxyCodeLine{01650\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ ==\ cudaSuccess\ ?\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cudaBindTextureToArray}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ array,\ desc)\ :\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}};}
+\DoxyCodeLine{01651\ \}}
+\DoxyCodeLine{01652\ }
+\DoxyCodeLine{01683\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01684\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cudaBindTextureToMipmappedArray}}(}
+\DoxyCodeLine{01685\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01686\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga3aceb59159273bec67226fc336cd4f69}{cudaMipmappedArray\_const\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mipmappedArray}},}
+\DoxyCodeLine{01687\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ \ \ \ \ \&desc}
+\DoxyCodeLine{01688\ )}
+\DoxyCodeLine{01689\ \{}
+\DoxyCodeLine{01690\ \ \ return\ ::cudaBindTextureToMipmappedArray(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mipmappedArray}},\ \&desc);}
+\DoxyCodeLine{01691\ \}}
+\DoxyCodeLine{01692\ }
+\DoxyCodeLine{01722\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01723\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cudaBindTextureToMipmappedArray}}(}
+\DoxyCodeLine{01724\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},}
+\DoxyCodeLine{01725\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga3aceb59159273bec67226fc336cd4f69}{cudaMipmappedArray\_const\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mipmappedArray}}}
+\DoxyCodeLine{01726\ )}
+\DoxyCodeLine{01727\ \{}
+\DoxyCodeLine{01728\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ desc;}
+\DoxyCodeLine{01729\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{levelArray}};}
+\DoxyCodeLine{01730\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y_ga0329298439df8f7291c2b9d20b9c953b}{::cudaGetMipmappedArrayLevel}}(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{levelArray}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mipmappedArray}},\ 0);}
+\DoxyCodeLine{01731\ \ \ }
+\DoxyCodeLine{01732\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{01733\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}};}
+\DoxyCodeLine{01734\ \ \ \}}
+\DoxyCodeLine{01735\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga29002aca135dacb5e071fa3eb97743ba}{::cudaGetChannelDesc}}(\&desc,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{levelArray}});}
+\DoxyCodeLine{01736\ }
+\DoxyCodeLine{01737\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ ==\ cudaSuccess\ ?\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cudaBindTextureToMipmappedArray}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mipmappedArray}},\ desc)\ :\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}};}
+\DoxyCodeLine{01738\ \}}
+\DoxyCodeLine{01739\ }
+\DoxyCodeLine{01765\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01766\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gabed8596b84e028c46d79a3d239466f2f}{cudaUnbindTexture}}(}
+\DoxyCodeLine{01767\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}}}
+\DoxyCodeLine{01768\ )}
+\DoxyCodeLine{01769\ \{}
+\DoxyCodeLine{01770\ \ \ return\ ::cudaUnbindTexture(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}});}
+\DoxyCodeLine{01771\ \}}
+\DoxyCodeLine{01772\ }
+\DoxyCodeLine{01801\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim,\ enum\ cudaTextureReadMode\ readMode>}
+\DoxyCodeLine{01802\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga45554baf7e52311e64dcb6658aef1470}{cudaGetTextureAlignmentOffset}}(}
+\DoxyCodeLine{01803\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *offset,}
+\DoxyCodeLine{01804\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texture<T,\ dim,\ readMode>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}}}
+\DoxyCodeLine{01805\ )}
+\DoxyCodeLine{01806\ \{}
+\DoxyCodeLine{01807\ \ \ return\ ::cudaGetTextureAlignmentOffset(offset,\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{tex}});}
+\DoxyCodeLine{01808\ \}}
+\DoxyCodeLine{01809\ }
+\DoxyCodeLine{01853\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01854\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372}{cudaFuncSetCacheConfig}}(}
+\DoxyCodeLine{01855\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *func,}
+\DoxyCodeLine{01856\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga185ebd259a4a6225930172951f2ab6ef}{cudaFuncCache}}\ \ cacheConfig}
+\DoxyCodeLine{01857\ )}
+\DoxyCodeLine{01858\ \{}
+\DoxyCodeLine{01859\ \ \ return\ ::cudaFuncSetCacheConfig((\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)func,\ cacheConfig);}
+\DoxyCodeLine{01860\ \}}
+\DoxyCodeLine{01861\ }
+\DoxyCodeLine{01862\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01863\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gabe77ac48ebbd881d815ae541116596a9}{cudaFuncSetSharedMemConfig}}(}
+\DoxyCodeLine{01864\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *func,}
+\DoxyCodeLine{01865\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga6d8e7a6b415a7be9d411929d545572de}{cudaSharedMemConfig}}\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{config}}}
+\DoxyCodeLine{01866\ )}
+\DoxyCodeLine{01867\ \{}
+\DoxyCodeLine{01868\ \ \ return\ ::cudaFuncSetSharedMemConfig((\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)func,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{config}});}
+\DoxyCodeLine{01869\ \}}
+\DoxyCodeLine{01870\ }
+\DoxyCodeLine{01871\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_CUDACC\_\_}}
+\DoxyCodeLine{01872\ }
+\DoxyCodeLine{01901\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01902\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gae162c2e0a6864271d20cc60bb107abc1}{cudaOccupancyMaxActiveBlocksPerMultiprocessor}}(}
+\DoxyCodeLine{01903\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}},}
+\DoxyCodeLine{01904\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ func,}
+\DoxyCodeLine{01905\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},}
+\DoxyCodeLine{01906\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}})}
+\DoxyCodeLine{01907\ \{}
+\DoxyCodeLine{01908\ \ \ \ \ return\ ::cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)func,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga11570371f508845a9df47b17f85d90ac}{cudaOccupancyDefault}});}
+\DoxyCodeLine{01909\ \}}
+\DoxyCodeLine{01910\ }
+\DoxyCodeLine{01953\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{01954\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gafd44b9bd208a9d8bb3fefb9a7a65d425}{cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags}}(}
+\DoxyCodeLine{01955\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}},}
+\DoxyCodeLine{01956\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ func,}
+\DoxyCodeLine{01957\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},}
+\DoxyCodeLine{01958\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}},}
+\DoxyCodeLine{01959\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ flags)}
+\DoxyCodeLine{01960\ \{}
+\DoxyCodeLine{01961\ \ \ \ \ return\ ::cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)func,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}},\ flags);}
+\DoxyCodeLine{01962\ \}}
+\DoxyCodeLine{01963\ }
+\DoxyCodeLine{01967\ \textcolor{keyword}{class\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_cudaOccupancyB2DHelper}}\ \{}
+\DoxyCodeLine{01968\ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{n}};}
+\DoxyCodeLine{01969\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{01970\ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ CUDART\_DEVICE\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_cudaOccupancyB2DHelper}}(\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{n\_}})\ :\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{n}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{n\_}})\ \{\}}
+\DoxyCodeLine{01971\ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ CUDART\_DEVICE\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{operator()}}(\textcolor{keywordtype}{int})}
+\DoxyCodeLine{01972\ \ \ \{}
+\DoxyCodeLine{01973\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{n}};}
+\DoxyCodeLine{01974\ \ \ \}}
+\DoxyCodeLine{01975\ \};}
+\DoxyCodeLine{01976\ }
+\DoxyCodeLine{02023\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ UnaryFunction,\ \textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{02024\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ CUDART\_DEVICE\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags}}(}
+\DoxyCodeLine{02025\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}},}
+\DoxyCodeLine{02026\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},}
+\DoxyCodeLine{02027\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ func,}
+\DoxyCodeLine{02028\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{UnaryFunction}}\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToDynamicSMemSize}},}
+\DoxyCodeLine{02029\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ =\ 0,}
+\DoxyCodeLine{02030\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ flags\ =\ 0)}
+\DoxyCodeLine{02031\ \{}
+\DoxyCodeLine{02032\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02033\ }
+\DoxyCodeLine{02034\ \ \ \ \ \textcolor{comment}{//\ Device\ and\ function\ properties}}
+\DoxyCodeLine{02035\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device;}
+\DoxyCodeLine{02036\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_func_attributes}{cudaFuncAttributes}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}};}
+\DoxyCodeLine{02037\ }
+\DoxyCodeLine{02038\ \ \ \ \ \textcolor{comment}{//\ Limits}}
+\DoxyCodeLine{02039\ \ \ \ \ \textcolor{keywordtype}{int}\ maxThreadsPerMultiProcessor;}
+\DoxyCodeLine{02040\ \ \ \ \ \textcolor{keywordtype}{int}\ warpSize;}
+\DoxyCodeLine{02041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{devMaxThreadsPerBlock}};}
+\DoxyCodeLine{02042\ \ \ \ \ \textcolor{keywordtype}{int}\ multiProcessorCount;}
+\DoxyCodeLine{02043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{funcMaxThreadsPerBlock}};}
+\DoxyCodeLine{02044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyLimit}};}
+\DoxyCodeLine{02045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{granularity}};}
+\DoxyCodeLine{02046\ }
+\DoxyCodeLine{02047\ \ \ \ \ \textcolor{comment}{//\ Recorded\ maximum}}
+\DoxyCodeLine{02048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{maxBlockSize}}\ =\ 0;}
+\DoxyCodeLine{02049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}}\ \ \ \ =\ 0;}
+\DoxyCodeLine{02050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{maxOccupancy}}\ =\ 0;}
+\DoxyCodeLine{02051\ }
+\DoxyCodeLine{02052\ \ \ \ \ \textcolor{comment}{//\ Temporary}}
+\DoxyCodeLine{02053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTryAligned}};}
+\DoxyCodeLine{02054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTry}};}
+\DoxyCodeLine{02055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimitAligned}};}
+\DoxyCodeLine{02056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInBlocks}};}
+\DoxyCodeLine{02057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInThreads}};}
+\DoxyCodeLine{02058\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}};}
+\DoxyCodeLine{02059\ }
+\DoxyCodeLine{02061\ \ \ \ \ \textcolor{comment}{//\ Check\ user\ input}}
+\DoxyCodeLine{02063\ }
+\DoxyCodeLine{02064\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}}\ ||\ !\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}}\ ||\ !func)\ \{}
+\DoxyCodeLine{02065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cudaErrorInvalidValue;}
+\DoxyCodeLine{02066\ \ \ \ \ \}}
+\DoxyCodeLine{02067\ }
+\DoxyCodeLine{02069\ \ \ \ \ \textcolor{comment}{//\ Obtain\ device\ and\ function\ properties}}
+\DoxyCodeLine{02071\ }
+\DoxyCodeLine{02072\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga33e2490308f833d7fc5edc76ad9c4416}{::cudaGetDevice}}(\&device);}
+\DoxyCodeLine{02073\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{02074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02075\ \ \ \ \ \}}
+\DoxyCodeLine{02076\ }
+\DoxyCodeLine{02077\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___d_e_v_i_c_e_gade765bf7bb5df793bc506f4b8ad97d19}{cudaDeviceGetAttribute}}(}
+\DoxyCodeLine{02078\ \ \ \ \ \ \ \ \ \&maxThreadsPerMultiProcessor,}
+\DoxyCodeLine{02079\ \ \ \ \ \ \ \ \ cudaDevAttrMaxThreadsPerMultiProcessor,}
+\DoxyCodeLine{02080\ \ \ \ \ \ \ \ \ device);}
+\DoxyCodeLine{02081\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{02082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02083\ \ \ \ \ \}}
+\DoxyCodeLine{02084\ }
+\DoxyCodeLine{02085\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___d_e_v_i_c_e_gade765bf7bb5df793bc506f4b8ad97d19}{cudaDeviceGetAttribute}}(}
+\DoxyCodeLine{02086\ \ \ \ \ \ \ \ \ \&warpSize,}
+\DoxyCodeLine{02087\ \ \ \ \ \ \ \ \ cudaDevAttrWarpSize,}
+\DoxyCodeLine{02088\ \ \ \ \ \ \ \ \ device);}
+\DoxyCodeLine{02089\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{02090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02091\ \ \ \ \ \}}
+\DoxyCodeLine{02092\ }
+\DoxyCodeLine{02093\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___d_e_v_i_c_e_gade765bf7bb5df793bc506f4b8ad97d19}{cudaDeviceGetAttribute}}(}
+\DoxyCodeLine{02094\ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{devMaxThreadsPerBlock}},}
+\DoxyCodeLine{02095\ \ \ \ \ \ \ \ \ cudaDevAttrMaxThreadsPerBlock,}
+\DoxyCodeLine{02096\ \ \ \ \ \ \ \ \ device);}
+\DoxyCodeLine{02097\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{02098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02099\ \ \ \ \ \}}
+\DoxyCodeLine{02100\ }
+\DoxyCodeLine{02101\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___d_e_v_i_c_e_gade765bf7bb5df793bc506f4b8ad97d19}{cudaDeviceGetAttribute}}(}
+\DoxyCodeLine{02102\ \ \ \ \ \ \ \ \ \&multiProcessorCount,}
+\DoxyCodeLine{02103\ \ \ \ \ \ \ \ \ cudaDevAttrMultiProcessorCount,}
+\DoxyCodeLine{02104\ \ \ \ \ \ \ \ \ device);}
+\DoxyCodeLine{02105\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{02106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02107\ \ \ \ \ \}}
+\DoxyCodeLine{02108\ }
+\DoxyCodeLine{02109\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}{cudaFuncGetAttributes}}(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}},\ func);}
+\DoxyCodeLine{02110\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{02111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02112\ \ \ \ \ \}}
+\DoxyCodeLine{02113\ \ \ \ \ }
+\DoxyCodeLine{02114\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{funcMaxThreadsPerBlock}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}}.maxThreadsPerBlock;}
+\DoxyCodeLine{02115\ }
+\DoxyCodeLine{02117\ \ \ \ \ \textcolor{comment}{//\ Try\ each\ block\ size,\ and\ pick\ the\ block\ size\ with\ maximum\ occupancy}}
+\DoxyCodeLine{02119\ }
+\DoxyCodeLine{02120\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyLimit}}\ =\ maxThreadsPerMultiProcessor;}
+\DoxyCodeLine{02121\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{granularity}}\ \ \ \ =\ warpSize;}
+\DoxyCodeLine{02122\ }
+\DoxyCodeLine{02123\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ ==\ 0)\ \{}
+\DoxyCodeLine{02124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{devMaxThreadsPerBlock}};}
+\DoxyCodeLine{02125\ \ \ \ \ \}}
+\DoxyCodeLine{02126\ }
+\DoxyCodeLine{02127\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{devMaxThreadsPerBlock}}\ <\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}})\ \{}
+\DoxyCodeLine{02128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{devMaxThreadsPerBlock}};}
+\DoxyCodeLine{02129\ \ \ \ \ \}}
+\DoxyCodeLine{02130\ }
+\DoxyCodeLine{02131\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{funcMaxThreadsPerBlock}}\ <\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}})\ \{}
+\DoxyCodeLine{02132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{funcMaxThreadsPerBlock}};}
+\DoxyCodeLine{02133\ \ \ \ \ \}}
+\DoxyCodeLine{02134\ }
+\DoxyCodeLine{02135\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimitAligned}}\ =\ ((\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ +\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{granularity}}\ -\/\ 1))\ /\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{granularity}})\ *\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{granularity}};}
+\DoxyCodeLine{02136\ }
+\DoxyCodeLine{02137\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTryAligned}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimitAligned}};\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTryAligned}}\ >\ 0;\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTryAligned}}\ -\/=\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{granularity}})\ \{}
+\DoxyCodeLine{02138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ is\ needed\ for\ the\ first\ iteration,\ because}}
+\DoxyCodeLine{02139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ blockSizeLimitAligned\ could\ be\ greater\ than\ blockSizeLimit}}
+\DoxyCodeLine{02140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{02141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ <\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTryAligned}})\ \{}
+\DoxyCodeLine{02142\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTry}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}};}
+\DoxyCodeLine{02143\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{02144\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTry}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTryAligned}};}
+\DoxyCodeLine{02145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{02146\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToDynamicSMemSize}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTry}});}
+\DoxyCodeLine{02148\ }
+\DoxyCodeLine{02149\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gafd44b9bd208a9d8bb3fefb9a7a65d425}{cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags}}(}
+\DoxyCodeLine{02150\ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInBlocks}},}
+\DoxyCodeLine{02151\ \ \ \ \ \ \ \ \ \ \ \ \ func,}
+\DoxyCodeLine{02152\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTry}},}
+\DoxyCodeLine{02153\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}},}
+\DoxyCodeLine{02154\ \ \ \ \ \ \ \ \ \ \ \ \ flags);}
+\DoxyCodeLine{02155\ }
+\DoxyCodeLine{02156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}}\ !=\ cudaSuccess)\ \{}
+\DoxyCodeLine{02157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{02159\ }
+\DoxyCodeLine{02160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInThreads}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTry}}\ *\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInBlocks}};}
+\DoxyCodeLine{02161\ }
+\DoxyCodeLine{02162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInThreads}}\ >\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{maxOccupancy}})\ \{}
+\DoxyCodeLine{02163\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{maxBlockSize}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToTry}};}
+\DoxyCodeLine{02164\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}}\ \ \ \ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInBlocks}};}
+\DoxyCodeLine{02165\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{maxOccupancy}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyInThreads}};}
+\DoxyCodeLine{02166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{02167\ }
+\DoxyCodeLine{02168\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Early\ out\ if\ we\ have\ reached\ the\ maximum}}
+\DoxyCodeLine{02169\ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{02170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{occupancyLimit}}\ ==\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{maxOccupancy}})\ \{}
+\DoxyCodeLine{02171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{02172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{02173\ \ \ \ \ \}}
+\DoxyCodeLine{02174\ }
+\DoxyCodeLine{02176\ \ \ \ \ \textcolor{comment}{//\ Return\ best\ available}}
+\DoxyCodeLine{02178\ }
+\DoxyCodeLine{02179\ \ \ \ \ \textcolor{comment}{//\ Suggested\ min\ grid\ size\ to\ achieve\ a\ full\ machine\ launch}}
+\DoxyCodeLine{02180\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{02181\ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}}\ *\ multiProcessorCount;}
+\DoxyCodeLine{02182\ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{maxBlockSize}};}
+\DoxyCodeLine{02183\ }
+\DoxyCodeLine{02184\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{status}};}
+\DoxyCodeLine{02185\ \}}
+\DoxyCodeLine{02186\ }
+\DoxyCodeLine{02219\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ UnaryFunction,\ \textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{02220\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ CUDART\_DEVICE\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaOccupancyMaxPotentialBlockSizeVariableSMem}}(}
+\DoxyCodeLine{02221\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}},}
+\DoxyCodeLine{02222\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},}
+\DoxyCodeLine{02223\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ func,}
+\DoxyCodeLine{02224\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{UnaryFunction}}\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToDynamicSMemSize}},}
+\DoxyCodeLine{02225\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ =\ 0)}
+\DoxyCodeLine{02226\ \{}
+\DoxyCodeLine{02227\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},\ func,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeToDynamicSMemSize}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga11570371f508845a9df47b17f85d90ac}{cudaOccupancyDefault}});}
+\DoxyCodeLine{02228\ \}}
+\DoxyCodeLine{02229\ }
+\DoxyCodeLine{02265\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{02266\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ CUDART\_DEVICE\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaOccupancyMaxPotentialBlockSize}}(}
+\DoxyCodeLine{02267\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}},}
+\DoxyCodeLine{02268\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},}
+\DoxyCodeLine{02269\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ func,}
+\DoxyCodeLine{02270\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}}\ =\ 0,}
+\DoxyCodeLine{02271\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ =\ 0)}
+\DoxyCodeLine{02272\ \{}
+\DoxyCodeLine{02273\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},\ func,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_cudaOccupancyB2DHelper}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}}),\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga11570371f508845a9df47b17f85d90ac}{cudaOccupancyDefault}});}
+\DoxyCodeLine{02274\ \}}
+\DoxyCodeLine{02275\ }
+\DoxyCodeLine{02303\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{02304\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gaf4bf2cf4fdb890c2bb21e7da06e19edb}{cudaOccupancyAvailableDynamicSMemPerBlock}}(}
+\DoxyCodeLine{02305\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSmemSize}},}
+\DoxyCodeLine{02306\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ func,}
+\DoxyCodeLine{02307\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}},}
+\DoxyCodeLine{02308\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}})}
+\DoxyCodeLine{02309\ \{}
+\DoxyCodeLine{02310\ \ \ \ \ return\ ::cudaOccupancyAvailableDynamicSMemPerBlock(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSmemSize}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)func,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numBlocks}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}});}
+\DoxyCodeLine{02311\ \}}
+\DoxyCodeLine{02312\ }
+\DoxyCodeLine{02362\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{02363\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ CUDART\_DEVICE\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaOccupancyMaxPotentialBlockSizeWithFlags}}(}
+\DoxyCodeLine{02364\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}},}
+\DoxyCodeLine{02365\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},}
+\DoxyCodeLine{02366\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ func,}
+\DoxyCodeLine{02367\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}}\ =\ 0,}
+\DoxyCodeLine{02368\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}}\ =\ 0,}
+\DoxyCodeLine{02369\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ flags\ =\ 0)}
+\DoxyCodeLine{02370\ \{}
+\DoxyCodeLine{02371\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{minGridSize}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSize}},\ func,\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_cudaOccupancyB2DHelper}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dynamicSMemSize}}),\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{blockSizeLimit}},\ flags);}
+\DoxyCodeLine{02372\ \}}
+\DoxyCodeLine{02373\ }
+\DoxyCodeLine{02374\ \textcolor{preprocessor}{\#if\ defined\ \_\_CUDACC\_\_}}
+\DoxyCodeLine{02375\ }
+\DoxyCodeLine{02405\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{02406\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}{cudaFuncGetAttributes}}(}
+\DoxyCodeLine{02407\ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structcuda_func_attributes}{cudaFuncAttributes}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}},}
+\DoxyCodeLine{02408\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{entry}}}
+\DoxyCodeLine{02409\ )}
+\DoxyCodeLine{02410\ \{}
+\DoxyCodeLine{02411\ \ \ return\ ::cudaFuncGetAttributes(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}},\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{entry}});}
+\DoxyCodeLine{02412\ \}}
+\DoxyCodeLine{02413\ }
+\DoxyCodeLine{02450\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{02451\ \textcolor{keyword}{static}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gad30aa7cba71047ca5acf5a89bd9b7013}{cudaFuncSetAttribute}}(}
+\DoxyCodeLine{02452\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{T}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{entry}},}
+\DoxyCodeLine{02453\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gacd76bcc1681acec9fb9ae74e9965d61e}{cudaFuncAttribute}}\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}},}
+\DoxyCodeLine{02454\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value}
+\DoxyCodeLine{02455\ )}
+\DoxyCodeLine{02456\ \{}
+\DoxyCodeLine{02457\ \ \ return\ ::cudaFuncSetAttribute((\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*)\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{entry}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}},\ value);}
+\DoxyCodeLine{02458\ \}}
+\DoxyCodeLine{02459\ }
+\DoxyCodeLine{02482\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim>}
+\DoxyCodeLine{02483\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___s_u_r_f_a_c_e_ga26071647f4344dee20dcc1d20de1a648}{cudaBindSurfaceToArray}}(}
+\DoxyCodeLine{02484\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surface<T,\ dim>}}\ \ \ \ \ \ \ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surf}},}
+\DoxyCodeLine{02485\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga9a3dce149702581dbc3fc2fb9bb813b0}{cudaArray\_const\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ array,}
+\DoxyCodeLine{02486\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ \&desc}
+\DoxyCodeLine{02487\ )}
+\DoxyCodeLine{02488\ \{}
+\DoxyCodeLine{02489\ \ \ return\ ::cudaBindSurfaceToArray(\&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surf}},\ array,\ \&desc);}
+\DoxyCodeLine{02490\ \}}
+\DoxyCodeLine{02491\ }
+\DoxyCodeLine{02513\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keywordtype}{int}\ dim>}
+\DoxyCodeLine{02514\ \textcolor{keyword}{static}\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_inline\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_host\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___s_u_r_f_a_c_e_ga26071647f4344dee20dcc1d20de1a648}{cudaBindSurfaceToArray}}(}
+\DoxyCodeLine{02515\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surface<T,\ dim>}}\ \&\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surf}},}
+\DoxyCodeLine{02516\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga9a3dce149702581dbc3fc2fb9bb813b0}{cudaArray\_const\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ array}
+\DoxyCodeLine{02517\ )}
+\DoxyCodeLine{02518\ \{}
+\DoxyCodeLine{02519\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ desc;}
+\DoxyCodeLine{02520\ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ =\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga29002aca135dacb5e071fa3eb97743ba}{::cudaGetChannelDesc}}(\&desc,\ array);}
+\DoxyCodeLine{02521\ }
+\DoxyCodeLine{02522\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}}\ ==\ cudaSuccess\ ?\ \mbox{\hyperlink{group___c_u_d_a_r_t___s_u_r_f_a_c_e_ga26071647f4344dee20dcc1d20de1a648}{cudaBindSurfaceToArray}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{surf}},\ array,\ desc)\ :\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{err}};}
+\DoxyCodeLine{02523\ \}}
+\DoxyCodeLine{02524\ }
+\DoxyCodeLine{02525\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CUDACC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{02526\ }
+\DoxyCodeLine{02527\ \ \textcolor{comment}{/*\ END\ CUDART\_HIGHLEVEL\ */}}
+\DoxyCodeLine{02528\ }
+\DoxyCodeLine{02529\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_cplusplus\ \&\&\ !\_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{02530\ }
+\DoxyCodeLine{02531\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{02532\ \textcolor{preprocessor}{\#if\ defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{02533\ \textcolor{preprocessor}{\#if\ defined(\_\_clang\_\_)\ ||\ (!defined(\_\_PGIC\_\_)\ \&\&\ (\_\_GNUC\_\_\ >\ 4\ ||\ (\_\_GNUC\_\_\ ==\ 4\ \&\&\ \_\_GNUC\_MINOR\_\_\ >=\ 6)))}}
+\DoxyCodeLine{02534\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ pop}}
+\DoxyCodeLine{02535\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02536\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{02537\ \textcolor{preprocessor}{\#pragma\ warning(pop)}}
+\DoxyCodeLine{02538\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02539\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02540\ }
+\DoxyCodeLine{02541\ \textcolor{preprocessor}{\#undef\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{02542\ }
+\DoxyCodeLine{02543\ \textcolor{preprocessor}{\#if\ defined(\_\_UNDEF\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_CUDA\_RUNTIME\_H\_\_)}}
+\DoxyCodeLine{02544\ \textcolor{preprocessor}{\#undef\ \_\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_\_}}
+\DoxyCodeLine{02545\ \textcolor{preprocessor}{\#undef\ \_\_UNDEF\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_CUDA\_RUNTIME\_H\_\_}}
+\DoxyCodeLine{02546\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02547\ }
+\DoxyCodeLine{02548\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_CUDA\_RUNTIME\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

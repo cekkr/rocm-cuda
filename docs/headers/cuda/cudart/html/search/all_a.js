@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['id_0',['id',['../struct_c_umem_location__st.html#a00b2c340c012f1066d85871f7fc0ef71',1,'CUmemLocation_st::id'],['../structcuda_mem_location.html#a1c914cd5c3cc7323b4fde9756458efb0',1,'cudaMemLocation::id']]],
+  ['implementationchooser_1',['ImplementationChooser',['../struct_implementation_chooser.html',1,'']]],
+  ['implementationchooser_3c_20false_20_3e_2',['ImplementationChooser&lt; false &gt;',['../struct_implementation_chooser_3_01false_01_4.html',1,'']]],
+  ['implementationchooser_3c_20true_20_3e_3',['ImplementationChooser&lt; true &gt;',['../struct_implementation_chooser_3_01true_01_4.html',1,'']]],
+  ['information_20from_20pointer_20values_4',['Information from Pointer Values',['../group___c_u_d_a___u_n_i_f_i_e_d.html#CUDA_UNIFIED_lookup',1,'Looking Up Information from Pointer Values'],['../group___c_u_d_a_r_t___u_n_i_f_i_e_d.html#CUDART_UNIFIED_lookup',1,'Looking Up Information from Pointer Values']]],
+  ['initialization_5',['Initialization',['../group___c_u_d_a___i_n_i_t_i_a_l_i_z_e.html',1,'']]],
+  ['initialization_20and_20tear_20down_6',['Initialization and Tear-Down',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_init',1,'']]],
+  ['int1_7',['int1',['../structint1.html',1,'']]],
+  ['int3_8',['int3',['../structint3.html',1,'']]],
+  ['integrated_9',['integrated',['../structcuda_device_prop.html#a613bf3e02c6120db852a2ecd5ff9605a',1,'cudaDeviceProp']]],
+  ['interactions_20between_20cuarray_20and_20cudaarray_5ft_10',['Interactions between CUarray and cudaArray_t',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_array',1,'']]],
+  ['interactions_20between_20cuevent_20and_20cudaevent_5ft_11',['Interactions between CUevent and cudaEvent_t',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_event',1,'']]],
+  ['interactions_20between_20cufunction_20and_20cudafunction_5ft_12',['Interactions between CUfunction and cudaFunction_t',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_module',1,'']]],
+  ['interactions_20between_20cugraphicsresource_20and_20cudagraphicsresource_5ft_13',['Interactions between CUgraphicsResource and cudaGraphicsResource_t',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_graphicsResource',1,'']]],
+  ['interactions_20between_20custream_20and_20cudastream_5ft_14',['Interactions between CUstream and cudaStream_t',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_stream',1,'']]],
+  ['interactions_20between_20cusurfobject_20and_20cudasurfaceobject_5ft_15',['Interactions between CUsurfObject * and cudaSurfaceObject_t',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_surface_objects',1,'']]],
+  ['interactions_20between_20cutexobject_20and_20cudatextureobject_5ft_16',['Interactions between CUtexObject * and cudaTextureObject_t',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_texture_objects',1,'']]],
+  ['interactions_20with_20the_20cuda_20driver_20api_17',['Interactions with the CUDA Driver API',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html',1,'']]],
+  ['interoperability_18',['Interoperability',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html#CUDART_CUDA_context',1,'Context Interoperability'],['../group___c_u_d_a_r_t___d3_d10.html',1,'Direct3D 10 Interoperability'],['../group___c_u_d_a_r_t___d3_d11.html',1,'Direct3D 11 Interoperability'],['../group___c_u_d_a_r_t___d3_d9.html',1,'Direct3D 9 Interoperability'],['../group___c_u_d_a_r_t___e_g_l.html',1,'EGL Interoperability'],['../group___c_u_d_a___e_g_l.html',1,'EGL Interoperability'],['../group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p.html',1,'External Resource Interoperability'],['../group___c_u_d_a_r_t___e_x_t_r_e_s___i_n_t_e_r_o_p.html',1,'External Resource Interoperability'],['../group___c_u_d_a___g_r_a_p_h_i_c_s.html',1,'Graphics Interoperability'],['../group___c_u_d_a_r_t___i_n_t_e_r_o_p.html',1,'Graphics Interoperability'],['../group___c_u_d_a_r_t___o_p_e_n_g_l.html',1,'OpenGL Interoperability'],['../group___c_u_d_a___g_l.html',1,'OpenGL Interoperability'],['../group___c_u_d_a_r_t___v_d_p_a_u.html',1,'VDPAU Interoperability'],['../group___c_u_d_a___v_d_p_a_u.html',1,'VDPAU Interoperability']]],
+  ['interoperability_20deprecated_19',['Interoperability DEPRECATED',['../group___c_u_d_a_r_t___d3_d10___d_e_p_r_e_c_a_t_e_d.html',1,'Direct3D 10 Interoperability [DEPRECATED]'],['../group___c_u_d_a_r_t___d3_d11___d_e_p_r_e_c_a_t_e_d.html',1,'Direct3D 11 Interoperability [DEPRECATED]'],['../group___c_u_d_a_r_t___d3_d9___d_e_p_r_e_c_a_t_e_d.html',1,'Direct3D 9 Interoperability [DEPRECATED]'],['../group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d.html',1,'OpenGL Interoperability [DEPRECATED]'],['../group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d.html',1,'OpenGL Interoperability [DEPRECATED]']]],
+  ['intrinsics_20',['Intrinsics',['../group___c_u_d_a___m_a_t_h___i_n_t_r_i_n_s_i_c___b_f_l_o_a_t16.html',1,'Bfloat16 Precision Intrinsics'],['../group___c_u_d_a___m_a_t_h___i_n_t_r_i_n_s_i_c___h_a_l_f.html',1,'Half Precision Intrinsics']]],
+  ['ismultigpuboard_21',['isMultiGpuBoard',['../structcuda_device_prop.html#a512d849f57e6a6a0ece1d21879c3ae35',1,'cudaDeviceProp']]]
+];

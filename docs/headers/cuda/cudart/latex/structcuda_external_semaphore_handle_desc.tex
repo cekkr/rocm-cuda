@@ -1,0 +1,91 @@
+\doxysection{cuda\+External\+Semaphore\+Handle\+Desc Struct Reference}
+\hypertarget{structcuda_external_semaphore_handle_desc}{}\label{structcuda_external_semaphore_handle_desc}\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa765a9e3b26d2b6bd73decb545ad8721}{cuda\+External\+Semaphore\+Handle\+Type}} \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_ae925b19e386170fb3cccf58cfab0fd9c}{type}}
+\item 
+\Hypertarget{structcuda_external_semaphore_handle_desc_a0d9ed079f55e66df88e466d56fe2088c}\label{structcuda_external_semaphore_handle_desc_a0d9ed079f55e66df88e466d56fe2088c} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a8f9a2f111e798f0425312f28abc02199}{fd}}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a2ec0ce361b142fb978ecdf0a3b542877}{handle}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a88e0f37b5efffc9e0af8ebfca1e1a25c}{name}}\\
+\>\} \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a9d51f15983fc3831f9dd1872e822f2e5}{win32}}\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a67d19646c0a2bd0866c683676ecf871f}{nvSciSyncObj}}\\
+\} {\bfseries handle}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_addc4ddcce38ec7f5582e38fe278783b5}{flags}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+External semaphore handle descriptor 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_external_semaphore_handle_desc_a8f9a2f111e798f0425312f28abc02199}\label{structcuda_external_semaphore_handle_desc_a8f9a2f111e798f0425312f28abc02199} 
+\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}!fd@{fd}}
+\index{fd@{fd}!cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+\doxysubsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+External\+Semaphore\+Handle\+Desc\+::fd}
+
+File descriptor referencing the semaphore object. Valid when type is one of the following\+:
+\begin{DoxyItemize}
+\item cuda\+External\+Semaphore\+Handle\+Type\+Opaque\+Fd
+\item cuda\+External\+Semaphore\+Handle\+Type\+Timeline\+Semaphore\+Fd 
+\end{DoxyItemize}\Hypertarget{structcuda_external_semaphore_handle_desc_addc4ddcce38ec7f5582e38fe278783b5}\label{structcuda_external_semaphore_handle_desc_addc4ddcce38ec7f5582e38fe278783b5} 
+\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}!flags@{flags}}
+\index{flags@{flags}!cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+External\+Semaphore\+Handle\+Desc\+::flags}
+
+Flags reserved for the future. Must be zero. \Hypertarget{structcuda_external_semaphore_handle_desc_a2ec0ce361b142fb978ecdf0a3b542877}\label{structcuda_external_semaphore_handle_desc_a2ec0ce361b142fb978ecdf0a3b542877} 
+\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}!handle@{handle}}
+\index{handle@{handle}!cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+\doxysubsubsection{\texorpdfstring{handle}{handle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+External\+Semaphore\+Handle\+Desc\+::handle}
+
+Valid NT handle. Must be NULL if \textquotesingle{}name\textquotesingle{} is non-\/\+NULL \Hypertarget{structcuda_external_semaphore_handle_desc_a88e0f37b5efffc9e0af8ebfca1e1a25c}\label{structcuda_external_semaphore_handle_desc_a88e0f37b5efffc9e0af8ebfca1e1a25c} 
+\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}!name@{name}}
+\index{name@{name}!cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+External\+Semaphore\+Handle\+Desc\+::name}
+
+Name of a valid synchronization primitive. Must be NULL if \textquotesingle{}handle\textquotesingle{} is non-\/\+NULL. \Hypertarget{structcuda_external_semaphore_handle_desc_a67d19646c0a2bd0866c683676ecf871f}\label{structcuda_external_semaphore_handle_desc_a67d19646c0a2bd0866c683676ecf871f} 
+\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}!nvSciSyncObj@{nvSciSyncObj}}
+\index{nvSciSyncObj@{nvSciSyncObj}!cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+\doxysubsubsection{\texorpdfstring{nvSciSyncObj}{nvSciSyncObj}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+External\+Semaphore\+Handle\+Desc\+::nv\+Sci\+Sync\+Obj}
+
+Valid Nv\+Sci\+Sync\+Obj. Must be non NULL \Hypertarget{structcuda_external_semaphore_handle_desc_ae925b19e386170fb3cccf58cfab0fd9c}\label{structcuda_external_semaphore_handle_desc_ae925b19e386170fb3cccf58cfab0fd9c} 
+\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}!type@{type}}
+\index{type@{type}!cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa765a9e3b26d2b6bd73decb545ad8721}{cuda\+External\+Semaphore\+Handle\+Type}} cuda\+External\+Semaphore\+Handle\+Desc\+::type}
+
+Type of the handle \Hypertarget{structcuda_external_semaphore_handle_desc_a9d51f15983fc3831f9dd1872e822f2e5}\label{structcuda_external_semaphore_handle_desc_a9d51f15983fc3831f9dd1872e822f2e5} 
+\index{cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}!win32@{win32}}
+\index{win32@{win32}!cudaExternalSemaphoreHandleDesc@{cudaExternalSemaphoreHandleDesc}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cuda\+External\+Semaphore\+Handle\+Desc\+::win32}
+
+Win32 handle referencing the semaphore object. Valid when type is one of the following\+:
+\begin{DoxyItemize}
+\item cuda\+External\+Semaphore\+Handle\+Type\+Opaque\+Win32
+\item cuda\+External\+Semaphore\+Handle\+Type\+Opaque\+Win32\+Kmt
+\item cuda\+External\+Semaphore\+Handle\+Type\+D3\+D12\+Fence
+\item cuda\+External\+Semaphore\+Handle\+Type\+D3\+D11\+Fence
+\item cuda\+External\+Semaphore\+Handle\+Type\+Keyed\+Mutex
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+External\+Semaphore\+Handle\+Type\+Timeline\+Semaphore\+Win32} Exactly one of \textquotesingle{}handle\textquotesingle{} and \textquotesingle{}name\textquotesingle{} must be non-\/\+NULL. If type is one of the following\+: cuda\+External\+Semaphore\+Handle\+Type\+Opaque\+Win32\+Kmt cuda\+External\+Semaphore\+Handle\+Type\+Keyed\+Mutex\+Kmt then \textquotesingle{}name\textquotesingle{} must be NULL. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

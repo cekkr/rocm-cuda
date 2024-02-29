@@ -1,0 +1,65 @@
+\doxysection{Version Management}
+\hypertarget{group___c_u_d_a_r_t_____v_e_r_s_i_o_n}{}\label{group___c_u_d_a_r_t_____v_e_r_s_i_o_n}\index{Version Management@{Version Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga3adb7d2756db33bd8e5bfafe794874f4}{cuda\+Driver\+Get\+Version}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{driver\+Version}})
+\begin{DoxyCompactList}\small\item\em Returns the latest version of CUDA supported by the driver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+cudart\+\_\+builtin\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga7aa68c528a22917b05dc6b526258e968}{cuda\+Runtime\+Get\+Version}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{runtime\+Version}})
+\begin{DoxyCompactList}\small\item\em Returns the CUDA Runtime version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga3adb7d2756db33bd8e5bfafe794874f4}\label{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga3adb7d2756db33bd8e5bfafe794874f4} 
+\index{Version Management@{Version Management}!cudaDriverGetVersion@{cudaDriverGetVersion}}
+\index{cudaDriverGetVersion@{cudaDriverGetVersion}!Version Management@{Version Management}}
+\doxysubsubsection{\texorpdfstring{cudaDriverGetVersion()}{cudaDriverGetVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Driver\+Get\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{driver\+Version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns the latest version of CUDA supported by the driver. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}driver\+Version} the latest version of CUDA supported by the driver. The version is returned as (1000 {$\times$} major + 10 {$\times$} minor). For example, CUDA 9.\+2 would be represented by 9020. If no driver is installed, then 0 is returned as the driver version.
+
+This function automatically returns cuda\+Error\+Invalid\+Value if {\ttfamily driver\+Version} is NULL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver\+Version} & -\/ Returns the CUDA driver version.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga7aa68c528a22917b05dc6b526258e968}{cuda\+Runtime\+Get\+Version}, \doxylink{group___c_u_d_a___v_e_r_s_i_o_n_ga0cf26c8fb6b8f710275dc8f9b0268be2}{cu\+Driver\+Get\+Version} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga7aa68c528a22917b05dc6b526258e968}\label{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga7aa68c528a22917b05dc6b526258e968} 
+\index{Version Management@{Version Management}!cudaRuntimeGetVersion@{cudaRuntimeGetVersion}}
+\index{cudaRuntimeGetVersion@{cudaRuntimeGetVersion}!Version Management@{Version Management}}
+\doxysubsubsection{\texorpdfstring{cudaRuntimeGetVersion()}{cudaRuntimeGetVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+cudart\+\_\+builtin\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Runtime\+Get\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{runtime\+Version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns the CUDA Runtime version. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}runtime\+Version} the version number of the current CUDA Runtime instance. The version is returned as (1000 {$\times$} major + 10 {$\times$} minor). For example, CUDA 9.\+2 would be represented by 9020.
+
+This function automatically returns cuda\+Error\+Invalid\+Value if the {\ttfamily runtime\+Version} argument is NULL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em runtime\+Version} & -\/ Returns the CUDA Runtime version.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga3adb7d2756db33bd8e5bfafe794874f4}{cuda\+Driver\+Get\+Version}, \doxylink{group___c_u_d_a___v_e_r_s_i_o_n_ga0cf26c8fb6b8f710275dc8f9b0268be2}{cu\+Driver\+Get\+Version} 
+\end{DoxySeeAlso}

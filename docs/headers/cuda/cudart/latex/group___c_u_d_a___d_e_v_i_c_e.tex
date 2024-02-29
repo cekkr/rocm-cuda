@@ -1,0 +1,513 @@
+\doxysection{Device Management}
+\hypertarget{group___c_u_d_a___d_e_v_i_c_e}{}\label{group___c_u_d_a___d_e_v_i_c_e}\index{Device Management@{Device Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}device, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ordinal}})
+\begin{DoxyCompactList}\small\item\em Returns a handle to a compute device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}})
+\begin{DoxyCompactList}\small\item\em Returns the number of compute-\/capable devices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{len}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Returns an identifer string for the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}} (\mbox{\hyperlink{struct_c_uuuid__st}{CUuuid}} \texorpdfstring{$\ast$}{*}uuid, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Return an UUID for the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga816ed0c4909a630181d14cf1571af48d}{cu\+Device\+Get\+Uuid\+\_\+v2}} (\mbox{\hyperlink{struct_c_uuuid__st}{CUuuid}} \texorpdfstring{$\ast$}{*}uuid, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Return an UUID for the device (11.\+4+) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892}{cu\+Device\+Get\+Luid}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}luid, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{device\+Node\+Mask}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Return an LUID and device node mask for the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_gae41ae29bf2b944d1f8b43ab80376ce22}{cu\+Device\+Total\+Mem}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}bytes, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Returns the total amount of memory on the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga16a19bb3666aac5ef0ebc3d2430f75eb}{cu\+Device\+Get\+Texture1\+DLinear\+Max\+Width}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{max\+Width\+In\+Elements}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\+\_\+format}} format, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} num\+Channels, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of elements allocatable in a 1D linear texture for a given texture element size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pi}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga8ac4425b84f73522b1ccf94baf1feece}{CUdevice\+\_\+attribute}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attrib}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Returns information about the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga1bfd645a691e1cd33873c94605d2089a}{cu\+Device\+Get\+Nv\+Sci\+Sync\+Attributes}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{nv\+Sci\+Sync\+Attr\+List}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Return Nv\+Sci\+Sync attributes that this device can support. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_ga86babedf12a21049a93915f92d537278}{cu\+Device\+Set\+Mem\+Pool}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b96b1ef79f0cb312b51169e9f50e722}{CUmemory\+Pool}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pool}})
+\begin{DoxyCompactList}\small\item\em Sets the current memory pool of a device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_gaf2e6e7d699b18a6c14522165e3aa7395}{cu\+Device\+Get\+Mem\+Pool}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b96b1ef79f0cb312b51169e9f50e722}{CUmemory\+Pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pool}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Gets the current mempool for a device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_gadbd46936e6cbf1bea91683aeb159d956}{cu\+Device\+Get\+Default\+Mem\+Pool}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b96b1ef79f0cb312b51169e9f50e722}{CUmemory\+Pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pool\+\_\+out}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Returns the default mempool of a device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___d_e_v_i_c_e_gad8213fb91ea7e93c36f6f8eea265f322}{cu\+Flush\+GPUDirect\+RDMAWrites}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabf6220f85b58453fb2779b2f365004f0}{CUflush\+GPUDirect\+RDMAWrites\+Target}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{target}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga847862f98e8eaeef4d536245b52a13db}{CUflush\+GPUDirect\+RDMAWrites\+Scope}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{scope}})
+\begin{DoxyCompactList}\small\item\em Blocks until remote writes are visible to the specified scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ device management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the device management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}\label{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2} 
+\index{Device Management@{Device Management}!cuDeviceGet@{cuDeviceGet}}
+\index{cuDeviceGet@{cuDeviceGet}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGet()}{cuDeviceGet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}}]{device,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{ordinal }\end{DoxyParamCaption})}
+
+
+
+Returns a handle to a compute device. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}device} a device handle given an ordinal in the range {\bfseries{\mbox{[}0, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count()}-\/1\mbox{]}}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ Returned device handle \\
+\hline
+{\em ordinal} & -\/ Device number to get handle for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892}{cu\+Device\+Get\+Luid}, cu\+Device\+Total\+Mem, \doxylink{cuda_8h_a782f7ec065cc835985521acd9183e175}{cu\+Device\+Get\+Exec\+Affinity\+Support} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}\label{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead} 
+\index{Device Management@{Device Management}!cuDeviceGetAttribute@{cuDeviceGetAttribute}}
+\index{cuDeviceGetAttribute@{cuDeviceGetAttribute}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetAttribute()}{cuDeviceGetAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{pi,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga8ac4425b84f73522b1ccf94baf1feece}{CUdevice\+\_\+attribute}}}]{attrib,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns information about the device. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}pi} the integer value of the attribute {\ttfamily attrib} on device {\ttfamily dev}. The supported attributes are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+THREADS\+\_\+\+PER\+\_\+\+BLOCK\+:} Maximum number of threads per block;
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+DIM\+\_\+\+X\+:} Maximum x-\/dimension of a block
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+DIM\+\_\+\+Y\+:} Maximum y-\/dimension of a block
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+DIM\+\_\+\+Z\+:} Maximum z-\/dimension of a block
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+GRID\+\_\+\+DIM\+\_\+\+X\+:} Maximum x-\/dimension of a grid
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+GRID\+\_\+\+DIM\+\_\+\+Y\+:} Maximum y-\/dimension of a grid
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+GRID\+\_\+\+DIM\+\_\+\+Z\+:} Maximum z-\/dimension of a grid
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+SHARED\+\_\+\+MEMORY\+\_\+\+PER\+\_\+\+BLOCK\+:} Maximum amount of shared memory available to a thread block in bytes
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+TOTAL\+\_\+\+CONSTANT\+\_\+\+MEMORY\+:} Memory available on device for {\bfseries{constant}} variables in a CUDA C kernel in bytes
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+WARP\+\_\+\+SIZE\+:} Warp size in threads
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+PITCH\+:} Maximum pitch in bytes allowed by the memory copy functions that involve memory regions allocated through cu\+Mem\+Alloc\+Pitch()
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE1\+D\+\_\+\+WIDTH\+:} Maximum 1D texture width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE1\+D\+\_\+\+LINEAR\+\_\+\+WIDTH\+:} Maximum width for a 1D texture bound to linear memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE1\+D\+\_\+\+MIPMAPPED\+\_\+\+WIDTH\+:} Maximum mipmapped 1D texture width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+WIDTH\+:} Maximum 2D texture width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+HEIGHT\+:} Maximum 2D texture height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LINEAR\+\_\+\+WIDTH\+:} Maximum width for a 2D texture bound to linear memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LINEAR\+\_\+\+HEIGHT\+:} Maximum height for a 2D texture bound to linear memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LINEAR\+\_\+\+PITCH\+:} Maximum pitch in bytes for a 2D texture bound to linear memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+MIPMAPPED\+\_\+\+WIDTH\+:} Maximum mipmapped 2D texture width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+MIPMAPPED\+\_\+\+HEIGHT\+:} Maximum mipmapped 2D texture height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE3\+D\+\_\+\+WIDTH\+:} Maximum 3D texture width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE3\+D\+\_\+\+HEIGHT\+:} Maximum 3D texture height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE3\+D\+\_\+\+DEPTH\+:} Maximum 3D texture depth
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE3\+D\+\_\+\+WIDTH\+\_\+\+ALTERNATE\+:} Alternate maximum 3D texture width, 0 if no alternate maximum 3D texture size is supported
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE3\+D\+\_\+\+HEIGHT\+\_\+\+ALTERNATE\+:} Alternate maximum 3D texture height, 0 if no alternate maximum 3D texture size is supported
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE3\+D\+\_\+\+DEPTH\+\_\+\+ALTERNATE\+:} Alternate maximum 3D texture depth, 0 if no alternate maximum 3D texture size is supported
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURECUBEMAP\+\_\+\+WIDTH\+:} Maximum cubemap texture width or height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE1\+D\+\_\+\+LAYERED\+\_\+\+WIDTH\+:} Maximum 1D layered texture width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE1\+D\+\_\+\+LAYERED\+\_\+\+LAYERS\+:} Maximum layers in a 1D layered texture
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LAYERED\+\_\+\+WIDTH\+:} Maximum 2D layered texture width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LAYERED\+\_\+\+HEIGHT\+:} Maximum 2D layered texture height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURE2\+D\+\_\+\+LAYERED\+\_\+\+LAYERS\+:} Maximum layers in a 2D layered texture
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURECUBEMAP\+\_\+\+LAYERED\+\_\+\+WIDTH\+:} Maximum cubemap layered texture width or height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+TEXTURECUBEMAP\+\_\+\+LAYERED\+\_\+\+LAYERS\+:} Maximum layers in a cubemap layered texture
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE1\+D\+\_\+\+WIDTH\+:} Maximum 1D surface width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE2\+D\+\_\+\+WIDTH\+:} Maximum 2D surface width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE2\+D\+\_\+\+HEIGHT\+:} Maximum 2D surface height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE3\+D\+\_\+\+WIDTH\+:} Maximum 3D surface width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE3\+D\+\_\+\+HEIGHT\+:} Maximum 3D surface height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE3\+D\+\_\+\+DEPTH\+:} Maximum 3D surface depth
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE1\+D\+\_\+\+LAYERED\+\_\+\+WIDTH\+:} Maximum 1D layered surface width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE1\+D\+\_\+\+LAYERED\+\_\+\+LAYERS\+:} Maximum layers in a 1D layered surface
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE2\+D\+\_\+\+LAYERED\+\_\+\+WIDTH\+:} Maximum 2D layered surface width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE2\+D\+\_\+\+LAYERED\+\_\+\+HEIGHT\+:} Maximum 2D layered surface height
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACE2\+D\+\_\+\+LAYERED\+\_\+\+LAYERS\+:} Maximum layers in a 2D layered surface
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACECUBEMAP\+\_\+\+WIDTH\+:} Maximum cubemap surface width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACECUBEMAP\+\_\+\+LAYERED\+\_\+\+WIDTH\+:} Maximum cubemap layered surface width
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAXIMUM\+\_\+\+SURFACECUBEMAP\+\_\+\+LAYERED\+\_\+\+LAYERS\+:} Maximum layers in a cubemap layered surface
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+REGISTERS\+\_\+\+PER\+\_\+\+BLOCK\+:} Maximum number of 32-\/bit registers available to a thread block
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CLOCK\+\_\+\+RATE\+:} The typical clock frequency in kilohertz
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+TEXTURE\+\_\+\+ALIGNMENT\+:} Alignment requirement; texture base addresses aligned to \+::texture\+Align bytes do not need an offset applied to texture fetches
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+TEXTURE\+\_\+\+PITCH\+\_\+\+ALIGNMENT\+:} Pitch alignment requirement for 2D texture references bound to pitched memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GPU\+\_\+\+OVERLAP\+:} 1 if the device can concurrently copy memory between host and device while executing a kernel, or 0 if not
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MULTIPROCESSOR\+\_\+\+COUNT\+:} Number of multiprocessors on the device
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+KERNEL\+\_\+\+EXEC\+\_\+\+TIMEOUT\+:} 1 if there is a run time limit for kernels executed on the device, or 0 if not
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+INTEGRATED\+:} 1 if the device is integrated with the memory subsystem, or 0 if not
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+MAP\+\_\+\+HOST\+\_\+\+MEMORY\+:} 1 if the device can map host memory into the CUDA address space, or 0 if not
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+COMPUTE\+\_\+\+MODE\+:} Compute mode that device is currently in. Available modes are as follows\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+COMPUTEMODE\+\_\+\+DEFAULT\+:} Default mode -\/ Device is not restricted and can have multiple CUDA contexts present at a single time.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+COMPUTEMODE\+\_\+\+PROHIBITED\+:} Compute-\/prohibited mode -\/ Device is prohibited from creating new CUDA contexts.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+COMPUTEMODE\+\_\+\+EXCLUSIVE\+\_\+\+PROCESS\+:} Compute-\/exclusive-\/process mode -\/ Device can have only one context used by a single process at a time.
+\end{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+KERNELS\+:} 1 if the device supports executing multiple kernels within the same context simultaneously, or 0 if not. It is not guaranteed that multiple kernels will be resident on the device concurrently so this feature should not be relied upon for correctness.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+ECC\+\_\+\+ENABLED\+:} 1 if error correction is enabled on the device, 0 if error correction is disabled or not supported by the device
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PCI\+\_\+\+BUS\+\_\+\+ID\+:} PCI bus identifier of the device
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PCI\+\_\+\+DEVICE\+\_\+\+ID\+:} PCI device (also known as slot) identifier of the device
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PCI\+\_\+\+DOMAIN\+\_\+\+ID\+:} PCI domain identifier of the device
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+TCC\+\_\+\+DRIVER\+:} 1 if the device is using a TCC driver. TCC is only available on Tesla hardware running Windows Vista or later
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MEMORY\+\_\+\+CLOCK\+\_\+\+RATE\+:} Peak memory clock frequency in kilohertz
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GLOBAL\+\_\+\+MEMORY\+\_\+\+BUS\+\_\+\+WIDTH\+:} Global memory bus width in bits
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+L2\+\_\+\+CACHE\+\_\+\+SIZE\+:} Size of L2 cache in bytes. 0 if the device doesn\textquotesingle{}t have L2 cache
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+THREADS\+\_\+\+PER\+\_\+\+MULTIPROCESSOR\+:} Maximum resident threads per multiprocessor
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+UNIFIED\+\_\+\+ADDRESSING\+:} 1 if the device shares a unified address space with the host, or 0 if not
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+COMPUTE\+\_\+\+CAPABILITY\+\_\+\+MAJOR\+:} Major compute capability version number
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+COMPUTE\+\_\+\+CAPABILITY\+\_\+\+MINOR\+:} Minor compute capability version number
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GLOBAL\+\_\+\+L1\+\_\+\+CACHE\+\_\+\+SUPPORTED\+:} 1 if device supports caching globals in L1 cache, 0 if caching globals in L1 cache is not supported by the device
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+LOCAL\+\_\+\+L1\+\_\+\+CACHE\+\_\+\+SUPPORTED\+:} 1 if device supports caching locals in L1 cache, 0 if caching locals in L1 cache is not supported by the device
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+SHARED\+\_\+\+MEMORY\+\_\+\+PER\+\_\+\+MULTIPROCESSOR\+:} Maximum amount of shared memory available to a multiprocessor in bytes; this amount is shared by all thread blocks simultaneously resident on a multiprocessor
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+REGISTERS\+\_\+\+PER\+\_\+\+MULTIPROCESSOR\+:} Maximum number of 32-\/bit registers available to a multiprocessor; this number is shared by all thread blocks simultaneously resident on a multiprocessor
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MANAGED\+\_\+\+MEMORY\+:} 1 if device supports allocating managed memory on this system, 0 if allocating managed memory is not supported by the device on this system.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MULTI\+\_\+\+GPU\+\_\+\+BOARD\+:} 1 if device is on a multi-\/\+GPU board, 0 if not.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MULTI\+\_\+\+GPU\+\_\+\+BOARD\+\_\+\+GROUP\+\_\+\+ID\+:} Unique identifier for a group of devices associated with the same board. Devices on the same multi-\/\+GPU board will share the same identifier.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+HOST\+\_\+\+NATIVE\+\_\+\+ATOMIC\+\_\+\+SUPPORTED\+:} 1 if Link between the device and the host supports native atomic operations.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+SINGLE\+\_\+\+TO\+\_\+\+DOUBLE\+\_\+\+PRECISION\+\_\+\+PERF\+\_\+\+RATIO\+:} Ratio of single precision performance (in floating-\/point operations per second) to double precision performance.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS\+:} Device suppports coherently accessing pageable memory without calling cuda\+Host\+Register on it.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CONCURRENT\+\_\+\+MANAGED\+\_\+\+ACCESS\+:} Device can coherently access managed memory concurrently with the CPU.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+COMPUTE\+\_\+\+PREEMPTION\+\_\+\+SUPPORTED\+:} Device supports Compute Preemption.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+\+HOST\+\_\+\+POINTER\+\_\+\+FOR\+\_\+\+REGISTERED\+\_\+\+MEM\+:} Device can access host registered memory at the same virtual address as the CPU.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+SHARED\+\_\+\+MEMORY\+\_\+\+PER\+\_\+\+BLOCK\+\_\+\+OPTIN\+:} The maximum per block shared memory size suported on this device. This is the maximum value that can be opted into when using the \doxylink{group___c_u_d_a___e_x_e_c_ga68d6d7c16f1544866530ff0f3be72f17}{cu\+Func\+Set\+Attribute()} call. For more details see \doxylink{group___c_u_d_a___t_y_p_e_s_ggab67889469b7e66d222f5dbe69bbfdf36a75b33d145e83462ef7292575015be03e}{CU\+\_\+\+FUNC\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+DYNAMIC\+\_\+\+SHARED\+\_\+\+SIZE\+\_\+\+BYTES}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+PAGEABLE\+\_\+\+MEMORY\+\_\+\+ACCESS\+\_\+\+USES\+\_\+\+HOST\+\_\+\+PAGE\+\_\+\+TABLES\+:} Device accesses pageable memory via the host\textquotesingle{}s page tables.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+DIRECT\+\_\+\+MANAGED\+\_\+\+MEM\+\_\+\+ACCESS\+\_\+\+FROM\+\_\+\+HOST\+:} The host can directly access managed memory on the device without migration.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+VIRTUAL\+\_\+\+MEMORY\+\_\+\+MANAGEMENT\+\_\+\+SUPPORTED\+:} Device supports virtual memory management APIs like \doxylink{group___c_u_d_a___v_a_gaf271a8c55e35412d0e02fee44c034edf}{cu\+Mem\+Address\+Reserve}, \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}, \doxylink{group___c_u_d_a___v_a_gaa44fdb2ed013cfd4fb3fcb89aa930aba}{cu\+Mem\+Map} and related APIs
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+POSIX\+\_\+\+FILE\+\_\+\+DESCRIPTOR\+\_\+\+SUPPORTED\+:} Device supports exporting memory to a posix file descriptor with \doxylink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}, if requested via \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+WIN32\+\_\+\+HANDLE\+\_\+\+SUPPORTED\+:} Device supports exporting memory to a Win32 NT handle with \doxylink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}, if requested via \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+WIN32\+\_\+\+KMT\+\_\+\+HANDLE\+\_\+\+SUPPORTED\+:} Device supports exporting memory to a Win32 KMT handle with \doxylink{group___c_u_d_a___v_a_gaadd1b6638c18e8d59f9fe4afa2fc7572}{cu\+Mem\+Export\+To\+Shareable\+Handle}, if requested via \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+BLOCKS\+\_\+\+PER\+\_\+\+MULTIPROCESSOR\+:} Maximum number of thread blocks that can reside on a multiprocessor
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GENERIC\+\_\+\+COMPRESSION\+\_\+\+SUPPORTED\+:} Device supports compressible memory allocation via \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+PERSISTING\+\_\+\+L2\+\_\+\+CACHE\+\_\+\+SIZE\+:} Maximum L2 persisting lines capacity setting in bytes
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MAX\+\_\+\+ACCESS\+\_\+\+POLICY\+\_\+\+WINDOW\+\_\+\+SIZE\+:} Maximum value of \doxylink{struct_c_uaccess_policy_window__st_a523fd71955aeefcb219a52bc1809b30b}{CUaccess\+Policy\+Window\+::num\+\_\+bytes}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GPU\+\_\+\+DIRECT\+\_\+\+RDMA\+\_\+\+WITH\+\_\+\+CUDA\+\_\+\+VMM\+\_\+\+SUPPORTED\+:} Device supports specifying the GPUDirect RDMA flag with \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+RESERVED\+\_\+\+SHARED\+\_\+\+MEMORY\+\_\+\+PER\+\_\+\+BLOCK\+:} Amount of shared memory per block reserved by CUDA driver in bytes
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+SPARSE\+\_\+\+CUDA\+\_\+\+ARRAY\+\_\+\+SUPPORTED\+:} Device supports sparse CUDA arrays and sparse CUDA mipmapped arrays.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+READ\+\_\+\+ONLY\+\_\+\+HOST\+\_\+\+REGISTER\+\_\+\+SUPPORTED\+:} Device supports using the cu\+Mem\+Host\+Register flag \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+MEMHOSTERGISTER\+\_\+\+READ\+\_\+\+ONLY} to register memory that must be mapped as read-\/only to the GPU
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MEMORY\+\_\+\+POOLS\+\_\+\+SUPPORTED\+:} Device supports using the \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_gafd00661b70b886c4e7bdf30c8b1a9c96}{cu\+Mem\+Alloc\+Async} and \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Mem\+Pool} family of APIs
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GPU\+\_\+\+DIRECT\+\_\+\+RDMA\+\_\+\+SUPPORTED\+:} Device supports GPUDirect RDMA APIs, like nvidia\+\_\+p2p\+\_\+get\+\_\+pages (see \href{https://docs.nvidia.com/cuda/gpudirect-rdma}{\texttt{ https\+://docs.\+nvidia.\+com/cuda/gpudirect-\/rdma}} for more information)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GPU\+\_\+\+DIRECT\+\_\+\+RDMA\+\_\+\+FLUSH\+\_\+\+WRITES\+\_\+\+OPTIONS\+:} The returned attribute shall be interpreted as a bitmask, where the individual bits are described by the \doxylink{group___c_u_d_a___t_y_p_e_s_gaf79c02a5844b29db23d8cbf25b0fdcb4}{CUflush\+GPUDirect\+RDMAWrites\+Options} enum
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GPU\+\_\+\+DIRECT\+\_\+\+RDMA\+\_\+\+WRITES\+\_\+\+ORDERING\+:} GPUDirect RDMA writes to the device do not need to be flushed for consumers within the scope indicated by the returned attribute. See \doxylink{group___c_u_d_a___t_y_p_e_s_gaabb5d9f8d1146a541f814fb3699f9a52}{CUGPUDirect\+RDMAWrites\+Ordering} for the numerical values returned here.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+MEMPOOL\+\_\+\+SUPPORTED\+\_\+\+HANDLE\+\_\+\+TYPES\+:} Bitmask of handle types supported with mempool based IPC
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+DEFERRED\+\_\+\+MAPPING\+\_\+\+CUDA\+\_\+\+ARRAY\+\_\+\+SUPPORTED\+:} Device supports deferred mapping CUDA arrays and CUDA mipmapped arrays.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em pi} & -\/ Returned device attribute value \\
+\hline
+{\em attrib} & -\/ Device attribute to query \\
+\hline
+{\em dev} & -\/ Device handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem, \doxylink{cuda_8h_a782f7ec065cc835985521acd9183e175}{cu\+Device\+Get\+Exec\+Affinity\+Support}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gade765bf7bb5df793bc506f4b8ad97d19}{cuda\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3}{cuda\+Get\+Device\+Properties} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}\label{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1} 
+\index{Device Management@{Device Management}!cuDeviceGetCount@{cuDeviceGetCount}}
+\index{cuDeviceGetCount@{cuDeviceGetCount}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetCount()}{cuDeviceGetCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{count }\end{DoxyParamCaption})}
+
+
+
+Returns the number of compute-\/capable devices. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}count} the number of devices with compute capability greater than or equal to 2.\+0 that are available for execution. If there is no such device, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count()} returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & -\/ Returned number of compute-\/capable devices\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892}{cu\+Device\+Get\+Luid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem, \doxylink{cuda_8h_a782f7ec065cc835985521acd9183e175}{cu\+Device\+Get\+Exec\+Affinity\+Support}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5b0c57f32cb245582010c07e952753e6}{cuda\+Get\+Device\+Count} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_gadbd46936e6cbf1bea91683aeb159d956}\label{group___c_u_d_a___d_e_v_i_c_e_gadbd46936e6cbf1bea91683aeb159d956} 
+\index{Device Management@{Device Management}!cuDeviceGetDefaultMemPool@{cuDeviceGetDefaultMemPool}}
+\index{cuDeviceGetDefaultMemPool@{cuDeviceGetDefaultMemPool}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetDefaultMemPool()}{cuDeviceGetDefaultMemPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Default\+Mem\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b96b1ef79f0cb312b51169e9f50e722}{CUmemory\+Pool}} \texorpdfstring{$\ast$}{*}}]{pool\+\_\+out,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns the default mempool of a device. 
+
+The default mempool of a device contains device memory from that device.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED} \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_gafd00661b70b886c4e7bdf30c8b1a9c96}{cu\+Mem\+Alloc\+Async}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga69038871231f8adb9d622825c32a05ab}{cu\+Mem\+Pool\+Trim\+To}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga54c9eb9fcedd1cdae8c33899714e08c5}{cu\+Mem\+Pool\+Get\+Attribute}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga5bc8b4979b6453798bb056204b0cc5b1}{cu\+Mem\+Pool\+Set\+Attribute}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_gae688cf3441872b72388b361d4aca0e09}{cu\+Mem\+Pool\+Set\+Access}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gaf2e6e7d699b18a6c14522165e3aa7395}{cu\+Device\+Get\+Mem\+Pool}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga6b85aa521125d25bc8e9439c824388c0}{cu\+Mem\+Pool\+Create} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892}\label{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892} 
+\index{Device Management@{Device Management}!cuDeviceGetLuid@{cuDeviceGetLuid}}
+\index{cuDeviceGetLuid@{cuDeviceGetLuid}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetLuid()}{cuDeviceGetLuid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Luid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{luid,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{device\+Node\+Mask,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Return an LUID and device node mask for the device. 
+
+Return identifying information ({\ttfamily luid} and {\ttfamily device\+Node\+Mask}) to allow matching device with graphics APIs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em luid} & -\/ Returned LUID \\
+\hline
+{\em device\+Node\+Mask} & -\/ Returned device node mask \\
+\hline
+{\em dev} & -\/ Device to get identifier string for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem, \doxylink{cuda_8h_a782f7ec065cc835985521acd9183e175}{cu\+Device\+Get\+Exec\+Affinity\+Support}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3}{cuda\+Get\+Device\+Properties} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_gaf2e6e7d699b18a6c14522165e3aa7395}\label{group___c_u_d_a___d_e_v_i_c_e_gaf2e6e7d699b18a6c14522165e3aa7395} 
+\index{Device Management@{Device Management}!cuDeviceGetMemPool@{cuDeviceGetMemPool}}
+\index{cuDeviceGetMemPool@{cuDeviceGetMemPool}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetMemPool()}{cuDeviceGetMemPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Mem\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b96b1ef79f0cb312b51169e9f50e722}{CUmemory\+Pool}} \texorpdfstring{$\ast$}{*}}]{pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Gets the current mempool for a device. 
+
+Returns the last pool provided to \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga86babedf12a21049a93915f92d537278}{cu\+Device\+Set\+Mem\+Pool} for this device or the device\textquotesingle{}s default memory pool if \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga86babedf12a21049a93915f92d537278}{cu\+Device\+Set\+Mem\+Pool} has never been called. By default the current mempool is the default mempool for a device. Otherwise the returned pool must have been set with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga86babedf12a21049a93915f92d537278}{cu\+Device\+Set\+Mem\+Pool}.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_gadbd46936e6cbf1bea91683aeb159d956}{cu\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga6b85aa521125d25bc8e9439c824388c0}{cu\+Mem\+Pool\+Create}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga86babedf12a21049a93915f92d537278}{cu\+Device\+Set\+Mem\+Pool} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}\label{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5} 
+\index{Device Management@{Device Management}!cuDeviceGetName@{cuDeviceGetName}}
+\index{cuDeviceGetName@{cuDeviceGetName}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetName()}{cuDeviceGetName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}}]{name,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{len,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns an identifer string for the device. 
+
+Returns an ASCII string identifying the device {\ttfamily dev} in the NULL-\/terminated string pointed to by {\ttfamily name}. {\ttfamily len} specifies the maximum length of the string that may be returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ Returned identifier string for the device \\
+\hline
+{\em len} & -\/ Maximum length of string to store in {\ttfamily name} \\
+\hline
+{\em dev} & -\/ Device to get identifier string for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892}{cu\+Device\+Get\+Luid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem, \doxylink{cuda_8h_a782f7ec065cc835985521acd9183e175}{cu\+Device\+Get\+Exec\+Affinity\+Support}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3}{cuda\+Get\+Device\+Properties} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga1bfd645a691e1cd33873c94605d2089a}\label{group___c_u_d_a___d_e_v_i_c_e_ga1bfd645a691e1cd33873c94605d2089a} 
+\index{Device Management@{Device Management}!cuDeviceGetNvSciSyncAttributes@{cuDeviceGetNvSciSyncAttributes}}
+\index{cuDeviceGetNvSciSyncAttributes@{cuDeviceGetNvSciSyncAttributes}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetNvSciSyncAttributes()}{cuDeviceGetNvSciSyncAttributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Nv\+Sci\+Sync\+Attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{nv\+Sci\+Sync\+Attr\+List,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Return Nv\+Sci\+Sync attributes that this device can support. 
+
+Returns in {\ttfamily nv\+Sci\+Sync\+Attr\+List}, the properties of Nv\+Sci\+Sync that this CUDA device, {\ttfamily dev} can support. The returned {\ttfamily nv\+Sci\+Sync\+Attr\+List} can be used to create an Nv\+Sci\+Sync object that matches this device\textquotesingle{}s capabilities.
+
+If Nv\+Sci\+Sync\+Attr\+Key\+\_\+\+Required\+Perm field in {\ttfamily nv\+Sci\+Sync\+Attr\+List} is already set this API will return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}.
+
+The applications should set {\ttfamily nv\+Sci\+Sync\+Attr\+List} to a valid Nv\+Sci\+Sync\+Attr\+List failing which this API will return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}.
+
+The {\ttfamily flags} controls how applications intends to use the Nv\+Sci\+Sync created from the {\ttfamily nv\+Sci\+Sync\+Attr\+List}. The valid flags are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ga8709811eaf5a7849ad235aae65471a06}{CUDA\+\_\+\+NVSCISYNC\+\_\+\+ATTR\+\_\+\+SIGNAL}, specifies that the applications intends to signal an Nv\+Sci\+Sync on this CUDA device.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gad7a00d09b6061b828e13360b238cf9b4}{CUDA\+\_\+\+NVSCISYNC\+\_\+\+ATTR\+\_\+\+WAIT}, specifies that the applications intends to wait on an Nv\+Sci\+Sync on this CUDA device.
+\end{DoxyItemize}
+
+At least one of these flags must be set, failing which the API returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}. Both the flags are orthogonal to one another\+: a developer may set both these flags that allows to set both wait and signal specific attributes in the same {\ttfamily nv\+Sci\+Sync\+Attr\+List}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nv\+Sci\+Sync\+Attr\+List} & -\/ Return Nv\+Sci\+Sync attributes supported. \\
+\hline
+{\em dev} & -\/ Valid Cuda Device to get Nv\+Sci\+Sync attributes for. \\
+\hline
+{\em flags} & -\/ flags describing Nv\+Sci\+Sync usage.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga4a4f26a18277e3717fc24f1d2ea4cffa}{cu\+Import\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gab9a50b3d164d9fc35d4f469287f5b8ae}{cu\+Destroy\+External\+Semaphore}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_ga48ce1f13c99064a2b66c2f2067f81644}{cu\+Signal\+External\+Semaphores\+Async}, \doxylink{group___c_u_d_a___e_x_t_r_e_s___i_n_t_e_r_o_p_gabf608361773544b02491128828bd3a1b}{cu\+Wait\+External\+Semaphores\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga16a19bb3666aac5ef0ebc3d2430f75eb}\label{group___c_u_d_a___d_e_v_i_c_e_ga16a19bb3666aac5ef0ebc3d2430f75eb} 
+\index{Device Management@{Device Management}!cuDeviceGetTexture1DLinearMaxWidth@{cuDeviceGetTexture1DLinearMaxWidth}}
+\index{cuDeviceGetTexture1DLinearMaxWidth@{cuDeviceGetTexture1DLinearMaxWidth}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetTexture1DLinearMaxWidth()}{cuDeviceGetTexture1DLinearMaxWidth()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Texture1\+DLinear\+Max\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{max\+Width\+In\+Elements,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\+\_\+format}}}]{format,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}}}]{num\+Channels,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns the maximum number of elements allocatable in a 1D linear texture for a given texture element size. 
+
+Returns in {\ttfamily max\+Width\+In\+Elements} the maximum number of texture elements allocatable in a 1D linear texture for given {\ttfamily format} and {\ttfamily num\+Channels}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Width\+In\+Elements} & -\/ Returned maximum number of texture elements allocatable for given {\ttfamily format} and {\ttfamily num\+Channels}. \\
+\hline
+{\em format} & -\/ Texture format. \\
+\hline
+{\em num\+Channels} & -\/ Number of channels per texture element. \\
+\hline
+{\em dev} & -\/ Device handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gad5dad131be512b949e362a169eed7be2}{cuda\+Mem\+Get\+Info}, cu\+Device\+Total\+Mem 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}\label{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877} 
+\index{Device Management@{Device Management}!cuDeviceGetUuid@{cuDeviceGetUuid}}
+\index{cuDeviceGetUuid@{cuDeviceGetUuid}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetUuid()}{cuDeviceGetUuid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Uuid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_uuuid__st}{CUuuid}} \texorpdfstring{$\ast$}{*}}]{uuid,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Return an UUID for the device. 
+
+Note there is a later version of this API, cu\+Device\+Get\+Uuid\+\_\+v2. It will supplant this version in 12.\+0, which is retained for minor version compatibility.
+
+Returns 16-\/octets identifing the device {\ttfamily dev} in the structure pointed by the {\ttfamily uuid}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & -\/ Returned UUID \\
+\hline
+{\em dev} & -\/ Device to get identifier string for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Device\+Get\+Uuid\+\_\+v2 \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892}{cu\+Device\+Get\+Luid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem, \doxylink{cuda_8h_a782f7ec065cc835985521acd9183e175}{cu\+Device\+Get\+Exec\+Affinity\+Support}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3}{cuda\+Get\+Device\+Properties} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga816ed0c4909a630181d14cf1571af48d}\label{group___c_u_d_a___d_e_v_i_c_e_ga816ed0c4909a630181d14cf1571af48d} 
+\index{Device Management@{Device Management}!cuDeviceGetUuid\_v2@{cuDeviceGetUuid\_v2}}
+\index{cuDeviceGetUuid\_v2@{cuDeviceGetUuid\_v2}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetUuid\_v2()}{cuDeviceGetUuid\_v2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+Uuid\+\_\+v2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_uuuid__st}{CUuuid}} \texorpdfstring{$\ast$}{*}}]{uuid,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Return an UUID for the device (11.\+4+) 
+
+Returns 16-\/octets identifing the device {\ttfamily dev} in the structure pointed by the {\ttfamily uuid}. If the device is in MIG mode, returns its MIG UUID which uniquely identifies the subscribed MIG compute instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & -\/ Returned UUID \\
+\hline
+{\em dev} & -\/ Device to get identifier string for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gab5bbc3896359a7a8a295e5febb896892}{cu\+Device\+Get\+Luid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, cu\+Device\+Total\+Mem, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3}{cuda\+Get\+Device\+Properties} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_ga86babedf12a21049a93915f92d537278}\label{group___c_u_d_a___d_e_v_i_c_e_ga86babedf12a21049a93915f92d537278} 
+\index{Device Management@{Device Management}!cuDeviceSetMemPool@{cuDeviceSetMemPool}}
+\index{cuDeviceSetMemPool@{cuDeviceSetMemPool}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceSetMemPool()}{cuDeviceSetMemPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Set\+Mem\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3b96b1ef79f0cb312b51169e9f50e722}{CUmemory\+Pool}}}]{pool }\end{DoxyParamCaption})}
+
+
+
+Sets the current memory pool of a device. 
+
+The memory pool must be local to the specified device. \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_gafd00661b70b886c4e7bdf30c8b1a9c96}{cu\+Mem\+Alloc\+Async} allocates from the current mempool of the provided stream\textquotesingle{}s device. By default, a device\textquotesingle{}s current memory pool is its default memory pool.
+
+\begin{DoxyNote}{Note}
+Use \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga53f85248f781ce1c0f221eeeff3f1796}{cu\+Mem\+Alloc\+From\+Pool\+Async} to specify asynchronous allocations from a device different than the one the stream runs on.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_gadbd46936e6cbf1bea91683aeb159d956}{cu\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gaf2e6e7d699b18a6c14522165e3aa7395}{cu\+Device\+Get\+Mem\+Pool}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga6b85aa521125d25bc8e9439c824388c0}{cu\+Mem\+Pool\+Create}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga9908b13ca175fb85e12a980f5516a865}{cu\+Mem\+Pool\+Destroy}, \doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga53f85248f781ce1c0f221eeeff3f1796}{cu\+Mem\+Alloc\+From\+Pool\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_gae41ae29bf2b944d1f8b43ab80376ce22}\label{group___c_u_d_a___d_e_v_i_c_e_gae41ae29bf2b944d1f8b43ab80376ce22} 
+\index{Device Management@{Device Management}!cuDeviceTotalMem@{cuDeviceTotalMem}}
+\index{cuDeviceTotalMem@{cuDeviceTotalMem}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuDeviceTotalMem()}{cuDeviceTotalMem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Total\+Mem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{bytes,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns the total amount of memory on the device. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}bytes} the total amount of memory available on the device {\ttfamily dev} in bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & -\/ Returned memory available on device in bytes \\
+\hline
+{\em dev} & -\/ Device handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_gad6581c65f1eeae926e8d177cdab1adf1}{cu\+Device\+Get\+Count}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga74c9e9298f04dc67c6747220e8e643f5}{cu\+Device\+Get\+Name}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga7d72d83e1707eaaf31f2598315084877}{cu\+Device\+Get\+Uuid}, \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga9ec7b0dec16e35ffac5a4708dcb943d2}{cu\+Device\+Get}, \doxylink{cuda_8h_a782f7ec065cc835985521acd9183e175}{cu\+Device\+Get\+Exec\+Affinity\+Support}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gad5dad131be512b949e362a169eed7be2}{cuda\+Mem\+Get\+Info} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___d_e_v_i_c_e_gad8213fb91ea7e93c36f6f8eea265f322}\label{group___c_u_d_a___d_e_v_i_c_e_gad8213fb91ea7e93c36f6f8eea265f322} 
+\index{Device Management@{Device Management}!cuFlushGPUDirectRDMAWrites@{cuFlushGPUDirectRDMAWrites}}
+\index{cuFlushGPUDirectRDMAWrites@{cuFlushGPUDirectRDMAWrites}!Device Management@{Device Management}}
+\doxysubsubsection{\texorpdfstring{cuFlushGPUDirectRDMAWrites()}{cuFlushGPUDirectRDMAWrites()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Flush\+GPUDirect\+RDMAWrites (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabf6220f85b58453fb2779b2f365004f0}{CUflush\+GPUDirect\+RDMAWrites\+Target}}}]{target,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga847862f98e8eaeef4d536245b52a13db}{CUflush\+GPUDirect\+RDMAWrites\+Scope}}}]{scope }\end{DoxyParamCaption})}
+
+
+
+Blocks until remote writes are visible to the specified scope. 
+
+Blocks until GPUDirect RDMA writes to the target context via mappings created through APIs like nvidia\+\_\+p2p\+\_\+get\+\_\+pages (see \href{https://docs.nvidia.com/cuda/gpudirect-rdma}{\texttt{ https\+://docs.\+nvidia.\+com/cuda/gpudirect-\/rdma}} for more information), are visible to the specified scope.
+
+If the scope equals or lies within the scope indicated by \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aadfb3df2c0e9347a7c13f71043e961c50}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+GPU\+\_\+\+DIRECT\+\_\+\+RDMA\+\_\+\+WRITES\+\_\+\+ORDERING}, the call will be a no-\/op and can be safely omitted for performance. This can be determined by comparing the numerical values between the two enums, with smaller scopes having smaller values.
+
+Users may query support for this API via \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+FLUSH\+\_\+\+FLUSH\+\_\+\+GPU\+\_\+\+DIRECT\+\_\+\+RDMA\+\_\+\+OPTIONS}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & -\/ The target of the operation, see \doxylink{group___c_u_d_a___t_y_p_e_s_gabf6220f85b58453fb2779b2f365004f0}{CUflush\+GPUDirect\+RDMAWrites\+Target} \\
+\hline
+{\em scope} & -\/ The scope of the operation, see \doxylink{group___c_u_d_a___t_y_p_e_s_ga847862f98e8eaeef4d536245b52a13db}{CUflush\+GPUDirect\+RDMAWrites\+Scope}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \textbackslash{}notefnerr 
+\end{DoxyReturn}

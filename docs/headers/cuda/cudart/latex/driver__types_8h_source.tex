@@ -1,0 +1,1615 @@
+\doxysection{driver\+\_\+types.\+h}
+\hypertarget{driver__types_8h_source}{}\label{driver__types_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 1993-\/2018\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#if\ !defined(\_\_DRIVER\_TYPES\_H\_\_)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ \_\_DRIVER\_TYPES\_H\_\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_\_)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_\_}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ \_\_UNDEF\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_DRIVER\_TYPES\_H\_\_}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#ifndef\ \_\_DOXYGEN\_ONLY\_\_}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ "{}crt/host\_defines.h"{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ "{}vector\_types.h"{}}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00073\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00074\ \textcolor{comment}{*\ \ TYPE\ DEFINITIONS\ USED\ BY\ RUNTIME\ API\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00075\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00076\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDA\_INTERNAL\_COMPILATION\_\_)}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#include\ <limits.h>}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !defined(\_\_CUDACC\_RTC\_\_)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ cudaHostAllocDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ cudaHostAllocPortable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ cudaHostAllocMapped\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02\ \ }}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ cudaHostAllocWriteCombined\ \ \ \ \ \ \ \ \ \ 0x04\ \ }}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ cudaHostRegisterDefault\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ cudaHostRegisterPortable\ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ cudaHostRegisterMapped\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02\ \ }}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ cudaHostRegisterIoMemory\ \ \ \ \ \ \ \ \ \ \ \ 0x04\ \ }}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ cudaHostRegisterReadOnly\ \ \ \ \ \ \ \ \ \ \ \ 0x08\ \ }}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ cudaPeerAccessDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ cudaStreamDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ cudaStreamNonBlocking\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ cudaStreamLegacy\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((cudaStream\_t)0x1)}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ cudaStreamPerThread\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((cudaStream\_t)0x2)}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ cudaEventDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ cudaEventBlockingSync\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ cudaEventDisableTiming\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02\ \ }}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ cudaEventInterprocess\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x04\ \ }}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ cudaEventRecordDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ cudaEventRecordExternal\ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ cudaEventWaitDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ cudaEventWaitExternal\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ cudaDeviceScheduleAuto\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ cudaDeviceScheduleSpin\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ cudaDeviceScheduleYield\ \ \ \ \ \ \ \ \ \ \ \ \ 0x02\ \ }}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ cudaDeviceScheduleBlockingSync\ \ \ \ \ \ 0x04\ \ }}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ cudaDeviceBlockingSync\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x04\ \ }}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ cudaDeviceScheduleMask\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x07\ \ }}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ cudaDeviceMapHost\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x08\ \ }}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ cudaDeviceLmemResizeToMax\ \ \ \ \ \ \ \ \ \ \ 0x10\ \ }}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ cudaDeviceMask\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x1f\ \ }}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ cudaArrayDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ cudaArrayLayered\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ cudaArraySurfaceLoadStore\ \ \ \ \ \ \ \ \ \ \ 0x02\ \ }}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ cudaArrayCubemap\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x04\ \ }}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ cudaArrayTextureGather\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x08\ \ }}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ cudaArrayColorAttachment\ \ \ \ \ \ \ \ \ \ \ \ 0x20\ \ }}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ cudaArraySparse\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x40\ \ }}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ cudaArrayDeferredMapping\ \ \ \ \ \ \ \ \ \ \ \ 0x80\ \ }}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ cudaIpcMemLazyEnablePeerAccess\ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ cudaMemAttachGlobal\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ \ }}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ cudaMemAttachHost\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02\ \ }}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ cudaMemAttachSingle\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x04\ \ }}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ cudaOccupancyDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ }}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ cudaOccupancyDisableCachingOverride\ 0x01\ \ }}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ cudaCpuDeviceId\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((int)-\/1)\ }}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ cudaInvalidDeviceId\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((int)-\/2)\ }}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ cudaCooperativeLaunchMultiDeviceNoPreSync\ \ 0x01}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ cudaCooperativeLaunchMultiDeviceNoPostSync\ 0x02}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_CUDA\_INTERNAL\_COMPILATION\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#if\ defined(\_\_DOXYGEN\_ONLY\_\_)\ ||\ defined(CUDA\_ENABLE\_DEPRECATED)}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED\ \_\_declspec(deprecated)}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#elif\ defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED\ \_\_attribute\_\_((deprecated))}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00195\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00196\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00197\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00198\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00199\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00204\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad62b590c1624ef69a71d4de1b5597a16}{cudaError}}}
+\DoxyCodeLine{00205\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ cudaSuccess\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 0,}
+\DoxyCodeLine{00212\ \ \ }
+\DoxyCodeLine{00217\ \ \ \ \ cudaErrorInvalidValue\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 1,}
+\DoxyCodeLine{00218\ \ \ }
+\DoxyCodeLine{00223\ \ \ \ \ cudaErrorMemoryAllocation\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 2,}
+\DoxyCodeLine{00224\ \ \ }
+\DoxyCodeLine{00229\ \ \ \ \ cudaErrorInitializationError\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 3,}
+\DoxyCodeLine{00230\ \ \ }
+\DoxyCodeLine{00236\ \ \ \ \ cudaErrorCudartUnloading\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 4,}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00243\ \ \ \ \ cudaErrorProfilerDisabled\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 5,}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00251\ \ \ \ \ cudaErrorProfilerNotInitialized\ \ \ \ \ \ \ =\ \ \ \ \ 6,}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00258\ \ \ \ \ cudaErrorProfilerAlreadyStarted\ \ \ \ \ \ \ =\ \ \ \ \ 7,}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ cudaErrorProfilerAlreadyStopped\ \ \ \ \ \ \ =\ \ \ \ 8,}
+\DoxyCodeLine{00266\ \ \ }
+\DoxyCodeLine{00274\ \ \ \ \ cudaErrorInvalidConfiguration\ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 9,}
+\DoxyCodeLine{00275\ \ \ }
+\DoxyCodeLine{00280\ \ \ \ \ cudaErrorInvalidPitchValue\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 12,}
+\DoxyCodeLine{00281\ \ \ }
+\DoxyCodeLine{00286\ \ \ \ \ cudaErrorInvalidSymbol\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 13,}
+\DoxyCodeLine{00287\ \ \ }
+\DoxyCodeLine{00294\ \ \ \ \ cudaErrorInvalidHostPointer\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 16,}
+\DoxyCodeLine{00295\ \ \ }
+\DoxyCodeLine{00302\ \ \ \ \ cudaErrorInvalidDevicePointer\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 17,}
+\DoxyCodeLine{00303\ \ \ }
+\DoxyCodeLine{00308\ \ \ \ \ cudaErrorInvalidTexture\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 18,}
+\DoxyCodeLine{00309\ \ \ }
+\DoxyCodeLine{00314\ \ \ \ \ cudaErrorInvalidTextureBinding\ \ \ \ \ \ \ \ =\ \ \ \ \ 19,}
+\DoxyCodeLine{00315\ \ \ }
+\DoxyCodeLine{00321\ \ \ \ \ cudaErrorInvalidChannelDescriptor\ \ \ \ \ =\ \ \ \ \ 20,}
+\DoxyCodeLine{00322\ \ \ }
+\DoxyCodeLine{00327\ \ \ \ \ cudaErrorInvalidMemcpyDirection\ \ \ \ \ \ \ =\ \ \ \ \ 21,}
+\DoxyCodeLine{00328\ \ \ }
+\DoxyCodeLine{00337\ \ \ \ \ cudaErrorAddressOfConstant\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 22,}
+\DoxyCodeLine{00338\ \ \ }
+\DoxyCodeLine{00346\ \ \ \ \ cudaErrorTextureFetchFailed\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 23,}
+\DoxyCodeLine{00347\ \ \ }
+\DoxyCodeLine{00355\ \ \ \ \ cudaErrorTextureNotBound\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 24,}
+\DoxyCodeLine{00356\ \ \ }
+\DoxyCodeLine{00364\ \ \ \ \ cudaErrorSynchronizationError\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 25,}
+\DoxyCodeLine{00365\ \ \ }
+\DoxyCodeLine{00370\ \ \ \ \ cudaErrorInvalidFilterSetting\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 26,}
+\DoxyCodeLine{00371\ \ \ }
+\DoxyCodeLine{00376\ \ \ \ \ cudaErrorInvalidNormSetting\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 27,}
+\DoxyCodeLine{00377\ \ \ }
+\DoxyCodeLine{00384\ \ \ \ \ cudaErrorMixedDeviceExecution\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 28,}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00392\ \ \ \ \ cudaErrorNotYetImplemented\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 31,}
+\DoxyCodeLine{00393\ \ \ }
+\DoxyCodeLine{00401\ \ \ \ \ cudaErrorMemoryValueTooLarge\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 32,}
+\DoxyCodeLine{00402\ \ \ }
+\DoxyCodeLine{00408\ \ \ \ \ cudaErrorStubLibrary\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 34,}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00415\ \ \ \ \ cudaErrorInsufficientDriver\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 35,}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00422\ \ \ \ \ cudaErrorCallRequiresNewerDriver\ \ \ \ \ \ =\ \ \ \ \ 36,}
+\DoxyCodeLine{00423\ \ \ }
+\DoxyCodeLine{00428\ \ \ \ \ cudaErrorInvalidSurface\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 37,}
+\DoxyCodeLine{00429\ \ \ }
+\DoxyCodeLine{00434\ \ \ \ \ cudaErrorDuplicateVariableName\ \ \ \ \ \ \ \ =\ \ \ \ \ 43,}
+\DoxyCodeLine{00435\ \ \ }
+\DoxyCodeLine{00440\ \ \ \ \ cudaErrorDuplicateTextureName\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 44,}
+\DoxyCodeLine{00441\ \ \ }
+\DoxyCodeLine{00446\ \ \ \ \ cudaErrorDuplicateSurfaceName\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 45,}
+\DoxyCodeLine{00447\ \ \ }
+\DoxyCodeLine{00456\ \ \ \ \ cudaErrorDevicesUnavailable\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 46,}
+\DoxyCodeLine{00457\ \ \ }
+\DoxyCodeLine{00469\ \ \ \ \ cudaErrorIncompatibleDriverContext\ \ \ \ =\ \ \ \ \ 49,}
+\DoxyCodeLine{00470\ \ \ \ \ }
+\DoxyCodeLine{00475\ \ \ \ \ cudaErrorMissingConfiguration\ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 52,}
+\DoxyCodeLine{00476\ \ \ }
+\DoxyCodeLine{00484\ \ \ \ \ cudaErrorPriorLaunchFailure\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 53,}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00491\ \ \ \ \ cudaErrorLaunchMaxDepthExceeded\ \ \ \ \ \ \ =\ \ \ \ \ 65,}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00499\ \ \ \ \ cudaErrorLaunchFileScopedTex\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 66,}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00507\ \ \ \ \ cudaErrorLaunchFileScopedSurf\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 67,}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00522\ \ \ \ \ cudaErrorSyncDepthExceeded\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 68,}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00534\ \ \ \ \ cudaErrorLaunchPendingCountExceeded\ \ \ =\ \ \ \ \ 69,}
+\DoxyCodeLine{00535\ \ \ }
+\DoxyCodeLine{00540\ \ \ \ \ cudaErrorInvalidDeviceFunction\ \ \ \ \ \ \ \ =\ \ \ \ \ \ 98,}
+\DoxyCodeLine{00541\ \ \ }
+\DoxyCodeLine{00546\ \ \ \ \ cudaErrorNoDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 100,}
+\DoxyCodeLine{00547\ \ \ }
+\DoxyCodeLine{00553\ \ \ \ \ cudaErrorInvalidDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 101,}
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00558\ \ \ \ \ cudaErrorDeviceNotLicensed\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 102,}
+\DoxyCodeLine{00559\ }
+\DoxyCodeLine{00567\ \ \ \ cudaErrorSoftwareValidityNotEstablished\ \ =\ \ \ \ \ 103,}
+\DoxyCodeLine{00568\ }
+\DoxyCodeLine{00572\ \ \ \ \ cudaErrorStartupFailure\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ 127,}
+\DoxyCodeLine{00573\ \ \ }
+\DoxyCodeLine{00577\ \ \ \ \ cudaErrorInvalidKernelImage\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 200,}
+\DoxyCodeLine{00578\ }
+\DoxyCodeLine{00587\ \ \ \ \ cudaErrorDeviceUninitialized\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 201,}
+\DoxyCodeLine{00588\ }
+\DoxyCodeLine{00592\ \ \ \ \ cudaErrorMapBufferObjectFailed\ \ \ \ \ \ \ \ =\ \ \ \ \ 205,}
+\DoxyCodeLine{00593\ \ \ }
+\DoxyCodeLine{00597\ \ \ \ \ cudaErrorUnmapBufferObjectFailed\ \ \ \ \ \ =\ \ \ \ \ 206,}
+\DoxyCodeLine{00598\ }
+\DoxyCodeLine{00603\ \ \ \ \ cudaErrorArrayIsMapped\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 207,}
+\DoxyCodeLine{00604\ }
+\DoxyCodeLine{00608\ \ \ \ \ cudaErrorAlreadyMapped\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 208,}
+\DoxyCodeLine{00609\ \ \ }
+\DoxyCodeLine{00616\ \ \ \ \ cudaErrorNoKernelImageForDevice\ \ \ \ \ \ \ =\ \ \ \ \ 209,}
+\DoxyCodeLine{00617\ }
+\DoxyCodeLine{00621\ \ \ \ \ cudaErrorAlreadyAcquired\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 210,}
+\DoxyCodeLine{00622\ }
+\DoxyCodeLine{00626\ \ \ \ \ cudaErrorNotMapped\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 211,}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00632\ \ \ \ \ cudaErrorNotMappedAsArray\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 212,}
+\DoxyCodeLine{00633\ }
+\DoxyCodeLine{00638\ \ \ \ \ cudaErrorNotMappedAsPointer\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 213,}
+\DoxyCodeLine{00639\ \ \ }
+\DoxyCodeLine{00644\ \ \ \ \ cudaErrorECCUncorrectable\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 214,}
+\DoxyCodeLine{00645\ \ \ }
+\DoxyCodeLine{00650\ \ \ \ \ cudaErrorUnsupportedLimit\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 215,}
+\DoxyCodeLine{00651\ \ \ \ \ }
+\DoxyCodeLine{00656\ \ \ \ \ cudaErrorDeviceAlreadyInUse\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 216,}
+\DoxyCodeLine{00657\ }
+\DoxyCodeLine{00662\ \ \ \ \ cudaErrorPeerAccessUnsupported\ \ \ \ \ \ \ \ =\ \ \ \ \ 217,}
+\DoxyCodeLine{00663\ }
+\DoxyCodeLine{00668\ \ \ \ \ cudaErrorInvalidPtx\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 218,}
+\DoxyCodeLine{00669\ }
+\DoxyCodeLine{00673\ \ \ \ \ cudaErrorInvalidGraphicsContext\ \ \ \ \ \ \ =\ \ \ \ \ 219,}
+\DoxyCodeLine{00674\ }
+\DoxyCodeLine{00679\ \ \ \ \ cudaErrorNvlinkUncorrectable\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 220,}
+\DoxyCodeLine{00680\ }
+\DoxyCodeLine{00686\ \ \ \ \ cudaErrorJitCompilerNotFound\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 221,}
+\DoxyCodeLine{00687\ }
+\DoxyCodeLine{00693\ \ \ \ \ cudaErrorUnsupportedPtxVersion\ \ \ \ \ \ \ \ =\ \ \ \ \ 222,}
+\DoxyCodeLine{00694\ }
+\DoxyCodeLine{00700\ \ \ \ \ cudaErrorJitCompilationDisabled\ \ \ \ \ \ \ =\ \ \ \ \ 223,}
+\DoxyCodeLine{00701\ }
+\DoxyCodeLine{00705\ \ \ \ \ cudaErrorUnsupportedExecAffinity\ \ \ \ \ \ =\ \ \ \ \ 224,}
+\DoxyCodeLine{00706\ }
+\DoxyCodeLine{00710\ \ \ \ \ cudaErrorInvalidSource\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 300,}
+\DoxyCodeLine{00711\ }
+\DoxyCodeLine{00715\ \ \ \ \ cudaErrorFileNotFound\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 301,}
+\DoxyCodeLine{00716\ \ \ }
+\DoxyCodeLine{00720\ \ \ \ \ cudaErrorSharedObjectSymbolNotFound\ \ \ =\ \ \ \ \ 302,}
+\DoxyCodeLine{00721\ \ \ }
+\DoxyCodeLine{00725\ \ \ \ \ cudaErrorSharedObjectInitFailed\ \ \ \ \ \ \ =\ \ \ \ \ 303,}
+\DoxyCodeLine{00726\ }
+\DoxyCodeLine{00730\ \ \ \ \ cudaErrorOperatingSystem\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 304,}
+\DoxyCodeLine{00731\ \ \ }
+\DoxyCodeLine{00737\ \ \ \ \ cudaErrorInvalidResourceHandle\ \ \ \ \ \ \ \ =\ \ \ \ \ 400,}
+\DoxyCodeLine{00738\ }
+\DoxyCodeLine{00743\ \ \ \ \ cudaErrorIllegalState\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 401,}
+\DoxyCodeLine{00744\ }
+\DoxyCodeLine{00750\ \ \ \ \ cudaErrorSymbolNotFound\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 500,}
+\DoxyCodeLine{00751\ \ \ }
+\DoxyCodeLine{00758\ \ \ \ \ cudaErrorNotReady\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 600,}
+\DoxyCodeLine{00759\ }
+\DoxyCodeLine{00766\ \ \ \ \ cudaErrorIllegalAddress\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 700,}
+\DoxyCodeLine{00767\ \ \ }
+\DoxyCodeLine{00775\ \ \ \ \ cudaErrorLaunchOutOfResources\ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 701,}
+\DoxyCodeLine{00776\ \ \ }
+\DoxyCodeLine{00786\ \ \ \ \ cudaErrorLaunchTimeout\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 702,}
+\DoxyCodeLine{00787\ }
+\DoxyCodeLine{00792\ \ \ \ \ cudaErrorLaunchIncompatibleTexturing\ \ =\ \ \ \ \ 703,}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ }
+\DoxyCodeLine{00799\ \ \ \ \ cudaErrorPeerAccessAlreadyEnabled\ \ \ \ \ =\ \ \ \ \ 704,}
+\DoxyCodeLine{00800\ \ \ \ \ }
+\DoxyCodeLine{00806\ \ \ \ \ cudaErrorPeerAccessNotEnabled\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 705,}
+\DoxyCodeLine{00807\ \ \ }
+\DoxyCodeLine{00819\ \ \ \ \ cudaErrorSetOnActiveProcess\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 708,}
+\DoxyCodeLine{00820\ }
+\DoxyCodeLine{00826\ \ \ \ \ cudaErrorContextIsDestroyed\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 709,}
+\DoxyCodeLine{00827\ }
+\DoxyCodeLine{00833\ \ \ \ \ cudaErrorAssert\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ 710,}
+\DoxyCodeLine{00834\ \ \ }
+\DoxyCodeLine{00840\ \ \ \ \ cudaErrorTooManyPeers\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 711,}
+\DoxyCodeLine{00841\ \ \ }
+\DoxyCodeLine{00846\ \ \ \ \ cudaErrorHostMemoryAlreadyRegistered\ \ =\ \ \ \ \ 712,}
+\DoxyCodeLine{00847\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00852\ \ \ \ \ cudaErrorHostMemoryNotRegistered\ \ \ \ \ \ =\ \ \ \ \ 713,}
+\DoxyCodeLine{00853\ }
+\DoxyCodeLine{00861\ \ \ \ \ cudaErrorHardwareStackError\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 714,}
+\DoxyCodeLine{00862\ }
+\DoxyCodeLine{00869\ \ \ \ \ cudaErrorIllegalInstruction\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 715,}
+\DoxyCodeLine{00870\ }
+\DoxyCodeLine{00878\ \ \ \ \ cudaErrorMisalignedAddress\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 716,}
+\DoxyCodeLine{00879\ }
+\DoxyCodeLine{00889\ \ \ \ \ cudaErrorInvalidAddressSpace\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 717,}
+\DoxyCodeLine{00890\ }
+\DoxyCodeLine{00897\ \ \ \ \ cudaErrorInvalidPc\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 718,}
+\DoxyCodeLine{00898\ \ \ }
+\DoxyCodeLine{00908\ \ \ \ \ cudaErrorLaunchFailure\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ \ 719,}
+\DoxyCodeLine{00909\ }
+\DoxyCodeLine{00917\ \ \ \ \ cudaErrorCooperativeLaunchTooLarge\ \ \ \ =\ \ \ \ \ 720,}
+\DoxyCodeLine{00918\ \ \ \ \ }
+\DoxyCodeLine{00922\ \ \ \ \ cudaErrorNotPermitted\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 800,}
+\DoxyCodeLine{00923\ }
+\DoxyCodeLine{00928\ \ \ \ \ cudaErrorNotSupported\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 801,}
+\DoxyCodeLine{00929\ }
+\DoxyCodeLine{00937\ \ \ \ \ cudaErrorSystemNotReady\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 802,}
+\DoxyCodeLine{00938\ }
+\DoxyCodeLine{00944\ \ \ \ \ cudaErrorSystemDriverMismatch\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 803,}
+\DoxyCodeLine{00945\ }
+\DoxyCodeLine{00953\ \ \ \ \ cudaErrorCompatNotSupportedOnDevice\ \ \ =\ \ \ \ \ 804,}
+\DoxyCodeLine{00954\ }
+\DoxyCodeLine{00958\ \ \ \ \ cudaErrorMpsConnectionFailed\ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 805,}
+\DoxyCodeLine{00959\ }
+\DoxyCodeLine{00963\ \ \ \ \ cudaErrorMpsRpcFailure\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 806,}
+\DoxyCodeLine{00964\ }
+\DoxyCodeLine{00969\ \ \ \ \ cudaErrorMpsServerNotReady\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ \ 807,}
+\DoxyCodeLine{00970\ }
+\DoxyCodeLine{00974\ \ \ \ \ cudaErrorMpsMaxClientsReached\ \ \ \ \ \ \ \ \ =\ \ \ \ \ 808,}
+\DoxyCodeLine{00975\ }
+\DoxyCodeLine{00979\ \ \ \ \ cudaErrorMpsMaxConnectionsReached\ \ \ \ \ =\ \ \ \ \ 809,}
+\DoxyCodeLine{00980\ }
+\DoxyCodeLine{00984\ \ \ \ \ cudaErrorStreamCaptureUnsupported\ \ \ \ \ =\ \ \ \ 900,}
+\DoxyCodeLine{00985\ }
+\DoxyCodeLine{00990\ \ \ \ \ cudaErrorStreamCaptureInvalidated\ \ \ \ \ =\ \ \ \ 901,}
+\DoxyCodeLine{00991\ }
+\DoxyCodeLine{00996\ \ \ \ \ cudaErrorStreamCaptureMerge\ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ 902,}
+\DoxyCodeLine{00997\ }
+\DoxyCodeLine{01001\ \ \ \ \ cudaErrorStreamCaptureUnmatched\ \ \ \ \ \ \ =\ \ \ \ 903,}
+\DoxyCodeLine{01002\ }
+\DoxyCodeLine{01007\ \ \ \ \ cudaErrorStreamCaptureUnjoined\ \ \ \ \ \ \ \ =\ \ \ \ 904,}
+\DoxyCodeLine{01008\ }
+\DoxyCodeLine{01014\ \ \ \ \ cudaErrorStreamCaptureIsolation\ \ \ \ \ \ \ =\ \ \ \ 905,}
+\DoxyCodeLine{01015\ }
+\DoxyCodeLine{01020\ \ \ \ \ cudaErrorStreamCaptureImplicit\ \ \ \ \ \ \ \ =\ \ \ \ 906,}
+\DoxyCodeLine{01021\ }
+\DoxyCodeLine{01026\ \ \ \ \ cudaErrorCapturedEvent\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ 907,}
+\DoxyCodeLine{01027\ \ \ }
+\DoxyCodeLine{01033\ \ \ \ \ cudaErrorStreamCaptureWrongThread\ \ \ \ \ =\ \ \ \ 908,}
+\DoxyCodeLine{01034\ }
+\DoxyCodeLine{01038\ \ \ \ \ cudaErrorTimeout\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ 909,}
+\DoxyCodeLine{01039\ }
+\DoxyCodeLine{01044\ \ \ \ \ cudaErrorGraphExecUpdateFailure\ \ \ \ \ \ \ =\ \ \ \ 910,}
+\DoxyCodeLine{01045\ }
+\DoxyCodeLine{01054\ \ \ \ \ cudaErrorExternalDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ 911,}
+\DoxyCodeLine{01055\ }
+\DoxyCodeLine{01056\ }
+\DoxyCodeLine{01057\ }
+\DoxyCodeLine{01058\ }
+\DoxyCodeLine{01059\ }
+\DoxyCodeLine{01060\ }
+\DoxyCodeLine{01061\ }
+\DoxyCodeLine{01062\ }
+\DoxyCodeLine{01063\ }
+\DoxyCodeLine{01067\ \ \ \ \ cudaErrorUnknown\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ \ 999,}
+\DoxyCodeLine{01068\ }
+\DoxyCodeLine{01075\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaErrorApiFailureBase}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ 10000}
+\DoxyCodeLine{01076\ \};}
+\DoxyCodeLine{01077\ }
+\DoxyCodeLine{01081\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4cf131513bd90cc6561902e68d6ee3ad}{cudaChannelFormatKind}}}
+\DoxyCodeLine{01082\ \{}
+\DoxyCodeLine{01083\ \ \ \ \ cudaChannelFormatKindSigned\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 0,\ \ \ \ \ \ }
+\DoxyCodeLine{01084\ \ \ \ \ cudaChannelFormatKindUnsigned\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 1,\ \ \ \ \ \ }
+\DoxyCodeLine{01085\ \ \ \ \ cudaChannelFormatKindFloat\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 2,\ \ \ \ \ \ }
+\DoxyCodeLine{01086\ \ \ \ \ cudaChannelFormatKindNone\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 3,\ \ \ \ \ \ }
+\DoxyCodeLine{01087\ \ \ \ \ cudaChannelFormatKindNV12\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 4,\ \ \ \ \ \ }
+\DoxyCodeLine{01088\ \ \ \ \ cudaChannelFormatKindUnsignedNormalized8X1\ \ \ \ \ \ \ \ \ \ =\ \ \ 5,\ \ \ \ \ \ }
+\DoxyCodeLine{01089\ \ \ \ \ cudaChannelFormatKindUnsignedNormalized8X2\ \ \ \ \ \ \ \ \ \ =\ \ \ 6,\ \ \ \ \ \ }
+\DoxyCodeLine{01090\ \ \ \ \ cudaChannelFormatKindUnsignedNormalized8X4\ \ \ \ \ \ \ \ \ \ =\ \ \ 7,\ \ \ \ \ \ }
+\DoxyCodeLine{01091\ \ \ \ \ cudaChannelFormatKindUnsignedNormalized16X1\ \ \ \ \ \ \ \ \ =\ \ \ 8,\ \ \ \ \ \ }
+\DoxyCodeLine{01092\ \ \ \ \ cudaChannelFormatKindUnsignedNormalized16X2\ \ \ \ \ \ \ \ \ =\ \ \ 9,\ \ \ \ \ \ }
+\DoxyCodeLine{01093\ \ \ \ \ cudaChannelFormatKindUnsignedNormalized16X4\ \ \ \ \ \ \ \ \ =\ \ \ 10,\ \ \ \ \ }
+\DoxyCodeLine{01094\ \ \ \ \ cudaChannelFormatKindSignedNormalized8X1\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 11,\ \ \ \ \ }
+\DoxyCodeLine{01095\ \ \ \ \ cudaChannelFormatKindSignedNormalized8X2\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 12,\ \ \ \ \ }
+\DoxyCodeLine{01096\ \ \ \ \ cudaChannelFormatKindSignedNormalized8X4\ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 13,\ \ \ \ \ }
+\DoxyCodeLine{01097\ \ \ \ \ cudaChannelFormatKindSignedNormalized16X1\ \ \ \ \ \ \ \ \ \ \ =\ \ \ 14,\ \ \ \ \ }
+\DoxyCodeLine{01098\ \ \ \ \ cudaChannelFormatKindSignedNormalized16X2\ \ \ \ \ \ \ \ \ \ \ =\ \ \ 15,\ \ \ \ \ }
+\DoxyCodeLine{01099\ \ \ \ \ cudaChannelFormatKindSignedNormalized16X4\ \ \ \ \ \ \ \ \ \ \ =\ \ \ 16,\ \ \ \ \ }
+\DoxyCodeLine{01100\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed1\ \ \ \ \ \ \ =\ \ \ 17,\ \ \ \ \ }
+\DoxyCodeLine{01101\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed1SRGB\ \ \ =\ \ \ 18,\ \ \ \ \ }
+\DoxyCodeLine{01102\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed2\ \ \ \ \ \ \ =\ \ \ 19,\ \ \ \ \ }
+\DoxyCodeLine{01103\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed2SRGB\ \ \ =\ \ \ 20,\ \ \ \ \ }
+\DoxyCodeLine{01104\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed3\ \ \ \ \ \ \ =\ \ \ 21,\ \ \ \ \ }
+\DoxyCodeLine{01105\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed3SRGB\ \ \ =\ \ \ 22,\ \ \ \ \ }
+\DoxyCodeLine{01106\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed4\ \ \ \ \ \ \ =\ \ \ 23,\ \ \ \ \ }
+\DoxyCodeLine{01107\ \ \ \ \ cudaChannelFormatKindSignedBlockCompressed4\ \ \ \ \ \ \ \ \ =\ \ \ 24,\ \ \ \ \ }
+\DoxyCodeLine{01108\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed5\ \ \ \ \ \ \ =\ \ \ 25,\ \ \ \ \ }
+\DoxyCodeLine{01109\ \ \ \ \ cudaChannelFormatKindSignedBlockCompressed5\ \ \ \ \ \ \ \ \ =\ \ \ 26,\ \ \ \ \ }
+\DoxyCodeLine{01110\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed6H\ \ \ \ \ \ =\ \ \ 27,\ \ \ \ \ }
+\DoxyCodeLine{01111\ \ \ \ \ cudaChannelFormatKindSignedBlockCompressed6H\ \ \ \ \ \ \ \ =\ \ \ 28,\ \ \ \ \ }
+\DoxyCodeLine{01112\ \ \ \ \ cudaChannelFormatKindUnsignedBlockCompressed7\ \ \ \ \ \ \ =\ \ \ 29,\ \ \ \ \ }
+\DoxyCodeLine{01113\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaChannelFormatKindUnsignedBlockCompressed7SRGB}}\ \ \ =\ \ \ 30\ \ \ \ \ \ }
+\DoxyCodeLine{01114\ \};}
+\DoxyCodeLine{01115\ }
+\DoxyCodeLine{01119\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}}
+\DoxyCodeLine{01120\ \{}
+\DoxyCodeLine{01121\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_channel_format_desc_a70dede802100e2acd9f334326e9d7926}{x}};\ }
+\DoxyCodeLine{01122\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_channel_format_desc_a6570793c6567d0c704e8e8943ccaec43}{y}};\ }
+\DoxyCodeLine{01123\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_channel_format_desc_ae371d37d940d2397139b0a3b7302f51a}{z}};\ }
+\DoxyCodeLine{01124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_channel_format_desc_a06089c5a407a2cbd6ea05e5a39b19d69}{w}};\ }
+\DoxyCodeLine{01125\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4cf131513bd90cc6561902e68d6ee3ad}{cudaChannelFormatKind}}\ \mbox{\hyperlink{structcuda_channel_format_desc_a7d561d361936688eeae79c3184698278}{f}};\ }
+\DoxyCodeLine{01126\ \};}
+\DoxyCodeLine{01127\ }
+\DoxyCodeLine{01131\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaArray}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}};}
+\DoxyCodeLine{01132\ }
+\DoxyCodeLine{01136\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaArray}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga9a3dce149702581dbc3fc2fb9bb813b0}{cudaArray\_const\_t}};}
+\DoxyCodeLine{01137\ }
+\DoxyCodeLine{01138\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaArray}};}
+\DoxyCodeLine{01139\ }
+\DoxyCodeLine{01143\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMipmappedArray}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga1b03ad14fc0ab86f8b033837f5562d8a}{cudaMipmappedArray\_t}};}
+\DoxyCodeLine{01144\ }
+\DoxyCodeLine{01148\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMipmappedArray}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga3aceb59159273bec67226fc336cd4f69}{cudaMipmappedArray\_const\_t}};}
+\DoxyCodeLine{01149\ }
+\DoxyCodeLine{01150\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMipmappedArray}};}
+\DoxyCodeLine{01151\ }
+\DoxyCodeLine{01155\ \textcolor{preprocessor}{\#define\ cudaArraySparsePropertiesSingleMipTail\ \ \ 0x1}}
+\DoxyCodeLine{01156\ }
+\DoxyCodeLine{01160\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_array_sparse_properties}{cudaArraySparseProperties}}\ \{}
+\DoxyCodeLine{01161\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01162\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_array_sparse_properties_a339e4c344bd1498499ab3ef22a10f1fd}{width}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01163\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_array_sparse_properties_a792ca6048212e001a9e420c66a5e04c0}{height}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_array_sparse_properties_a7f4b2775a07b1b202c98ea0ec0b31d93}{depth}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01165\ \ \ \ \ \}\ tileExtent;}
+\DoxyCodeLine{01166\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_array_sparse_properties_ab6909e5db55b866477b6cc16fb02f9d3}{miptailFirstLevel}};\ \ \ \ \ }
+\DoxyCodeLine{01167\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_array_sparse_properties_a22cfa4ad83195f0e9585303c988bb886}{miptailSize}};\ \ \ \ \ }
+\DoxyCodeLine{01168\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_array_sparse_properties_a44c8728469d60e511aceb4ba7086c164}{flags}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01169\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ reserved[4];}
+\DoxyCodeLine{01170\ \};}
+\DoxyCodeLine{01171\ }
+\DoxyCodeLine{01172\ }
+\DoxyCodeLine{01176\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_array_memory_requirements}{cudaArrayMemoryRequirements}}\ \{}
+\DoxyCodeLine{01177\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_array_memory_requirements_acff0bc12daa05c6c40892a2187befd87}{size}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01178\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_array_memory_requirements_a37898b13b500d39e4a43d0ee04cf0ef3}{alignment}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01179\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ reserved[4];}
+\DoxyCodeLine{01180\ \};}
+\DoxyCodeLine{01181\ }
+\DoxyCodeLine{01182\ }
+\DoxyCodeLine{01186\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaea66858c25bf81443785fcaf0e9b77c3}{cudaMemoryType}}}
+\DoxyCodeLine{01187\ \{}
+\DoxyCodeLine{01188\ \ \ \ \ cudaMemoryTypeUnregistered\ =\ 0,\ }
+\DoxyCodeLine{01189\ \ \ \ \ cudaMemoryTypeHost\ \ \ \ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{01190\ \ \ \ \ cudaMemoryTypeDevice\ \ \ \ \ \ \ =\ 2,\ }
+\DoxyCodeLine{01191\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemoryTypeManaged}}\ \ \ \ \ \ =\ 3\ \ }
+\DoxyCodeLine{01192\ \};}
+\DoxyCodeLine{01193\ }
+\DoxyCodeLine{01197\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}}
+\DoxyCodeLine{01198\ \{}
+\DoxyCodeLine{01199\ \ \ \ \ cudaMemcpyHostToHost\ \ \ \ \ \ \ \ \ \ =\ \ \ 0,\ \ \ \ \ \ }
+\DoxyCodeLine{01200\ \ \ \ \ cudaMemcpyHostToDevice\ \ \ \ \ \ \ \ =\ \ \ 1,\ \ \ \ \ \ }
+\DoxyCodeLine{01201\ \ \ \ \ cudaMemcpyDeviceToHost\ \ \ \ \ \ \ \ =\ \ \ 2,\ \ \ \ \ \ }
+\DoxyCodeLine{01202\ \ \ \ \ cudaMemcpyDeviceToDevice\ \ \ \ \ \ =\ \ \ 3,\ \ \ \ \ \ }
+\DoxyCodeLine{01203\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemcpyDefault}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ 4\ \ \ \ \ \ \ }
+\DoxyCodeLine{01204\ \};}
+\DoxyCodeLine{01205\ }
+\DoxyCodeLine{01211\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_pitched_ptr}{cudaPitchedPtr}}}
+\DoxyCodeLine{01212\ \{}
+\DoxyCodeLine{01213\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ *\mbox{\hyperlink{structcuda_pitched_ptr_a6a1476538c1f4bf7b9cad0304b91d5cf}{ptr}};\ \ \ \ \ \ }
+\DoxyCodeLine{01214\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \mbox{\hyperlink{structcuda_pitched_ptr_a412fba6b15962413c9f586c3a1ecb69b}{pitch}};\ \ \ \ }
+\DoxyCodeLine{01215\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \mbox{\hyperlink{structcuda_pitched_ptr_a968ee390e4d40600399dceb8bbcac0f1}{xsize}};\ \ \ \ }
+\DoxyCodeLine{01216\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \mbox{\hyperlink{structcuda_pitched_ptr_a69b55825344e26692ef5352262f2e112}{ysize}};\ \ \ \ }
+\DoxyCodeLine{01217\ \};}
+\DoxyCodeLine{01218\ }
+\DoxyCodeLine{01224\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_extent}{cudaExtent}}}
+\DoxyCodeLine{01225\ \{}
+\DoxyCodeLine{01226\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_extent_a774b7b99b827dbd9f5456041b20ab319}{width}};\ \ \ \ \ }
+\DoxyCodeLine{01227\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_extent_a52b01e552a3d6b36e2b17fae948414f7}{height}};\ \ \ \ }
+\DoxyCodeLine{01228\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_extent_aba8ba71ca34c3875ec3f8f7e064af750}{depth}};\ \ \ \ \ }
+\DoxyCodeLine{01229\ \};}
+\DoxyCodeLine{01230\ }
+\DoxyCodeLine{01236\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_pos}{cudaPos}}}
+\DoxyCodeLine{01237\ \{}
+\DoxyCodeLine{01238\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_pos_aee81d58a0ea213f0136b9f25cbfade0d}{x}};\ \ \ \ \ }
+\DoxyCodeLine{01239\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_pos_a211bae4c3bc936237f34237d04d98088}{y}};\ \ \ \ \ }
+\DoxyCodeLine{01240\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_pos_a42abb5eb62901902e70965a2ddf860b0}{z}};\ \ \ \ \ }
+\DoxyCodeLine{01241\ \};}
+\DoxyCodeLine{01242\ }
+\DoxyCodeLine{01246\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_memcpy3_d_parms}{cudaMemcpy3DParms}}}
+\DoxyCodeLine{01247\ \{}
+\DoxyCodeLine{01248\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_memcpy3_d_parms_a22fb6a1c28fe0d6d96772c994a963f1f}{srcArray}};\ \ }
+\DoxyCodeLine{01249\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pos}{cudaPos}}\ \ \ \ \ \ \ \ \ srcPos;\ \ \ \ }
+\DoxyCodeLine{01250\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pitched_ptr}{cudaPitchedPtr}}\ \ srcPtr;\ \ \ \ }
+\DoxyCodeLine{01252\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_memcpy3_d_parms_a7d77d9ecb416b7f4ba4ee8d354b9d6fd}{dstArray}};\ \ }
+\DoxyCodeLine{01253\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pos}{cudaPos}}\ \ \ \ \ \ \ \ \ dstPos;\ \ \ \ }
+\DoxyCodeLine{01254\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pitched_ptr}{cudaPitchedPtr}}\ \ dstPtr;\ \ \ \ }
+\DoxyCodeLine{01256\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_extent}{cudaExtent}}\ \ \ \ \ \ extent;\ \ \ \ }
+\DoxyCodeLine{01257\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8ce1ad49a1e77a595edcb25ac795cd0f}{cudaMemcpyKind}}\ \ \ \ \mbox{\hyperlink{structcuda_memcpy3_d_parms_a0caa37ba0134b351170924565d07be20}{kind}};\ \ \ \ \ \ }
+\DoxyCodeLine{01258\ \};}
+\DoxyCodeLine{01259\ }
+\DoxyCodeLine{01263\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_memcpy3_d_peer_parms}{cudaMemcpy3DPeerParms}}}
+\DoxyCodeLine{01264\ \{}
+\DoxyCodeLine{01265\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_memcpy3_d_peer_parms_a8fe697f001a7881de7fc3da7a2d7067d}{srcArray}};\ \ }
+\DoxyCodeLine{01266\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pos}{cudaPos}}\ \ \ \ \ \ \ \ \ srcPos;\ \ \ \ }
+\DoxyCodeLine{01267\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pitched_ptr}{cudaPitchedPtr}}\ \ srcPtr;\ \ \ \ }
+\DoxyCodeLine{01268\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_memcpy3_d_peer_parms_a88f676f69dc4eb2780604b5dd401507f}{srcDevice}};\ }
+\DoxyCodeLine{01270\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_memcpy3_d_peer_parms_af9c67633106e8055cb1ddd644d4c27ec}{dstArray}};\ \ }
+\DoxyCodeLine{01271\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pos}{cudaPos}}\ \ \ \ \ \ \ \ \ dstPos;\ \ \ \ }
+\DoxyCodeLine{01272\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_pitched_ptr}{cudaPitchedPtr}}\ \ dstPtr;\ \ \ \ }
+\DoxyCodeLine{01273\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_memcpy3_d_peer_parms_a0e6bbb47774d03ee4c700e664648c121}{dstDevice}};\ }
+\DoxyCodeLine{01275\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_extent}{cudaExtent}}\ \ \ \ \ \ extent;\ \ \ \ }
+\DoxyCodeLine{01276\ \};}
+\DoxyCodeLine{01277\ }
+\DoxyCodeLine{01281\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \ \mbox{\hyperlink{structcuda_memset_params}{cudaMemsetParams}}\ \{}
+\DoxyCodeLine{01282\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_memset_params_a2296cc35e61e331a6ac6050f91f854f0}{dst}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01283\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_memset_params_a08cf13f3fc01d877a61370610c60af75}{pitch}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01284\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_memset_params_a483d1c0ac70b3c006fc4c9db27781721}{value}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01285\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_memset_params_a462a43108c55ddb710b2128dfe4798ec}{elementSize}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01286\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_memset_params_a5f3c75c5ea5af51a534ba174adbe8ef1}{width}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01287\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_memset_params_a0dfe23ad7cb2ec66d57de1fe06cfcc5e}{height}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01288\ \};}
+\DoxyCodeLine{01289\ }
+\DoxyCodeLine{01293\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gac11d7c6d509acbc9cbcdbf0645674b3f}{cudaAccessProperty}}\ \{}
+\DoxyCodeLine{01294\ \ \ \ \ cudaAccessPropertyNormal\ =\ 0,\ \ \ \ \ \ \ }
+\DoxyCodeLine{01295\ \ \ \ \ cudaAccessPropertyStreaming\ =\ 1,\ \ \ \ }
+\DoxyCodeLine{01296\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaAccessPropertyPersisting}}\ =\ 2\ \ \ \ }
+\DoxyCodeLine{01297\ \};}
+\DoxyCodeLine{01298\ }
+\DoxyCodeLine{01310\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_access_policy_window}{cudaAccessPolicyWindow}}\ \{}
+\DoxyCodeLine{01311\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_access_policy_window_abff773e5215e88770cf7eb177c7bfa71}{base\_ptr}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01312\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_access_policy_window_abbd68021cb5c3cb1928bee0a2941eb24}{num\_bytes}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01313\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structcuda_access_policy_window_af88a80be3620092a5b80fa682e238ff4}{hitRatio}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01314\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gac11d7c6d509acbc9cbcdbf0645674b3f}{cudaAccessProperty}}\ \mbox{\hyperlink{structcuda_access_policy_window_ab320a4462af8bf316e64a3df6bee8355}{hitProp}};\ \ \ \ }
+\DoxyCodeLine{01315\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gac11d7c6d509acbc9cbcdbf0645674b3f}{cudaAccessProperty}}\ \mbox{\hyperlink{structcuda_access_policy_window_a166f47aa6d9806fdb67ca763aa2874f9}{missProp}};\ \ \ }
+\DoxyCodeLine{01316\ \};}
+\DoxyCodeLine{01317\ }
+\DoxyCodeLine{01318\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{01319\ \textcolor{preprocessor}{\#define\ CUDART\_CB\ \_\_stdcall}}
+\DoxyCodeLine{01320\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01321\ \textcolor{preprocessor}{\#define\ CUDART\_CB}}
+\DoxyCodeLine{01322\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01323\ }
+\DoxyCodeLine{01328\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\ (CUDART\_CB\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad5a8cb127cd8e78ae1c721e797873110}{cudaHostFn\_t}})(\textcolor{keywordtype}{void}\ *userData);}
+\DoxyCodeLine{01329\ }
+\DoxyCodeLine{01333\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_host_node_params}{cudaHostNodeParams}}\ \{}
+\DoxyCodeLine{01334\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad5a8cb127cd8e78ae1c721e797873110}{cudaHostFn\_t}}\ \mbox{\hyperlink{structcuda_host_node_params_a429c10b250891334d8bf4848402c8fed}{fn}};\ \ \ \ }
+\DoxyCodeLine{01335\ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structcuda_host_node_params_ac59f34f70056707191c7c3a8d4df225d}{userData}};\ }
+\DoxyCodeLine{01336\ \};}
+\DoxyCodeLine{01337\ }
+\DoxyCodeLine{01341\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga191c629145d47b6f992c6e871b418a9f}{cudaStreamCaptureStatus}}\ \{}
+\DoxyCodeLine{01342\ \ \ \ \ cudaStreamCaptureStatusNone\ \ \ \ \ \ \ \ =\ 0,\ }
+\DoxyCodeLine{01343\ \ \ \ \ cudaStreamCaptureStatusActive\ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{01344\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaStreamCaptureStatusInvalidated}}\ =\ 2\ \ }
+\DoxyCodeLine{01346\ \};}
+\DoxyCodeLine{01347\ }
+\DoxyCodeLine{01352\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafd7d3334fda73ef015edb02f1888b2f5}{cudaStreamCaptureMode}}\ \{}
+\DoxyCodeLine{01353\ \ \ \ \ cudaStreamCaptureModeGlobal\ \ \ \ \ \ =\ 0,}
+\DoxyCodeLine{01354\ \ \ \ \ cudaStreamCaptureModeThreadLocal\ =\ 1,}
+\DoxyCodeLine{01355\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaStreamCaptureModeRelaxed}}\ \ \ \ \ =\ 2}
+\DoxyCodeLine{01356\ \};}
+\DoxyCodeLine{01357\ }
+\DoxyCodeLine{01358\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ cudaSynchronizationPolicy\ \{}
+\DoxyCodeLine{01359\ \ \ \ \ cudaSyncPolicyAuto\ =\ 1,}
+\DoxyCodeLine{01360\ \ \ \ \ cudaSyncPolicySpin\ =\ 2,}
+\DoxyCodeLine{01361\ \ \ \ \ cudaSyncPolicyYield\ =\ 3,}
+\DoxyCodeLine{01362\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaSyncPolicyBlockingSync}}\ =\ 4}
+\DoxyCodeLine{01363\ \};}
+\DoxyCodeLine{01364\ }
+\DoxyCodeLine{01368\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga85e8b4996ccabee4beb256d79e8373e0}{cudaStreamAttrID}}\ \{}
+\DoxyCodeLine{01369\ \ \ \ \ cudaStreamAttributeAccessPolicyWindow\ \ \ \ \ =\ 1,\ \ }
+\DoxyCodeLine{01370\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaStreamAttributeSynchronizationPolicy}}\ \ =\ 3\ \ \ }
+\DoxyCodeLine{01371\ \};}
+\DoxyCodeLine{01372\ }
+\DoxyCodeLine{01376\ \textcolor{keyword}{union\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{unioncuda_stream_attr_value}{cudaStreamAttrValue}}\ \{}
+\DoxyCodeLine{01377\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_access_policy_window}{cudaAccessPolicyWindow}}\ accessPolicyWindow;}
+\DoxyCodeLine{01378\ \ \ \ \ \textcolor{keyword}{enum}\ cudaSynchronizationPolicy\ syncPolicy;}
+\DoxyCodeLine{01379\ \};}
+\DoxyCodeLine{01380\ }
+\DoxyCodeLine{01384\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga606e86fadd4ece4d1cd404a4f12a4663}{cudaStreamUpdateCaptureDependenciesFlags}}\ \{}
+\DoxyCodeLine{01385\ \ \ \ \ cudaStreamAddCaptureDependencies\ =\ 0x0,\ }
+\DoxyCodeLine{01386\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaStreamSetCaptureDependencies}}\ =\ 0x1\ \ }
+\DoxyCodeLine{01387\ \};}
+\DoxyCodeLine{01388\ }
+\DoxyCodeLine{01392\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga01a26d2bc061187ba54b67ecc2a4b0f3}{cudaUserObjectFlags}}\ \{}
+\DoxyCodeLine{01393\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaUserObjectNoDestructorSync}}\ =\ 0x1\ \ }
+\DoxyCodeLine{01394\ \};}
+\DoxyCodeLine{01395\ }
+\DoxyCodeLine{01399\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaee787cfb90c34b988a788922133c8ce7}{cudaUserObjectRetainFlags}}\ \{}
+\DoxyCodeLine{01400\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphUserObjectMove}}\ =\ 0x1\ \ }
+\DoxyCodeLine{01401\ \};}
+\DoxyCodeLine{01402\ }
+\DoxyCodeLine{01406\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphicsResource}};}
+\DoxyCodeLine{01407\ }
+\DoxyCodeLine{01411\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga1edda7914206aedfcbea407f8d146f91}{cudaGraphicsRegisterFlags}}}
+\DoxyCodeLine{01412\ \{}
+\DoxyCodeLine{01413\ \ \ \ \ cudaGraphicsRegisterFlagsNone\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0,\ \ }
+\DoxyCodeLine{01414\ \ \ \ \ cudaGraphicsRegisterFlagsReadOnly\ \ \ \ \ \ \ \ \ =\ 1,\ \ }
+\DoxyCodeLine{01415\ \ \ \ \ cudaGraphicsRegisterFlagsWriteDiscard\ \ \ \ \ =\ 2,\ \ }
+\DoxyCodeLine{01416\ \ \ \ \ cudaGraphicsRegisterFlagsSurfaceLoadStore\ =\ 4,\ \ }
+\DoxyCodeLine{01417\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphicsRegisterFlagsTextureGather}}\ \ \ \ =\ 8\ \ \ }
+\DoxyCodeLine{01418\ \};}
+\DoxyCodeLine{01419\ }
+\DoxyCodeLine{01423\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaac56f120f9835341e7c0cc9e79e79947}{cudaGraphicsMapFlags}}}
+\DoxyCodeLine{01424\ \{}
+\DoxyCodeLine{01425\ \ \ \ \ cudaGraphicsMapFlagsNone\ \ \ \ \ \ \ \ \ =\ 0,\ \ }
+\DoxyCodeLine{01426\ \ \ \ \ cudaGraphicsMapFlagsReadOnly\ \ \ \ \ =\ 1,\ \ }
+\DoxyCodeLine{01427\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphicsMapFlagsWriteDiscard}}\ =\ 2\ \ \ }
+\DoxyCodeLine{01428\ \};}
+\DoxyCodeLine{01429\ }
+\DoxyCodeLine{01433\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa11cdc62ba9e58fb5385f3b9d181c401}{cudaGraphicsCubeFace}}\ }
+\DoxyCodeLine{01434\ \{}
+\DoxyCodeLine{01435\ \ \ \ \ cudaGraphicsCubeFacePositiveX\ =\ 0x00,\ }
+\DoxyCodeLine{01436\ \ \ \ \ cudaGraphicsCubeFaceNegativeX\ =\ 0x01,\ }
+\DoxyCodeLine{01437\ \ \ \ \ cudaGraphicsCubeFacePositiveY\ =\ 0x02,\ }
+\DoxyCodeLine{01438\ \ \ \ \ cudaGraphicsCubeFaceNegativeY\ =\ 0x03,\ }
+\DoxyCodeLine{01439\ \ \ \ \ cudaGraphicsCubeFacePositiveZ\ =\ 0x04,\ }
+\DoxyCodeLine{01440\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphicsCubeFaceNegativeZ}}\ =\ 0x05\ \ }
+\DoxyCodeLine{01441\ \};}
+\DoxyCodeLine{01442\ }
+\DoxyCodeLine{01446\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga372cf1e165e0f8e76dca3640cd22ac7f}{cudaKernelNodeAttrID}}\ \{}
+\DoxyCodeLine{01447\ \ \ \ \ cudaKernelNodeAttributeAccessPolicyWindow\ \ \ =\ 1,\ \ \ }
+\DoxyCodeLine{01448\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaKernelNodeAttributeCooperative}}\ \ \ \ \ \ \ \ \ \ =\ 2\ \ \ \ }
+\DoxyCodeLine{01449\ \};}
+\DoxyCodeLine{01450\ }
+\DoxyCodeLine{01454\ \textcolor{keyword}{union\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{unioncuda_kernel_node_attr_value}{cudaKernelNodeAttrValue}}\ \{}
+\DoxyCodeLine{01455\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_access_policy_window}{cudaAccessPolicyWindow}}\ accessPolicyWindow;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01456\ \ \ \ \ \textcolor{keywordtype}{int}\ cooperative;}
+\DoxyCodeLine{01457\ \};}
+\DoxyCodeLine{01458\ }
+\DoxyCodeLine{01462\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae86ec7f5bbbf5bfc579189a9950a3be9}{cudaResourceType}}}
+\DoxyCodeLine{01463\ \{}
+\DoxyCodeLine{01464\ \ \ \ \ cudaResourceTypeArray\ \ \ \ \ \ \ \ \ \ =\ 0x00,\ }
+\DoxyCodeLine{01465\ \ \ \ \ cudaResourceTypeMipmappedArray\ =\ 0x01,\ }
+\DoxyCodeLine{01466\ \ \ \ \ cudaResourceTypeLinear\ \ \ \ \ \ \ \ \ =\ 0x02,\ }
+\DoxyCodeLine{01467\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaResourceTypePitch2D}}\ \ \ \ \ \ \ \ =\ 0x03\ \ }
+\DoxyCodeLine{01468\ \};}
+\DoxyCodeLine{01469\ }
+\DoxyCodeLine{01473\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga0c98391f63a4c05305120a42ee3a22f6}{cudaResourceViewFormat}}}
+\DoxyCodeLine{01474\ \{}
+\DoxyCodeLine{01475\ \ \ \ \ cudaResViewFormatNone\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x00,\ }
+\DoxyCodeLine{01476\ \ \ \ \ cudaResViewFormatUnsignedChar1\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x01,\ }
+\DoxyCodeLine{01477\ \ \ \ \ cudaResViewFormatUnsignedChar2\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x02,\ }
+\DoxyCodeLine{01478\ \ \ \ \ cudaResViewFormatUnsignedChar4\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x03,\ }
+\DoxyCodeLine{01479\ \ \ \ \ cudaResViewFormatSignedChar1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x04,\ }
+\DoxyCodeLine{01480\ \ \ \ \ cudaResViewFormatSignedChar2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x05,\ }
+\DoxyCodeLine{01481\ \ \ \ \ cudaResViewFormatSignedChar4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x06,\ }
+\DoxyCodeLine{01482\ \ \ \ \ cudaResViewFormatUnsignedShort1\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x07,\ }
+\DoxyCodeLine{01483\ \ \ \ \ cudaResViewFormatUnsignedShort2\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x08,\ }
+\DoxyCodeLine{01484\ \ \ \ \ cudaResViewFormatUnsignedShort4\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x09,\ }
+\DoxyCodeLine{01485\ \ \ \ \ cudaResViewFormatSignedShort1\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0a,\ }
+\DoxyCodeLine{01486\ \ \ \ \ cudaResViewFormatSignedShort2\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0b,\ }
+\DoxyCodeLine{01487\ \ \ \ \ cudaResViewFormatSignedShort4\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0c,\ }
+\DoxyCodeLine{01488\ \ \ \ \ cudaResViewFormatUnsignedInt1\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0d,\ }
+\DoxyCodeLine{01489\ \ \ \ \ cudaResViewFormatUnsignedInt2\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0e,\ }
+\DoxyCodeLine{01490\ \ \ \ \ cudaResViewFormatUnsignedInt4\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0f,\ }
+\DoxyCodeLine{01491\ \ \ \ \ cudaResViewFormatSignedInt1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x10,\ }
+\DoxyCodeLine{01492\ \ \ \ \ cudaResViewFormatSignedInt2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x11,\ }
+\DoxyCodeLine{01493\ \ \ \ \ cudaResViewFormatSignedInt4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x12,\ }
+\DoxyCodeLine{01494\ \ \ \ \ cudaResViewFormatHalf1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x13,\ }
+\DoxyCodeLine{01495\ \ \ \ \ cudaResViewFormatHalf2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x14,\ }
+\DoxyCodeLine{01496\ \ \ \ \ cudaResViewFormatHalf4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x15,\ }
+\DoxyCodeLine{01497\ \ \ \ \ cudaResViewFormatFloat1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x16,\ }
+\DoxyCodeLine{01498\ \ \ \ \ cudaResViewFormatFloat2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x17,\ }
+\DoxyCodeLine{01499\ \ \ \ \ cudaResViewFormatFloat4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x18,\ }
+\DoxyCodeLine{01500\ \ \ \ \ cudaResViewFormatUnsignedBlockCompressed1\ \ =\ 0x19,\ }
+\DoxyCodeLine{01501\ \ \ \ \ cudaResViewFormatUnsignedBlockCompressed2\ \ =\ 0x1a,\ }
+\DoxyCodeLine{01502\ \ \ \ \ cudaResViewFormatUnsignedBlockCompressed3\ \ =\ 0x1b,\ }
+\DoxyCodeLine{01503\ \ \ \ \ cudaResViewFormatUnsignedBlockCompressed4\ \ =\ 0x1c,\ }
+\DoxyCodeLine{01504\ \ \ \ \ cudaResViewFormatSignedBlockCompressed4\ \ \ \ =\ 0x1d,\ }
+\DoxyCodeLine{01505\ \ \ \ \ cudaResViewFormatUnsignedBlockCompressed5\ \ =\ 0x1e,\ }
+\DoxyCodeLine{01506\ \ \ \ \ cudaResViewFormatSignedBlockCompressed5\ \ \ \ =\ 0x1f,\ }
+\DoxyCodeLine{01507\ \ \ \ \ cudaResViewFormatUnsignedBlockCompressed6H\ =\ 0x20,\ }
+\DoxyCodeLine{01508\ \ \ \ \ cudaResViewFormatSignedBlockCompressed6H\ \ \ =\ 0x21,\ }
+\DoxyCodeLine{01509\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaResViewFormatUnsignedBlockCompressed7}}\ \ =\ 0x22\ \ }
+\DoxyCodeLine{01510\ \};}
+\DoxyCodeLine{01511\ }
+\DoxyCodeLine{01515\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_resource_desc}{cudaResourceDesc}}\ \{}
+\DoxyCodeLine{01516\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae86ec7f5bbbf5bfc579189a9950a3be9}{cudaResourceType}}\ \mbox{\hyperlink{structcuda_resource_desc_aaac8b3bb1d63bd25d8e9af7ee0b9a580}{resType}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01518\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{01519\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01520\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaaf8b3ba752727d996074a71ee997ce68}{cudaArray\_t}}\ \mbox{\hyperlink{structcuda_resource_desc_ad3316a0430bbfd23bd77a333c5a368a7}{array}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01521\ \ \ \ \ \ \ \ \ \}\ array;}
+\DoxyCodeLine{01522\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01523\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga1b03ad14fc0ab86f8b033837f5562d8a}{cudaMipmappedArray\_t}}\ \mbox{\hyperlink{structcuda_resource_desc_a13f1040b6be810526704b34b2e77a118}{mipmap}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{01524\ \ \ \ \ \ \ \ \ \}\ mipmap;}
+\DoxyCodeLine{01525\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01526\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_resource_desc_a002aab9a499eb9fca0592f788da1d986}{devPtr}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01527\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ desc;\ }
+\DoxyCodeLine{01528\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_resource_desc_a74b934bae902bc25c0204210e049d40e}{sizeInBytes}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01529\ \ \ \ \ \ \ \ \ \}\ linear;}
+\DoxyCodeLine{01530\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01531\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *devPtr;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01532\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ desc;\ }
+\DoxyCodeLine{01533\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_resource_desc_a7471beb8c5b903e336abc873e121d524}{width}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01534\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_resource_desc_a44ce5e32d83540e0697a2db8436c98d5}{height}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01535\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_resource_desc_a46627bc06bf3a469d9d7ce5df7c1c0e6}{pitchInBytes}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01536\ \ \ \ \ \ \ \ \ \}\ pitch2D;}
+\DoxyCodeLine{01537\ \ \ \ \ \}\ res;}
+\DoxyCodeLine{01538\ \};}
+\DoxyCodeLine{01539\ }
+\DoxyCodeLine{01543\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_resource_view_desc}{cudaResourceViewDesc}}}
+\DoxyCodeLine{01544\ \{}
+\DoxyCodeLine{01545\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga0c98391f63a4c05305120a42ee3a22f6}{cudaResourceViewFormat}}\ \mbox{\hyperlink{structcuda_resource_view_desc_a04e9ec20e3b58859dbae8e8e598e1603}{format}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01546\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a914fc3c27ce32c98a1d8d21936642924}{width}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01547\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_af94839eb926fba26fa5ff28775c79d33}{height}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01548\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a7f76b4084ffdcb7f88e4149b586a990d}{depth}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01549\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_af63fa90d2bf6c66f3865bf13006edded}{firstMipmapLevel}};\ }
+\DoxyCodeLine{01550\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a469d25794fec5471648d0d9e42790431}{lastMipmapLevel}};\ \ }
+\DoxyCodeLine{01551\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_aab0d42bf9dc88944181f697b17e6943a}{firstLayer}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{01552\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_resource_view_desc_a6d96c5b3df0bce3d945d4ea99666226f}{lastLayer}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{01553\ \};}
+\DoxyCodeLine{01554\ }
+\DoxyCodeLine{01558\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_pointer_attributes}{cudaPointerAttributes}}}
+\DoxyCodeLine{01559\ \{}
+\DoxyCodeLine{01564\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaea66858c25bf81443785fcaf0e9b77c3}{cudaMemoryType}}\ \mbox{\hyperlink{structcuda_pointer_attributes_a91ef95dac597cc710558dabbc8b9ae38}{type}};}
+\DoxyCodeLine{01565\ }
+\DoxyCodeLine{01575\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_pointer_attributes_a20015540684b0c85e0debf64923bedec}{device}};}
+\DoxyCodeLine{01576\ }
+\DoxyCodeLine{01581\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_pointer_attributes_a9edc9782e1ee337072994780fd3b675f}{devicePointer}};}
+\DoxyCodeLine{01582\ }
+\DoxyCodeLine{01590\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_pointer_attributes_a19cbae18cd685096287e41cce1c9a087}{hostPointer}};}
+\DoxyCodeLine{01591\ \};}
+\DoxyCodeLine{01592\ }
+\DoxyCodeLine{01596\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_func_attributes}{cudaFuncAttributes}}}
+\DoxyCodeLine{01597\ \{}
+\DoxyCodeLine{01603\ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_func_attributes_ac3bc6914df6f65ac08b1f53cd7276113}{sharedSizeBytes}};}
+\DoxyCodeLine{01604\ }
+\DoxyCodeLine{01609\ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_func_attributes_afe17485a8cbe9034eb2b7905d2d82ef8}{constSizeBytes}};}
+\DoxyCodeLine{01610\ }
+\DoxyCodeLine{01614\ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_func_attributes_a8415fcfcab196c9e01dacb03c8ca8eae}{localSizeBytes}};}
+\DoxyCodeLine{01615\ }
+\DoxyCodeLine{01621\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_func_attributes_ab8350f491105f159ff684f5c59167af0}{maxThreadsPerBlock}};}
+\DoxyCodeLine{01622\ }
+\DoxyCodeLine{01626\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_func_attributes_a3e750723dd84185e838039c82931baf3}{numRegs}};}
+\DoxyCodeLine{01627\ }
+\DoxyCodeLine{01633\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_func_attributes_a08ce97bd1e77d84cbff1cea9d662dcc2}{ptxVersion}};}
+\DoxyCodeLine{01634\ }
+\DoxyCodeLine{01640\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_func_attributes_ac4b0a26a83cff2a60183f6fbb8944907}{binaryVersion}};}
+\DoxyCodeLine{01641\ }
+\DoxyCodeLine{01646\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_func_attributes_ac5b4f9e473bf54747f2035df401577c7}{cacheModeCA}};}
+\DoxyCodeLine{01647\ }
+\DoxyCodeLine{01653\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_func_attributes_a4e4e85e7111f39739d38fb7c6fe26a42}{maxDynamicSharedSizeBytes}};}
+\DoxyCodeLine{01654\ }
+\DoxyCodeLine{01662\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_func_attributes_a088f144760311325523b66ee90c83c51}{preferredShmemCarveout}};}
+\DoxyCodeLine{01663\ }
+\DoxyCodeLine{01664\ }
+\DoxyCodeLine{01665\ }
+\DoxyCodeLine{01666\ }
+\DoxyCodeLine{01667\ }
+\DoxyCodeLine{01668\ }
+\DoxyCodeLine{01669\ }
+\DoxyCodeLine{01670\ }
+\DoxyCodeLine{01671\ }
+\DoxyCodeLine{01672\ }
+\DoxyCodeLine{01673\ }
+\DoxyCodeLine{01674\ }
+\DoxyCodeLine{01675\ }
+\DoxyCodeLine{01676\ }
+\DoxyCodeLine{01677\ }
+\DoxyCodeLine{01678\ }
+\DoxyCodeLine{01679\ }
+\DoxyCodeLine{01680\ }
+\DoxyCodeLine{01681\ }
+\DoxyCodeLine{01682\ }
+\DoxyCodeLine{01683\ }
+\DoxyCodeLine{01684\ }
+\DoxyCodeLine{01685\ }
+\DoxyCodeLine{01686\ }
+\DoxyCodeLine{01687\ }
+\DoxyCodeLine{01688\ }
+\DoxyCodeLine{01689\ }
+\DoxyCodeLine{01690\ }
+\DoxyCodeLine{01691\ }
+\DoxyCodeLine{01692\ }
+\DoxyCodeLine{01693\ }
+\DoxyCodeLine{01694\ }
+\DoxyCodeLine{01695\ }
+\DoxyCodeLine{01696\ }
+\DoxyCodeLine{01697\ }
+\DoxyCodeLine{01698\ }
+\DoxyCodeLine{01699\ }
+\DoxyCodeLine{01700\ }
+\DoxyCodeLine{01701\ }
+\DoxyCodeLine{01702\ }
+\DoxyCodeLine{01703\ }
+\DoxyCodeLine{01704\ }
+\DoxyCodeLine{01705\ }
+\DoxyCodeLine{01706\ }
+\DoxyCodeLine{01707\ }
+\DoxyCodeLine{01708\ }
+\DoxyCodeLine{01709\ }
+\DoxyCodeLine{01710\ }
+\DoxyCodeLine{01711\ }
+\DoxyCodeLine{01712\ \};}
+\DoxyCodeLine{01713\ }
+\DoxyCodeLine{01717\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gacd76bcc1681acec9fb9ae74e9965d61e}{cudaFuncAttribute}}}
+\DoxyCodeLine{01718\ \{}
+\DoxyCodeLine{01719\ \ \ \ \ cudaFuncAttributeMaxDynamicSharedMemorySize\ =\ 8,\ }
+\DoxyCodeLine{01720\ \ \ \ \ cudaFuncAttributePreferredSharedMemoryCarveout\ =\ 9,\ }
+\DoxyCodeLine{01729\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaFuncAttributeMax}}}
+\DoxyCodeLine{01730\ \};}
+\DoxyCodeLine{01731\ }
+\DoxyCodeLine{01735\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga185ebd259a4a6225930172951f2ab6ef}{cudaFuncCache}}}
+\DoxyCodeLine{01736\ \{}
+\DoxyCodeLine{01737\ \ \ \ \ cudaFuncCachePreferNone\ \ \ =\ 0,\ \ \ \ }
+\DoxyCodeLine{01738\ \ \ \ \ cudaFuncCachePreferShared\ =\ 1,\ \ \ \ }
+\DoxyCodeLine{01739\ \ \ \ \ cudaFuncCachePreferL1\ \ \ \ \ =\ 2,\ \ \ \ }
+\DoxyCodeLine{01740\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaFuncCachePreferEqual}}\ \ =\ 3\ \ \ \ \ }
+\DoxyCodeLine{01741\ \};}
+\DoxyCodeLine{01742\ }
+\DoxyCodeLine{01747\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga6d8e7a6b415a7be9d411929d545572de}{cudaSharedMemConfig}}}
+\DoxyCodeLine{01748\ \{}
+\DoxyCodeLine{01749\ \ \ \ \ cudaSharedMemBankSizeDefault\ \ \ =\ 0,}
+\DoxyCodeLine{01750\ \ \ \ \ cudaSharedMemBankSizeFourByte\ \ =\ 1,}
+\DoxyCodeLine{01751\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaSharedMemBankSizeEightByte}}\ =\ 2}
+\DoxyCodeLine{01752\ \};}
+\DoxyCodeLine{01753\ }
+\DoxyCodeLine{01757\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga7e5fb76210cf61aa2dee69bfcdbbd2b6}{cudaSharedCarveout}}\ \{}
+\DoxyCodeLine{01758\ \ \ \ \ cudaSharedmemCarveoutDefault\ \ \ \ \ \ =\ -\/1,\ \ }
+\DoxyCodeLine{01759\ \ \ \ \ cudaSharedmemCarveoutMaxShared\ \ \ \ =\ 100,\ }
+\DoxyCodeLine{01760\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaSharedmemCarveoutMaxL1}}\ \ \ \ \ \ \ \ =\ 0\ \ \ \ }
+\DoxyCodeLine{01761\ \};}
+\DoxyCodeLine{01762\ }
+\DoxyCodeLine{01763\ }
+\DoxyCodeLine{01764\ }
+\DoxyCodeLine{01765\ }
+\DoxyCodeLine{01766\ }
+\DoxyCodeLine{01767\ }
+\DoxyCodeLine{01768\ }
+\DoxyCodeLine{01769\ }
+\DoxyCodeLine{01770\ }
+\DoxyCodeLine{01771\ }
+\DoxyCodeLine{01772\ }
+\DoxyCodeLine{01773\ }
+\DoxyCodeLine{01777\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4acb7f9d6d6111bc9962d215efd0ff3a}{cudaComputeMode}}}
+\DoxyCodeLine{01778\ \{}
+\DoxyCodeLine{01779\ \ \ \ \ cudaComputeModeDefault\ \ \ \ \ \ \ \ \ \ =\ 0,\ \ }
+\DoxyCodeLine{01780\ \ \ \ \ cudaComputeModeExclusive\ \ \ \ \ \ \ \ =\ 1,\ \ }
+\DoxyCodeLine{01781\ \ \ \ \ cudaComputeModeProhibited\ \ \ \ \ \ \ =\ 2,\ \ }
+\DoxyCodeLine{01782\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaComputeModeExclusiveProcess}}\ =\ 3\ \ \ }
+\DoxyCodeLine{01783\ \};}
+\DoxyCodeLine{01784\ }
+\DoxyCodeLine{01788\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga79a610d81adcf0e3fb943f6ff04eb77f}{cudaLimit}}}
+\DoxyCodeLine{01789\ \{}
+\DoxyCodeLine{01790\ \ \ \ \ cudaLimitStackSize\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x00,\ }
+\DoxyCodeLine{01791\ \ \ \ \ cudaLimitPrintfFifoSize\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x01,\ }
+\DoxyCodeLine{01792\ \ \ \ \ cudaLimitMallocHeapSize\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x02,\ }
+\DoxyCodeLine{01793\ \ \ \ \ cudaLimitDevRuntimeSyncDepth\ \ \ \ \ \ \ \ \ \ =\ 0x03,\ }
+\DoxyCodeLine{01794\ \ \ \ \ cudaLimitDevRuntimePendingLaunchCount\ =\ 0x04,\ }
+\DoxyCodeLine{01795\ \ \ \ \ cudaLimitMaxL2FetchGranularity\ \ \ \ \ \ \ \ =\ 0x05,\ }
+\DoxyCodeLine{01796\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaLimitPersistingL2CacheSize}}\ \ \ \ \ \ \ \ =\ 0x06\ \ }
+\DoxyCodeLine{01797\ \};}
+\DoxyCodeLine{01798\ }
+\DoxyCodeLine{01802\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga88409663f456aefb192975278a8b5b3a}{cudaMemoryAdvise}}}
+\DoxyCodeLine{01803\ \{}
+\DoxyCodeLine{01804\ \ \ \ \ cudaMemAdviseSetReadMostly\ \ \ \ \ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{01805\ \ \ \ \ cudaMemAdviseUnsetReadMostly\ \ \ \ \ \ \ \ =\ 2,\ }
+\DoxyCodeLine{01806\ \ \ \ \ cudaMemAdviseSetPreferredLocation\ \ \ =\ 3,\ }
+\DoxyCodeLine{01807\ \ \ \ \ cudaMemAdviseUnsetPreferredLocation\ =\ 4,\ }
+\DoxyCodeLine{01808\ \ \ \ \ cudaMemAdviseSetAccessedBy\ \ \ \ \ \ \ \ \ \ =\ 5,\ }
+\DoxyCodeLine{01809\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemAdviseUnsetAccessedBy}}\ \ \ \ \ \ \ \ =\ 6\ \ }
+\DoxyCodeLine{01810\ \};}
+\DoxyCodeLine{01811\ }
+\DoxyCodeLine{01815\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga2fe31b7bc95548a9355af5817cfa83ae}{cudaMemRangeAttribute}}}
+\DoxyCodeLine{01816\ \{}
+\DoxyCodeLine{01817\ \ \ \ \ cudaMemRangeAttributeReadMostly\ \ \ \ \ \ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{01818\ \ \ \ \ cudaMemRangeAttributePreferredLocation\ \ \ \ =\ 2,\ }
+\DoxyCodeLine{01819\ \ \ \ \ cudaMemRangeAttributeAccessedBy\ \ \ \ \ \ \ \ \ \ \ =\ 3,\ }
+\DoxyCodeLine{01820\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemRangeAttributeLastPrefetchLocation}}\ =\ 4\ \ }
+\DoxyCodeLine{01821\ \};}
+\DoxyCodeLine{01822\ }
+\DoxyCodeLine{01826\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad204f0c5f38d1262d8d4ec9c13d3ef67}{cudaOutputMode}}}
+\DoxyCodeLine{01827\ \{}
+\DoxyCodeLine{01828\ \ \ \ \ cudaKeyValuePair\ \ \ \ =\ 0x00,\ }
+\DoxyCodeLine{01829\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaCSV}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x01\ \ }
+\DoxyCodeLine{01830\ \};}
+\DoxyCodeLine{01831\ }
+\DoxyCodeLine{01835\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae9c68ad27afdcf2e3ac0cd30cbe14718}{cudaFlushGPUDirectRDMAWritesOptions}}\ \{}
+\DoxyCodeLine{01836\ \ \ \ \ cudaFlushGPUDirectRDMAWritesOptionHost\ \ \ =\ 1<<0,\ }
+\DoxyCodeLine{01837\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaFlushGPUDirectRDMAWritesOptionMemOps}}\ =\ 1<<1\ \ }
+\DoxyCodeLine{01838\ \};}
+\DoxyCodeLine{01839\ }
+\DoxyCodeLine{01843\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga3f2935910657c004589193c545a2531c}{cudaGPUDirectRDMAWritesOrdering}}\ \{}
+\DoxyCodeLine{01844\ \ \ \ \ cudaGPUDirectRDMAWritesOrderingNone\ \ \ \ \ \ \ =\ 0,\ \ \ }
+\DoxyCodeLine{01845\ \ \ \ \ cudaGPUDirectRDMAWritesOrderingOwner\ \ \ \ \ \ =\ 100,\ }
+\DoxyCodeLine{01846\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGPUDirectRDMAWritesOrderingAllDevices}}\ =\ 200\ \ }
+\DoxyCodeLine{01847\ \};}
+\DoxyCodeLine{01848\ }
+\DoxyCodeLine{01852\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga94e9db06ae4af8bb0689848853e08e89}{cudaFlushGPUDirectRDMAWritesScope}}\ \{}
+\DoxyCodeLine{01853\ \ \ \ \ cudaFlushGPUDirectRDMAWritesToOwner\ \ \ \ \ \ =\ 100,\ }
+\DoxyCodeLine{01854\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaFlushGPUDirectRDMAWritesToAllDevices}}\ =\ 200\ \ }
+\DoxyCodeLine{01855\ \};}
+\DoxyCodeLine{01856\ }
+\DoxyCodeLine{01860\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga4f69317c8e6de431e3f915bde1de4da7}{cudaFlushGPUDirectRDMAWritesTarget}}\ \{}
+\DoxyCodeLine{01861\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaFlushGPUDirectRDMAWritesTargetCurrentDevice}}\ }
+\DoxyCodeLine{01862\ \};}
+\DoxyCodeLine{01863\ }
+\DoxyCodeLine{01864\ }
+\DoxyCodeLine{01868\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga7a8c1fa97c15fc1c8957e75d071d928f}{cudaDeviceAttr}}}
+\DoxyCodeLine{01869\ \{}
+\DoxyCodeLine{01870\ \ \ \ \ cudaDevAttrMaxThreadsPerBlock\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 1,\ \ }
+\DoxyCodeLine{01871\ \ \ \ \ cudaDevAttrMaxBlockDimX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 2,\ \ }
+\DoxyCodeLine{01872\ \ \ \ \ cudaDevAttrMaxBlockDimY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 3,\ \ }
+\DoxyCodeLine{01873\ \ \ \ \ cudaDevAttrMaxBlockDimZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 4,\ \ }
+\DoxyCodeLine{01874\ \ \ \ \ cudaDevAttrMaxGridDimX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 5,\ \ }
+\DoxyCodeLine{01875\ \ \ \ \ cudaDevAttrMaxGridDimY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 6,\ \ }
+\DoxyCodeLine{01876\ \ \ \ \ cudaDevAttrMaxGridDimZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 7,\ \ }
+\DoxyCodeLine{01877\ \ \ \ \ cudaDevAttrMaxSharedMemoryPerBlock\ \ \ \ \ \ \ \ =\ 8,\ \ }
+\DoxyCodeLine{01878\ \ \ \ \ cudaDevAttrTotalConstantMemory\ \ \ \ \ \ \ \ \ \ \ \ =\ 9,\ \ }
+\DoxyCodeLine{01879\ \ \ \ \ cudaDevAttrWarpSize\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 10,\ }
+\DoxyCodeLine{01880\ \ \ \ \ cudaDevAttrMaxPitch\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 11,\ }
+\DoxyCodeLine{01881\ \ \ \ \ cudaDevAttrMaxRegistersPerBlock\ \ \ \ \ \ \ \ \ \ \ =\ 12,\ }
+\DoxyCodeLine{01882\ \ \ \ \ cudaDevAttrClockRate\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 13,\ }
+\DoxyCodeLine{01883\ \ \ \ \ cudaDevAttrTextureAlignment\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 14,\ }
+\DoxyCodeLine{01884\ \ \ \ \ cudaDevAttrGpuOverlap\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 15,\ }
+\DoxyCodeLine{01885\ \ \ \ \ cudaDevAttrMultiProcessorCount\ \ \ \ \ \ \ \ \ \ \ \ =\ 16,\ }
+\DoxyCodeLine{01886\ \ \ \ \ cudaDevAttrKernelExecTimeout\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 17,\ }
+\DoxyCodeLine{01887\ \ \ \ \ cudaDevAttrIntegrated\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 18,\ }
+\DoxyCodeLine{01888\ \ \ \ \ cudaDevAttrCanMapHostMemory\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 19,\ }
+\DoxyCodeLine{01889\ \ \ \ \ cudaDevAttrComputeMode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 20,\ }
+\DoxyCodeLine{01890\ \ \ \ \ cudaDevAttrMaxTexture1DWidth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 21,\ }
+\DoxyCodeLine{01891\ \ \ \ \ cudaDevAttrMaxTexture2DWidth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 22,\ }
+\DoxyCodeLine{01892\ \ \ \ \ cudaDevAttrMaxTexture2DHeight\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 23,\ }
+\DoxyCodeLine{01893\ \ \ \ \ cudaDevAttrMaxTexture3DWidth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 24,\ }
+\DoxyCodeLine{01894\ \ \ \ \ cudaDevAttrMaxTexture3DHeight\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 25,\ }
+\DoxyCodeLine{01895\ \ \ \ \ cudaDevAttrMaxTexture3DDepth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 26,\ }
+\DoxyCodeLine{01896\ \ \ \ \ cudaDevAttrMaxTexture2DLayeredWidth\ \ \ \ \ \ \ =\ 27,\ }
+\DoxyCodeLine{01897\ \ \ \ \ cudaDevAttrMaxTexture2DLayeredHeight\ \ \ \ \ \ =\ 28,\ }
+\DoxyCodeLine{01898\ \ \ \ \ cudaDevAttrMaxTexture2DLayeredLayers\ \ \ \ \ \ =\ 29,\ }
+\DoxyCodeLine{01899\ \ \ \ \ cudaDevAttrSurfaceAlignment\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 30,\ }
+\DoxyCodeLine{01900\ \ \ \ \ cudaDevAttrConcurrentKernels\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 31,\ }
+\DoxyCodeLine{01901\ \ \ \ \ cudaDevAttrEccEnabled\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 32,\ }
+\DoxyCodeLine{01902\ \ \ \ \ cudaDevAttrPciBusId\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 33,\ }
+\DoxyCodeLine{01903\ \ \ \ \ cudaDevAttrPciDeviceId\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 34,\ }
+\DoxyCodeLine{01904\ \ \ \ \ cudaDevAttrTccDriver\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 35,\ }
+\DoxyCodeLine{01905\ \ \ \ \ cudaDevAttrMemoryClockRate\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 36,\ }
+\DoxyCodeLine{01906\ \ \ \ \ cudaDevAttrGlobalMemoryBusWidth\ \ \ \ \ \ \ \ \ \ \ =\ 37,\ }
+\DoxyCodeLine{01907\ \ \ \ \ cudaDevAttrL2CacheSize\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 38,\ }
+\DoxyCodeLine{01908\ \ \ \ \ cudaDevAttrMaxThreadsPerMultiProcessor\ \ \ \ =\ 39,\ }
+\DoxyCodeLine{01909\ \ \ \ \ cudaDevAttrAsyncEngineCount\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 40,\ }
+\DoxyCodeLine{01910\ \ \ \ \ cudaDevAttrUnifiedAddressing\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 41,\ }
+\DoxyCodeLine{01911\ \ \ \ \ cudaDevAttrMaxTexture1DLayeredWidth\ \ \ \ \ \ \ =\ 42,\ }
+\DoxyCodeLine{01912\ \ \ \ \ cudaDevAttrMaxTexture1DLayeredLayers\ \ \ \ \ \ =\ 43,\ }
+\DoxyCodeLine{01913\ \ \ \ \ cudaDevAttrMaxTexture2DGatherWidth\ \ \ \ \ \ \ \ =\ 45,\ }
+\DoxyCodeLine{01914\ \ \ \ \ cudaDevAttrMaxTexture2DGatherHeight\ \ \ \ \ \ \ =\ 46,\ }
+\DoxyCodeLine{01915\ \ \ \ \ cudaDevAttrMaxTexture3DWidthAlt\ \ \ \ \ \ \ \ \ \ \ =\ 47,\ }
+\DoxyCodeLine{01916\ \ \ \ \ cudaDevAttrMaxTexture3DHeightAlt\ \ \ \ \ \ \ \ \ \ =\ 48,\ }
+\DoxyCodeLine{01917\ \ \ \ \ cudaDevAttrMaxTexture3DDepthAlt\ \ \ \ \ \ \ \ \ \ \ =\ 49,\ }
+\DoxyCodeLine{01918\ \ \ \ \ cudaDevAttrPciDomainId\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 50,\ }
+\DoxyCodeLine{01919\ \ \ \ \ cudaDevAttrTexturePitchAlignment\ \ \ \ \ \ \ \ \ \ =\ 51,\ }
+\DoxyCodeLine{01920\ \ \ \ \ cudaDevAttrMaxTextureCubemapWidth\ \ \ \ \ \ \ \ \ =\ 52,\ }
+\DoxyCodeLine{01921\ \ \ \ \ cudaDevAttrMaxTextureCubemapLayeredWidth\ \ =\ 53,\ }
+\DoxyCodeLine{01922\ \ \ \ \ cudaDevAttrMaxTextureCubemapLayeredLayers\ =\ 54,\ }
+\DoxyCodeLine{01923\ \ \ \ \ cudaDevAttrMaxSurface1DWidth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 55,\ }
+\DoxyCodeLine{01924\ \ \ \ \ cudaDevAttrMaxSurface2DWidth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 56,\ }
+\DoxyCodeLine{01925\ \ \ \ \ cudaDevAttrMaxSurface2DHeight\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 57,\ }
+\DoxyCodeLine{01926\ \ \ \ \ cudaDevAttrMaxSurface3DWidth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 58,\ }
+\DoxyCodeLine{01927\ \ \ \ \ cudaDevAttrMaxSurface3DHeight\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 59,\ }
+\DoxyCodeLine{01928\ \ \ \ \ cudaDevAttrMaxSurface3DDepth\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 60,\ }
+\DoxyCodeLine{01929\ \ \ \ \ cudaDevAttrMaxSurface1DLayeredWidth\ \ \ \ \ \ \ =\ 61,\ }
+\DoxyCodeLine{01930\ \ \ \ \ cudaDevAttrMaxSurface1DLayeredLayers\ \ \ \ \ \ =\ 62,\ }
+\DoxyCodeLine{01931\ \ \ \ \ cudaDevAttrMaxSurface2DLayeredWidth\ \ \ \ \ \ \ =\ 63,\ }
+\DoxyCodeLine{01932\ \ \ \ \ cudaDevAttrMaxSurface2DLayeredHeight\ \ \ \ \ \ =\ 64,\ }
+\DoxyCodeLine{01933\ \ \ \ \ cudaDevAttrMaxSurface2DLayeredLayers\ \ \ \ \ \ =\ 65,\ }
+\DoxyCodeLine{01934\ \ \ \ \ cudaDevAttrMaxSurfaceCubemapWidth\ \ \ \ \ \ \ \ \ =\ 66,\ }
+\DoxyCodeLine{01935\ \ \ \ \ cudaDevAttrMaxSurfaceCubemapLayeredWidth\ \ =\ 67,\ }
+\DoxyCodeLine{01936\ \ \ \ \ cudaDevAttrMaxSurfaceCubemapLayeredLayers\ =\ 68,\ }
+\DoxyCodeLine{01937\ \ \ \ \ cudaDevAttrMaxTexture1DLinearWidth\ \ \ \ \ \ \ \ =\ 69,\ }
+\DoxyCodeLine{01938\ \ \ \ \ cudaDevAttrMaxTexture2DLinearWidth\ \ \ \ \ \ \ \ =\ 70,\ }
+\DoxyCodeLine{01939\ \ \ \ \ cudaDevAttrMaxTexture2DLinearHeight\ \ \ \ \ \ \ =\ 71,\ }
+\DoxyCodeLine{01940\ \ \ \ \ cudaDevAttrMaxTexture2DLinearPitch\ \ \ \ \ \ \ \ =\ 72,\ }
+\DoxyCodeLine{01941\ \ \ \ \ cudaDevAttrMaxTexture2DMipmappedWidth\ \ \ \ \ =\ 73,\ }
+\DoxyCodeLine{01942\ \ \ \ \ cudaDevAttrMaxTexture2DMipmappedHeight\ \ \ \ =\ 74,\ }
+\DoxyCodeLine{01943\ \ \ \ \ cudaDevAttrComputeCapabilityMajor\ \ \ \ \ \ \ \ \ =\ 75,\ }
+\DoxyCodeLine{01944\ \ \ \ \ cudaDevAttrComputeCapabilityMinor\ \ \ \ \ \ \ \ \ =\ 76,\ }
+\DoxyCodeLine{01945\ \ \ \ \ cudaDevAttrMaxTexture1DMipmappedWidth\ \ \ \ \ =\ 77,\ }
+\DoxyCodeLine{01946\ \ \ \ \ cudaDevAttrStreamPrioritiesSupported\ \ \ \ \ \ =\ 78,\ }
+\DoxyCodeLine{01947\ \ \ \ \ cudaDevAttrGlobalL1CacheSupported\ \ \ \ \ \ \ \ \ =\ 79,\ }
+\DoxyCodeLine{01948\ \ \ \ \ cudaDevAttrLocalL1CacheSupported\ \ \ \ \ \ \ \ \ \ =\ 80,\ }
+\DoxyCodeLine{01949\ \ \ \ \ cudaDevAttrMaxSharedMemoryPerMultiprocessor\ =\ 81,\ }
+\DoxyCodeLine{01950\ \ \ \ \ cudaDevAttrMaxRegistersPerMultiprocessor\ \ =\ 82,\ }
+\DoxyCodeLine{01951\ \ \ \ \ cudaDevAttrManagedMemory\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 83,\ }
+\DoxyCodeLine{01952\ \ \ \ \ cudaDevAttrIsMultiGpuBoard\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 84,\ }
+\DoxyCodeLine{01953\ \ \ \ \ cudaDevAttrMultiGpuBoardGroupID\ \ \ \ \ \ \ \ \ \ \ =\ 85,\ }
+\DoxyCodeLine{01954\ \ \ \ \ cudaDevAttrHostNativeAtomicSupported\ \ \ \ \ \ =\ 86,\ }
+\DoxyCodeLine{01955\ \ \ \ \ cudaDevAttrSingleToDoublePrecisionPerfRatio\ =\ 87,\ }
+\DoxyCodeLine{01956\ \ \ \ \ cudaDevAttrPageableMemoryAccess\ \ \ \ \ \ \ \ \ \ \ =\ 88,\ }
+\DoxyCodeLine{01957\ \ \ \ \ cudaDevAttrConcurrentManagedAccess\ \ \ \ \ \ \ \ =\ 89,\ }
+\DoxyCodeLine{01958\ \ \ \ \ cudaDevAttrComputePreemptionSupported\ \ \ \ \ =\ 90,\ }
+\DoxyCodeLine{01959\ \ \ \ \ cudaDevAttrCanUseHostPointerForRegisteredMem\ =\ 91,\ }
+\DoxyCodeLine{01960\ \ \ \ \ cudaDevAttrReserved92\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 92,}
+\DoxyCodeLine{01961\ \ \ \ \ cudaDevAttrReserved93\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 93,}
+\DoxyCodeLine{01962\ \ \ \ \ cudaDevAttrReserved94\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 94,}
+\DoxyCodeLine{01963\ \ \ \ \ cudaDevAttrCooperativeLaunch\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 95,\ }
+\DoxyCodeLine{01964\ \ \ \ \ cudaDevAttrCooperativeMultiDeviceLaunch\ \ \ =\ 96,\ }
+\DoxyCodeLine{01965\ \ \ \ \ cudaDevAttrMaxSharedMemoryPerBlockOptin\ \ \ =\ 97,\ }
+\DoxyCodeLine{01966\ \ \ \ \ cudaDevAttrCanFlushRemoteWrites\ \ \ \ \ \ \ \ \ \ \ =\ 98,\ }
+\DoxyCodeLine{01967\ \ \ \ \ cudaDevAttrHostRegisterSupported\ \ \ \ \ \ \ \ \ \ =\ 99,\ }
+\DoxyCodeLine{01968\ \ \ \ \ cudaDevAttrPageableMemoryAccessUsesHostPageTables\ =\ 100,\ }
+\DoxyCodeLine{01969\ \ \ \ \ cudaDevAttrDirectManagedMemAccessFromHost\ =\ 101,\ }
+\DoxyCodeLine{01970\ \ \ \ \ cudaDevAttrMaxBlocksPerMultiprocessor\ \ \ \ \ =\ 106,\ }
+\DoxyCodeLine{01971\ \ \ \ \ cudaDevAttrMaxPersistingL2CacheSize\ \ \ \ \ \ \ =\ 108,\ }
+\DoxyCodeLine{01972\ \ \ \ \ cudaDevAttrMaxAccessPolicyWindowSize\ \ \ \ \ \ =\ 109,\ }
+\DoxyCodeLine{01973\ \ \ \ \ cudaDevAttrReservedSharedMemoryPerBlock\ \ \ =\ 111,\ }
+\DoxyCodeLine{01974\ \ \ \ \ cudaDevAttrSparseCudaArraySupported\ \ \ \ \ \ \ =\ 112,\ }
+\DoxyCodeLine{01975\ \ \ \ \ cudaDevAttrHostRegisterReadOnlySupported\ \ =\ 113,\ \ }
+\DoxyCodeLine{01976\ \ \ \ \ cudaDevAttrTimelineSemaphoreInteropSupported\ =\ 114,\ \ }
+\DoxyCodeLine{01977\ \ \ \ \ cudaDevAttrMaxTimelineSemaphoreInteropSupported\ =\ 114,\ \ }
+\DoxyCodeLine{01978\ \ \ \ \ cudaDevAttrMemoryPoolsSupported\ \ \ \ \ \ \ \ \ \ \ =\ 115,\ }
+\DoxyCodeLine{01979\ \ \ \ \ cudaDevAttrGPUDirectRDMASupported\ \ \ \ \ \ \ \ \ =\ 116,\ }
+\DoxyCodeLine{01980\ \ \ \ \ cudaDevAttrGPUDirectRDMAFlushWritesOptions\ =\ 117,\ }
+\DoxyCodeLine{01981\ \ \ \ \ cudaDevAttrGPUDirectRDMAWritesOrdering\ \ \ \ =\ 118,\ }
+\DoxyCodeLine{01982\ \ \ \ \ cudaDevAttrMemoryPoolSupportedHandleTypes\ =\ 119,\ }
+\DoxyCodeLine{01987\ \ \ \ \ cudaDevAttrDeferredMappingCudaArraySupported\ =\ 121,\ }
+\DoxyCodeLine{01989\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaDevAttrMax}}}
+\DoxyCodeLine{01990\ \};}
+\DoxyCodeLine{01991\ }
+\DoxyCodeLine{01995\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga631a0ac27eb2dbf6f50fe37ddf5291f5}{cudaMemPoolAttr}}}
+\DoxyCodeLine{01996\ \{}
+\DoxyCodeLine{02005\ \ \ \ \ cudaMemPoolReuseFollowEventDependencies\ \ \ =\ 0x1,}
+\DoxyCodeLine{02006\ }
+\DoxyCodeLine{02012\ \ \ \ \ cudaMemPoolReuseAllowOpportunistic\ \ \ \ \ \ \ \ =\ 0x2,}
+\DoxyCodeLine{02013\ }
+\DoxyCodeLine{02020\ \ \ \ \ cudaMemPoolReuseAllowInternalDependencies\ =\ 0x3,}
+\DoxyCodeLine{02021\ }
+\DoxyCodeLine{02022\ }
+\DoxyCodeLine{02031\ \ \ \ \ cudaMemPoolAttrReleaseThreshold\ \ \ \ \ \ \ \ \ \ \ =\ 0x4,}
+\DoxyCodeLine{02032\ }
+\DoxyCodeLine{02037\ \ \ \ \ cudaMemPoolAttrReservedMemCurrent\ \ \ \ \ \ \ \ \ =\ 0x5,}
+\DoxyCodeLine{02038\ }
+\DoxyCodeLine{02044\ \ \ \ \ cudaMemPoolAttrReservedMemHigh\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x6,}
+\DoxyCodeLine{02045\ }
+\DoxyCodeLine{02050\ \ \ \ \ cudaMemPoolAttrUsedMemCurrent\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x7,}
+\DoxyCodeLine{02051\ }
+\DoxyCodeLine{02057\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemPoolAttrUsedMemHigh}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x8}
+\DoxyCodeLine{02058\ \};}
+\DoxyCodeLine{02059\ }
+\DoxyCodeLine{02063\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gac4de0f5dad36e073bde93428bd39f2a3}{cudaMemLocationType}}\ \{}
+\DoxyCodeLine{02064\ \ \ \ \ cudaMemLocationTypeInvalid\ =\ 0,}
+\DoxyCodeLine{02065\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemLocationTypeDevice}}\ =\ 1\ \ }
+\DoxyCodeLine{02066\ \};}
+\DoxyCodeLine{02067\ }
+\DoxyCodeLine{02073\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_mem_location}{cudaMemLocation}}\ \{}
+\DoxyCodeLine{02074\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gac4de0f5dad36e073bde93428bd39f2a3}{cudaMemLocationType}}\ \mbox{\hyperlink{structcuda_mem_location_a6df2243c9f48e48ad92306df676b2fe0}{type}};\ \ }
+\DoxyCodeLine{02075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_mem_location_a1c914cd5c3cc7323b4fde9756458efb0}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02076\ \};}
+\DoxyCodeLine{02077\ }
+\DoxyCodeLine{02081\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad1e8fa13175e6866f810ab56c3764b45}{cudaMemAccessFlags}}\ \{}
+\DoxyCodeLine{02082\ \ \ \ \ cudaMemAccessFlagsProtNone\ \ \ \ \ \ =\ 0,\ \ }
+\DoxyCodeLine{02083\ \ \ \ \ cudaMemAccessFlagsProtRead\ \ \ \ \ \ =\ 1,\ \ }
+\DoxyCodeLine{02084\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemAccessFlagsProtReadWrite}}\ =\ 3\ \ \ }
+\DoxyCodeLine{02085\ \};}
+\DoxyCodeLine{02086\ }
+\DoxyCodeLine{02090\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_mem_access_desc}{cudaMemAccessDesc}}\ \{}
+\DoxyCodeLine{02091\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_mem_location}{cudaMemLocation}}\ \ location;\ }
+\DoxyCodeLine{02092\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad1e8fa13175e6866f810ab56c3764b45}{cudaMemAccessFlags}}\ \mbox{\hyperlink{structcuda_mem_access_desc_a73c49ff5bcbb8f9cd0ee8231466777c9}{flags}};\ \ \ \ }
+\DoxyCodeLine{02093\ \};}
+\DoxyCodeLine{02094\ }
+\DoxyCodeLine{02098\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gab5bd172ea08b1acac1782cb96f523cd6}{cudaMemAllocationType}}\ \{}
+\DoxyCodeLine{02099\ \ \ \ \ cudaMemAllocationTypeInvalid\ =\ 0x0,}
+\DoxyCodeLine{02103\ \ \ \ \ cudaMemAllocationTypePinned\ \ =\ 0x1,}
+\DoxyCodeLine{02104\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemAllocationTypeMax}}\ \ \ \ \ =\ 0x7FFFFFFF\ }
+\DoxyCodeLine{02105\ \};}
+\DoxyCodeLine{02106\ }
+\DoxyCodeLine{02110\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cudaMemAllocationHandleType}}\ \{}
+\DoxyCodeLine{02111\ \ \ \ \ cudaMemHandleTypeNone\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0,\ \ }
+\DoxyCodeLine{02112\ \ \ \ \ cudaMemHandleTypePosixFileDescriptor\ \ \ \ \ =\ 0x1,\ \ }
+\DoxyCodeLine{02113\ \ \ \ \ cudaMemHandleTypeWin32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x2,\ \ }
+\DoxyCodeLine{02114\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaMemHandleTypeWin32Kmt}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4\ \ \ }
+\DoxyCodeLine{02115\ \};}
+\DoxyCodeLine{02116\ }
+\DoxyCodeLine{02120\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_mem_pool_props}{cudaMemPoolProps}}\ \{}
+\DoxyCodeLine{02121\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gab5bd172ea08b1acac1782cb96f523cd6}{cudaMemAllocationType}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_mem_pool_props_a93dcf13a9ddc7114384e78f66c9489df}{allocType}};\ \ \ }
+\DoxyCodeLine{02122\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cudaMemAllocationHandleType}}\ \ \ \mbox{\hyperlink{structcuda_mem_pool_props_a4cf896bffe71384e374c4d2decca9a53}{handleTypes}};\ }
+\DoxyCodeLine{02123\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_mem_location}{cudaMemLocation}}\ \ \ \ \ \ \ \ \ \ \ \ \ location;\ \ \ \ }
+\DoxyCodeLine{02130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{structcuda_mem_pool_props_ada7460ee187a2ab56d1a297e8d520e08}{win32SecurityAttributes}};}
+\DoxyCodeLine{02131\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reserved[64];\ }
+\DoxyCodeLine{02132\ \};}
+\DoxyCodeLine{02133\ }
+\DoxyCodeLine{02137\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_mem_pool_ptr_export_data}{cudaMemPoolPtrExportData}}\ \{}
+\DoxyCodeLine{02138\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ reserved[64];}
+\DoxyCodeLine{02139\ \};}
+\DoxyCodeLine{02140\ }
+\DoxyCodeLine{02144\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_mem_alloc_node_params}{cudaMemAllocNodeParams}}\ \{}
+\DoxyCodeLine{02149\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_mem_pool_props}{cudaMemPoolProps}}\ \ \ \ \ \ \ \ \ poolProps;\ \ \ \ \ \ \ }
+\DoxyCodeLine{02150\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_mem_access_desc}{cudaMemAccessDesc}}\ *\mbox{\hyperlink{structcuda_mem_alloc_node_params_a6f3847cf96f7c5ef38e4c2fbad6f1aeb}{accessDescs}};\ \ \ \ \ }
+\DoxyCodeLine{02151\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_mem_alloc_node_params_a83d6051d14c291c21ba3dc90a3a6cf0a}{accessDescCount}};\ }
+\DoxyCodeLine{02152\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_mem_alloc_node_params_aa291c1444b7cdbf7fc657cac47caa867}{bytesize}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{structcuda_mem_alloc_node_params_a59bbad18974ca7b897445e5621be9816}{dptr}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02154\ \};}
+\DoxyCodeLine{02155\ }
+\DoxyCodeLine{02159\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga3da9dde46fef3f8c65b24cfa345f1198}{cudaGraphMemAttributeType}}\ \{}
+\DoxyCodeLine{02164\ \ \ \ \ cudaGraphMemAttrUsedMemCurrent\ \ \ \ \ \ =\ 0x0,}
+\DoxyCodeLine{02165\ }
+\DoxyCodeLine{02171\ \ \ \ \ cudaGraphMemAttrUsedMemHigh\ \ \ \ \ \ \ \ \ =\ 0x1,}
+\DoxyCodeLine{02172\ }
+\DoxyCodeLine{02178\ \ \ \ \ cudaGraphMemAttrReservedMemCurrent\ \ =\ 0x2,}
+\DoxyCodeLine{02179\ }
+\DoxyCodeLine{02185\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphMemAttrReservedMemHigh}}\ \ \ \ \ =\ 0x3}
+\DoxyCodeLine{02186\ \};}
+\DoxyCodeLine{02187\ }
+\DoxyCodeLine{02192\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae9aae45e4c9848f14a52f3595f0f9402}{cudaDeviceP2PAttr}}\ \{}
+\DoxyCodeLine{02193\ \ \ \ \ cudaDevP2PAttrPerformanceRank\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{02194\ \ \ \ \ cudaDevP2PAttrAccessSupported\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 2,\ }
+\DoxyCodeLine{02195\ \ \ \ \ cudaDevP2PAttrNativeAtomicSupported\ \ \ \ \ \ \ \ =\ 3,\ }
+\DoxyCodeLine{02196\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaDevP2PAttrCudaArrayAccessSupported}}\ \ \ \ \ =\ 4\ \ }
+\DoxyCodeLine{02197\ \};}
+\DoxyCodeLine{02198\ }
+\DoxyCodeLine{02202\ \textcolor{preprocessor}{\#ifndef\ CU\_UUID\_HAS\_BEEN\_DEFINED}}
+\DoxyCodeLine{02203\ \textcolor{preprocessor}{\#define\ CU\_UUID\_HAS\_BEEN\_DEFINED}}
+\DoxyCodeLine{02204\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{struct_c_uuuid__st}{CUuuid\_st}}\ \{\ \ \ \ \ }
+\DoxyCodeLine{02205\ \ \ \ \ \textcolor{keywordtype}{char}\ bytes[16];}
+\DoxyCodeLine{02206\ \};}
+\DoxyCodeLine{02207\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_uuuid__st}{CUuuid\_st}}\ \mbox{\hyperlink{struct_c_uuuid__st}{CUuuid}};}
+\DoxyCodeLine{02208\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02209\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_uuuid__st}{CUuuid\_st}}\ cudaUUID\_t;}
+\DoxyCodeLine{02210\ }
+\DoxyCodeLine{02214\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_device_prop}{cudaDeviceProp}}}
+\DoxyCodeLine{02215\ \{}
+\DoxyCodeLine{02216\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ name[256];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02217\ \ \ \ \ cudaUUID\_t\ \ \ \mbox{\hyperlink{structcuda_device_prop_a626c20637498c7be1381db55a6261308}{uuid}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02218\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ luid[8];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02219\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_device_prop_a7e9a4d56377db11fd9d6b013de9cbf08}{luidDeviceNodeMask}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02220\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a983c292e2078dd5a4240f49c41d647f3}{totalGlobalMem}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02221\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a82ec4c5e244addb9cd57f5b9da0eaca7}{sharedMemPerBlock}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02222\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a84472707f521930fc052663820d635fc}{regsPerBlock}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02223\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a8656f53eb2a7e54500f6fb95a830b47d}{warpSize}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02224\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a4382eddd3f5836f1195ca988388783bb}{memPitch}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02225\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a18f38f08c66c8812b1ddeb16e4bf51a4}{maxThreadsPerBlock}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02226\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxThreadsDim[3];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02227\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxGridSize[3];\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02228\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_adee14230e417cb3059d697d6804da414}{clockRate}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02229\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ab4047e5e22082b1aefeac3b9ef39d0be}{totalConstMem}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02230\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a64490976c8e07e028a8f1ce1f5cd42d6}{major}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02231\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a50d477d8d5d3a04e0785f469277c65bb}{minor}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02232\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a500248658a996f51752e1ab1769f8a88}{textureAlignment}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02233\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a3a3f10d2833bdc82ceb370a449aafeec}{texturePitchAlignment}};\ \ \ \ \ \ }
+\DoxyCodeLine{02234\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a3281f4cdba05e2ca43be1caae2bcb29b}{deviceOverlap}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02235\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a3e36d9d236f97095ef2b496cd2f98121}{multiProcessorCount}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02236\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a9a63114766c4d2309f00403c1bf056c8}{kernelExecTimeoutEnabled}};\ \ \ }
+\DoxyCodeLine{02237\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a613bf3e02c6120db852a2ecd5ff9605a}{integrated}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02238\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a15414c4b1fedd1a22030522d54caa653}{canMapHostMemory}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02239\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a5458a603dcbca1dd361ac5b99c07675b}{computeMode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02240\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a21e1544ca58ec5e559d0d498c5af9061}{maxTexture1D}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02241\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a6875f2ba4ab9d9733948545303786cc4}{maxTexture1DMipmap}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02242\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a20efbdc4556a390720e0f75b62b8f83d}{maxTexture1DLinear}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02243\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture2D[2];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02244\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture2DMipmap[2];\ \ \ \ \ \ }
+\DoxyCodeLine{02245\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture2DLinear[3];\ \ \ \ \ \ }
+\DoxyCodeLine{02246\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture2DGather[2];\ \ \ \ \ \ }
+\DoxyCodeLine{02247\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture3D[3];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02248\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture3DAlt[3];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02249\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_af9076f17639b08ea1783bb3035b1f707}{maxTextureCubemap}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02250\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture1DLayered[2];\ \ \ \ \ }
+\DoxyCodeLine{02251\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTexture2DLayered[3];\ \ \ \ \ }
+\DoxyCodeLine{02252\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxTextureCubemapLayered[2];}
+\DoxyCodeLine{02253\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_afd25f5ae34d7eeb2c52f87b9e932fe05}{maxSurface1D}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02254\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxSurface2D[2];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02255\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxSurface3D[3];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02256\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxSurface1DLayered[2];\ \ \ \ \ }
+\DoxyCodeLine{02257\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxSurface2DLayered[3];\ \ \ \ \ }
+\DoxyCodeLine{02258\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ad170a7ad44ced64478d50fd7b6378b41}{maxSurfaceCubemap}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02259\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ maxSurfaceCubemapLayered[2];}
+\DoxyCodeLine{02260\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a8fe20825e4239ff91a7708c9468a02b5}{surfaceAlignment}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02261\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a8e2fe2a3b264901816874516af12a097}{concurrentKernels}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02262\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a72919e0168f8dc8a719e2c38355b80ab}{ECCEnabled}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02263\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ac5adc2ef8c6b89fb139b4684175db54a}{pciBusID}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02264\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a56978c2bfc433d26ac3b4c765ee536bb}{pciDeviceID}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02265\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_af3a69f0796e32c0e32d17c151443fab0}{pciDomainID}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02266\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_afcc96a9e56f84f4a0e853c18ce8e2c0d}{tccDriver}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02267\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a05a89c028bee8fe480d0f44ddd43357b}{asyncEngineCount}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02268\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a07b0114cefb43da05e05c65ec859542c}{unifiedAddressing}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02269\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ab200f01a8ec81912285c2633117109c4}{memoryClockRate}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02270\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ae764fca4d15a459279b31cb533435c19}{memoryBusWidth}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02271\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ab40b9ed0e542e9f09667b0a89fb6ad85}{l2CacheSize}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02272\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a708c0ea6df419516e4bd702dd26f802c}{persistingL2CacheMaxSize}};\ \ \ }
+\DoxyCodeLine{02273\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a96dac83c7095e29b86300cc02851844c}{maxThreadsPerMultiProcessor}};}
+\DoxyCodeLine{02274\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a43e968b12978ffd2a80bde224d7dc782}{streamPrioritiesSupported}};\ \ }
+\DoxyCodeLine{02275\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a551ac00fc5ba827a91d705b164288bff}{globalL1CacheSupported}};\ \ \ \ \ }
+\DoxyCodeLine{02276\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ae1772eeb293a76aae0bbf7f965a403d5}{localL1CacheSupported}};\ \ \ \ \ \ }
+\DoxyCodeLine{02277\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a6cede1829516e86917f0842a5f6498c8}{sharedMemPerMultiprocessor}};\ }
+\DoxyCodeLine{02278\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ade02e669caefcadadaaa42877b08e80a}{regsPerMultiprocessor}};\ \ \ \ \ \ }
+\DoxyCodeLine{02279\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_af7230860be3e37047c7ce5d32542b54b}{managedMemory}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02280\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a512d849f57e6a6a0ece1d21879c3ae35}{isMultiGpuBoard}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02281\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a63af976611c9d29f169882f5c32472d4}{multiGpuBoardGroupID}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{02282\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_aef82fd7d1d0413c7d6f33287e5b6306f}{hostNativeAtomicSupported}};\ \ }
+\DoxyCodeLine{02283\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a4bd4d531bf2ac497d659b03910440315}{singleToDoublePrecisionPerfRatio}};\ }
+\DoxyCodeLine{02284\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a46116bab1064b5d7d0642d78f6c27ce1}{pageableMemoryAccess}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{02285\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a16f9619ccc85e93bc456b8c69c80e78b}{concurrentManagedAccess}};\ \ \ \ }
+\DoxyCodeLine{02286\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a54a9a6e0067360f23dc91e60e7cf88d1}{computePreemptionSupported}};\ }
+\DoxyCodeLine{02287\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_aae79e062f076b0270625b38bb91285b8}{canUseHostPointerForRegisteredMem}};\ }
+\DoxyCodeLine{02288\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a3c26ab51c96f39b115d7826337541914}{cooperativeLaunch}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02289\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a83271637b431ccb5f5b58c46d0bd8cc9}{cooperativeMultiDeviceLaunch}};\ }
+\DoxyCodeLine{02290\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ac23eacaeeb59e1798d6d442be70f1c3e}{sharedMemPerBlockOptin}};\ \ \ \ \ }
+\DoxyCodeLine{02291\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ae9f1ed6bffd5606eb81d438728a844ca}{pageableMemoryAccessUsesHostPageTables}};\ }
+\DoxyCodeLine{02292\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_ab47773cf29bec05e6f1ba569346889e8}{directManagedMemAccessFromHost}};\ }
+\DoxyCodeLine{02293\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a7f337476973ea65db85c277f4646f0b3}{maxBlocksPerMultiProcessor}};\ }
+\DoxyCodeLine{02294\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a92470653c71f372dbec29bd693d55316}{accessPolicyMaxWindowSize}};\ \ }
+\DoxyCodeLine{02295\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \mbox{\hyperlink{structcuda_device_prop_a5a1f6049e9e9fd8af0d2a8a5df289ab7}{reservedSharedMemPerBlock}};\ \ }
+\DoxyCodeLine{02296\ \};}
+\DoxyCodeLine{02297\ }
+\DoxyCodeLine{02298\ \textcolor{preprocessor}{\#define\ cudaDevicePropDontCare\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{02299\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{02300\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{'\(\backslash\)0'\},\ \ \ \ }\textcolor{comment}{/*\ char\ \ \ \ \ \ \ \ \ name[256];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02301\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{\{0\}\},\ \ \ \ \ }\textcolor{comment}{/*\ cudaUUID\_t\ \ \ uuid;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02302\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{'\(\backslash\)0'\},\ \ \ \ }\textcolor{comment}{/*\ char\ \ \ \ \ \ \ \ \ luid[8];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02303\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ unsigned\ int\ luidDeviceNodeMask\ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02304\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ totalGlobalMem;\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02305\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ sharedMemPerBlock;\ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02306\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ regsPerBlock;\ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02307\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ warpSize;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02308\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ memPitch;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02309\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxThreadsPerBlock;\ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02310\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxThreadsDim[3];\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02311\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxGridSize[3];\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02312\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ clockRate;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02313\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ totalConstMem;\ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02314\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ -\/1,\ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ major;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02315\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ -\/1,\ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ minor;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02316\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ textureAlignment;\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02317\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ texturePitchAlignment\ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02318\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ -\/1,\ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ deviceOverlap;\ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02319\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ multiProcessorCount;\ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02320\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ kernelExecTimeoutEnabled\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02321\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ integrated\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02322\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ canMapHostMemory\ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02323\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ computeMode\ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02324\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture1D\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02325\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture1DMipmap\ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02326\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture1DLinear\ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02327\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture2D[2]\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02328\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture2DMipmap[2]\ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02329\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture2DLinear[3]\ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02330\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture2DGather[2]\ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02331\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture3D[3]\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02332\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture3DAlt[3]\ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02333\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTextureCubemap\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02334\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture1DLayered[2]\ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02335\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTexture2DLayered[3]\ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02336\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxTextureCubemapLayered[2]\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02337\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxSurface1D\ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02338\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxSurface2D[2]\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02339\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxSurface3D[3]\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02340\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxSurface1DLayered[2]\ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02341\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0,\ 0\},\ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxSurface2DLayered[3]\ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02342\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxSurfaceCubemap\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02343\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \{0,\ 0\},\ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxSurfaceCubemapLayered[2]\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02344\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ surfaceAlignment\ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02345\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ concurrentKernels\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02346\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ ECCEnabled\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02347\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ pciBusID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02348\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ pciDeviceID\ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02349\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ pciDomainID\ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02350\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ tccDriver\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02351\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ asyncEngineCount\ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02352\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ unifiedAddressing\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02353\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ memoryClockRate\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02354\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ memoryBusWidth\ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02355\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ l2CacheSize\ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02356\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ persistingL2CacheMaxSize\ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02357\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ maxThreadsPerMultiProcessor\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02358\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ streamPrioritiesSupported\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02359\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ globalL1CacheSupported\ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02360\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ localL1CacheSupported\ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02361\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ sharedMemPerMultiprocessor;\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02362\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ regsPerMultiprocessor;\ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02363\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ managedMemory\ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02364\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ isMultiGpuBoard\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02365\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ multiGpuBoardGroupID\ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02366\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ hostNativeAtomicSupported\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02367\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ singleToDoublePrecisionPerfRatio\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02368\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ pageableMemoryAccess\ \ \ \ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02369\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ concurrentManagedAccess\ \ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02370\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ computePreemptionSupported\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02371\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ canUseHostPointerForRegisteredMem\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02372\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ cooperativeLaunch\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02373\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ cooperativeMultiDeviceLaunch\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02374\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ sharedMemPerBlockOptin\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02375\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ pageableMemoryAccessUsesHostPageTables\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02376\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ directManagedMemAccessFromHost\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02377\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ int\ \ \ \ \ \ \ \ \ \ accessPolicyMaxWindowSize\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02378\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ 0,\ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ size\_t\ \ \ \ \ \ \ reservedSharedMemPerBlock\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{02379\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \}\ }}
+\DoxyCodeLine{02389\ \textcolor{preprocessor}{\#define\ CUDA\_IPC\_HANDLE\_SIZE\ 64}}
+\DoxyCodeLine{02390\ }
+\DoxyCodeLine{02394\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_ipc_event_handle__st}{cudaIpcEventHandle\_st}}}
+\DoxyCodeLine{02395\ \{}
+\DoxyCodeLine{02396\ \ \ \ \ \textcolor{keywordtype}{char}\ reserved[\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga38818d647e61a5d15fb8012fe54c2d24}{CUDA\_IPC\_HANDLE\_SIZE}}];}
+\DoxyCodeLine{02397\ \}cudaIpcEventHandle\_t;}
+\DoxyCodeLine{02398\ }
+\DoxyCodeLine{02402\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_ipc_mem_handle__st}{cudaIpcMemHandle\_st}}\ }
+\DoxyCodeLine{02403\ \{}
+\DoxyCodeLine{02404\ \ \ \ \ \textcolor{keywordtype}{char}\ reserved[\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga38818d647e61a5d15fb8012fe54c2d24}{CUDA\_IPC\_HANDLE\_SIZE}}];}
+\DoxyCodeLine{02405\ \}cudaIpcMemHandle\_t;}
+\DoxyCodeLine{02406\ }
+\DoxyCodeLine{02410\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad09e67232bd9b8108fdd28f0142c11c9}{cudaExternalMemoryHandleType}}\ \{}
+\DoxyCodeLine{02414\ \ \ \ \ cudaExternalMemoryHandleTypeOpaqueFd\ \ \ \ \ \ \ \ \ =\ 1,}
+\DoxyCodeLine{02418\ \ \ \ \ cudaExternalMemoryHandleTypeOpaqueWin32\ \ \ \ \ \ =\ 2,}
+\DoxyCodeLine{02422\ \ \ \ \ cudaExternalMemoryHandleTypeOpaqueWin32Kmt\ \ \ =\ 3,}
+\DoxyCodeLine{02426\ \ \ \ \ cudaExternalMemoryHandleTypeD3D12Heap\ \ \ \ \ \ \ \ =\ 4,}
+\DoxyCodeLine{02430\ \ \ \ \ cudaExternalMemoryHandleTypeD3D12Resource\ \ \ \ =\ 5,}
+\DoxyCodeLine{02434\ \ \ \ \ cudaExternalMemoryHandleTypeD3D11Resource\ \ \ \ =\ 6,}
+\DoxyCodeLine{02438\ \ \ \ \ cudaExternalMemoryHandleTypeD3D11ResourceKmt\ =\ 7,}
+\DoxyCodeLine{02442\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaExternalMemoryHandleTypeNvSciBuf}}\ \ \ \ \ \ \ \ \ =\ 8}
+\DoxyCodeLine{02443\ \};}
+\DoxyCodeLine{02444\ }
+\DoxyCodeLine{02448\ \textcolor{preprocessor}{\#define\ cudaExternalMemoryDedicated\ \ \ 0x1}}
+\DoxyCodeLine{02449\ }
+\DoxyCodeLine{02457\ \textcolor{preprocessor}{\#define\ cudaExternalSemaphoreSignalSkipNvSciBufMemSync\ \ \ \ \ 0x01}}
+\DoxyCodeLine{02458\ }
+\DoxyCodeLine{02466\ \textcolor{preprocessor}{\#define\ cudaExternalSemaphoreWaitSkipNvSciBufMemSync\ \ \ \ \ \ \ 0x02}}
+\DoxyCodeLine{02467\ }
+\DoxyCodeLine{02473\ \textcolor{preprocessor}{\#define\ cudaNvSciSyncAttrSignal\ \ \ \ \ \ \ 0x1}}
+\DoxyCodeLine{02474\ }
+\DoxyCodeLine{02480\ \textcolor{preprocessor}{\#define\ cudaNvSciSyncAttrWait\ \ \ \ \ \ \ \ \ 0x2}}
+\DoxyCodeLine{02481\ }
+\DoxyCodeLine{02485\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_memory_handle_desc}{cudaExternalMemoryHandleDesc}}\ \{}
+\DoxyCodeLine{02489\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad09e67232bd9b8108fdd28f0142c11c9}{cudaExternalMemoryHandleType}}\ \mbox{\hyperlink{structcuda_external_memory_handle_desc_a8d2b65d3b597280eb9be66ee34c7ee52}{type}};}
+\DoxyCodeLine{02490\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{02496\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_memory_handle_desc_a4ebe637addc306d6033e9ea6e032374d}{fd}};}
+\DoxyCodeLine{02512\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02516\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_memory_handle_desc_a0d30f77db99e1642bc857728c7a1d95c}{handle}};}
+\DoxyCodeLine{02521\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_memory_handle_desc_ab23ac82bda34119f28f2a16e75ae09bc}{name}};}
+\DoxyCodeLine{02522\ \ \ \ \ \ \ \ \ \}\ win32;}
+\DoxyCodeLine{02527\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_memory_handle_desc_afb0a96517b5dfdaa3558d2a871f92385}{nvSciBufObject}};}
+\DoxyCodeLine{02528\ \ \ \ \ \}\ handle;}
+\DoxyCodeLine{02532\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_memory_handle_desc_a362086a22da90ac8fba1ca294e65548e}{size}};}
+\DoxyCodeLine{02536\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_memory_handle_desc_a74412d3d2777ebc856aea0b9158aaafa}{flags}};}
+\DoxyCodeLine{02537\ \};}
+\DoxyCodeLine{02538\ }
+\DoxyCodeLine{02542\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_memory_buffer_desc}{cudaExternalMemoryBufferDesc}}\ \{}
+\DoxyCodeLine{02546\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_memory_buffer_desc_a034839893ecb4e103f82498888157ba6}{offset}};}
+\DoxyCodeLine{02550\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_memory_buffer_desc_a56bdddff67c72329350ed4fa4f2cd746}{size}};}
+\DoxyCodeLine{02554\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_memory_buffer_desc_a0a7888cacfea49ab9b30ae7e9ab47d32}{flags}};}
+\DoxyCodeLine{02555\ \};}
+\DoxyCodeLine{02556\ \ }
+\DoxyCodeLine{02560\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc}{cudaExternalMemoryMipmappedArrayDesc}}\ \{}
+\DoxyCodeLine{02565\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_a2f9441c3c6e3100f1517ccaf668ffd83}{offset}};}
+\DoxyCodeLine{02569\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_channel_format_desc}{cudaChannelFormatDesc}}\ formatDesc;}
+\DoxyCodeLine{02573\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_extent}{cudaExtent}}\ extent;}
+\DoxyCodeLine{02578\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_ade6d5579b7f13034ea82e06012c8758f}{flags}};}
+\DoxyCodeLine{02582\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_a4a939b3d6c1fca916dd78679049f36eb}{numLevels}};}
+\DoxyCodeLine{02583\ \};}
+\DoxyCodeLine{02584\ \ }
+\DoxyCodeLine{02588\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa765a9e3b26d2b6bd73decb545ad8721}{cudaExternalSemaphoreHandleType}}\ \{}
+\DoxyCodeLine{02592\ \ \ \ \ cudaExternalSemaphoreHandleTypeOpaqueFd\ \ \ \ \ \ \ =\ 1,}
+\DoxyCodeLine{02596\ \ \ \ \ cudaExternalSemaphoreHandleTypeOpaqueWin32\ \ \ \ =\ 2,}
+\DoxyCodeLine{02600\ \ \ \ \ cudaExternalSemaphoreHandleTypeOpaqueWin32Kmt\ =\ 3,}
+\DoxyCodeLine{02604\ \ \ \ \ cudaExternalSemaphoreHandleTypeD3D12Fence\ \ \ \ \ =\ 4,}
+\DoxyCodeLine{02608\ \ \ \ \ cudaExternalSemaphoreHandleTypeD3D11Fence\ \ \ \ \ =\ 5,}
+\DoxyCodeLine{02612\ \ \ \ \ \ cudaExternalSemaphoreHandleTypeNvSciSync\ \ \ \ \ =\ 6,}
+\DoxyCodeLine{02616\ \ \ \ \ cudaExternalSemaphoreHandleTypeKeyedMutex\ \ \ \ \ =\ 7,}
+\DoxyCodeLine{02620\ \ \ \ \ cudaExternalSemaphoreHandleTypeKeyedMutexKmt\ \ =\ 8,}
+\DoxyCodeLine{02624\ \ \ \ \ cudaExternalSemaphoreHandleTypeTimelineSemaphoreFd\ \ =\ 9,}
+\DoxyCodeLine{02628\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaExternalSemaphoreHandleTypeTimelineSemaphoreWin32}}\ \ =\ 10}
+\DoxyCodeLine{02629\ \};}
+\DoxyCodeLine{02630\ }
+\DoxyCodeLine{02634\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_semaphore_handle_desc}{cudaExternalSemaphoreHandleDesc}}\ \{}
+\DoxyCodeLine{02638\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa765a9e3b26d2b6bd73decb545ad8721}{cudaExternalSemaphoreHandleType}}\ \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_ae925b19e386170fb3cccf58cfab0fd9c}{type}};}
+\DoxyCodeLine{02639\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{02646\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a8f9a2f111e798f0425312f28abc02199}{fd}};}
+\DoxyCodeLine{02662\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02666\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a2ec0ce361b142fb978ecdf0a3b542877}{handle}};}
+\DoxyCodeLine{02671\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a88e0f37b5efffc9e0af8ebfca1e1a25c}{name}};}
+\DoxyCodeLine{02672\ \ \ \ \ \ \ \ \ \}\ win32;}
+\DoxyCodeLine{02676\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_a67d19646c0a2bd0866c683676ecf871f}{nvSciSyncObj}};}
+\DoxyCodeLine{02677\ \ \ \ \ \}\ handle;}
+\DoxyCodeLine{02681\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_handle_desc_addc4ddcce38ec7f5582e38fe278783b5}{flags}};}
+\DoxyCodeLine{02682\ \};}
+\DoxyCodeLine{02683\ }
+\DoxyCodeLine{02687\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_params__v1}{cudaExternalSemaphoreSignalParams\_v1}}\ \{}
+\DoxyCodeLine{02688\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02692\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02696\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_params__v1_a7044430e71b959bc7016d5ad6f5e09d4}{value}};}
+\DoxyCodeLine{02697\ \ \ \ \ \ \ \ \ \}\ fence;}
+\DoxyCodeLine{02698\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{02703\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_semaphore_signal_params__v1_a4a71cac980910d2959f08d5287838405}{fence}};}
+\DoxyCodeLine{02704\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ reserved;}
+\DoxyCodeLine{02705\ \ \ \ \ \ \ \ \ \}\ nvSciSync;}
+\DoxyCodeLine{02709\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02710\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{02711\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ *\ Value\ of\ key\ to\ release\ the\ mutex\ with}}
+\DoxyCodeLine{02712\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02713\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ key;}
+\DoxyCodeLine{02714\ \ \ \ \ \ \ \ \ \}\ keyedMutex;}
+\DoxyCodeLine{02715\ \ \ \ \ \}\ params;}
+\DoxyCodeLine{02726\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_params__v1_a231ddf8ee0c3cd2473b4036db21bd574}{flags}};}
+\DoxyCodeLine{02727\ \};}
+\DoxyCodeLine{02728\ }
+\DoxyCodeLine{02732\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params__v1}{cudaExternalSemaphoreWaitParams\_v1}}\ \{}
+\DoxyCodeLine{02733\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02737\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02741\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params__v1_a72bccb92af4c4ad02c9b63206595a6c9}{value}};}
+\DoxyCodeLine{02742\ \ \ \ \ \ \ \ \ \}\ fence;}
+\DoxyCodeLine{02743\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{02748\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_semaphore_wait_params__v1_ac389277196591a5374c8d36f64229772}{fence}};}
+\DoxyCodeLine{02749\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ reserved;}
+\DoxyCodeLine{02750\ \ \ \ \ \ \ \ \ \}\ nvSciSync;}
+\DoxyCodeLine{02754\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02758\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params__v1_a3045244f7e9f37148cd25c7ee3e5c4b4}{key}};}
+\DoxyCodeLine{02762\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params__v1_adb52cafb5694698de85151417d92f064}{timeoutMs}};}
+\DoxyCodeLine{02763\ \ \ \ \ \ \ \ \ \}\ keyedMutex;}
+\DoxyCodeLine{02764\ \ \ \ \ \}\ params;}
+\DoxyCodeLine{02775\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params__v1_a8f8c2caa2ecd70fc9f2cbb7253e4c2b3}{flags}};}
+\DoxyCodeLine{02776\ \};}
+\DoxyCodeLine{02777\ }
+\DoxyCodeLine{02781\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_params}{cudaExternalSemaphoreSignalParams}}\{}
+\DoxyCodeLine{02782\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02786\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02790\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_params_a362fe52b607c7bb747aaababb53a7cf5}{value}};}
+\DoxyCodeLine{02791\ \ \ \ \ \ \ \ \ \}\ fence;}
+\DoxyCodeLine{02792\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{02797\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_semaphore_signal_params_a822d9eb7c19587ca89dd56d68c6b7867}{fence}};}
+\DoxyCodeLine{02798\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ reserved;}
+\DoxyCodeLine{02799\ \ \ \ \ \ \ \ \ \}\ nvSciSync;}
+\DoxyCodeLine{02803\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02804\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{02805\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ *\ Value\ of\ key\ to\ release\ the\ mutex\ with}}
+\DoxyCodeLine{02806\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{02807\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ key;}
+\DoxyCodeLine{02808\ \ \ \ \ \ \ \ \ \}\ keyedMutex;}
+\DoxyCodeLine{02809\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ reserved[12];}
+\DoxyCodeLine{02810\ \ \ \ \ \}\ params;}
+\DoxyCodeLine{02821\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_params_af45327d7eafb4fc6e356bcef1a166b83}{flags}};}
+\DoxyCodeLine{02822\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ reserved[16];}
+\DoxyCodeLine{02823\ \};}
+\DoxyCodeLine{02824\ }
+\DoxyCodeLine{02828\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params}{cudaExternalSemaphoreWaitParams}}\ \{}
+\DoxyCodeLine{02829\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02833\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02837\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params_afe3c3545eacc98cf677e83f54acc3b7b}{value}};}
+\DoxyCodeLine{02838\ \ \ \ \ \ \ \ \ \}\ fence;}
+\DoxyCodeLine{02839\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{02844\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_external_semaphore_wait_params_aeb7ad5584afc25abbc2a4ff2890adca7}{fence}};}
+\DoxyCodeLine{02845\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ reserved;}
+\DoxyCodeLine{02846\ \ \ \ \ \ \ \ \ \}\ nvSciSync;}
+\DoxyCodeLine{02850\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{02854\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params_a3173a5c266ae350b7734d98fefabe825}{key}};}
+\DoxyCodeLine{02858\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params_a50f46f7a36cb450e54f3b19a7082a261}{timeoutMs}};}
+\DoxyCodeLine{02859\ \ \ \ \ \ \ \ \ \}\ keyedMutex;}
+\DoxyCodeLine{02860\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ reserved[10];}
+\DoxyCodeLine{02861\ \ \ \ \ \}\ params;}
+\DoxyCodeLine{02872\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_params_a52dfb6a3f213507e3efb1a6b8d06140a}{flags}};}
+\DoxyCodeLine{02873\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ reserved[16];}
+\DoxyCodeLine{02874\ \};}
+\DoxyCodeLine{02875\ }
+\DoxyCodeLine{02876\ }
+\DoxyCodeLine{02877\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{02878\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{02879\ \textcolor{comment}{*\ \ SHORTHAND\ TYPE\ DEFINITION\ USED\ BY\ RUNTIME\ API\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{02880\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{02881\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{02882\ }
+\DoxyCodeLine{02886\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad62b590c1624ef69a71d4de1b5597a16}{cudaError}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cudaError\_t}};}
+\DoxyCodeLine{02887\ }
+\DoxyCodeLine{02891\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUstream\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}};}
+\DoxyCodeLine{02892\ }
+\DoxyCodeLine{02896\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUevent\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa20877ae287175ecb9bd358a4daabe8d}{cudaEvent\_t}};}
+\DoxyCodeLine{02897\ }
+\DoxyCodeLine{02901\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphicsResource}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga891000ad3b426998d1ed4c1cc13b550c}{cudaGraphicsResource\_t}};}
+\DoxyCodeLine{02902\ }
+\DoxyCodeLine{02906\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad204f0c5f38d1262d8d4ec9c13d3ef67}{cudaOutputMode}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaea4a7db2298cc7d079c5bde8787b42a5}{cudaOutputMode\_t}};}
+\DoxyCodeLine{02907\ }
+\DoxyCodeLine{02911\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUexternalMemory\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga418cdb50daba88868cdda5cb0b8e88df}{cudaExternalMemory\_t}};}
+\DoxyCodeLine{02912\ }
+\DoxyCodeLine{02916\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUexternalSemaphore\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaf6d28f8cf54a431fd14051a57ce3f91f}{cudaExternalSemaphore\_t}};}
+\DoxyCodeLine{02917\ }
+\DoxyCodeLine{02921\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUgraph\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gabb3d2a1b44af920c933d053feaa6f5e0}{cudaGraph\_t}};}
+\DoxyCodeLine{02922\ }
+\DoxyCodeLine{02926\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUgraphNode\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gafdf0e2bc012d450b895c1d53f7a6fa34}{cudaGraphNode\_t}};}
+\DoxyCodeLine{02927\ }
+\DoxyCodeLine{02931\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUuserObject\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga8f6add7500a13a4353bd2249713e3712}{cudaUserObject\_t}};}
+\DoxyCodeLine{02932\ }
+\DoxyCodeLine{02936\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUfunc\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad76b306a316426bb09db1a2b18551f5b}{cudaFunction\_t}};}
+\DoxyCodeLine{02937\ }
+\DoxyCodeLine{02941\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUmemPoolHandle\_st}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cudaMemPool\_t}};}
+\DoxyCodeLine{02942\ }
+\DoxyCodeLine{02946\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga6739931383ecf96e1af98078d2d9706a}{cudaCGScope}}\ \{}
+\DoxyCodeLine{02947\ \ \ \ \ cudaCGScopeInvalid\ \ \ =\ 0,\ }
+\DoxyCodeLine{02948\ \ \ \ \ cudaCGScopeGrid\ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{02949\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaCGScopeMultiGrid}}\ =\ 2\ \ }
+\DoxyCodeLine{02950\ \};}
+\DoxyCodeLine{02951\ }
+\DoxyCodeLine{02955\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_launch_params}{cudaLaunchParams}}}
+\DoxyCodeLine{02956\ \{}
+\DoxyCodeLine{02957\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_launch_params_ab83c5ba1757e15e87386300690c9b081}{func}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02958\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ \mbox{\hyperlink{structcuda_launch_params_aad6b5e617a8c137476babb2ca1b94570}{gridDim}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02959\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ \mbox{\hyperlink{structcuda_launch_params_add319c6a16b02bdcce0c08fb3e03b87f}{blockDim}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{02960\ \ \ \ \ \textcolor{keywordtype}{void}\ **\mbox{\hyperlink{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}{args}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02961\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_launch_params_a86f6dff594ff6d496509a9f3c6607f17}{sharedMem}};\ \ \ \ }
+\DoxyCodeLine{02962\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \mbox{\hyperlink{structcuda_launch_params_a1f780f7a1266c1d820d46b31d025bd0c}{stream}};\ }
+\DoxyCodeLine{02963\ \};}
+\DoxyCodeLine{02964\ }
+\DoxyCodeLine{02968\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_kernel_node_params}{cudaKernelNodeParams}}\ \{}
+\DoxyCodeLine{02969\ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{structcuda_kernel_node_params_afce3df9a6ee0a768a8ca4b985558ca82}{func}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02970\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ \mbox{\hyperlink{structcuda_kernel_node_params_af31836451650cb520658bb2a741c0795}{gridDim}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02971\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ \mbox{\hyperlink{structcuda_kernel_node_params_a8df7b04e23379ff141831f28a860f4ae}{blockDim}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02972\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_kernel_node_params_a6a5412c4983da848deda394309f6f6ed}{sharedMemBytes}};\ \ \ \ }
+\DoxyCodeLine{02973\ \ \ \ \ \textcolor{keywordtype}{void}\ **\mbox{\hyperlink{structcuda_kernel_node_params_aa31f5e45ef1c1cfd1d97d21d2217fadd}{kernelParams}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02974\ \ \ \ \ \textcolor{keywordtype}{void}\ **\mbox{\hyperlink{structcuda_kernel_node_params_a59eb4acdd722e24ceaf670bd2d81e872}{extra}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02975\ \};}
+\DoxyCodeLine{02976\ }
+\DoxyCodeLine{02980\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_node_params}{cudaExternalSemaphoreSignalNodeParams}}\ \{}
+\DoxyCodeLine{02981\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaf6d28f8cf54a431fd14051a57ce3f91f}{cudaExternalSemaphore\_t}}*\ \mbox{\hyperlink{structcuda_external_semaphore_signal_node_params_a374612369462eeeb645f2c32abd72705}{extSemArray}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02982\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_external_semaphore_signal_params}{cudaExternalSemaphoreSignalParams}}*\ \mbox{\hyperlink{structcuda_external_semaphore_signal_node_params_a780427ea6cde6d7c7429f4e8d1b1f1ed}{paramsArray}};\ }
+\DoxyCodeLine{02983\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_signal_node_params_a01b76e8f1ff0dd417d702001019767b2}{numExtSems}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02984\ \};}
+\DoxyCodeLine{02985\ }
+\DoxyCodeLine{02989\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_node_params}{cudaExternalSemaphoreWaitNodeParams}}\ \{}
+\DoxyCodeLine{02990\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaf6d28f8cf54a431fd14051a57ce3f91f}{cudaExternalSemaphore\_t}}*\ \mbox{\hyperlink{structcuda_external_semaphore_wait_node_params_afdffd11f4a725dd406a976af1ca5513e}{extSemArray}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02991\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_external_semaphore_wait_params}{cudaExternalSemaphoreWaitParams}}*\ \mbox{\hyperlink{structcuda_external_semaphore_wait_node_params_a96788d30952a74de2edb3db24d72f6c1}{paramsArray}};\ }
+\DoxyCodeLine{02992\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcuda_external_semaphore_wait_node_params_affb038ae8e070e1aa98fbac3614620b5}{numExtSems}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{02993\ \};}
+\DoxyCodeLine{02994\ }
+\DoxyCodeLine{02998\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae603f9303d35ee11a08cf34b56326002}{cudaGraphNodeType}}\ \{}
+\DoxyCodeLine{02999\ \ \ \ \ cudaGraphNodeTypeKernel\ \ \ \ \ \ =\ 0x00,\ }
+\DoxyCodeLine{03000\ \ \ \ \ cudaGraphNodeTypeMemcpy\ \ \ \ \ \ =\ 0x01,\ }
+\DoxyCodeLine{03001\ \ \ \ \ cudaGraphNodeTypeMemset\ \ \ \ \ \ =\ 0x02,\ }
+\DoxyCodeLine{03002\ \ \ \ \ cudaGraphNodeTypeHost\ \ \ \ \ \ \ \ =\ 0x03,\ }
+\DoxyCodeLine{03003\ \ \ \ \ cudaGraphNodeTypeGraph\ \ \ \ \ \ \ =\ 0x04,\ }
+\DoxyCodeLine{03004\ \ \ \ \ cudaGraphNodeTypeEmpty\ \ \ \ \ \ \ =\ 0x05,\ }
+\DoxyCodeLine{03005\ \ \ \ \ cudaGraphNodeTypeWaitEvent\ \ \ =\ 0x06,\ }
+\DoxyCodeLine{03006\ \ \ \ \ cudaGraphNodeTypeEventRecord\ =\ 0x07,\ }
+\DoxyCodeLine{03007\ \ \ \ \ cudaGraphNodeTypeExtSemaphoreSignal\ =\ 0x08,\ }
+\DoxyCodeLine{03008\ \ \ \ \ cudaGraphNodeTypeExtSemaphoreWait\ =\ 0x09,\ }
+\DoxyCodeLine{03009\ \ \ \ \ cudaGraphNodeTypeMemAlloc\ \ \ \ =\ 0x0a,\ }
+\DoxyCodeLine{03010\ \ \ \ \ cudaGraphNodeTypeMemFree\ \ \ \ \ =\ 0x0b,\ }
+\DoxyCodeLine{03011\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphNodeTypeCount}}}
+\DoxyCodeLine{03012\ \};}
+\DoxyCodeLine{03013\ }
+\DoxyCodeLine{03017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUgraphExec\_st}}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga2fee13c408fb7da16401e25c1ae6bdb9}{cudaGraphExec\_t}};}
+\DoxyCodeLine{03018\ }
+\DoxyCodeLine{03022\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga51613142e9be08357296fbd014f77fb0}{cudaGraphExecUpdateResult}}\ \{}
+\DoxyCodeLine{03023\ \ \ \ \ cudaGraphExecUpdateSuccess\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0,\ }
+\DoxyCodeLine{03024\ \ \ \ \ cudaGraphExecUpdateError\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x1,\ }
+\DoxyCodeLine{03025\ \ \ \ \ cudaGraphExecUpdateErrorTopologyChanged\ \ \ =\ 0x2,\ }
+\DoxyCodeLine{03026\ \ \ \ \ cudaGraphExecUpdateErrorNodeTypeChanged\ \ \ =\ 0x3,\ }
+\DoxyCodeLine{03027\ \ \ \ \ cudaGraphExecUpdateErrorFunctionChanged\ \ \ =\ 0x4,\ }
+\DoxyCodeLine{03028\ \ \ \ \ cudaGraphExecUpdateErrorParametersChanged\ =\ 0x5,\ }
+\DoxyCodeLine{03029\ \ \ \ \ cudaGraphExecUpdateErrorNotSupported\ \ \ \ \ \ =\ 0x6,\ }
+\DoxyCodeLine{03030\ \ \ \ \ cudaGraphExecUpdateErrorUnsupportedFunctionChange\ =\ 0x7,\ }
+\DoxyCodeLine{03031\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphExecUpdateErrorAttributesChanged}}\ =\ 0x8\ }
+\DoxyCodeLine{03032\ \};}
+\DoxyCodeLine{03033\ }
+\DoxyCodeLine{03038\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga1868f72b2a1cbd41a22313baebcfaccf}{cudaGetDriverEntryPointFlags}}\ \{}
+\DoxyCodeLine{03039\ \ \ \ \ cudaEnableDefault\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x0,\ }
+\DoxyCodeLine{03040\ \ \ \ \ cudaEnableLegacyStream\ \ \ \ \ \ \ \ \ \ \ =\ 0x1,\ }
+\DoxyCodeLine{03041\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaEnablePerThreadDefaultStream}}\ =\ 0x2\ \ }
+\DoxyCodeLine{03042\ \};}
+\DoxyCodeLine{03043\ }
+\DoxyCodeLine{03047\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga58afbcbb27a2d440a7b73dffbbfa8c49}{cudaGraphDebugDotFlags}}\ \{}
+\DoxyCodeLine{03048\ \ \ \ \ cudaGraphDebugDotFlagsVerbose\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 1<<0,\ \ }
+\DoxyCodeLine{03049\ \ \ \ \ cudaGraphDebugDotFlagsKernelNodeParams\ \ \ \ \ \ \ \ \ =\ 1<<2,\ \ }
+\DoxyCodeLine{03050\ \ \ \ \ cudaGraphDebugDotFlagsMemcpyNodeParams\ \ \ \ \ \ \ \ \ =\ 1<<3,\ \ }
+\DoxyCodeLine{03051\ \ \ \ \ cudaGraphDebugDotFlagsMemsetNodeParams\ \ \ \ \ \ \ \ \ =\ 1<<4,\ \ }
+\DoxyCodeLine{03052\ \ \ \ \ cudaGraphDebugDotFlagsHostNodeParams\ \ \ \ \ \ \ \ \ \ \ =\ 1<<5,\ \ }
+\DoxyCodeLine{03053\ \ \ \ \ cudaGraphDebugDotFlagsEventNodeParams\ \ \ \ \ \ \ \ \ \ =\ 1<<6,\ \ }
+\DoxyCodeLine{03054\ \ \ \ \ cudaGraphDebugDotFlagsExtSemasSignalNodeParams\ =\ 1<<7,\ \ }
+\DoxyCodeLine{03055\ \ \ \ \ cudaGraphDebugDotFlagsExtSemasWaitNodeParams\ \ \ =\ 1<<8,\ \ }
+\DoxyCodeLine{03056\ \ \ \ \ cudaGraphDebugDotFlagsKernelNodeAttributes\ \ \ \ \ =\ 1<<9,\ \ }
+\DoxyCodeLine{03057\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphDebugDotFlagsHandles}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 1<<10\ \ }
+\DoxyCodeLine{03058\ \};}
+\DoxyCodeLine{03059\ }
+\DoxyCodeLine{03063\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\_\_device\_builtin\_\_}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaebc0aaed556983ef6e276ca5d524041a}{cudaGraphInstantiateFlags}}\ \{}
+\DoxyCodeLine{03064\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaGraphInstantiateFlagAutoFreeOnLaunch}}\ =\ 1\ }
+\DoxyCodeLine{03065\ \};}
+\DoxyCodeLine{03066\ }
+\DoxyCodeLine{03068\ \ \textcolor{comment}{/*\ END\ CUDART\_TYPES\ */}}
+\DoxyCodeLine{03069\ }
+\DoxyCodeLine{03070\ \textcolor{preprocessor}{\#if\ defined(\_\_UNDEF\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_DRIVER\_TYPES\_H\_\_)}}
+\DoxyCodeLine{03071\ \textcolor{preprocessor}{\#undef\ \_\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_\_}}
+\DoxyCodeLine{03072\ \textcolor{preprocessor}{\#undef\ \_\_UNDEF\_CUDA\_INCLUDE\_COMPILER\_INTERNAL\_HEADERS\_DRIVER\_TYPES\_H\_\_}}
+\DoxyCodeLine{03073\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{03074\ }
+\DoxyCodeLine{03075\ \textcolor{preprocessor}{\#undef\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{03076\ }
+\DoxyCodeLine{03077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_DRIVER\_TYPES\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,75 @@
+\doxysection{CUmem\+Allocation\+Prop\+\_\+st Struct Reference}
+\hypertarget{struct_c_umem_allocation_prop__st}{}\label{struct_c_umem_allocation_prop__st}\index{CUmemAllocationProp\_st@{CUmemAllocationProp\_st}}
+
+
+{\ttfamily \#include $<$cuda.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb4ac1dfc95d18980df9181f210ce25b}{CUmem\+Allocation\+Type}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st_a206c9f415c4e24b70752797d3c9509d2}{type}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st_ade3f39f79dc17e67d06d661932b5ee9c}{requested\+Handle\+Types}}
+\item 
+\mbox{\hyperlink{struct_c_umem_location__st}{CUmem\+Location}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st_a59aa455886db5dc560862d45b549e3a3}{location}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_c_umem_allocation_prop__st_ab49cdfab6d2dcffa7d7d40176852170a}{win32\+Handle\+Meta\+Data}}
+\item 
+\Hypertarget{struct_c_umem_allocation_prop__st_a409e459e2643d0a74509de585fb3ff38}\label{struct_c_umem_allocation_prop__st_a409e459e2643d0a74509de585fb3ff38} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st_af21ec210a9e14f2d4aceddb8ce81bde8}{compressionType}}\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} {\bfseries gpuDirectRDMACapable}\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{short}} \mbox{\hyperlink{struct_c_umem_allocation_prop__st_ad77fb37774bf141fd1a72af7727250fc}{usage}}\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} {\bfseries reserved} \mbox{[}4\mbox{]}\\
+\} {\bfseries allocFlags}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specifies the allocation properties for a allocation. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_c_umem_allocation_prop__st_af21ec210a9e14f2d4aceddb8ce81bde8}\label{struct_c_umem_allocation_prop__st_af21ec210a9e14f2d4aceddb8ce81bde8} 
+\index{CUmemAllocationProp\_st@{CUmemAllocationProp\_st}!compressionType@{compressionType}}
+\index{compressionType@{compressionType}!CUmemAllocationProp\_st@{CUmemAllocationProp\_st}}
+\doxysubsubsection{\texorpdfstring{compressionType}{compressionType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} CUmem\+Allocation\+Prop\+\_\+st\+::compression\+Type}
+
+Allocation hint for requesting compressible memory. On devices that support Compute Data Compression, compressible memory can be used to accelerate accesses to data with unstructured sparsity and other compressible data patterns. Applications are expected to query allocation property of the handle obtained with \doxylink{group___c_u_d_a___v_a_gab5a09e3aee547c0d1d4e8e20a72d7aa3}{cu\+Mem\+Create} using \doxylink{group___c_u_d_a___v_a_ga9f4e9aad5bfe6a06e6e7e04ccc49f00c}{cu\+Mem\+Get\+Allocation\+Properties\+From\+Handle} to validate if the obtained allocation is compressible or not. Note that compressed memory may not be mappable on all devices. \Hypertarget{struct_c_umem_allocation_prop__st_a59aa455886db5dc560862d45b549e3a3}\label{struct_c_umem_allocation_prop__st_a59aa455886db5dc560862d45b549e3a3} 
+\index{CUmemAllocationProp\_st@{CUmemAllocationProp\_st}!location@{location}}
+\index{location@{location}!CUmemAllocationProp\_st@{CUmemAllocationProp\_st}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_umem_location__st}{CUmem\+Location}} CUmem\+Allocation\+Prop\+\_\+st\+::location}
+
+Location of allocation \Hypertarget{struct_c_umem_allocation_prop__st_ade3f39f79dc17e67d06d661932b5ee9c}\label{struct_c_umem_allocation_prop__st_ade3f39f79dc17e67d06d661932b5ee9c} 
+\index{CUmemAllocationProp\_st@{CUmemAllocationProp\_st}!requestedHandleTypes@{requestedHandleTypes}}
+\index{requestedHandleTypes@{requestedHandleTypes}!CUmemAllocationProp\_st@{CUmemAllocationProp\_st}}
+\doxysubsubsection{\texorpdfstring{requestedHandleTypes}{requestedHandleTypes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}} CUmem\+Allocation\+Prop\+\_\+st\+::requested\+Handle\+Types}
+
+requested \doxylink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type} \Hypertarget{struct_c_umem_allocation_prop__st_a206c9f415c4e24b70752797d3c9509d2}\label{struct_c_umem_allocation_prop__st_a206c9f415c4e24b70752797d3c9509d2} 
+\index{CUmemAllocationProp\_st@{CUmemAllocationProp\_st}!type@{type}}
+\index{type@{type}!CUmemAllocationProp\_st@{CUmemAllocationProp\_st}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb4ac1dfc95d18980df9181f210ce25b}{CUmem\+Allocation\+Type}} CUmem\+Allocation\+Prop\+\_\+st\+::type}
+
+Allocation type \Hypertarget{struct_c_umem_allocation_prop__st_ad77fb37774bf141fd1a72af7727250fc}\label{struct_c_umem_allocation_prop__st_ad77fb37774bf141fd1a72af7727250fc} 
+\index{CUmemAllocationProp\_st@{CUmemAllocationProp\_st}!usage@{usage}}
+\index{usage@{usage}!CUmemAllocationProp\_st@{CUmemAllocationProp\_st}}
+\doxysubsubsection{\texorpdfstring{usage}{usage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{short}} CUmem\+Allocation\+Prop\+\_\+st\+::usage}
+
+Bitmask indicating intended usage for this allocation \Hypertarget{struct_c_umem_allocation_prop__st_ab49cdfab6d2dcffa7d7d40176852170a}\label{struct_c_umem_allocation_prop__st_ab49cdfab6d2dcffa7d7d40176852170a} 
+\index{CUmemAllocationProp\_st@{CUmemAllocationProp\_st}!win32HandleMetaData@{win32HandleMetaData}}
+\index{win32HandleMetaData@{win32HandleMetaData}!CUmemAllocationProp\_st@{CUmemAllocationProp\_st}}
+\doxysubsubsection{\texorpdfstring{win32HandleMetaData}{win32HandleMetaData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} CUmem\+Allocation\+Prop\+\_\+st\+::win32\+Handle\+Meta\+Data}
+
+Windows-\/specific POBJECT\+\_\+\+ATTRIBUTES required when \doxylink{group___c_u_d_a___t_y_p_e_s_ggaf83467b7e74e46d04e2176fad50ffa7ca439b7704f58e569543c4b60038cc251e}{CU\+\_\+\+MEM\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+WIN32} is specified. This object atributes structure includes security attributes that define the scope of which exported allocations may be tranferred to other processes. In all other cases, this field is required to be zero. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuda_8h}{cuda.\+h}}\end{DoxyCompactItemize}

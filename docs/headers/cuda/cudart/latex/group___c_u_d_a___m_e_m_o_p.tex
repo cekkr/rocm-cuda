@@ -1,0 +1,204 @@
+\doxysection{Stream memory operations}
+\hypertarget{group___c_u_d_a___m_e_m_o_p}{}\label{group___c_u_d_a___m_e_m_o_p}\index{Stream memory operations@{Stream memory operations}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}{cu\+Stream\+Wait\+Value32}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} stream, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{addr}}, cuuint32\+\_\+t value, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Wait on a memory location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}{cu\+Stream\+Wait\+Value64}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} stream, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{addr}}, cuuint64\+\_\+t value, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Wait on a memory location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}{cu\+Stream\+Write\+Value32}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} stream, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{addr}}, cuuint32\+\_\+t value, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Write a value to memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}{cu\+Stream\+Write\+Value64}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} stream, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{addr}}, cuuint64\+\_\+t value, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Write a value to memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___m_e_m_o_p_gad8af305188f70ba1ad52fc986aab1d03}{cu\+Stream\+Batch\+Mem\+Op}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} stream, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}}, \mbox{\hyperlink{union_c_ustream_batch_mem_op_params__union}{CUstream\+Batch\+Mem\+Op\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{param\+Array}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Batch operations to synchronize the stream via memory operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ Stream memory operations of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the stream memory operations of the low-\/level CUDA driver application programming interface.
+
+The whole set of operations is disabled by default. Users are required to explicitly enable them, e.\+g. on Linux by passing the kernel module parameter shown below\+: modprobe nvidia NVreg\+\_\+\+Enable\+Stream\+Mem\+OPs=1 There is currently no way to enable these operations on other operating systems.
+
+Users can programmatically query whether the device supports these operations with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa3fcdc07d0e356a84b6c02730df6d43db}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OPS}.
+
+Support for the \doxylink{group___c_u_d_a___t_y_p_e_s_gga5ba489253eb905a983228a810c1f3360a2f10c357c1882ae7b0b947225c1a0d55}{CU\+\_\+\+STREAM\+\_\+\+WAIT\+\_\+\+VALUE\+\_\+\+NOR} flag can be queried with \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aabe06f9c31c264e0b29be6cc6330b5047}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+\+STREAM\+\_\+\+WAIT\+\_\+\+VALUE\+\_\+\+NOR}.
+
+Support for the \doxylink{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}{cu\+Stream\+Write\+Value64()} and \doxylink{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}{cu\+Stream\+Wait\+Value64()} functions, as well as for the \doxylink{group___c_u_d_a___t_y_p_e_s_ggad22b1c6c35ae110dd96d576d33c14f1fa7e4ff0402540ee028226c47858cf8a99}{CU\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OP\+\_\+\+WAIT\+\_\+\+VALUE\+\_\+64} and \doxylink{group___c_u_d_a___t_y_p_e_s_ggad22b1c6c35ae110dd96d576d33c14f1fa6e576dc8791fa4abf7a3b36e428cd8de}{CU\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OP\+\_\+\+WRITE\+\_\+\+VALUE\+\_\+64} flags, can be queried with \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa20db4c9e8d81eb05a937d4ed5c132575}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+64\+\_\+\+BIT\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OPS}.
+
+Support for both \doxylink{group___c_u_d_a___t_y_p_e_s_gga5ba489253eb905a983228a810c1f3360a5dd93e7173619c943fae495568f4d771}{CU\+\_\+\+STREAM\+\_\+\+WAIT\+\_\+\+VALUE\+\_\+\+FLUSH} and \doxylink{group___c_u_d_a___t_y_p_e_s_ggad22b1c6c35ae110dd96d576d33c14f1fad4e126a89b57ebf4a213ee1774ed103f}{CU\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OP\+\_\+\+FLUSH\+\_\+\+REMOTE\+\_\+\+WRITES} requires dedicated platform hardware features and can be queried with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa4c702e528f71bf513ee0f3f32878ce9d}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+FLUSH\+\_\+\+REMOTE\+\_\+\+WRITES}.
+
+Note that all memory pointers passed as parameters to these operations are device pointers. Where necessary a device pointer should be obtained, for example with cu\+Mem\+Host\+Get\+Device\+Pointer().
+
+None of the operations accepts pointers to managed memory buffers (\doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed}). 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___m_e_m_o_p_gad8af305188f70ba1ad52fc986aab1d03}\label{group___c_u_d_a___m_e_m_o_p_gad8af305188f70ba1ad52fc986aab1d03} 
+\index{Stream memory operations@{Stream memory operations}!cuStreamBatchMemOp@{cuStreamBatchMemOp}}
+\index{cuStreamBatchMemOp@{cuStreamBatchMemOp}!Stream memory operations@{Stream memory operations}}
+\doxysubsubsection{\texorpdfstring{cuStreamBatchMemOp()}{cuStreamBatchMemOp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Stream\+Batch\+Mem\+Op (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{count,  }\item[{\mbox{\hyperlink{union_c_ustream_batch_mem_op_params__union}{CUstream\+Batch\+Mem\+Op\+Params}} \texorpdfstring{$\ast$}{*}}]{param\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Batch operations to synchronize the stream via memory operations. 
+
+This is a batch version of \doxylink{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}{cu\+Stream\+Wait\+Value32()} and \doxylink{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}{cu\+Stream\+Write\+Value32()}. Batching operations may avoid some performance overhead in both the API call and the device execution versus adding them to the stream in separate API calls. The operations are enqueued in the order they appear in the array.
+
+See \doxylink{group___c_u_d_a___t_y_p_e_s_ga92cf7b4a7fd965941030ccd6339e6dd6}{CUstream\+Batch\+Mem\+Op\+Type} for the full set of supported operations, and \doxylink{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}{cu\+Stream\+Wait\+Value32()}, \doxylink{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}{cu\+Stream\+Wait\+Value64()}, \doxylink{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}{cu\+Stream\+Write\+Value32()}, and \doxylink{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}{cu\+Stream\+Write\+Value64()} for details of specific operations.
+
+Basic support for this can be queried with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa3fcdc07d0e356a84b6c02730df6d43db}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OPS}. See related APIs for details on querying support for specific operations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream to enqueue the operations in. \\
+\hline
+{\em count} & The number of operations in the array. Must be less than 256. \\
+\hline
+{\em param\+Array} & The types and parameters of the individual operations. \\
+\hline
+{\em flags} & Reserved for future expansion; must be 0.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}{cu\+Stream\+Wait\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}{cu\+Stream\+Wait\+Value64}, \doxylink{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}{cu\+Stream\+Write\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}{cu\+Stream\+Write\+Value64}, cu\+Mem\+Host\+Register 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}\label{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589} 
+\index{Stream memory operations@{Stream memory operations}!cuStreamWaitValue32@{cuStreamWaitValue32}}
+\index{cuStreamWaitValue32@{cuStreamWaitValue32}!Stream memory operations@{Stream memory operations}}
+\doxysubsubsection{\texorpdfstring{cuStreamWaitValue32()}{cuStreamWaitValue32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Stream\+Wait\+Value32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{addr,  }\item[{cuuint32\+\_\+t}]{value,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Wait on a memory location. 
+
+Enqueues a synchronization of the stream on the given memory location. Work ordered after the operation will block until the given condition on the memory is satisfied. By default, the condition is to wait for (int32\+\_\+t)(\texorpdfstring{$\ast$}{*}addr -\/ value) \texorpdfstring{$>$}{>}= 0, a cyclic greater-\/or-\/equal. Other condition types can be specified via {\ttfamily flags}.
+
+If the memory was registered via cu\+Mem\+Host\+Register(), the device pointer should be obtained with cu\+Mem\+Host\+Get\+Device\+Pointer(). This function cannot be used with managed memory (\doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed}).
+
+Support for this can be queried with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa3fcdc07d0e356a84b6c02730df6d43db}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OPS}.
+
+Support for CU\+\_\+\+STREAM\+\_\+\+WAIT\+\_\+\+VALUE\+\_\+\+NOR can be queried with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aabe06f9c31c264e0b29be6cc6330b5047}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+\+STREAM\+\_\+\+WAIT\+\_\+\+VALUE\+\_\+\+NOR}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream to synchronize on the memory location. \\
+\hline
+{\em addr} & The memory location to wait on. \\
+\hline
+{\em value} & The value to compare with the memory location. \\
+\hline
+{\em flags} & See \doxylink{group___c_u_d_a___t_y_p_e_s_ga93f838a715323fd12402d005af1e85db}{CUstream\+Wait\+Value\+\_\+flags}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}{cu\+Stream\+Wait\+Value64}, \doxylink{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}{cu\+Stream\+Write\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}{cu\+Stream\+Write\+Value64}, \doxylink{group___c_u_d_a___m_e_m_o_p_gad8af305188f70ba1ad52fc986aab1d03}{cu\+Stream\+Batch\+Mem\+Op}, cu\+Mem\+Host\+Register, \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}\label{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657} 
+\index{Stream memory operations@{Stream memory operations}!cuStreamWaitValue64@{cuStreamWaitValue64}}
+\index{cuStreamWaitValue64@{cuStreamWaitValue64}!Stream memory operations@{Stream memory operations}}
+\doxysubsubsection{\texorpdfstring{cuStreamWaitValue64()}{cuStreamWaitValue64()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Stream\+Wait\+Value64 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{addr,  }\item[{cuuint64\+\_\+t}]{value,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Wait on a memory location. 
+
+Enqueues a synchronization of the stream on the given memory location. Work ordered after the operation will block until the given condition on the memory is satisfied. By default, the condition is to wait for (int64\+\_\+t)(\texorpdfstring{$\ast$}{*}addr -\/ value) \texorpdfstring{$>$}{>}= 0, a cyclic greater-\/or-\/equal. Other condition types can be specified via {\ttfamily flags}.
+
+If the memory was registered via cu\+Mem\+Host\+Register(), the device pointer should be obtained with cu\+Mem\+Host\+Get\+Device\+Pointer().
+
+Support for this can be queried with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa20db4c9e8d81eb05a937d4ed5c132575}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+64\+\_\+\+BIT\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OPS}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream to synchronize on the memory location. \\
+\hline
+{\em addr} & The memory location to wait on. \\
+\hline
+{\em value} & The value to compare with the memory location. \\
+\hline
+{\em flags} & See \doxylink{group___c_u_d_a___t_y_p_e_s_ga93f838a715323fd12402d005af1e85db}{CUstream\+Wait\+Value\+\_\+flags}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}{cu\+Stream\+Wait\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}{cu\+Stream\+Write\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}{cu\+Stream\+Write\+Value64}, \doxylink{group___c_u_d_a___m_e_m_o_p_gad8af305188f70ba1ad52fc986aab1d03}{cu\+Stream\+Batch\+Mem\+Op}, cu\+Mem\+Host\+Register, \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}\label{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26} 
+\index{Stream memory operations@{Stream memory operations}!cuStreamWriteValue32@{cuStreamWriteValue32}}
+\index{cuStreamWriteValue32@{cuStreamWriteValue32}!Stream memory operations@{Stream memory operations}}
+\doxysubsubsection{\texorpdfstring{cuStreamWriteValue32()}{cuStreamWriteValue32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Stream\+Write\+Value32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{addr,  }\item[{cuuint32\+\_\+t}]{value,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Write a value to memory. 
+
+Write a value to memory. Unless the \doxylink{group___c_u_d_a___t_y_p_e_s_gga943b07fd5ca680062cd270aa714b1c32a52598852c1a097794bc7d08576f94995}{CU\+\_\+\+STREAM\+\_\+\+WRITE\+\_\+\+VALUE\+\_\+\+NO\+\_\+\+MEMORY\+\_\+\+BARRIER} flag is passed, the write is preceded by a system-\/wide memory fence, equivalent to a \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+threadfence\+\_\+system()} but scoped to the stream rather than a CUDA thread.
+
+If the memory was registered via cu\+Mem\+Host\+Register(), the device pointer should be obtained with cu\+Mem\+Host\+Get\+Device\+Pointer(). This function cannot be used with managed memory (\doxylink{group___c_u_d_a___m_e_m_gab3c8db1c575451d53313b05b1c6db7f8}{cu\+Mem\+Alloc\+Managed}).
+
+Support for this can be queried with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa3fcdc07d0e356a84b6c02730df6d43db}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OPS}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream to do the write in. \\
+\hline
+{\em addr} & The device address to write to. \\
+\hline
+{\em value} & The value to write. \\
+\hline
+{\em flags} & See \doxylink{group___c_u_d_a___t_y_p_e_s_gae5384eced1d345bd22313f804c958d1f}{CUstream\+Write\+Value\+\_\+flags}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}{cu\+Stream\+Write\+Value64}, \doxylink{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}{cu\+Stream\+Wait\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}{cu\+Stream\+Wait\+Value64}, \doxylink{group___c_u_d_a___m_e_m_o_p_gad8af305188f70ba1ad52fc986aab1d03}{cu\+Stream\+Batch\+Mem\+Op}, cu\+Mem\+Host\+Register, \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a}\label{group___c_u_d_a___m_e_m_o_p_gaddd21e0851bb4ee05946904dd3a1d55a} 
+\index{Stream memory operations@{Stream memory operations}!cuStreamWriteValue64@{cuStreamWriteValue64}}
+\index{cuStreamWriteValue64@{cuStreamWriteValue64}!Stream memory operations@{Stream memory operations}}
+\doxysubsubsection{\texorpdfstring{cuStreamWriteValue64()}{cuStreamWriteValue64()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Stream\+Write\+Value64 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}}]{addr,  }\item[{cuuint64\+\_\+t}]{value,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Write a value to memory. 
+
+Write a value to memory. Unless the \doxylink{group___c_u_d_a___t_y_p_e_s_gga943b07fd5ca680062cd270aa714b1c32a52598852c1a097794bc7d08576f94995}{CU\+\_\+\+STREAM\+\_\+\+WRITE\+\_\+\+VALUE\+\_\+\+NO\+\_\+\+MEMORY\+\_\+\+BARRIER} flag is passed, the write is preceded by a system-\/wide memory fence, equivalent to a \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+threadfence\+\_\+system()} but scoped to the stream rather than a CUDA thread.
+
+If the memory was registered via cu\+Mem\+Host\+Register(), the device pointer should be obtained with cu\+Mem\+Host\+Get\+Device\+Pointer().
+
+Support for this can be queried with \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} and \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aa20db4c9e8d81eb05a937d4ed5c132575}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+CAN\+\_\+\+USE\+\_\+64\+\_\+\+BIT\+\_\+\+STREAM\+\_\+\+MEM\+\_\+\+OPS}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream to do the write in. \\
+\hline
+{\em addr} & The device address to write to. \\
+\hline
+{\em value} & The value to write. \\
+\hline
+{\em flags} & See \doxylink{group___c_u_d_a___t_y_p_e_s_gae5384eced1d345bd22313f804c958d1f}{CUstream\+Write\+Value\+\_\+flags}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_e_m_o_p_ga3f0dab1d1fe1f885ae4128db7eddbb26}{cu\+Stream\+Write\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_ga5653cac96aef1ea78757d264e75c3589}{cu\+Stream\+Wait\+Value32}, \doxylink{group___c_u_d_a___m_e_m_o_p_gaa70681aba6f1d83b169d7ce8ca97a657}{cu\+Stream\+Wait\+Value64}, \doxylink{group___c_u_d_a___m_e_m_o_p_gad8af305188f70ba1ad52fc986aab1d03}{cu\+Stream\+Batch\+Mem\+Op}, cu\+Mem\+Host\+Register, \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record} 
+\end{DoxySeeAlso}

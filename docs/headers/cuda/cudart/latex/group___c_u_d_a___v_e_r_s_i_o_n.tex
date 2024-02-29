@@ -1,0 +1,40 @@
+\doxysection{Version Management}
+\hypertarget{group___c_u_d_a___v_e_r_s_i_o_n}{}\label{group___c_u_d_a___v_e_r_s_i_o_n}\index{Version Management@{Version Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___v_e_r_s_i_o_n_ga0cf26c8fb6b8f710275dc8f9b0268be2}{cu\+Driver\+Get\+Version}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{driver\+Version}})
+\begin{DoxyCompactList}\small\item\em Returns the latest CUDA version supported by driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ version management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the version management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___v_e_r_s_i_o_n_ga0cf26c8fb6b8f710275dc8f9b0268be2}\label{group___c_u_d_a___v_e_r_s_i_o_n_ga0cf26c8fb6b8f710275dc8f9b0268be2} 
+\index{Version Management@{Version Management}!cuDriverGetVersion@{cuDriverGetVersion}}
+\index{cuDriverGetVersion@{cuDriverGetVersion}!Version Management@{Version Management}}
+\doxysubsubsection{\texorpdfstring{cuDriverGetVersion()}{cuDriverGetVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Driver\+Get\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{driver\+Version }\end{DoxyParamCaption})}
+
+
+
+Returns the latest CUDA version supported by driver. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}driver\+Version} the version of CUDA supported by the driver. The version is returned as (1000 {$\times$} major + 10 {$\times$} minor). For example, CUDA 9.\+2 would be represented by 9020.
+
+This function automatically returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} if {\ttfamily driver\+Version} is NULL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver\+Version} & -\/ Returns the CUDA driver version\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga3adb7d2756db33bd8e5bfafe794874f4}{cuda\+Driver\+Get\+Version}, \doxylink{group___c_u_d_a_r_t_____v_e_r_s_i_o_n_ga7aa68c528a22917b05dc6b526258e968}{cuda\+Runtime\+Get\+Version} 
+\end{DoxySeeAlso}

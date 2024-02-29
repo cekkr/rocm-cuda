@@ -1,0 +1,660 @@
+\doxysection{cuda\+Device\+Prop Struct Reference}
+\hypertarget{structcuda_device_prop}{}\label{structcuda_device_prop}\index{cudaDeviceProp@{cudaDeviceProp}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \mbox{\hyperlink{structcuda_device_prop_a1e26f1c6bd42f4821b7ef1a4bd3bd25c}{name}} \mbox{[}256\mbox{]}
+\item 
+cuda\+UUID\+\_\+t \mbox{\hyperlink{structcuda_device_prop_a626c20637498c7be1381db55a6261308}{uuid}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \mbox{\hyperlink{structcuda_device_prop_ab1fe931f3f41d1b97c8679c8b15d94e3}{luid}} \mbox{[}8\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a7e9a4d56377db11fd9d6b013de9cbf08}{luid\+Device\+Node\+Mask}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a983c292e2078dd5a4240f49c41d647f3}{total\+Global\+Mem}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a82ec4c5e244addb9cd57f5b9da0eaca7}{shared\+Mem\+Per\+Block}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a84472707f521930fc052663820d635fc}{regs\+Per\+Block}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a8656f53eb2a7e54500f6fb95a830b47d}{warp\+Size}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a4382eddd3f5836f1195ca988388783bb}{mem\+Pitch}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a18f38f08c66c8812b1ddeb16e4bf51a4}{max\+Threads\+Per\+Block}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a92d195493a9d36b2d827aaf3ffd89f1e}{max\+Threads\+Dim}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a7d138a572315b3bbb6caf7ccc914a130}{max\+Grid\+Size}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_adee14230e417cb3059d697d6804da414}{clock\+Rate}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_ab4047e5e22082b1aefeac3b9ef39d0be}{total\+Const\+Mem}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a64490976c8e07e028a8f1ce1f5cd42d6}{major}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a50d477d8d5d3a04e0785f469277c65bb}{minor}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a500248658a996f51752e1ab1769f8a88}{texture\+Alignment}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a3a3f10d2833bdc82ceb370a449aafeec}{texture\+Pitch\+Alignment}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a3281f4cdba05e2ca43be1caae2bcb29b}{device\+Overlap}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a3e36d9d236f97095ef2b496cd2f98121}{multi\+Processor\+Count}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a9a63114766c4d2309f00403c1bf056c8}{kernel\+Exec\+Timeout\+Enabled}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a613bf3e02c6120db852a2ecd5ff9605a}{integrated}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a15414c4b1fedd1a22030522d54caa653}{can\+Map\+Host\+Memory}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a5458a603dcbca1dd361ac5b99c07675b}{compute\+Mode}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a21e1544ca58ec5e559d0d498c5af9061}{max\+Texture1D}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a6875f2ba4ab9d9733948545303786cc4}{max\+Texture1\+DMipmap}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a20efbdc4556a390720e0f75b62b8f83d}{max\+Texture1\+DLinear}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a618ac703b9a48adf50713897689a3eb2}{max\+Texture2D}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_af227daa1f3c12d90898c77152b1136bf}{max\+Texture2\+DMipmap}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a757a4245a175441c2a1535ef9c9524a4}{max\+Texture2\+DLinear}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a1468730923ddf5a68ecc9bb42053c1c9}{max\+Texture2\+DGather}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a6ea5619e4e11617451c6adc8560f068b}{max\+Texture3D}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a6f5f5ba8a7dc088392be0d2f8f51faed}{max\+Texture3\+DAlt}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_af9076f17639b08ea1783bb3035b1f707}{max\+Texture\+Cubemap}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a1047afc38a23fcdfd5f202002caa53f5}{max\+Texture1\+DLayered}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a6011fd7e13a77d58fbbd4a5ba1801fbf}{max\+Texture2\+DLayered}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_af838fe5c7528d1e345a83659d001d799}{max\+Texture\+Cubemap\+Layered}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_afd25f5ae34d7eeb2c52f87b9e932fe05}{max\+Surface1D}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_aa85bc895583a26251fbfef635c7644a9}{max\+Surface2D}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a4fdf5cd399b60955ee35421a7cc6418a}{max\+Surface3D}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a6cf36809ff5ed6b8aa836177d0292200}{max\+Surface1\+DLayered}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_aedeed8d96d802c4b01149e2e6a7b4ea8}{max\+Surface2\+DLayered}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ad170a7ad44ced64478d50fd7b6378b41}{max\+Surface\+Cubemap}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ad4564200e6bc420be63b61251c6d39b8}{max\+Surface\+Cubemap\+Layered}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a8fe20825e4239ff91a7708c9468a02b5}{surface\+Alignment}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a8e2fe2a3b264901816874516af12a097}{concurrent\+Kernels}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a72919e0168f8dc8a719e2c38355b80ab}{ECCEnabled}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ac5adc2ef8c6b89fb139b4684175db54a}{pci\+Bus\+ID}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a56978c2bfc433d26ac3b4c765ee536bb}{pci\+Device\+ID}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_af3a69f0796e32c0e32d17c151443fab0}{pci\+Domain\+ID}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_afcc96a9e56f84f4a0e853c18ce8e2c0d}{tcc\+Driver}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a05a89c028bee8fe480d0f44ddd43357b}{async\+Engine\+Count}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a07b0114cefb43da05e05c65ec859542c}{unified\+Addressing}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ab200f01a8ec81912285c2633117109c4}{memory\+Clock\+Rate}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ae764fca4d15a459279b31cb533435c19}{memory\+Bus\+Width}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ab40b9ed0e542e9f09667b0a89fb6ad85}{l2\+Cache\+Size}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a708c0ea6df419516e4bd702dd26f802c}{persisting\+L2\+Cache\+Max\+Size}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a96dac83c7095e29b86300cc02851844c}{max\+Threads\+Per\+Multi\+Processor}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a43e968b12978ffd2a80bde224d7dc782}{stream\+Priorities\+Supported}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a551ac00fc5ba827a91d705b164288bff}{global\+L1\+Cache\+Supported}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ae1772eeb293a76aae0bbf7f965a403d5}{local\+L1\+Cache\+Supported}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a6cede1829516e86917f0842a5f6498c8}{shared\+Mem\+Per\+Multiprocessor}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ade02e669caefcadadaaa42877b08e80a}{regs\+Per\+Multiprocessor}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_af7230860be3e37047c7ce5d32542b54b}{managed\+Memory}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a512d849f57e6a6a0ece1d21879c3ae35}{is\+Multi\+Gpu\+Board}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a63af976611c9d29f169882f5c32472d4}{multi\+Gpu\+Board\+Group\+ID}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_aef82fd7d1d0413c7d6f33287e5b6306f}{host\+Native\+Atomic\+Supported}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a4bd4d531bf2ac497d659b03910440315}{single\+To\+Double\+Precision\+Perf\+Ratio}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a46116bab1064b5d7d0642d78f6c27ce1}{pageable\+Memory\+Access}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a16f9619ccc85e93bc456b8c69c80e78b}{concurrent\+Managed\+Access}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a54a9a6e0067360f23dc91e60e7cf88d1}{compute\+Preemption\+Supported}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_aae79e062f076b0270625b38bb91285b8}{can\+Use\+Host\+Pointer\+For\+Registered\+Mem}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a3c26ab51c96f39b115d7826337541914}{cooperative\+Launch}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a83271637b431ccb5f5b58c46d0bd8cc9}{cooperative\+Multi\+Device\+Launch}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_ac23eacaeeb59e1798d6d442be70f1c3e}{shared\+Mem\+Per\+Block\+Optin}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ae9f1ed6bffd5606eb81d438728a844ca}{pageable\+Memory\+Access\+Uses\+Host\+Page\+Tables}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_ab47773cf29bec05e6f1ba569346889e8}{direct\+Managed\+Mem\+Access\+From\+Host}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a7f337476973ea65db85c277f4646f0b3}{max\+Blocks\+Per\+Multi\+Processor}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_device_prop_a92470653c71f372dbec29bd693d55316}{access\+Policy\+Max\+Window\+Size}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_device_prop_a5a1f6049e9e9fd8af0d2a8a5df289ab7}{reserved\+Shared\+Mem\+Per\+Block}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA device properties 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_device_prop_a92470653c71f372dbec29bd693d55316}\label{structcuda_device_prop_a92470653c71f372dbec29bd693d55316} 
+\index{cudaDeviceProp@{cudaDeviceProp}!accessPolicyMaxWindowSize@{accessPolicyMaxWindowSize}}
+\index{accessPolicyMaxWindowSize@{accessPolicyMaxWindowSize}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{accessPolicyMaxWindowSize}{accessPolicyMaxWindowSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::access\+Policy\+Max\+Window\+Size}
+
+The maximum value of \doxylink{structcuda_access_policy_window_abbd68021cb5c3cb1928bee0a2941eb24}{cuda\+Access\+Policy\+Window\+::num\+\_\+bytes}. \Hypertarget{structcuda_device_prop_a05a89c028bee8fe480d0f44ddd43357b}\label{structcuda_device_prop_a05a89c028bee8fe480d0f44ddd43357b} 
+\index{cudaDeviceProp@{cudaDeviceProp}!asyncEngineCount@{asyncEngineCount}}
+\index{asyncEngineCount@{asyncEngineCount}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{asyncEngineCount}{asyncEngineCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::async\+Engine\+Count}
+
+Number of asynchronous engines \Hypertarget{structcuda_device_prop_a15414c4b1fedd1a22030522d54caa653}\label{structcuda_device_prop_a15414c4b1fedd1a22030522d54caa653} 
+\index{cudaDeviceProp@{cudaDeviceProp}!canMapHostMemory@{canMapHostMemory}}
+\index{canMapHostMemory@{canMapHostMemory}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{canMapHostMemory}{canMapHostMemory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::can\+Map\+Host\+Memory}
+
+Device can map host memory with cuda\+Host\+Alloc/cuda\+Host\+Get\+Device\+Pointer \Hypertarget{structcuda_device_prop_aae79e062f076b0270625b38bb91285b8}\label{structcuda_device_prop_aae79e062f076b0270625b38bb91285b8} 
+\index{cudaDeviceProp@{cudaDeviceProp}!canUseHostPointerForRegisteredMem@{canUseHostPointerForRegisteredMem}}
+\index{canUseHostPointerForRegisteredMem@{canUseHostPointerForRegisteredMem}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{canUseHostPointerForRegisteredMem}{canUseHostPointerForRegisteredMem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::can\+Use\+Host\+Pointer\+For\+Registered\+Mem}
+
+Device can access host registered memory at the same virtual address as the CPU \Hypertarget{structcuda_device_prop_adee14230e417cb3059d697d6804da414}\label{structcuda_device_prop_adee14230e417cb3059d697d6804da414} 
+\index{cudaDeviceProp@{cudaDeviceProp}!clockRate@{clockRate}}
+\index{clockRate@{clockRate}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{clockRate}{clockRate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::clock\+Rate}
+
+Clock frequency in kilohertz \Hypertarget{structcuda_device_prop_a5458a603dcbca1dd361ac5b99c07675b}\label{structcuda_device_prop_a5458a603dcbca1dd361ac5b99c07675b} 
+\index{cudaDeviceProp@{cudaDeviceProp}!computeMode@{computeMode}}
+\index{computeMode@{computeMode}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{computeMode}{computeMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::compute\+Mode}
+
+Compute mode (See \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga4acb7f9d6d6111bc9962d215efd0ff3a}{cuda\+Compute\+Mode}) \Hypertarget{structcuda_device_prop_a54a9a6e0067360f23dc91e60e7cf88d1}\label{structcuda_device_prop_a54a9a6e0067360f23dc91e60e7cf88d1} 
+\index{cudaDeviceProp@{cudaDeviceProp}!computePreemptionSupported@{computePreemptionSupported}}
+\index{computePreemptionSupported@{computePreemptionSupported}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{computePreemptionSupported}{computePreemptionSupported}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::compute\+Preemption\+Supported}
+
+Device supports Compute Preemption \Hypertarget{structcuda_device_prop_a8e2fe2a3b264901816874516af12a097}\label{structcuda_device_prop_a8e2fe2a3b264901816874516af12a097} 
+\index{cudaDeviceProp@{cudaDeviceProp}!concurrentKernels@{concurrentKernels}}
+\index{concurrentKernels@{concurrentKernels}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{concurrentKernels}{concurrentKernels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::concurrent\+Kernels}
+
+Device can possibly execute multiple kernels concurrently \Hypertarget{structcuda_device_prop_a16f9619ccc85e93bc456b8c69c80e78b}\label{structcuda_device_prop_a16f9619ccc85e93bc456b8c69c80e78b} 
+\index{cudaDeviceProp@{cudaDeviceProp}!concurrentManagedAccess@{concurrentManagedAccess}}
+\index{concurrentManagedAccess@{concurrentManagedAccess}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{concurrentManagedAccess}{concurrentManagedAccess}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::concurrent\+Managed\+Access}
+
+Device can coherently access managed memory concurrently with the CPU \Hypertarget{structcuda_device_prop_a3c26ab51c96f39b115d7826337541914}\label{structcuda_device_prop_a3c26ab51c96f39b115d7826337541914} 
+\index{cudaDeviceProp@{cudaDeviceProp}!cooperativeLaunch@{cooperativeLaunch}}
+\index{cooperativeLaunch@{cooperativeLaunch}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{cooperativeLaunch}{cooperativeLaunch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::cooperative\+Launch}
+
+Device supports launching cooperative kernels via \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga4c05ee29e2c42af2978bd19e4ab47330}{cuda\+Launch\+Cooperative\+Kernel} \Hypertarget{structcuda_device_prop_a83271637b431ccb5f5b58c46d0bd8cc9}\label{structcuda_device_prop_a83271637b431ccb5f5b58c46d0bd8cc9} 
+\index{cudaDeviceProp@{cudaDeviceProp}!cooperativeMultiDeviceLaunch@{cooperativeMultiDeviceLaunch}}
+\index{cooperativeMultiDeviceLaunch@{cooperativeMultiDeviceLaunch}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{cooperativeMultiDeviceLaunch}{cooperativeMultiDeviceLaunch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::cooperative\+Multi\+Device\+Launch}
+
+Deprecated, cuda\+Launch\+Cooperative\+Kernel\+Multi\+Device is deprecated. \Hypertarget{structcuda_device_prop_a3281f4cdba05e2ca43be1caae2bcb29b}\label{structcuda_device_prop_a3281f4cdba05e2ca43be1caae2bcb29b} 
+\index{cudaDeviceProp@{cudaDeviceProp}!deviceOverlap@{deviceOverlap}}
+\index{deviceOverlap@{deviceOverlap}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{deviceOverlap}{deviceOverlap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::device\+Overlap}
+
+Device can concurrently copy memory and execute a kernel. Deprecated. Use instead async\+Engine\+Count. \Hypertarget{structcuda_device_prop_ab47773cf29bec05e6f1ba569346889e8}\label{structcuda_device_prop_ab47773cf29bec05e6f1ba569346889e8} 
+\index{cudaDeviceProp@{cudaDeviceProp}!directManagedMemAccessFromHost@{directManagedMemAccessFromHost}}
+\index{directManagedMemAccessFromHost@{directManagedMemAccessFromHost}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{directManagedMemAccessFromHost}{directManagedMemAccessFromHost}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::direct\+Managed\+Mem\+Access\+From\+Host}
+
+Host can directly access managed memory on the device without migration. \Hypertarget{structcuda_device_prop_a72919e0168f8dc8a719e2c38355b80ab}\label{structcuda_device_prop_a72919e0168f8dc8a719e2c38355b80ab} 
+\index{cudaDeviceProp@{cudaDeviceProp}!ECCEnabled@{ECCEnabled}}
+\index{ECCEnabled@{ECCEnabled}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{ECCEnabled}{ECCEnabled}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::\+ECCEnabled}
+
+Device has ECC support enabled \Hypertarget{structcuda_device_prop_a551ac00fc5ba827a91d705b164288bff}\label{structcuda_device_prop_a551ac00fc5ba827a91d705b164288bff} 
+\index{cudaDeviceProp@{cudaDeviceProp}!globalL1CacheSupported@{globalL1CacheSupported}}
+\index{globalL1CacheSupported@{globalL1CacheSupported}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{globalL1CacheSupported}{globalL1CacheSupported}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::global\+L1\+Cache\+Supported}
+
+Device supports caching globals in L1 \Hypertarget{structcuda_device_prop_aef82fd7d1d0413c7d6f33287e5b6306f}\label{structcuda_device_prop_aef82fd7d1d0413c7d6f33287e5b6306f} 
+\index{cudaDeviceProp@{cudaDeviceProp}!hostNativeAtomicSupported@{hostNativeAtomicSupported}}
+\index{hostNativeAtomicSupported@{hostNativeAtomicSupported}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{hostNativeAtomicSupported}{hostNativeAtomicSupported}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::host\+Native\+Atomic\+Supported}
+
+Link between the device and the host supports native atomic operations \Hypertarget{structcuda_device_prop_a613bf3e02c6120db852a2ecd5ff9605a}\label{structcuda_device_prop_a613bf3e02c6120db852a2ecd5ff9605a} 
+\index{cudaDeviceProp@{cudaDeviceProp}!integrated@{integrated}}
+\index{integrated@{integrated}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{integrated}{integrated}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::integrated}
+
+Device is integrated as opposed to discrete \Hypertarget{structcuda_device_prop_a512d849f57e6a6a0ece1d21879c3ae35}\label{structcuda_device_prop_a512d849f57e6a6a0ece1d21879c3ae35} 
+\index{cudaDeviceProp@{cudaDeviceProp}!isMultiGpuBoard@{isMultiGpuBoard}}
+\index{isMultiGpuBoard@{isMultiGpuBoard}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{isMultiGpuBoard}{isMultiGpuBoard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::is\+Multi\+Gpu\+Board}
+
+Device is on a multi-\/\+GPU board \Hypertarget{structcuda_device_prop_a9a63114766c4d2309f00403c1bf056c8}\label{structcuda_device_prop_a9a63114766c4d2309f00403c1bf056c8} 
+\index{cudaDeviceProp@{cudaDeviceProp}!kernelExecTimeoutEnabled@{kernelExecTimeoutEnabled}}
+\index{kernelExecTimeoutEnabled@{kernelExecTimeoutEnabled}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{kernelExecTimeoutEnabled}{kernelExecTimeoutEnabled}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::kernel\+Exec\+Timeout\+Enabled}
+
+Specified whether there is a run time limit on kernels \Hypertarget{structcuda_device_prop_ab40b9ed0e542e9f09667b0a89fb6ad85}\label{structcuda_device_prop_ab40b9ed0e542e9f09667b0a89fb6ad85} 
+\index{cudaDeviceProp@{cudaDeviceProp}!l2CacheSize@{l2CacheSize}}
+\index{l2CacheSize@{l2CacheSize}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{l2CacheSize}{l2CacheSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::l2\+Cache\+Size}
+
+Size of L2 cache in bytes \Hypertarget{structcuda_device_prop_ae1772eeb293a76aae0bbf7f965a403d5}\label{structcuda_device_prop_ae1772eeb293a76aae0bbf7f965a403d5} 
+\index{cudaDeviceProp@{cudaDeviceProp}!localL1CacheSupported@{localL1CacheSupported}}
+\index{localL1CacheSupported@{localL1CacheSupported}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{localL1CacheSupported}{localL1CacheSupported}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::local\+L1\+Cache\+Supported}
+
+Device supports caching locals in L1 \Hypertarget{structcuda_device_prop_ab1fe931f3f41d1b97c8679c8b15d94e3}\label{structcuda_device_prop_ab1fe931f3f41d1b97c8679c8b15d94e3} 
+\index{cudaDeviceProp@{cudaDeviceProp}!luid@{luid}}
+\index{luid@{luid}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{luid}{luid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} cuda\+Device\+Prop\+::luid\mbox{[}8\mbox{]}}
+
+8-\/byte locally unique identifier. Value is undefined on TCC and non-\/\+Windows platforms \Hypertarget{structcuda_device_prop_a7e9a4d56377db11fd9d6b013de9cbf08}\label{structcuda_device_prop_a7e9a4d56377db11fd9d6b013de9cbf08} 
+\index{cudaDeviceProp@{cudaDeviceProp}!luidDeviceNodeMask@{luidDeviceNodeMask}}
+\index{luidDeviceNodeMask@{luidDeviceNodeMask}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{luidDeviceNodeMask}{luidDeviceNodeMask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::luid\+Device\+Node\+Mask}
+
+LUID device node mask. Value is undefined on TCC and non-\/\+Windows platforms \Hypertarget{structcuda_device_prop_a64490976c8e07e028a8f1ce1f5cd42d6}\label{structcuda_device_prop_a64490976c8e07e028a8f1ce1f5cd42d6} 
+\index{cudaDeviceProp@{cudaDeviceProp}!major@{major}}
+\index{major@{major}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{major}{major}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::major}
+
+Major compute capability \Hypertarget{structcuda_device_prop_af7230860be3e37047c7ce5d32542b54b}\label{structcuda_device_prop_af7230860be3e37047c7ce5d32542b54b} 
+\index{cudaDeviceProp@{cudaDeviceProp}!managedMemory@{managedMemory}}
+\index{managedMemory@{managedMemory}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{managedMemory}{managedMemory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::managed\+Memory}
+
+Device supports allocating managed memory on this system \Hypertarget{structcuda_device_prop_a7f337476973ea65db85c277f4646f0b3}\label{structcuda_device_prop_a7f337476973ea65db85c277f4646f0b3} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxBlocksPerMultiProcessor@{maxBlocksPerMultiProcessor}}
+\index{maxBlocksPerMultiProcessor@{maxBlocksPerMultiProcessor}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxBlocksPerMultiProcessor}{maxBlocksPerMultiProcessor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Blocks\+Per\+Multi\+Processor}
+
+Maximum number of resident blocks per multiprocessor \Hypertarget{structcuda_device_prop_a7d138a572315b3bbb6caf7ccc914a130}\label{structcuda_device_prop_a7d138a572315b3bbb6caf7ccc914a130} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxGridSize@{maxGridSize}}
+\index{maxGridSize@{maxGridSize}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxGridSize}{maxGridSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Grid\+Size\mbox{[}3\mbox{]}}
+
+Maximum size of each dimension of a grid \Hypertarget{structcuda_device_prop_afd25f5ae34d7eeb2c52f87b9e932fe05}\label{structcuda_device_prop_afd25f5ae34d7eeb2c52f87b9e932fe05} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxSurface1D@{maxSurface1D}}
+\index{maxSurface1D@{maxSurface1D}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxSurface1D}{maxSurface1D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Surface1D}
+
+Maximum 1D surface size \Hypertarget{structcuda_device_prop_a6cf36809ff5ed6b8aa836177d0292200}\label{structcuda_device_prop_a6cf36809ff5ed6b8aa836177d0292200} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxSurface1DLayered@{maxSurface1DLayered}}
+\index{maxSurface1DLayered@{maxSurface1DLayered}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxSurface1DLayered}{maxSurface1DLayered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Surface1\+DLayered\mbox{[}2\mbox{]}}
+
+Maximum 1D layered surface dimensions \Hypertarget{structcuda_device_prop_aa85bc895583a26251fbfef635c7644a9}\label{structcuda_device_prop_aa85bc895583a26251fbfef635c7644a9} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxSurface2D@{maxSurface2D}}
+\index{maxSurface2D@{maxSurface2D}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxSurface2D}{maxSurface2D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Surface2D\mbox{[}2\mbox{]}}
+
+Maximum 2D surface dimensions \Hypertarget{structcuda_device_prop_aedeed8d96d802c4b01149e2e6a7b4ea8}\label{structcuda_device_prop_aedeed8d96d802c4b01149e2e6a7b4ea8} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxSurface2DLayered@{maxSurface2DLayered}}
+\index{maxSurface2DLayered@{maxSurface2DLayered}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxSurface2DLayered}{maxSurface2DLayered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Surface2\+DLayered\mbox{[}3\mbox{]}}
+
+Maximum 2D layered surface dimensions \Hypertarget{structcuda_device_prop_a4fdf5cd399b60955ee35421a7cc6418a}\label{structcuda_device_prop_a4fdf5cd399b60955ee35421a7cc6418a} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxSurface3D@{maxSurface3D}}
+\index{maxSurface3D@{maxSurface3D}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxSurface3D}{maxSurface3D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Surface3D\mbox{[}3\mbox{]}}
+
+Maximum 3D surface dimensions \Hypertarget{structcuda_device_prop_ad170a7ad44ced64478d50fd7b6378b41}\label{structcuda_device_prop_ad170a7ad44ced64478d50fd7b6378b41} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxSurfaceCubemap@{maxSurfaceCubemap}}
+\index{maxSurfaceCubemap@{maxSurfaceCubemap}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxSurfaceCubemap}{maxSurfaceCubemap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Surface\+Cubemap}
+
+Maximum Cubemap surface dimensions \Hypertarget{structcuda_device_prop_ad4564200e6bc420be63b61251c6d39b8}\label{structcuda_device_prop_ad4564200e6bc420be63b61251c6d39b8} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxSurfaceCubemapLayered@{maxSurfaceCubemapLayered}}
+\index{maxSurfaceCubemapLayered@{maxSurfaceCubemapLayered}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxSurfaceCubemapLayered}{maxSurfaceCubemapLayered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Surface\+Cubemap\+Layered\mbox{[}2\mbox{]}}
+
+Maximum Cubemap layered surface dimensions \Hypertarget{structcuda_device_prop_a21e1544ca58ec5e559d0d498c5af9061}\label{structcuda_device_prop_a21e1544ca58ec5e559d0d498c5af9061} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture1D@{maxTexture1D}}
+\index{maxTexture1D@{maxTexture1D}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture1D}{maxTexture1D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture1D}
+
+Maximum 1D texture size \Hypertarget{structcuda_device_prop_a1047afc38a23fcdfd5f202002caa53f5}\label{structcuda_device_prop_a1047afc38a23fcdfd5f202002caa53f5} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture1DLayered@{maxTexture1DLayered}}
+\index{maxTexture1DLayered@{maxTexture1DLayered}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture1DLayered}{maxTexture1DLayered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture1\+DLayered\mbox{[}2\mbox{]}}
+
+Maximum 1D layered texture dimensions \Hypertarget{structcuda_device_prop_a20efbdc4556a390720e0f75b62b8f83d}\label{structcuda_device_prop_a20efbdc4556a390720e0f75b62b8f83d} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture1DLinear@{maxTexture1DLinear}}
+\index{maxTexture1DLinear@{maxTexture1DLinear}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture1DLinear}{maxTexture1DLinear}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture1\+DLinear}
+
+Deprecated, do not use. Use \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaf32217de4f16b87b450bf548469e053f}{cuda\+Device\+Get\+Texture1\+DLinear\+Max\+Width()} or \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga16a19bb3666aac5ef0ebc3d2430f75eb}{cu\+Device\+Get\+Texture1\+DLinear\+Max\+Width()} instead. \Hypertarget{structcuda_device_prop_a6875f2ba4ab9d9733948545303786cc4}\label{structcuda_device_prop_a6875f2ba4ab9d9733948545303786cc4} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture1DMipmap@{maxTexture1DMipmap}}
+\index{maxTexture1DMipmap@{maxTexture1DMipmap}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture1DMipmap}{maxTexture1DMipmap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture1\+DMipmap}
+
+Maximum 1D mipmapped texture size \Hypertarget{structcuda_device_prop_a618ac703b9a48adf50713897689a3eb2}\label{structcuda_device_prop_a618ac703b9a48adf50713897689a3eb2} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture2D@{maxTexture2D}}
+\index{maxTexture2D@{maxTexture2D}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture2D}{maxTexture2D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture2D\mbox{[}2\mbox{]}}
+
+Maximum 2D texture dimensions \Hypertarget{structcuda_device_prop_a1468730923ddf5a68ecc9bb42053c1c9}\label{structcuda_device_prop_a1468730923ddf5a68ecc9bb42053c1c9} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture2DGather@{maxTexture2DGather}}
+\index{maxTexture2DGather@{maxTexture2DGather}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture2DGather}{maxTexture2DGather}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture2\+DGather\mbox{[}2\mbox{]}}
+
+Maximum 2D texture dimensions if texture gather operations have to be performed \Hypertarget{structcuda_device_prop_a6011fd7e13a77d58fbbd4a5ba1801fbf}\label{structcuda_device_prop_a6011fd7e13a77d58fbbd4a5ba1801fbf} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture2DLayered@{maxTexture2DLayered}}
+\index{maxTexture2DLayered@{maxTexture2DLayered}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture2DLayered}{maxTexture2DLayered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture2\+DLayered\mbox{[}3\mbox{]}}
+
+Maximum 2D layered texture dimensions \Hypertarget{structcuda_device_prop_a757a4245a175441c2a1535ef9c9524a4}\label{structcuda_device_prop_a757a4245a175441c2a1535ef9c9524a4} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture2DLinear@{maxTexture2DLinear}}
+\index{maxTexture2DLinear@{maxTexture2DLinear}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture2DLinear}{maxTexture2DLinear}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture2\+DLinear\mbox{[}3\mbox{]}}
+
+Maximum dimensions (width, height, pitch) for 2D textures bound to pitched memory \Hypertarget{structcuda_device_prop_af227daa1f3c12d90898c77152b1136bf}\label{structcuda_device_prop_af227daa1f3c12d90898c77152b1136bf} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture2DMipmap@{maxTexture2DMipmap}}
+\index{maxTexture2DMipmap@{maxTexture2DMipmap}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture2DMipmap}{maxTexture2DMipmap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture2\+DMipmap\mbox{[}2\mbox{]}}
+
+Maximum 2D mipmapped texture dimensions \Hypertarget{structcuda_device_prop_a6ea5619e4e11617451c6adc8560f068b}\label{structcuda_device_prop_a6ea5619e4e11617451c6adc8560f068b} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture3D@{maxTexture3D}}
+\index{maxTexture3D@{maxTexture3D}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture3D}{maxTexture3D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture3D\mbox{[}3\mbox{]}}
+
+Maximum 3D texture dimensions \Hypertarget{structcuda_device_prop_a6f5f5ba8a7dc088392be0d2f8f51faed}\label{structcuda_device_prop_a6f5f5ba8a7dc088392be0d2f8f51faed} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTexture3DAlt@{maxTexture3DAlt}}
+\index{maxTexture3DAlt@{maxTexture3DAlt}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTexture3DAlt}{maxTexture3DAlt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture3\+DAlt\mbox{[}3\mbox{]}}
+
+Maximum alternate 3D texture dimensions \Hypertarget{structcuda_device_prop_af9076f17639b08ea1783bb3035b1f707}\label{structcuda_device_prop_af9076f17639b08ea1783bb3035b1f707} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTextureCubemap@{maxTextureCubemap}}
+\index{maxTextureCubemap@{maxTextureCubemap}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTextureCubemap}{maxTextureCubemap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture\+Cubemap}
+
+Maximum Cubemap texture dimensions \Hypertarget{structcuda_device_prop_af838fe5c7528d1e345a83659d001d799}\label{structcuda_device_prop_af838fe5c7528d1e345a83659d001d799} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxTextureCubemapLayered@{maxTextureCubemapLayered}}
+\index{maxTextureCubemapLayered@{maxTextureCubemapLayered}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxTextureCubemapLayered}{maxTextureCubemapLayered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Texture\+Cubemap\+Layered\mbox{[}2\mbox{]}}
+
+Maximum Cubemap layered texture dimensions \Hypertarget{structcuda_device_prop_a92d195493a9d36b2d827aaf3ffd89f1e}\label{structcuda_device_prop_a92d195493a9d36b2d827aaf3ffd89f1e} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxThreadsDim@{maxThreadsDim}}
+\index{maxThreadsDim@{maxThreadsDim}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxThreadsDim}{maxThreadsDim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Threads\+Dim\mbox{[}3\mbox{]}}
+
+Maximum size of each dimension of a block \Hypertarget{structcuda_device_prop_a18f38f08c66c8812b1ddeb16e4bf51a4}\label{structcuda_device_prop_a18f38f08c66c8812b1ddeb16e4bf51a4} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxThreadsPerBlock@{maxThreadsPerBlock}}
+\index{maxThreadsPerBlock@{maxThreadsPerBlock}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxThreadsPerBlock}{maxThreadsPerBlock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Threads\+Per\+Block}
+
+Maximum number of threads per block \Hypertarget{structcuda_device_prop_a96dac83c7095e29b86300cc02851844c}\label{structcuda_device_prop_a96dac83c7095e29b86300cc02851844c} 
+\index{cudaDeviceProp@{cudaDeviceProp}!maxThreadsPerMultiProcessor@{maxThreadsPerMultiProcessor}}
+\index{maxThreadsPerMultiProcessor@{maxThreadsPerMultiProcessor}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{maxThreadsPerMultiProcessor}{maxThreadsPerMultiProcessor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::max\+Threads\+Per\+Multi\+Processor}
+
+Maximum resident threads per multiprocessor \Hypertarget{structcuda_device_prop_ae764fca4d15a459279b31cb533435c19}\label{structcuda_device_prop_ae764fca4d15a459279b31cb533435c19} 
+\index{cudaDeviceProp@{cudaDeviceProp}!memoryBusWidth@{memoryBusWidth}}
+\index{memoryBusWidth@{memoryBusWidth}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{memoryBusWidth}{memoryBusWidth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::memory\+Bus\+Width}
+
+Global memory bus width in bits \Hypertarget{structcuda_device_prop_ab200f01a8ec81912285c2633117109c4}\label{structcuda_device_prop_ab200f01a8ec81912285c2633117109c4} 
+\index{cudaDeviceProp@{cudaDeviceProp}!memoryClockRate@{memoryClockRate}}
+\index{memoryClockRate@{memoryClockRate}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{memoryClockRate}{memoryClockRate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::memory\+Clock\+Rate}
+
+Peak memory clock frequency in kilohertz \Hypertarget{structcuda_device_prop_a4382eddd3f5836f1195ca988388783bb}\label{structcuda_device_prop_a4382eddd3f5836f1195ca988388783bb} 
+\index{cudaDeviceProp@{cudaDeviceProp}!memPitch@{memPitch}}
+\index{memPitch@{memPitch}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{memPitch}{memPitch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::mem\+Pitch}
+
+Maximum pitch in bytes allowed by memory copies \Hypertarget{structcuda_device_prop_a50d477d8d5d3a04e0785f469277c65bb}\label{structcuda_device_prop_a50d477d8d5d3a04e0785f469277c65bb} 
+\index{cudaDeviceProp@{cudaDeviceProp}!minor@{minor}}
+\index{minor@{minor}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{minor}{minor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::minor}
+
+Minor compute capability \Hypertarget{structcuda_device_prop_a63af976611c9d29f169882f5c32472d4}\label{structcuda_device_prop_a63af976611c9d29f169882f5c32472d4} 
+\index{cudaDeviceProp@{cudaDeviceProp}!multiGpuBoardGroupID@{multiGpuBoardGroupID}}
+\index{multiGpuBoardGroupID@{multiGpuBoardGroupID}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{multiGpuBoardGroupID}{multiGpuBoardGroupID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::multi\+Gpu\+Board\+Group\+ID}
+
+Unique identifier for a group of devices on the same multi-\/\+GPU board \Hypertarget{structcuda_device_prop_a3e36d9d236f97095ef2b496cd2f98121}\label{structcuda_device_prop_a3e36d9d236f97095ef2b496cd2f98121} 
+\index{cudaDeviceProp@{cudaDeviceProp}!multiProcessorCount@{multiProcessorCount}}
+\index{multiProcessorCount@{multiProcessorCount}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{multiProcessorCount}{multiProcessorCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::multi\+Processor\+Count}
+
+Number of multiprocessors on device \Hypertarget{structcuda_device_prop_a1e26f1c6bd42f4821b7ef1a4bd3bd25c}\label{structcuda_device_prop_a1e26f1c6bd42f4821b7ef1a4bd3bd25c} 
+\index{cudaDeviceProp@{cudaDeviceProp}!name@{name}}
+\index{name@{name}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} cuda\+Device\+Prop\+::name\mbox{[}256\mbox{]}}
+
+ASCII string identifying device \Hypertarget{structcuda_device_prop_a46116bab1064b5d7d0642d78f6c27ce1}\label{structcuda_device_prop_a46116bab1064b5d7d0642d78f6c27ce1} 
+\index{cudaDeviceProp@{cudaDeviceProp}!pageableMemoryAccess@{pageableMemoryAccess}}
+\index{pageableMemoryAccess@{pageableMemoryAccess}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{pageableMemoryAccess}{pageableMemoryAccess}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::pageable\+Memory\+Access}
+
+Device supports coherently accessing pageable memory without calling cuda\+Host\+Register on it \Hypertarget{structcuda_device_prop_ae9f1ed6bffd5606eb81d438728a844ca}\label{structcuda_device_prop_ae9f1ed6bffd5606eb81d438728a844ca} 
+\index{cudaDeviceProp@{cudaDeviceProp}!pageableMemoryAccessUsesHostPageTables@{pageableMemoryAccessUsesHostPageTables}}
+\index{pageableMemoryAccessUsesHostPageTables@{pageableMemoryAccessUsesHostPageTables}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{pageableMemoryAccessUsesHostPageTables}{pageableMemoryAccessUsesHostPageTables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::pageable\+Memory\+Access\+Uses\+Host\+Page\+Tables}
+
+Device accesses pageable memory via the host\textquotesingle{}s page tables \Hypertarget{structcuda_device_prop_ac5adc2ef8c6b89fb139b4684175db54a}\label{structcuda_device_prop_ac5adc2ef8c6b89fb139b4684175db54a} 
+\index{cudaDeviceProp@{cudaDeviceProp}!pciBusID@{pciBusID}}
+\index{pciBusID@{pciBusID}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{pciBusID}{pciBusID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::pci\+Bus\+ID}
+
+PCI bus ID of the device \Hypertarget{structcuda_device_prop_a56978c2bfc433d26ac3b4c765ee536bb}\label{structcuda_device_prop_a56978c2bfc433d26ac3b4c765ee536bb} 
+\index{cudaDeviceProp@{cudaDeviceProp}!pciDeviceID@{pciDeviceID}}
+\index{pciDeviceID@{pciDeviceID}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{pciDeviceID}{pciDeviceID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::pci\+Device\+ID}
+
+PCI device ID of the device \Hypertarget{structcuda_device_prop_af3a69f0796e32c0e32d17c151443fab0}\label{structcuda_device_prop_af3a69f0796e32c0e32d17c151443fab0} 
+\index{cudaDeviceProp@{cudaDeviceProp}!pciDomainID@{pciDomainID}}
+\index{pciDomainID@{pciDomainID}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{pciDomainID}{pciDomainID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::pci\+Domain\+ID}
+
+PCI domain ID of the device \Hypertarget{structcuda_device_prop_a708c0ea6df419516e4bd702dd26f802c}\label{structcuda_device_prop_a708c0ea6df419516e4bd702dd26f802c} 
+\index{cudaDeviceProp@{cudaDeviceProp}!persistingL2CacheMaxSize@{persistingL2CacheMaxSize}}
+\index{persistingL2CacheMaxSize@{persistingL2CacheMaxSize}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{persistingL2CacheMaxSize}{persistingL2CacheMaxSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::persisting\+L2\+Cache\+Max\+Size}
+
+Device\textquotesingle{}s maximum l2 persisting lines capacity setting in bytes \Hypertarget{structcuda_device_prop_a84472707f521930fc052663820d635fc}\label{structcuda_device_prop_a84472707f521930fc052663820d635fc} 
+\index{cudaDeviceProp@{cudaDeviceProp}!regsPerBlock@{regsPerBlock}}
+\index{regsPerBlock@{regsPerBlock}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{regsPerBlock}{regsPerBlock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::regs\+Per\+Block}
+
+32-\/bit registers available per block \Hypertarget{structcuda_device_prop_ade02e669caefcadadaaa42877b08e80a}\label{structcuda_device_prop_ade02e669caefcadadaaa42877b08e80a} 
+\index{cudaDeviceProp@{cudaDeviceProp}!regsPerMultiprocessor@{regsPerMultiprocessor}}
+\index{regsPerMultiprocessor@{regsPerMultiprocessor}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{regsPerMultiprocessor}{regsPerMultiprocessor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::regs\+Per\+Multiprocessor}
+
+32-\/bit registers available per multiprocessor \Hypertarget{structcuda_device_prop_a5a1f6049e9e9fd8af0d2a8a5df289ab7}\label{structcuda_device_prop_a5a1f6049e9e9fd8af0d2a8a5df289ab7} 
+\index{cudaDeviceProp@{cudaDeviceProp}!reservedSharedMemPerBlock@{reservedSharedMemPerBlock}}
+\index{reservedSharedMemPerBlock@{reservedSharedMemPerBlock}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{reservedSharedMemPerBlock}{reservedSharedMemPerBlock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::reserved\+Shared\+Mem\+Per\+Block}
+
+Shared memory reserved by CUDA driver per block in bytes \Hypertarget{structcuda_device_prop_a82ec4c5e244addb9cd57f5b9da0eaca7}\label{structcuda_device_prop_a82ec4c5e244addb9cd57f5b9da0eaca7} 
+\index{cudaDeviceProp@{cudaDeviceProp}!sharedMemPerBlock@{sharedMemPerBlock}}
+\index{sharedMemPerBlock@{sharedMemPerBlock}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{sharedMemPerBlock}{sharedMemPerBlock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::shared\+Mem\+Per\+Block}
+
+Shared memory available per block in bytes \Hypertarget{structcuda_device_prop_ac23eacaeeb59e1798d6d442be70f1c3e}\label{structcuda_device_prop_ac23eacaeeb59e1798d6d442be70f1c3e} 
+\index{cudaDeviceProp@{cudaDeviceProp}!sharedMemPerBlockOptin@{sharedMemPerBlockOptin}}
+\index{sharedMemPerBlockOptin@{sharedMemPerBlockOptin}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{sharedMemPerBlockOptin}{sharedMemPerBlockOptin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::shared\+Mem\+Per\+Block\+Optin}
+
+Per device maximum shared memory per block usable by special opt in \Hypertarget{structcuda_device_prop_a6cede1829516e86917f0842a5f6498c8}\label{structcuda_device_prop_a6cede1829516e86917f0842a5f6498c8} 
+\index{cudaDeviceProp@{cudaDeviceProp}!sharedMemPerMultiprocessor@{sharedMemPerMultiprocessor}}
+\index{sharedMemPerMultiprocessor@{sharedMemPerMultiprocessor}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{sharedMemPerMultiprocessor}{sharedMemPerMultiprocessor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::shared\+Mem\+Per\+Multiprocessor}
+
+Shared memory available per multiprocessor in bytes \Hypertarget{structcuda_device_prop_a4bd4d531bf2ac497d659b03910440315}\label{structcuda_device_prop_a4bd4d531bf2ac497d659b03910440315} 
+\index{cudaDeviceProp@{cudaDeviceProp}!singleToDoublePrecisionPerfRatio@{singleToDoublePrecisionPerfRatio}}
+\index{singleToDoublePrecisionPerfRatio@{singleToDoublePrecisionPerfRatio}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{singleToDoublePrecisionPerfRatio}{singleToDoublePrecisionPerfRatio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::single\+To\+Double\+Precision\+Perf\+Ratio}
+
+Ratio of single precision performance (in floating-\/point operations per second) to double precision performance \Hypertarget{structcuda_device_prop_a43e968b12978ffd2a80bde224d7dc782}\label{structcuda_device_prop_a43e968b12978ffd2a80bde224d7dc782} 
+\index{cudaDeviceProp@{cudaDeviceProp}!streamPrioritiesSupported@{streamPrioritiesSupported}}
+\index{streamPrioritiesSupported@{streamPrioritiesSupported}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{streamPrioritiesSupported}{streamPrioritiesSupported}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::stream\+Priorities\+Supported}
+
+Device supports stream priorities \Hypertarget{structcuda_device_prop_a8fe20825e4239ff91a7708c9468a02b5}\label{structcuda_device_prop_a8fe20825e4239ff91a7708c9468a02b5} 
+\index{cudaDeviceProp@{cudaDeviceProp}!surfaceAlignment@{surfaceAlignment}}
+\index{surfaceAlignment@{surfaceAlignment}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{surfaceAlignment}{surfaceAlignment}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::surface\+Alignment}
+
+Alignment requirements for surfaces \Hypertarget{structcuda_device_prop_afcc96a9e56f84f4a0e853c18ce8e2c0d}\label{structcuda_device_prop_afcc96a9e56f84f4a0e853c18ce8e2c0d} 
+\index{cudaDeviceProp@{cudaDeviceProp}!tccDriver@{tccDriver}}
+\index{tccDriver@{tccDriver}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{tccDriver}{tccDriver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::tcc\+Driver}
+
+1 if device is a Tesla device using TCC driver, 0 otherwise \Hypertarget{structcuda_device_prop_a500248658a996f51752e1ab1769f8a88}\label{structcuda_device_prop_a500248658a996f51752e1ab1769f8a88} 
+\index{cudaDeviceProp@{cudaDeviceProp}!textureAlignment@{textureAlignment}}
+\index{textureAlignment@{textureAlignment}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{textureAlignment}{textureAlignment}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::texture\+Alignment}
+
+Alignment requirement for textures \Hypertarget{structcuda_device_prop_a3a3f10d2833bdc82ceb370a449aafeec}\label{structcuda_device_prop_a3a3f10d2833bdc82ceb370a449aafeec} 
+\index{cudaDeviceProp@{cudaDeviceProp}!texturePitchAlignment@{texturePitchAlignment}}
+\index{texturePitchAlignment@{texturePitchAlignment}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{texturePitchAlignment}{texturePitchAlignment}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::texture\+Pitch\+Alignment}
+
+Pitch alignment requirement for texture references bound to pitched memory \Hypertarget{structcuda_device_prop_ab4047e5e22082b1aefeac3b9ef39d0be}\label{structcuda_device_prop_ab4047e5e22082b1aefeac3b9ef39d0be} 
+\index{cudaDeviceProp@{cudaDeviceProp}!totalConstMem@{totalConstMem}}
+\index{totalConstMem@{totalConstMem}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{totalConstMem}{totalConstMem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::total\+Const\+Mem}
+
+Constant memory available on device in bytes \Hypertarget{structcuda_device_prop_a983c292e2078dd5a4240f49c41d647f3}\label{structcuda_device_prop_a983c292e2078dd5a4240f49c41d647f3} 
+\index{cudaDeviceProp@{cudaDeviceProp}!totalGlobalMem@{totalGlobalMem}}
+\index{totalGlobalMem@{totalGlobalMem}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{totalGlobalMem}{totalGlobalMem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Device\+Prop\+::total\+Global\+Mem}
+
+Global memory available on device in bytes \Hypertarget{structcuda_device_prop_a07b0114cefb43da05e05c65ec859542c}\label{structcuda_device_prop_a07b0114cefb43da05e05c65ec859542c} 
+\index{cudaDeviceProp@{cudaDeviceProp}!unifiedAddressing@{unifiedAddressing}}
+\index{unifiedAddressing@{unifiedAddressing}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{unifiedAddressing}{unifiedAddressing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::unified\+Addressing}
+
+Device shares a unified address space with the host \Hypertarget{structcuda_device_prop_a626c20637498c7be1381db55a6261308}\label{structcuda_device_prop_a626c20637498c7be1381db55a6261308} 
+\index{cudaDeviceProp@{cudaDeviceProp}!uuid@{uuid}}
+\index{uuid@{uuid}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{uuid}{uuid}}
+{\footnotesize\ttfamily cuda\+UUID\+\_\+t cuda\+Device\+Prop\+::uuid}
+
+16-\/byte unique identifier \Hypertarget{structcuda_device_prop_a8656f53eb2a7e54500f6fb95a830b47d}\label{structcuda_device_prop_a8656f53eb2a7e54500f6fb95a830b47d} 
+\index{cudaDeviceProp@{cudaDeviceProp}!warpSize@{warpSize}}
+\index{warpSize@{warpSize}!cudaDeviceProp@{cudaDeviceProp}}
+\doxysubsubsection{\texorpdfstring{warpSize}{warpSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Device\+Prop\+::warp\+Size}
+
+Warp size in threads 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['data_20movement_0',['Data Movement',['../group___c_u_d_a___m_a_t_h_____b_f_l_o_a_t16___m_i_s_c.html',1,'Bfloat16 Precision Conversion and Data Movement'],['../group___c_u_d_a___m_a_t_h_____h_a_l_f___m_i_s_c.html',1,'Half Precision Conversion and Data Movement']]],
+  ['data_20types_20used_20by_20cuda_20driver_1',['Data types used by CUDA driver',['../group___c_u_d_a___t_y_p_e_s.html',1,'']]],
+  ['data_20types_20used_20by_20cuda_20runtime_2',['Data types used by CUDA Runtime',['../group___c_u_d_a_r_t___t_y_p_e_s.html',1,'']]],
+  ['deprecated_3',['DEPRECATED',['../group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d.html',1,'Context Management [DEPRECATED]'],['../group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d.html',1,'Device Management [DEPRECATED]'],['../group___c_u_d_a_r_t___d3_d10___d_e_p_r_e_c_a_t_e_d.html',1,'Direct3D 10 Interoperability [DEPRECATED]'],['../group___c_u_d_a_r_t___d3_d11___d_e_p_r_e_c_a_t_e_d.html',1,'Direct3D 11 Interoperability [DEPRECATED]'],['../group___c_u_d_a_r_t___d3_d9___d_e_p_r_e_c_a_t_e_d.html',1,'Direct3D 9 Interoperability [DEPRECATED]'],['../group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d.html',1,'Execution Control [DEPRECATED]'],['../group___c_u_d_a_r_t___m_e_m_o_r_y___d_e_p_r_e_c_a_t_e_d.html',1,'Memory Management [DEPRECATED]'],['../group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d.html',1,'OpenGL Interoperability [DEPRECATED]'],['../group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d.html',1,'OpenGL Interoperability [DEPRECATED]'],['../group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d.html',1,'Surface Reference Management [DEPRECATED]'],['../group___c_u_d_a_r_t___s_u_r_f_a_c_e.html',1,'Surface Reference Management [DEPRECATED]'],['../group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d.html',1,'Texture Reference Management [DEPRECATED]'],['../group___c_u_d_a_r_t___t_e_x_t_u_r_e.html',1,'Texture Reference Management [DEPRECATED]'],['../group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d.html',1,'Thread Management [DEPRECATED]']]],
+  ['device_20management_4',['Device Management',['../group___c_u_d_a___d_e_v_i_c_e.html',1,'Device Management'],['../group___c_u_d_a_r_t___d_e_v_i_c_e.html',1,'Device Management']]],
+  ['device_20management_20deprecated_5',['Device Management [DEPRECATED]',['../group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d.html',1,'']]],
+  ['device_20memory_20access_6',['Peer Device Memory Access',['../group___c_u_d_a_r_t___p_e_e_r.html',1,'']]],
+  ['direct3d_2010_20interoperability_7',['Direct3D 10 Interoperability',['../group___c_u_d_a_r_t___d3_d10.html',1,'']]],
+  ['direct3d_2010_20interoperability_20deprecated_8',['Direct3D 10 Interoperability [DEPRECATED]',['../group___c_u_d_a_r_t___d3_d10___d_e_p_r_e_c_a_t_e_d.html',1,'']]],
+  ['direct3d_2011_20interoperability_9',['Direct3D 11 Interoperability',['../group___c_u_d_a_r_t___d3_d11.html',1,'']]],
+  ['direct3d_2011_20interoperability_20deprecated_10',['Direct3D 11 Interoperability [DEPRECATED]',['../group___c_u_d_a_r_t___d3_d11___d_e_p_r_e_c_a_t_e_d.html',1,'']]],
+  ['direct3d_209_20interoperability_11',['Direct3D 9 Interoperability',['../group___c_u_d_a_r_t___d3_d9.html',1,'']]],
+  ['direct3d_209_20interoperability_20deprecated_12',['Direct3D 9 Interoperability [DEPRECATED]',['../group___c_u_d_a_r_t___d3_d9___d_e_p_r_e_c_a_t_e_d.html',1,'']]],
+  ['driver_13',['Data types used by CUDA driver',['../group___c_u_d_a___t_y_p_e_s.html',1,'']]],
+  ['driver_20api_14',['Interactions with the CUDA Driver API',['../group___c_u_d_a_r_t___d_r_i_v_e_r.html',1,'']]],
+  ['driver_20entry_20point_20access_15',['Driver Entry Point Access',['../group___c_u_d_a___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t.html',1,'Driver Entry Point Access'],['../group___c_u_d_a_r_t___d_r_i_v_e_r___e_n_t_r_y___p_o_i_n_t.html',1,'Driver Entry Point Access']]]
+];

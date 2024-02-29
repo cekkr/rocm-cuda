@@ -1,0 +1,60 @@
+\doxysection{CUmem\+Pool\+Props\+\_\+st Struct Reference}
+\hypertarget{struct_c_umem_pool_props__st}{}\label{struct_c_umem_pool_props__st}\index{CUmemPoolProps\_st@{CUmemPoolProps\_st}}
+
+
+{\ttfamily \#include $<$cuda.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb4ac1dfc95d18980df9181f210ce25b}{CUmem\+Allocation\+Type}} \mbox{\hyperlink{struct_c_umem_pool_props__st_aeb42a38567374ab637ad83679183b73c}{alloc\+Type}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}} \mbox{\hyperlink{struct_c_umem_pool_props__st_af5c338c97eaab638fe491d50ed295622}{handle\+Types}}
+\item 
+\mbox{\hyperlink{struct_c_umem_location__st}{CUmem\+Location}} \mbox{\hyperlink{struct_c_umem_pool_props__st_aabe7202823dfd568dfd6243ae866728d}{location}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_c_umem_pool_props__st_aa437280cd1d53062dd6d4b23fd5661d1}{win32\+Security\+Attributes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \mbox{\hyperlink{struct_c_umem_pool_props__st_a6977c53b87a4c16e2d188c86a3e12cb6}{reserved}} \mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specifies the properties of allocations made from the pool. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_c_umem_pool_props__st_aeb42a38567374ab637ad83679183b73c}\label{struct_c_umem_pool_props__st_aeb42a38567374ab637ad83679183b73c} 
+\index{CUmemPoolProps\_st@{CUmemPoolProps\_st}!allocType@{allocType}}
+\index{allocType@{allocType}!CUmemPoolProps\_st@{CUmemPoolProps\_st}}
+\doxysubsubsection{\texorpdfstring{allocType}{allocType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb4ac1dfc95d18980df9181f210ce25b}{CUmem\+Allocation\+Type}} CUmem\+Pool\+Props\+\_\+st\+::alloc\+Type}
+
+Allocation type. Currently must be specified as CU\+\_\+\+MEM\+\_\+\+ALLOCATION\+\_\+\+TYPE\+\_\+\+PINNED \Hypertarget{struct_c_umem_pool_props__st_af5c338c97eaab638fe491d50ed295622}\label{struct_c_umem_pool_props__st_af5c338c97eaab638fe491d50ed295622} 
+\index{CUmemPoolProps\_st@{CUmemPoolProps\_st}!handleTypes@{handleTypes}}
+\index{handleTypes@{handleTypes}!CUmemPoolProps\_st@{CUmemPoolProps\_st}}
+\doxysubsubsection{\texorpdfstring{handleTypes}{handleTypes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga3421092018e223dc2b2b28f9d23a44e3}{CUmem\+Allocation\+Handle\+Type}} CUmem\+Pool\+Props\+\_\+st\+::handle\+Types}
+
+Handle types that will be supported by allocations from the pool. \Hypertarget{struct_c_umem_pool_props__st_aabe7202823dfd568dfd6243ae866728d}\label{struct_c_umem_pool_props__st_aabe7202823dfd568dfd6243ae866728d} 
+\index{CUmemPoolProps\_st@{CUmemPoolProps\_st}!location@{location}}
+\index{location@{location}!CUmemPoolProps\_st@{CUmemPoolProps\_st}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_umem_location__st}{CUmem\+Location}} CUmem\+Pool\+Props\+\_\+st\+::location}
+
+Location where allocations should reside. \Hypertarget{struct_c_umem_pool_props__st_a6977c53b87a4c16e2d188c86a3e12cb6}\label{struct_c_umem_pool_props__st_a6977c53b87a4c16e2d188c86a3e12cb6} 
+\index{CUmemPoolProps\_st@{CUmemPoolProps\_st}!reserved@{reserved}}
+\index{reserved@{reserved}!CUmemPoolProps\_st@{CUmemPoolProps\_st}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} CUmem\+Pool\+Props\+\_\+st\+::reserved\mbox{[}64\mbox{]}}
+
+reserved for future use, must be 0 \Hypertarget{struct_c_umem_pool_props__st_aa437280cd1d53062dd6d4b23fd5661d1}\label{struct_c_umem_pool_props__st_aa437280cd1d53062dd6d4b23fd5661d1} 
+\index{CUmemPoolProps\_st@{CUmemPoolProps\_st}!win32SecurityAttributes@{win32SecurityAttributes}}
+\index{win32SecurityAttributes@{win32SecurityAttributes}!CUmemPoolProps\_st@{CUmemPoolProps\_st}}
+\doxysubsubsection{\texorpdfstring{win32SecurityAttributes}{win32SecurityAttributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} CUmem\+Pool\+Props\+\_\+st\+::win32\+Security\+Attributes}
+
+Windows-\/specific LPSECURITYATTRIBUTES required when \doxylink{group___c_u_d_a___t_y_p_e_s_ggaf83467b7e74e46d04e2176fad50ffa7ca439b7704f58e569543c4b60038cc251e}{CU\+\_\+\+MEM\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+WIN32} is specified. This security attribute defines the scope of which exported allocations may be tranferred to other processes. In all other cases, this field is required to be zero. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuda_8h}{cuda.\+h}}\end{DoxyCompactItemize}

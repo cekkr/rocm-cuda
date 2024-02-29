@@ -1,0 +1,180 @@
+\doxysection{vector\+\_\+functions.\+h}
+\hypertarget{vector__functions_8h_source}{}\label{vector__functions_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 1993-\/2014\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#if\ !defined(\_\_VECTOR\_FUNCTIONS\_H\_\_)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ \_\_VECTOR\_FUNCTIONS\_H\_\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00054\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00055\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00056\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00057\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ "{}cuda\_runtime\_api.h"{}}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \_\_host\_\_\ \_\_device\_\_}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{/*\ !\_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ static\ \_\_inline\_\_\ \_\_host\_\_\ \_\_device\_\_}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{00068\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00069\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00070\ \textcolor{comment}{*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00071\ \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structchar1}{char1}}\ make\_char1(\textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ x);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structuchar1}{uchar1}}\ make\_uchar1(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ x);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ char2\ make\_char2(\textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ x,\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ y);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ uchar2\ make\_uchar2(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ y);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structchar3}{char3}}\ make\_char3(\textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ x,\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ y,\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ z);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structuchar3}{uchar3}}\ make\_uchar3(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ z);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ char4\ make\_char4(\textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ x,\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ y,\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ z,\ \textcolor{keywordtype}{signed}\ \textcolor{keywordtype}{char}\ w);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ uchar4\ make\_uchar4(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ z,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ w);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structshort1}{short1}}\ make\_short1(\textcolor{keywordtype}{short}\ x);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structushort1}{ushort1}}\ make\_ushort1(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ x);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ short2\ make\_short2(\textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{short}\ y);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ ushort2\ make\_ushort2(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ y);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structshort3}{short3}}\ make\_short3(\textcolor{keywordtype}{short}\ x,\textcolor{keywordtype}{short}\ y,\ \textcolor{keywordtype}{short}\ z);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structushort3}{ushort3}}\ make\_ushort3(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ z);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ short4\ make\_short4(\textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{short}\ y,\ \textcolor{keywordtype}{short}\ z,\ \textcolor{keywordtype}{short}\ w);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ ushort4\ make\_ushort4(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ z,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ w);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structint1}{int1}}\ make\_int1(\textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structuint1}{uint1}}\ make\_uint1(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ int2\ make\_int2(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ uint2\ make\_uint2(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structint3}{int3}}\ make\_int3(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ z);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structuint3}{uint3}}\ make\_uint3(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ z);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ int4\ make\_int4(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ z,\ \textcolor{keywordtype}{int}\ w);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ uint4\ make\_uint4(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ z,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ w);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structlong1}{long1}}\ make\_long1(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structulong1}{ulong1}}\ make\_ulong1(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ long2\ make\_long2(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ ulong2\ make\_ulong2(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structlong3}{long3}}\ make\_long3(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structulong3}{ulong3}}\ make\_ulong3(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ long4\ make\_long4(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ w);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ ulong4\ make\_ulong4(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ w);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structfloat1}{float1}}\ make\_float1(\textcolor{keywordtype}{float}\ x);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ float2\ make\_float2(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structfloat3}{float3}}\ make\_float3(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ float4\ make\_float4(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z,\ \textcolor{keywordtype}{float}\ w);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structlonglong1}{longlong1}}\ make\_longlong1(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structulonglong1}{ulonglong1}}\ make\_ulonglong1(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ longlong2\ make\_longlong2(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ ulonglong2\ make\_ulonglong2(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structlonglong3}{longlong3}}\ make\_longlong3(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structulonglong3}{ulonglong3}}\ make\_ulonglong3(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ longlong4\ make\_longlong4(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ w);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ ulonglong4\ make\_ulonglong4(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ z,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ w);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structdouble1}{double1}}\ make\_double1(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ double2\ make\_double2(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ \mbox{\hyperlink{structdouble3}{double3}}\ make\_double3(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ z);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_\ double4\ make\_double4(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ z,\ \textcolor{keywordtype}{double}\ w);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#undef\ \_\_VECTOR\_FUNCTIONS\_DECL\_\_}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#if\ !defined(\_\_CUDACC\_RTC\_\_)}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#include\ "{}vector\_functions.hpp"{}}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_CUDACC\_RTC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_VECTOR\_FUNCTIONS\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

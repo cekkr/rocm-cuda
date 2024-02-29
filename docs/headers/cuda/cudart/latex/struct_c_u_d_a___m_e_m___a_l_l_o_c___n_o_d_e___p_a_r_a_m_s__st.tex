@@ -1,0 +1,60 @@
+\doxysection{CUDA\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+NODE\+\_\+\+PARAMS\+\_\+st Struct Reference}
+\hypertarget{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st}{}\label{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st}\index{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}}
+
+
+{\ttfamily \#include $<$cuda.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_umem_pool_props__st}{CUmem\+Pool\+Props}} \mbox{\hyperlink{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a69bd1ce53442fc8f14633f59b66e208f}{pool\+Props}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_access_desc__st}{CUmem\+Access\+Desc}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a176610a68b7bfc156c588ae9e0cdb83e}{access\+Descs}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a8773cff1b0bd49bf76788b8c63bc423e}{access\+Desc\+Count}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_aa01b140da00090d1773d8585a54aa694}{bytesize}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} \mbox{\hyperlink{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a4e34b47bfece8187776ee525766e02c1}{dptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Memory allocation node parameters 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a8773cff1b0bd49bf76788b8c63bc423e}\label{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a8773cff1b0bd49bf76788b8c63bc423e} 
+\index{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}!accessDescCount@{accessDescCount}}
+\index{accessDescCount@{accessDescCount}!CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}}
+\doxysubsubsection{\texorpdfstring{accessDescCount}{accessDescCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} CUDA\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+NODE\+\_\+\+PARAMS\+\_\+st\+::access\+Desc\+Count}
+
+in\+: number of memory access descriptors. Must not exceed the number of GPUs. \Hypertarget{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a176610a68b7bfc156c588ae9e0cdb83e}\label{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a176610a68b7bfc156c588ae9e0cdb83e} 
+\index{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}!accessDescs@{accessDescs}}
+\index{accessDescs@{accessDescs}!CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}}
+\doxysubsubsection{\texorpdfstring{accessDescs}{accessDescs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{struct_c_umem_access_desc__st}{CUmem\+Access\+Desc}}\texorpdfstring{$\ast$}{*} CUDA\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+NODE\+\_\+\+PARAMS\+\_\+st\+::access\+Descs}
+
+in\+: array of memory access descriptors. Used to describe peer GPU access \Hypertarget{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_aa01b140da00090d1773d8585a54aa694}\label{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_aa01b140da00090d1773d8585a54aa694} 
+\index{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}!bytesize@{bytesize}}
+\index{bytesize@{bytesize}!CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}}
+\doxysubsubsection{\texorpdfstring{bytesize}{bytesize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} CUDA\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+NODE\+\_\+\+PARAMS\+\_\+st\+::bytesize}
+
+in\+: size in bytes of the requested allocation \Hypertarget{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a4e34b47bfece8187776ee525766e02c1}\label{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a4e34b47bfece8187776ee525766e02c1} 
+\index{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}!dptr@{dptr}}
+\index{dptr@{dptr}!CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}}
+\doxysubsubsection{\texorpdfstring{dptr}{dptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}} CUDA\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+NODE\+\_\+\+PARAMS\+\_\+st\+::dptr}
+
+out\+: address of the allocation returned by CUDA \Hypertarget{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a69bd1ce53442fc8f14633f59b66e208f}\label{struct_c_u_d_a___m_e_m___a_l_l_o_c___n_o_d_e___p_a_r_a_m_s__st_a69bd1ce53442fc8f14633f59b66e208f} 
+\index{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}!poolProps@{poolProps}}
+\index{poolProps@{poolProps}!CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st@{CUDA\_MEM\_ALLOC\_NODE\_PARAMS\_st}}
+\doxysubsubsection{\texorpdfstring{poolProps}{poolProps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_c_umem_pool_props__st}{CUmem\+Pool\+Props}} CUDA\+\_\+\+MEM\+\_\+\+ALLOC\+\_\+\+NODE\+\_\+\+PARAMS\+\_\+st\+::pool\+Props}
+
+in\+: location where the allocation should reside (specified in \+::location). \+::handle\+Types must be \doxylink{group___c_u_d_a___t_y_p_e_s_ggaf83467b7e74e46d04e2176fad50ffa7ca37a6278038983d0b0bbeda0ed7e88e57}{CU\+\_\+\+MEM\+\_\+\+HANDLE\+\_\+\+TYPE\+\_\+\+NONE}. IPC is not supported. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuda_8h}{cuda.\+h}}\end{DoxyCompactItemize}

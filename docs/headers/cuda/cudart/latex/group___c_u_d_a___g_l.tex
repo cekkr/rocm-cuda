@@ -1,0 +1,200 @@
+\doxysection{Open\+GL Interoperability}
+\hypertarget{group___c_u_d_a___g_l}{}\label{group___c_u_d_a___g_l}\index{OpenGL Interoperability@{OpenGL Interoperability}}
+\doxysubsubsection*{Topics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d}{Open\+GL Interoperability \mbox{[}\+DEPRECATED\mbox{]}}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{typedef}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}{CUGLDevice\+List\+\_\+enum}} \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDevice\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}{CUGLDevice\+List\+\_\+enum}} \{ \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a43d2b311a54ae5c914c264e8395c3164}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+ALL}} = 0x01
+, \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2adc48f515019afdc0a78cd366871b0fe1}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+CURRENT\+\_\+\+FRAME}} = 0x02
+, \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a9d6d52b3167bd1d144eb08db8b60325a}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+NEXT\+\_\+\+FRAME}} = 0x03
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l_gab56e569048aa01e2d9c58f3c9bc4718a}{cu\+Graphics\+GLRegister\+Buffer}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Registers an Open\+GL buffer object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l_ga40951642ac10a72be9a81e7b3188324e}{cu\+Graphics\+GLRegister\+Image}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{image}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLenum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{target}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Register an Open\+GL texture or renderbuffer object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___g_l_gaddf00ab2813c34bbac734c17a73a545b}{cu\+GLGet\+Devices}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Device\+Count}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Devices}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Device\+Count}}, \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDevice\+List}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{device\+List}})
+\begin{DoxyCompactList}\small\item\em Gets the CUDA devices associated with the current Open\+GL context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ Open\+GL interoperability functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the Open\+GL interoperability functions of the low-\/level CUDA driver application programming interface. Note that mapping of Open\+GL resources is performed with the graphics API agnostic, resource mapping interface described in \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s}{Graphics Interoperability}. 
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}\label{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2} 
+\index{OpenGL Interoperability@{OpenGL Interoperability}!CUGLDeviceList@{CUGLDeviceList}}
+\index{CUGLDeviceList@{CUGLDeviceList}!OpenGL Interoperability@{OpenGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{CUGLDeviceList}{CUGLDeviceList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{typedef}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}{CUGLDevice\+List\+\_\+enum}} \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDevice\+List}}}
+
+CUDA devices corresponding to an Open\+GL device 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}\label{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2} 
+\index{OpenGL Interoperability@{OpenGL Interoperability}!CUGLDeviceList\_enum@{CUGLDeviceList\_enum}}
+\index{CUGLDeviceList\_enum@{CUGLDeviceList\_enum}!OpenGL Interoperability@{OpenGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{CUGLDeviceList\_enum}{CUGLDeviceList\_enum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}{CUGLDevice\+List\+\_\+enum}}}
+
+CUDA devices corresponding to an Open\+GL device \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CU\_GL\_DEVICE\_LIST\_ALL@{CU\_GL\_DEVICE\_LIST\_ALL}!OpenGL Interoperability@{OpenGL Interoperability}}\index{OpenGL Interoperability@{OpenGL Interoperability}!CU\_GL\_DEVICE\_LIST\_ALL@{CU\_GL\_DEVICE\_LIST\_ALL}}}\Hypertarget{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a43d2b311a54ae5c914c264e8395c3164}\label{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a43d2b311a54ae5c914c264e8395c3164} 
+CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+ALL&The CUDA devices for all GPUs used by the current Open\+GL context \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CU\_GL\_DEVICE\_LIST\_CURRENT\_FRAME@{CU\_GL\_DEVICE\_LIST\_CURRENT\_FRAME}!OpenGL Interoperability@{OpenGL Interoperability}}\index{OpenGL Interoperability@{OpenGL Interoperability}!CU\_GL\_DEVICE\_LIST\_CURRENT\_FRAME@{CU\_GL\_DEVICE\_LIST\_CURRENT\_FRAME}}}\Hypertarget{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2adc48f515019afdc0a78cd366871b0fe1}\label{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2adc48f515019afdc0a78cd366871b0fe1} 
+CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+CURRENT\+\_\+\+FRAME&The CUDA devices for the GPUs used by the current Open\+GL context in its currently rendering frame \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CU\_GL\_DEVICE\_LIST\_NEXT\_FRAME@{CU\_GL\_DEVICE\_LIST\_NEXT\_FRAME}!OpenGL Interoperability@{OpenGL Interoperability}}\index{OpenGL Interoperability@{OpenGL Interoperability}!CU\_GL\_DEVICE\_LIST\_NEXT\_FRAME@{CU\_GL\_DEVICE\_LIST\_NEXT\_FRAME}}}\Hypertarget{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a9d6d52b3167bd1d144eb08db8b60325a}\label{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a9d6d52b3167bd1d144eb08db8b60325a} 
+CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+NEXT\+\_\+\+FRAME&The CUDA devices for the GPUs to be used by the current Open\+GL context in the next frame \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___g_l_gaddf00ab2813c34bbac734c17a73a545b}\label{group___c_u_d_a___g_l_gaddf00ab2813c34bbac734c17a73a545b} 
+\index{OpenGL Interoperability@{OpenGL Interoperability}!cuGLGetDevices@{cuGLGetDevices}}
+\index{cuGLGetDevices@{cuGLGetDevices}!OpenGL Interoperability@{OpenGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGLGetDevices()}{cuGLGetDevices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+GLGet\+Devices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Device\+Count,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Devices,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{cuda\+Device\+Count,  }\item[{\mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDevice\+List}}}]{device\+List }\end{DoxyParamCaption})}
+
+
+
+Gets the CUDA devices associated with the current Open\+GL context. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Cuda\+Device\+Count} the number of CUDA-\/compatible devices corresponding to the current Open\+GL context. Also returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Cuda\+Devices} at most cuda\+Device\+Count of the CUDA-\/compatible devices corresponding to the current Open\+GL context. If any of the GPUs being used by the current Open\+GL context are not CUDA capable then the call will return CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+DEVICE.
+
+The {\ttfamily device\+List} argument may be any of the following\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+ALL\+:} Query all devices used by the current Open\+GL context.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+CURRENT\+\_\+\+FRAME\+:} Query the devices used by the current Open\+GL context to render the current frame (in SLI).
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GL\+\_\+\+DEVICE\+\_\+\+LIST\+\_\+\+NEXT\+\_\+\+FRAME\+:} Query the devices used by the current Open\+GL context to render the next frame (in SLI). Note that this is a prediction, it can\textquotesingle{}t be guaranteed that this is correct in all cases.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Cuda\+Device\+Count} & -\/ Returned number of CUDA devices. \\
+\hline
+{\em p\+Cuda\+Devices} & -\/ Returned CUDA devices. \\
+\hline
+{\em cuda\+Device\+Count} & -\/ The size of the output device array p\+Cuda\+Devices. \\
+\hline
+{\em device\+List} & -\/ The set of devices to return.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa761bea84083d384d4fb88d51d972aada}{CUDA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8667df54ca7b35fa911703978a679839}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+GRAPHICS\+\_\+\+CONTEXT}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is not supported on Mac OS X. \textbackslash{}notefnerr
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+WGLGet\+Device}, \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l_gadeaebb3aa3a979fc5a8e8fa506a372d7}{cuda\+GLGet\+Devices} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l_gab56e569048aa01e2d9c58f3c9bc4718a}\label{group___c_u_d_a___g_l_gab56e569048aa01e2d9c58f3c9bc4718a} 
+\index{OpenGL Interoperability@{OpenGL Interoperability}!cuGraphicsGLRegisterBuffer@{cuGraphicsGLRegisterBuffer}}
+\index{cuGraphicsGLRegisterBuffer@{cuGraphicsGLRegisterBuffer}!OpenGL Interoperability@{OpenGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsGLRegisterBuffer()}{cuGraphicsGLRegisterBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+GLRegister\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{buffer,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Registers an Open\+GL buffer object. 
+
+Registers the buffer object specified by {\ttfamily buffer} for access by CUDA. A handle to the registered object is returned as {\ttfamily p\+Cuda\+Resource}. The register flags {\ttfamily Flags} specify the intended usage, as follows\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+NONE\+:} Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and written to by CUDA. This is the default value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY\+:} Specifies that CUDA will not write to this resource.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD\+:} Specifies that CUDA will not read from this resource and will write over the entire contents of the resource, so none of the data previously stored in the resource will be preserved.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Cuda\+Resource} & -\/ Pointer to the returned object handle \\
+\hline
+{\em buffer} & -\/ name of buffer object to be registered \\
+\hline
+{\em Flags} & -\/ Register flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, cu\+Graphics\+Resource\+Get\+Mapped\+Pointer, \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l_gaaa4e24e853ccc5e478eef9495be16d23}{cuda\+Graphics\+GLRegister\+Buffer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___g_l_ga40951642ac10a72be9a81e7b3188324e}\label{group___c_u_d_a___g_l_ga40951642ac10a72be9a81e7b3188324e} 
+\index{OpenGL Interoperability@{OpenGL Interoperability}!cuGraphicsGLRegisterImage@{cuGraphicsGLRegisterImage}}
+\index{cuGraphicsGLRegisterImage@{cuGraphicsGLRegisterImage}!OpenGL Interoperability@{OpenGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsGLRegisterImage()}{cuGraphicsGLRegisterImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+GLRegister\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}}]{image,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLenum}}}]{target,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Register an Open\+GL texture or renderbuffer object. 
+
+Registers the texture or renderbuffer object specified by {\ttfamily image} for access by CUDA. ~\newline
+ A handle to the registered object is returned as {\ttfamily p\+Cuda\+Resource}. ~\newline
+
+
+{\ttfamily target} must match the type of the object, and must be one of \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GL\+\_\+\+TEXTURE\+\_\+2D}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GL\+\_\+\+TEXTURE\+\_\+\+RECTANGLE}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GL\+\_\+\+TEXTURE\+\_\+\+CUBE\+\_\+\+MAP}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GL\+\_\+\+TEXTURE\+\_\+3D}, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GL\+\_\+\+TEXTURE\+\_\+2\+D\+\_\+\+ARRAY}, or \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GL\+\_\+\+RENDERBUFFER}.
+
+The register flags {\ttfamily Flags} specify the intended usage, as follows\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+NONE\+:} Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and written to by CUDA. This is the default value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY\+:} Specifies that CUDA will not write to this resource.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD\+:} Specifies that CUDA will not read from this resource and will write over the entire contents of the resource, so none of the data previously stored in the resource will be preserved.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+SURFACE\+\_\+\+LDST\+:} Specifies that CUDA will bind this resource to a surface reference.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+REGISTER\+\_\+\+FLAGS\+\_\+\+TEXTURE\+\_\+\+GATHER\+:} Specifies that CUDA will perform texture gather operations on this resource.
+\end{DoxyItemize}
+
+The following image formats are supported. For brevity\textquotesingle{}s sake, the list is abbreviated. For ex., \{GL\+\_\+R, GL\+\_\+\+RG\} X \{8, 16\} would expand to the following 4 formats \{GL\+\_\+\+R8, GL\+\_\+\+R16, GL\+\_\+\+RG8, GL\+\_\+\+RG16\} \+:
+\begin{DoxyItemize}
+\item GL\+\_\+\+RED, GL\+\_\+\+RG, GL\+\_\+\+RGBA, GL\+\_\+\+LUMINANCE, GL\+\_\+\+ALPHA, GL\+\_\+\+LUMINANCE\+\_\+\+ALPHA, GL\+\_\+\+INTENSITY
+\item \{GL\+\_\+R, GL\+\_\+\+RG, GL\+\_\+\+RGBA\} X \{8, 16, 16F, 32F, 8UI, 16UI, 32UI, 8I, 16I, 32I\}
+\item \{GL\+\_\+\+LUMINANCE, GL\+\_\+\+ALPHA, GL\+\_\+\+LUMINANCE\+\_\+\+ALPHA, GL\+\_\+\+INTENSITY\} X \{8, 16, 16F\+\_\+\+ARB, 32F\+\_\+\+ARB, 8UI\+\_\+\+EXT, 16UI\+\_\+\+EXT, 32UI\+\_\+\+EXT, 8I\+\_\+\+EXT, 16I\+\_\+\+EXT, 32I\+\_\+\+EXT\}
+\end{DoxyItemize}
+
+The following image classes are currently disallowed\+:
+\begin{DoxyItemize}
+\item Textures with borders
+\item Multisampled renderbuffers
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Cuda\+Resource} & -\/ Pointer to the returned object handle \\
+\hline
+{\em image} & -\/ name of texture or renderbuffer object to be registered \\
+\hline
+{\em target} & -\/ Identifies the type of object specified by {\ttfamily image} \\
+\hline
+{\em Flags} & -\/ Register flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l_ga32ed39debc79eb4aa256bdbbbfc72828}{cuda\+Graphics\+GLRegister\+Image} 
+\end{DoxySeeAlso}
+\input{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d}

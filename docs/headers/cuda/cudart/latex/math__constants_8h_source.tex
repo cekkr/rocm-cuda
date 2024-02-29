@@ -1,0 +1,157 @@
+\doxysection{math\+\_\+constants.\+h}
+\hypertarget{math__constants_8h_source}{}\label{math__constants_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 1993-\/2021\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#if\ !defined(\_\_MATH\_CONSTANTS\_H\_\_)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ \_\_MATH\_CONSTANTS\_H\_\_}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ single\ precision\ constants\ */}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ CUDART\_INF\_F\ \ \ \ \ \ \ \ \ \ \ \ \_\_int\_as\_float(0x7f800000U)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ CUDART\_NAN\_F\ \ \ \ \ \ \ \ \ \ \ \ \_\_int\_as\_float(0x7fffffffU)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ CUDART\_MIN\_DENORM\_F\ \ \ \ \ \_\_int\_as\_float(0x00000001U)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ CUDART\_MAX\_NORMAL\_F\ \ \ \ \ \_\_int\_as\_float(0x7f7fffffU)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ CUDART\_NEG\_ZERO\_F\ \ \ \ \ \ \ \_\_int\_as\_float(0x80000000U)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ CUDART\_ZERO\_F\ \ \ \ \ \ \ \ \ \ \ 0.0F}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ CUDART\_ONE\_F\ \ \ \ \ \ \ \ \ \ \ \ 1.0F}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_HALF\_F\ \ \ \ \ \ 0.707106781F}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_HALF\_HI\_F\ \ \ 0.707106781F}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_HALF\_LO\_F\ \ \ 1.210161749e-\/08F}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_TWO\_F\ \ \ \ \ \ \ 1.414213562F}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ CUDART\_THIRD\_F\ \ \ \ \ \ \ \ \ \ 0.333333333F}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ CUDART\_PIO4\_F\ \ \ \ \ \ \ \ \ \ \ 0.785398163F}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ CUDART\_PIO2\_F\ \ \ \ \ \ \ \ \ \ \ 1.570796327F}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ CUDART\_3PIO4\_F\ \ \ \ \ \ \ \ \ \ 2.356194490F}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ CUDART\_2\_OVER\_PI\_F\ \ \ \ \ \ 0.636619772F}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_2\_OVER\_PI\_F\ 0.797884561F}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ CUDART\_PI\_F\ \ \ \ \ \ \ \ \ \ \ \ \ 3.141592654F}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ CUDART\_L2E\_F\ \ \ \ \ \ \ \ \ \ \ \ 1.442695041F}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ CUDART\_L2T\_F\ \ \ \ \ \ \ \ \ \ \ \ 3.321928094F}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ CUDART\_LG2\_F\ \ \ \ \ \ \ \ \ \ \ \ 0.301029996F}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ CUDART\_LGE\_F\ \ \ \ \ \ \ \ \ \ \ \ 0.434294482F}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ CUDART\_LN2\_F\ \ \ \ \ \ \ \ \ \ \ \ 0.693147181F}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ CUDART\_LNT\_F\ \ \ \ \ \ \ \ \ \ \ \ 2.302585093F}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ CUDART\_LNPI\_F\ \ \ \ \ \ \ \ \ \ \ 1.144729886F}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_M126\_F\ \ \ \ 1.175494351e-\/38F}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_126\_F\ \ \ \ \ 8.507059173e37F}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ CUDART\_NORM\_HUGE\_F\ \ \ \ \ \ 3.402823466e38F}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_23\_F\ \ \ \ \ \ 8388608.0F}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_24\_F\ \ \ \ \ \ 16777216.0F}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_31\_F\ \ \ \ \ \ 2147483648.0F}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_32\_F\ \ \ \ \ \ 4294967296.0F}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ CUDART\_REMQUO\_BITS\_F\ \ \ \ 3U}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ CUDART\_REMQUO\_MASK\_F\ \ \ \ (\string~((\string~0U)<<CUDART\_REMQUO\_BITS\_F))}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ CUDART\_TRIG\_PLOSS\_F\ \ \ \ \ 105615.0F}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{comment}{/*\ double\ precision\ constants\ */}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ CUDART\_INF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_longlong\_as\_double(0x7ff0000000000000ULL)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ CUDART\_NAN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_longlong\_as\_double(0xfff8000000000000ULL)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ CUDART\_NEG\_ZERO\ \ \ \ \ \ \ \ \ \_\_longlong\_as\_double(0x8000000000000000ULL)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ CUDART\_MIN\_DENORM\ \ \ \ \ \ \ \_\_longlong\_as\_double(0x0000000000000001ULL)}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ CUDART\_ZERO\ \ \ \ \ \ \ \ \ \ \ \ \ 0.0}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ CUDART\_ONE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.0}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_TWO\ \ \ \ \ \ \ \ \ 1.4142135623730951e+0}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_HALF\ \ \ \ \ \ \ \ 7.0710678118654757e-\/1}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_HALF\_HI\ \ \ \ \ 7.0710678118654757e-\/1}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_HALF\_LO\ \ \ (-\/4.8336466567264567e-\/17)}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ CUDART\_THIRD\ \ \ \ \ \ \ \ \ \ \ \ 3.3333333333333333e-\/1}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ CUDART\_TWOTHIRD\ \ \ \ \ \ \ \ \ 6.6666666666666667e-\/1}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ CUDART\_PIO4\ \ \ \ \ \ \ \ \ \ \ \ \ 7.8539816339744828e-\/1}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ CUDART\_PIO4\_HI\ \ \ \ \ \ \ \ \ \ 7.8539816339744828e-\/1}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ CUDART\_PIO4\_LO\ \ \ \ \ \ \ \ \ \ 3.0616169978683830e-\/17}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ CUDART\_PIO2\ \ \ \ \ \ \ \ \ \ \ \ \ 1.5707963267948966e+0}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ CUDART\_PIO2\_HI\ \ \ \ \ \ \ \ \ \ 1.5707963267948966e+0}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ CUDART\_PIO2\_LO\ \ \ \ \ \ \ \ \ \ 6.1232339957367660e-\/17}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ CUDART\_3PIO4\ \ \ \ \ \ \ \ \ \ \ \ 2.3561944901923448e+0}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ CUDART\_2\_OVER\_PI\ \ \ \ \ \ \ \ 6.3661977236758138e-\/1}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ CUDART\_PI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3.1415926535897931e+0}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ CUDART\_PI\_HI\ \ \ \ \ \ \ \ \ \ \ \ 3.1415926535897931e+0}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ CUDART\_PI\_LO\ \ \ \ \ \ \ \ \ \ \ \ 1.2246467991473532e-\/16}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_2PI\ \ \ \ \ \ \ \ \ 2.5066282746310007e+0}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_2PI\_HI\ \ \ \ \ \ 2.5066282746310007e+0}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_2PI\_LO\ \ \ \ (-\/1.8328579980459167e-\/16)}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_PIO2\ \ \ \ \ \ \ \ 1.2533141373155003e+0}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_PIO2\_HI\ \ \ \ \ 1.2533141373155003e+0}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_PIO2\_LO\ \ \ (-\/9.1642899902295834e-\/17)}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ CUDART\_SQRT\_2OPI\ \ \ \ \ \ \ \ 7.9788456080286536e-\/1}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ CUDART\_L2E\ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.4426950408889634e+0}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ CUDART\_L2E\_HI\ \ \ \ \ \ \ \ \ \ \ 1.4426950408889634e+0}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ CUDART\_L2E\_LO\ \ \ \ \ \ \ \ \ \ \ 2.0355273740931033e-\/17}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ CUDART\_L2T\ \ \ \ \ \ \ \ \ \ \ \ \ \ 3.3219280948873622e+0}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ CUDART\_LG2\ \ \ \ \ \ \ \ \ \ \ \ \ \ 3.0102999566398120e-\/1}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ CUDART\_LG2\_HI\ \ \ \ \ \ \ \ \ \ \ 3.0102999566398120e-\/1}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ CUDART\_LG2\_LO\ \ \ \ \ \ \ \ \ (-\/2.8037281277851704e-\/18)}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ CUDART\_LGE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 4.3429448190325182e-\/1}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ CUDART\_LGE\_HI\ \ \ \ \ \ \ \ \ \ \ 4.3429448190325182e-\/1}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ CUDART\_LGE\_LO\ \ \ \ \ \ \ \ \ \ \ 1.09831965021676510e-\/17}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ CUDART\_LN2\ \ \ \ \ \ \ \ \ \ \ \ \ \ 6.9314718055994529e-\/1}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ CUDART\_LN2\_HI\ \ \ \ \ \ \ \ \ \ \ 6.9314718055994529e-\/1}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ CUDART\_LN2\_LO\ \ \ \ \ \ \ \ \ \ \ 2.3190468138462996e-\/17}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ CUDART\_LNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ 2.3025850929940459e+0}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ CUDART\_LNT\_HI\ \ \ \ \ \ \ \ \ \ \ 2.3025850929940459e+0}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ CUDART\_LNT\_LO\ \ \ \ \ \ \ \ \ (-\/2.1707562233822494e-\/16)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ CUDART\_LNPI\ \ \ \ \ \ \ \ \ \ \ \ \ 1.1447298858494002e+0}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ CUDART\_LN2\_X\_1024\ \ \ \ \ \ \ 7.0978271289338397e+2}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ CUDART\_LN2\_X\_1025\ \ \ \ \ \ \ 7.1047586007394398e+2}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ CUDART\_LN2\_X\_1075\ \ \ \ \ \ \ 7.4513321910194122e+2}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ CUDART\_LG2\_X\_1024\ \ \ \ \ \ \ 3.0825471555991675e+2}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ CUDART\_LG2\_X\_1075\ \ \ \ \ \ \ 3.2360724533877976e+2}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_23\ \ \ \ \ \ \ \ 8388608.0}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_52\ \ \ \ \ \ \ \ 4503599627370496.0}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_53\ \ \ \ \ \ \ \ 9007199254740992.0}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_54\ \ \ \ \ \ \ \ 18014398509481984.0}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_M54\ \ \ \ \ \ \ 5.5511151231257827e-\/17}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ CUDART\_TWO\_TO\_M1022\ \ \ \ \ 2.22507385850720140e-\/308}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ CUDART\_TRIG\_PLOSS\ \ \ \ \ \ \ 2147483648.0}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ CUDART\_DBL2INT\_CVT\ \ \ \ \ \ 6755399441055744.0}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_\_MATH\_CONSTANTS\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

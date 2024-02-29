@@ -1,0 +1,436 @@
+\doxysection{EGL Interoperability}
+\hypertarget{group___c_u_d_a___e_g_l}{}\label{group___c_u_d_a___e_g_l}\index{EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga7bc3e61e5d878dd69282edba665eb35b}{cu\+Graphics\+EGLRegister\+Image}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLImage\+KHR}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{image}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Registers an EGL image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}{cu\+EGLStream\+Consumer\+Connect}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStream\+KHR}} stream)
+\begin{DoxyCompactList}\small\item\em Connect CUDA to EGLStream as a consumer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga6b3f640b31ef8d9897327d2449b3c158}{cu\+EGLStream\+Consumer\+Connect\+With\+Flags}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStream\+KHR}} stream, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Connect CUDA to EGLStream as a consumer with given flags. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}{cu\+EGLStream\+Consumer\+Disconnect}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}})
+\begin{DoxyCompactList}\small\item\em Disconnect CUDA as a consumer to EGLStream . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}{cu\+EGLStream\+Consumer\+Acquire\+Frame}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Stream}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{timeout}})
+\begin{DoxyCompactList}\small\item\em Acquire an image frame from the EGLStream with CUDA as a consumer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}{cu\+EGLStream\+Consumer\+Release\+Frame}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Cuda\+Resource}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Stream}})
+\begin{DoxyCompactList}\small\item\em Releases the last frame acquired from the EGLStream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14}{cu\+EGLStream\+Producer\+Connect}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStream\+KHR}} stream, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLint}} width, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLint}} height)
+\begin{DoxyCompactList}\small\item\em Connect CUDA to EGLStream as a producer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141}{cu\+EGLStream\+Producer\+Disconnect}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}})
+\begin{DoxyCompactList}\small\item\em Disconnect CUDA as a producer to EGLStream . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga6d89c27d19168a473508c81bbb77807a}{cu\+EGLStream\+Producer\+Present\+Frame}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}}, \mbox{\hyperlink{struct_c_uegl_frame__st}{CUegl\+Frame}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{eglframe}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Stream}})
+\begin{DoxyCompactList}\small\item\em Present a CUDA egl\+Frame to the EGLStream with CUDA as a producer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga54c2f11d27da50a3ada30d14e7ec13c8}{cu\+EGLStream\+Producer\+Return\+Frame}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{conn}}, \mbox{\hyperlink{struct_c_uegl_frame__st}{CUegl\+Frame}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{eglframe}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Stream}})
+\begin{DoxyCompactList}\small\item\em Return the CUDA egl\+Frame to the EGLStream released by the consumer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_gae81e04863456be1100e2b4c7783bb81c}{cu\+Graphics\+Resource\+Get\+Mapped\+Egl\+Frame}} (\mbox{\hyperlink{struct_c_uegl_frame__st}{CUegl\+Frame}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{egl\+Frame}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} resource, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{index}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mip\+Level}})
+\begin{DoxyCompactList}\small\item\em Get an egl\+Frame through which to access a registered EGL graphics resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_g_l_ga2920a886014d7f79ec5e633b71da5c47}{cu\+Event\+Create\+From\+EGLSync}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ph\+Event}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLSync\+KHR}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{egl\+Sync}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Creates an event from EGLSync object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ EGL interoperability functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the EGL interoperability functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}\label{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamConsumerAcquireFrame@{cuEGLStreamConsumerAcquireFrame}}
+\index{cuEGLStreamConsumerAcquireFrame@{cuEGLStreamConsumerAcquireFrame}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamConsumerAcquireFrame()}{cuEGLStreamConsumerAcquireFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Consumer\+Acquire\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}}]{p\+Stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Acquire an image frame from the EGLStream with CUDA as a consumer. 
+
+Acquire an image frame from EGLStream\+KHR. This API can also acquire an old frame presented by the producer unless explicitly disabled by setting EGL\+\_\+\+SUPPORT\+\_\+\+REUSE\+\_\+\+NV flag to EGL\+\_\+\+FALSE during stream initialization. By default, EGLStream is created with this flag set to EGL\+\_\+\+TRUE. \doxylink{group___c_u_d_a___e_g_l_gae81e04863456be1100e2b4c7783bb81c}{cu\+Graphics\+Resource\+Get\+Mapped\+Egl\+Frame} can be called on {\ttfamily p\+Cuda\+Resource} to get CUegl\+Frame.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Connection on which to acquire \\
+\hline
+{\em p\+Cuda\+Resource} & -\/ CUDA resource on which the stream frame will be mapped for use. \\
+\hline
+{\em p\+Stream} & -\/ CUDA stream for synchronization and any data migrations implied by \doxylink{group___c_u_d_a___t_y_p_e_s_gaa9c90614957a62578d68c823f189e93e}{CUegl\+Resource\+Location\+Flags}. \\
+\hline
+{\em timeout} & -\/ Desired timeout in usec for a new frame to be acquired. If set as \doxylink{group___c_u_d_a___t_y_p_e_s_ga71b9a58998751468a873848efd699af3}{CUDA\+\_\+\+EGL\+\_\+\+INFINITE\+\_\+\+TIMEOUT}, acquire waits infinitely. After timeout occurs CUDA consumer tries to acquire an old frame if available and EGL\+\_\+\+SUPPORT\+\_\+\+REUSE\+\_\+\+NV flag is set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa65460d83f63575af9805ca59f8f19d74}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+TIMEOUT},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}{cu\+EGLStream\+Consumer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}{cu\+EGLStream\+Consumer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}{cu\+EGLStream\+Consumer\+Acquire\+Frame}, \doxylink{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}{cu\+EGLStream\+Consumer\+Release\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_gaf7982e1bf6215fe5a0d77881c3092256}{cuda\+EGLStream\+Consumer\+Acquire\+Frame} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}\label{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamConsumerConnect@{cuEGLStreamConsumerConnect}}
+\index{cuEGLStreamConsumerConnect@{cuEGLStreamConsumerConnect}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamConsumerConnect()}{cuEGLStreamConsumerConnect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Consumer\+Connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStream\+KHR}}}]{stream }\end{DoxyParamCaption})}
+
+
+
+Connect CUDA to EGLStream as a consumer. 
+
+Connect CUDA as a consumer to EGLStream\+KHR specified by {\ttfamily stream}.
+
+The EGLStream\+KHR is an EGL object that transfers a sequence of image frames from one API to another.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Pointer to the returned connection handle \\
+\hline
+{\em stream} & -\/ EGLStream\+KHR handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}{cu\+EGLStream\+Consumer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}{cu\+EGLStream\+Consumer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}{cu\+EGLStream\+Consumer\+Acquire\+Frame}, \doxylink{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}{cu\+EGLStream\+Consumer\+Release\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga5bb9e69ddd938a8e28c7d47939420863}{cuda\+EGLStream\+Consumer\+Connect} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_ga6b3f640b31ef8d9897327d2449b3c158}\label{group___c_u_d_a___e_g_l_ga6b3f640b31ef8d9897327d2449b3c158} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamConsumerConnectWithFlags@{cuEGLStreamConsumerConnectWithFlags}}
+\index{cuEGLStreamConsumerConnectWithFlags@{cuEGLStreamConsumerConnectWithFlags}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamConsumerConnectWithFlags()}{cuEGLStreamConsumerConnectWithFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Consumer\+Connect\+With\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStream\+KHR}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Connect CUDA to EGLStream as a consumer with given flags. 
+
+Connect CUDA as a consumer to EGLStream\+KHR specified by {\ttfamily stream} with specified {\ttfamily flags} defined by CUegl\+Resource\+Location\+Flags.
+
+The flags specify whether the consumer wants to access frames from system memory or video memory. Default is \doxylink{group___c_u_d_a___t_y_p_e_s_gga3c8fee650dc5b3fbd433dcebec76b35aa115dedc3b0a393b00d2c38d996daeedc}{CU\+\_\+\+EGL\+\_\+\+RESOURCE\+\_\+\+LOCATION\+\_\+\+VIDMEM}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Pointer to the returned connection handle \\
+\hline
+{\em stream} & -\/ EGLStream\+KHR handle \\
+\hline
+{\em flags} & -\/ Flags denote intended location -\/ system or video.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}{cu\+EGLStream\+Consumer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}{cu\+EGLStream\+Consumer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}{cu\+EGLStream\+Consumer\+Acquire\+Frame}, \doxylink{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}{cu\+EGLStream\+Consumer\+Release\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga766a17b9e632144db102655a60fcf558}{cuda\+EGLStream\+Consumer\+Connect\+With\+Flags} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}\label{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamConsumerDisconnect@{cuEGLStreamConsumerDisconnect}}
+\index{cuEGLStreamConsumerDisconnect@{cuEGLStreamConsumerDisconnect}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamConsumerDisconnect()}{cuEGLStreamConsumerDisconnect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Consumer\+Disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn }\end{DoxyParamCaption})}
+
+
+
+Disconnect CUDA as a consumer to EGLStream . 
+
+Disconnect CUDA as a consumer to EGLStream\+KHR.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Conection to disconnect.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}{cu\+EGLStream\+Consumer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}{cu\+EGLStream\+Consumer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}{cu\+EGLStream\+Consumer\+Acquire\+Frame}, \doxylink{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}{cu\+EGLStream\+Consumer\+Release\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga54ba83aa1441453d28726971612adb26}{cuda\+EGLStream\+Consumer\+Disconnect} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}\label{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamConsumerReleaseFrame@{cuEGLStreamConsumerReleaseFrame}}
+\index{cuEGLStreamConsumerReleaseFrame@{cuEGLStreamConsumerReleaseFrame}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamConsumerReleaseFrame()}{cuEGLStreamConsumerReleaseFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Consumer\+Release\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}}}]{p\+Cuda\+Resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}}]{p\+Stream }\end{DoxyParamCaption})}
+
+
+
+Releases the last frame acquired from the EGLStream. 
+
+Release the acquired image frame specified by {\ttfamily p\+Cuda\+Resource} to EGLStream\+KHR. If EGL\+\_\+\+SUPPORT\+\_\+\+REUSE\+\_\+\+NV flag is set to EGL\+\_\+\+TRUE, at the time of EGL creation this API doesn\textquotesingle{}t release the last frame acquired on the EGLStream. By default, EGLStream is created with this flag set to EGL\+\_\+\+TRUE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Connection on which to release \\
+\hline
+{\em p\+Cuda\+Resource} & -\/ CUDA resource whose corresponding frame is to be released \\
+\hline
+{\em p\+Stream} & -\/ CUDA stream on which release will be done.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gaccb5a86d070515b3dc5be936c324a6f4}{cu\+EGLStream\+Consumer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_ga0b3b0d8986eba18cc4d91d1b9f75faf7}{cu\+EGLStream\+Consumer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga272a861df5a4e3a3d6b692aa6710ba81}{cu\+EGLStream\+Consumer\+Acquire\+Frame}, \doxylink{group___c_u_d_a___e_g_l_gafdb3630329921d02a8ca033fcbc690fa}{cu\+EGLStream\+Consumer\+Release\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga5965a95ed151d6f69c3f21c88e000338}{cuda\+EGLStream\+Consumer\+Release\+Frame} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14}\label{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamProducerConnect@{cuEGLStreamProducerConnect}}
+\index{cuEGLStreamProducerConnect@{cuEGLStreamProducerConnect}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamProducerConnect()}{cuEGLStreamProducerConnect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Producer\+Connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLStream\+KHR}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLint}}}]{width,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLint}}}]{height }\end{DoxyParamCaption})}
+
+
+
+Connect CUDA to EGLStream as a producer. 
+
+Connect CUDA as a producer to EGLStream\+KHR specified by {\ttfamily stream}.
+
+The EGLStream\+KHR is an EGL object that transfers a sequence of image frames from one API to another.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Pointer to the returned connection handle \\
+\hline
+{\em stream} & -\/ EGLStream\+KHR handle \\
+\hline
+{\em width} & -\/ width of the image to be submitted to the stream \\
+\hline
+{\em height} & -\/ height of the image to be submitted to the stream\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14}{cu\+EGLStream\+Producer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141}{cu\+EGLStream\+Producer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga6d89c27d19168a473508c81bbb77807a}{cu\+EGLStream\+Producer\+Present\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_gaabbd7fe416e30e49e6146f41ceab5c48}{cuda\+EGLStream\+Producer\+Connect} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141}\label{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamProducerDisconnect@{cuEGLStreamProducerDisconnect}}
+\index{cuEGLStreamProducerDisconnect@{cuEGLStreamProducerDisconnect}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamProducerDisconnect()}{cuEGLStreamProducerDisconnect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Producer\+Disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn }\end{DoxyParamCaption})}
+
+
+
+Disconnect CUDA as a producer to EGLStream . 
+
+Disconnect CUDA as a producer to EGLStream\+KHR.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Conection to disconnect.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14}{cu\+EGLStream\+Producer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141}{cu\+EGLStream\+Producer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga6d89c27d19168a473508c81bbb77807a}{cu\+EGLStream\+Producer\+Present\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga98b017dfd02beb685562e54c13712e07}{cuda\+EGLStream\+Producer\+Disconnect} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_ga6d89c27d19168a473508c81bbb77807a}\label{group___c_u_d_a___e_g_l_ga6d89c27d19168a473508c81bbb77807a} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamProducerPresentFrame@{cuEGLStreamProducerPresentFrame}}
+\index{cuEGLStreamProducerPresentFrame@{cuEGLStreamProducerPresentFrame}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamProducerPresentFrame()}{cuEGLStreamProducerPresentFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Producer\+Present\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn,  }\item[{\mbox{\hyperlink{struct_c_uegl_frame__st}{CUegl\+Frame}}}]{eglframe,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}}]{p\+Stream }\end{DoxyParamCaption})}
+
+
+
+Present a CUDA egl\+Frame to the EGLStream with CUDA as a producer. 
+
+When a frame is presented by the producer, it gets associated with the EGLStream and thus it is illegal to free the frame before the producer is disconnected. If a frame is freed and reused it may lead to undefined behavior.
+
+If producer and consumer are on different GPUs (i\+GPU and d\+GPU) then frametype \doxylink{group___c_u_d_a___t_y_p_e_s_ggaf9e66bcc793cb26cf62399e7e8ed782aac02019e2bb4a56d31db30925d567d101}{CU\+\_\+\+EGL\+\_\+\+FRAME\+\_\+\+TYPE\+\_\+\+ARRAY} is not supported. \doxylink{group___c_u_d_a___t_y_p_e_s_ggaf9e66bcc793cb26cf62399e7e8ed782aafc6cb007c686d8cad86705005c55bf33}{CU\+\_\+\+EGL\+\_\+\+FRAME\+\_\+\+TYPE\+\_\+\+PITCH} can be used for such cross-\/device applications.
+
+The CUegl\+Frame is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a7f85134c3cc2019dede6d53c454dd750}{pArray}}[\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4269718bae6e29c6059d666ec76df24b}{MAX\_PLANES}}];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \mbox{\hyperlink{struct_c_uegl_frame__st_a5f8072a37631288222e1d8cc5652b65a}{pPitch}}[\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4269718bae6e29c6059d666ec76df24b}{MAX\_PLANES}}];}
+\DoxyCodeLine{\ \ \ \ \}\ frame;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a5fc58c3efa9ddebf81b1b2e29e2157cb}{width}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a9dfd09070958de146c7885dd44f9d227}{height}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_ab0709bd78f7af5c86bdf7194ab92df31}{depth}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a2d116e50a6e790f7972863b3de8eff6b}{pitch}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a0572f65db750c842564225d13176017b}{planeCount}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a07040a68f698ab0e720fd9508d16f8ee}{numChannels}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga352a46e58c545cb7e0bf9973cc39543d}{CUeglFrameType}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_adf7dca89fa162c7a1ba8c20bfe6430c6}{frameType}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1bc8f258fa8bbb5b99d2afbc7a2b3454}{CUeglColorFormat}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_abcc317a7da8321e9faa739948a6d57f6}{eglColorFormat}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\_format}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a96a7fe6a061a28dc6ef28f05e9cb5962}{cuFormat}};}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame}};}
+
+\end{DoxyCode}
+
+
+For CUegl\+Frame of type \doxylink{group___c_u_d_a___t_y_p_e_s_ggaf9e66bcc793cb26cf62399e7e8ed782aafc6cb007c686d8cad86705005c55bf33}{CU\+\_\+\+EGL\+\_\+\+FRAME\+\_\+\+TYPE\+\_\+\+PITCH}, the application may present sub-\/region of a memory allocation. In that case, the pitched pointer will specify the start address of the sub-\/region in the allocation and corresponding CUegl\+Frame fields will specify the dimensions of the sub-\/region.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Connection on which to present the CUDA array \\
+\hline
+{\em eglframe} & -\/ CUDA Eglstream Proucer Frame handle to be sent to the consumer over Egl\+Stream. \\
+\hline
+{\em p\+Stream} & -\/ CUDA stream on which to present the frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14}{cu\+EGLStream\+Producer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141}{cu\+EGLStream\+Producer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga54c2f11d27da50a3ada30d14e7ec13c8}{cu\+EGLStream\+Producer\+Return\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga3b33f33fa16110c7c2e03c04f7307ece}{cuda\+EGLStream\+Producer\+Present\+Frame} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_ga54c2f11d27da50a3ada30d14e7ec13c8}\label{group___c_u_d_a___e_g_l_ga54c2f11d27da50a3ada30d14e7ec13c8} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEGLStreamProducerReturnFrame@{cuEGLStreamProducerReturnFrame}}
+\index{cuEGLStreamProducerReturnFrame@{cuEGLStreamProducerReturnFrame}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEGLStreamProducerReturnFrame()}{cuEGLStreamProducerReturnFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+EGLStream\+Producer\+Return\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga60c595264697050bc2bb8e00cf5f86e7}{CUegl\+Stream\+Connection}} \texorpdfstring{$\ast$}{*}}]{conn,  }\item[{\mbox{\hyperlink{struct_c_uegl_frame__st}{CUegl\+Frame}} \texorpdfstring{$\ast$}{*}}]{eglframe,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} \texorpdfstring{$\ast$}{*}}]{p\+Stream }\end{DoxyParamCaption})}
+
+
+
+Return the CUDA egl\+Frame to the EGLStream released by the consumer. 
+
+This API can potentially return CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+TIMEOUT if the consumer has not returned a frame to EGL stream. If timeout is returned the application can retry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & -\/ Connection on which to return \\
+\hline
+{\em eglframe} & -\/ CUDA Eglstream Proucer Frame handle returned from the consumer over Egl\+Stream. \\
+\hline
+{\em p\+Stream} & -\/ CUDA stream on which to return the frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa65460d83f63575af9805ca59f8f19d74}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+TIMEOUT}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_gafecfdb2cfb15b63949f8f6c05caaef14}{cu\+EGLStream\+Producer\+Connect}, \doxylink{group___c_u_d_a___e_g_l_gaac14f4eeacea793a6b36126dd5ef6141}{cu\+EGLStream\+Producer\+Disconnect}, \doxylink{group___c_u_d_a___e_g_l_ga6d89c27d19168a473508c81bbb77807a}{cu\+EGLStream\+Producer\+Present\+Frame}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga627c7e015d45a29032c40d03fc6df3b7}{cuda\+EGLStream\+Producer\+Return\+Frame} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_ga2920a886014d7f79ec5e633b71da5c47}\label{group___c_u_d_a___e_g_l_ga2920a886014d7f79ec5e633b71da5c47} 
+\index{EGL Interoperability@{EGL Interoperability}!cuEventCreateFromEGLSync@{cuEventCreateFromEGLSync}}
+\index{cuEventCreateFromEGLSync@{cuEventCreateFromEGLSync}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuEventCreateFromEGLSync()}{cuEventCreateFromEGLSync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Create\+From\+EGLSync (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \texorpdfstring{$\ast$}{*}}]{ph\+Event,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLSync\+KHR}}}]{egl\+Sync,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Creates an event from EGLSync object. 
+
+Creates an event \texorpdfstring{$\ast$}{*}ph\+Event from an EGLSync\+KHR egl\+Sync with the flags specified via {\ttfamily flags}. Valid flags include\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+DEFAULT\+:} Default event creation flag.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+BLOCKING\+\_\+\+SYNC\+:} Specifies that the created event should use blocking synchronization. A CPU thread that uses \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize()} to wait on an event created with this flag will block until the event has actually been completed.
+\end{DoxyItemize}
+
+Once the {\ttfamily egl\+Sync} gets destroyed, cu\+Event\+Destroy is the only API that can be invoked on the event.
+
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record} and Timing\+Data are not supported for events created from EGLSync.
+
+The EGLSync\+KHR is an opaque handle to an EGL sync object. typedef void\texorpdfstring{$\ast$}{*} EGLSync\+KHR
+
+
+\begin{DoxyParams}{Parameters}
+{\em ph\+Event} & -\/ Returns newly created event \\
+\hline
+{\em egl\+Sync} & -\/ Opaque handle to EGLSync object \\
+\hline
+{\em flags} & -\/ Event creation flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}, cu\+Event\+Destroy 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_ga7bc3e61e5d878dd69282edba665eb35b}\label{group___c_u_d_a___e_g_l_ga7bc3e61e5d878dd69282edba665eb35b} 
+\index{EGL Interoperability@{EGL Interoperability}!cuGraphicsEGLRegisterImage@{cuGraphicsEGLRegisterImage}}
+\index{cuGraphicsEGLRegisterImage@{cuGraphicsEGLRegisterImage}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsEGLRegisterImage()}{cuGraphicsEGLRegisterImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+EGLRegister\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}} \texorpdfstring{$\ast$}{*}}]{p\+Cuda\+Resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{EGLImage\+KHR}}}]{image,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Registers an EGL image. 
+
+Registers the EGLImage\+KHR specified by {\ttfamily image} for access by CUDA. A handle to the registered object is returned as {\ttfamily p\+Cuda\+Resource}. Additional Mapping/\+Unmapping is not required for the registered resource and \doxylink{group___c_u_d_a___e_g_l_gae81e04863456be1100e2b4c7783bb81c}{cu\+Graphics\+Resource\+Get\+Mapped\+Egl\+Frame} can be directly called on the {\ttfamily p\+Cuda\+Resource}.
+
+The application will be responsible for synchronizing access to shared objects. The application must ensure that any pending operation which access the objects have completed before passing control to CUDA. This may be accomplished by issuing and waiting for gl\+Finish command on all GLcontexts (for Open\+GL and likewise for other APIs). The application will be also responsible for ensuring that any pending operation on the registered CUDA resource has completed prior to executing subsequent commands in other APIs accesing the same memory objects. This can be accomplished by calling cu\+Ctx\+Synchronize or cu\+Event\+Synchronize (preferably).
+
+The surface\textquotesingle{}s intended usage is specified using {\ttfamily flags}, as follows\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+NONE\+:} Specifies no hints about how this resource will be used. It is therefore assumed that this resource will be read from and written to by CUDA. This is the default value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+READ\+\_\+\+ONLY\+:} Specifies that CUDA will not write to this resource.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+GRAPHICS\+\_\+\+MAP\+\_\+\+RESOURCE\+\_\+\+FLAGS\+\_\+\+WRITE\+\_\+\+DISCARD\+:} Specifies that CUDA will not read from this resource and will write over the entire contents of the resource, so none of the data previously stored in the resource will be preserved.
+\end{DoxyItemize}
+
+The EGLImage\+KHR is an object which can be used to create EGLImage target resource. It is defined as a void pointer. typedef void\texorpdfstring{$\ast$}{*} EGLImage\+KHR
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Cuda\+Resource} & -\/ Pointer to the returned object handle \\
+\hline
+{\em image} & -\/ An EGLImage\+KHR image which can be used to create target resource. \\
+\hline
+{\em flags} & -\/ Map flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa240bb253a699176d9f49ee2f2c91b61b}{CUDA\+\_\+\+ERROR\+\_\+\+ALREADY\+\_\+\+MAPPED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT},
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_g_l_ga7bc3e61e5d878dd69282edba665eb35b}{cu\+Graphics\+EGLRegister\+Image}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga34d7f84a6a77fde9f3539e177d93427f}{cu\+Graphics\+Unregister\+Resource}, cu\+Graphics\+Resource\+Set\+Map\+Flags, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga819979a4b3051aa5046b855cf86a19bd}{cu\+Graphics\+Unmap\+Resources}, \doxylink{group___c_u_d_a_r_t___e_g_l_ga3faaa02169859d67e4e587d5a1cf0c13}{cuda\+Graphics\+EGLRegister\+Image} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_g_l_gae81e04863456be1100e2b4c7783bb81c}\label{group___c_u_d_a___e_g_l_gae81e04863456be1100e2b4c7783bb81c} 
+\index{EGL Interoperability@{EGL Interoperability}!cuGraphicsResourceGetMappedEglFrame@{cuGraphicsResourceGetMappedEglFrame}}
+\index{cuGraphicsResourceGetMappedEglFrame@{cuGraphicsResourceGetMappedEglFrame}!EGL Interoperability@{EGL Interoperability}}
+\doxysubsubsection{\texorpdfstring{cuGraphicsResourceGetMappedEglFrame()}{cuGraphicsResourceGetMappedEglFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Graphics\+Resource\+Get\+Mapped\+Egl\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_uegl_frame__st}{CUegl\+Frame}} \texorpdfstring{$\ast$}{*}}]{egl\+Frame,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}}}]{resource,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{index,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{mip\+Level }\end{DoxyParamCaption})}
+
+
+
+Get an egl\+Frame through which to access a registered EGL graphics resource. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}egl\+Frame} an egl\+Frame pointer through which the registered graphics resource {\ttfamily resource} may be accessed. This API can only be called for registered EGL graphics resources.
+
+The CUegl\+Frame is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame\_st}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a7f85134c3cc2019dede6d53c454dd750}{pArray}}[\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4269718bae6e29c6059d666ec76df24b}{MAX\_PLANES}}];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \mbox{\hyperlink{struct_c_uegl_frame__st_a5f8072a37631288222e1d8cc5652b65a}{pPitch}}[\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga4269718bae6e29c6059d666ec76df24b}{MAX\_PLANES}}];}
+\DoxyCodeLine{\ \ \ \ \}\ frame;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a5fc58c3efa9ddebf81b1b2e29e2157cb}{width}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a9dfd09070958de146c7885dd44f9d227}{height}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_ab0709bd78f7af5c86bdf7194ab92df31}{depth}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a2d116e50a6e790f7972863b3de8eff6b}{pitch}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a0572f65db750c842564225d13176017b}{planeCount}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a07040a68f698ab0e720fd9508d16f8ee}{numChannels}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga352a46e58c545cb7e0bf9973cc39543d}{CUeglFrameType}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_adf7dca89fa162c7a1ba8c20bfe6430c6}{frameType}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1bc8f258fa8bbb5b99d2afbc7a2b3454}{CUeglColorFormat}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_abcc317a7da8321e9faa739948a6d57f6}{eglColorFormat}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gabb44902d50e46bbf9efbba3010c81e8c}{CUarray\_format}}\ \mbox{\hyperlink{struct_c_uegl_frame__st_a96a7fe6a061a28dc6ef28f05e9cb5962}{cuFormat}};}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_c_uegl_frame__st}{CUeglFrame}};}
+
+\end{DoxyCode}
+
+
+If {\ttfamily resource} is not registered then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED} is returned.
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em egl\+Frame} & -\/ Returned egl\+Frame. \\
+\hline
+{\em resource} & -\/ Registered resource to access. \\
+\hline
+{\em index} & -\/ Index for cubemap surfaces. \\
+\hline
+{\em mip\+Level} & -\/ Mipmap level for the subresource to access.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae098433b926c9afdb6b6bdf191629447}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+MAPPED}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_ga6f2c87945cd28f3552eeb116fe26d10f}{cu\+Graphics\+Map\+Resources}, \doxylink{group___c_u_d_a___g_r_a_p_h_i_c_s_gab978741ef45b95be0d9afd8ff2bb4b9c}{cu\+Graphics\+Sub\+Resource\+Get\+Mapped\+Array}, cu\+Graphics\+Resource\+Get\+Mapped\+Pointer, \doxylink{group___c_u_d_a_r_t___e_g_l_ga5c511b01f2e3369d563e4f7c61cc57e7}{cuda\+Graphics\+Resource\+Get\+Mapped\+Egl\+Frame} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}

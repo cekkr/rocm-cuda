@@ -1,0 +1,60 @@
+\doxysection{cuda\+External\+Memory\+Mipmapped\+Array\+Desc Struct Reference}
+\hypertarget{structcuda_external_memory_mipmapped_array_desc}{}\label{structcuda_external_memory_mipmapped_array_desc}\index{cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_a2f9441c3c6e3100f1517ccaf668ffd83}{offset}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc}} \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_a42333e3049cc4a40213b086be45927e1}{format\+Desc}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_extent}{cuda\+Extent}} \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_acba41d5152a8458ac72a24e65ee0f3ac}{extent}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_ade6d5579b7f13034ea82e06012c8758f}{flags}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_external_memory_mipmapped_array_desc_a4a939b3d6c1fca916dd78679049f36eb}{num\+Levels}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+External memory mipmap descriptor 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_external_memory_mipmapped_array_desc_acba41d5152a8458ac72a24e65ee0f3ac}\label{structcuda_external_memory_mipmapped_array_desc_acba41d5152a8458ac72a24e65ee0f3ac} 
+\index{cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}!extent@{extent}}
+\index{extent@{extent}!cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}}
+\doxysubsubsection{\texorpdfstring{extent}{extent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_extent}{cuda\+Extent}} cuda\+External\+Memory\+Mipmapped\+Array\+Desc\+::extent}
+
+Dimensions of base level of the mipmap chain \Hypertarget{structcuda_external_memory_mipmapped_array_desc_ade6d5579b7f13034ea82e06012c8758f}\label{structcuda_external_memory_mipmapped_array_desc_ade6d5579b7f13034ea82e06012c8758f} 
+\index{cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}!flags@{flags}}
+\index{flags@{flags}!cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+External\+Memory\+Mipmapped\+Array\+Desc\+::flags}
+
+Flags associated with CUDA mipmapped arrays. See \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gabbd44cd19b47353226575a86c6c5be83}{cuda\+Malloc\+Mipmapped\+Array} \Hypertarget{structcuda_external_memory_mipmapped_array_desc_a42333e3049cc4a40213b086be45927e1}\label{structcuda_external_memory_mipmapped_array_desc_a42333e3049cc4a40213b086be45927e1} 
+\index{cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}!formatDesc@{formatDesc}}
+\index{formatDesc@{formatDesc}!cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}}
+\doxysubsubsection{\texorpdfstring{formatDesc}{formatDesc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc}} cuda\+External\+Memory\+Mipmapped\+Array\+Desc\+::format\+Desc}
+
+Format of base level of the mipmap chain \Hypertarget{structcuda_external_memory_mipmapped_array_desc_a4a939b3d6c1fca916dd78679049f36eb}\label{structcuda_external_memory_mipmapped_array_desc_a4a939b3d6c1fca916dd78679049f36eb} 
+\index{cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}!numLevels@{numLevels}}
+\index{numLevels@{numLevels}!cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}}
+\doxysubsubsection{\texorpdfstring{numLevels}{numLevels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+External\+Memory\+Mipmapped\+Array\+Desc\+::num\+Levels}
+
+Total number of levels in the mipmap chain \Hypertarget{structcuda_external_memory_mipmapped_array_desc_a2f9441c3c6e3100f1517ccaf668ffd83}\label{structcuda_external_memory_mipmapped_array_desc_a2f9441c3c6e3100f1517ccaf668ffd83} 
+\index{cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}!offset@{offset}}
+\index{offset@{offset}!cudaExternalMemoryMipmappedArrayDesc@{cudaExternalMemoryMipmappedArrayDesc}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} cuda\+External\+Memory\+Mipmapped\+Array\+Desc\+::offset}
+
+Offset into the memory object where the base level of the mipmap chain is. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,355 @@
+\doxysection{Execution Control \mbox{[}DEPRECATED\mbox{]}}
+\hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d}{}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d}\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} x, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} y, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} z)
+\begin{DoxyCompactList}\small\item\em Sets the block-\/dimensions for the function. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} bytes)
+\begin{DoxyCompactList}\small\item\em Sets the dynamic shared-\/memory size for the function. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numbytes}})
+\begin{DoxyCompactList}\small\item\em Sets the parameter size for the function. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} offset, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} value)
+\begin{DoxyCompactList}\small\item\em Adds an integer parameter to the function\textquotesingle{}s argument list. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} offset, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} value)
+\begin{DoxyCompactList}\small\item\em Adds a floating-\/point parameter to the function\textquotesingle{}s argument list. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} offset, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{numbytes}})
+\begin{DoxyCompactList}\small\item\em Adds arbitrary data to the function\textquotesingle{}s argument list. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} f)
+\begin{DoxyCompactList}\small\item\em Launches a CUDA function. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} f, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{grid\+\_\+width}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{grid\+\_\+height}})
+\begin{DoxyCompactList}\small\item\em Launches a CUDA function. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} f, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{grid\+\_\+width}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{grid\+\_\+height}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Launches a CUDA function. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gac2e43c79a8305aa5c5dbd9c6204de33b}{cu\+Param\+Set\+Tex\+Ref}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hfunc}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{texunit}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Tex\+Ref}})
+\begin{DoxyCompactList}\small\item\em Adds a texture-\/reference to the function\textquotesingle{}s argument list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ deprecated execution control functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the deprecated execution control functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuFuncSetBlockShape@{cuFuncSetBlockShape}}
+\index{cuFuncSetBlockShape@{cuFuncSetBlockShape}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuFuncSetBlockShape()}{cuFuncSetBlockShape()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Func\+Set\+Block\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{x,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{y,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{z }\end{DoxyParamCaption})}
+
+
+
+Sets the block-\/dimensions for the function. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000006}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Specifies the {\ttfamily x}, {\ttfamily y}, and {\ttfamily z} dimensions of the thread blocks that are created when the kernel given by {\ttfamily hfunc} is launched.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Kernel to specify dimensions of \\
+\hline
+{\em x} & -\/ X dimension \\
+\hline
+{\em y} & -\/ Y dimension \\
+\hline
+{\em z} & -\/ Z dimension\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuFuncSetSharedSize@{cuFuncSetSharedSize}}
+\index{cuFuncSetSharedSize@{cuFuncSetSharedSize}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuFuncSetSharedSize()}{cuFuncSetSharedSize()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Func\+Set\+Shared\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Sets the dynamic shared-\/memory size for the function. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000007}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Sets through {\ttfamily bytes} the amount of dynamic shared memory that will be available to each thread block when the kernel given by {\ttfamily hfunc} is launched.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Kernel to specify dynamic shared-\/memory size for \\
+\hline
+{\em bytes} & -\/ Dynamic shared-\/memory size per thread in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuLaunch@{cuLaunch}}
+\index{cuLaunch@{cuLaunch}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuLaunch()}{cuLaunch()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Launch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Launches a CUDA function. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000012}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Invokes the kernel {\ttfamily f} on a 1 x 1 x 1 grid of blocks. The block contains the number of threads specified by a previous call to \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape()}.
+
+The block shape, dynamic shared memory size, and parameter information must be set using \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf()}, and \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv()} prior to calling this function.
+
+Launching a function via \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel()} invalidates the function\textquotesingle{}s block shape, dynamic shared memory size, and parameter information. After launching via cu\+Launch\+Kernel, this state must be re-\/initialized prior to calling this function. Failure to do so results in undefined behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ Kernel to launch\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4f270bc1011b152febc8154b2b1e1b8d}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+FAILED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab5da09cc5697599a56a71a04184ffdaa}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa65460d83f63575af9805ca59f8f19d74}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+TIMEOUT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa9e36a98a3a2c5123d422b9a1b69dd5f6}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+INCOMPATIBLE\+\_\+\+TEXTURING}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad8a149ebc98aa90f6417e531fa645043}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+INIT\+\_\+\+FAILED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuLaunchGrid@{cuLaunchGrid}}
+\index{cuLaunchGrid@{cuLaunchGrid}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuLaunchGrid()}{cuLaunchGrid()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Launch\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{f,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{grid\+\_\+width,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{grid\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Launches a CUDA function. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000013}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Invokes the kernel {\ttfamily f} on a {\ttfamily grid\+\_\+width} x {\ttfamily grid\+\_\+height} grid of blocks. Each block contains the number of threads specified by a previous call to \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape()}.
+
+The block shape, dynamic shared memory size, and parameter information must be set using \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf()}, and \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv()} prior to calling this function.
+
+Launching a function via \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel()} invalidates the function\textquotesingle{}s block shape, dynamic shared memory size, and parameter information. After launching via cu\+Launch\+Kernel, this state must be re-\/initialized prior to calling this function. Failure to do so results in undefined behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ Kernel to launch \\
+\hline
+{\em grid\+\_\+width} & -\/ Width of grid in blocks \\
+\hline
+{\em grid\+\_\+height} & -\/ Height of grid in blocks\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4f270bc1011b152febc8154b2b1e1b8d}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+FAILED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab5da09cc5697599a56a71a04184ffdaa}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa65460d83f63575af9805ca59f8f19d74}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+TIMEOUT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa9e36a98a3a2c5123d422b9a1b69dd5f6}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+INCOMPATIBLE\+\_\+\+TEXTURING}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad8a149ebc98aa90f6417e531fa645043}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+INIT\+\_\+\+FAILED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuLaunchGridAsync@{cuLaunchGridAsync}}
+\index{cuLaunchGridAsync@{cuLaunchGridAsync}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuLaunchGridAsync()}{cuLaunchGridAsync()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Launch\+Grid\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{f,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{grid\+\_\+width,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{grid\+\_\+height,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Launches a CUDA function. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000014}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Invokes the kernel {\ttfamily f} on a {\ttfamily grid\+\_\+width} x {\ttfamily grid\+\_\+height} grid of blocks. Each block contains the number of threads specified by a previous call to \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape()}.
+
+The block shape, dynamic shared memory size, and parameter information must be set using \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti()}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf()}, and \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv()} prior to calling this function.
+
+Launching a function via \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel()} invalidates the function\textquotesingle{}s block shape, dynamic shared memory size, and parameter information. After launching via cu\+Launch\+Kernel, this state must be re-\/initialized prior to calling this function. Failure to do so results in undefined behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ Kernel to launch \\
+\hline
+{\em grid\+\_\+width} & -\/ Width of grid in blocks \\
+\hline
+{\em grid\+\_\+height} & -\/ Height of grid in blocks \\
+\hline
+{\em h\+Stream} & -\/ Stream identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa4f270bc1011b152febc8154b2b1e1b8d}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+FAILED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab5da09cc5697599a56a71a04184ffdaa}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa65460d83f63575af9805ca59f8f19d74}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+TIMEOUT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa9e36a98a3a2c5123d422b9a1b69dd5f6}{CUDA\+\_\+\+ERROR\+\_\+\+LAUNCH\+\_\+\+INCOMPATIBLE\+\_\+\+TEXTURING}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad8a149ebc98aa90f6417e531fa645043}{CUDA\+\_\+\+ERROR\+\_\+\+SHARED\+\_\+\+OBJECT\+\_\+\+INIT\+\_\+\+FAILED}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+In certain cases where cubins are created with no ABI (i.\+e., using {\ttfamily ptxas} {\ttfamily -\/-\/abi-\/compile} {\ttfamily no}), this function may serialize kernel launches. The CUDA driver retains asynchronous behavior by growing the per-\/thread stack as needed per launch and not shrinking it afterwards.
+\end{DoxyNote}
+\textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuParamSetf@{cuParamSetf}}
+\index{cuParamSetf@{cuParamSetf}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuParamSetf()}{cuParamSetf()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Param\+Setf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{offset,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds a floating-\/point parameter to the function\textquotesingle{}s argument list. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000010}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Sets a floating-\/point parameter that will be specified the next time the kernel corresponding to {\ttfamily hfunc} will be invoked. {\ttfamily offset} is a byte offset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Kernel to add parameter to \\
+\hline
+{\em offset} & -\/ Offset to add parameter to argument list \\
+\hline
+{\em value} & -\/ Value of parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuParamSeti@{cuParamSeti}}
+\index{cuParamSeti@{cuParamSeti}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuParamSeti()}{cuParamSeti()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Param\+Seti (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{offset,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds an integer parameter to the function\textquotesingle{}s argument list. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000009}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Sets an integer parameter that will be specified the next time the kernel corresponding to {\ttfamily hfunc} will be invoked. {\ttfamily offset} is a byte offset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Kernel to add parameter to \\
+\hline
+{\em offset} & -\/ Offset to add parameter to argument list \\
+\hline
+{\em value} & -\/ Value of parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuParamSetSize@{cuParamSetSize}}
+\index{cuParamSetSize@{cuParamSetSize}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuParamSetSize()}{cuParamSetSize()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Param\+Set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{numbytes }\end{DoxyParamCaption})}
+
+
+
+Sets the parameter size for the function. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000008}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Sets through {\ttfamily numbytes} the total size in bytes needed by the function parameters of the kernel corresponding to {\ttfamily hfunc}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Kernel to set parameter size for \\
+\hline
+{\em numbytes} & -\/ Size of parameter list in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gac2e43c79a8305aa5c5dbd9c6204de33b}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gac2e43c79a8305aa5c5dbd9c6204de33b} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuParamSetTexRef@{cuParamSetTexRef}}
+\index{cuParamSetTexRef@{cuParamSetTexRef}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuParamSetTexRef()}{cuParamSetTexRef()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Param\+Set\+Tex\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{texunit,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}}}]{h\+Tex\+Ref }\end{DoxyParamCaption})}
+
+
+
+Adds a texture-\/reference to the function\textquotesingle{}s argument list. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000015}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Makes the CUDA array or linear memory bound to the texture reference {\ttfamily h\+Tex\+Ref} available to a device program as a texture. In this version of CUDA, the texture-\/reference must be obtained via \doxylink{group___c_u_d_a___m_o_d_u_l_e_gaeb4a8ef013ada04bea64ed5e47e2b735}{cu\+Module\+Get\+Tex\+Ref()} and the {\ttfamily texunit} parameter must be set to \doxylink{group___c_u_d_a___t_y_p_e_s_ga3e9be6955a6a5c311ad5ea2debdd6613}{CU\+\_\+\+PARAM\+\_\+\+TR\+\_\+\+DEFAULT}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Kernel to add texture-\/reference to \\
+\hline
+{\em texunit} & -\/ Texture unit (must be \doxylink{group___c_u_d_a___t_y_p_e_s_ga3e9be6955a6a5c311ad5ea2debdd6613}{CU\+\_\+\+PARAM\+\_\+\+TR\+\_\+\+DEFAULT}) \\
+\hline
+{\em h\+Tex\+Ref} & -\/ Texture-\/reference to add to argument list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr 
+\end{DoxyReturn}
+\Hypertarget{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}\label{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48} 
+\index{Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}!cuParamSetv@{cuParamSetv}}
+\index{cuParamSetv@{cuParamSetv}!Execution Control \mbox{[}DEPRECATED\mbox{]}@{Execution Control [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuParamSetv()}{cuParamSetv()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Param\+Setv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}}}]{hfunc,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{offset,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{numbytes }\end{DoxyParamCaption})}
+
+
+
+Adds arbitrary data to the function\textquotesingle{}s argument list. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000011}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Copies an arbitrary amount of data (specified in {\ttfamily numbytes}) from {\ttfamily ptr} into the parameter space of the kernel corresponding to {\ttfamily hfunc}. {\ttfamily offset} is a byte offset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hfunc} & -\/ Kernel to add data to \\
+\hline
+{\em offset} & -\/ Offset to add data to argument list \\
+\hline
+{\em ptr} & -\/ Pointer to arbitrary data \\
+\hline
+{\em numbytes} & -\/ Size of data to copy in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid}, \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async}, \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}

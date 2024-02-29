@@ -1,0 +1,60 @@
+\doxysection{cuda\+Mem\+Alloc\+Node\+Params Struct Reference}
+\hypertarget{structcuda_mem_alloc_node_params}{}\label{structcuda_mem_alloc_node_params}\index{cudaMemAllocNodeParams@{cudaMemAllocNodeParams}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_props}{cuda\+Mem\+Pool\+Props}} \mbox{\hyperlink{structcuda_mem_alloc_node_params_a7b2f32f718dfdf64dd743a040d967027}{pool\+Props}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_access_desc}{cuda\+Mem\+Access\+Desc}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_mem_alloc_node_params_a6f3847cf96f7c5ef38e4c2fbad6f1aeb}{access\+Descs}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_mem_alloc_node_params_a83d6051d14c291c21ba3dc90a3a6cf0a}{access\+Desc\+Count}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_mem_alloc_node_params_aa291c1444b7cdbf7fc657cac47caa867}{bytesize}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_mem_alloc_node_params_a59bbad18974ca7b897445e5621be9816}{dptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Memory allocation node parameters 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_mem_alloc_node_params_a83d6051d14c291c21ba3dc90a3a6cf0a}\label{structcuda_mem_alloc_node_params_a83d6051d14c291c21ba3dc90a3a6cf0a} 
+\index{cudaMemAllocNodeParams@{cudaMemAllocNodeParams}!accessDescCount@{accessDescCount}}
+\index{accessDescCount@{accessDescCount}!cudaMemAllocNodeParams@{cudaMemAllocNodeParams}}
+\doxysubsubsection{\texorpdfstring{accessDescCount}{accessDescCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Mem\+Alloc\+Node\+Params\+::access\+Desc\+Count}
+
+in\+: Number of {\ttfamily access\+Descs}s \Hypertarget{structcuda_mem_alloc_node_params_a6f3847cf96f7c5ef38e4c2fbad6f1aeb}\label{structcuda_mem_alloc_node_params_a6f3847cf96f7c5ef38e4c2fbad6f1aeb} 
+\index{cudaMemAllocNodeParams@{cudaMemAllocNodeParams}!accessDescs@{accessDescs}}
+\index{accessDescs@{accessDescs}!cudaMemAllocNodeParams@{cudaMemAllocNodeParams}}
+\doxysubsubsection{\texorpdfstring{accessDescs}{accessDescs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_access_desc}{cuda\+Mem\+Access\+Desc}}\texorpdfstring{$\ast$}{*} cuda\+Mem\+Alloc\+Node\+Params\+::access\+Descs}
+
+in\+: number of memory access descriptors. Must not exceed the number of GPUs. \Hypertarget{structcuda_mem_alloc_node_params_aa291c1444b7cdbf7fc657cac47caa867}\label{structcuda_mem_alloc_node_params_aa291c1444b7cdbf7fc657cac47caa867} 
+\index{cudaMemAllocNodeParams@{cudaMemAllocNodeParams}!bytesize@{bytesize}}
+\index{bytesize@{bytesize}!cudaMemAllocNodeParams@{cudaMemAllocNodeParams}}
+\doxysubsubsection{\texorpdfstring{bytesize}{bytesize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Mem\+Alloc\+Node\+Params\+::bytesize}
+
+in\+: size in bytes of the requested allocation \Hypertarget{structcuda_mem_alloc_node_params_a59bbad18974ca7b897445e5621be9816}\label{structcuda_mem_alloc_node_params_a59bbad18974ca7b897445e5621be9816} 
+\index{cudaMemAllocNodeParams@{cudaMemAllocNodeParams}!dptr@{dptr}}
+\index{dptr@{dptr}!cudaMemAllocNodeParams@{cudaMemAllocNodeParams}}
+\doxysubsubsection{\texorpdfstring{dptr}{dptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+Mem\+Alloc\+Node\+Params\+::dptr}
+
+out\+: address of the allocation returned by CUDA \Hypertarget{structcuda_mem_alloc_node_params_a7b2f32f718dfdf64dd743a040d967027}\label{structcuda_mem_alloc_node_params_a7b2f32f718dfdf64dd743a040d967027} 
+\index{cudaMemAllocNodeParams@{cudaMemAllocNodeParams}!poolProps@{poolProps}}
+\index{poolProps@{poolProps}!cudaMemAllocNodeParams@{cudaMemAllocNodeParams}}
+\doxysubsubsection{\texorpdfstring{poolProps}{poolProps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_props}{cuda\+Mem\+Pool\+Props}} cuda\+Mem\+Alloc\+Node\+Params\+::pool\+Props}
+
+in\+: location where the allocation should reside (specified in \+::location). \+::handle\+Types must be cuda\+Mem\+Handle\+Type\+None. IPC is not supported. in\+: array of memory access descriptors. Used to describe peer GPU access 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

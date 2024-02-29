@@ -1,0 +1,67 @@
+\doxysection{Error Handling}
+\hypertarget{group___c_u_d_a___e_r_r_o_r}{}\label{group___c_u_d_a___e_r_r_o_r}\index{Error Handling@{Error Handling}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_r_r_o_r_ga6adf88c22a8989f9136f449df0d8e796}{cu\+Get\+Error\+String}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{error}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Str}})
+\begin{DoxyCompactList}\small\item\em Gets the string description of an error code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_r_r_o_r_ga7af8199da524563c5c4691f4b9978830}{cu\+Get\+Error\+Name}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{error}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Str}})
+\begin{DoxyCompactList}\small\item\em Gets the string representation of an error code enum name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ error handling functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the error handling functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___e_r_r_o_r_ga7af8199da524563c5c4691f4b9978830}\label{group___c_u_d_a___e_r_r_o_r_ga7af8199da524563c5c4691f4b9978830} 
+\index{Error Handling@{Error Handling}!cuGetErrorName@{cuGetErrorName}}
+\index{cuGetErrorName@{cuGetErrorName}!Error Handling@{Error Handling}}
+\doxysubsubsection{\texorpdfstring{cuGetErrorName()}{cuGetErrorName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Get\+Error\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}}]{error,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Str }\end{DoxyParamCaption})}
+
+
+
+Gets the string representation of an error code enum name. 
+
+Sets {\ttfamily \texorpdfstring{$\ast$}{*}p\+Str} to the address of a NULL-\/terminated string representation of the name of the enum error code {\ttfamily error}. If the error code is not recognized, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} will be returned and {\ttfamily \texorpdfstring{$\ast$}{*}p\+Str} will be set to the NULL address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & -\/ Error code to convert to string \\
+\hline
+{\em p\+Str} & -\/ Address of the string pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}, \doxylink{group___c_u_d_a_r_t___e_r_r_o_r_ga6ba64404a271ff7e98bf573dc02c90a8}{cuda\+Get\+Error\+Name} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_r_r_o_r_ga6adf88c22a8989f9136f449df0d8e796}\label{group___c_u_d_a___e_r_r_o_r_ga6adf88c22a8989f9136f449df0d8e796} 
+\index{Error Handling@{Error Handling}!cuGetErrorString@{cuGetErrorString}}
+\index{cuGetErrorString@{cuGetErrorString}!Error Handling@{Error Handling}}
+\doxysubsubsection{\texorpdfstring{cuGetErrorString()}{cuGetErrorString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Get\+Error\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}}]{error,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+Str }\end{DoxyParamCaption})}
+
+
+
+Gets the string description of an error code. 
+
+Sets {\ttfamily \texorpdfstring{$\ast$}{*}p\+Str} to the address of a NULL-\/terminated string description of the error code {\ttfamily error}. If the error code is not recognized, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} will be returned and {\ttfamily \texorpdfstring{$\ast$}{*}p\+Str} will be set to the NULL address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & -\/ Error code to convert to string \\
+\hline
+{\em p\+Str} & -\/ Address of the string pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}, \doxylink{group___c_u_d_a_r_t___e_r_r_o_r_ga2582e25e5f54afb855a2c6678790787e}{cuda\+Get\+Error\+String} 
+\end{DoxySeeAlso}

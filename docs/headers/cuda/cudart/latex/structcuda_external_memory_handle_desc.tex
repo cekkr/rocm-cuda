@@ -1,0 +1,95 @@
+\doxysection{cuda\+External\+Memory\+Handle\+Desc Struct Reference}
+\hypertarget{structcuda_external_memory_handle_desc}{}\label{structcuda_external_memory_handle_desc}\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad09e67232bd9b8108fdd28f0142c11c9}{cuda\+External\+Memory\+Handle\+Type}} \mbox{\hyperlink{structcuda_external_memory_handle_desc_a8d2b65d3b597280eb9be66ee34c7ee52}{type}}
+\item 
+\Hypertarget{structcuda_external_memory_handle_desc_ad5e7cc6c1a7f44e6885cc3688e4f1715}\label{structcuda_external_memory_handle_desc_ad5e7cc6c1a7f44e6885cc3688e4f1715} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_external_memory_handle_desc_a4ebe637addc306d6033e9ea6e032374d}{fd}}\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_external_memory_handle_desc_a0d30f77db99e1642bc857728c7a1d95c}{handle}}\\
+\>\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_external_memory_handle_desc_ab23ac82bda34119f28f2a16e75ae09bc}{name}}\\
+\>\} \mbox{\hyperlink{structcuda_external_memory_handle_desc_a865cc75a018906635f9425d85409b37f}{win32}}\\
+\>\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_external_memory_handle_desc_afb0a96517b5dfdaa3558d2a871f92385}{nvSciBufObject}}\\
+\} {\bfseries handle}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{structcuda_external_memory_handle_desc_a362086a22da90ac8fba1ca294e65548e}{size}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_external_memory_handle_desc_a74412d3d2777ebc856aea0b9158aaafa}{flags}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+External memory handle descriptor 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_external_memory_handle_desc_a4ebe637addc306d6033e9ea6e032374d}\label{structcuda_external_memory_handle_desc_a4ebe637addc306d6033e9ea6e032374d} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!fd@{fd}}
+\index{fd@{fd}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+External\+Memory\+Handle\+Desc\+::fd}
+
+File descriptor referencing the memory object. Valid when type is cuda\+External\+Memory\+Handle\+Type\+Opaque\+Fd \Hypertarget{structcuda_external_memory_handle_desc_a74412d3d2777ebc856aea0b9158aaafa}\label{structcuda_external_memory_handle_desc_a74412d3d2777ebc856aea0b9158aaafa} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!flags@{flags}}
+\index{flags@{flags}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+External\+Memory\+Handle\+Desc\+::flags}
+
+Flags must either be zero or \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_gaea2031488a28bcdb7695e9bbaf25e149}{cuda\+External\+Memory\+Dedicated} \Hypertarget{structcuda_external_memory_handle_desc_a0d30f77db99e1642bc857728c7a1d95c}\label{structcuda_external_memory_handle_desc_a0d30f77db99e1642bc857728c7a1d95c} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!handle@{handle}}
+\index{handle@{handle}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{handle}{handle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+External\+Memory\+Handle\+Desc\+::handle}
+
+Valid NT handle. Must be NULL if \textquotesingle{}name\textquotesingle{} is non-\/\+NULL \Hypertarget{structcuda_external_memory_handle_desc_ab23ac82bda34119f28f2a16e75ae09bc}\label{structcuda_external_memory_handle_desc_ab23ac82bda34119f28f2a16e75ae09bc} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!name@{name}}
+\index{name@{name}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+External\+Memory\+Handle\+Desc\+::name}
+
+Name of a valid memory object. Must be NULL if \textquotesingle{}handle\textquotesingle{} is non-\/\+NULL. \Hypertarget{structcuda_external_memory_handle_desc_afb0a96517b5dfdaa3558d2a871f92385}\label{structcuda_external_memory_handle_desc_afb0a96517b5dfdaa3558d2a871f92385} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!nvSciBufObject@{nvSciBufObject}}
+\index{nvSciBufObject@{nvSciBufObject}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{nvSciBufObject}{nvSciBufObject}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+External\+Memory\+Handle\+Desc\+::nv\+Sci\+Buf\+Object}
+
+A handle representing Nv\+Sci\+Buf Object. Valid when type is \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+External\+Memory\+Handle\+Type\+Nv\+Sci\+Buf} \Hypertarget{structcuda_external_memory_handle_desc_a362086a22da90ac8fba1ca294e65548e}\label{structcuda_external_memory_handle_desc_a362086a22da90ac8fba1ca294e65548e} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!size@{size}}
+\index{size@{size}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{long}} cuda\+External\+Memory\+Handle\+Desc\+::size}
+
+Size of the memory allocation \Hypertarget{structcuda_external_memory_handle_desc_a8d2b65d3b597280eb9be66ee34c7ee52}\label{structcuda_external_memory_handle_desc_a8d2b65d3b597280eb9be66ee34c7ee52} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!type@{type}}
+\index{type@{type}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad09e67232bd9b8108fdd28f0142c11c9}{cuda\+External\+Memory\+Handle\+Type}} cuda\+External\+Memory\+Handle\+Desc\+::type}
+
+Type of the handle \Hypertarget{structcuda_external_memory_handle_desc_a865cc75a018906635f9425d85409b37f}\label{structcuda_external_memory_handle_desc_a865cc75a018906635f9425d85409b37f} 
+\index{cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}!win32@{win32}}
+\index{win32@{win32}!cudaExternalMemoryHandleDesc@{cudaExternalMemoryHandleDesc}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cuda\+External\+Memory\+Handle\+Desc\+::win32}
+
+Win32 handle referencing the semaphore object. Valid when type is one of the following\+:
+\begin{DoxyItemize}
+\item cuda\+External\+Memory\+Handle\+Type\+Opaque\+Win32
+\item cuda\+External\+Memory\+Handle\+Type\+Opaque\+Win32\+Kmt
+\item cuda\+External\+Memory\+Handle\+Type\+D3\+D12\+Heap
+\item cuda\+External\+Memory\+Handle\+Type\+D3\+D12\+Resource
+\item cuda\+External\+Memory\+Handle\+Type\+D3\+D11\+Resource
+\item cuda\+External\+Memory\+Handle\+Type\+D3\+D11\+Resource\+Kmt Exactly one of \textquotesingle{}handle\textquotesingle{} and \textquotesingle{}name\textquotesingle{} must be non-\/\+NULL. If type is one of the following\+: cuda\+External\+Memory\+Handle\+Type\+Opaque\+Win32\+Kmt cuda\+External\+Memory\+Handle\+Type\+D3\+D11\+Resource\+Kmt then \textquotesingle{}name\textquotesingle{} must be NULL. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

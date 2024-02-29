@@ -1,0 +1,38 @@
+\doxysection{cuda\+Mem\+Location Struct Reference}
+\hypertarget{structcuda_mem_location}{}\label{structcuda_mem_location}\index{cudaMemLocation@{cudaMemLocation}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gac4de0f5dad36e073bde93428bd39f2a3}{cuda\+Mem\+Location\+Type}} \mbox{\hyperlink{structcuda_mem_location_a6df2243c9f48e48ad92306df676b2fe0}{type}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_mem_location_a1c914cd5c3cc7323b4fde9756458efb0}{id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specifies a memory location.
+
+To specify a gpu, set type = \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Location\+Type\+Device} and set id = the gpu\textquotesingle{}s device ordinal. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_mem_location_a1c914cd5c3cc7323b4fde9756458efb0}\label{structcuda_mem_location_a1c914cd5c3cc7323b4fde9756458efb0} 
+\index{cudaMemLocation@{cudaMemLocation}!id@{id}}
+\index{id@{id}!cudaMemLocation@{cudaMemLocation}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Mem\+Location\+::id}
+
+identifier for a given this location\textquotesingle{}s \doxylink{group___c_u_d_a___t_y_p_e_s_ga333b6b6c19c0800a9d821ff7b87eaea9}{CUmem\+Location\+Type}. \Hypertarget{structcuda_mem_location_a6df2243c9f48e48ad92306df676b2fe0}\label{structcuda_mem_location_a6df2243c9f48e48ad92306df676b2fe0} 
+\index{cudaMemLocation@{cudaMemLocation}!type@{type}}
+\index{type@{type}!cudaMemLocation@{cudaMemLocation}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gac4de0f5dad36e073bde93428bd39f2a3}{cuda\+Mem\+Location\+Type}} cuda\+Mem\+Location\+::type}
+
+Specifies the location type, which modifies the meaning of id. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

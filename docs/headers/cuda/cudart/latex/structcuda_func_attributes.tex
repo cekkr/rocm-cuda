@@ -1,0 +1,100 @@
+\doxysection{cuda\+Func\+Attributes Struct Reference}
+\hypertarget{structcuda_func_attributes}{}\label{structcuda_func_attributes}\index{cudaFuncAttributes@{cudaFuncAttributes}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_func_attributes_ac3bc6914df6f65ac08b1f53cd7276113}{shared\+Size\+Bytes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_func_attributes_afe17485a8cbe9034eb2b7905d2d82ef8}{const\+Size\+Bytes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_func_attributes_a8415fcfcab196c9e01dacb03c8ca8eae}{local\+Size\+Bytes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_func_attributes_ab8350f491105f159ff684f5c59167af0}{max\+Threads\+Per\+Block}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_func_attributes_a3e750723dd84185e838039c82931baf3}{num\+Regs}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_func_attributes_a08ce97bd1e77d84cbff1cea9d662dcc2}{ptx\+Version}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_func_attributes_ac4b0a26a83cff2a60183f6fbb8944907}{binary\+Version}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_func_attributes_ac5b4f9e473bf54747f2035df401577c7}{cache\+Mode\+CA}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_func_attributes_a4e4e85e7111f39739d38fb7c6fe26a42}{max\+Dynamic\+Shared\+Size\+Bytes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{structcuda_func_attributes_a088f144760311325523b66ee90c83c51}{preferred\+Shmem\+Carveout}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA function attributes 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_func_attributes_ac4b0a26a83cff2a60183f6fbb8944907}\label{structcuda_func_attributes_ac4b0a26a83cff2a60183f6fbb8944907} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!binaryVersion@{binaryVersion}}
+\index{binaryVersion@{binaryVersion}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{binaryVersion}{binaryVersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Func\+Attributes\+::binary\+Version}
+
+The binary architecture version for which the function was compiled. This value is the major binary version \texorpdfstring{$\ast$}{*} 10 + the minor binary version, so a binary version 1.\+3 function would return the value 13. \Hypertarget{structcuda_func_attributes_ac5b4f9e473bf54747f2035df401577c7}\label{structcuda_func_attributes_ac5b4f9e473bf54747f2035df401577c7} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!cacheModeCA@{cacheModeCA}}
+\index{cacheModeCA@{cacheModeCA}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{cacheModeCA}{cacheModeCA}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Func\+Attributes\+::cache\+Mode\+CA}
+
+The attribute to indicate whether the function has been compiled with user specified option "{}-\/\+Xptxas -\/-\/dlcm=ca"{} set. \Hypertarget{structcuda_func_attributes_afe17485a8cbe9034eb2b7905d2d82ef8}\label{structcuda_func_attributes_afe17485a8cbe9034eb2b7905d2d82ef8} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!constSizeBytes@{constSizeBytes}}
+\index{constSizeBytes@{constSizeBytes}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{constSizeBytes}{constSizeBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Func\+Attributes\+::const\+Size\+Bytes}
+
+The size in bytes of user-\/allocated constant memory required by this function. \Hypertarget{structcuda_func_attributes_a8415fcfcab196c9e01dacb03c8ca8eae}\label{structcuda_func_attributes_a8415fcfcab196c9e01dacb03c8ca8eae} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!localSizeBytes@{localSizeBytes}}
+\index{localSizeBytes@{localSizeBytes}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{localSizeBytes}{localSizeBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Func\+Attributes\+::local\+Size\+Bytes}
+
+The size in bytes of local memory used by each thread of this function. \Hypertarget{structcuda_func_attributes_a4e4e85e7111f39739d38fb7c6fe26a42}\label{structcuda_func_attributes_a4e4e85e7111f39739d38fb7c6fe26a42} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!maxDynamicSharedSizeBytes@{maxDynamicSharedSizeBytes}}
+\index{maxDynamicSharedSizeBytes@{maxDynamicSharedSizeBytes}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{maxDynamicSharedSizeBytes}{maxDynamicSharedSizeBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Func\+Attributes\+::max\+Dynamic\+Shared\+Size\+Bytes}
+
+The maximum size in bytes of dynamic shared memory per block for this function. Any launch must have a dynamic shared memory size smaller than this value. \Hypertarget{structcuda_func_attributes_ab8350f491105f159ff684f5c59167af0}\label{structcuda_func_attributes_ab8350f491105f159ff684f5c59167af0} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!maxThreadsPerBlock@{maxThreadsPerBlock}}
+\index{maxThreadsPerBlock@{maxThreadsPerBlock}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{maxThreadsPerBlock}{maxThreadsPerBlock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Func\+Attributes\+::max\+Threads\+Per\+Block}
+
+The maximum number of threads per block, beyond which a launch of the function would fail. This number depends on both the function and the device on which the function is currently loaded. \Hypertarget{structcuda_func_attributes_a3e750723dd84185e838039c82931baf3}\label{structcuda_func_attributes_a3e750723dd84185e838039c82931baf3} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!numRegs@{numRegs}}
+\index{numRegs@{numRegs}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{numRegs}{numRegs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Func\+Attributes\+::num\+Regs}
+
+The number of registers used by each thread of this function. \Hypertarget{structcuda_func_attributes_a088f144760311325523b66ee90c83c51}\label{structcuda_func_attributes_a088f144760311325523b66ee90c83c51} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!preferredShmemCarveout@{preferredShmemCarveout}}
+\index{preferredShmemCarveout@{preferredShmemCarveout}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{preferredShmemCarveout}{preferredShmemCarveout}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Func\+Attributes\+::preferred\+Shmem\+Carveout}
+
+On devices where the L1 cache and shared memory use the same hardware resources, this sets the shared memory carveout preference, in percent of the maximum shared memory. Refer to cuda\+Dev\+Attr\+Max\+Shared\+Memory\+Per\+Multiprocessor. This is only a hint, and the driver can choose a different ratio if required to execute the function. See \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gad30aa7cba71047ca5acf5a89bd9b7013}{cuda\+Func\+Set\+Attribute} \Hypertarget{structcuda_func_attributes_a08ce97bd1e77d84cbff1cea9d662dcc2}\label{structcuda_func_attributes_a08ce97bd1e77d84cbff1cea9d662dcc2} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!ptxVersion@{ptxVersion}}
+\index{ptxVersion@{ptxVersion}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{ptxVersion}{ptxVersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} cuda\+Func\+Attributes\+::ptx\+Version}
+
+The PTX virtual architecture version for which the function was compiled. This value is the major PTX version \texorpdfstring{$\ast$}{*} 10 + the minor PTX version, so a PTX version 1.\+3 function would return the value 13. \Hypertarget{structcuda_func_attributes_ac3bc6914df6f65ac08b1f53cd7276113}\label{structcuda_func_attributes_ac3bc6914df6f65ac08b1f53cd7276113} 
+\index{cudaFuncAttributes@{cudaFuncAttributes}!sharedSizeBytes@{sharedSizeBytes}}
+\index{sharedSizeBytes@{sharedSizeBytes}!cudaFuncAttributes@{cudaFuncAttributes}}
+\doxysubsubsection{\texorpdfstring{sharedSizeBytes}{sharedSizeBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Func\+Attributes\+::shared\+Size\+Bytes}
+
+The size in bytes of statically-\/allocated shared memory per block required by this function. This does not include dynamically-\/allocated shared memory requested by the user at runtime. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

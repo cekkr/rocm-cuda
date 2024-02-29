@@ -1,0 +1,77 @@
+\doxysection{Surface Reference Management \mbox{[}DEPRECATED\mbox{]}}
+\hypertarget{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d}{}\label{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d}\index{Surface Reference Management \mbox{[}DEPRECATED\mbox{]}@{Surface Reference Management [DEPRECATED]}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga98601aa76ddd3cedd3072207de066fc6}{cu\+Surf\+Ref\+Set\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b99472b414f10b2c04dd2530dc7ea76}{CUsurfref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Surf\+Ref}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} h\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Sets the CUDA array for a surface reference. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga95ae00dd2cc2448673b57fcd49629b34}{cu\+Surf\+Ref\+Get\+Array}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ph\+Array}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b99472b414f10b2c04dd2530dc7ea76}{CUsurfref}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Surf\+Ref}})
+\begin{DoxyCompactList}\small\item\em Passes back the CUDA array bound to a surface reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ surface reference management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the surface reference management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga95ae00dd2cc2448673b57fcd49629b34}\label{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga95ae00dd2cc2448673b57fcd49629b34} 
+\index{Surface Reference Management \mbox{[}DEPRECATED\mbox{]}@{Surface Reference Management [DEPRECATED]}!cuSurfRefGetArray@{cuSurfRefGetArray}}
+\index{cuSurfRefGetArray@{cuSurfRefGetArray}!Surface Reference Management \mbox{[}DEPRECATED\mbox{]}@{Surface Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuSurfRefGetArray()}{cuSurfRefGetArray()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Surf\+Ref\+Get\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}} \texorpdfstring{$\ast$}{*}}]{ph\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b99472b414f10b2c04dd2530dc7ea76}{CUsurfref}}}]{h\+Surf\+Ref }\end{DoxyParamCaption})}
+
+
+
+Passes back the CUDA array bound to a surface reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000044}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}ph\+Array} the CUDA array bound to the surface reference {\ttfamily h\+Surf\+Ref}, or returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} if the surface reference is not bound to any CUDA array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ph\+Array} & -\/ Surface reference handle \\
+\hline
+{\em h\+Surf\+Ref} & -\/ Surface reference handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_gae42e3018e8b13a689411550efbd99e21}{cu\+Module\+Get\+Surf\+Ref}, \doxylink{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga98601aa76ddd3cedd3072207de066fc6}{cu\+Surf\+Ref\+Set\+Array} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga98601aa76ddd3cedd3072207de066fc6}\label{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga98601aa76ddd3cedd3072207de066fc6} 
+\index{Surface Reference Management \mbox{[}DEPRECATED\mbox{]}@{Surface Reference Management [DEPRECATED]}!cuSurfRefSetArray@{cuSurfRefSetArray}}
+\index{cuSurfRefSetArray@{cuSurfRefSetArray}!Surface Reference Management \mbox{[}DEPRECATED\mbox{]}@{Surface Reference Management [DEPRECATED]}}
+\doxysubsubsection{\texorpdfstring{cuSurfRefSetArray()}{cuSurfRefSetArray()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Surf\+Ref\+Set\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga7b99472b414f10b2c04dd2530dc7ea76}{CUsurfref}}}]{h\+Surf\+Ref,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}}}]{h\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Sets the CUDA array for a surface reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000043}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Sets the CUDA array {\ttfamily h\+Array} to be read and written by the surface reference {\ttfamily h\+Surf\+Ref}. Any previous CUDA array state associated with the surface reference is superseded by this function. {\ttfamily Flags} must be set to 0. The \doxylink{group___c_u_d_a___t_y_p_e_s_ga7287c43cacf1ed05865d6bcad1a23cd9}{CUDA\+\_\+\+ARRAY3\+D\+\_\+\+SURFACE\+\_\+\+LDST} flag must have been set for the CUDA array. Any CUDA array previously bound to {\ttfamily h\+Surf\+Ref} is unbound.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Surf\+Ref} & -\/ Surface reference handle \\
+\hline
+{\em h\+Array} & -\/ CUDA array handle \\
+\hline
+{\em Flags} & -\/ set to 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_o_d_u_l_e_gae42e3018e8b13a689411550efbd99e21}{cu\+Module\+Get\+Surf\+Ref}, \doxylink{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga95ae00dd2cc2448673b57fcd49629b34}{cu\+Surf\+Ref\+Get\+Array}, \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e_ga26071647f4344dee20dcc1d20de1a648}{cuda\+Bind\+Surface\+To\+Array} 
+\end{DoxySeeAlso}

@@ -1,0 +1,422 @@
+\doxysection{Execution Control}
+\hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n}{}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n}\index{Execution Control@{Execution Control}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaaa780bd93440640cd7de502788ac895e}{cuda\+Launch\+Kernel}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}func, \mbox{\hyperlink{structdim3}{dim3}} grid\+Dim, \mbox{\hyperlink{structdim3}{dim3}} block\+Dim, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} shared\+Mem, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} stream)
+\begin{DoxyCompactList}\small\item\em Launches a device function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga4c05ee29e2c42af2978bd19e4ab47330}{cuda\+Launch\+Cooperative\+Kernel}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}func, \mbox{\hyperlink{structdim3}{dim3}} grid\+Dim, \mbox{\hyperlink{structdim3}{dim3}} block\+Dim, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} shared\+Mem, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} stream)
+\begin{DoxyCompactList}\small\item\em Launches a device function where thread blocks can cooperate and synchronize as they execute. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga8fd89089db7aad5daf66f2d9a2df6834}{cuda\+Launch\+Cooperative\+Kernel\+Multi\+Device}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_launch_params}{cuda\+Launch\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{launch\+Params\+List}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Devices}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+dv}}(0))
+\begin{DoxyCompactList}\small\item\em Launches device functions on multiple devices where thread blocks can cooperate and synchronize as they execute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372}{cuda\+Func\+Set\+Cache\+Config}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}func, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga185ebd259a4a6225930172951f2ab6ef}{cuda\+Func\+Cache}} cache\+Config)
+\begin{DoxyCompactList}\small\item\em Sets the preferred cache configuration for a device function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gabe77ac48ebbd881d815ae541116596a9}{cuda\+Func\+Set\+Shared\+Mem\+Config}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}func, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga6d8e7a6b415a7be9d411929d545572de}{cuda\+Shared\+Mem\+Config}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{config}})
+\begin{DoxyCompactList}\small\item\em Sets the shared memory configuration for a device function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+cudart\+\_\+builtin\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}{cuda\+Func\+Get\+Attributes}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_func_attributes}{cuda\+Func\+Attributes}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}func)
+\begin{DoxyCompactList}\small\item\em Find out attributes for a given function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+cudart\+\_\+builtin\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gad30aa7cba71047ca5acf5a89bd9b7013}{cuda\+Func\+Set\+Attribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}func, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gacd76bcc1681acec9fb9ae74e9965d61e}{cuda\+Func\+Attribute}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} value)
+\begin{DoxyCompactList}\small\item\em Set attributes for a given function. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaf9853147ef293745512f281046a787b5}{cuda\+Set\+Double\+For\+Device}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{d}})
+\begin{DoxyCompactList}\small\item\em Converts a double argument to be executed on a device. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga53032015714acb4b6443bba227ca39f5}{cuda\+Set\+Double\+For\+Host}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{d}})
+\begin{DoxyCompactList}\small\item\em Converts a double argument after execution on a device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacdeaa185a76c5cbfd737519261c992a0}{cuda\+Launch\+Host\+Func}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} stream, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad5a8cb127cd8e78ae1c721e797873110}{cuda\+Host\+Fn\+\_\+t}} fn, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}user\+Data)
+\begin{DoxyCompactList}\small\item\em Enqueues a host function call in a stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ execution control functions of the CUDA runtime API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the execution control functions of the CUDA runtime application programming interface.
+
+Some functions have overloaded C++ API template versions documented separately in the \doxylink{group___c_u_d_a_r_t___h_i_g_h_l_e_v_e_l}{C++ API Routines} module. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd} 
+\index{Execution Control@{Execution Control}!cudaFuncGetAttributes@{cudaFuncGetAttributes}}
+\index{cudaFuncGetAttributes@{cudaFuncGetAttributes}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaFuncGetAttributes()}{cudaFuncGetAttributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+cudart\+\_\+builtin\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Func\+Get\+Attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_func_attributes}{cuda\+Func\+Attributes}} \texorpdfstring{$\ast$}{*}}]{attr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Find out attributes for a given function. 
+
+This function obtains the attributes of a function specified via {\ttfamily func}. {\ttfamily func} is a device function symbol and must be declared as a {\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+} function. The fetched attributes are placed in {\ttfamily attr}. If the specified function does not exist, then cuda\+Error\+Invalid\+Device\+Function is returned. For templated functions, pass the function symbol as follows\+: func\+\_\+name$<$template\+\_\+arg\+\_\+0,...,template\+\_\+arg\+\_\+\+N$>$
+
+Note that some function attributes such as \doxylink{structcuda_func_attributes_ab8350f491105f159ff684f5c59167af0}{max\+Threads\+Per\+Block} may vary based on the device that is currently being used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr} & -\/ Return pointer to function\textquotesingle{}s attributes \\
+\hline
+{\em func} & -\/ Device function symbol\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device\+Function \textbackslash{}notefnerr \textbackslash{}note\+\_\+string\+\_\+api\+\_\+deprecation2 \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372}{cuda\+Func\+Set\+Cache\+Config (C API)}, cuda\+Func\+Get\+Attributes (C++ API), \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaaa780bd93440640cd7de502788ac895e}{cuda\+Launch\+Kernel (C API)}, \doxylink{group___c_u_d_a___e_x_e_c_gaba00e579dbfce98badf9355d2677f2a8}{cu\+Func\+Get\+Attribute} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gad30aa7cba71047ca5acf5a89bd9b7013}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gad30aa7cba71047ca5acf5a89bd9b7013} 
+\index{Execution Control@{Execution Control}!cudaFuncSetAttribute@{cudaFuncSetAttribute}}
+\index{cudaFuncSetAttribute@{cudaFuncSetAttribute}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaFuncSetAttribute()}{cudaFuncSetAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+cudart\+\_\+builtin\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Func\+Set\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{func,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gacd76bcc1681acec9fb9ae74e9965d61e}{cuda\+Func\+Attribute}}}]{attr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Set attributes for a given function. 
+
+This function sets the attributes of a function specified via {\ttfamily func}. The parameter {\ttfamily func} must be a pointer to a function that executes on the device. The parameter specified by {\ttfamily func} must be declared as a {\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+} function. The enumeration defined by {\ttfamily attr} is set to the value defined by {\ttfamily value}. If the specified function does not exist, then cuda\+Error\+Invalid\+Device\+Function is returned. If the specified attribute cannot be written, or if the value is incorrect, then cuda\+Error\+Invalid\+Value is returned.
+
+Valid values for {\ttfamily attr} are\+:
+\begin{DoxyItemize}
+\item cuda\+Func\+Attribute\+Max\+Dynamic\+Shared\+Memory\+Size -\/ The requested maximum size in bytes of dynamically-\/allocated shared memory. The sum of this value and the function attribute \+::shared\+Size\+Bytes cannot exceed the device attribute cuda\+Dev\+Attr\+Max\+Shared\+Memory\+Per\+Block\+Optin. The maximal size of requestable dynamic shared memory may differ by GPU architecture.
+\item cuda\+Func\+Attribute\+Preferred\+Shared\+Memory\+Carveout -\/ On devices where the L1 cache and shared memory use the same hardware resources, this sets the shared memory carveout preference, in percent of the total shared memory. See cuda\+Dev\+Attr\+Max\+Shared\+Memory\+Per\+Multiprocessor. This is only a hint, and the driver can choose a different ratio if required to execute the function.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & -\/ Function to get attributes of \\
+\hline
+{\em attr} & -\/ Attribute to set \\
+\hline
+{\em value} & -\/ Value to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device\+Function, cuda\+Error\+Invalid\+Value \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+cuda\+Launch\+Kernel (C++ API), cuda\+Func\+Set\+Cache\+Config (C++ API), \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}{cuda\+Func\+Get\+Attributes (C API)}, \Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372} 
+\index{Execution Control@{Execution Control}!cudaFuncSetCacheConfig@{cudaFuncSetCacheConfig}}
+\index{cudaFuncSetCacheConfig@{cudaFuncSetCacheConfig}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaFuncSetCacheConfig()}{cudaFuncSetCacheConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Func\+Set\+Cache\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{func,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga185ebd259a4a6225930172951f2ab6ef}{cuda\+Func\+Cache}}}]{cache\+Config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Sets the preferred cache configuration for a device function. 
+
+On devices where the L1 cache and shared memory use the same hardware resources, this sets through {\ttfamily cache\+Config} the preferred cache configuration for the function specified via {\ttfamily func}. This is only a preference. The runtime will use the requested configuration if possible, but it is free to choose a different configuration if required to execute {\ttfamily func}.
+
+{\ttfamily func} is a device function symbol and must be declared as a {\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+} function. If the specified function does not exist, then cuda\+Error\+Invalid\+Device\+Function is returned. For templated functions, pass the function symbol as follows\+: func\+\_\+name$<$template\+\_\+arg\+\_\+0,...,template\+\_\+arg\+\_\+\+N$>$
+
+This setting does nothing on devices where the size of the L1 cache and shared memory are fixed.
+
+Launching a kernel with a different preference than the most recent preference setting may insert a device-\/side synchronization point.
+
+The supported cache configurations are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Func\+Cache\+Prefer\+None\+:} no preference for shared memory or L1 (default)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Func\+Cache\+Prefer\+Shared\+:} prefer larger shared memory and smaller L1 cache
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Func\+Cache\+Prefer\+L1\+:} prefer larger L1 cache and smaller shared memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Func\+Cache\+Prefer\+Equal\+:} prefer equal size L1 cache and shared memory
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & -\/ Device function symbol \\
+\hline
+{\em cache\+Config} & -\/ Requested cache configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device\+Function \textbackslash{}notefnerr \textbackslash{}note\+\_\+string\+\_\+api\+\_\+deprecation2 \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cuda\+Func\+Set\+Cache\+Config (C++ API), \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}{cuda\+Func\+Get\+Attributes (C API)}, \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaaa780bd93440640cd7de502788ac895e}{cuda\+Launch\+Kernel (C API)}, \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_ga58c01c5f234a7de23df1cb4773cc7825}{cuda\+Thread\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_ga1614c381e97f6aa29ff5c33d7c5eb5c3}{cuda\+Thread\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gabe77ac48ebbd881d815ae541116596a9}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gabe77ac48ebbd881d815ae541116596a9} 
+\index{Execution Control@{Execution Control}!cudaFuncSetSharedMemConfig@{cudaFuncSetSharedMemConfig}}
+\index{cudaFuncSetSharedMemConfig@{cudaFuncSetSharedMemConfig}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaFuncSetSharedMemConfig()}{cudaFuncSetSharedMemConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Func\+Set\+Shared\+Mem\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{func,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga6d8e7a6b415a7be9d411929d545572de}{cuda\+Shared\+Mem\+Config}}}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Sets the shared memory configuration for a device function. 
+
+On devices with configurable shared memory banks, this function will force all subsequent launches of the specified device function to have the given shared memory bank size configuration. On any given launch of the function, the shared memory configuration of the device will be temporarily changed if needed to suit the function\textquotesingle{}s preferred configuration. Changes in shared memory configuration between subsequent launches of functions, may introduce a device side synchronization point.
+
+Any per-\/function setting of shared memory bank size set via \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gabe77ac48ebbd881d815ae541116596a9}{cuda\+Func\+Set\+Shared\+Mem\+Config} will override the device wide setting set by \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga49193b2fb2ca48691d46fdf1941f44b1}{cuda\+Device\+Set\+Shared\+Mem\+Config}.
+
+Changing the shared memory bank size will not increase shared memory usage or affect occupancy of kernels, but may have major effects on performance. Larger bank sizes will allow for greater potential bandwidth to shared memory, but will change what kinds of accesses to shared memory will result in bank conflicts.
+
+This function will do nothing on devices with fixed shared memory bank size.
+
+For templated functions, pass the function symbol as follows\+: func\+\_\+name$<$template\+\_\+arg\+\_\+0,...,template\+\_\+arg\+\_\+\+N$>$
+
+The supported bank configurations are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Shared\+Mem\+Bank\+Size\+Default\+:} use the device\textquotesingle{}s shared memory configuration when launching this function.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Shared\+Mem\+Bank\+Size\+Four\+Byte\+:} set shared memory bank width to be four bytes natively when launching this function.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Shared\+Mem\+Bank\+Size\+Eight\+Byte\+:} set shared memory bank width to be eight bytes natively when launching this function.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & -\/ Device function symbol \\
+\hline
+{\em config} & -\/ Requested shared memory configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device\+Function, cuda\+Error\+Invalid\+Value, \textbackslash{}notefnerr \textbackslash{}note\+\_\+string\+\_\+api\+\_\+deprecation2 \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga49193b2fb2ca48691d46fdf1941f44b1}{cuda\+Device\+Set\+Shared\+Mem\+Config}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga17312cb2ff90cc2ece48f81243ac7003}{cuda\+Device\+Get\+Shared\+Mem\+Config}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga4749a277602c902676e092c0c446ace4}{cuda\+Device\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaf4b5597c316c70af59499dde077b9345}{cuda\+Device\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372}{cuda\+Func\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___e_x_e_c_gadee0dbc8805fa99d345d42a3077bac9a}{cu\+Func\+Set\+Shared\+Mem\+Config} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga4c05ee29e2c42af2978bd19e4ab47330}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga4c05ee29e2c42af2978bd19e4ab47330} 
+\index{Execution Control@{Execution Control}!cudaLaunchCooperativeKernel@{cudaLaunchCooperativeKernel}}
+\index{cudaLaunchCooperativeKernel@{cudaLaunchCooperativeKernel}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaLaunchCooperativeKernel()}{cudaLaunchCooperativeKernel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Launch\+Cooperative\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{func,  }\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{grid\+Dim,  }\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{block\+Dim,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{args,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{shared\+Mem,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}}}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Launches a device function where thread blocks can cooperate and synchronize as they execute. 
+
+The function invokes kernel {\ttfamily func} on {\ttfamily grid\+Dim} ({\ttfamily grid\+Dim.\+x} {$\times$} {\ttfamily grid\+Dim.\+y} {$\times$} {\ttfamily grid\+Dim.\+z}) grid of blocks. Each block contains {\ttfamily block\+Dim} ({\ttfamily block\+Dim.\+x} {$\times$} {\ttfamily block\+Dim.\+y} {$\times$} {\ttfamily block\+Dim.\+z}) threads.
+
+The device on which this kernel is invoked must have a non-\/zero value for the device attribute cuda\+Dev\+Attr\+Cooperative\+Launch.
+
+The total number of blocks launched cannot exceed the maximum number of blocks per multiprocessor as returned by \doxylink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gae162c2e0a6864271d20cc60bb107abc1}{cuda\+Occupancy\+Max\+Active\+Blocks\+Per\+Multiprocessor} (or \doxylink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gafd44b9bd208a9d8bb3fefb9a7a65d425}{cuda\+Occupancy\+Max\+Active\+Blocks\+Per\+Multiprocessor\+With\+Flags}) times the number of multiprocessors as specified by the device attribute cuda\+Dev\+Attr\+Multi\+Processor\+Count.
+
+The kernel cannot make use of CUDA dynamic parallelism.
+
+If the kernel has N parameters the {\ttfamily args} should point to array of N pointers. Each pointer, from {\ttfamily args\mbox{[}0\mbox{]}} to {\ttfamily args\mbox{[}N -\/ 1\mbox{]}}, point to the region of memory from which the actual parameter will be copied.
+
+For templated functions, pass the function symbol as follows\+: func\+\_\+name$<$template\+\_\+arg\+\_\+0,...,template\+\_\+arg\+\_\+\+N$>$
+
+{\ttfamily shared\+Mem} sets the amount of dynamic shared memory that will be available to each thread block.
+
+{\ttfamily stream} specifies a stream the invocation is associated to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & -\/ Device function symbol \\
+\hline
+{\em grid\+Dim} & -\/ Grid dimentions \\
+\hline
+{\em block\+Dim} & -\/ Block dimentions \\
+\hline
+{\em args} & -\/ Arguments \\
+\hline
+{\em shared\+Mem} & -\/ Shared memory \\
+\hline
+{\em stream} & -\/ Stream identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device\+Function, cuda\+Error\+Invalid\+Configuration, cuda\+Error\+Launch\+Failure, cuda\+Error\+Launch\+Timeout, cuda\+Error\+Launch\+Out\+Of\+Resources, cuda\+Error\+Cooperative\+Launch\+Too\+Large, cuda\+Error\+Shared\+Object\+Init\+Failed \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cuda\+Launch\+Cooperative\+Kernel (C++ API), \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga8fd89089db7aad5daf66f2d9a2df6834}{cuda\+Launch\+Cooperative\+Kernel\+Multi\+Device}, \doxylink{group___c_u_d_a___e_x_e_c_gaeb5259b5a28ee4379d905bee4827a767}{cu\+Launch\+Cooperative\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga8fd89089db7aad5daf66f2d9a2df6834}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga8fd89089db7aad5daf66f2d9a2df6834} 
+\index{Execution Control@{Execution Control}!cudaLaunchCooperativeKernelMultiDevice@{cudaLaunchCooperativeKernelMultiDevice}}
+\index{cudaLaunchCooperativeKernelMultiDevice@{cudaLaunchCooperativeKernelMultiDevice}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaLaunchCooperativeKernelMultiDevice()}{cudaLaunchCooperativeKernelMultiDevice()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Launch\+Cooperative\+Kernel\+Multi\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_launch_params}{cuda\+Launch\+Params}} \texorpdfstring{$\ast$}{*}}]{launch\+Params\+List,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Devices,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags }]{\+\_\+\+\_\+dv0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Launches device functions on multiple devices where thread blocks can cooperate and synchronize as they execute. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000066}{Deprecated}}]This function is deprecated as of CUDA 11.\+3.\end{DoxyRefDesc}
+
+
+Invokes kernels as specified in the {\ttfamily launch\+Params\+List} array where each element of the array specifies all the parameters required to perform a single kernel launch. These kernels can cooperate and synchronize as they execute. The size of the array is specified by {\ttfamily num\+Devices}.
+
+No two kernels can be launched on the same device. All the devices targeted by this multi-\/device launch must be identical. All devices must have a non-\/zero value for the device attribute cuda\+Dev\+Attr\+Cooperative\+Multi\+Device\+Launch.
+
+The same kernel must be launched on all devices. Note that any {\bfseries{device}} or {\bfseries{constant}} variables are independently instantiated on every device. It is the application\textquotesingle{}s responsiblity to ensure these variables are initialized and used appropriately.
+
+The size of the grids as specified in blocks, the size of the blocks themselves and the amount of shared memory used by each thread block must also match across all launched kernels.
+
+The streams used to launch these kernels must have been created via either \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_ga11a80128d72f5ecf20072976122c7cd4}{cuda\+Stream\+Create} or \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_gaa028ceaec5dc941c48c49678915126bc}{cuda\+Stream\+Create\+With\+Priority} or \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_gaa028ceaec5dc941c48c49678915126bc}{cuda\+Stream\+Create\+With\+Priority}. The NULL stream or \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga4e62d09dde16ba457b0a97f3a5262246}{cuda\+Stream\+Legacy} or \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga7b7129befd6f52708309acafd1c46197}{cuda\+Stream\+Per\+Thread} cannot be used.
+
+The total number of blocks launched per kernel cannot exceed the maximum number of blocks per multiprocessor as returned by \doxylink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gae162c2e0a6864271d20cc60bb107abc1}{cuda\+Occupancy\+Max\+Active\+Blocks\+Per\+Multiprocessor} (or \doxylink{group___c_u_d_a_r_t___o_c_c_u_p_a_n_c_y_gafd44b9bd208a9d8bb3fefb9a7a65d425}{cuda\+Occupancy\+Max\+Active\+Blocks\+Per\+Multiprocessor\+With\+Flags}) times the number of multiprocessors as specified by the device attribute cuda\+Dev\+Attr\+Multi\+Processor\+Count. Since the total number of blocks launched per device has to match across all devices, the maximum number of blocks that can be launched per device will be limited by the device with the least number of multiprocessors.
+
+The kernel cannot make use of CUDA dynamic parallelism.
+
+The \doxylink{structcuda_launch_params}{cuda\+Launch\+Params} structure is defined as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcuda_launch_params}{cudaLaunchParams}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structcuda_launch_params_ab83c5ba1757e15e87386300690c9b081}{func}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ \mbox{\hyperlink{structcuda_launch_params_aad6b5e617a8c137476babb2ca1b94570}{gridDim}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ \mbox{\hyperlink{structcuda_launch_params_add319c6a16b02bdcce0c08fb3e03b87f}{blockDim}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ **\mbox{\hyperlink{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}{args}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcuda_launch_params_a86f6dff594ff6d496509a9f3c6607f17}{sharedMem}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cudaStream\_t}}\ \mbox{\hyperlink{structcuda_launch_params_a1f780f7a1266c1d820d46b31d025bd0c}{stream}};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ where\+:
+\begin{DoxyItemize}
+\item \doxylink{structcuda_launch_params_ab83c5ba1757e15e87386300690c9b081}{cuda\+Launch\+Params\+::func} specifies the kernel to be launched. This same functions must be launched on all devices. For templated functions, pass the function symbol as follows\+: func\+\_\+name$<$template\+\_\+arg\+\_\+0,...,template\+\_\+arg\+\_\+\+N$>$
+\item \doxylink{structcuda_launch_params_aad6b5e617a8c137476babb2ca1b94570}{cuda\+Launch\+Params\+::grid\+Dim} specifies the width, height and depth of the grid in blocks. This must match across all kernels launched.
+\item \doxylink{structcuda_launch_params_add319c6a16b02bdcce0c08fb3e03b87f}{cuda\+Launch\+Params\+::block\+Dim} is the width, height and depth of each thread block. This must match across all kernels launched.
+\item \doxylink{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}{cuda\+Launch\+Params\+::args} specifies the arguments to the kernel. If the kernel has N parameters then \doxylink{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}{cuda\+Launch\+Params\+::args} should point to array of N pointers. Each pointer, from {\ttfamily \doxylink{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}{cuda\+Launch\+Params\+::args}\mbox{[}0\mbox{]}} to {\ttfamily \doxylink{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}{cuda\+Launch\+Params\+::args}\mbox{[}N -\/ 1\mbox{]}}, point to the region of memory from which the actual parameter will be copied.
+\item \doxylink{structcuda_launch_params_a86f6dff594ff6d496509a9f3c6607f17}{cuda\+Launch\+Params\+::shared\+Mem} is the dynamic shared-\/memory size per thread block in bytes. This must match across all kernels launched.
+\item \doxylink{structcuda_launch_params_a1f780f7a1266c1d820d46b31d025bd0c}{cuda\+Launch\+Params\+::stream} is the handle to the stream to perform the launch in. This cannot be the NULL stream or \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga4e62d09dde16ba457b0a97f3a5262246}{cuda\+Stream\+Legacy} or \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga7b7129befd6f52708309acafd1c46197}{cuda\+Stream\+Per\+Thread}.
+\end{DoxyItemize}
+
+By default, the kernel won\textquotesingle{}t begin execution on any GPU until all prior work in all the specified streams has completed. This behavior can be overridden by specifying the flag \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga310f49178bf4b06b546f83124fa191f2}{cuda\+Cooperative\+Launch\+Multi\+Device\+No\+Pre\+Sync}. When this flag is specified, each kernel will only wait for prior work in the stream corresponding to that GPU to complete before it begins execution.
+
+Similarly, by default, any subsequent work pushed in any of the specified streams will not begin execution until the kernels on all GPUs have completed. This behavior can be overridden by specifying the flag \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga4b4ed6dd17d7c0950e5127138279f86a}{cuda\+Cooperative\+Launch\+Multi\+Device\+No\+Post\+Sync}. When this flag is specified, any subsequent work pushed in any of the specified streams will only wait for the kernel launched on the GPU corresponding to that stream to complete before it begins execution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em launch\+Params\+List} & -\/ List of launch parameters, one per device \\
+\hline
+{\em num\+Devices} & -\/ Size of the {\ttfamily launch\+Params\+List} array \\
+\hline
+{\em flags} & -\/ Flags to control launch behavior\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device\+Function, cuda\+Error\+Invalid\+Configuration, cuda\+Error\+Launch\+Failure, cuda\+Error\+Launch\+Timeout, cuda\+Error\+Launch\+Out\+Of\+Resources, cuda\+Error\+Cooperative\+Launch\+Too\+Large, cuda\+Error\+Shared\+Object\+Init\+Failed \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cuda\+Launch\+Cooperative\+Kernel (C++ API), \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga4c05ee29e2c42af2978bd19e4ab47330}{cuda\+Launch\+Cooperative\+Kernel}, \doxylink{group___c_u_d_a___e_x_e_c_ga79550cda1439bb78af5094ddabe8eac0}{cu\+Launch\+Cooperative\+Kernel\+Multi\+Device} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacdeaa185a76c5cbfd737519261c992a0}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacdeaa185a76c5cbfd737519261c992a0} 
+\index{Execution Control@{Execution Control}!cudaLaunchHostFunc@{cudaLaunchHostFunc}}
+\index{cudaLaunchHostFunc@{cudaLaunchHostFunc}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaLaunchHostFunc()}{cudaLaunchHostFunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Launch\+Host\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}}}]{stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad5a8cb127cd8e78ae1c721e797873110}{cuda\+Host\+Fn\+\_\+t}}}]{fn,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{user\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Enqueues a host function call in a stream. 
+
+Enqueues a host function to run in a stream. The function will be called after currently enqueued work and will block work added after it.
+
+The host function must not make any CUDA API calls. Attempting to use a CUDA API may result in cuda\+Error\+Not\+Permitted, but this is not required. The host function must not perform any synchronization that may depend on outstanding CUDA work not mandated to run earlier. Host functions without a mandated order (such as in independent streams) execute in undefined order and may be serialized.
+
+For the purposes of Unified Memory, execution makes a number of guarantees\+: 
+\begin{DoxyItemize}
+\item The stream is considered idle for the duration of the function\textquotesingle{}s execution. Thus, for example, the function may always use memory attached to the stream it was enqueued in. 
+\item The start of execution of the function has the same effect as synchronizing an event recorded in the same stream immediately prior to the function. It thus synchronizes streams which have been "{}joined"{} prior to the function. 
+\item Adding device work to any stream does not have the effect of making the stream active until all preceding host functions and stream callbacks have executed. Thus, for example, a function might use global attached memory even if work has been added to another stream, if the work has been ordered behind the function call with an event. 
+\item Completion of the function does not cause a stream to become active except as described above. The stream will remain idle if no device work follows the function, and will remain idle across consecutive host functions or stream callbacks without device work in between. Thus, for example, stream synchronization can be done by signaling from a host function at the end of the stream. 
+\end{DoxyItemize}
+
+Note that, in constrast to \doxylink{group___c_u_d_a___s_t_r_e_a_m_ga120776d5935ae856369b231dc6dedcbf}{cu\+Stream\+Add\+Callback}, the function will not be called in the event of an error in the CUDA context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Stream} & -\/ Stream to enqueue function call in \\
+\hline
+{\em fn} & -\/ The function to call once preceding stream operations are complete \\
+\hline
+{\em user\+Data} & -\/ User-\/specified data to be passed to the function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Resource\+Handle, cuda\+Error\+Invalid\+Value, cuda\+Error\+Not\+Supported \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_ga11a80128d72f5ecf20072976122c7cd4}{cuda\+Stream\+Create}, \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_ga3b673df9fdd757737710fb1054da0306}{cuda\+Stream\+Query}, \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_ga13ddca855befb29078fd09e8aa484ebe}{cuda\+Stream\+Synchronize}, \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_ga31552f364d0c4739fa61016a5dcf295e}{cuda\+Stream\+Wait\+Event}, \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_ga4c18d38dadccdc2ce1e3d3a2698c6e54}{cuda\+Stream\+Destroy}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y_gac85541d7e0fa6bdaeed967fee1c8e780}{cuda\+Malloc\+Managed}, \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_gab873a3bc43def9456d72f9561fe79e65}{cuda\+Stream\+Attach\+Mem\+Async}, \doxylink{group___c_u_d_a_r_t___s_t_r_e_a_m_ga68ab47f776bc6b9316f5e1d358fa8ec1}{cuda\+Stream\+Add\+Callback}, \doxylink{group___c_u_d_a___e_x_e_c_ga79b25e2139e85793740fffc48ef82359}{cu\+Launch\+Host\+Func} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaaa780bd93440640cd7de502788ac895e}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaaa780bd93440640cd7de502788ac895e} 
+\index{Execution Control@{Execution Control}!cudaLaunchKernel@{cudaLaunchKernel}}
+\index{cudaLaunchKernel@{cudaLaunchKernel}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaLaunchKernel()}{cudaLaunchKernel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Launch\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{func,  }\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{grid\+Dim,  }\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{block\+Dim,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{args,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{shared\+Mem,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}}}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Launches a device function. 
+
+The function invokes kernel {\ttfamily func} on {\ttfamily grid\+Dim} ({\ttfamily grid\+Dim.\+x} {$\times$} {\ttfamily grid\+Dim.\+y} {$\times$} {\ttfamily grid\+Dim.\+z}) grid of blocks. Each block contains {\ttfamily block\+Dim} ({\ttfamily block\+Dim.\+x} {$\times$} {\ttfamily block\+Dim.\+y} {$\times$} {\ttfamily block\+Dim.\+z}) threads.
+
+If the kernel has N parameters the {\ttfamily args} should point to array of N pointers. Each pointer, from {\ttfamily args\mbox{[}0\mbox{]}} to {\ttfamily args\mbox{[}N -\/ 1\mbox{]}}, point to the region of memory from which the actual parameter will be copied.
+
+For templated functions, pass the function symbol as follows\+: func\+\_\+name$<$template\+\_\+arg\+\_\+0,...,template\+\_\+arg\+\_\+\+N$>$
+
+{\ttfamily shared\+Mem} sets the amount of dynamic shared memory that will be available to each thread block.
+
+{\ttfamily stream} specifies a stream the invocation is associated to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & -\/ Device function symbol \\
+\hline
+{\em grid\+Dim} & -\/ Grid dimentions \\
+\hline
+{\em block\+Dim} & -\/ Block dimentions \\
+\hline
+{\em args} & -\/ Arguments \\
+\hline
+{\em shared\+Mem} & -\/ Shared memory \\
+\hline
+{\em stream} & -\/ Stream identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Device\+Function, cuda\+Error\+Invalid\+Configuration, cuda\+Error\+Launch\+Failure, cuda\+Error\+Launch\+Timeout, cuda\+Error\+Launch\+Out\+Of\+Resources, cuda\+Error\+Shared\+Object\+Init\+Failed, cuda\+Error\+Invalid\+Ptx, cuda\+Error\+Unsupported\+Ptx\+Version, cuda\+Error\+No\+Kernel\+Image\+For\+Device, cuda\+Error\+Jit\+Compiler\+Not\+Found, cuda\+Error\+Jit\+Compilation\+Disabled \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cuda\+Launch\+Kernel (C++ API), \doxylink{group___c_u_d_a___e_x_e_c_ga920a0845a7a1e6dca2af5e51b9a00ab6}{cu\+Launch\+Kernel} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaf9853147ef293745512f281046a787b5}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaf9853147ef293745512f281046a787b5} 
+\index{Execution Control@{Execution Control}!cudaSetDoubleForDevice@{cudaSetDoubleForDevice}}
+\index{cudaSetDoubleForDevice@{cudaSetDoubleForDevice}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaSetDoubleForDevice()}{cudaSetDoubleForDevice()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Set\+Double\+For\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{double}} \texorpdfstring{$\ast$}{*}}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Converts a double argument to be executed on a device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ Double to convert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000067}{Deprecated}}]This function is deprecated as of CUDA 7.\+5\end{DoxyRefDesc}
+
+
+Converts the double value of {\ttfamily d} to an internal float representation if the device does not support double arithmetic. If the device does natively support doubles, then this function does nothing.
+
+\begin{DoxyReturn}{Returns}
+cuda\+Success \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372}{cuda\+Func\+Set\+Cache\+Config (C API)}, \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}{cuda\+Func\+Get\+Attributes (C API)}, \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga53032015714acb4b6443bba227ca39f5}{cuda\+Set\+Double\+For\+Host} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga53032015714acb4b6443bba227ca39f5}\label{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga53032015714acb4b6443bba227ca39f5} 
+\index{Execution Control@{Execution Control}!cudaSetDoubleForHost@{cudaSetDoubleForHost}}
+\index{cudaSetDoubleForHost@{cudaSetDoubleForHost}!Execution Control@{Execution Control}}
+\doxysubsubsection{\texorpdfstring{cudaSetDoubleForHost()}{cudaSetDoubleForHost()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+CUDA\+\_\+\+DEPRECATED \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Set\+Double\+For\+Host (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{double}} \texorpdfstring{$\ast$}{*}}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Converts a double argument after execution on a device. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000068}{Deprecated}}]This function is deprecated as of CUDA 7.\+5\end{DoxyRefDesc}
+
+
+Converts the double value of {\ttfamily d} from a potentially internal float representation if the device does not support double arithmetic. If the device does natively support doubles, then this function does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ Double to convert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success \textbackslash{}notefnerr \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga75ebd65ac35ab892628fbda45bf13372}{cuda\+Func\+Set\+Cache\+Config (C API)}, \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gacb1e747670f88e607ea43ffec783e0fd}{cuda\+Func\+Get\+Attributes (C API)}, \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaf9853147ef293745512f281046a787b5}{cuda\+Set\+Double\+For\+Device} 
+\end{DoxySeeAlso}

@@ -1,0 +1,649 @@
+\doxysection{Context Management}
+\hypertarget{group___c_u_d_a___c_t_x}{}\label{group___c_u_d_a___c_t_x}\index{Context Management@{Context Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga37d9aab8410a94abcfa60a8f19a9d48f}{cu\+Ctx\+Create}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pctx}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Create a CUDA context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga4863b24cd384a564df4c8c5bf7522480}{cu\+Ctx\+Create\+\_\+v3}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pctx}}, \mbox{\hyperlink{struct_c_uexec_affinity_param__st}{CUexec\+Affinity\+Param}} \texorpdfstring{$\ast$}{*}params\+Array, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{num\+Params}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}})
+\begin{DoxyCompactList}\small\item\em Create a CUDA context with execution affinity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga371ec2a7d64ebe39e198eeb0b1146c4e}{cu\+Ctx\+Destroy}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ctx}})
+\begin{DoxyCompactList}\small\item\em Destroy a CUDA context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga8e80640a19cf279cd06df1022f12877d}{cu\+Ctx\+Push\+Current}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ctx}})
+\begin{DoxyCompactList}\small\item\em Pushes a context on the current CPU thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gab98ae0f3b858744645de0be934c12196}{cu\+Ctx\+Pop\+Current}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pctx}})
+\begin{DoxyCompactList}\small\item\em Pops the current CUDA context from the current CPU thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gaf99108a1d0cb2e1f4b410a92f64323f8}{cu\+Ctx\+Set\+Current}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ctx}})
+\begin{DoxyCompactList}\small\item\em Binds the specified CUDA context to the calling CPU thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga3d7eb010d6bc88939b4bb8914bc79053}{cu\+Ctx\+Get\+Current}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pctx}})
+\begin{DoxyCompactList}\small\item\em Returns the CUDA context bound to the calling CPU thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}device)
+\begin{DoxyCompactList}\small\item\em Returns the device ID for the current context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}flags)
+\begin{DoxyCompactList}\small\item\em Returns the flags for the current context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}})
+\begin{DoxyCompactList}\small\item\em Block for a context\textquotesingle{}s tasks to complete. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga97c12b669f01cd3285e2d52e3717c176}{CUlimit}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{limit}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Set resource limits. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pvalue}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga97c12b669f01cd3285e2d52e3717c176}{CUlimit}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{limit}})
+\begin{DoxyCompactList}\small\item\em Returns resource limits. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1377c306458eb37eacb1d43eb7e5661a}{CUfunc\+\_\+cache}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pconfig}})
+\begin{DoxyCompactList}\small\item\em Returns the preferred cache configuration for the current context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1377c306458eb37eacb1d43eb7e5661a}{CUfunc\+\_\+cache}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{config}})
+\begin{DoxyCompactList}\small\item\em Sets the preferred cache configuration for the current context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gad66bf769b0b98da4d917aa49c8438b7f}{cu\+Ctx\+Get\+Shared\+Mem\+Config}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga90e97218e0f4ead1df3b9297f2b507c5}{CUsharedconfig}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Config}})
+\begin{DoxyCompactList}\small\item\em Returns the current shared memory configuration for the current context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gab94b06157868dc684d2d9faf48468d30}{cu\+Ctx\+Set\+Shared\+Mem\+Config}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga90e97218e0f4ead1df3b9297f2b507c5}{CUsharedconfig}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{config}})
+\begin{DoxyCompactList}\small\item\em Sets the shared memory configuration for the current context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ctx}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{version}})
+\begin{DoxyCompactList}\small\item\em Gets the context\textquotesingle{}s API version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga2bd8e0507a6b90beac97e496fadf852f}{cu\+Ctx\+Get\+Stream\+Priority\+Range}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{least\+Priority}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{greatest\+Priority}})
+\begin{DoxyCompactList}\small\item\em Returns numerical values that correspond to the least and greatest stream priorities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga4ca58284ed608d6535570614d73003e8}{cu\+Ctx\+Reset\+Persisting\+L2\+Cache}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}})
+\begin{DoxyCompactList}\small\item\em Resets all persisting lines in cache to normal status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___c_t_x_ga032acfe64314b516fdf4629ccf364238}{cu\+Ctx\+Get\+Exec\+Affinity}} (\mbox{\hyperlink{struct_c_uexec_affinity_param__st}{CUexec\+Affinity\+Param}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Exec\+Affinity}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad4bcf6bf1598b9274657d452efbbd262}{CUexec\+Affinity\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Returns the execution affinity setting for the current context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ context management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the context management functions of the low-\/level CUDA driver application programming interface.
+
+Please note that some functions are described in \doxylink{group___c_u_d_a___p_r_i_m_a_r_y___c_t_x}{Primary Context Management} section. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___c_t_x_ga37d9aab8410a94abcfa60a8f19a9d48f}\label{group___c_u_d_a___c_t_x_ga37d9aab8410a94abcfa60a8f19a9d48f} 
+\index{Context Management@{Context Management}!cuCtxCreate@{cuCtxCreate}}
+\index{cuCtxCreate@{cuCtxCreate}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxCreate()}{cuCtxCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}}]{pctx,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Create a CUDA context. 
+
+\begin{DoxyNote}{Note}
+In most cases it is recommended to use \doxylink{group___c_u_d_a___p_r_i_m_a_r_y___c_t_x_ga4e92bce186e1f54f845faab565467b3f}{cu\+Device\+Primary\+Ctx\+Retain}.
+\end{DoxyNote}
+Creates a new CUDA context and associates it with the calling thread. The {\ttfamily flags} parameter is described below. The context is created with a usage count of 1 and the caller of cu\+Ctx\+Create() must call cu\+Ctx\+Destroy() or when done using the context. If a context is already current to the thread, it is supplanted by the newly created context and may be restored by a subsequent call to cu\+Ctx\+Pop\+Current().
+
+The three LSBs of the {\ttfamily flags} parameter can be used to control how the OS thread, which owns the CUDA context at the time of an API call, interacts with the OS scheduler when waiting for results from the GPU. Only one of the scheduling flags can be set when creating a context.
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+SPIN\+:} Instruct CUDA to actively spin when waiting for results from the GPU. This can decrease latency when waiting for the GPU, but may lower the performance of CPU threads if they are performing work in parallel with the CUDA thread.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+YIELD\+:} Instruct CUDA to yield its thread when waiting for results from the GPU. This can increase latency when waiting for the GPU, but can increase the performance of CPU threads performing work in parallel with the GPU.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC\+:} Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the GPU to finish work.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+BLOCKING\+\_\+\+SYNC\+:} Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the GPU to finish work. ~\newline
+ {\bfseries{Deprecated\+:}} This flag was deprecated as of CUDA 4.\+0 and was replaced with \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a62aebfe6432ade3feb32f1a409027852}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+AUTO\+:} The default value if the {\ttfamily flags} parameter is zero, uses a heuristic based on the number of active CUDA contexts in the process {\itshape C} and the number of logical processors in the system {\itshape P}. If {\itshape C} \texorpdfstring{$>$}{>} {\itshape P}, then CUDA will yield to other OS threads when waiting for the GPU (\doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a4bc43364906d8dd5a7d7c8ad46ccc548}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+YIELD}), otherwise CUDA will not yield while waiting for results and actively spin on the processor (\doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a331d3ed1e0b55597258bd58346603afc}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+SPIN}). Additionally, on Tegra devices, \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6ad75f4c24f8c35ef2ee9d0793badfd88c}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+AUTO} uses a heuristic based on the power profile of the platform and may choose \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a62aebfe6432ade3feb32f1a409027852}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC} for low-\/powered devices.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+MAP\+\_\+\+HOST\+:} Instruct CUDA to support mapped pinned allocations. This flag must be set in order to allocate pinned host memory that is accessible to the GPU.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+LMEM\+\_\+\+RESIZE\+\_\+\+TO\+\_\+\+MAX\+:} Instruct CUDA to not reduce local memory after resizing local memory for a kernel. This can prevent thrashing by local memory allocations when launching many kernels with high local memory usage at the cost of potentially increased memory usage. ~\newline
+ {\bfseries{Deprecated\+:}} This flag is deprecated and the behavior enabled by this flag is now the default and cannot be disabled. Instead, the per-\/thread stack size can be controlled with \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit()}.
+\end{DoxyItemize}
+
+Context creation will fail with \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} if the compute mode of the device is \doxylink{group___c_u_d_a___t_y_p_e_s_gga409cfd7e4863c34f8430757482886d75adb8a226241187db3b1f41999bb70eb47}{CU\+\_\+\+COMPUTEMODE\+\_\+\+PROHIBITED}. The function \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} can be used with \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aaf6669a29a6d42968047747cbfc501289}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+COMPUTE\+\_\+\+MODE} to determine the compute mode of the device. The {\itshape nvidia-\/smi} tool can be used to set the compute mode for \texorpdfstring{$\ast$}{*} devices. Documentation for {\itshape nvidia-\/smi} can be obtained by passing a -\/h option to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pctx} & -\/ Returned context handle of the new context \\
+\hline
+{\em flags} & -\/ Context creation flags \\
+\hline
+{\em dev} & -\/ Device to create context on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga4863b24cd384a564df4c8c5bf7522480}\label{group___c_u_d_a___c_t_x_ga4863b24cd384a564df4c8c5bf7522480} 
+\index{Context Management@{Context Management}!cuCtxCreate\_v3@{cuCtxCreate\_v3}}
+\index{cuCtxCreate\_v3@{cuCtxCreate\_v3}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxCreate\_v3()}{cuCtxCreate\_v3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Create\+\_\+v3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}}]{pctx,  }\item[{\mbox{\hyperlink{struct_c_uexec_affinity_param__st}{CUexec\+Affinity\+Param}} \texorpdfstring{$\ast$}{*}}]{params\+Array,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{num\+Params,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev }\end{DoxyParamCaption})}
+
+
+
+Create a CUDA context with execution affinity. 
+
+Creates a new CUDA context with execution affinity and associates it with the calling thread. The {\ttfamily params\+Array} and {\ttfamily flags} parameter are described below. The context is created with a usage count of 1 and the caller of cu\+Ctx\+Create() must call cu\+Ctx\+Destroy() or when done using the context. If a context is already current to the thread, it is supplanted by the newly created context and may be restored by a subsequent call to cu\+Ctx\+Pop\+Current().
+
+The type and the amount of execution resource the context can use is limited by {\ttfamily params\+Array} and {\ttfamily num\+Params}. The {\ttfamily params\+Array} is an array of {\ttfamily CUexec\+Affinity\+Param} and the {\ttfamily num\+Params} describes the size of the array. If two {\ttfamily CUexec\+Affinity\+Param} in the array have the same type, the latter execution affinity parameter overrides the former execution affinity parameter. The supported execution affinity types are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga2ece372004688bd41e1080bf5709a8f3ac7764c90ce81e15aba5f26a3507cd00c}{CU\+\_\+\+EXEC\+\_\+\+AFFINITY\+\_\+\+TYPE\+\_\+\+SM\+\_\+\+COUNT} limits the portion of SMs that the context can use. The portion of SMs is specified as the number of SMs via {\ttfamily CUexec\+Affinity\+Sm\+Count}. This limit will be internally rounded up to the next hardware-\/supported amount. Hence, it is imperative to query the actual execution affinity of the context via {\ttfamily cu\+Ctx\+Get\+Exec\+Affinity} after context creation. Currently, this attribute is only supported under Volta+ MPS.
+\end{DoxyItemize}
+
+The three LSBs of the {\ttfamily flags} parameter can be used to control how the OS thread, which owns the CUDA context at the time of an API call, interacts with the OS scheduler when waiting for results from the GPU. Only one of the scheduling flags can be set when creating a context.
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+SPIN\+:} Instruct CUDA to actively spin when waiting for results from the GPU. This can decrease latency when waiting for the GPU, but may lower the performance of CPU threads if they are performing work in parallel with the CUDA thread.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+YIELD\+:} Instruct CUDA to yield its thread when waiting for results from the GPU. This can increase latency when waiting for the GPU, but can increase the performance of CPU threads performing work in parallel with the GPU.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC\+:} Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the GPU to finish work.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+BLOCKING\+\_\+\+SYNC\+:} Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the GPU to finish work. ~\newline
+ {\bfseries{Deprecated\+:}} This flag was deprecated as of CUDA 4.\+0 and was replaced with \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a62aebfe6432ade3feb32f1a409027852}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+AUTO\+:} The default value if the {\ttfamily flags} parameter is zero, uses a heuristic based on the number of active CUDA contexts in the process {\itshape C} and the number of logical processors in the system {\itshape P}. If {\itshape C} \texorpdfstring{$>$}{>} {\itshape P}, then CUDA will yield to other OS threads when waiting for the GPU (\doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a4bc43364906d8dd5a7d7c8ad46ccc548}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+YIELD}), otherwise CUDA will not yield while waiting for results and actively spin on the processor (\doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a331d3ed1e0b55597258bd58346603afc}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+SPIN}). Additionally, on Tegra devices, \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6ad75f4c24f8c35ef2ee9d0793badfd88c}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+AUTO} uses a heuristic based on the power profile of the platform and may choose \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a62aebfe6432ade3feb32f1a409027852}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC} for low-\/powered devices.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+MAP\+\_\+\+HOST\+:} Instruct CUDA to support mapped pinned allocations. This flag must be set in order to allocate pinned host memory that is accessible to the GPU.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+CTX\+\_\+\+LMEM\+\_\+\+RESIZE\+\_\+\+TO\+\_\+\+MAX\+:} Instruct CUDA to not reduce local memory after resizing local memory for a kernel. This can prevent thrashing by local memory allocations when launching many kernels with high local memory usage at the cost of potentially increased memory usage. ~\newline
+ {\bfseries{Deprecated\+:}} This flag is deprecated and the behavior enabled by this flag is now the default and cannot be disabled. Instead, the per-\/thread stack size can be controlled with \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit()}.
+\end{DoxyItemize}
+
+Context creation will fail with \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} if the compute mode of the device is \doxylink{group___c_u_d_a___t_y_p_e_s_gga409cfd7e4863c34f8430757482886d75adb8a226241187db3b1f41999bb70eb47}{CU\+\_\+\+COMPUTEMODE\+\_\+\+PROHIBITED}. The function \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute()} can be used with \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aaf6669a29a6d42968047747cbfc501289}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+COMPUTE\+\_\+\+MODE} to determine the compute mode of the device. The {\itshape nvidia-\/smi} tool can be used to set the compute mode for \texorpdfstring{$\ast$}{*} devices. Documentation for {\itshape nvidia-\/smi} can be obtained by passing a -\/h option to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pctx} & -\/ Returned context handle of the new context \\
+\hline
+{\em params\+Array} & -\/ Execution affinity parameters \\
+\hline
+{\em num\+Params} & -\/ Number of execution affinity parameters \\
+\hline
+{\em flags} & -\/ Context creation flags \\
+\hline
+{\em dev} & -\/ Device to create context on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa09b6f0a40c9887de1bcc3ca48a75f1ad}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+EXEC\+\_\+\+AFFINITY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, CUexec\+Affinity\+Param 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga371ec2a7d64ebe39e198eeb0b1146c4e}\label{group___c_u_d_a___c_t_x_ga371ec2a7d64ebe39e198eeb0b1146c4e} 
+\index{Context Management@{Context Management}!cuCtxDestroy@{cuCtxDestroy}}
+\index{cuCtxDestroy@{cuCtxDestroy}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxDestroy()}{cuCtxDestroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Destroy a CUDA context. 
+
+Destroys the CUDA context specified by {\ttfamily ctx}. The context {\ttfamily ctx} will be destroyed regardless of how many threads it is current to. It is the responsibility of the calling function to ensure that no API call issues using {\ttfamily ctx} while cu\+Ctx\+Destroy() is executing.
+
+Destroys and cleans up all resources associated with the context. It is the caller\textquotesingle{}s responsibility to ensure that the context or its resources are not accessed or passed in subsequent API calls and doing so will result in undefined behavior. These resources include CUDA types such as \doxylink{group___c_u_d_a___t_y_p_e_s_ga9e4ef4dcfba4662b2299acb8d049a1ef}{CUmodule}, \doxylink{group___c_u_d_a___t_y_p_e_s_gaba6128b948022f495706d93bc2cea9c8}{CUfunction}, \doxylink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}, \doxylink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}, \doxylink{group___c_u_d_a___t_y_p_e_s_gad550651524a56766b60f10f0e7628042}{CUarray}, \doxylink{group___c_u_d_a___t_y_p_e_s_ga96db856ab3d2940fb694ce4501d9b583}{CUmipmapped\+Array}, \doxylink{group___c_u_d_a___t_y_p_e_s_ga65fb6720dea73d56db0b4d4974be052d}{CUtex\+Object}, \doxylink{group___c_u_d_a___t_y_p_e_s_ga4acc685a8412637d05668e30e984e220}{CUsurf\+Object}, \doxylink{group___c_u_d_a___t_y_p_e_s_gaec1e8eb9dc48ad748765d1fcc020d6b5}{CUtexref}, \doxylink{group___c_u_d_a___t_y_p_e_s_ga7b99472b414f10b2c04dd2530dc7ea76}{CUsurfref}, \doxylink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphics\+Resource}, CUlink\+State, \doxylink{group___c_u_d_a___t_y_p_e_s_gac9500ef066876b1186f8a54afff900ba}{CUexternal\+Memory} and \doxylink{group___c_u_d_a___t_y_p_e_s_ga0bc360152166a414e50a5167250552b8}{CUexternal\+Semaphore}.
+
+If {\ttfamily ctx} is current to the calling thread then {\ttfamily ctx} will also be popped from the current thread\textquotesingle{}s context stack (as though cu\+Ctx\+Pop\+Current() were called). If {\ttfamily ctx} is current to other threads, then {\ttfamily ctx} will remain current to those threads, and attempting to access {\ttfamily ctx} from those threads will result in the error \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab27ac43f7ce8446f5c9636dd73fb2139}{CUDA\+\_\+\+ERROR\+\_\+\+CONTEXT\+\_\+\+IS\+\_\+\+DESTROYED}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ Context to destroy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}\label{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0} 
+\index{Context Management@{Context Management}!cuCtxGetApiVersion@{cuCtxGetApiVersion}}
+\index{cuCtxGetApiVersion@{cuCtxGetApiVersion}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetApiVersion()}{cuCtxGetApiVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Api\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}}]{ctx,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{version }\end{DoxyParamCaption})}
+
+
+
+Gets the context\textquotesingle{}s API version. 
+
+Returns a version number in {\ttfamily version} corresponding to the capabilities of the context (e.\+g. 3010 or 3020), which library developers can use to direct callers to a specific API version. If {\ttfamily ctx} is NULL, returns the API version used to create the currently bound context.
+
+Note that new API versions are only introduced when context capabilities are changed that break binary compatibility, so the API version and driver version may be different. For example, it is valid for the API version to be 3020 while the driver version is 4020.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ Context to check \\
+\hline
+{\em version} & -\/ Pointer to version\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaac5a6ab0245179d297f1fa56ed0097183}{CUDA\+\_\+\+ERROR\+\_\+\+UNKNOWN} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}\label{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84} 
+\index{Context Management@{Context Management}!cuCtxGetCacheConfig@{cuCtxGetCacheConfig}}
+\index{cuCtxGetCacheConfig@{cuCtxGetCacheConfig}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetCacheConfig()}{cuCtxGetCacheConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Cache\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1377c306458eb37eacb1d43eb7e5661a}{CUfunc\+\_\+cache}} \texorpdfstring{$\ast$}{*}}]{pconfig }\end{DoxyParamCaption})}
+
+
+
+Returns the preferred cache configuration for the current context. 
+
+On devices where the L1 cache and shared memory use the same hardware resources, this function returns through {\ttfamily pconfig} the preferred cache configuration for the current context. This is only a preference. The driver will use the requested configuration if possible, but it is free to choose a different configuration if required to execute functions.
+
+This will return a {\ttfamily pconfig} of \doxylink{group___c_u_d_a___t_y_p_e_s_gga5d731dfd360f2a68ae45a4df46089af4a47d2f367dc3965c27ff748688229dc22}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+NONE} on devices where the size of the L1 cache and shared memory are fixed.
+
+The supported cache configurations are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+NONE\+:} no preference for shared memory or L1 (default)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+SHARED\+:} prefer larger shared memory and smaller L1 cache
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+L1\+:} prefer larger L1 cache and smaller shared memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+EQUAL\+:} prefer equal sized L1 cache and shared memory
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em pconfig} & -\/ Returned cache configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaf4b5597c316c70af59499dde077b9345}{cuda\+Device\+Get\+Cache\+Config} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga3d7eb010d6bc88939b4bb8914bc79053}\label{group___c_u_d_a___c_t_x_ga3d7eb010d6bc88939b4bb8914bc79053} 
+\index{Context Management@{Context Management}!cuCtxGetCurrent@{cuCtxGetCurrent}}
+\index{cuCtxGetCurrent@{cuCtxGetCurrent}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetCurrent()}{cuCtxGetCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}}]{pctx }\end{DoxyParamCaption})}
+
+
+
+Returns the CUDA context bound to the calling CPU thread. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}pctx} the CUDA context bound to the calling CPU thread. If no context is bound to the calling CPU thread then {\ttfamily \texorpdfstring{$\ast$}{*}pctx} is set to NULL and \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pctx} & -\/ Returned context handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___c_t_x_gaf99108a1d0cb2e1f4b410a92f64323f8}{cu\+Ctx\+Set\+Current}, cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga33e2490308f833d7fc5edc76ad9c4416}{cuda\+Get\+Device} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}\label{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3} 
+\index{Context Management@{Context Management}!cuCtxGetDevice@{cuCtxGetDevice}}
+\index{cuCtxGetDevice@{cuCtxGetDevice}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetDevice()}{cuCtxGetDevice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \texorpdfstring{$\ast$}{*}}]{device }\end{DoxyParamCaption})}
+
+
+
+Returns the device ID for the current context. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}device} the ordinal of the current context\textquotesingle{}s device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ Returned device ID for the current context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga33e2490308f833d7fc5edc76ad9c4416}{cuda\+Get\+Device} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga032acfe64314b516fdf4629ccf364238}\label{group___c_u_d_a___c_t_x_ga032acfe64314b516fdf4629ccf364238} 
+\index{Context Management@{Context Management}!cuCtxGetExecAffinity@{cuCtxGetExecAffinity}}
+\index{cuCtxGetExecAffinity@{cuCtxGetExecAffinity}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetExecAffinity()}{cuCtxGetExecAffinity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Exec\+Affinity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_c_uexec_affinity_param__st}{CUexec\+Affinity\+Param}} \texorpdfstring{$\ast$}{*}}]{p\+Exec\+Affinity,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gad4bcf6bf1598b9274657d452efbbd262}{CUexec\+Affinity\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Returns the execution affinity setting for the current context. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}p\+Exec\+Affinity} the current value of {\ttfamily type}. The supported \doxylink{group___c_u_d_a___t_y_p_e_s_gad4bcf6bf1598b9274657d452efbbd262}{CUexec\+Affinity\+Type} values are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EXEC\+\_\+\+AFFINITY\+\_\+\+TYPE\+\_\+\+SM\+\_\+\+COUNT\+:} number of SMs the context is limited to use.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & -\/ Execution affinity type to query \\
+\hline
+{\em p\+Exec\+Affinity} & -\/ Returned execution affinity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa09b6f0a40c9887de1bcc3ca48a75f1ad}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+EXEC\+\_\+\+AFFINITY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+CUexec\+Affinity\+Param 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}\label{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714} 
+\index{Context Management@{Context Management}!cuCtxGetFlags@{cuCtxGetFlags}}
+\index{cuCtxGetFlags@{cuCtxGetFlags}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetFlags()}{cuCtxGetFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Returns the flags for the current context. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}flags} the flags of the current context. See cu\+Ctx\+Create for flag values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & -\/ Pointer to store flags of current context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga3d7eb010d6bc88939b4bb8914bc79053}{cu\+Ctx\+Get\+Current}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gad66bf769b0b98da4d917aa49c8438b7f}{cu\+Ctx\+Get\+Shared\+Mem\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga2bd8e0507a6b90beac97e496fadf852f}{cu\+Ctx\+Get\+Stream\+Priority\+Range}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga129ea6446f87d512b19990b0fa2f2331}{cuda\+Get\+Device\+Flags} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}\label{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428} 
+\index{Context Management@{Context Management}!cuCtxGetLimit@{cuCtxGetLimit}}
+\index{cuCtxGetLimit@{cuCtxGetLimit}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetLimit()}{cuCtxGetLimit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Limit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{pvalue,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga97c12b669f01cd3285e2d52e3717c176}{CUlimit}}}]{limit }\end{DoxyParamCaption})}
+
+
+
+Returns resource limits. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}pvalue} the current size of {\ttfamily limit}. The supported \doxylink{group___c_u_d_a___t_y_p_e_s_ga97c12b669f01cd3285e2d52e3717c176}{CUlimit} values are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+LIMIT\+\_\+\+STACK\+\_\+\+SIZE\+:} stack size in bytes of each GPU thread.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+LIMIT\+\_\+\+PRINTF\+\_\+\+FIFO\+\_\+\+SIZE\+:} size in bytes of the FIFO used by the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{printf()} device system call.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+LIMIT\+\_\+\+MALLOC\+\_\+\+HEAP\+\_\+\+SIZE\+:} size in bytes of the heap used by the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{malloc()} and \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{free()} device system calls.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+LIMIT\+\_\+\+DEV\+\_\+\+RUNTIME\+\_\+\+SYNC\+\_\+\+DEPTH\+:} maximum grid depth at which a thread can issue the device runtime call \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gabad4c7a01961e63aa4744ce597cfaf1d}{cuda\+Device\+Synchronize()} to wait on child grid launches to complete.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+LIMIT\+\_\+\+DEV\+\_\+\+RUNTIME\+\_\+\+PENDING\+\_\+\+LAUNCH\+\_\+\+COUNT\+:} maximum number of outstanding device runtime launches that can be made from this context.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+LIMIT\+\_\+\+MAX\+\_\+\+L2\+\_\+\+FETCH\+\_\+\+GRANULARITY\+:} L2 cache fetch granularity.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+LIMIT\+\_\+\+PERSISTING\+\_\+\+L2\+\_\+\+CACHE\+\_\+\+SIZE\+:} Persisting L2 cache size in bytes
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & -\/ Limit to query \\
+\hline
+{\em pvalue} & -\/ Returned size of limit\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad10e6e6ef4b01290d2202d43c3ca6821}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+LIMIT} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga2c4a5358355c4bc76824c847d81de8f8}{cuda\+Device\+Get\+Limit} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gad66bf769b0b98da4d917aa49c8438b7f}\label{group___c_u_d_a___c_t_x_gad66bf769b0b98da4d917aa49c8438b7f} 
+\index{Context Management@{Context Management}!cuCtxGetSharedMemConfig@{cuCtxGetSharedMemConfig}}
+\index{cuCtxGetSharedMemConfig@{cuCtxGetSharedMemConfig}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetSharedMemConfig()}{cuCtxGetSharedMemConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Shared\+Mem\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga90e97218e0f4ead1df3b9297f2b507c5}{CUsharedconfig}} \texorpdfstring{$\ast$}{*}}]{p\+Config }\end{DoxyParamCaption})}
+
+
+
+Returns the current shared memory configuration for the current context. 
+
+This function will return in {\ttfamily p\+Config} the current size of shared memory banks in the current context. On devices with configurable shared memory banks, \doxylink{group___c_u_d_a___c_t_x_gab94b06157868dc684d2d9faf48468d30}{cu\+Ctx\+Set\+Shared\+Mem\+Config} can be used to change this setting, so that all subsequent kernel launches will by default use the new bank size. When \doxylink{group___c_u_d_a___c_t_x_gad66bf769b0b98da4d917aa49c8438b7f}{cu\+Ctx\+Get\+Shared\+Mem\+Config} is called on devices without configurable shared memory, it will return the fixed bank size of the hardware.
+
+The returned bank configurations can be either\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+SHARED\+\_\+\+MEM\+\_\+\+CONFIG\+\_\+\+FOUR\+\_\+\+BYTE\+\_\+\+BANK\+\_\+\+SIZE\+:} shared memory bank width is four bytes.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+SHARED\+\_\+\+MEM\+\_\+\+CONFIG\+\_\+\+EIGHT\+\_\+\+BYTE\+\_\+\+BANK\+\_\+\+SIZE\+:} shared memory bank width will eight bytes.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Config} & -\/ returned shared memory configuration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a___c_t_x_gad66bf769b0b98da4d917aa49c8438b7f}{cu\+Ctx\+Get\+Shared\+Mem\+Config}, \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga17312cb2ff90cc2ece48f81243ac7003}{cuda\+Device\+Get\+Shared\+Mem\+Config} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga2bd8e0507a6b90beac97e496fadf852f}\label{group___c_u_d_a___c_t_x_ga2bd8e0507a6b90beac97e496fadf852f} 
+\index{Context Management@{Context Management}!cuCtxGetStreamPriorityRange@{cuCtxGetStreamPriorityRange}}
+\index{cuCtxGetStreamPriorityRange@{cuCtxGetStreamPriorityRange}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxGetStreamPriorityRange()}{cuCtxGetStreamPriorityRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Get\+Stream\+Priority\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{least\+Priority,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{greatest\+Priority }\end{DoxyParamCaption})}
+
+
+
+Returns numerical values that correspond to the least and greatest stream priorities. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}least\+Priority} and {\ttfamily \texorpdfstring{$\ast$}{*}greatest\+Priority} the numerical values that correspond to the least and greatest stream priorities respectively. Stream priorities follow a convention where lower numbers imply greater priorities. The range of meaningful stream priorities is given by \mbox{[}{\ttfamily \texorpdfstring{$\ast$}{*}greatest\+Priority}, {\ttfamily \texorpdfstring{$\ast$}{*}least\+Priority}\mbox{]}. If the user attempts to create a stream with a priority value that is outside the meaningful range as specified by this API, the priority is automatically clamped down or up to either {\ttfamily \texorpdfstring{$\ast$}{*}least\+Priority} or {\ttfamily \texorpdfstring{$\ast$}{*}greatest\+Priority} respectively. See \doxylink{group___c_u_d_a___s_t_r_e_a_m_gaea2fc94b2745094bf05cae5b1495de9a}{cu\+Stream\+Create\+With\+Priority} for details on creating a priority stream. A NULL may be passed in for {\ttfamily \texorpdfstring{$\ast$}{*}least\+Priority} or {\ttfamily \texorpdfstring{$\ast$}{*}greatest\+Priority} if the value is not desired.
+
+This function will return \textquotesingle{}0\textquotesingle{} in both {\ttfamily \texorpdfstring{$\ast$}{*}least\+Priority} and {\ttfamily \texorpdfstring{$\ast$}{*}greatest\+Priority} if the current context\textquotesingle{}s device does not support stream priorities (see \doxylink{group___c_u_d_a___d_e_v_i_c_e_ga5a73f28b53203cd6097fc48d97ca4ead}{cu\+Device\+Get\+Attribute}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em least\+Priority} & -\/ Pointer to an int in which the numerical value for least stream priority is returned \\
+\hline
+{\em greatest\+Priority} & -\/ Pointer to an int in which the numerical value for greatest stream priority is returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___s_t_r_e_a_m_gaea2fc94b2745094bf05cae5b1495de9a}{cu\+Stream\+Create\+With\+Priority}, \doxylink{group___c_u_d_a___s_t_r_e_a_m_ga4c770598e9212421ce27d0715430c2b1}{cu\+Stream\+Get\+Priority}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga32bb02368f45be8e8ae2084b999382de}{cuda\+Device\+Get\+Stream\+Priority\+Range} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gab98ae0f3b858744645de0be934c12196}\label{group___c_u_d_a___c_t_x_gab98ae0f3b858744645de0be934c12196} 
+\index{Context Management@{Context Management}!cuCtxPopCurrent@{cuCtxPopCurrent}}
+\index{cuCtxPopCurrent@{cuCtxPopCurrent}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxPopCurrent()}{cuCtxPopCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Pop\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \texorpdfstring{$\ast$}{*}}]{pctx }\end{DoxyParamCaption})}
+
+
+
+Pops the current CUDA context from the current CPU thread. 
+
+Pops the current CUDA context from the CPU thread and passes back the old context handle in {\ttfamily \texorpdfstring{$\ast$}{*}pctx}. That context may then be made current to a different CPU thread by calling cu\+Ctx\+Push\+Current().
+
+If a context was current to the CPU thread before cu\+Ctx\+Create() or cu\+Ctx\+Push\+Current() was called, this function makes that context current to the CPU thread again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pctx} & -\/ Returned popped context handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga8e80640a19cf279cd06df1022f12877d}\label{group___c_u_d_a___c_t_x_ga8e80640a19cf279cd06df1022f12877d} 
+\index{Context Management@{Context Management}!cuCtxPushCurrent@{cuCtxPushCurrent}}
+\index{cuCtxPushCurrent@{cuCtxPushCurrent}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxPushCurrent()}{cuCtxPushCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Push\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Pushes a context on the current CPU thread. 
+
+Pushes the given context {\ttfamily ctx} onto the CPU thread\textquotesingle{}s stack of current contexts. The specified context becomes the CPU thread\textquotesingle{}s current context, so all CUDA functions that operate on the current context are affected.
+
+The previous current context may be made current again by calling cu\+Ctx\+Destroy() or cu\+Ctx\+Pop\+Current().
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ Context to push\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga4ca58284ed608d6535570614d73003e8}\label{group___c_u_d_a___c_t_x_ga4ca58284ed608d6535570614d73003e8} 
+\index{Context Management@{Context Management}!cuCtxResetPersistingL2Cache@{cuCtxResetPersistingL2Cache}}
+\index{cuCtxResetPersistingL2Cache@{cuCtxResetPersistingL2Cache}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxResetPersistingL2Cache()}{cuCtxResetPersistingL2Cache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Reset\+Persisting\+L2\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Resets all persisting lines in cache to normal status. 
+
+\doxylink{group___c_u_d_a___c_t_x_ga4ca58284ed608d6535570614d73003e8}{cu\+Ctx\+Reset\+Persisting\+L2\+Cache} Resets all persisting lines in cache to normal status. Takes effect on function return.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa54756ae7ade0dfd09faeccb513dd831b}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+CUaccess\+Policy\+Window 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}\label{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9} 
+\index{Context Management@{Context Management}!cuCtxSetCacheConfig@{cuCtxSetCacheConfig}}
+\index{cuCtxSetCacheConfig@{cuCtxSetCacheConfig}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxSetCacheConfig()}{cuCtxSetCacheConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Set\+Cache\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga1377c306458eb37eacb1d43eb7e5661a}{CUfunc\+\_\+cache}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Sets the preferred cache configuration for the current context. 
+
+On devices where the L1 cache and shared memory use the same hardware resources, this sets through {\ttfamily config} the preferred cache configuration for the current context. This is only a preference. The driver will use the requested configuration if possible, but it is free to choose a different configuration if required to execute the function. Any function preference set via \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config()} will be preferred over this context-\/wide setting. Setting the context-\/wide cache configuration to \doxylink{group___c_u_d_a___t_y_p_e_s_gga5d731dfd360f2a68ae45a4df46089af4a47d2f367dc3965c27ff748688229dc22}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+NONE} will cause subsequent kernel launches to prefer to not change the cache configuration unless required to launch the kernel.
+
+This setting does nothing on devices where the size of the L1 cache and shared memory are fixed.
+
+Launching a kernel with a different preference than the most recent preference setting may insert a device-\/side synchronization point.
+
+The supported cache configurations are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+NONE\+:} no preference for shared memory or L1 (default)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+SHARED\+:} prefer larger shared memory and smaller L1 cache
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+L1\+:} prefer larger L1 cache and smaller shared memory
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+FUNC\+\_\+\+CACHE\+\_\+\+PREFER\+\_\+\+EQUAL\+:} prefer equal sized L1 cache and shared memory
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & -\/ Requested cache configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga4749a277602c902676e092c0c446ace4}{cuda\+Device\+Set\+Cache\+Config} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gaf99108a1d0cb2e1f4b410a92f64323f8}\label{group___c_u_d_a___c_t_x_gaf99108a1d0cb2e1f4b410a92f64323f8} 
+\index{Context Management@{Context Management}!cuCtxSetCurrent@{cuCtxSetCurrent}}
+\index{cuCtxSetCurrent@{cuCtxSetCurrent}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxSetCurrent()}{cuCtxSetCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Set\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Binds the specified CUDA context to the calling CPU thread. 
+
+Binds the specified CUDA context to the calling CPU thread. If {\ttfamily ctx} is NULL then the CUDA context previously bound to the calling CPU thread is unbound and \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS} is returned.
+
+If there exists a CUDA context stack on the calling CPU thread, this will replace the top of that stack with {\ttfamily ctx}. If {\ttfamily ctx} is NULL then this will be equivalent to popping the top of the calling CPU thread\textquotesingle{}s CUDA context stack (or a no-\/op if the calling CPU thread\textquotesingle{}s CUDA context stack is empty).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & -\/ Context to bind to the calling CPU thread\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___c_t_x_ga3d7eb010d6bc88939b4bb8914bc79053}{cu\+Ctx\+Get\+Current}, cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga7b63629909800b614427aae92b22d606}{cuda\+Set\+Device} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}\label{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17} 
+\index{Context Management@{Context Management}!cuCtxSetLimit@{cuCtxSetLimit}}
+\index{cuCtxSetLimit@{cuCtxSetLimit}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxSetLimit()}{cuCtxSetLimit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Set\+Limit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga97c12b669f01cd3285e2d52e3717c176}{CUlimit}}}]{limit,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Set resource limits. 
+
+Setting {\ttfamily limit} to {\ttfamily value} is a request by the application to update the current limit maintained by the context. The driver is free to modify the requested value to meet h/w requirements (this could be clamping to minimum or maximum values, rounding up to nearest element size, etc). The application can use \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit()} to find out exactly what the limit has been set to.
+
+Setting each \doxylink{group___c_u_d_a___t_y_p_e_s_ga97c12b669f01cd3285e2d52e3717c176}{CUlimit} has its own specific restrictions, so each is discussed here.
+
+
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8aebe51e384a8b4b79459915bb1c31bc39}{CU\+\_\+\+LIMIT\+\_\+\+STACK\+\_\+\+SIZE} controls the stack size in bytes of each GPU thread. The driver automatically increases the per-\/thread stack size for each kernel launch as needed. This size isn\textquotesingle{}t reset back to the original value after each launch. Setting this value will take effect immediately, and if necessary, the device will block until all preceding requested tasks are complete.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8a16f25aa2c37a06580ab533d8ae7db948}{CU\+\_\+\+LIMIT\+\_\+\+PRINTF\+\_\+\+FIFO\+\_\+\+SIZE} controls the size in bytes of the FIFO used by the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{printf()} device system call. Setting \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8a16f25aa2c37a06580ab533d8ae7db948}{CU\+\_\+\+LIMIT\+\_\+\+PRINTF\+\_\+\+FIFO\+\_\+\+SIZE} must be performed before launching any kernel that uses the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{printf()} device system call, otherwise \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} will be returned.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8a86d01dbc431b04edd5d618257aaa246b}{CU\+\_\+\+LIMIT\+\_\+\+MALLOC\+\_\+\+HEAP\+\_\+\+SIZE} controls the size in bytes of the heap used by the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{malloc()} and \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{free()} device system calls. Setting \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8a86d01dbc431b04edd5d618257aaa246b}{CU\+\_\+\+LIMIT\+\_\+\+MALLOC\+\_\+\+HEAP\+\_\+\+SIZE} must be performed before launching any kernel that uses the \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{malloc()} or \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{free()} device system calls, otherwise \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} will be returned.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8a592fb752cc173ad7a2a4026a40e38079}{CU\+\_\+\+LIMIT\+\_\+\+DEV\+\_\+\+RUNTIME\+\_\+\+SYNC\+\_\+\+DEPTH} controls the maximum nesting depth of a grid at which a thread can safely call \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gabad4c7a01961e63aa4744ce597cfaf1d}{cuda\+Device\+Synchronize()}. Setting this limit must be performed before any launch of a kernel that uses the device runtime and calls \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gabad4c7a01961e63aa4744ce597cfaf1d}{cuda\+Device\+Synchronize()} above the default sync depth, two levels of grids. Calls to \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gabad4c7a01961e63aa4744ce597cfaf1d}{cuda\+Device\+Synchronize()} will fail with error code cuda\+Error\+Sync\+Depth\+Exceeded if the limitation is violated. This limit can be set smaller than the default or up the maximum launch depth of 24. When setting this limit, keep in mind that additional levels of sync depth require the driver to reserve large amounts of device memory which can no longer be used for user allocations. If these reservations of device memory fail, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit()} will return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, and the limit can be reset to a lower value. This limit is only applicable to devices of compute capability 3.\+5 and higher. Attempting to set this limit on devices of compute capability less than 3.\+5 will result in the error \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad10e6e6ef4b01290d2202d43c3ca6821}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+LIMIT} being returned.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8af79d7134ee03d52c0d8b1aecda1ae446}{CU\+\_\+\+LIMIT\+\_\+\+DEV\+\_\+\+RUNTIME\+\_\+\+PENDING\+\_\+\+LAUNCH\+\_\+\+COUNT} controls the maximum number of outstanding device runtime launches that can be made from the current context. A grid is outstanding from the point of launch up until the grid is known to have been completed. Device runtime launches which violate this limitation fail and return cuda\+Error\+Launch\+Pending\+Count\+Exceeded when \doxylink{group___c_u_d_a_r_t___e_r_r_o_r_ga63b4ef56febc6ec907b3d7ae1708f201}{cuda\+Get\+Last\+Error()} is called after launch. If more pending launches than the default (2048 launches) are needed for a module using the device runtime, this limit can be increased. Keep in mind that being able to sustain additional pending launches will require the driver to reserve larger amounts of device memory upfront which can no longer be used for allocations. If these reservations fail, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit()} will return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, and the limit can be reset to a lower value. This limit is only applicable to devices of compute capability 3.\+5 and higher. Attempting to set this limit on devices of compute capability less than 3.\+5 will result in the error \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad10e6e6ef4b01290d2202d43c3ca6821}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+LIMIT} being returned.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8ae75d95ea7dac6821de11d122d77f390b}{CU\+\_\+\+LIMIT\+\_\+\+MAX\+\_\+\+L2\+\_\+\+FETCH\+\_\+\+GRANULARITY} controls the L2 cache fetch granularity. Values can range from 0B to 128B. This is purely a performence hint and it can be ignored or clamped depending on the platform.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_gga8054bb850a48a884875c90659d81bfd8a19ef5d58846147f46cdb4a2a886f3682}{CU\+\_\+\+LIMIT\+\_\+\+PERSISTING\+\_\+\+L2\+\_\+\+CACHE\+\_\+\+SIZE} controls size in bytes availabe for persisting L2 cache. This is purely a performance hint and it can be ignored or clamped depending on the platform.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & -\/ Limit to set \\
+\hline
+{\em value} & -\/ Size of limit\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad10e6e6ef4b01290d2202d43c3ca6821}{CUDA\+\_\+\+ERROR\+\_\+\+UNSUPPORTED\+\_\+\+LIMIT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga2f463a1b29df6299944e0c1004a26f89}{cuda\+Device\+Set\+Limit} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gab94b06157868dc684d2d9faf48468d30}\label{group___c_u_d_a___c_t_x_gab94b06157868dc684d2d9faf48468d30} 
+\index{Context Management@{Context Management}!cuCtxSetSharedMemConfig@{cuCtxSetSharedMemConfig}}
+\index{cuCtxSetSharedMemConfig@{cuCtxSetSharedMemConfig}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxSetSharedMemConfig()}{cuCtxSetSharedMemConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Set\+Shared\+Mem\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga90e97218e0f4ead1df3b9297f2b507c5}{CUsharedconfig}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Sets the shared memory configuration for the current context. 
+
+On devices with configurable shared memory banks, this function will set the context\textquotesingle{}s shared memory bank size which is used for subsequent kernel launches.
+
+Changed the shared memory configuration between launches may insert a device side synchronization point between those launches.
+
+Changing the shared memory bank size will not increase shared memory usage or affect occupancy of kernels, but may have major effects on performance. Larger bank sizes will allow for greater potential bandwidth to shared memory, but will change what kinds of accesses to shared memory will result in bank conflicts.
+
+This function will do nothing on devices with fixed shared memory bank size.
+
+The supported bank configurations are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+SHARED\+\_\+\+MEM\+\_\+\+CONFIG\+\_\+\+DEFAULT\+\_\+\+BANK\+\_\+\+SIZE\+:} set bank width to the default initial setting (currently, four bytes).
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+SHARED\+\_\+\+MEM\+\_\+\+CONFIG\+\_\+\+FOUR\+\_\+\+BYTE\+\_\+\+BANK\+\_\+\+SIZE\+:} set shared memory bank width to be natively four bytes.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+SHARED\+\_\+\+MEM\+\_\+\+CONFIG\+\_\+\+EIGHT\+\_\+\+BYTE\+\_\+\+BANK\+\_\+\+SIZE\+:} set shared memory bank width to be natively eight bytes.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & -\/ requested shared memory configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize}, \doxylink{group___c_u_d_a___c_t_x_gad66bf769b0b98da4d917aa49c8438b7f}{cu\+Ctx\+Get\+Shared\+Mem\+Config}, \doxylink{group___c_u_d_a___e_x_e_c_ga628976ef9f537b98b7271f8680bd8aa0}{cu\+Func\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga49193b2fb2ca48691d46fdf1941f44b1}{cuda\+Device\+Set\+Shared\+Mem\+Config} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}\label{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb} 
+\index{Context Management@{Context Management}!cuCtxSynchronize@{cuCtxSynchronize}}
+\index{cuCtxSynchronize@{cuCtxSynchronize}!Context Management@{Context Management}}
+\doxysubsubsection{\texorpdfstring{cuCtxSynchronize()}{cuCtxSynchronize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Synchronize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Block for a context\textquotesingle{}s tasks to complete. 
+
+Blocks until the device has completed all preceding requested tasks. \doxylink{group___c_u_d_a___c_t_x_gabe39e7dfd58b9b0863781d669920f4cb}{cu\+Ctx\+Synchronize()} returns an error if one of the preceding tasks failed. If the context was created with the \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a62aebfe6432ade3feb32f1a409027852}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC} flag, the CPU thread will block until the GPU context has finished its work.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+cu\+Ctx\+Create, cu\+Ctx\+Destroy, \doxylink{group___c_u_d_a___c_t_x_gaba93fa1c4a4f3da76d87704716a3d3c0}{cu\+Ctx\+Get\+Api\+Version}, \doxylink{group___c_u_d_a___c_t_x_gab144ce4581a0bf7cd362659776534a84}{cu\+Ctx\+Get\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_gafe15c5d23b83550e31858899b081b4c3}{cu\+Ctx\+Get\+Device}, \doxylink{group___c_u_d_a___c_t_x_ga36193dc05dde46af588434abdc4f0714}{cu\+Ctx\+Get\+Flags}, \doxylink{group___c_u_d_a___c_t_x_gaab10bd874e0bf40a2989443ad42ed428}{cu\+Ctx\+Get\+Limit}, cu\+Ctx\+Pop\+Current, cu\+Ctx\+Push\+Current, \doxylink{group___c_u_d_a___c_t_x_ga138e543965e8c57c652100a3a0fdecd9}{cu\+Ctx\+Set\+Cache\+Config}, \doxylink{group___c_u_d_a___c_t_x_ga4629158e32b781e675573ea7c2c4dd17}{cu\+Ctx\+Set\+Limit}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gabad4c7a01961e63aa4744ce597cfaf1d}{cuda\+Device\+Synchronize} 
+\end{DoxySeeAlso}

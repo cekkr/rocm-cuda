@@ -1,0 +1,281 @@
+\chapter{Deprecated List}
+\hypertarget{deprecated}{}\label{deprecated}\index{Deprecated List@{Deprecated List}}
+
+\begin{DoxyRefList}
+\item[Member \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6ab5bf395cc60a8cbded4c329ae9430b91}{CU\+\_\+\+CTX\+\_\+\+BLOCKING\+\_\+\+SYNC} ]\label{deprecated__deprecated000045}%
+\Hypertarget{deprecated__deprecated000045}%
+This flag was deprecated as of CUDA 4.\+0 and was replaced with \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a62aebfe6432ade3feb32f1a409027852}{CU\+\_\+\+CTX\+\_\+\+SCHED\+\_\+\+BLOCKING\+\_\+\+SYNC}.  
+\item[Member \doxylink{group___c_u_d_a___t_y_p_e_s_gga12d89ce3fea2678bf187aa2876ed67a6a08c822db270f4322af6e6bb0a7786514}{CU\+\_\+\+CTX\+\_\+\+MAP\+\_\+\+HOST} ]\label{deprecated__deprecated000046}%
+\Hypertarget{deprecated__deprecated000046}%
+This flag was deprecated as of CUDA 11.\+0 and it no longer has any effect. All contexts as of CUDA 3.\+2 behave as though the flag is enabled.  
+\item[Member \doxylink{group___c_u_d_a___t_y_p_e_s_ggadc810c97323fb22063ba25328e81ba19a07a4ae30f555b208dcb2065320c9e2e1}{CU\+\_\+\+DEVICE\+\_\+\+P2\+P\+\_\+\+ATTRIBUTE\+\_\+\+ACCESS\+\_\+\+ACCESS\+\_\+\+SUPPORTED} ]\label{deprecated__deprecated000051}%
+\Hypertarget{deprecated__deprecated000051}%
+use CU\+\_\+\+DEVICE\+\_\+\+P2\+P\+\_\+\+ATTRIBUTE\+\_\+\+CUDA\+\_\+\+ARRAY\+\_\+\+ACCESS\+\_\+\+SUPPORTED instead  
+\item[Member \doxylink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gae118a2c1b115197b58f419aab738fecb}{cu\+Ctx\+Attach} (CUcontext \texorpdfstring{$\ast$}{*}pctx, unsigned int flags)]\label{deprecated__deprecated000003}%
+\Hypertarget{deprecated__deprecated000003}%
+ 
+\item[Member \doxylink{group___c_u_d_a___c_t_x___d_e_p_r_e_c_a_t_e_d_gafe50007d47a1a5d274365d172e9bd4c6}{cu\+Ctx\+Detach} (CUcontext ctx)]\label{deprecated__deprecated000004}%
+\Hypertarget{deprecated__deprecated000004}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaae176089800b8c21a84f1e8318d688f1d}{CUDA\+\_\+\+ERROR\+\_\+\+CONTEXT\+\_\+\+ALREADY\+\_\+\+CURRENT} ]\label{deprecated__deprecated000050}%
+\Hypertarget{deprecated__deprecated000050}%
+ This error return is deprecated as of CUDA 3.\+2. It is no longer an error to attempt to push the active context via cu\+Ctx\+Push\+Current().  
+\item[Member \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab39b7696161bed9e1bc447ba699bf799}{CUDA\+\_\+\+ERROR\+\_\+\+PROFILER\+\_\+\+ALREADY\+\_\+\+STARTED} ]\label{deprecated__deprecated000048}%
+\Hypertarget{deprecated__deprecated000048}%
+ This error return is deprecated as of CUDA 5.\+0. It is no longer an error to call \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Profiler\+Start()} when profiling is already enabled.  
+\item[Member \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0e8858d89f258b64a19003318673d6ee}{CUDA\+\_\+\+ERROR\+\_\+\+PROFILER\+\_\+\+ALREADY\+\_\+\+STOPPED} ]\label{deprecated__deprecated000049}%
+\Hypertarget{deprecated__deprecated000049}%
+ This error return is deprecated as of CUDA 5.\+0. It is no longer an error to call \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Profiler\+Stop()} when profiling is already disabled.  
+\item[Member \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaab29d2209136a0e8b27c4d14aada28b97}{CUDA\+\_\+\+ERROR\+\_\+\+PROFILER\+\_\+\+NOT\+\_\+\+INITIALIZED} ]\label{deprecated__deprecated000047}%
+\Hypertarget{deprecated__deprecated000047}%
+ This error return is deprecated as of CUDA 5.\+0. It is no longer an error to attempt to enable/disable the profiling via \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Profiler\+Start} or \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cu\+Profiler\+Stop} without initialization.  
+\item[Member \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e_ga26071647f4344dee20dcc1d20de1a648}{cuda\+Bind\+Surface\+To\+Array} (const struct \doxylink{structsurface_reference}{surface\+Reference} \texorpdfstring{$\ast$}{*}surfref, cuda\+Array\+\_\+const\+\_\+t array, const struct \doxylink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc} \texorpdfstring{$\ast$}{*}desc)]\label{deprecated__deprecated000081}%
+\Hypertarget{deprecated__deprecated000081}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gab8b075893e893cc5829e64935d5b93ac}{cuda\+Bind\+Texture} (size\+\_\+t \texorpdfstring{$\ast$}{*}offset, const struct \doxylink{structtexture_reference}{texture\+Reference} \texorpdfstring{$\ast$}{*}texref, const void \texorpdfstring{$\ast$}{*}dev\+Ptr, const struct \doxylink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc} \texorpdfstring{$\ast$}{*}desc, size\+\_\+t size \+\_\+\+\_\+dv(\+UINT\+\_\+\+MAX))]\label{deprecated__deprecated000074}%
+\Hypertarget{deprecated__deprecated000074}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga332fdbfbbac26f29fdf7498ee46a517c}{cuda\+Bind\+Texture2D} (size\+\_\+t \texorpdfstring{$\ast$}{*}offset, const struct \doxylink{structtexture_reference}{texture\+Reference} \texorpdfstring{$\ast$}{*}texref, const void \texorpdfstring{$\ast$}{*}dev\+Ptr, const struct \doxylink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc} \texorpdfstring{$\ast$}{*}desc, size\+\_\+t width, size\+\_\+t height, size\+\_\+t pitch)]\label{deprecated__deprecated000075}%
+\Hypertarget{deprecated__deprecated000075}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaf66877815a2a45a6672d52c2d07f78e2}{cuda\+Bind\+Texture\+To\+Array} (const struct \doxylink{structtexture_reference}{texture\+Reference} \texorpdfstring{$\ast$}{*}texref, cuda\+Array\+\_\+const\+\_\+t array, const struct \doxylink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc} \texorpdfstring{$\ast$}{*}desc)]\label{deprecated__deprecated000076}%
+\Hypertarget{deprecated__deprecated000076}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gac6d23eeb0d66fdcbc06a682560cbb974}{cuda\+Bind\+Texture\+To\+Mipmapped\+Array} (const struct \doxylink{structtexture_reference}{texture\+Reference} \texorpdfstring{$\ast$}{*}texref, cuda\+Mipmapped\+Array\+\_\+const\+\_\+t mipmapped\+Array, const struct \doxylink{structcuda_channel_format_desc}{cuda\+Channel\+Format\+Desc} \texorpdfstring{$\ast$}{*}desc)]\label{deprecated__deprecated000077}%
+\Hypertarget{deprecated__deprecated000077}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga130ddae663f1873258fee5a6e0808b71}{cuda\+Device\+Blocking\+Sync} ]\label{deprecated__deprecated000092}%
+\Hypertarget{deprecated__deprecated000092}%
+This flag was deprecated as of CUDA 4.\+0 and replaced with \doxylink{group___c_u_d_a_r_t___t_y_p_e_s_ga057e6912c52708b6aa86e79dd83d007c}{cuda\+Device\+Schedule\+Blocking\+Sync}.  
+\item[Member \doxylink{group___c_u_d_a_r_t___s_u_r_f_a_c_e_ga0e3db7c6d7c16bc65af1e9e98dff87e9}{cuda\+Get\+Surface\+Reference} (const struct \doxylink{structsurface_reference}{surface\+Reference} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}surfref, const void \texorpdfstring{$\ast$}{*}symbol)]\label{deprecated__deprecated000082}%
+\Hypertarget{deprecated__deprecated000082}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_ga45554baf7e52311e64dcb6658aef1470}{cuda\+Get\+Texture\+Alignment\+Offset} (size\+\_\+t \texorpdfstring{$\ast$}{*}offset, const struct \doxylink{structtexture_reference}{texture\+Reference} \texorpdfstring{$\ast$}{*}texref)]\label{deprecated__deprecated000079}%
+\Hypertarget{deprecated__deprecated000079}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gaee83012e10d8c527f4f72bab68e7b4e1}{cuda\+Get\+Texture\+Reference} (const struct \doxylink{structtexture_reference}{texture\+Reference} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}texref, const void \texorpdfstring{$\ast$}{*}symbol)]\label{deprecated__deprecated000080}%
+\Hypertarget{deprecated__deprecated000080}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_ga6ca07b745f0971b61619691517a4dfcd}{cuda\+GLMap\+Buffer\+Object} (void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}dev\+Ptr, GLuint buf\+Obj)]\label{deprecated__deprecated000054}%
+\Hypertarget{deprecated__deprecated000054}%
+This function is deprecated as of CUDA 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_ga57ad7fe7faef3444ae246eaa70183103}{cuda\+GLMap\+Buffer\+Object\+Async} (void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}dev\+Ptr, GLuint buf\+Obj, cuda\+Stream\+\_\+t stream)]\label{deprecated__deprecated000058}%
+\Hypertarget{deprecated__deprecated000058}%
+This function is deprecated as of CUDA 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_ga1698d0a7a96f7685fc2d8af0bc7aca03}{cuda\+GLRegister\+Buffer\+Object} (GLuint buf\+Obj)]\label{deprecated__deprecated000053}%
+\Hypertarget{deprecated__deprecated000053}%
+This function is deprecated as of CUDA 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_ga99db9c5b8ae190cb7aa9aca4757f0b07}{cuda\+GLSet\+Buffer\+Object\+Map\+Flags} (GLuint buf\+Obj, unsigned int flags)]\label{deprecated__deprecated000057}%
+\Hypertarget{deprecated__deprecated000057}%
+This function is deprecated as of CUDA 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_ga45894cfc7e9f2dbe392f4337c4903927}{cuda\+GLSet\+GLDevice} (int device)]\label{deprecated__deprecated000052}%
+\Hypertarget{deprecated__deprecated000052}%
+This function is deprecated as of CUDA 5.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_ga8f5808060af9cf7316975405826e5d55}{cuda\+GLUnmap\+Buffer\+Object} (GLuint buf\+Obj)]\label{deprecated__deprecated000055}%
+\Hypertarget{deprecated__deprecated000055}%
+This function is deprecated as of CUDA 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_ga87986bf3560963794bde2c2404ccf955}{cuda\+GLUnmap\+Buffer\+Object\+Async} (GLuint buf\+Obj, cuda\+Stream\+\_\+t stream)]\label{deprecated__deprecated000059}%
+\Hypertarget{deprecated__deprecated000059}%
+This function is deprecated as of CUDA 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___o_p_e_n_g_l___d_e_p_r_e_c_a_t_e_d_gadfe054295a051db083054eda70bcca24}{cuda\+GLUnregister\+Buffer\+Object} (GLuint buf\+Obj)]\label{deprecated__deprecated000056}%
+\Hypertarget{deprecated__deprecated000056}%
+This function is deprecated as of CUDA 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga8fd89089db7aad5daf66f2d9a2df6834}{cuda\+Launch\+Cooperative\+Kernel\+Multi\+Device} (struct \doxylink{structcuda_launch_params}{cuda\+Launch\+Params} \texorpdfstring{$\ast$}{*}launch\+Params\+List, unsigned int num\+Devices, unsigned int flags \+\_\+\+\_\+dv(0))]\label{deprecated__deprecated000066}%
+\Hypertarget{deprecated__deprecated000066}%
+This function is deprecated as of CUDA 11.\+3. 
+\item[Member \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___d_e_p_r_e_c_a_t_e_d_ga0e68b84a77d35d320fa33b963b7770aa}{cuda\+Memcpy\+Array\+To\+Array} (cuda\+Array\+\_\+t dst, size\+\_\+t w\+Offset\+Dst, size\+\_\+t h\+Offset\+Dst, cuda\+Array\+\_\+const\+\_\+t src, size\+\_\+t w\+Offset\+Src, size\+\_\+t h\+Offset\+Src, size\+\_\+t count, enum cuda\+Memcpy\+Kind kind \+\_\+\+\_\+dv(cuda\+Memcpy\+Device\+To\+Device))]\label{deprecated__deprecated000071}%
+\Hypertarget{deprecated__deprecated000071}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___d_e_p_r_e_c_a_t_e_d_ga29798beaebc6adb7997469208b855206}{cuda\+Memcpy\+From\+Array} (void \texorpdfstring{$\ast$}{*}dst, cuda\+Array\+\_\+const\+\_\+t src, size\+\_\+t w\+Offset, size\+\_\+t h\+Offset, size\+\_\+t count, enum cuda\+Memcpy\+Kind kind)]\label{deprecated__deprecated000070}%
+\Hypertarget{deprecated__deprecated000070}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___d_e_p_r_e_c_a_t_e_d_ga34390303a1a78d9969e608168b180e26}{cuda\+Memcpy\+From\+Array\+Async} (void \texorpdfstring{$\ast$}{*}dst, cuda\+Array\+\_\+const\+\_\+t src, size\+\_\+t w\+Offset, size\+\_\+t h\+Offset, size\+\_\+t count, enum cuda\+Memcpy\+Kind kind, cuda\+Stream\+\_\+t stream \+\_\+\+\_\+dv(0))]\label{deprecated__deprecated000073}%
+\Hypertarget{deprecated__deprecated000073}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___d_e_p_r_e_c_a_t_e_d_ga31922de556f15c30839047528f79d520}{cuda\+Memcpy\+To\+Array} (cuda\+Array\+\_\+t dst, size\+\_\+t w\+Offset, size\+\_\+t h\+Offset, const void \texorpdfstring{$\ast$}{*}src, size\+\_\+t count, enum cuda\+Memcpy\+Kind kind)]\label{deprecated__deprecated000069}%
+\Hypertarget{deprecated__deprecated000069}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___d_e_p_r_e_c_a_t_e_d_gaeb0fbece86bf4174085142b1f87f4710}{cuda\+Memcpy\+To\+Array\+Async} (cuda\+Array\+\_\+t dst, size\+\_\+t w\+Offset, size\+\_\+t h\+Offset, const void \texorpdfstring{$\ast$}{*}src, size\+\_\+t count, enum cuda\+Memcpy\+Kind kind, cuda\+Stream\+\_\+t stream \+\_\+\+\_\+dv(0))]\label{deprecated__deprecated000072}%
+\Hypertarget{deprecated__deprecated000072}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_gaf9853147ef293745512f281046a787b5}{cuda\+Set\+Double\+For\+Device} (double \texorpdfstring{$\ast$}{*}d)]\label{deprecated__deprecated000067}%
+\Hypertarget{deprecated__deprecated000067}%
+This function is deprecated as of CUDA 7.\+5 
+\item[Member \doxylink{group___c_u_d_a_r_t___e_x_e_c_u_t_i_o_n_ga53032015714acb4b6443bba227ca39f5}{cuda\+Set\+Double\+For\+Host} (double \texorpdfstring{$\ast$}{*}d)]\label{deprecated__deprecated000068}%
+\Hypertarget{deprecated__deprecated000068}%
+This function is deprecated as of CUDA 7.\+5 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_ga80847bfa8d02fd06ce8321ba64ef7297}{cuda\+Thread\+Exit} (void)]\label{deprecated__deprecated000060}%
+\Hypertarget{deprecated__deprecated000060}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_ga58c01c5f234a7de23df1cb4773cc7825}{cuda\+Thread\+Get\+Cache\+Config} (enum cuda\+Func\+Cache \texorpdfstring{$\ast$}{*}p\+Cache\+Config)]\label{deprecated__deprecated000064}%
+\Hypertarget{deprecated__deprecated000064}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_ga78b9a2cfcf2cb0bf84abd5c0c83b8a45}{cuda\+Thread\+Get\+Limit} (size\+\_\+t \texorpdfstring{$\ast$}{*}p\+Value, enum cuda\+Limit limit)]\label{deprecated__deprecated000063}%
+\Hypertarget{deprecated__deprecated000063}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_ga1614c381e97f6aa29ff5c33d7c5eb5c3}{cuda\+Thread\+Set\+Cache\+Config} (enum cuda\+Func\+Cache cache\+Config)]\label{deprecated__deprecated000065}%
+\Hypertarget{deprecated__deprecated000065}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_gad2569ce4d18e725e6045025a0c446ca4}{cuda\+Thread\+Set\+Limit} (enum cuda\+Limit limit, size\+\_\+t value)]\label{deprecated__deprecated000062}%
+\Hypertarget{deprecated__deprecated000062}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_h_r_e_a_d___d_e_p_r_e_c_a_t_e_d_ga1e8ddca5abc07d1074bc54a32ef20052}{cuda\+Thread\+Synchronize} (void)]\label{deprecated__deprecated000061}%
+\Hypertarget{deprecated__deprecated000061}%
+ 
+\item[Member \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e_gabed8596b84e028c46d79a3d239466f2f}{cuda\+Unbind\+Texture} (const struct \doxylink{structtexture_reference}{texture\+Reference} \texorpdfstring{$\ast$}{*}texref)]\label{deprecated__deprecated000078}%
+\Hypertarget{deprecated__deprecated000078}%
+ 
+\item[Member \doxylink{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_gad05d056938a675056077d18568e2d544}{cu\+Device\+Compute\+Capability} (int \texorpdfstring{$\ast$}{*}major, int \texorpdfstring{$\ast$}{*}minor, CUdevice dev)]\label{deprecated__deprecated000002}%
+\Hypertarget{deprecated__deprecated000002}%
+ 
+\item[Member \doxylink{group___c_u_d_a___d_e_v_i_c_e___d_e_p_r_e_c_a_t_e_d_ga0fccff3d340103c6fcb4131d4f2f2be8}{cu\+Device\+Get\+Properties} (CUdevprop \texorpdfstring{$\ast$}{*}prop, CUdevice dev)]\label{deprecated__deprecated000001}%
+\Hypertarget{deprecated__deprecated000001}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4445684fd6be25df47e4f77cb3e49ba6}{cu\+Func\+Set\+Block\+Shape} (CUfunction hfunc, int x, int y, int z)]\label{deprecated__deprecated000006}%
+\Hypertarget{deprecated__deprecated000006}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga1278cbc113694bf533a5cdc322cb7db8}{cu\+Func\+Set\+Shared\+Size} (CUfunction hfunc, unsigned int bytes)]\label{deprecated__deprecated000007}%
+\Hypertarget{deprecated__deprecated000007}%
+ 
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gadca4399db5443c43c744d582250075ce}{cu\+GLCtx\+Create} (CUcontext \texorpdfstring{$\ast$}{*}p\+Ctx, unsigned int Flags, CUdevice device)]\label{deprecated__deprecated000083}%
+\Hypertarget{deprecated__deprecated000083}%
+This function is deprecated as of Cuda 5.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga461a96fde8e72a6bbbd5bf066c20de7b}{cu\+GLInit} (void)]\label{deprecated__deprecated000084}%
+\Hypertarget{deprecated__deprecated000084}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga398562e61d9ed3c9b9ece09c74efc5a7}{cu\+GLMap\+Buffer\+Object} (CUdeviceptr \texorpdfstring{$\ast$}{*}dptr, size\+\_\+t \texorpdfstring{$\ast$}{*}size, GLuint buffer)]\label{deprecated__deprecated000086}%
+\Hypertarget{deprecated__deprecated000086}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga0575cd8e43000f422f3f4b14ae981df4}{cu\+GLMap\+Buffer\+Object\+Async} (CUdeviceptr \texorpdfstring{$\ast$}{*}dptr, size\+\_\+t \texorpdfstring{$\ast$}{*}size, GLuint buffer, CUstream h\+Stream)]\label{deprecated__deprecated000090}%
+\Hypertarget{deprecated__deprecated000090}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43}{cu\+GLRegister\+Buffer\+Object} (GLuint buffer)]\label{deprecated__deprecated000085}%
+\Hypertarget{deprecated__deprecated000085}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb}{cu\+GLSet\+Buffer\+Object\+Map\+Flags} (GLuint buffer, unsigned int Flags)]\label{deprecated__deprecated000089}%
+\Hypertarget{deprecated__deprecated000089}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723}{cu\+GLUnmap\+Buffer\+Object} (GLuint buffer)]\label{deprecated__deprecated000087}%
+\Hypertarget{deprecated__deprecated000087}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e}{cu\+GLUnmap\+Buffer\+Object\+Async} (GLuint buffer, CUstream h\+Stream)]\label{deprecated__deprecated000091}%
+\Hypertarget{deprecated__deprecated000091}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc}{cu\+GLUnregister\+Buffer\+Object} (GLuint buffer)]\label{deprecated__deprecated000088}%
+\Hypertarget{deprecated__deprecated000088}%
+This function is deprecated as of Cuda 3.\+0.  
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga5621133b0a6356a90de51a7b2c3c79be}{cu\+Launch} (CUfunction f)]\label{deprecated__deprecated000012}%
+\Hypertarget{deprecated__deprecated000012}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c_ga79550cda1439bb78af5094ddabe8eac0}{cu\+Launch\+Cooperative\+Kernel\+Multi\+Device} (CUDA\+\_\+\+LAUNCH\+\_\+\+PARAMS \texorpdfstring{$\ast$}{*}launch\+Params\+List, unsigned int num\+Devices, unsigned int flags)]\label{deprecated__deprecated000005}%
+\Hypertarget{deprecated__deprecated000005}%
+This function is deprecated as of CUDA 11.\+3. 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga02a1fb2a9ec68aaf9e68eea081bef2de}{cu\+Launch\+Grid} (CUfunction f, int grid\+\_\+width, int grid\+\_\+height)]\label{deprecated__deprecated000013}%
+\Hypertarget{deprecated__deprecated000013}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga49ba53227f0fea2bb2f1497d1acf2144}{cu\+Launch\+Grid\+Async} (CUfunction f, int grid\+\_\+width, int grid\+\_\+height, CUstream h\+Stream)]\label{deprecated__deprecated000014}%
+\Hypertarget{deprecated__deprecated000014}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gab8a8082133790c625ce18775a19d32ec}{cu\+Param\+Setf} (CUfunction hfunc, int offset, float value)]\label{deprecated__deprecated000010}%
+\Hypertarget{deprecated__deprecated000010}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga499caaa468807f531c8159686ad6482e}{cu\+Param\+Seti} (CUfunction hfunc, int offset, unsigned int value)]\label{deprecated__deprecated000009}%
+\Hypertarget{deprecated__deprecated000009}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga4e13f221501414389e865977f84aeea1}{cu\+Param\+Set\+Size} (CUfunction hfunc, unsigned int numbytes)]\label{deprecated__deprecated000008}%
+\Hypertarget{deprecated__deprecated000008}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_gac2e43c79a8305aa5c5dbd9c6204de33b}{cu\+Param\+Set\+Tex\+Ref} (CUfunction hfunc, int texunit, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000015}%
+\Hypertarget{deprecated__deprecated000015}%
+ 
+\item[Member \doxylink{group___c_u_d_a___e_x_e_c___d_e_p_r_e_c_a_t_e_d_ga721840a7d6ebdf19ca015e5df7f87a48}{cu\+Param\+Setv} (CUfunction hfunc, int offset, void \texorpdfstring{$\ast$}{*}ptr, unsigned int numbytes)]\label{deprecated__deprecated000011}%
+\Hypertarget{deprecated__deprecated000011}%
+ 
+\item[Member \doxylink{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga95ae00dd2cc2448673b57fcd49629b34}{cu\+Surf\+Ref\+Get\+Array} (CUarray \texorpdfstring{$\ast$}{*}ph\+Array, CUsurfref h\+Surf\+Ref)]\label{deprecated__deprecated000044}%
+\Hypertarget{deprecated__deprecated000044}%
+ 
+\item[Member \doxylink{group___c_u_d_a___s_u_r_f_r_e_f___d_e_p_r_e_c_a_t_e_d_ga98601aa76ddd3cedd3072207de066fc6}{cu\+Surf\+Ref\+Set\+Array} (CUsurfref h\+Surf\+Ref, CUarray h\+Array, unsigned int Flags)]\label{deprecated__deprecated000043}%
+\Hypertarget{deprecated__deprecated000043}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga196383e0faf239c1814290e582ef33cb}{cu\+Tex\+Ref\+Create} (CUtexref \texorpdfstring{$\ast$}{*}p\+Tex\+Ref)]\label{deprecated__deprecated000041}%
+\Hypertarget{deprecated__deprecated000041}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaaba3677e7cd642e1a8b8de2017f14c04}{cu\+Tex\+Ref\+Destroy} (CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000042}%
+\Hypertarget{deprecated__deprecated000042}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga938444b205f63d765231c40b20189d63}{cu\+Tex\+Ref\+Get\+Address} (CUdeviceptr \texorpdfstring{$\ast$}{*}pdptr, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000029}%
+\Hypertarget{deprecated__deprecated000029}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga340ffe6d143c32a532a1dacf131533c2}{cu\+Tex\+Ref\+Get\+Address\+Mode} (CUaddress\+\_\+mode \texorpdfstring{$\ast$}{*}pam, CUtexref h\+Tex\+Ref, int dim)]\label{deprecated__deprecated000032}%
+\Hypertarget{deprecated__deprecated000032}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gac512550a50d428512653d6edd37bd460}{cu\+Tex\+Ref\+Get\+Array} (CUarray \texorpdfstring{$\ast$}{*}ph\+Array, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000030}%
+\Hypertarget{deprecated__deprecated000030}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga53118a3fd74a7ae2a29af2d60ed4a664}{cu\+Tex\+Ref\+Get\+Border\+Color} (float \texorpdfstring{$\ast$}{*}p\+Border\+Color, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000039}%
+\Hypertarget{deprecated__deprecated000039}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga525f0c41f5cd33359fe722781083932a}{cu\+Tex\+Ref\+Get\+Filter\+Mode} (CUfilter\+\_\+mode \texorpdfstring{$\ast$}{*}pfm, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000033}%
+\Hypertarget{deprecated__deprecated000033}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga071ed34021dac92371a7e84218dd8c98}{cu\+Tex\+Ref\+Get\+Flags} (unsigned int \texorpdfstring{$\ast$}{*}p\+Flags, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000040}%
+\Hypertarget{deprecated__deprecated000040}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gab6da12c6ba8115614934919f587cd131}{cu\+Tex\+Ref\+Get\+Format} (CUarray\+\_\+format \texorpdfstring{$\ast$}{*}p\+Format, int \texorpdfstring{$\ast$}{*}p\+Num\+Channels, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000034}%
+\Hypertarget{deprecated__deprecated000034}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2fef4ab8eaaa445f126f139362485003}{cu\+Tex\+Ref\+Get\+Max\+Anisotropy} (int \texorpdfstring{$\ast$}{*}pmax\+Aniso, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000038}%
+\Hypertarget{deprecated__deprecated000038}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gadc4df147e7e791b6fca0d7d7f049c289}{cu\+Tex\+Ref\+Get\+Mipmap\+Filter\+Mode} (CUfilter\+\_\+mode \texorpdfstring{$\ast$}{*}pfm, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000035}%
+\Hypertarget{deprecated__deprecated000035}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga656f0ee3580d7a330e00024abdbc28c2}{cu\+Tex\+Ref\+Get\+Mipmap\+Level\+Bias} (float \texorpdfstring{$\ast$}{*}pbias, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000036}%
+\Hypertarget{deprecated__deprecated000036}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaa294543407a8e2f2e6282dcd22c771e2}{cu\+Tex\+Ref\+Get\+Mipmap\+Level\+Clamp} (float \texorpdfstring{$\ast$}{*}pmin\+Mipmap\+Level\+Clamp, float \texorpdfstring{$\ast$}{*}pmax\+Mipmap\+Level\+Clamp, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000037}%
+\Hypertarget{deprecated__deprecated000037}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga14bd96adc487156b44759b182a28eed0}{cu\+Tex\+Ref\+Get\+Mipmapped\+Array} (CUmipmapped\+Array \texorpdfstring{$\ast$}{*}ph\+Mipmapped\+Array, CUtexref h\+Tex\+Ref)]\label{deprecated__deprecated000031}%
+\Hypertarget{deprecated__deprecated000031}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2b427b698a160cc951d8ca0341a22e8e}{cu\+Tex\+Ref\+Set\+Address} (size\+\_\+t \texorpdfstring{$\ast$}{*}\+Byte\+Offset, CUtexref h\+Tex\+Ref, CUdeviceptr dptr, size\+\_\+t bytes)]\label{deprecated__deprecated000018}%
+\Hypertarget{deprecated__deprecated000018}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gacfea4b8852f8898f7d215a480a8369d4}{cu\+Tex\+Ref\+Set\+Address2D} (CUtexref h\+Tex\+Ref, const CUDA\+\_\+\+ARRAY\+\_\+\+DESCRIPTOR \texorpdfstring{$\ast$}{*}desc, CUdeviceptr dptr, size\+\_\+t Pitch)]\label{deprecated__deprecated000019}%
+\Hypertarget{deprecated__deprecated000019}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga0feed56100fb0ac1fe31201f1b107320}{cu\+Tex\+Ref\+Set\+Address\+Mode} (CUtexref h\+Tex\+Ref, int dim, CUaddress\+\_\+mode am)]\label{deprecated__deprecated000021}%
+\Hypertarget{deprecated__deprecated000021}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gae7d4a60c5e14cabfca17b6a03c88ea3a}{cu\+Tex\+Ref\+Set\+Array} (CUtexref h\+Tex\+Ref, CUarray h\+Array, unsigned int Flags)]\label{deprecated__deprecated000016}%
+\Hypertarget{deprecated__deprecated000016}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_gaf7c026c2b391302ad4de9696675eeb24}{cu\+Tex\+Ref\+Set\+Border\+Color} (CUtexref h\+Tex\+Ref, float \texorpdfstring{$\ast$}{*}p\+Border\+Color)]\label{deprecated__deprecated000027}%
+\Hypertarget{deprecated__deprecated000027}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga994dbee6f6023e7d6324635b3a85ac12}{cu\+Tex\+Ref\+Set\+Filter\+Mode} (CUtexref h\+Tex\+Ref, CUfilter\+\_\+mode fm)]\label{deprecated__deprecated000022}%
+\Hypertarget{deprecated__deprecated000022}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga5524acdb7d0786867605bdeb8488102c}{cu\+Tex\+Ref\+Set\+Flags} (CUtexref h\+Tex\+Ref, unsigned int Flags)]\label{deprecated__deprecated000028}%
+\Hypertarget{deprecated__deprecated000028}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga20dd41281d2076561d216859e4da26b3}{cu\+Tex\+Ref\+Set\+Format} (CUtexref h\+Tex\+Ref, CUarray\+\_\+format fmt, int Num\+Packed\+Components)]\label{deprecated__deprecated000020}%
+\Hypertarget{deprecated__deprecated000020}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga2e40d1bba7bcd966f4912e5f4f0428b5}{cu\+Tex\+Ref\+Set\+Max\+Anisotropy} (CUtexref h\+Tex\+Ref, unsigned int max\+Aniso)]\label{deprecated__deprecated000026}%
+\Hypertarget{deprecated__deprecated000026}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga521b8752a631fd6b4ea10d032861c831}{cu\+Tex\+Ref\+Set\+Mipmap\+Filter\+Mode} (CUtexref h\+Tex\+Ref, CUfilter\+\_\+mode fm)]\label{deprecated__deprecated000023}%
+\Hypertarget{deprecated__deprecated000023}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga4d99fc04644e887ab87eb91f0f14d51d}{cu\+Tex\+Ref\+Set\+Mipmap\+Level\+Bias} (CUtexref h\+Tex\+Ref, float bias)]\label{deprecated__deprecated000024}%
+\Hypertarget{deprecated__deprecated000024}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga70fcdd09f0561979760d3a6f526d7b1a}{cu\+Tex\+Ref\+Set\+Mipmap\+Level\+Clamp} (CUtexref h\+Tex\+Ref, float min\+Mipmap\+Level\+Clamp, float max\+Mipmap\+Level\+Clamp)]\label{deprecated__deprecated000025}%
+\Hypertarget{deprecated__deprecated000025}%
+ 
+\item[Member \doxylink{group___c_u_d_a___t_e_x_r_e_f___d_e_p_r_e_c_a_t_e_d_ga96395027f89872071abb002cdc11d70c}{cu\+Tex\+Ref\+Set\+Mipmapped\+Array} (CUtexref h\+Tex\+Ref, CUmipmapped\+Array h\+Mipmapped\+Array, unsigned int Flags)]\label{deprecated__deprecated000017}%
+\Hypertarget{deprecated__deprecated000017}%
+
+\end{DoxyRefList}

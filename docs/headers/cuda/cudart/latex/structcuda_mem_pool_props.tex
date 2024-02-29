@@ -1,0 +1,60 @@
+\doxysection{cuda\+Mem\+Pool\+Props Struct Reference}
+\hypertarget{structcuda_mem_pool_props}{}\label{structcuda_mem_pool_props}\index{cudaMemPoolProps@{cudaMemPoolProps}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gab5bd172ea08b1acac1782cb96f523cd6}{cuda\+Mem\+Allocation\+Type}} \mbox{\hyperlink{structcuda_mem_pool_props_a93dcf13a9ddc7114384e78f66c9489df}{alloc\+Type}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cuda\+Mem\+Allocation\+Handle\+Type}} \mbox{\hyperlink{structcuda_mem_pool_props_a4cf896bffe71384e374c4d2decca9a53}{handle\+Types}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_location}{cuda\+Mem\+Location}} \mbox{\hyperlink{structcuda_mem_pool_props_a303b6f26f48c734de034d472fe3172bb}{location}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_mem_pool_props_ada7460ee187a2ab56d1a297e8d520e08}{win32\+Security\+Attributes}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} \mbox{\hyperlink{structcuda_mem_pool_props_a5db4d4943a5bb89d7a7d0ac47c2eb383}{reserved}} \mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specifies the properties of allocations made from the pool. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_mem_pool_props_a93dcf13a9ddc7114384e78f66c9489df}\label{structcuda_mem_pool_props_a93dcf13a9ddc7114384e78f66c9489df} 
+\index{cudaMemPoolProps@{cudaMemPoolProps}!allocType@{allocType}}
+\index{allocType@{allocType}!cudaMemPoolProps@{cudaMemPoolProps}}
+\doxysubsubsection{\texorpdfstring{allocType}{allocType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gab5bd172ea08b1acac1782cb96f523cd6}{cuda\+Mem\+Allocation\+Type}} cuda\+Mem\+Pool\+Props\+::alloc\+Type}
+
+Allocation type. Currently must be specified as cuda\+Mem\+Allocation\+Type\+Pinned \Hypertarget{structcuda_mem_pool_props_a4cf896bffe71384e374c4d2decca9a53}\label{structcuda_mem_pool_props_a4cf896bffe71384e374c4d2decca9a53} 
+\index{cudaMemPoolProps@{cudaMemPoolProps}!handleTypes@{handleTypes}}
+\index{handleTypes@{handleTypes}!cudaMemPoolProps@{cudaMemPoolProps}}
+\doxysubsubsection{\texorpdfstring{handleTypes}{handleTypes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cuda\+Mem\+Allocation\+Handle\+Type}} cuda\+Mem\+Pool\+Props\+::handle\+Types}
+
+Handle types that will be supported by allocations from the pool. \Hypertarget{structcuda_mem_pool_props_a303b6f26f48c734de034d472fe3172bb}\label{structcuda_mem_pool_props_a303b6f26f48c734de034d472fe3172bb} 
+\index{cudaMemPoolProps@{cudaMemPoolProps}!location@{location}}
+\index{location@{location}!cudaMemPoolProps@{cudaMemPoolProps}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_location}{cuda\+Mem\+Location}} cuda\+Mem\+Pool\+Props\+::location}
+
+Location allocations should reside. \Hypertarget{structcuda_mem_pool_props_a5db4d4943a5bb89d7a7d0ac47c2eb383}\label{structcuda_mem_pool_props_a5db4d4943a5bb89d7a7d0ac47c2eb383} 
+\index{cudaMemPoolProps@{cudaMemPoolProps}!reserved@{reserved}}
+\index{reserved@{reserved}!cudaMemPoolProps@{cudaMemPoolProps}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{char}} cuda\+Mem\+Pool\+Props\+::reserved\mbox{[}64\mbox{]}}
+
+reserved for future use, must be 0 \Hypertarget{structcuda_mem_pool_props_ada7460ee187a2ab56d1a297e8d520e08}\label{structcuda_mem_pool_props_ada7460ee187a2ab56d1a297e8d520e08} 
+\index{cudaMemPoolProps@{cudaMemPoolProps}!win32SecurityAttributes@{win32SecurityAttributes}}
+\index{win32SecurityAttributes@{win32SecurityAttributes}!cudaMemPoolProps@{cudaMemPoolProps}}
+\doxysubsubsection{\texorpdfstring{win32SecurityAttributes}{win32SecurityAttributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+Mem\+Pool\+Props\+::win32\+Security\+Attributes}
+
+Windows-\/specific LPSECURITYATTRIBUTES required when cuda\+Mem\+Handle\+Type\+Win32 is specified. This security attribute defines the scope of which exported allocations may be tranferred to other processes. In all other cases, this field is required to be zero. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}

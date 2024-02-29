@@ -1,0 +1,151 @@
+\doxysection{Peer Context Memory Access}
+\hypertarget{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s}{}\label{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s}\index{Peer Context Memory Access@{Peer Context Memory Access}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gadd7611b1357104d94a8d49d16df2e08f}{cu\+Device\+Can\+Access\+Peer}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{can\+Access\+Peer}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{dev}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{peer\+Dev}})
+\begin{DoxyCompactList}\small\item\em Queries if a device may directly access a peer device\textquotesingle{}s memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}{cu\+Ctx\+Enable\+Peer\+Access}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{peer\+Context}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Enables direct access to memory allocations in a peer context. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga25594ac5998bace5ce5946c13b6b3b83}{cu\+Ctx\+Disable\+Peer\+Access}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{peer\+Context}})
+\begin{DoxyCompactList}\small\item\em Disables direct access to memory allocations in a peer context and unregisters any registered allocations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gaff53ed922b992b42baeae460f08c223c}{cu\+Device\+Get\+P2\+PAttribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}value, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga15303cc3cfc41b5451270be815821b7f}{CUdevice\+\_\+\+P2\+PAttribute}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attrib}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} src\+Device, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}} dst\+Device)
+\begin{DoxyCompactList}\small\item\em Queries attributes of the link between two devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ direct peer context memory access functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the direct peer context memory access functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga25594ac5998bace5ce5946c13b6b3b83}\label{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga25594ac5998bace5ce5946c13b6b3b83} 
+\index{Peer Context Memory Access@{Peer Context Memory Access}!cuCtxDisablePeerAccess@{cuCtxDisablePeerAccess}}
+\index{cuCtxDisablePeerAccess@{cuCtxDisablePeerAccess}!Peer Context Memory Access@{Peer Context Memory Access}}
+\doxysubsubsection{\texorpdfstring{cuCtxDisablePeerAccess()}{cuCtxDisablePeerAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Disable\+Peer\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}}]{peer\+Context }\end{DoxyParamCaption})}
+
+
+
+Disables direct access to memory allocations in a peer context and unregisters any registered allocations. 
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa5e985a1735204ae8455e9eec402d46c3}{CUDA\+\_\+\+ERROR\+\_\+\+PEER\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ENABLED} if direct peer access has not yet been enabled from {\ttfamily peer\+Context} to the current context.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} if there is no current context, or if {\ttfamily peer\+Context} is not a valid context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em peer\+Context} & -\/ Peer context to disable direct access to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa5e985a1735204ae8455e9eec402d46c3}{CUDA\+\_\+\+ERROR\+\_\+\+PEER\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ENABLED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gadd7611b1357104d94a8d49d16df2e08f}{cu\+Device\+Can\+Access\+Peer}, \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}{cu\+Ctx\+Enable\+Peer\+Access}, \doxylink{group___c_u_d_a_r_t___p_e_e_r_gad1d17e928a31f1cb1691a42de480c2d3}{cuda\+Device\+Disable\+Peer\+Access} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}\label{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6} 
+\index{Peer Context Memory Access@{Peer Context Memory Access}!cuCtxEnablePeerAccess@{cuCtxEnablePeerAccess}}
+\index{cuCtxEnablePeerAccess@{cuCtxEnablePeerAccess}!Peer Context Memory Access@{Peer Context Memory Access}}
+\doxysubsubsection{\texorpdfstring{cuCtxEnablePeerAccess()}{cuCtxEnablePeerAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Ctx\+Enable\+Peer\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}}]{peer\+Context,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Enables direct access to memory allocations in a peer context. 
+
+If both the current context and {\ttfamily peer\+Context} are on devices which support unified addressing (as may be queried using \doxylink{group___c_u_d_a___t_y_p_e_s_gga3b9f561d2a42733dde99b2cedcaa413aadc11dd6d9f149a7bae32499f2b802c0d}{CU\+\_\+\+DEVICE\+\_\+\+ATTRIBUTE\+\_\+\+UNIFIED\+\_\+\+ADDRESSING}) and same major compute capability, then on success all allocations from {\ttfamily peer\+Context} will immediately be accessible by the current context. See \doxylink{group___c_u_d_a___u_n_i_f_i_e_d}{Unified Addressing} for additional details.
+
+Note that access granted by this call is unidirectional and that in order to access memory from the current context in {\ttfamily peer\+Context}, a separate symmetric call to \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}{cu\+Ctx\+Enable\+Peer\+Access()} is required.
+
+Note that there are both device-\/wide and system-\/wide limitations per system configuration, as noted in the CUDA Programming Guide under the section "{}\+Peer-\/to-\/\+Peer Memory Access"{}.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad60abcaa3f2710f961db8c383bb95cae}{CUDA\+\_\+\+ERROR\+\_\+\+PEER\+\_\+\+ACCESS\+\_\+\+UNSUPPORTED} if \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gadd7611b1357104d94a8d49d16df2e08f}{cu\+Device\+Can\+Access\+Peer()} indicates that the \doxylink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice} of the current context cannot directly access memory from the \doxylink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice} of {\ttfamily peer\+Context}.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa47c18606be796573aa2957402fa89a9c}{CUDA\+\_\+\+ERROR\+\_\+\+PEER\+\_\+\+ACCESS\+\_\+\+ALREADY\+\_\+\+ENABLED} if direct access of {\ttfamily peer\+Context} from the current context has already been enabled.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa168ef870793a31ef4cdd7cb6e279b34a}{CUDA\+\_\+\+ERROR\+\_\+\+TOO\+\_\+\+MANY\+\_\+\+PEERS} if direct peer access is not possible because hardware resources required for peer access have been exhausted.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT} if there is no current context, {\ttfamily peer\+Context} is not a valid context, or if the current context is {\ttfamily peer\+Context}.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} if {\ttfamily Flags} is not 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em peer\+Context} & -\/ Peer context to enable direct access to from the current context \\
+\hline
+{\em Flags} & -\/ Reserved for future use and must be set to 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa47c18606be796573aa2957402fa89a9c}{CUDA\+\_\+\+ERROR\+\_\+\+PEER\+\_\+\+ACCESS\+\_\+\+ALREADY\+\_\+\+ENABLED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa168ef870793a31ef4cdd7cb6e279b34a}{CUDA\+\_\+\+ERROR\+\_\+\+TOO\+\_\+\+MANY\+\_\+\+PEERS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaad60abcaa3f2710f961db8c383bb95cae}{CUDA\+\_\+\+ERROR\+\_\+\+PEER\+\_\+\+ACCESS\+\_\+\+UNSUPPORTED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gadd7611b1357104d94a8d49d16df2e08f}{cu\+Device\+Can\+Access\+Peer}, \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga25594ac5998bace5ce5946c13b6b3b83}{cu\+Ctx\+Disable\+Peer\+Access}, \doxylink{group___c_u_d_a_r_t___p_e_e_r_ga7443ed162ccf7463a7caf15dc799cc6d}{cuda\+Device\+Enable\+Peer\+Access} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gadd7611b1357104d94a8d49d16df2e08f}\label{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gadd7611b1357104d94a8d49d16df2e08f} 
+\index{Peer Context Memory Access@{Peer Context Memory Access}!cuDeviceCanAccessPeer@{cuDeviceCanAccessPeer}}
+\index{cuDeviceCanAccessPeer@{cuDeviceCanAccessPeer}!Peer Context Memory Access@{Peer Context Memory Access}}
+\doxysubsubsection{\texorpdfstring{cuDeviceCanAccessPeer()}{cuDeviceCanAccessPeer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Can\+Access\+Peer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{can\+Access\+Peer,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dev,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{peer\+Dev }\end{DoxyParamCaption})}
+
+
+
+Queries if a device may directly access a peer device\textquotesingle{}s memory. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}can\+Access\+Peer} a value of 1 if contexts on {\ttfamily dev} are capable of directly accessing memory from contexts on {\ttfamily peer\+Dev} and 0 otherwise. If direct access of {\ttfamily peer\+Dev} from {\ttfamily dev} is possible, then access may be enabled on two specific contexts by calling \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}{cu\+Ctx\+Enable\+Peer\+Access()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em can\+Access\+Peer} & -\/ Returned access capability \\
+\hline
+{\em dev} & -\/ Device from which allocations on {\ttfamily peer\+Dev} are to be directly accessed. \\
+\hline
+{\em peer\+Dev} & -\/ Device on which the allocations to be directly accessed by {\ttfamily dev} reside.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}{cu\+Ctx\+Enable\+Peer\+Access}, \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga25594ac5998bace5ce5946c13b6b3b83}{cu\+Ctx\+Disable\+Peer\+Access}, \doxylink{group___c_u_d_a_r_t___p_e_e_r_ga46cf1454e8daa73d9bc17aa5a1589a38}{cuda\+Device\+Can\+Access\+Peer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gaff53ed922b992b42baeae460f08c223c}\label{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gaff53ed922b992b42baeae460f08c223c} 
+\index{Peer Context Memory Access@{Peer Context Memory Access}!cuDeviceGetP2PAttribute@{cuDeviceGetP2PAttribute}}
+\index{cuDeviceGetP2PAttribute@{cuDeviceGetP2PAttribute}!Peer Context Memory Access@{Peer Context Memory Access}}
+\doxysubsubsection{\texorpdfstring{cuDeviceGetP2PAttribute()}{cuDeviceGetP2PAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Device\+Get\+P2\+PAttribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} \texorpdfstring{$\ast$}{*}}]{value,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga15303cc3cfc41b5451270be815821b7f}{CUdevice\+\_\+\+P2\+PAttribute}}}]{attrib,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{src\+Device,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}}]{dst\+Device }\end{DoxyParamCaption})}
+
+
+
+Queries attributes of the link between two devices. 
+
+Returns in {\ttfamily \texorpdfstring{$\ast$}{*}value} the value of the requested attribute {\ttfamily attrib} of the link between {\ttfamily src\+Device} and {\ttfamily dst\+Device}. The supported attributes are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+P2\+P\+\_\+\+ATTRIBUTE\+\_\+\+PERFORMANCE\+\_\+\+RANK\+:} A relative value indicating the performance of the link between two devices.
+\item \doxylink{group___c_u_d_a___t_y_p_e_s_ggadc810c97323fb22063ba25328e81ba19ac7e28aec0cd03c462a49d00d1b145f46}{CU\+\_\+\+DEVICE\+\_\+\+P2\+P\+\_\+\+ATTRIBUTE\+\_\+\+ACCESS\+\_\+\+SUPPORTED} P2P\+: 1 if P2P Access is enable.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+P2\+P\+\_\+\+ATTRIBUTE\+\_\+\+NATIVE\+\_\+\+ATOMIC\+\_\+\+SUPPORTED\+:} 1 if Atomic operations over the link are supported.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+DEVICE\+\_\+\+P2\+P\+\_\+\+ATTRIBUTE\+\_\+\+CUDA\+\_\+\+ARRAY\+\_\+\+ACCESS\+\_\+\+SUPPORTED\+:} 1 if cuda\+Array can be accessed over the link.
+\end{DoxyItemize}
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE} if {\ttfamily src\+Device} or {\ttfamily dst\+Device} are not valid or if they represent the same device.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} if {\ttfamily attrib} is not valid or if {\ttfamily value} is a null pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Returned value of the requested attribute \\
+\hline
+{\em attrib} & -\/ The requested attribute of the link between {\ttfamily src\+Device} and {\ttfamily dst\+Device}. \\
+\hline
+{\em src\+Device} & -\/ The source device of the target link. \\
+\hline
+{\em dst\+Device} & -\/ The destination device of the target link.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa6f047e7215788ca96c81af92a04bfb6c}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DEVICE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga09abdb12526cbcacece926887a76a5e6}{cu\+Ctx\+Enable\+Peer\+Access}, \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_ga25594ac5998bace5ce5946c13b6b3b83}{cu\+Ctx\+Disable\+Peer\+Access}, \doxylink{group___c_u_d_a___p_e_e_r___a_c_c_e_s_s_gadd7611b1357104d94a8d49d16df2e08f}{cu\+Device\+Can\+Access\+Peer}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaf1d1511f9dbad847493925bc425719c7}{cuda\+Device\+Get\+P2\+PAttribute} 
+\end{DoxySeeAlso}

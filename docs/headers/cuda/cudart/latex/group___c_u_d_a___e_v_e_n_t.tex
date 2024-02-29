@@ -1,0 +1,228 @@
+\doxysection{Event Management}
+\hypertarget{group___c_u_d_a___e_v_e_n_t}{}\label{group___c_u_d_a___e_v_e_n_t}\index{Event Management@{Event Management}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}{cu\+Event\+Create}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{ph\+Event}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} Flags)
+\begin{DoxyCompactList}\small\item\em Creates an event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Event}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Records an event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_v_e_n_t_gab0890e38cc09f921abf735c10efae203}{cu\+Event\+Record\+With\+Flags}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Event}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}} h\+Stream, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Records an event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Event}})
+\begin{DoxyCompactList}\small\item\em Queries an event\textquotesingle{}s status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Event}})
+\begin{DoxyCompactList}\small\item\em Waits for an event to complete. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_v_e_n_t_ga03ce01bae35c6cee764b7f05b705bb3e}{cu\+Event\+Destroy}} (\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Event}})
+\begin{DoxyCompactList}\small\item\em Destroys an event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI \mbox{\hyperlink{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}{cu\+Event\+Elapsed\+Time}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{p\+Milliseconds}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+Start}}, \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{h\+End}})
+\begin{DoxyCompactList}\small\item\em Computes the elapsed time between two events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ event management functions of the low-\/level CUDA driver API (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+
+
+This section describes the event management functions of the low-\/level CUDA driver application programming interface. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}\label{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8} 
+\index{Event Management@{Event Management}!cuEventCreate@{cuEventCreate}}
+\index{cuEventCreate@{cuEventCreate}!Event Management@{Event Management}}
+\doxysubsubsection{\texorpdfstring{cuEventCreate()}{cuEventCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}} \texorpdfstring{$\ast$}{*}}]{ph\+Event,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{Flags }\end{DoxyParamCaption})}
+
+
+
+Creates an event. 
+
+Creates an event \texorpdfstring{$\ast$}{*}ph\+Event for the current context with the flags specified via {\ttfamily Flags}. Valid flags include\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+DEFAULT\+:} Default event creation flag.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+BLOCKING\+\_\+\+SYNC\+:} Specifies that the created event should use blocking synchronization. A CPU thread that uses \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize()} to wait on an event created with this flag will block until the event has actually been recorded.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+DISABLE\+\_\+\+TIMING\+:} Specifies that the created event does not need to record timing data. Events created with this flag specified and the \doxylink{group___c_u_d_a___t_y_p_e_s_gga58fed1f4772abb4551d21d44dfcb892ca6813b3b31fdb737133124f3c35044362}{CU\+\_\+\+EVENT\+\_\+\+BLOCKING\+\_\+\+SYNC} flag not specified will provide the best performance when used with \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event()} and \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query()}.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+INTERPROCESS\+:} Specifies that the created event may be used as an interprocess event by \doxylink{group___c_u_d_a___m_e_m_gafb5982c0e44b70fcc81c209d8921fdaa}{cu\+Ipc\+Get\+Event\+Handle()}. \doxylink{group___c_u_d_a___t_y_p_e_s_gga58fed1f4772abb4551d21d44dfcb892caadab662356d24cf59f3d7de07c3cd52e}{CU\+\_\+\+EVENT\+\_\+\+INTERPROCESS} must be specified along with \doxylink{group___c_u_d_a___t_y_p_e_s_gga58fed1f4772abb4551d21d44dfcb892cadaa5463f64794c10b78c603d23c0bff2}{CU\+\_\+\+EVENT\+\_\+\+DISABLE\+\_\+\+TIMING}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ph\+Event} & -\/ Returns newly created event \\
+\hline
+{\em Flags} & -\/ Event creation flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}, cu\+Event\+Destroy, \doxylink{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}{cu\+Event\+Elapsed\+Time}, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_gaf95514807c666994e61b94c93ef10a2b}{cuda\+Event\+Create}, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_ga80341dd18a63acb6be0d8afa874821ed}{cuda\+Event\+Create\+With\+Flags} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_v_e_n_t_ga03ce01bae35c6cee764b7f05b705bb3e}\label{group___c_u_d_a___e_v_e_n_t_ga03ce01bae35c6cee764b7f05b705bb3e} 
+\index{Event Management@{Event Management}!cuEventDestroy@{cuEventDestroy}}
+\index{cuEventDestroy@{cuEventDestroy}!Event Management@{Event Management}}
+\doxysubsubsection{\texorpdfstring{cuEventDestroy()}{cuEventDestroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}}]{h\+Event }\end{DoxyParamCaption})}
+
+
+
+Destroys an event. 
+
+Destroys the event specified by {\ttfamily h\+Event}.
+
+An event may be destroyed before it is complete (i.\+e., while \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query()} would return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaedd9cef666ce620352e619a36b6c3f34}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READY}). In this case, the call does not block on completion of the event, and any associated resources will automatically be released asynchronously at completion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Event} & -\/ Event to destroy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}{cu\+Event\+Create}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}{cu\+Event\+Elapsed\+Time}, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_gac8f42aa081e464ada1a59cd5e6ae3015}{cuda\+Event\+Destroy} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}\label{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41} 
+\index{Event Management@{Event Management}!cuEventElapsedTime@{cuEventElapsedTime}}
+\index{cuEventElapsedTime@{cuEventElapsedTime}!Event Management@{Event Management}}
+\doxysubsubsection{\texorpdfstring{cuEventElapsedTime()}{cuEventElapsedTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Elapsed\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{float}} \texorpdfstring{$\ast$}{*}}]{p\+Milliseconds,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}}]{h\+Start,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}}]{h\+End }\end{DoxyParamCaption})}
+
+
+
+Computes the elapsed time between two events. 
+
+Computes the elapsed time between two events (in milliseconds with a resolution of around 0.\+5 microseconds).
+
+If either event was last recorded in a non-\/\+NULL stream, the resulting time may be greater than expected (even if both used the same stream handle). This happens because the \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()} operation takes place asynchronously and there is no guarantee that the measured latency is actually just between the two events. Any number of other different stream operations could execute in between the two measured events, thus altering the timing in a significant way.
+
+If \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()} has not been called on either event then \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} is returned. If \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()} has been called on both events but one or both of them has not yet been completed (that is, \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query()} would return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaedd9cef666ce620352e619a36b6c3f34}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READY} on at least one of the events), \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaedd9cef666ce620352e619a36b6c3f34}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READY} is returned. If either event was created with the \doxylink{group___c_u_d_a___t_y_p_e_s_gga58fed1f4772abb4551d21d44dfcb892cadaa5463f64794c10b78c603d23c0bff2}{CU\+\_\+\+EVENT\+\_\+\+DISABLE\+\_\+\+TIMING} flag, then this function will return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Milliseconds} & -\/ Time between {\ttfamily h\+Start} and {\ttfamily h\+End} in ms \\
+\hline
+{\em h\+Start} & -\/ Starting event \\
+\hline
+{\em h\+End} & -\/ Ending event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaedd9cef666ce620352e619a36b6c3f34}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}{cu\+Event\+Create}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}, cu\+Event\+Destroy, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_gabb6db9fb36a249aec6cee068fadf7943}{cuda\+Event\+Elapsed\+Time} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}\label{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8} 
+\index{Event Management@{Event Management}!cuEventQuery@{cuEventQuery}}
+\index{cuEventQuery@{cuEventQuery}!Event Management@{Event Management}}
+\doxysubsubsection{\texorpdfstring{cuEventQuery()}{cuEventQuery()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}}]{h\+Event }\end{DoxyParamCaption})}
+
+
+
+Queries an event\textquotesingle{}s status. 
+
+Queries the status of all work currently captured by {\ttfamily h\+Event}. See \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()} for details on what is captured by an event.
+
+Returns \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS} if all captured work has been completed, or \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaedd9cef666ce620352e619a36b6c3f34}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READY} if any captured work is incomplete.
+
+For the purposes of Unified Memory, a return value of \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS} is equivalent to having called \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Event} & -\/ Event to query\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaedd9cef666ce620352e619a36b6c3f34}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READY} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}{cu\+Event\+Create}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}, cu\+Event\+Destroy, \doxylink{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}{cu\+Event\+Elapsed\+Time}, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_gabff85920872d5ed4aaf7b618e392f514}{cuda\+Event\+Query} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}\label{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac} 
+\index{Event Management@{Event Management}!cuEventRecord@{cuEventRecord}}
+\index{cuEventRecord@{cuEventRecord}!Event Management@{Event Management}}
+\doxysubsubsection{\texorpdfstring{cuEventRecord()}{cuEventRecord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}}]{h\+Event,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream }\end{DoxyParamCaption})}
+
+
+
+Records an event. 
+
+Captures in {\ttfamily h\+Event} the contents of {\ttfamily h\+Stream} at the time of this call. {\ttfamily h\+Event} and {\ttfamily h\+Stream} must be from the same context. Calls such as \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query()} or \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event()} will then examine or wait for completion of the work that was captured. Uses of {\ttfamily h\+Stream} after this call do not modify {\ttfamily h\+Event}. See note on default stream behavior for what is captured in the default case.
+
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()} can be called multiple times on the same event and will overwrite the previously captured state. Other APIs such as \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event()} use the most recently captured state at the time of the API call, and are not affected by later calls to \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()}. Before the first call to \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()}, an event represents an empty set of work, so for example \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query()} would return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Event} & -\/ Event to record \\
+\hline
+{\em h\+Stream} & -\/ Stream to record event for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}{cu\+Event\+Create}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}, \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event}, cu\+Event\+Destroy, \doxylink{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}{cu\+Event\+Elapsed\+Time}, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_ga456a07ba2685ccd5ccfc84a5d171ad02}{cuda\+Event\+Record}, \doxylink{group___c_u_d_a___e_v_e_n_t_gab0890e38cc09f921abf735c10efae203}{cu\+Event\+Record\+With\+Flags} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_v_e_n_t_gab0890e38cc09f921abf735c10efae203}\label{group___c_u_d_a___e_v_e_n_t_gab0890e38cc09f921abf735c10efae203} 
+\index{Event Management@{Event Management}!cuEventRecordWithFlags@{cuEventRecordWithFlags}}
+\index{cuEventRecordWithFlags@{cuEventRecordWithFlags}!Event Management@{Event Management}}
+\doxysubsubsection{\texorpdfstring{cuEventRecordWithFlags()}{cuEventRecordWithFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Record\+With\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}}]{h\+Event,  }\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}}]{h\+Stream,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Records an event. 
+
+Captures in {\ttfamily h\+Event} the contents of {\ttfamily h\+Stream} at the time of this call. {\ttfamily h\+Event} and {\ttfamily h\+Stream} must be from the same context. Calls such as \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query()} or \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event()} will then examine or wait for completion of the work that was captured. Uses of {\ttfamily h\+Stream} after this call do not modify {\ttfamily h\+Event}. See note on default stream behavior for what is captured in the default case.
+
+\doxylink{group___c_u_d_a___e_v_e_n_t_gab0890e38cc09f921abf735c10efae203}{cu\+Event\+Record\+With\+Flags()} can be called multiple times on the same event and will overwrite the previously captured state. Other APIs such as \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event()} use the most recently captured state at the time of the API call, and are not affected by later calls to \doxylink{group___c_u_d_a___e_v_e_n_t_gab0890e38cc09f921abf735c10efae203}{cu\+Event\+Record\+With\+Flags()}. Before the first call to \doxylink{group___c_u_d_a___e_v_e_n_t_gab0890e38cc09f921abf735c10efae203}{cu\+Event\+Record\+With\+Flags()}, an event represents an empty set of work, so for example \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query()} would return \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}.
+
+flags include\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+RECORD\+\_\+\+DEFAULT\+:} Default event creation flag.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CU\+\_\+\+EVENT\+\_\+\+RECORD\+\_\+\+EXTERNAL\+:} Event is captured in the graph as an external event node when performing stream capture. This flag is invalid outside of stream capture.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Event} & -\/ Event to record \\
+\hline
+{\em h\+Stream} & -\/ Stream to record event for \\
+\hline
+{\em flags} & -\/ See \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUevent\+\_\+capture\+\_\+flags}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE} \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}{cu\+Event\+Create}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}{cu\+Event\+Synchronize}, \doxylink{group___c_u_d_a___s_t_r_e_a_m_gad09bc2964bf3441c02bfe22c346f73e5}{cu\+Stream\+Wait\+Event}, cu\+Event\+Destroy, \doxylink{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}{cu\+Event\+Elapsed\+Time}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record}, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_ga456a07ba2685ccd5ccfc84a5d171ad02}{cuda\+Event\+Record} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5}\label{group___c_u_d_a___e_v_e_n_t_ga7b793010359bac523d837b3f8c81f2c5} 
+\index{Event Management@{Event Management}!cuEventSynchronize@{cuEventSynchronize}}
+\index{cuEventSynchronize@{cuEventSynchronize}!Event Management@{Event Management}}
+\doxysubsubsection{\texorpdfstring{cuEventSynchronize()}{cuEventSynchronize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}} CUDAAPI cu\+Event\+Synchronize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga6d740185cf0953636d4ae37f68d7559b}{CUevent}}}]{h\+Event }\end{DoxyParamCaption})}
+
+
+
+Waits for an event to complete. 
+
+Waits until the completion of all work currently captured in {\ttfamily h\+Event}. See \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record()} for details on what is captured by an event.
+
+Waiting for an event that was created with the \doxylink{group___c_u_d_a___t_y_p_e_s_gga58fed1f4772abb4551d21d44dfcb892ca6813b3b31fdb737133124f3c35044362}{CU\+\_\+\+EVENT\+\_\+\+BLOCKING\+\_\+\+SYNC} flag will cause the calling CPU thread to block until the event has been completed by the device. If the \doxylink{group___c_u_d_a___t_y_p_e_s_gga58fed1f4772abb4551d21d44dfcb892ca6813b3b31fdb737133124f3c35044362}{CU\+\_\+\+EVENT\+\_\+\+BLOCKING\+\_\+\+SYNC} flag has not been set, then the CPU thread will busy-\/wait until the event has been completed by the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Event} & -\/ Event to wait for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaacf52f132faf29b473cdda6061f0f44a}{CUDA\+\_\+\+ERROR\+\_\+\+DEINITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa484e9af32c1e9893ff21f0e0191a12d}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa0fd2e63260c6317ba943af0f7e4b8d21}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE} \textbackslash{}notefnerr
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___e_v_e_n_t_ga092829e272a04c7ad1b4d05bdecaa4b8}{cu\+Event\+Create}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga8b5c6177fdc919e456a73684a01d2bac}{cu\+Event\+Record}, \doxylink{group___c_u_d_a___e_v_e_n_t_ga862b4b51fb9fa95371a83c722d10fbc8}{cu\+Event\+Query}, cu\+Event\+Destroy, \doxylink{group___c_u_d_a___e_v_e_n_t_ga40a73524adf6e94939c21f71b8886c41}{cu\+Event\+Elapsed\+Time}, \doxylink{group___c_u_d_a_r_t___e_v_e_n_t_ga94b4ebd303bec5ef0b0f2b0235fe0ab1}{cuda\+Event\+Synchronize} 
+\end{DoxySeeAlso}

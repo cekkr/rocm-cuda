@@ -1,0 +1,459 @@
+\doxysection{Stream Ordered Memory Allocator}
+\hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s}{}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s}\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}dev\+Ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Allocates memory with stream ordered semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}dev\+Ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} h\+Stream)
+\begin{DoxyCompactList}\small\item\em Frees memory with stream ordered semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4262b5963739dcb4e1e5ee44308a5268}{cuda\+Mem\+Pool\+Trim\+To}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{min\+Bytes\+To\+Keep}})
+\begin{DoxyCompactList}\small\item\em Tries to release memory back to the OS. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6ec7e1dc59855139018b04c058375b19}{cuda\+Mem\+Pool\+Set\+Attribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga631a0ac27eb2dbf6f50fe37ddf5291f5}{cuda\+Mem\+Pool\+Attr}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Sets attributes of a memory pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga28ca93e58f8e774dec7216060f1be7b4}{cuda\+Mem\+Pool\+Get\+Attribute}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga631a0ac27eb2dbf6f50fe37ddf5291f5}{cuda\+Mem\+Pool\+Attr}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{attr}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Gets attributes of a memory pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gab25dfce6dfd3a863e18714d2ddc2936d}{cuda\+Mem\+Pool\+Set\+Access}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_access_desc}{cuda\+Mem\+Access\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{desc\+List}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{count}})
+\begin{DoxyCompactList}\small\item\em Controls visibility of pools between devices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga7735d0be64985ad5f4d9a4f77c1ff0c7}{cuda\+Mem\+Pool\+Get\+Access}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad1e8fa13175e6866f810ab56c3764b45}{cuda\+Mem\+Access\+Flags}} \texorpdfstring{$\ast$}{*}flags, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_location}{cuda\+Mem\+Location}} \texorpdfstring{$\ast$}{*}location)
+\begin{DoxyCompactList}\small\item\em Returns the accessibility of a pool from a device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40}{cuda\+Mem\+Pool\+Create}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_props}{cuda\+Mem\+Pool\+Props}} \texorpdfstring{$\ast$}{*}pool\+Props)
+\begin{DoxyCompactList}\small\item\em Creates a memory pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gac49d8e1a9690ac51b40bbfb40a074597}{cuda\+Mem\+Pool\+Destroy}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}})
+\begin{DoxyCompactList}\small\item\em Destroys the specified memory pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga18710fb7c9bc23959692a6e213d30dbb}{cuda\+Malloc\+From\+Pool\+Async}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} size, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} stream)
+\begin{DoxyCompactList}\small\item\em Allocates memory from a specified pool with stream ordered semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4eb70392a0c92bcddc695b33cbfbc06b}{cuda\+Mem\+Pool\+Export\+To\+Shareable\+Handle}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{shareable\+Handle}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cuda\+Mem\+Allocation\+Handle\+Type}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{handle\+Type}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em Exports a memory pool to the requested handle type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad8c80b02b6ef409fef86ad2af4559c5c}{cuda\+Mem\+Pool\+Import\+From\+Shareable\+Handle}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{shareable\+Handle}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cuda\+Mem\+Allocation\+Handle\+Type}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{handle\+Type}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}} flags)
+\begin{DoxyCompactList}\small\item\em imports a memory pool from a shared handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad11478d8781fcd5f2954d102d96e9a42}{cuda\+Mem\+Pool\+Export\+Pointer}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_ptr_export_data}{cuda\+Mem\+Pool\+Ptr\+Export\+Data}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{export\+Data}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Export data to share a memory pool allocation between processes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} \mbox{\hyperlink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}{cuda\+Mem\+Pool\+Import\+Pointer}} (\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}ptr, \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{mem\+Pool}}, \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_ptr_export_data}{cuda\+Mem\+Pool\+Ptr\+Export\+Data}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{export\+Data}})
+\begin{DoxyCompactList}\small\item\em Import a memory pool allocation from another process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+\_\+\+MANBRIEF\+\_\+\+\_\+\+\_\+ Functions for performing allocation and free operations in stream order. Functions for controlling the behavior of the underlying allocator. (\+\_\+\+\_\+\+\_\+\+CURRENT\+\_\+\+FILE\+\_\+\+\_\+\+\_\+) \+\_\+\+\_\+\+\_\+\+ENDMANBRIEF\+\_\+\+\_\+\+\_\+\hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_CUDART_MEMORY_POOLS_overview}{}\doxysubsection{\texorpdfstring{overview}{overview}}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_CUDART_MEMORY_POOLS_overview}
+The asynchronous allocator allows the user to allocate and free in stream order. All asynchronous accesses of the allocation must happen between the stream executions of the allocation and the free. If the memory is accessed outside of the promised stream order, a use before allocation / use after free error will cause undefined behavior.
+
+The allocator is free to reallocate the memory as long as it can guarantee that compliant memory accesses will not overlap temporally. The allocator may refer to internal stream ordering as well as inter-\/stream dependencies (such as CUDA events and null stream dependencies) when establishing the temporal guarantee. The allocator may also insert inter-\/stream dependencies to establish the temporal guarantee.\hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_CUDART_MEMORY_POOLS_support}{}\doxysubsection{\texorpdfstring{Supported Platforms}{Supported Platforms}}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_CUDART_MEMORY_POOLS_support}
+Whether or not a device supports the integrated stream ordered memory allocator may be queried by calling \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gade765bf7bb5df793bc506f4b8ad97d19}{cuda\+Device\+Get\+Attribute()} with the device attribute cuda\+Dev\+Attr\+Memory\+Pools\+Supported. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaFreeAsync@{cudaFreeAsync}}
+\index{cudaFreeAsync@{cudaFreeAsync}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaFreeAsync()}{cudaFreeAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Free\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}}}]{h\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Frees memory with stream ordered semantics. 
+
+Inserts a free operation into {\ttfamily h\+Stream}. The allocation must not be accessed after stream execution reaches the free. After this API returns, accessing the memory from any subsequent work launched on the GPU or querying its pointer attributes results in undefined behavior.
+
+\begin{DoxyNote}{Note}
+During stream capture, this function results in the creation of a free node and must therefore be passed the address of a graph allocation.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em dptr} & -\/ memory to free \\
+\hline
+{\em h\+Stream} & -\/ The stream establishing the stream ordering promise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value, cuda\+Error\+Not\+Supported \textbackslash{}notefnerr \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga1e04649f84f307d199f7976854c89a45}{cu\+Mem\+Free\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMallocAsync@{cudaMallocAsync}}
+\index{cudaMallocAsync@{cudaMallocAsync}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMallocAsync()}{cudaMallocAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Malloc\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{dev\+Ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}}}]{h\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Allocates memory with stream ordered semantics. 
+
+Inserts an allocation operation into {\ttfamily h\+Stream}. A pointer to the allocated memory is returned immediately in \texorpdfstring{$\ast$}{*}dptr. The allocation must not be accessed until the the allocation operation completes. The allocation comes from the memory pool associated with the stream\textquotesingle{}s device.
+
+\begin{DoxyNote}{Note}
+The default memory pool of a device contains device memory from that device. 
+
+Basic stream ordering allows future work submitted into the same stream to use the allocation. Stream query, stream synchronize, and CUDA events can be used to guarantee that the allocation operation completes before work submitted in a separate stream runs. 
+
+During stream capture, this function results in the creation of an allocation node. In this case, the allocation is owned by the graph instead of the memory pool. The memory pool\textquotesingle{}s properties are used to set the node\textquotesingle{}s creation parameters.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em dev\+Ptr} & -\/ Returned device pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -\/ Number of bytes to allocate \\
+\hline
+\mbox{\texttt{ in}}  & {\em h\+Stream} & -\/ The stream establishing the stream ordering contract and the memory pool to allocate from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value, cuda\+Error\+Not\+Supported, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Error\+Out\+Of\+Memory}, \textbackslash{}notefnerr \textbackslash{}note\+\_\+null\+\_\+stream \textbackslash{}note\+\_\+init\+\_\+rt \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_gafd00661b70b886c4e7bdf30c8b1a9c96}{cu\+Mem\+Alloc\+Async}, cuda\+Malloc\+Async (C++ API), \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga18710fb7c9bc23959692a6e213d30dbb}{cuda\+Malloc\+From\+Pool\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaa503f685aa42f7c6253b2e07da4f2d52}{cuda\+Device\+Set\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3059451a26b72bd2f7f997f435b61208}{cuda\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5bc7f3121655272a27059f9cd1b13036}{cuda\+Device\+Get\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gab25dfce6dfd3a863e18714d2ddc2936d}{cuda\+Mem\+Pool\+Set\+Access}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6ec7e1dc59855139018b04c058375b19}{cuda\+Mem\+Pool\+Set\+Attribute}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga28ca93e58f8e774dec7216060f1be7b4}{cuda\+Mem\+Pool\+Get\+Attribute} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga18710fb7c9bc23959692a6e213d30dbb}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga18710fb7c9bc23959692a6e213d30dbb} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMallocFromPoolAsync@{cudaMallocFromPoolAsync}}
+\index{cudaMallocFromPoolAsync@{cudaMallocFromPoolAsync}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMallocFromPoolAsync()}{cudaMallocFromPoolAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Malloc\+From\+Pool\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}}}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Allocates memory from a specified pool with stream ordered semantics. 
+
+Inserts an allocation operation into {\ttfamily h\+Stream}. A pointer to the allocated memory is returned immediately in \texorpdfstring{$\ast$}{*}dptr. The allocation must not be accessed until the the allocation operation completes. The allocation comes from the specified memory pool.
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item The specified memory pool may be from a device different than that of the specified {\ttfamily h\+Stream}.
+\item Basic stream ordering allows future work submitted into the same stream to use the allocation. Stream query, stream synchronize, and CUDA events can be used to guarantee that the allocation operation completes before work submitted in a separate stream runs.
+\end{DoxyItemize}
+
+During stream capture, this function results in the creation of an allocation node. In this case, the allocation is owned by the graph instead of the memory pool. The memory pool\textquotesingle{}s properties are used to set the node\textquotesingle{}s creation parameters.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ptr} & -\/ Returned device pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em bytesize} & -\/ Number of bytes to allocate \\
+\hline
+\mbox{\texttt{ in}}  & {\em mem\+Pool} & -\/ The pool to allocate from \\
+\hline
+\mbox{\texttt{ in}}  & {\em stream} & -\/ The stream establishing the stream ordering semantic\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value, cuda\+Error\+Not\+Supported, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Error\+Out\+Of\+Memory}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga53f85248f781ce1c0f221eeeff3f1796}{cu\+Mem\+Alloc\+From\+Pool\+Async}, cuda\+Malloc\+Async (C++ API), \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3059451a26b72bd2f7f997f435b61208}{cuda\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40}{cuda\+Mem\+Pool\+Create}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gab25dfce6dfd3a863e18714d2ddc2936d}{cuda\+Mem\+Pool\+Set\+Access}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6ec7e1dc59855139018b04c058375b19}{cuda\+Mem\+Pool\+Set\+Attribute} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolCreate@{cudaMemPoolCreate}}
+\index{cudaMemPoolCreate@{cudaMemPoolCreate}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolCreate()}{cudaMemPoolCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_props}{cuda\+Mem\+Pool\+Props}} \texorpdfstring{$\ast$}{*}}]{pool\+Props }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Creates a memory pool. 
+
+Creates a CUDA memory pool and returns the handle in {\ttfamily pool}. The {\ttfamily pool\+Props} determines the properties of the pool such as the backing device and IPC capabilities.
+
+By default, the pool\textquotesingle{}s memory will be accessible from the device it is allocated on.
+
+\begin{DoxyNote}{Note}
+Specifying cuda\+Mem\+Handle\+Type\+None creates a memory pool that will not support IPC.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value, cuda\+Error\+Not\+Supported
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga6b85aa521125d25bc8e9439c824388c0}{cu\+Mem\+Pool\+Create}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaa503f685aa42f7c6253b2e07da4f2d52}{cuda\+Device\+Set\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga18710fb7c9bc23959692a6e213d30dbb}{cuda\+Malloc\+From\+Pool\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4eb70392a0c92bcddc695b33cbfbc06b}{cuda\+Mem\+Pool\+Export\+To\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3059451a26b72bd2f7f997f435b61208}{cuda\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5bc7f3121655272a27059f9cd1b13036}{cuda\+Device\+Get\+Mem\+Pool} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gac49d8e1a9690ac51b40bbfb40a074597}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gac49d8e1a9690ac51b40bbfb40a074597} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolDestroy@{cudaMemPoolDestroy}}
+\index{cudaMemPoolDestroy@{cudaMemPoolDestroy}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolDestroy()}{cudaMemPoolDestroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Destroys the specified memory pool. 
+
+If any pointers obtained from this pool haven\textquotesingle{}t been freed or the pool has free operations that haven\textquotesingle{}t completed when \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gac49d8e1a9690ac51b40bbfb40a074597}{cuda\+Mem\+Pool\+Destroy} is invoked, the function will return immediately and the resources associated with the pool will be released automatically once there are no more outstanding allocations.
+
+Destroying the current mempool of a device sets the default mempool of that device as the current mempool for that device.
+
+\begin{DoxyNote}{Note}
+A device\textquotesingle{}s default memory pool cannot be destroyed.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga9908b13ca175fb85e12a980f5516a865}{cu\+Mem\+Pool\+Destroy}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaa503f685aa42f7c6253b2e07da4f2d52}{cuda\+Device\+Set\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3059451a26b72bd2f7f997f435b61208}{cuda\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5bc7f3121655272a27059f9cd1b13036}{cuda\+Device\+Get\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40}{cuda\+Mem\+Pool\+Create} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad11478d8781fcd5f2954d102d96e9a42}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad11478d8781fcd5f2954d102d96e9a42} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolExportPointer@{cudaMemPoolExportPointer}}
+\index{cudaMemPoolExportPointer@{cudaMemPoolExportPointer}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolExportPointer()}{cudaMemPoolExportPointer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Export\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_ptr_export_data}{cuda\+Mem\+Pool\+Ptr\+Export\+Data}} \texorpdfstring{$\ast$}{*}}]{export\+Data,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Export data to share a memory pool allocation between processes. 
+
+Constructs {\ttfamily share\+Data\+\_\+out} for sharing a specific allocation from an already shared memory pool. The recipient process can import the allocation with the \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}{cuda\+Mem\+Pool\+Import\+Pointer} api. The data is not a handle and may be shared through any IPC mechanism.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em share\+Data\+\_\+out} & -\/ Returned export data \\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & -\/ pointer to memory being exported\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Error\+Out\+Of\+Memory}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga68448f6292336ea85c09c1c86ccddc2e}{cu\+Mem\+Pool\+Export\+Pointer}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4eb70392a0c92bcddc695b33cbfbc06b}{cuda\+Mem\+Pool\+Export\+To\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad8c80b02b6ef409fef86ad2af4559c5c}{cuda\+Mem\+Pool\+Import\+From\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}{cuda\+Mem\+Pool\+Import\+Pointer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4eb70392a0c92bcddc695b33cbfbc06b}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4eb70392a0c92bcddc695b33cbfbc06b} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolExportToShareableHandle@{cudaMemPoolExportToShareableHandle}}
+\index{cudaMemPoolExportToShareableHandle@{cudaMemPoolExportToShareableHandle}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolExportToShareableHandle()}{cudaMemPoolExportToShareableHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Export\+To\+Shareable\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{shareable\+Handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cuda\+Mem\+Allocation\+Handle\+Type}}}]{handle\+Type,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Exports a memory pool to the requested handle type. 
+
+Given an IPC capable mempool, create an OS handle to share the pool with another process. A recipient process can convert the shareable handle into a mempool with \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad8c80b02b6ef409fef86ad2af4559c5c}{cuda\+Mem\+Pool\+Import\+From\+Shareable\+Handle}. Individual pointers can then be shared with the \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad11478d8781fcd5f2954d102d96e9a42}{cuda\+Mem\+Pool\+Export\+Pointer} and \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}{cuda\+Mem\+Pool\+Import\+Pointer} APIs. The implementation of what the shareable handle is and how it can be transferred is defined by the requested handle type.
+
+\begin{DoxyNote}{Note}
+\+: To create an IPC capable mempool, create a mempool with a CUmem\+Allocation\+Handle\+Type other than cuda\+Mem\+Handle\+Type\+None.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em handle\+\_\+out} & -\/ pointer to the location in which to store the requested handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em pool} & -\/ pool to export \\
+\hline
+\mbox{\texttt{ in}}  & {\em handle\+Type} & -\/ the type of handle to create \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ must be 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Error\+Out\+Of\+Memory}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga74a735493179f8548c941591419c1155}{cu\+Mem\+Pool\+Export\+To\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad8c80b02b6ef409fef86ad2af4559c5c}{cuda\+Mem\+Pool\+Import\+From\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad11478d8781fcd5f2954d102d96e9a42}{cuda\+Mem\+Pool\+Export\+Pointer}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}{cuda\+Mem\+Pool\+Import\+Pointer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga7735d0be64985ad5f4d9a4f77c1ff0c7}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga7735d0be64985ad5f4d9a4f77c1ff0c7} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolGetAccess@{cudaMemPoolGetAccess}}
+\index{cudaMemPoolGetAccess@{cudaMemPoolGetAccess}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolGetAccess()}{cudaMemPoolGetAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Get\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad1e8fa13175e6866f810ab56c3764b45}{cuda\+Mem\+Access\+Flags}} \texorpdfstring{$\ast$}{*}}]{flags,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_location}{cuda\+Mem\+Location}} \texorpdfstring{$\ast$}{*}}]{location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Returns the accessibility of a pool from a device. 
+
+Returns the accessibility of the pool\textquotesingle{}s memory from the specified location.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em flags} & -\/ the accessibility of the pool from the specified location \\
+\hline
+\mbox{\texttt{ in}}  & {\em mem\+Pool} & -\/ the pool being queried \\
+\hline
+\mbox{\texttt{ in}}  & {\em location} & -\/ the location accessing the pool\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga3cd5f387c8e7c4a874a5e33f96ab5663}{cu\+Mem\+Pool\+Get\+Access}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gab25dfce6dfd3a863e18714d2ddc2936d}{cuda\+Mem\+Pool\+Set\+Access} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga28ca93e58f8e774dec7216060f1be7b4}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga28ca93e58f8e774dec7216060f1be7b4} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolGetAttribute@{cudaMemPoolGetAttribute}}
+\index{cudaMemPoolGetAttribute@{cudaMemPoolGetAttribute}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolGetAttribute()}{cudaMemPoolGetAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Get\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga631a0ac27eb2dbf6f50fe37ddf5291f5}{cuda\+Mem\+Pool\+Attr}}}]{attr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Gets attributes of a memory pool. 
+
+Supported attributes are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Release\+Threshold\+:} (value type = cuuint64\+\_\+t) Amount of reserved memory in bytes to hold onto before trying to release memory back to the OS. When more than the release threshold bytes of memory are held by the memory pool, the allocator will try to release memory back to the OS on the next call to stream, event or context synchronize. (default 0)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Reuse\+Follow\+Event\+Dependencies\+:} (value type = int) Allow \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async} to use memory asynchronously freed in another stream as long as a stream ordering dependency of the allocating stream on the free action exists. Cuda events and null stream interactions can create the required stream ordered dependencies. (default enabled)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Reuse\+Allow\+Opportunistic\+:} (value type = int) Allow reuse of already completed frees when there is no dependency between the free and allocation. (default enabled)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Reuse\+Allow\+Internal\+Dependencies\+:} (value type = int) Allow \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async} to insert new stream dependencies in order to establish the stream ordering required to reuse a piece of memory released by \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async} (default enabled).
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Reserved\+Mem\+Current\+:} (value type = cuuint64\+\_\+t) Amount of backing memory currently allocated for the mempool.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Reserved\+Mem\+High\+:} (value type = cuuint64\+\_\+t) High watermark of backing memory allocated for the mempool since the last time it was reset.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Used\+Mem\+Current\+:} (value type = cuuint64\+\_\+t) Amount of memory from the pool that is currently in use by the application.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Used\+Mem\+High\+:} (value type = cuuint64\+\_\+t) High watermark of the amount of memory from the pool that was in use by the application since the last time it was reset.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pool} & -\/ The memory pool to get attributes of \\
+\hline
+\mbox{\texttt{ in}}  & {\em attr} & -\/ The attribute to get \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & -\/ Retrieved value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga54c9eb9fcedd1cdae8c33899714e08c5}{cu\+Mem\+Pool\+Get\+Attribute}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3059451a26b72bd2f7f997f435b61208}{cuda\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5bc7f3121655272a27059f9cd1b13036}{cuda\+Device\+Get\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40}{cuda\+Mem\+Pool\+Create} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad8c80b02b6ef409fef86ad2af4559c5c}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad8c80b02b6ef409fef86ad2af4559c5c} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolImportFromShareableHandle@{cudaMemPoolImportFromShareableHandle}}
+\index{cudaMemPoolImportFromShareableHandle@{cudaMemPoolImportFromShareableHandle}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolImportFromShareableHandle()}{cudaMemPoolImportFromShareableHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Import\+From\+Shareable\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{shareable\+Handle,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gad9678578f1b7f4d0a4e737bf2e91d982}{cuda\+Mem\+Allocation\+Handle\+Type}}}]{handle\+Type,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{unsigned}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{int}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+imports a memory pool from a shared handle. 
+
+Specific allocations can be imported from the imported pool with \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}{cuda\+Mem\+Pool\+Import\+Pointer}.
+
+\begin{DoxyNote}{Note}
+Imported memory pools do not support creating new allocations. As such imported memory pools may not be used in \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_gaa503f685aa42f7c6253b2e07da4f2d52}{cuda\+Device\+Set\+Mem\+Pool} or \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga18710fb7c9bc23959692a6e213d30dbb}{cuda\+Malloc\+From\+Pool\+Async} calls.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em pool\+\_\+out} & -\/ Returned memory pool \\
+\hline
+\mbox{\texttt{ in}}  & {\em handle} & -\/ OS handle of the pool to open \\
+\hline
+\mbox{\texttt{ in}}  & {\em handle\+Type} & -\/ The type of handle being imported \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & -\/ must be 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value, \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Error\+Out\+Of\+Memory}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga94beb3b9c2d199055dff6f11a54ee1ce}{cu\+Mem\+Pool\+Import\+From\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4eb70392a0c92bcddc695b33cbfbc06b}{cuda\+Mem\+Pool\+Export\+To\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad11478d8781fcd5f2954d102d96e9a42}{cuda\+Mem\+Pool\+Export\+Pointer}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}{cuda\+Mem\+Pool\+Import\+Pointer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga9bcc9f4516a9928fc7bcd2ea06b134dc} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolImportPointer@{cudaMemPoolImportPointer}}
+\index{cudaMemPoolImportPointer@{cudaMemPoolImportPointer}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolImportPointer()}{cudaMemPoolImportPointer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Import\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_pool_ptr_export_data}{cuda\+Mem\+Pool\+Ptr\+Export\+Data}} \texorpdfstring{$\ast$}{*}}]{export\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Import a memory pool allocation from another process. 
+
+Returns in {\ttfamily ptr\+\_\+out} a pointer to the imported memory. The imported memory must not be accessed before the allocation operation completes in the exporting process. The imported memory must be freed from all importing processes before being freed in the exporting process. The pointer may be freed with cuda\+Free or cuda\+Free\+Async. If \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async} is used, the free must be completed on the importing process before the free operation on the exporting process.
+
+\begin{DoxyNote}{Note}
+The \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async} api may be used in the exporting process before the \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async} operation completes in its stream as long as the \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async} in the exporting process specifies a stream with a stream dependency on the importing process\textquotesingle{}s \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ptr\+\_\+out} & -\/ pointer to imported memory \\
+\hline
+\mbox{\texttt{ in}}  & {\em pool} & -\/ pool from which to import \\
+\hline
+\mbox{\texttt{ in}}  & {\em share\+Data} & -\/ data specifying the memory to import\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaaa0eed720f8a87cd1c5fd1c453bc7a03d}{CUDA\+\_\+\+SUCCESS}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa90696c86fcee1f536a1ec7d25867feeb}{CUDA\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+VALUE}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa8feb999f0af99b4a25ab26b3866f4df8}{CUDA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}, \doxylink{group___c_u_d_a___t_y_p_e_s_gga0cdead942fd5028d157641eef6bdeeaaa264c50688ed110e8476b591befe60c02}{CUDA\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+MEMORY}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_gaa12038b36cdabdb9cc6baaf38f299576}{cu\+Mem\+Pool\+Import\+Pointer}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4eb70392a0c92bcddc695b33cbfbc06b}{cuda\+Mem\+Pool\+Export\+To\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad8c80b02b6ef409fef86ad2af4559c5c}{cuda\+Mem\+Pool\+Import\+From\+Shareable\+Handle}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gad11478d8781fcd5f2954d102d96e9a42}{cuda\+Mem\+Pool\+Export\+Pointer} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gab25dfce6dfd3a863e18714d2ddc2936d}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_gab25dfce6dfd3a863e18714d2ddc2936d} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolSetAccess@{cudaMemPoolSetAccess}}
+\index{cudaMemPoolSetAccess@{cudaMemPoolSetAccess}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolSetAccess()}{cudaMemPoolSetAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Set\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{const}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{struct}} \mbox{\hyperlink{structcuda_mem_access_desc}{cuda\+Mem\+Access\+Desc}} \texorpdfstring{$\ast$}{*}}]{desc\+List,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Controls visibility of pools between devices. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pool} & -\/ The pool being modified \\
+\hline
+\mbox{\texttt{ in}}  & {\em map} & -\/ Array of access descriptors. Each descriptor instructs the access to enable for a single gpu \\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & -\/ Number of descriptors in the map array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_gae688cf3441872b72388b361d4aca0e09}{cu\+Mem\+Pool\+Set\+Access}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga7735d0be64985ad5f4d9a4f77c1ff0c7}{cuda\+Mem\+Pool\+Get\+Access}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6ec7e1dc59855139018b04c058375b19}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6ec7e1dc59855139018b04c058375b19} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolSetAttribute@{cudaMemPoolSetAttribute}}
+\index{cudaMemPoolSetAttribute@{cudaMemPoolSetAttribute}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolSetAttribute()}{cudaMemPoolSetAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Set\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{enum}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga631a0ac27eb2dbf6f50fe37ddf5291f5}{cuda\+Mem\+Pool\+Attr}}}]{attr,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Sets attributes of a memory pool. 
+
+Supported attributes are\+:
+\begin{DoxyItemize}
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Release\+Threshold\+:} (value type = cuuint64\+\_\+t) Amount of reserved memory in bytes to hold onto before trying to release memory back to the OS. When more than the release threshold bytes of memory are held by the memory pool, the allocator will try to release memory back to the OS on the next call to stream, event or context synchronize. (default 0)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Reuse\+Follow\+Event\+Dependencies\+:} (value type = int) Allow \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async} to use memory asynchronously freed in another stream as long as a stream ordering dependency of the allocating stream on the free action exists. Cuda events and null stream interactions can create the required stream ordered dependencies. (default enabled)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Reuse\+Allow\+Opportunistic\+:} (value type = int) Allow reuse of already completed frees when there is no dependency between the free and allocation. (default enabled)
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Reuse\+Allow\+Internal\+Dependencies\+:} (value type = int) Allow \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async} to insert new stream dependencies in order to establish the stream ordering required to reuse a piece of memory released by \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async} (default enabled).
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Reserved\+Mem\+High\+:} (value type = cuuint64\+\_\+t) Reset the high watermark that tracks the amount of backing memory that was allocated for the memory pool. It is illegal to set this attribute to a non-\/zero value.
+\item \doxylink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuda\+Mem\+Pool\+Attr\+Used\+Mem\+High\+:} (value type = cuuint64\+\_\+t) Reset the high watermark that tracks the amount of used memory that was allocated for the memory pool. It is illegal to set this attribute to a non-\/zero value.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pool} & -\/ The memory pool to modify \\
+\hline
+\mbox{\texttt{ in}}  & {\em attr} & -\/ The attribute to modify \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & -\/ Pointer to the value to assign\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga5bc8b4979b6453798bb056204b0cc5b1}{cu\+Mem\+Pool\+Set\+Attribute}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3059451a26b72bd2f7f997f435b61208}{cuda\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5bc7f3121655272a27059f9cd1b13036}{cuda\+Device\+Get\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40}{cuda\+Mem\+Pool\+Create} 
+\end{DoxySeeAlso}
+\Hypertarget{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4262b5963739dcb4e1e5ee44308a5268}\label{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga4262b5963739dcb4e1e5ee44308a5268} 
+\index{Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}!cudaMemPoolTrimTo@{cudaMemPoolTrimTo}}
+\index{cudaMemPoolTrimTo@{cudaMemPoolTrimTo}!Stream Ordered Memory Allocator@{Stream Ordered Memory Allocator}}
+\doxysubsubsection{\texorpdfstring{cudaMemPoolTrimTo()}{cudaMemPoolTrimTo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{\+\_\+\+\_\+host\+\_\+\+\_\+}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_ga15962a7f6f36e86b4041cd482f69ff10}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUDARTAPI}} cuda\+Mem\+Pool\+Trim\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gaa148c221e7dd2c26b5960dbf46601b2a}{cuda\+Mem\+Pool\+\_\+t}}}]{mem\+Pool,  }\item[{\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}}}]{min\+Bytes\+To\+Keep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tries to release memory back to the OS. 
+
+Releases memory back to the OS until the pool contains fewer than min\+Bytes\+To\+Keep reserved bytes, or there is no more memory that the allocator can safely release. The allocator cannot release OS allocations that back outstanding asynchronous allocations. The OS allocations may happen at different granularity from the user allocations.
+
+\begin{DoxyNote}{Note}
+\+: Allocations that have not been freed count as outstanding. 
+
+\+: Allocations that have been asynchronously freed but whose completion has not been observed on the host (eg. by a synchronize) can count as outstanding.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pool} & -\/ The memory pool to trim \\
+\hline
+\mbox{\texttt{ in}}  & {\em min\+Bytes\+To\+Keep} & -\/ If the pool has less than min\+Bytes\+To\+Keep reserved, the Trim\+To operation is a no-\/op. Otherwise the pool will be guaranteed to have at least min\+Bytes\+To\+Keep bytes reserved after the operation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Success, cuda\+Error\+Invalid\+Value \textbackslash{}note\+\_\+callback
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___c_u_d_a___m_a_l_l_o_c___a_s_y_n_c_ga69038871231f8adb9d622825c32a05ab}{cu\+Mem\+Pool\+Trim\+To}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga75412a78565dcf8b7a84367ef9818983}{cuda\+Malloc\+Async}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga6291822d4ca6debe4b23758f2db33c86}{cuda\+Free\+Async}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga3059451a26b72bd2f7f997f435b61208}{cuda\+Device\+Get\+Default\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___d_e_v_i_c_e_ga5bc7f3121655272a27059f9cd1b13036}{cuda\+Device\+Get\+Mem\+Pool}, \doxylink{group___c_u_d_a_r_t___m_e_m_o_r_y___p_o_o_l_s_ga8c2b0563acffc72728aa83289ad7da40}{cuda\+Mem\+Pool\+Create} 
+\end{DoxySeeAlso}

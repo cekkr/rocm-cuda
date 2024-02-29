@@ -1,0 +1,167 @@
+\doxysection{cuda\+GL.\+h}
+\hypertarget{cuda_g_l_8h_source}{}\label{cuda_g_l_8h_source}\mbox{\hyperlink{cuda_g_l_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ 1993-\/2014\ NVIDIA\ Corporation.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ NOTICE\ TO\ LICENSEE:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ source\ code\ and/or\ documentation\ ("{}Licensed\ Deliverables"{})\ are}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ subject\ to\ NVIDIA\ intellectual\ property\ rights\ under\ U.S.\ and}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ international\ Copyright\ laws.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ These\ Licensed\ Deliverables\ contained\ herein\ is\ PROPRIETARY\ and}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ CONFIDENTIAL\ to\ NVIDIA\ and\ is\ being\ provided\ under\ the\ terms\ and}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ conditions\ of\ a\ form\ of\ NVIDIA\ software\ license\ agreement\ by\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ between\ NVIDIA\ and\ Licensee\ ("{}License\ Agreement"{})\ or\ electronically}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ accepted\ by\ Licensee.\ \ Notwithstanding\ any\ terms\ or\ conditions\ to}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ the\ contrary\ in\ the\ License\ Agreement,\ reproduction\ or\ disclosure}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ of\ the\ Licensed\ Deliverables\ to\ any\ third\ party\ without\ the\ express}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ written\ consent\ of\ NVIDIA\ is\ prohibited.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ NVIDIA\ MAKES\ NO\ REPRESENTATION\ ABOUT\ THE}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SUITABILITY\ OF\ THESE\ LICENSED\ DELIVERABLES\ FOR\ ANY\ PURPOSE.\ \ IT\ IS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ PROVIDED\ "{}AS\ IS"{}\ WITHOUT\ EXPRESS\ OR\ IMPLIED\ WARRANTY\ OF\ ANY\ KIND.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ NVIDIA\ DISCLAIMS\ ALL\ WARRANTIES\ WITH\ REGARD\ TO\ THESE\ LICENSED}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ DELIVERABLES,\ INCLUDING\ ALL\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ NONINFRINGEMENT,\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ NOTWITHSTANDING\ ANY\ TERMS\ OR\ CONDITIONS\ TO\ THE\ CONTRARY\ IN\ THE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LICENSE\ AGREEMENT,\ IN\ NO\ EVENT\ SHALL\ NVIDIA\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ SPECIAL,\ INDIRECT,\ INCIDENTAL,\ OR\ CONSEQUENTIAL\ DAMAGES,\ OR\ ANY}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ DAMAGES\ WHATSOEVER\ RESULTING\ FROM\ LOSS\ OF\ USE,\ DATA\ OR\ PROFITS,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ NEGLIGENCE\ OR\ OTHER\ TORTIOUS}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ ACTION,\ ARISING\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ USE\ OR\ PERFORMANCE}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ OF\ THESE\ LICENSED\ DELIVERABLES.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users.\ \ These\ Licensed\ Deliverables\ are\ a}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ "{}commercial\ item"{}\ as\ that\ term\ is\ defined\ at\ 48\ C.F.R.\ 2.101\ (OCT}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ 1995),\ consisting\ of\ "{}commercial\ computer\ software"{}\ and\ "{}commercial}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ computer\ software\ documentation"{}\ as\ such\ terms\ are\ used\ in\ 48}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ C.F.R.\ 12.212\ (SEPT\ 1995)\ and\ is\ provided\ to\ the\ U.S.\ Government}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ only\ as\ a\ commercial\ end\ item.\ \ Consistent\ with\ 48\ C.F.R.12.212\ and}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ 48\ C.F.R.\ 227.7202-\/1\ through\ 227.7202-\/4\ (JUNE\ 1995),\ all}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ U.S.\ Government\ End\ Users\ acquire\ the\ Licensed\ Deliverables\ with}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ only\ those\ rights\ set\ forth\ herein.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ Any\ use\ of\ the\ Licensed\ Deliverables\ in\ individual\ and\ commercial}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ software\ must\ include,\ in\ the\ user\ documentation\ and\ internal}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ comments\ to\ the\ code,\ the\ above\ Disclaimer\ and\ U.S.\ Government\ End}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ Users\ Notice.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifndef\ CUDAGL\_H}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ CUDAGL\_H}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{cuda_8h}{cuda.h}}>}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifdef\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <OpenGL/gl.h>}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ <GL/gl.h>}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDA\_API\_VERSION\_INTERNAL)\ ||\ defined(\_\_DOXYGEN\_ONLY\_\_)\ ||\ defined(CUDA\_ENABLE\_DEPRECATED)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED\ \_\_declspec(deprecated)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#elif\ defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED\ \_\_attribute\_\_((deprecated))}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#ifdef\ CUDA\_FORCE\_API\_VERSION}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#error\ "{}CUDA\_FORCE\_API\_VERSION\ is\ no\ longer\ supported."{}}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDA\_API\_VERSION\_INTERNAL)\ ||\ defined(CUDA\_API\_PER\_THREAD\_DEFAULT\_STREAM)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\ \ \ \ \#define\ \_\_CUDA\_API\_PER\_THREAD\_DEFAULT\_STREAM}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\ \ \ \ \#define\ \_\_CUDA\_API\_PTDS(api)\ api\ \#\#\ \_ptds}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ \ \ \#define\ \_\_CUDA\_API\_PTSZ(api)\ api\ \#\#\ \_ptsz}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\ \ \ \ \#define\ \_\_CUDA\_API\_PTDS(api)\ api}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \ \ \ \#define\ \_\_CUDA\_API\_PTSZ(api)\ api}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ cuGLCtxCreate\ \ \ \ \ \ \ \ \ \ \ \ cuGLCtxCreate\_v2}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ cuGLMapBufferObject\ \ \ \ \ \ \_\_CUDA\_API\_PTDS(cuGLMapBufferObject\_v2)}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ cuGLMapBufferObjectAsync\ \_\_CUDA\_API\_PTSZ(cuGLMapBufferObjectAsync\_v2)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ cuGLGetDevices\ \ \ \ \ \ \ \ \ \ \ cuGLGetDevices\_v2}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00089\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#if\ defined(\_WIN32)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#if\ !defined(WGL\_NV\_gpu\_affinity)}}
+\DoxyCodeLine{00115\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{HGPUNV}};}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_WIN32\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00154\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l_gab56e569048aa01e2d9c58f3c9bc4718a}{cuGraphicsGLRegisterBuffer}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphicsResource}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaResource}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Flags);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00212\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l_ga40951642ac10a72be9a81e7b3188324e}{cuGraphicsGLRegisterImage}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gac0c4e1704647178d9c5ba3be46517dcd}{CUgraphicsResource}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaResource}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{image}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLenum}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{target}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Flags);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00238\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuWGLGetDevice}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pDevice}},\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{HGPUNV}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{hGpu}});}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_WIN32\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00244\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___g_l_ga3555fe44ce3d83b78a0ea894979d58c2}{CUGLDeviceList\_enum}}\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a43d2b311a54ae5c914c264e8395c3164}{CU\_GL\_DEVICE\_LIST\_ALL}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 0x01,\ }
+\DoxyCodeLine{00246\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2adc48f515019afdc0a78cd366871b0fe1}{CU\_GL\_DEVICE\_LIST\_CURRENT\_FRAME}}\ \ =\ 0x02,\ }
+\DoxyCodeLine{00247\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___g_l_gga3555fe44ce3d83b78a0ea894979d58c2a9d6d52b3167bd1d144eb08db8b60325a}{CU\_GL\_DEVICE\_LIST\_NEXT\_FRAME}}\ \ \ \ \ =\ 0x03,\ }
+\DoxyCodeLine{00248\ \}\ \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDeviceList}};}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00286\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLGetDevices(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaDeviceCount}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaDevices}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaDeviceCount}},\ \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDeviceList}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{deviceList}});}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00300\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga931aafedc3b8678aa0d244af536dc0eb}{CUGLmap\_flags\_enum}}\ \{}
+\DoxyCodeLine{00301\ \ \ \ \ CU\_GL\_MAP\_RESOURCE\_FLAGS\_NONE\ \ \ \ \ \ \ \ \ \ =\ 0x00,}
+\DoxyCodeLine{00302\ \ \ \ \ CU\_GL\_MAP\_RESOURCE\_FLAGS\_READ\_ONLY\ \ \ \ \ =\ 0x01,}
+\DoxyCodeLine{00303\ \ \ \ \ CU\_GL\_MAP\_RESOURCE\_FLAGS\_WRITE\_DISCARD\ =\ 0x02,\ \ \ \ }
+\DoxyCodeLine{00304\ \}\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga8caa9b32437a91f5e44e6b91fbb7b2e2}{CUGLmap\_flags}};}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00334\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLCtxCreate(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCtx}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Flags,\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}\ device\ );}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00359\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga461a96fde8e72a6bbbd5bf066c20de7b}{cuGLInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00384\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_ga4f41227e29c84b2ebbabcaeca31a5d43}{cuGLRegisterBufferObject}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}});}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00418\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLMapBufferObject(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}\ *dptr,\ \textcolor{keywordtype}{size\_t}\ *size,\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}});\ \ }
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00447\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gad826f6a80f75570612b9dfb055381723}{cuGLUnmapBufferObject}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}});}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00476\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gab1334e40a13e9aa0238b20f8c8a336dc}{cuGLUnregisterBufferObject}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}});}
+\DoxyCodeLine{00477\ }
+\DoxyCodeLine{00519\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gafbccbda84acd2faf2fde7a062cc290fb}{cuGLSetBufferObjectMapFlags}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Flags);}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00554\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLMapBufferObjectAsync(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}\ *dptr,\ \textcolor{keywordtype}{size\_t}\ *size,\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ hStream);}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00584\ \_\_CUDA\_DEPRECATED\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a___g_l___d_e_p_r_e_c_a_t_e_d_gaf36855dee124910bc6fb8aba6e1ad89e}{cuGLUnmapBufferObjectAsync}}(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ hStream);}
+\DoxyCodeLine{00585\ }
+\DoxyCodeLine{00586\ \ \textcolor{comment}{/*\ END\ CUDA\_GL\_DEPRECATED\ */}}
+\DoxyCodeLine{00587\ \ \textcolor{comment}{/*\ END\ CUDA\_GL\ */}}
+\DoxyCodeLine{00588\ }
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ \textcolor{preprocessor}{\#if\ defined(\_\_CUDA\_API\_VERSION\_INTERNAL)}}
+\DoxyCodeLine{00591\ \textcolor{preprocessor}{\ \ \ \ \#undef\ cuGLCtxCreate}}
+\DoxyCodeLine{00592\ \textcolor{preprocessor}{\ \ \ \ \#undef\ cuGLMapBufferObject}}
+\DoxyCodeLine{00593\ \textcolor{preprocessor}{\ \ \ \ \#undef\ cuGLMapBufferObjectAsync}}
+\DoxyCodeLine{00594\ \textcolor{preprocessor}{\ \ \ \ \#undef\ cuGLGetDevices}}
+\DoxyCodeLine{00595\ }
+\DoxyCodeLine{00596\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLGetDevices(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaDeviceCount}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCudaDevices}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cudaDeviceCount}},\ \mbox{\hyperlink{group___c_u_d_a___g_l_ga5486a605321a9b7f77e25e9809f538d2}{CUGLDeviceList}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{deviceList}});}
+\DoxyCodeLine{00597\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuGLMapBufferObject\_v2}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}\ *dptr,\ \textcolor{keywordtype}{size\_t}\ *size,\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}});}
+\DoxyCodeLine{00598\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{cuGLMapBufferObjectAsync\_v2}}(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga183f7b0d8ad008ea2a5fd552537ace4e}{CUdeviceptr}}\ *dptr,\ \textcolor{keywordtype}{size\_t}\ *size,\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ hStream);}
+\DoxyCodeLine{00599\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLCtxCreate(\mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf9f5bd81658f866613785b3a0bb7d7d9}{CUcontext}}\ *\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{pCtx}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Flags,\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_ga41ca2a24a242b36ef2ca77330b5fb72a}{CUdevice}}\ device\ );}
+\DoxyCodeLine{00600\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLMapBufferObject(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUdeviceptr\_v1}}\ *dptr,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *size,\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}});}
+\DoxyCodeLine{00601\ \ \ \ \ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gaf18c3affd9d913e337e3794abeade307}{CUresult}}\ CUDAAPI\ cuGLMapBufferObjectAsync(\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{CUdeviceptr\_v1}}\ *dptr,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *size,\ \ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{GLuint}}\ \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{buffer}},\ \mbox{\hyperlink{group___c_u_d_a___t_y_p_e_s_gab946c7f02e09efd788a204718015d88a}{CUstream}}\ hStream);}
+\DoxyCodeLine{00602\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CUDA\_API\_VERSION\_INTERNAL\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00603\ }
+\DoxyCodeLine{00604\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00605\ \};}
+\DoxyCodeLine{00606\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00607\ }
+\DoxyCodeLine{00608\ \textcolor{preprocessor}{\#undef\ \_\_CUDA\_DEPRECATED}}
+\DoxyCodeLine{00609\ }
+\DoxyCodeLine{00610\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

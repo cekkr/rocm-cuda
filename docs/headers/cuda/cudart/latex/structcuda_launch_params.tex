@@ -1,0 +1,68 @@
+\doxysection{cuda\+Launch\+Params Struct Reference}
+\hypertarget{structcuda_launch_params}{}\label{structcuda_launch_params}\index{cudaLaunchParams@{cudaLaunchParams}}
+
+
+{\ttfamily \#include $<$driver\+\_\+types.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_launch_params_ab83c5ba1757e15e87386300690c9b081}{func}}
+\item 
+\mbox{\hyperlink{structdim3}{dim3}} \mbox{\hyperlink{structcuda_launch_params_aad6b5e617a8c137476babb2ca1b94570}{grid\+Dim}}
+\item 
+\mbox{\hyperlink{structdim3}{dim3}} \mbox{\hyperlink{structcuda_launch_params_add319c6a16b02bdcce0c08fb3e03b87f}{block\+Dim}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}{args}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} \mbox{\hyperlink{structcuda_launch_params_a86f6dff594ff6d496509a9f3c6607f17}{shared\+Mem}}
+\item 
+\mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} \mbox{\hyperlink{structcuda_launch_params_a1f780f7a1266c1d820d46b31d025bd0c}{stream}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CUDA launch parameters 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d}\label{structcuda_launch_params_a5fbd7dbed62b8cd76d00a5396994f03d} 
+\index{cudaLaunchParams@{cudaLaunchParams}!args@{args}}
+\index{args@{args}!cudaLaunchParams@{cudaLaunchParams}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} cuda\+Launch\+Params\+::args}
+
+Arguments \Hypertarget{structcuda_launch_params_add319c6a16b02bdcce0c08fb3e03b87f}\label{structcuda_launch_params_add319c6a16b02bdcce0c08fb3e03b87f} 
+\index{cudaLaunchParams@{cudaLaunchParams}!blockDim@{blockDim}}
+\index{blockDim@{blockDim}!cudaLaunchParams@{cudaLaunchParams}}
+\doxysubsubsection{\texorpdfstring{blockDim}{blockDim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdim3}{dim3}} cuda\+Launch\+Params\+::block\+Dim}
+
+Block dimentions \Hypertarget{structcuda_launch_params_ab83c5ba1757e15e87386300690c9b081}\label{structcuda_launch_params_ab83c5ba1757e15e87386300690c9b081} 
+\index{cudaLaunchParams@{cudaLaunchParams}!func@{func}}
+\index{func@{func}!cudaLaunchParams@{cudaLaunchParams}}
+\doxysubsubsection{\texorpdfstring{func}{func}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{void}}\texorpdfstring{$\ast$}{*} cuda\+Launch\+Params\+::func}
+
+Device function symbol \Hypertarget{structcuda_launch_params_aad6b5e617a8c137476babb2ca1b94570}\label{structcuda_launch_params_aad6b5e617a8c137476babb2ca1b94570} 
+\index{cudaLaunchParams@{cudaLaunchParams}!gridDim@{gridDim}}
+\index{gridDim@{gridDim}!cudaLaunchParams@{cudaLaunchParams}}
+\doxysubsubsection{\texorpdfstring{gridDim}{gridDim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdim3}{dim3}} cuda\+Launch\+Params\+::grid\+Dim}
+
+Grid dimentions \Hypertarget{structcuda_launch_params_a86f6dff594ff6d496509a9f3c6607f17}\label{structcuda_launch_params_a86f6dff594ff6d496509a9f3c6607f17} 
+\index{cudaLaunchParams@{cudaLaunchParams}!sharedMem@{sharedMem}}
+\index{sharedMem@{sharedMem}!cudaLaunchParams@{cudaLaunchParams}}
+\doxysubsubsection{\texorpdfstring{sharedMem}{sharedMem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_e_x_t_u_r_e___o_b_j_e_c_t_ga91840d654e4a4ffb86e9b2fd793e9196}{size\+\_\+t}} cuda\+Launch\+Params\+::shared\+Mem}
+
+Shared memory \Hypertarget{structcuda_launch_params_a1f780f7a1266c1d820d46b31d025bd0c}\label{structcuda_launch_params_a1f780f7a1266c1d820d46b31d025bd0c} 
+\index{cudaLaunchParams@{cudaLaunchParams}!stream@{stream}}
+\index{stream@{stream}!cudaLaunchParams@{cudaLaunchParams}}
+\doxysubsubsection{\texorpdfstring{stream}{stream}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___c_u_d_a_r_t___t_y_p_e_s_gae6a6dd5bf3109046a07da4b735234e81}{cuda\+Stream\+\_\+t}} cuda\+Launch\+Params\+::stream}
+
+Stream identifier 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driver\+\_\+types.\+h\end{DoxyCompactItemize}
