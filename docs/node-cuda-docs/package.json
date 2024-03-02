@@ -1,0 +1,16 @@
+{
+  "name": "cuda-docs",
+  "version": "1.0.0",
+  "description": "CUDA docs analyzer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cekkr",
+  "license": "MIT",
+  "dependencies": {
+    "he": "^1.2.0",
+    "jquery": "^3.7.1",
+    "jsdom": "^24.0.0"
+  }
+}
