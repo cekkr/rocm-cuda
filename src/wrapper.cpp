@@ -20,3 +20,7 @@ extern "C" {
         return error;
     }
 }
+
+/*
+#include <iostream>\n#include <hip/hip_runtime.h>\n#include <hip/hip.h>\n\nextern "C" {\ncudaError_t cudaGetDeviceCount(int *count) {\nstd::cout << "Intercepted cudaGetDeviceCount call" << std::endl;\n// Translate the call to its HIP counterpart\nhipError_t hipError = hipGetDeviceCount(count);  \n// For simplicity, we're directly mapping HIP error codes to CUDA's. \n// In a full implementation, you'd want to translate HIP errors to their CUDA equivalents. \nreturn static_cast<cudaError_t>(hipError); \n} \n\n  hipError_t cudaArrayGetInfo(void *ptr, size_t *size, hipChannelFormat *fmt) {
+*/
