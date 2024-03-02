@@ -123,6 +123,9 @@ async function fetchModules() {
     return modules
 }
 
+// TODO: Study data types (Data types used by CUDA Runtime)
+// https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html
+
 async function main() {
     let res = {}
     res.modules = await fetchModules()
