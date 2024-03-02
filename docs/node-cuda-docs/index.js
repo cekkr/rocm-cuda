@@ -87,7 +87,7 @@ async function readModule(module) {
 
             let name = $($member_name.find('a')[0]).html()
 
-            functions.push({ name, args })
+            functions.push({ keyword: member_type_keyword, return: funReturn, name, args })
         }
         catch {
             // check if it read useless information
