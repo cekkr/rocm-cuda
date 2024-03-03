@@ -42,6 +42,56 @@ function organizeCudaApi(api) {
     return { functions: funs }
 }
 
+let initPrediction =
+    `
+#include <iostream>
+#include <hip/hip_runtime.h>
+#include <hip/hip.h>
+#include <cuda_runtime_api.h>
+
+cudaError_t hipErrorToCudaError(hipError_t hipError)
+{
+    switch (hipError) {
+        case hipSuccess:
+            return cudaSuccess;
+        case hipErrorOutOfMemory:
+            return cudaErrorMemoryAllocation;
+        case hipErrorNotInitialized:
+            return cudaErrorInitializationError;
+        case hipErrorDeinitialized:
+            return cudaErrorCudartUnloading;
+        case hipErrorProfilerDisabled:
+        case hipErrorProfilerNotInitialized:
+        case hipErrorProfilerAlreadyStarted:
+        case hipErrorProfilerAlreadyStopped:
+            // There is no direct equivalent in CUDA for these,
+            // so we use a generic error
+            return cudaErrorUnknown;
+        case hipErrorInvalidValue:
+            return cudaErrorInvalidValue;
+        case hipErrorInvalidDevicePointer:
+            return cudaErrorInvalidDevicePointer;
+        case hipErrorInvalidMemcpyDirection:
+            return cudaErrorInvalidMemcpyDirection;
+        // Add more cases as needed
+        default:
+            // For any error not explicitly mapped above, return a generic error
+            return cudaErrorUnknown;
+    }
+}
+
+// cudaError_t cudaGetDeviceCount(int *count) using hipGetDeviceCount(int *count)
+extern "C" cudaError_t cudaGetDeviceCount(int * count)
+{
+    std:: cout << "Intercepted cudaGetDeviceCount call" << std:: endl;
+    // Translate the call to its HIP counterpart
+    hipError_t hipError = hipGetDeviceCount(count);
+
+    return hipErrorToCudaError(hipError);
+}
+
+`
+
 async function main() {
     let hipify = await parseCSV('./input/cuda_runtime.csv');
 
