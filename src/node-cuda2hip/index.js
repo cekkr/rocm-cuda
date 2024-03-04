@@ -8,6 +8,8 @@ import { requestCodeLlama } from '../libs/node-codellama-request/index.js'
 import fs from 'fs'
 import csv from 'csv-parser'
 
+const llamaHost = '192.168.1.102:9500'
+
 function parseCSV(filePath) {
     return new Promise((res) => {
         const results = [];
@@ -239,7 +241,7 @@ async function main() {
             while (type.onPrediction < type.goToPrediction) {
 
                 console.log("Going to predict ", t, "\n", type.graft)
-                let prediction = await requestCodeLlama(type.graft)
+                let prediction = await requestCodeLlama(type.graft, llamaHost)
                 console.log("prediction ", t, '\n', prediction)
                 type.graft = prediction
 
@@ -282,7 +284,7 @@ async function main() {
                 let totGraft = fun.prediction || (initPrediction + typesGrafts + initPredictionFunctions + fun.graft)
 
                 console.log("Going to predict ", fun.cuda, "\n", totGraft)
-                let prediction = await requestCodeLlama(totGraft)
+                let prediction = await requestCodeLlama(totGraft, llamaHost)
                 console.log("prediction ", fun.cuda, '\n', prediction)
 
                 fun.prediction = prediction
