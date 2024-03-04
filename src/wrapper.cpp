@@ -19,8 +19,7 @@ cudaError_t hipErrorToCudaError(hipError_t hipError)
     case hipErrorProfilerNotInitialized:
     case hipErrorProfilerAlreadyStarted:
     case hipErrorProfilerAlreadyStopped:
-        // There is no direct equivalent in CUDA for these,
-        // so we use a generic error
+        // There is no direct equivalent in CUDA for these, so we use a generic error
         return cudaErrorUnknown;
     case hipErrorInvalidValue:
         return cudaErrorInvalidValue;
@@ -28,9 +27,91 @@ cudaError_t hipErrorToCudaError(hipError_t hipError)
         return cudaErrorInvalidDevicePointer;
     case hipErrorInvalidMemcpyDirection:
         return cudaErrorInvalidMemcpyDirection;
-    // Add more cases as needed
+    case hipErrorInvalidResourceHandle:
+        return cudaErrorInvalidResourceHandle;
+    case hipErrorNotReady:
+        return cudaErrorNotReady;
+    case hipErrorNoDevice:
+        return cudaErrorNoDevice;
+    case hipErrorInvalidDevice:
+        return cudaErrorInvalidDevice;
+    case hipErrorInvalidImage:
+        return cudaErrorInvalidKernelImage;
+    case hipErrorInvalidContext:
+        return cudaErrorInvalidDevice;
+    case hipErrorContextAlreadyCurrent:
+        return cudaErrorSetOnActiveProcess;
+    case hipErrorMapFailed:
+        return cudaErrorMapBufferObjectFailed;
+    case hipErrorUnmapFailed:
+        return cudaErrorUnmapBufferObjectFailed;
+    case hipErrorArrayIsMapped:
+        return cudaErrorArrayIsMapped;
+    case hipErrorAlreadyMapped:
+        return cudaErrorAlreadyMapped;
+    case hipErrorNoBinaryForGpu:
+        return cudaErrorNoKernelImageForDevice;
+    case hipErrorAlreadyAcquired:
+        return cudaErrorAlreadyAcquired;
+    case hipErrorNotMapped:
+        return cudaErrorNotMappedAsResource;
+    case hipErrorNotMappedAsPointer:
+        return cudaErrorNotMappedAsPointer;
+    case hipErrorECCNotCorrectable:
+        return cudaErrorECCUncorrectable;
+    case hipErrorUnsupportedLimit:
+        return cudaErrorUnsupportedLimit;
+    case hipErrorContextAlreadyInUse:
+        return cudaErrorDeviceAlreadyInUse;
+    case hipErrorPeerAccessUnsupported:
+        return cudaErrorPeerAccessUnsupported;
+    case hipErrorInvalidKernelFile:
+        return cudaErrorInvalidPtx;
+    case hipErrorInvalidGraphicsContext:
+        return cudaErrorInvalidGraphicsContext;
+    case hipErrorInvalidSource:
+        return cudaErrorInvalidSource;
+    case hipErrorFileNotFound:
+        return cudaErrorFileNotFound;
+    case hipErrorSharedObjectSymbolNotFound:
+        return cudaErrorSharedObjectSymbolNotFound;
+    case hipErrorSharedObjectInitFailed:
+        return cudaErrorSharedObjectInitFailed;
+    case hipErrorOperatingSystem:
+        return cudaErrorOperatingSystem;
+    case hipErrorInvalidHandle:
+        return cudaErrorInvalidResourceHandle;
+    case hipErrorNotFound:
+        return cudaErrorNotFound;
+    case hipErrorNotReady:
+        return cudaErrorNotReady;
+    case hipErrorIllegalAddress:
+        return cudaErrorIllegalAddress;
+    case hipErrorLaunchOutOfResources:
+        return cudaErrorLaunchOutOfResources;
+    case hipErrorLaunchTimeOut:
+        return cudaErrorLaunchTimeout;
+    case hipErrorPeerAccessAlreadyEnabled:
+        return cudaErrorPeerAccessAlreadyEnabled;
+    case hipErrorPeerAccessNotEnabled:
+        return cudaErrorPeerAccessNotEnabled;
+    case hipErrorSetOnActiveProcess:
+        return cudaErrorSetOnActiveProcess;
+    case hipErrorAssert:
+        return cudaErrorAssert;
+    case hipErrorHostMemoryAlreadyRegistered:
+        return cudaErrorHostMemoryAlreadyRegistered;
+    case hipErrorHostMemoryNotRegistered:
+        return cudaErrorHostMemoryNotRegistered;
+    case hipErrorLaunchFailure:
+        return cudaErrorLaunchFailure;
+    case hipErrorCooperativeLaunchTooLarge:
+        return cudaErrorCooperativeLaunchTooLarge;
+    case hipErrorNotSupported:
+        return cudaErrorNotSupported;
+    case hipErrorUnknown:
+        return cudaErrorUnknown;
     default:
-        // For any error not explicitly mapped above, return a generic error
         return cudaErrorUnknown;
     }
 }
