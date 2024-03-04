@@ -169,7 +169,7 @@ async function main() {
                     let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
                     graft += 'extern "C" ' //+ cudaLine + ' {\n'
 
-                    let totGraft = initPrediction + graft
+                    //let totGraft = initPrediction + graft
 
                     statusFun = status.functions[cuda] = {
                         cuda,
@@ -178,8 +178,7 @@ async function main() {
                         hipFun,
                         cudaLine,
                         hipLine,
-                        graft,
-                        totGraft
+                        graft                        
                     }
                 }
                 else {
@@ -202,7 +201,7 @@ async function main() {
         if (!t.includes('hip') && !t.includes('cuda'))
             continue;
 
-        let type = status.types[t] = status.types[t] || { onPrediction: 0, goToPrediction: 1 }
+        let type = status.types[t] = status.types[t] || { onPrediction: 0, goToPrediction: 0 }
 
         if (type.onPrediction == 0) {
             type.pointer = pointers[t] || false
@@ -211,13 +210,13 @@ async function main() {
             if (hip2Cuda[type]) {
                 let toType = hip2Cuda[type]
                 type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
-                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
+                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ');\n'
             }
 
             if (cuda2Hip[type]) {
                 let toType = cuda2Hip[type]
                 type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
-                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
+                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ');\n'
             }
 
             type.graft = type.converter
@@ -252,22 +251,28 @@ async function main() {
         let fun = status.functions[f]
 
         if (fun.cudaFun && fun.hipFun) {
-            let typesGrafts = ''
+            if(!fun.prediction || fun.forcePrediction){
+                let typesGrafts = ''
 
-            for (let type of fun.cudaFun.types) {
-                typesGrafts += checkType(type) + '\n'
+                for (let type of fun.cudaFun.types) {
+                    typesGrafts += await checkType(type) + '\n'
+                }
+
+                for (let type of fun.hipFun.types) {
+                    typesGrafts += await checkType(type) + '\n'
+                }
+
+                let totGraft = initPrediction + typesGrafts + initPredictionFunctions + fun.graft
+
+                console.log("Going to predict ", cuda, "\n", totGraft)
+                let prediction = await requestCodeLlama(totGraft)
+                console.log("prediction ", cuda, '\n', prediction)
+
+                fun.prediction = prediction
+                fun.forcePrediction = false 
+                
+                saveStatus()
             }
-
-            for (let type of fun.hipFun.types) {
-                typesGrafts += checkType(type) + '\n'
-            }
-
-            console.log("Going to predict ", cuda, "\n", totGraft)
-            let prediction = await requestCodeLlama(totGraft)
-            console.log("prediction ", cuda, '\n', prediction)
-
-            statusFun.prediction = prediction
-            saveStatus()
         }
     }
 
