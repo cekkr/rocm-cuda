@@ -63,7 +63,7 @@ extern "C" cudaError_t cudaGetDeviceCount(int * count)
 
 `
 
-let status = {}
+let status = { functions: {} }
 
 function loadStatus() {
     if (fs.existsSync('status.json')) {
@@ -94,19 +94,39 @@ async function main() {
         let cuda = row['cuda0']
         let hip = row['hip0']
         if (cuda && hip && cuda.startsWith('cuda') && hip.startsWith('hip')) {
-            let cudaFun = cudaApi.functions[cuda]
-            let hipFun = hipApi.functions[hip]
 
-            let cudaLine = cudaFun.return + ' '
-            cudaLine += cudaFun.name + ' '
-            cudaLine += cudaFun.args
+            let statusFun = status.functions[cuda]
 
-            let hipLine = hipFun.definition[0] + ' ' + hipFun.argsstring[0]
+            if (!statusFun) {
+                let cudaFun = cudaApi.functions[cuda]
+                let hipFun = hipApi.functions[hip]
 
-            let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
-            graft += cudaLine + ' {\n'
+                let cudaLine = cudaFun.return + ' '
+                cudaLine += cudaFun.name + ' '
+                cudaLine += cudaFun.args
 
-            console.log("check")
+                let hipLine = hipFun.definition[0] + ' ' + hipFun.argsstring[0]
+
+                statusFun = status.functions[cuda] = {
+                    cuda,
+                    hip,
+                    cudaFun,
+                    hipFun,
+                    cudaLine,
+                    hipLine
+                }
+
+                let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
+                graft += cudaLine + ' {\n'
+
+                let totGraft = initPrediction + graft
+
+                let prediction = await requestCodeLlama(totGraft)
+                console.log("prediction ", cuda, '\n', prediction)
+
+                statusFun.prediction = prediction
+                saveStatus()
+            }
         }
     }
 
