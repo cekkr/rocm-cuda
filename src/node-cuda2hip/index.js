@@ -52,6 +52,7 @@ let initPrediction =
 #DEFINE VERBOSE 1
 
 cudaError_t hipErrorToCudaError(hipError_t hipError);
+%%PRE_DECLARATIONS%%
 
 // cudaError_t cudaGetDeviceCount(int *count) using hipGetDeviceCount(int *count)
 extern "C" cudaError_t cudaGetDeviceCount(int * count)
@@ -91,6 +92,11 @@ async function main() {
 
     let hipApi = readJson('./input/hip_api.json')
 
+    let types = {
+        hip: [],
+        cuda: []
+    }
+
     for (let r in hipify) {
         try {
             let row = hipify[r]
@@ -102,7 +108,30 @@ async function main() {
 
                 if (!statusFun) {
                     let cudaFun = cudaApi.functions[cuda]
+                    cudaFun.args = cudaFun.args.replaceAll(' ', ' ').replaceAll(' * ', ' *')
+
+                    cudaFun.types = [cudaFun.return]
+                    let argsTyped = cudaFun.args.split(',')
+                    for (let arg of argsTyped) {
+                        while (arg[0] == ' ') arg.splice(0, 1)
+                        let type = arg.split(' ')[0]
+                        cudaFun.types.push(type)
+                        types.cuda.push(type.replace('*'))
+                    }
+
                     let hipFun = hipApi.functions[hip]
+                    hipFun.types = [hipFun.type[0].ref[0]['_']]
+
+                    for (let param of hipFun.param) {
+                        let type = param.type[0]
+
+                        if (typeof type == 'object') {
+                            type = type['ref'][0]['_']
+                        }
+
+                        hipFun.types.push(type)
+                        types.hip.push(type.replace('*'))
+                    }
 
                     let cudaLine = cudaFun.return + ' '
                     cudaLine += cudaFun.name + ' '
@@ -120,7 +149,7 @@ async function main() {
                     }
 
                     let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
-                    graft += 'extern "C" ' + cudaLine + ' {\n'
+                    //graft += 'extern "C" ' + cudaLine + ' {\n'
 
                     let totGraft = initPrediction + graft
 
@@ -132,7 +161,7 @@ async function main() {
                     saveStatus()
                 }
                 else {
-                    console.log(cuda , " already done.")
+                    console.log(cuda, " already done.")
                 }
             }
         }
