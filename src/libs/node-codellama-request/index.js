@@ -22,7 +22,7 @@ function onResolve(req, server) {
             const queryParams = { op: 'res', req };
             let resp = await fetchWithQuery(url, queryParams);
 
-            if (resp != '-') {
+            if (resp != '-' && resp != undefined) {
                 clearInterval(interval)
                 res(resp)
             }
