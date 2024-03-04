@@ -64,8 +64,7 @@ cudaError_t hipErrorToCudaError(hipError_t hipError)
         case hipErrorProfilerNotInitialized:
         case hipErrorProfilerAlreadyStarted:
         case hipErrorProfilerAlreadyStopped:
-            // There is no direct equivalent in CUDA for these,
-            // so we use a generic error
+            // There is no direct equivalent in CUDA for these, so we use a generic error
             return cudaErrorUnknown;
         case hipErrorInvalidValue:
             return cudaErrorInvalidValue;
@@ -92,7 +91,23 @@ extern "C" cudaError_t cudaGetDeviceCount(int * count)
 
 `
 
+let status = {}
+
+function loadStatus() {
+    if (fs.existsSync('status.json')) {
+        let json = fs.readFileSync('status.json').toString()
+        status = JSON.parse(json)
+    }
+}
+
+function saveStatus() {
+    let json = JSON.stringify(status)
+    fs.writeFileSync('status.json', json)
+}
+
 async function main() {
+    loadStatus()
+
     let hipify = await parseCSV('./input/cuda_runtime.csv');
 
     let cudaApi = readJson('./input/cuda_api.json')
@@ -100,7 +115,19 @@ async function main() {
 
     let hipApi = readJson('./input/hip_api.json')
 
-    console.log("check")
+    for (let r in hipify) {
+        let row = hipify[r]
+        let cuda = row['cuda0']
+        let hip = row['hip0']
+        if (cuda && hip && cuda.startsWith('cuda') && hip.startsWith('hip')) {
+            let cudaFun = cudaApi.functions[cuda]
+            let hipFun = hipApi.functions[hip]
+
+            console.log("check")
+        }
+    }
+
+    console.log("execution ends")
 }
 
 main()
