@@ -92,6 +92,8 @@ async function main() {
 
     let hipApi = readJson('./input/hip_api.json')
 
+    let hip2Cuda = {}
+
     let types = {
         hip: [],
         cuda: []
@@ -103,6 +105,8 @@ async function main() {
             let cuda = row['cuda0']
             let hip = row['hip0']
             if (cuda && hip && cuda.startsWith('cuda') && hip.startsWith('hip')) {
+
+                hip2Cuda[hip] = cuda
 
                 let statusFun = status.functions[cuda]
 
@@ -146,26 +150,28 @@ async function main() {
 
                     let hipLine = hipFun.definition[0] + ' ' + hipFun.argsstring[0]
 
+                    let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
+                    graft += 'extern "C" ' //+ cudaLine + ' {\n'
+
+                    let totGraft = initPrediction + graft
+
                     statusFun = status.functions[cuda] = {
                         cuda,
                         hip,
                         cudaFun,
                         hipFun,
                         cudaLine,
-                        hipLine
+                        hipLine,
+                        graft
                     }
 
-                    let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
-                    //graft += 'extern "C" ' + cudaLine + ' {\n'
 
-                    let totGraft = initPrediction + graft
-
-                    console.log("Going to predict ", cuda, "\n", totGraft)
+                    /*console.log("Going to predict ", cuda, "\n", totGraft)
                     let prediction = await requestCodeLlama(totGraft)
                     console.log("prediction ", cuda, '\n', prediction)
 
                     statusFun.prediction = prediction
-                    saveStatus()
+                    saveStatus()*/
                 }
                 else {
                     console.log(cuda, " already done.")
@@ -176,6 +182,17 @@ async function main() {
             console.log('line ', r, ' jumped')
         }
     }
+
+    ///
+    ///
+    ///
+    console.log("beginning functions predictions")
+
+    for (let f in status.functions) {
+        let fun = status.functions[f]
+
+    }
+
 
     console.log("execution ends")
 }
