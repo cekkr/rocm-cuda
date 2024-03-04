@@ -132,7 +132,7 @@ async function main() {
                     saveStatus()
                 }
                 else {
-                    console.log(cude , " already done.")
+                    console.log(cuda , " already done.")
                 }
             }
         }
