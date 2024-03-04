@@ -2,13 +2,14 @@ const readline = require('readline');
 const { exec, spawn } = require('child_process');
 const fs = require('fs')
 
-function runCmd(command) {
+function runCmd(command, prompt = true) {
     return new Promise((res) => {
         // Execute the command
         exec(command, (error, stdout, stderr) => {
             if (error) {
                 console.error(`exec error: ${error}`);
                 res()
+                if (prompt) rl.prompt()
                 return;
             }
 
@@ -21,11 +22,12 @@ function runCmd(command) {
             }
 
             res({ stdout, stderr })
+            if (prompt) rl.prompt()
         });
     })
 }
 
-function runCmdStdin(line) {
+function runCmdStdin(line, prompt = true) {
     return new Promise((res) => {
         //const [command, ...args] = line.trim().split(/\s+/);
         //let spl = line.trim().split(/\s+/);
@@ -41,13 +43,13 @@ function runCmdStdin(line) {
         child.on('close', (code) => {
             console.log(`Child process exited with code ${code}`);
             res()
-            rl.prompt()
+            if (prompt) rl.prompt()
         });
 
         child.on('error', (err) => {
             console.error(`Failed to start subprocess: ${err.message}`);
             res()
-            rl.prompt()
+            if (prompt) rl.prompt()
         });
     })
 }
