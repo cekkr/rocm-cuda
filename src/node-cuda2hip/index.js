@@ -59,8 +59,8 @@ cudaError_t hipError_t_TO_cudaError_t(hipError_t hipError);
 
 let initPredictionFunctions =
     `
-// cudaError_t cudaGetDeviceCount(int *count) using hipGetDeviceCount(int *count)
-extern "C" cudaError_t cudaGetDeviceCount(int * count)
+// cudaError_t cudaGetDeviceCount(int* count) using hipGetDeviceCount(int* count)
+extern "C" cudaError_t cudaGetDeviceCount(int* count)
 {
     if(VERBOSE) std::cout << "Intercepted cudaGetDeviceCount call" << std::endl;
     // Translate the call to its HIP counterpart
@@ -279,7 +279,7 @@ async function main() {
                         typesGrafts += await checkType(type) + '\n'
                 }
 
-                let totGraft = initPrediction + typesGrafts + initPredictionFunctions + fun.graft
+                let totGraft = fun.prediction || (initPrediction + typesGrafts + initPredictionFunctions + fun.graft)
 
                 console.log("Going to predict ", fun.cuda, "\n", totGraft)
                 let prediction = await requestCodeLlama(totGraft)
