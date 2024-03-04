@@ -49,12 +49,14 @@ let initPrediction =
 #include <hip/hip.h>
 #include <cuda_runtime_api.h>
 
+#DEFINE VERBOSE 1
+
 cudaError_t hipErrorToCudaError(hipError_t hipError);
 
 // cudaError_t cudaGetDeviceCount(int *count) using hipGetDeviceCount(int *count)
 extern "C" cudaError_t cudaGetDeviceCount(int * count)
 {
-    std:: cout << "Intercepted cudaGetDeviceCount call" << std:: endl;
+    if(VERBOSE) std::cout << "Intercepted cudaGetDeviceCount call" << std::endl;
     // Translate the call to its HIP counterpart
     hipError_t hipError = hipGetDeviceCount(count);
 
@@ -117,10 +119,11 @@ async function main() {
                 }
 
                 let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
-                graft += cudaLine + ' {\n'
+                graft += 'extern "C" ' + cudaLine + ' {\n'
 
                 let totGraft = initPrediction + graft
 
+                console.log("Going to predict ", cuda, "\n", totGraft)
                 let prediction = await requestCodeLlama(totGraft)
                 console.log("prediction ", cuda, '\n', prediction)
 
