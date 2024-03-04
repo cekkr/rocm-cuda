@@ -51,10 +51,11 @@ let initPrediction =
 
 #DEFINE VERBOSE 1
 
+`
+/* REMOVED:
 // hipError_t to cudaError_t
 cudaError_t hipError_t_TO_cudaError_t(hipError_t hipError);
-
-`
+*/
 
 let initPredictionFunctions =
     `
@@ -70,7 +71,7 @@ extern "C" cudaError_t cudaGetDeviceCount(int * count)
 
 `
 
-let status = { functions: {}, types: {} }
+let status = { functions: {}, types: {}, ignoredFunctions: [] }
 
 function loadStatus() {
     if (fs.existsSync('status.json')) {
@@ -120,12 +121,19 @@ async function main() {
 
                 if (!statusFun) {
                     let cudaFun = cudaApi.functions[cuda]
-                    cudaFun.args = cudaFun.args.replaceAll(' ', ' ').replaceAll(' * ', '* ').trim()
+                    let hipFun = hipApi.functions[hip]
+
+                    if (!cudaFun || !hipFun) {
+                        status.ignoredFunctions.push([cuda, hip])
+                        continue;
+                    }
+
+                    cudaFun.args = cudaFun.args.replaceAll(' ', ' ').replaceAll(' * ', '* ').trim().replace('(', '').replace(')', '')
 
                     cudaFun.types = []
                     let argsTyped = [...cudaFun.args.split(','), cudaFun.return]
                     for (let arg of argsTyped) {
-                        while (arg[0] == ' ') arg.splice(0, 1)
+                        arg = arg.trim()
                         let type = arg.split(' ')[0]
                         let pointer = type.includes('*')
                         type = type.replace('*').trim()
@@ -138,7 +146,6 @@ async function main() {
                             types.cuda.push(type)
                     }
 
-                    let hipFun = hipApi.functions[hip]
                     hipFun.return = hipFun.type[0].ref[0]['_']
                     hipFun.types = []
 
@@ -162,7 +169,7 @@ async function main() {
 
                     let cudaLine = cudaFun.return + ' '
                     cudaLine += cudaFun.name + ' '
-                    cudaLine += cudaFun.args
+                    cudaLine += '(' + cudaFun.args + ')'
 
                     let hipLine = hipFun.definition[0] + ' ' + hipFun.argsstring[0]
 
@@ -178,7 +185,7 @@ async function main() {
                         hipFun,
                         cudaLine,
                         hipLine,
-                        graft                        
+                        graft
                     }
                 }
                 else {
@@ -186,7 +193,8 @@ async function main() {
                 }
             }
         }
-        catch {
+        catch (err) {
+            console.error(err)
             console.log('line ', r, ' jumped')
         }
     }
@@ -207,16 +215,16 @@ async function main() {
             type.pointer = pointers[t] || false
             let ptr = type.pointer ? '*' : ''
 
-            if (hip2Cuda[type]) {
-                let toType = hip2Cuda[type]
-                type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
-                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ');\n'
+            if (hip2Cuda[t]) {
+                let toType = hip2Cuda[t]
+                type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
+                type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
             }
 
-            if (cuda2Hip[type]) {
-                let toType = cuda2Hip[type]
-                type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
-                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ');\n'
+            if (cuda2Hip[t]) {
+                let toType = cuda2Hip[t]
+                type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
+                type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
             }
 
             type.graft = type.converter
@@ -227,19 +235,24 @@ async function main() {
 
     async function checkType(t) {
         let type = status.types[t]
-        while (type.onPrediction < type.goToPrediction) {
+        if (type) {
+            while (type.onPrediction < type.goToPrediction) {
 
-            console.log("Going to predict ", t, "\n", type.graft)
-            let prediction = await requestCodeLlama(type.graft)
-            console.log("prediction ", t, '\n', prediction)
-            type.graft = prediction
+                console.log("Going to predict ", t, "\n", type.graft)
+                let prediction = await requestCodeLlama(type.graft)
+                console.log("prediction ", t, '\n', prediction)
+                type.graft = prediction
 
-            type.onPrediction++
+                type.onPrediction++
 
-            saveStatus()
+                saveStatus()
+            }
+
+            return type.graft
         }
-
-        return type.graft
+        else {
+            console.warn("check exception 24234")
+        }
     }
 
     ///
@@ -251,26 +264,30 @@ async function main() {
         let fun = status.functions[f]
 
         if (fun.cudaFun && fun.hipFun) {
-            if(!fun.prediction || fun.forcePrediction){
+            if (!fun.prediction || fun.forcePrediction) {
                 let typesGrafts = ''
 
                 for (let type of fun.cudaFun.types) {
-                    typesGrafts += await checkType(type) + '\n'
+                    let graft = await checkType(type)
+                    if (graft)
+                        typesGrafts += await checkType(type) + '\n'
                 }
 
                 for (let type of fun.hipFun.types) {
-                    typesGrafts += await checkType(type) + '\n'
+                    let graft = await checkType(type)
+                    if (graft)
+                        typesGrafts += await checkType(type) + '\n'
                 }
 
                 let totGraft = initPrediction + typesGrafts + initPredictionFunctions + fun.graft
 
-                console.log("Going to predict ", cuda, "\n", totGraft)
+                console.log("Going to predict ", fun.cuda, "\n", totGraft)
                 let prediction = await requestCodeLlama(totGraft)
-                console.log("prediction ", cuda, '\n', prediction)
+                console.log("prediction ", fun.cuda, '\n', prediction)
 
                 fun.prediction = prediction
-                fun.forcePrediction = false 
-                
+                fun.forcePrediction = false
+
                 saveStatus()
             }
         }
