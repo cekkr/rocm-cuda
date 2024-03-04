@@ -46,6 +46,14 @@ function interpret(line) {
     let args = line.split(' ')
     let curCmds = cmds
     for (part of parts) {
+
+        if (part == 'help') {
+            for (let cmd in curCmds) {
+                console.log('- ', cmd)
+            }
+            return;
+        }
+
         curCmds = curCmds[part]
         args.splice(0, 1)
 
