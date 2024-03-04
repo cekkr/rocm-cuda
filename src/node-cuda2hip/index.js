@@ -54,8 +54,10 @@ let initPrediction =
 // hipError_t to cudaError_t
 cudaError_t hipError_t_TO_cudaError_t(hipError_t hipError);
 
-%%PRE_DECLARATIONS%%
+`
 
+let initPredictionFunctions =
+    `
 // cudaError_t cudaGetDeviceCount(int *count) using hipGetDeviceCount(int *count)
 extern "C" cudaError_t cudaGetDeviceCount(int * count)
 {
@@ -121,7 +123,7 @@ async function main() {
                     cudaFun.args = cudaFun.args.replaceAll(' ', ' ').replaceAll(' * ', '* ').trim()
 
                     cudaFun.types = []
-                    let argsTyped = cudaFun.args.split(',')
+                    let argsTyped = [...cudaFun.args.split(','), cudaFun.return]
                     for (let arg of argsTyped) {
                         while (arg[0] == ' ') arg.splice(0, 1)
                         let type = arg.split(' ')[0]
@@ -140,7 +142,7 @@ async function main() {
                     hipFun.return = hipFun.type[0].ref[0]['_']
                     hipFun.types = []
 
-                    for (let param of hipFun.param) {
+                    for (let param of [...hipFun.param, hipFun]) {
                         let type = param.type[0]
 
                         if (typeof type == 'object') {
@@ -179,14 +181,6 @@ async function main() {
                         graft,
                         totGraft
                     }
-
-
-                    /*console.log("Going to predict ", cuda, "\n", totGraft)
-                    let prediction = await requestCodeLlama(totGraft)
-                    console.log("prediction ", cuda, '\n', prediction)
-
-                    statusFun.prediction = prediction
-                    saveStatus()*/
                 }
                 else {
                     console.log(cuda, " already done.")
@@ -203,24 +197,50 @@ async function main() {
     ///
     console.log("generate converters")
 
-    let allTypes = [...types.cuda, ...type.hip]
+    let allTypes = [...types.cuda, ...types.hip]
     for (let t of allTypes) {
-        let type = status.types[t] = {}
-        type.pointer = pointers[t] || false
+        if (!t.includes('hip') && !t.includes('cuda'))
+            continue;
 
-        let ptr = type.pointer ? '*' : ''
+        let type = status.types[t] = status.types[t] || { onPrediction: 0, goToPrediction: 1 }
 
-        if (hip2Cuda[type]) {
-            let toType = hip2Cuda[type]
-            type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
-            type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
+        if (type.onPrediction == 0) {
+            type.pointer = pointers[t] || false
+            let ptr = type.pointer ? '*' : ''
+
+            if (hip2Cuda[type]) {
+                let toType = hip2Cuda[type]
+                type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
+                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
+            }
+
+            if (cuda2Hip[type]) {
+                let toType = cuda2Hip[type]
+                type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
+                type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
+            }
+
+            type.graft = type.converter
+        }
+    }
+
+    saveStatus()
+
+    async function checkType(t) {
+        let type = status.types[t]
+        while (type.onPrediction < type.goToPrediction) {
+
+            console.log("Going to predict ", t, "\n", type.graft)
+            let prediction = await requestCodeLlama(type.graft)
+            console.log("prediction ", t, '\n', prediction)
+            type.graft = prediction
+
+            type.onPrediction++
+
+            saveStatus()
         }
 
-        if (cuda2Hip[type]) {
-            let toType = cuda2Hip[type]
-            type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
-            type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
-        }
+        return type.graft
     }
 
     ///
@@ -232,13 +252,22 @@ async function main() {
         let fun = status.functions[f]
 
         if (fun.cudaFun && fun.hipFun) {
-            let toHip = {}
-            let toCuda = {}
+            let typesGrafts = ''
 
             for (let type of fun.cudaFun.types) {
-                let conv = ''
-                toHip[type] = conv
+                typesGrafts += checkType(type) + '\n'
             }
+
+            for (let type of fun.hipFun.types) {
+                typesGrafts += checkType(type) + '\n'
+            }
+
+            console.log("Going to predict ", cuda, "\n", totGraft)
+            let prediction = await requestCodeLlama(totGraft)
+            console.log("prediction ", cuda, '\n', prediction)
+
+            statusFun.prediction = prediction
+            saveStatus()
         }
     }
 
