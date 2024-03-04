@@ -27,7 +27,7 @@ function runCmd(command) {
 ////
 
 function cmd_pull_codellama() {
-
+    console.log("pull codellama!")
 }
 
 function cmd_pull_rocmcuda() {
@@ -41,10 +41,22 @@ const cmds = {
     }
 }
 
+function interpret(line) {
+    let parts = line.split(' ')
+    let args = line.split(' ')
+    let curCmds = cmds
+    for (part of parts) {
+        curCmds = curCmds[part]
+        args.splice(0, 1)
+
+        if (typeof curCmds == 'function') {
+            return curCmds(args)
+        }
+    }
+}
+
 const completer = (line) => {
-
     let res = ''
-
     let curCmds = cmds
     let parts = line.split(' ')
     let hits = []
@@ -83,7 +95,8 @@ rl.on('line', (line) => {
     if (command === 'exit') {
         rl.close();
     } else {
-
+        if (!interpret(command))
+            rl.prompt();
     }
 }).on('close', () => {
     console.log('Shell closed.');
