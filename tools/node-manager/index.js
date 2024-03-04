@@ -1,5 +1,5 @@
 const readline = require('readline');
-const { exec } = require('child_process');
+const { exec, spawn } = require('child_process');
 const fs = require('fs')
 
 function runCmd(command) {
@@ -20,6 +20,33 @@ function runCmd(command) {
             }
 
             res({ stdout, stderr })
+        });
+    })
+}
+
+function runCmdStdin(line) {
+    return new Promise((res) => {
+        //const [command, ...args] = line.trim().split(/\s+/);
+        //let spl = line.trim().split(/\s+/);
+
+        let command = 'bash'
+        let args = ['-c', line]
+
+        // Use spawn to execute the command
+        const child = spawn(command, args, {
+            stdio: 'inherit', // This will inherit stdio from the parent, allowing direct interaction
+        });
+
+        child.on('close', (code) => {
+            console.log(`Child process exited with code ${code}`);
+            res()
+            rl.prompt()
+        });
+
+        child.on('error', (err) => {
+            console.error(`Failed to start subprocess: ${err.message}`);
+            res()
+            rl.prompt()
         });
     })
 }
@@ -47,12 +74,36 @@ function saveEnv() {
 ////
 
 function cmd_pull_codellama() {
-    console.log("pull codellama!")
+    let dir = env['codellama_path']
+    if (!dir) {
+        console.log('Variable codellama_path not setted')
+        return;
+    }
+
+    runCmdStdin('cd ' + dir + ' && git pull')
+    return true
 }
 
 function cmd_pull_rocmcuda() {
-
+    let dir = __dirname + '/../../'
+    runCmdStdin('cd ' + dir + ' && git pull')
 }
+
+function cmd_push_codellama() {
+    let dir = env['codellama_path']
+    if (!dir) {
+        console.log('Variable codellama_path not setted')
+        return;
+    }
+
+    runCmdStdin('cd ' + dir + ' && git add . && git commit -m "automatic commit" && git push')
+}
+
+function cmd_push_rocmcuda() {
+    let dir = __dirname + '/../../'
+    runCmdStdin('cd ' + dir + ' && git add . && git commit -m "automatic commit" && git push')
+}
+
 
 function cmd_display_stop() {
     runCmd("systemctl stop gdm")
@@ -77,6 +128,10 @@ const cmds = {
     "pull": {
         "codellama": cmd_pull_codellama,
         "rocm-cuda": cmd_pull_rocmcuda
+    },
+    "push": {
+        "codellama": cmd_push_codellama,
+        "rocm-cuda": cmd_push_rocmcuda
     },
     "display": {
         "stop": cmd_display_stop,
