@@ -61,6 +61,8 @@ function interpret(line) {
             return curCmds(args)
         }
     }
+
+    console.error("Invalid command.")
 }
 
 const completer = (line) => {
