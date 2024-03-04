@@ -1,25 +1,45 @@
 const readline = require('readline');
 const { exec } = require('child_process');
+const fs = require('fs')
 
 function runCmd(command) {
-    // Execute the command
-    exec(command, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
+    return new Promise((res) => {
+        // Execute the command
+        exec(command, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`exec error: ${error}`);
+                return;
+            }
 
-        // Print the command output
-        console.log(stdout);
+            // Print the command output
+            console.log(stdout);
 
-        // Print any command errors
-        if (stderr) {
-            console.error(`stderr: ${stderr}`);
-        }
+            // Print any command errors
+            if (stderr) {
+                console.error(`stderr: ${stderr}`);
+            }
 
-        // Prompt for the next command
-        rl.prompt();
-    });
+            res({ stdout, stderr })
+        });
+    })
+}
+
+///
+///
+///
+
+let env = {}
+
+function loadEnv() {
+    if (fs.existsSync(__dirname + '/env.json')) {
+        let json = fs.readFileSync(__dirname + '/env.json').toString()
+        env = JSON.parse(json)
+    }
+}
+
+function saveEnv() {
+    let json = JSON.stringify(env)
+    fs.writeFileSync(__dirname + '/env.json', json)
 }
 
 ////
@@ -34,11 +54,36 @@ function cmd_pull_rocmcuda() {
 
 }
 
+function cmd_display_stop() {
+    runCmd("systemctl stop gdm")
+}
+
+function cmd_display_start() {
+    runCmd("systemctl start gdm")
+}
+
+function cmd_set(args) {
+    let name = args.splice(0, 1)
+    env[name] = args.join(' ')
+    saveEnv()
+}
+
+function cmd_get(args) {
+    let v = env[args[0]]
+    console.log(v)
+}
+
 const cmds = {
     "pull": {
         "codellama": cmd_pull_codellama,
         "rocm-cuda": cmd_pull_rocmcuda
-    }
+    },
+    "display": {
+        "stop": cmd_display_stop,
+        "start": cmd_display_start
+    },
+    "set": cmd_set,
+    "get": cmd_get
 }
 
 function interpret(line) {
@@ -99,6 +144,8 @@ const rl = readline.createInterface({
     prompt: '$> ',
     completer
 });
+
+loadEnv()
 
 // Prompt the user for input
 rl.prompt();
