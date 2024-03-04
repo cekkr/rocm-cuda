@@ -134,6 +134,11 @@ function cmd_get(args) {
     console.log(v)
 }
 
+function cmd_notes() {
+    console.log("Just some notes:")
+    console.log("- If you have an AMD GPU you can monitor it in command line using amdgpu_top command")
+}
+
 const cmds = {
     "pull": {
         "codellama": cmd_pull_codellama,
@@ -151,7 +156,8 @@ const cmds = {
         "start": cmd_display_start
     },
     "set": cmd_set,
-    "get": cmd_get
+    "get": cmd_get,
+    "notes": cmd_notes
 }
 
 function interpret(line) {
