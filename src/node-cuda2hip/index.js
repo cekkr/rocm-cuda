@@ -292,6 +292,9 @@ async function main() {
 
                 saveStatus()
             }
+            else {
+                console.log(f, ' already done')
+            }
         }
     }
 
