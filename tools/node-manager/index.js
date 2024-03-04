@@ -54,6 +54,9 @@ function interpret(line) {
             return;
         }
 
+        if (!curCmds[part])
+            break;
+
         curCmds = curCmds[part]
         args.splice(0, 1)
 
@@ -62,7 +65,10 @@ function interpret(line) {
         }
     }
 
-    console.error("Invalid command.")
+    console.error("Invalid command:")
+    for (let cmd in curCmds) {
+        console.log('- ', cmd)
+    }
 }
 
 const completer = (line) => {
