@@ -123,7 +123,7 @@ function cmd_run_codellama() {
         return;
     }
 
-    runCmd("screen -d -m " + dir + '/CodeLlama/runHttpLlama.sh')
+    runCmd('screen -dmS httpLlama bash -c "' + dir + '/CodeLlama/runHttpLlama.sh"')
 }
 
 function cmd_set(args) {
