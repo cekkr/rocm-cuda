@@ -131,6 +131,9 @@ async function main() {
                     statusFun.prediction = prediction
                     saveStatus()
                 }
+                else {
+                    console.log(cude , " already done.")
+                }
             }
         }
         catch {
