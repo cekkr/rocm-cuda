@@ -49,35 +49,7 @@ let initPrediction =
 #include <hip/hip.h>
 #include <cuda_runtime_api.h>
 
-cudaError_t hipErrorToCudaError(hipError_t hipError)
-{
-    switch (hipError) {
-        case hipSuccess:
-            return cudaSuccess;
-        case hipErrorOutOfMemory:
-            return cudaErrorMemoryAllocation;
-        case hipErrorNotInitialized:
-            return cudaErrorInitializationError;
-        case hipErrorDeinitialized:
-            return cudaErrorCudartUnloading;
-        case hipErrorProfilerDisabled:
-        case hipErrorProfilerNotInitialized:
-        case hipErrorProfilerAlreadyStarted:
-        case hipErrorProfilerAlreadyStopped:
-            // There is no direct equivalent in CUDA for these, so we use a generic error
-            return cudaErrorUnknown;
-        case hipErrorInvalidValue:
-            return cudaErrorInvalidValue;
-        case hipErrorInvalidDevicePointer:
-            return cudaErrorInvalidDevicePointer;
-        case hipErrorInvalidMemcpyDirection:
-            return cudaErrorInvalidMemcpyDirection;
-        // Add more cases as needed
-        default:
-            // For any error not explicitly mapped above, return a generic error
-            return cudaErrorUnknown;
-    }
-}
+cudaError_t hipErrorToCudaError(hipError_t hipError);
 
 // cudaError_t cudaGetDeviceCount(int *count) using hipGetDeviceCount(int *count)
 extern "C" cudaError_t cudaGetDeviceCount(int * count)
@@ -105,6 +77,8 @@ function saveStatus() {
     fs.writeFileSync('status.json', json)
 }
 
+// study enum structs: https://docs.amd.com/projects/HIP/en/latest/doxygen/html/hip__runtime__api_8h.html#
+
 async function main() {
     loadStatus()
 
@@ -122,6 +96,15 @@ async function main() {
         if (cuda && hip && cuda.startsWith('cuda') && hip.startsWith('hip')) {
             let cudaFun = cudaApi.functions[cuda]
             let hipFun = hipApi.functions[hip]
+
+            let cudaLine = cudaFun.return + ' '
+            cudaLine += cudaFun.name + ' '
+            cudaLine += cudaFun.args
+
+            let hipLine = hipFun.definition[0] + ' ' + hipFun.argsstring[0]
+
+            let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
+            graft += cudaLine + ' {\n'
 
             console.log("check")
         }
