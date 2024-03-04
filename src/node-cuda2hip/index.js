@@ -51,7 +51,9 @@ let initPrediction =
 
 #DEFINE VERBOSE 1
 
-cudaError_t hipErrorToCudaError(hipError_t hipError);
+// hipError_t to cudaError_t
+cudaError_t hipError_t_TO_cudaError_t(hipError_t hipError);
+
 %%PRE_DECLARATIONS%%
 
 // cudaError_t cudaGetDeviceCount(int *count) using hipGetDeviceCount(int *count)
@@ -66,7 +68,7 @@ extern "C" cudaError_t cudaGetDeviceCount(int * count)
 
 `
 
-let status = { functions: {} }
+let status = { functions: {}, types: {} }
 
 function loadStatus() {
     if (fs.existsSync('status.json')) {
@@ -92,7 +94,10 @@ async function main() {
 
     let hipApi = readJson('./input/hip_api.json')
 
+    let pointers = []
+
     let hip2Cuda = {}
+    let cuda2Hip = {}
 
     let types = {
         hip: [],
@@ -107,21 +112,26 @@ async function main() {
             if (cuda && hip && cuda.startsWith('cuda') && hip.startsWith('hip')) {
 
                 hip2Cuda[hip] = cuda
+                cuda2Hip[cuda] = hip
 
                 let statusFun = status.functions[cuda]
 
                 if (!statusFun) {
                     let cudaFun = cudaApi.functions[cuda]
-                    cudaFun.args = cudaFun.args.replaceAll(' ', ' ').replaceAll(' * ', ' *')
+                    cudaFun.args = cudaFun.args.replaceAll(' ', ' ').replaceAll(' * ', '* ').trim()
 
                     cudaFun.types = []
                     let argsTyped = cudaFun.args.split(',')
                     for (let arg of argsTyped) {
                         while (arg[0] == ' ') arg.splice(0, 1)
                         let type = arg.split(' ')[0]
-                        cudaFun.types.push(type)
+                        let pointer = type.includes('*')
+                        type = type.replace('*').trim()
+                        pointers[type] = pointer
 
-                        type = type.replace('*')
+                        if (cudaFun.types.indexOf(type) < 0)
+                            cudaFun.types.push(type)
+
                         if (types.cuda.indexOf(type) < 0)
                             types.cuda.push(type)
                     }
@@ -137,9 +147,13 @@ async function main() {
                             type = type['ref'][0]['_']
                         }
 
-                        hipFun.types.push(type)
+                        let pointer = type.includes('*')
+                        type = type.replace('*').trim()
+                        pointers[type] = pointer
 
-                        type = type.replace('*')
+                        if (hipFun.types.indexOf(type) < 0)
+                            hipFun.types.push(type)
+
                         if (types.hip.indexOf(type) < 0)
                             types.hip.push(type)
                     }
@@ -162,7 +176,8 @@ async function main() {
                         hipFun,
                         cudaLine,
                         hipLine,
-                        graft
+                        graft,
+                        totGraft
                     }
 
 
@@ -186,11 +201,45 @@ async function main() {
     ///
     ///
     ///
+    console.log("generate converters")
+
+    let allTypes = [...types.cuda, ...type.hip]
+    for (let t of allTypes) {
+        let type = status.types[t] = {}
+        type.pointer = pointers[t] || false
+
+        let ptr = type.pointer ? '*' : ''
+
+        if (hip2Cuda[type]) {
+            let toType = hip2Cuda[type]
+            type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
+            type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
+        }
+
+        if (cuda2Hip[type]) {
+            let toType = cuda2Hip[type]
+            type.converter = '// ' + type + ptr + ' to ' + toType + ptr + '\n'
+            type.converter += toType + ptr + ' ' + type + '_TO_' + toType + '(' + type + ptr + ')' + ' {\n'
+        }
+    }
+
+    ///
+    ///
+    ///
     console.log("beginning functions predictions")
 
     for (let f in status.functions) {
         let fun = status.functions[f]
 
+        if (fun.cudaFun && fun.hipFun) {
+            let toHip = {}
+            let toCuda = {}
+
+            for (let type of fun.cudaFun.types) {
+                let conv = ''
+                toHip[type] = conv
+            }
+        }
     }
 
 
