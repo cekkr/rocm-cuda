@@ -116,7 +116,10 @@ async function main() {
                         while (arg[0] == ' ') arg.splice(0, 1)
                         let type = arg.split(' ')[0]
                         cudaFun.types.push(type)
-                        types.cuda.push(type.replace('*'))
+
+                        type = type.replace('*')
+                        if (types.cuda.indexOf(type) < 0)
+                            types.cuda.push(type)
                     }
 
                     let hipFun = hipApi.functions[hip]
@@ -130,7 +133,10 @@ async function main() {
                         }
 
                         hipFun.types.push(type)
-                        types.hip.push(type.replace('*'))
+
+                        type = type.replace('*')
+                        if (types.hip.indexOf(type) < 0)
+                            types.hip.push(type)
                     }
 
                     let cudaLine = cudaFun.return + ' '
