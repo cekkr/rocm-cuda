@@ -68,7 +68,7 @@ extern "C" cudaError_t cudaGetDeviceCount(int* count)
     // Translate the call to its HIP counterpart
     hipError_t hipError = hipGetDeviceCount(count);
 
-    return hipErrorToCudaError(hipError);
+    return hipError_t_TO_cudaError_t(hipError);
 }
 
 `
