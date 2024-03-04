@@ -92,44 +92,49 @@ async function main() {
     let hipApi = readJson('./input/hip_api.json')
 
     for (let r in hipify) {
-        let row = hipify[r]
-        let cuda = row['cuda0']
-        let hip = row['hip0']
-        if (cuda && hip && cuda.startsWith('cuda') && hip.startsWith('hip')) {
+        try {
+            let row = hipify[r]
+            let cuda = row['cuda0']
+            let hip = row['hip0']
+            if (cuda && hip && cuda.startsWith('cuda') && hip.startsWith('hip')) {
 
-            let statusFun = status.functions[cuda]
+                let statusFun = status.functions[cuda]
 
-            if (!statusFun) {
-                let cudaFun = cudaApi.functions[cuda]
-                let hipFun = hipApi.functions[hip]
+                if (!statusFun) {
+                    let cudaFun = cudaApi.functions[cuda]
+                    let hipFun = hipApi.functions[hip]
 
-                let cudaLine = cudaFun.return + ' '
-                cudaLine += cudaFun.name + ' '
-                cudaLine += cudaFun.args
+                    let cudaLine = cudaFun.return + ' '
+                    cudaLine += cudaFun.name + ' '
+                    cudaLine += cudaFun.args
 
-                let hipLine = hipFun.definition[0] + ' ' + hipFun.argsstring[0]
+                    let hipLine = hipFun.definition[0] + ' ' + hipFun.argsstring[0]
 
-                statusFun = status.functions[cuda] = {
-                    cuda,
-                    hip,
-                    cudaFun,
-                    hipFun,
-                    cudaLine,
-                    hipLine
+                    statusFun = status.functions[cuda] = {
+                        cuda,
+                        hip,
+                        cudaFun,
+                        hipFun,
+                        cudaLine,
+                        hipLine
+                    }
+
+                    let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
+                    graft += 'extern "C" ' + cudaLine + ' {\n'
+
+                    let totGraft = initPrediction + graft
+
+                    console.log("Going to predict ", cuda, "\n", totGraft)
+                    let prediction = await requestCodeLlama(totGraft)
+                    console.log("prediction ", cuda, '\n', prediction)
+
+                    statusFun.prediction = prediction
+                    saveStatus()
                 }
-
-                let graft = '// ' + cudaLine + ' using ' + hipLine + '\n'
-                graft += 'extern "C" ' + cudaLine + ' {\n'
-
-                let totGraft = initPrediction + graft
-
-                console.log("Going to predict ", cuda, "\n", totGraft)
-                let prediction = await requestCodeLlama(totGraft)
-                console.log("prediction ", cuda, '\n', prediction)
-
-                statusFun.prediction = prediction
-                saveStatus()
             }
+        }
+        catch {
+            console.log('line ', r, ' jumped')
         }
     }
 
