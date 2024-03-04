@@ -113,6 +113,16 @@ function cmd_display_start() {
     runCmd("systemctl start gdm")
 }
 
+function cmd_run_codellama() {
+    let dir = env['codellama_path']
+    if (!dir) {
+        console.log('Variable codellama_path not setted')
+        return;
+    }
+
+    runCmd("screen -d -m " + dir + '/CodeLlama/runHttpLlama.sh')
+}
+
 function cmd_set(args) {
     let name = args.splice(0, 1)
     env[name] = args.join(' ')
@@ -132,6 +142,9 @@ const cmds = {
     "push": {
         "codellama": cmd_push_codellama,
         "rocm-cuda": cmd_push_rocmcuda
+    },
+    "run": {
+        "codellama": cmd_run_codellama
     },
     "display": {
         "stop": cmd_display_stop,
