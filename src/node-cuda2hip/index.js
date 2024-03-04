@@ -110,7 +110,7 @@ async function main() {
                     let cudaFun = cudaApi.functions[cuda]
                     cudaFun.args = cudaFun.args.replaceAll(' ', ' ').replaceAll(' * ', ' *')
 
-                    cudaFun.types = [cudaFun.return]
+                    cudaFun.types = []
                     let argsTyped = cudaFun.args.split(',')
                     for (let arg of argsTyped) {
                         while (arg[0] == ' ') arg.splice(0, 1)
@@ -123,7 +123,8 @@ async function main() {
                     }
 
                     let hipFun = hipApi.functions[hip]
-                    hipFun.types = [hipFun.type[0].ref[0]['_']]
+                    hipFun.return = hipFun.type[0].ref[0]['_']
+                    hipFun.types = []
 
                     for (let param of hipFun.param) {
                         let type = param.type[0]
