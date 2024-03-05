@@ -54,6 +54,47 @@ function runCmdStdin(line, prompt = true) {
     })
 }
 
+let llamaServerScript = null
+let llamaServerScriptStop = false
+function startCodeLlamaServer(path, mem = 0.5) {
+    llamaServerScriptStop = false
+
+    // Define your environment variable(s) here
+    const env = { ...process.env, ACCELERATE_GPU_MEM: mem };
+
+    // Spawn the shell script with the custom environment
+    llamaServerScript = spawn(path, {
+        env: env,
+        shell: true, // This ensures that shell-specific syntax is correctly interpreted
+    });
+
+    llamaServerScript.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+    });
+
+    llamaServerScript.stderr.on('data', (data) => {
+        console.error(`stderr: ${data}`);
+    });
+
+    llamaServerScript.on('close', (code) => {
+        console.log(`Child process exited with code ${code}`);
+        if (code !== 0) {
+            console.log('Error detected, restarting the script...');
+
+            if (!llamaServerScriptStop)
+                startCodeLlamaServer(path, mem); // Restart the script if it crashes
+        }
+    });
+}
+
+function stopCodeLlamaServer() {
+    if (llamaServerScript) {
+        llamaServerScriptStop = true
+        llamaServerScript.kill()
+        llamaServerScript = null
+    }
+}
+
 ///
 ///
 ///
@@ -123,7 +164,13 @@ function cmd_run_codellama() {
         return;
     }
 
-    runCmd('screen -dmS httpLlama bash -c "' + dir + '/CodeLlama/runHttpLlama.sh"')
+    //runCmd('screen -dmS httpLlama bash -c "' + dir + '/CodeLlama/runHttpLlama.sh"')
+
+    startCodeLlamaServer(dir + '/CodeLlama/runHttpLlama.sh', 0.5)
+}
+
+function cmd_stop_codellama() {
+    stopCodeLlamaServer()
 }
 
 function cmd_set(args) {
@@ -153,6 +200,9 @@ const cmds = {
     },
     "run": {
         "codellama": cmd_run_codellama
+    },
+    "stop": {
+        "codellama": cmd_stop_codellama
     },
     "display": {
         "stop": cmd_display_stop,
