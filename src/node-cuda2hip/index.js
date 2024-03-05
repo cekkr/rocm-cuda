@@ -206,31 +206,41 @@ async function main() {
     ///
     console.log("generate converters")
 
-    let allTypes = [...types.cuda, ...types.hip]
-    for (let t of allTypes) {
-        if (!t.includes('hip') && !t.includes('cuda'))
-            continue;
-
+    function generateTypeGraft(t) {
         let type = status.types[t] = status.types[t] || { onPrediction: 0, goToPrediction: 0 }
 
         if (type.onPrediction == 0) {
             type.pointer = pointers[t] || false
             let ptr = type.pointer ? '*' : ''
 
-            if (hip2Cuda[t]) {
-                let toType = hip2Cuda[t]
-                type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
-                type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
-            }
+            if (!type.converter) {
+                if (hip2Cuda[t]) {
+                    let toType = type.toType = hip2Cuda[t]
+                    type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
+                    type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
 
-            if (cuda2Hip[t]) {
-                let toType = cuda2Hip[t]
-                type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
-                type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
-            }
+                    generateTypeGraft(toType)
+                }
 
-            type.graft = type.converter
+                if (cuda2Hip[t]) {
+                    let toType = type.toType = cuda2Hip[t]
+                    type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
+                    type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
+
+                    generateTypeGraft(toType)
+                }
+
+                type.graft = type.converter
+            }
         }
+    }
+
+    let allTypes = [...types.cuda, ...types.hip]
+    for (let t of allTypes) {
+        if (!t.includes('hip') && !t.includes('cuda'))
+            continue;
+
+        generateTypeGraft(t)
     }
 
     saveStatus()
@@ -250,7 +260,11 @@ async function main() {
                 saveStatus()
             }
 
-            return type.graft
+            let res = {}
+            res[t] = type.converter
+            res[type.toType] = status.types[type.toType].converter
+
+            return res
         }
         else {
             console.warn("check exception 24234")
@@ -267,21 +281,27 @@ async function main() {
 
         if (fun.cudaFun && fun.hipFun) {
             if (!fun.prediction || fun.forcePrediction) {
-                let typesGrafts = ''
+                let typesGrafts = {}
 
                 for (let type of fun.cudaFun.types) {
                     let graft = await checkType(type)
                     if (graft)
-                        typesGrafts += await checkType(type) + '\n'
+                        typesGrafts = { typesGrafts, ...graft }
                 }
 
                 for (let type of fun.hipFun.types) {
                     let graft = await checkType(type)
                     if (graft)
-                        typesGrafts += await checkType(type) + '\n'
+                        typesGrafts = { typesGrafts, ...graft }
                 }
 
-                let totGraft = fun.prediction || (initPrediction + typesGrafts + initPredictionFunctions + fun.graft)
+                let strTypesGrafts = ''
+                for (let t in typesGrafts) {
+                    let graft = typesGrafts[t]
+                    strTypesGrafts += graft + '\n'
+                }
+
+                let totGraft = fun.prediction || (initPrediction + strTypesGrafts + initPredictionFunctions + fun.graft)
 
                 console.log("Going to predict ", fun.cuda, "\n", totGraft)
                 let prediction = await requestCodeLlama(totGraft, llamaHost)
