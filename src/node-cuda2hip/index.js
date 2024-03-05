@@ -83,7 +83,7 @@ function loadStatus() {
 }
 
 function saveStatus() {
-    let json = JSON.stringify(status)
+    let json = JSON.stringify(status, null, 2)
     fs.writeFileSync('status.json', json)
 }
 

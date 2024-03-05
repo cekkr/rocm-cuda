@@ -12,9 +12,16 @@ async function fetchWithQuery(url, queryParams) {
 async function prompt(prompt, server) {
     const url = 'http://' + server + '/';
     const queryParams = { op: 'req', prompt };
-    return await fetchWithQuery(url, queryParams);
+    let res = await fetchWithQuery(url, queryParams);
+
+    if (res == undefined) {
+        throw new Error("server unavailable")
+    }
+
+    return res
 }
 
+let consecErrors = 0
 function onResolve(req, server) {
     return new Promise((res) => {
         let interval = setInterval(async () => {
@@ -22,9 +29,20 @@ function onResolve(req, server) {
             const queryParams = { op: 'res', req };
             let resp = await fetchWithQuery(url, queryParams);
 
-            if (resp != '-' && resp != undefined) {
+            if (resp != '-' && resp != undefined && resp != '0') {
                 clearInterval(interval)
                 res(resp)
+                consecErrors = 0
+            }
+            else {
+                if (resp == undefined || resp == '0') {
+                    if (consecErrors++ > 4) {
+                        throw new Error("server unavailable")
+                    }
+                }
+                else {
+                    consecErrors = 0
+                }
             }
 
         }, 5000)
@@ -32,17 +50,22 @@ function onResolve(req, server) {
 }
 
 export async function requestCodeLlama(myPrompt, server = "192.168.1.102:9500") {
-    let req = await prompt(myPrompt, server)
-    console.log("request num: ", req)
+    try {
+        let req = await prompt(myPrompt, server)
+        console.log("request num: ", req)
 
-    let start = new Date().getTime()
+        let start = new Date().getTime()
 
-    let res = await onResolve(req, server)
+        let res = await onResolve(req, server)
 
-    let end = new Date().getTime()
-    let diff = (end - start) / (1000 * 60)
-    console.log("Prompt solved in ", diff, " minutes.")
+        let end = new Date().getTime()
+        let diff = (end - start) / (1000 * 60)
+        console.log("Prompt solved in ", diff, " minutes.")
 
-    return res
+        return res
+    }
+    catch {
+        return await requestCodeLlama(myPrompt, server)
+    }
 }
 
