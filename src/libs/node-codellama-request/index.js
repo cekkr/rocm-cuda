@@ -14,6 +14,8 @@ async function prompt(prompt, server) {
     const queryParams = { op: 'req', prompt };
     let res = await fetchWithQuery(url, queryParams);
 
+    consecErrors = 0
+
     if (res == undefined) {
         throw new Error("server unavailable")
     }
