@@ -264,10 +264,17 @@ async function main() {
 
             let res = {}
             res[t] = type.converter
-            res[type.toType] = status.types[type.toType].converter
 
             if (status.requestedConverters.indexOf(type.converterName) < 0)
                 status.requestedConverters.push(type.converterName)
+
+            let toType = status.types[type.toType]
+            if (toType) {
+                res[type.toType] = toType.converter
+
+                if (status.requestedConverters.indexOf(toType.converterName) < 0)
+                    status.requestedConverters.push(toType.converterName)
+            }
 
             return res
         }
