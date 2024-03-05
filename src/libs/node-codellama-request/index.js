@@ -25,7 +25,7 @@ async function prompt(prompt, server) {
 
 let consecErrors = 0
 function onResolve(req, server) {
-    return new Promise((res) => {
+    return new Promise((res, err) => {
         let interval = setInterval(async () => {
             const url = 'http://' + server + '/';
             const queryParams = { op: 'res', req };
@@ -38,8 +38,8 @@ function onResolve(req, server) {
             }
             else {
                 if (resp == undefined || resp == '0') {
-                    if (consecErrors++ > 4) {
-                        throw new Error("server unavailable")
+                    if (consecErrors++ > 4 || resp == '0') {
+                        err(new Error("server unavailable"))
                     }
                 }
                 else {
