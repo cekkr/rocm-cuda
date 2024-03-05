@@ -73,7 +73,7 @@ extern "C" cudaError_t cudaGetDeviceCount(int* count)
 
 `
 
-let status = { functions: {}, types: {}, ignoredFunctions: [] }
+let status = { functions: {}, types: {}, ignoredFunctions: [], requestedConverters: [] }
 
 function loadStatus() {
     if (fs.existsSync('status.json')) {
@@ -217,7 +217,8 @@ async function main() {
                 if (hip2Cuda[t]) {
                     let toType = type.toType = hip2Cuda[t]
                     type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
-                    type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
+                    type.converterName = t + '_TO_' + toType
+                    type.converter += toType + ptr + ' ' + type.converterName + '(' + t + ptr + ');\n'
 
                     generateTypeGraft(toType)
                 }
@@ -225,7 +226,8 @@ async function main() {
                 if (cuda2Hip[t]) {
                     let toType = type.toType = cuda2Hip[t]
                     type.converter = '// ' + t + ptr + ' to ' + toType + ptr + '\n'
-                    type.converter += toType + ptr + ' ' + t + '_TO_' + toType + '(' + t + ptr + ');\n'
+                    type.converterName = t + '_TO_' + toType
+                    type.converter += toType + ptr + ' ' + type.converterName + '(' + t + ptr + ');\n'
 
                     generateTypeGraft(toType)
                 }
@@ -264,6 +266,9 @@ async function main() {
             res[t] = type.converter
             res[type.toType] = status.types[type.toType].converter
 
+            if (status.requestedConverters.indexOf(type.converterName) < 0)
+                status.requestedConverters.push(type.converterName)
+
             return res
         }
         else {
@@ -286,13 +291,13 @@ async function main() {
                 for (let type of fun.cudaFun.types) {
                     let graft = await checkType(type)
                     if (graft)
-                        typesGrafts = { typesGrafts, ...graft }
+                        typesGrafts = { ...typesGrafts, ...graft }
                 }
 
                 for (let type of fun.hipFun.types) {
                     let graft = await checkType(type)
                     if (graft)
-                        typesGrafts = { typesGrafts, ...graft }
+                        typesGrafts = { ...typesGrafts, ...graft }
                 }
 
                 let strTypesGrafts = ''
