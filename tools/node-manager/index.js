@@ -166,7 +166,7 @@ function cmd_run_codellama() {
 
     //runCmd('screen -dmS httpLlama bash -c "' + dir + '/CodeLlama/runHttpLlama.sh"')
 
-    startCodeLlamaServer(dir + '/CodeLlama/runHttpLlama.sh', 0.5)
+    startCodeLlamaServer(dir + '/CodeLlama/runHttpLlama.sh', 0.25)
 }
 
 function cmd_stop_codellama() {
