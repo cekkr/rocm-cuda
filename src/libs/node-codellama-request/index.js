@@ -11,7 +11,7 @@ async function fetchWithQuery(url, queryParams) {
 
 async function prompt(prompt, server) {
     const url = 'http://' + server + '/';
-    const queryParams = { op: 'req', prompt };
+    const queryParams = { op: 'req', ...prompt };
     let res = await fetchWithQuery(url, queryParams);
 
     consecErrors = 0
@@ -52,6 +52,9 @@ function onResolve(req, server) {
 }
 
 export async function requestCodeLlama(myPrompt, server = "192.168.1.102:9500") {
+    if (typeof myPrompt == 'string')
+        myPrompt = { prompt: myPrompt }
+
     try {
         let req = await prompt(myPrompt, server)
         console.log("request num: ", req)
